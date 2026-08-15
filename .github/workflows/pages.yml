@@ -1,0 +1,47 @@
+name: 部署演示页
+
+# docs/ 里那份演示页发布到 GitHub Pages。
+# configure-pages 的 enablement 会在仓库还没开启 Pages 的时候替它开启，
+# 所以这份工作流第一次跑完，https://<用户名>.github.io/dialogue-tutor/ 就通了。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时刻只跑一个部署，排队的那些等前一个结束，别互相取消
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 取出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Pages（没开启的话顺手开启）
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: 打包 docs/
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4
