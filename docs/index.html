@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>连续随机变量与均匀分布 · 作业讲解（dialogue-tutor 样章）</title>
+<meta name="description" content="dialogue-tutor（简易对话）产出的 HTML 讲解样章：上半按对象分章、每章七幕，下半按题目顺序一个小问一段、每个等号一行并写出依据。">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global', scale: 1.02 },
+  options: { renderActions: { addMenu: [] } }
+};
+</script>
+<!-- SVG 版：单文件，排版时不再另外请求字体文件，页面在弱网与严格 CSP 下同样立得住 -->
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+<style>
+:root{
+  --bg:#fbfaf7; --fg:#1d1b18; --muted:#6b6560; --rule:#e2ddd4;
+  --card:#ffffff; --accent:#8a5a2b; --accent-soft:#f3ece2;
+  --gap:#a8442a; --ok:#2f6f4f; --mark:#fff6d8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15140f; --fg:#e9e4da; --muted:#a29a8d; --rule:#302c25;
+    --card:#1c1a15; --accent:#d3a068; --accent-soft:#26221b;
+    --gap:#e08163; --ok:#7fbf9a; --mark:#3a3320;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:"Source Han Serif SC","Noto Serif CJK SC","Songti SC",Georgia,"Times New Roman",serif;
+  font-size:17.5px; line-height:1.95; letter-spacing:.01em;
+}
+.banner{
+  background:var(--accent-soft); border-bottom:1px solid var(--rule);
+  padding:.7rem 1rem; font-size:.86rem; line-height:1.6; text-align:center; color:var(--muted);
+  font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.banner b{color:var(--fg)}
+.banner a{color:var(--accent)}
+main{max-width:47rem; margin:0 auto; padding:2.4rem 1.15rem 6rem}
+h1{font-size:2rem; line-height:1.4; margin:.2rem 0 .3rem; letter-spacing:.02em}
+.sub{color:var(--muted); font-size:.95rem; margin:0 0 2rem}
+h2{
+  font-size:1.35rem; margin:3.4rem 0 1rem; padding-bottom:.5rem;
+  border-bottom:2px solid var(--accent); letter-spacing:.02em;
+}
+h3{font-size:1.15rem; margin:2.6rem 0 .8rem; letter-spacing:.02em}
+h4{font-size:1rem; margin:2rem 0 .6rem; color:var(--accent)}
+p{margin:1rem 0}
+a{color:var(--accent); text-underline-offset:3px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em; background:var(--accent-soft); padding:.1em .35em; border-radius:3px}
+
+.toc{
+  background:var(--card); border:1px solid var(--rule); border-radius:8px;
+  padding:1.1rem 1.3rem; margin:2rem 0 3rem; font-size:.94rem; line-height:1.85;
+}
+.toc h5{margin:.1rem 0 .6rem; font-size:.82rem; letter-spacing:.14em; color:var(--muted); font-weight:600}
+.toc ol{margin:0; padding-left:1.3rem}
+.toc a{text-decoration:none}
+.toc a:hover{text-decoration:underline}
+
+.lead{
+  border-left:3px solid var(--accent); padding:.2rem 0 .2rem 1.1rem;
+  color:var(--muted); font-size:.97rem; margin:1.4rem 0 2rem;
+}
+
+.act{
+  background:var(--card); border:1px solid var(--rule); border-radius:8px;
+  padding:1.2rem 1.4rem; margin:1.4rem 0;
+}
+.act > .label{
+  display:inline-block; font-family:system-ui,sans-serif; font-size:.76rem;
+  letter-spacing:.1em; color:var(--accent); background:var(--accent-soft);
+  border-radius:99px; padding:.16rem .7rem; margin-bottom:.6rem;
+}
+.act.main{border-left:3px solid var(--accent)}
+.act p:first-of-type{margin-top:.2rem}
+.act p:last-child{margin-bottom:.2rem}
+
+.gapbox{border-left:3px solid var(--gap); background:var(--card); padding:1rem 1.2rem; margin:1.3rem 0; border-radius:0 8px 8px 0}
+.gapbox strong{color:var(--gap)}
+
+figure{margin:2rem 0; text-align:center}
+figure svg{max-width:100%; height:auto}
+figcaption{font-size:.85rem; color:var(--muted); margin-top:.7rem; line-height:1.7;
+  font-family:system-ui,-apple-system,"PingFang SC",sans-serif}
+
+table{border-collapse:collapse; width:100%; margin:1.3rem 0; font-size:.92rem; line-height:1.7}
+.scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+th,td{border:1px solid var(--rule); padding:.55rem .7rem; text-align:left; vertical-align:top}
+th{background:var(--accent-soft); font-size:.85rem; letter-spacing:.05em; font-weight:600}
+td.no{width:2.2rem; text-align:center; color:var(--muted); font-variant-numeric:tabular-nums}
+td.why{color:var(--muted); font-size:.88rem}
+
+.q{border:1px solid var(--rule); border-radius:8px; background:var(--card); padding:1.2rem 1.4rem; margin:2.2rem 0 1.6rem}
+.q .stem{font-size:.97rem}
+.q .marks{color:var(--muted); font-size:.85rem}
+.part{margin:2.6rem 0 3.2rem; scroll-margin-top:1rem}
+.part > h4{
+  margin:0 0 1rem; font-size:1.05rem; color:var(--fg);
+  padding-bottom:.4rem; border-bottom:1px dashed var(--rule);
+}
+.six{margin:1.2rem 0}
+.six > .tag{
+  display:block; font-family:system-ui,sans-serif; font-size:.78rem; letter-spacing:.08em;
+  color:var(--accent); margin-bottom:.25rem; font-weight:600;
+}
+.six > .tag .num{opacity:.75}
+mark{background:var(--mark); color:inherit; padding:.05em .2em; border-radius:2px}
+.score{border-left:3px solid var(--ok); padding:.2rem 0 .2rem 1rem; font-size:.93rem; color:var(--muted)}
+.score b{color:var(--ok)}
+footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
+  font-size:.86rem; color:var(--muted); line-height:1.8;
+  font-family:system-ui,-apple-system,"PingFang SC",sans-serif}
+.mjx-container{overflow-x:auto; overflow-y:hidden; max-width:100%}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  这一页是 <b>dialogue-tutor（简易对话）</b> 产出的讲解样章。完整产物按同一套规格写，通常两三万字。
+  <a href="https://github.com/jinshanbaihai/dialogue-tutor">← 回到仓库</a>
+</div>
+
+<main>
+
+<h1>连续随机变量与均匀分布</h1>
+<p class="sub">作业讲解 · 样章 &nbsp;|&nbsp; 上半两章七幕，下半六个小问 &nbsp;|&nbsp; Edexcel IAL Statistics S2</p>
+
+<nav class="toc">
+  <h5>这一份的走法</h5>
+  <ol>
+    <li><a href="#ch1">第一章 · 概率密度函数：一个自己不是概率的东西</a></li>
+    <li><a href="#ch2">第二章 · 均匀分布：把「没有偏好」写成一条水平线</a></li>
+    <li><a href="#part2">下半 · 做题篇</a>
+      <ul style="list-style:none;padding-left:0;margin:.3rem 0">
+        <li><a href="#q1a">Q1(a)</a> · <a href="#q1b">Q1(b)</a> · <a href="#q1c">Q1(c)</a> · <a href="#q2a">Q2(a)</a> · <a href="#q2b">Q2(b)</a> · <a href="#q2c">Q2(c)</a></li>
+      </ul>
+    </li>
+  </ol>
+</nav>
+
+<h2>上半 · 讲解篇</h2>
+
+<p class="lead">
+下半的六个小问会用到四条式子：\(P(a \le X \le b)=\int_a^b f(x)\,dx\)、\(\int_{-\infty}^{\infty} f(x)\,dx = 1\)、
+\(f(x)=\dfrac{1}{b-a}\)（均匀分布）、\(E(X)=\dfrac{a+b}{2}\)。
+这四条的来历与推导排在全篇最前面，其余的讲到读得懂为止。
+两道题在这一半里不出现，它们只是把人领进来的钩子；上半讲的是这两个数学对象本身。
+</p>
+
+<h3 id="ch1">第一章 · 概率密度函数：一个自己不是概率的东西</h3>
+
+<div class="act">
+<span class="label">① 先造出那个缺口</span>
+<p>
+离散那一套办法，从中学起就在用：概率等于有利结果数除以总结果数。掷一枚骰子，
+六个结果，出现 6 点的概率是 \(\tfrac{1}{6}\)。这套办法有一个隐含的前提，
+就是结果数得数得清。
+</p>
+<p>
+现在换一个问题。一列小火车相对时刻表的偏差记作 \(W\) 分钟，早到记成负数。
+问：<em>它恰好偏差 2.6 分钟的概率是多少？</em>
+</p>
+<p>
+分母立刻没有了着落。偏差可以是 2.6，也可以是 2.61、2.600001、2.6000001，
+这样的取值有无穷多个，而且多到没办法排成一列去数。
+</p>
+<div class="gapbox">
+<p>
+再往下推一步就撞上了硬处。假设每一个具体取值都分到同一个正数 \(p \gt 0\)。
+在区间里挑出 \(N\) 个不同的取值，它们的概率合起来是 \(Np\)。
+\(N\) 可以取到任意大，\(Np\) 于是可以超过 1，而概率越不过 1。
+所以 \(p\) 只能是 0：<strong>每一个具体取值的概率都是 0</strong>。
+</p>
+<p>
+可是这条火车总要在某个时刻到站。全部取值合起来的概率是 1。
+<strong>一堆 0 加起来，怎么会等于 1。</strong>
+</p>
+</div>
+<p>
+这个裂口不补上，连续型概率一步也走不了。第③幕补的就是它。
+</p>
+</div>
+
+<div class="act">
+<span class="label">② 让当年那个人出场</span>
+<p>
+1777 年，布丰（Georges-Louis Leclerc, Comte de Buffon）在《道德算术试论》
+（<em>Essai d'arithmétique morale</em>）里问了一个古怪的问题：
+地板上画着一组间距相同的平行线，把一根针随手扔上去，它压到线的概率是多少？
+</p>
+<p>
+他手上有的是「有利结果数除以总结果数」，而这里的结果是针的位置和角度，
+一个连续的两维的东西，数不清。布丰的办法是把「数个数」换成「量大小」：
+针中点落在哪里、针斜成什么角度，各自占据一段长度和一段角度，
+用长度和角度的比去代替个数的比。
+</p>
+<p>
+一百多年后，贝特朗（Joseph Bertrand）1889 年在《概率演算》
+（<em>Calcul des probabilités</em>）里指出这个替换还不够稳。他的问题是：
+在一个圆里随机取一条弦，它比这个圆的内接正三角形的边长的概率是多少？
+他给出三种都说得通的取法，答案分别是 \(\tfrac{1}{2}\)、\(\tfrac{1}{3}\)、\(\tfrac{1}{4}\)。
+</p>
+<p>
+<mark>同一句「随机」，三个答案。</mark>这说明「等可能」这个词搬到连续场合以后，
+本身还没有被定义清楚。第③幕造出来的那个东西，正是为了给它一个说得明白的形式。
+</p>
+</div>
+
+<div class="act main">
+<span class="label">③ 把公式一步一步造出来（本章主体）</span>
+<p>
+第①幕已经证明了一件事：<em>给单个取值分配概率这条路走不通</em>。
+既然走不通，就换一个承受概率的东西。区间是现成的候选，因为区间有长度，
+长度可以比较大小，也可以相加。
+</p>
+<p>
+于是第一个决定是：<strong>概率交给区间，不交给点。</strong>
+写下要求它满足的两条性质，一条一行。
+</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(F(x) = P(X \le x)\)</td>
+<td class="why">先给一个一定存在的东西起名。任何一个随机变量，问它「不超过 \(x\) 的概率是多少」总是有答案的。这个函数叫累积分布函数（cumulative distribution function, c.d.f.）</td></tr>
+<tr><td class="no">2</td><td>\(a \le b \Rightarrow F(a) \le F(b)\)</td>
+<td class="why">事件 \(\{X \le a\}\) 包含在 \(\{X \le b\}\) 里面，大事件的概率不会更小。所以 \(F\) 单调不减</td></tr>
+<tr><td class="no">3</td><td>\(\{X \le b\} = \{X \le a\} \cup \{a \lt X \le b\}\)</td>
+<td class="why">把「不超过 \(b\)」按「有没有超过 \(a\)」切成两块，两块互不相交</td></tr>
+<tr><td class="no">4</td><td>\(F(b) = F(a) + P(a \lt X \le b)\)</td>
+<td class="why">互斥事件的概率相加，这是概率的可加性，对第 3 行两边取概率</td></tr>
+<tr><td class="no">5</td><td>\(P(a \lt X \le b) = F(b) - F(a)\)</td>
+<td class="why">第 4 行两边同减 \(F(a)\)。<mark>到这里，区间的概率已经完全由 \(F\) 决定</mark></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+第 5 行是一个可以停下来看一眼的位置。它说：想知道任何一段区间的概率，
+查两次 \(F\) 就够了。那么还需要造别的东西吗？需要，理由在下面这一步。
+</p>
+<p>
+\(F\) 装着全部信息，可是它把信息装得太紧。看着 \(F\) 这条上升的曲线，
+读不出「哪一段更容易出现」这件事，因为它到处都在上升。
+更常用的问法是「这附近的概率有多浓」，浓淡对应的是 \(F\) 上升的<em>快慢</em>，
+而快慢就是斜率。
+</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">6</td><td>\(\dfrac{P(x \lt X \le x+h)}{h} = \dfrac{F(x+h)-F(x)}{h}\)</td>
+<td class="why">分子用第 5 行换掉。左边是「一小段上的概率除以这一小段的长度」，也就是这一小段的平均浓度</td></tr>
+<tr><td class="no">7</td><td>\(f(x) = \lim\limits_{h \to 0} \dfrac{F(x+h)-F(x)}{h} = F'(x)\)</td>
+<td class="why">让这一小段缩到一点上。极限存在的时候，得到的就是 \(F\) 在这一点的导数。<mark>到这一刻才给它命名：概率密度函数（probability density function, p.d.f.）</mark></td></tr>
+<tr><td class="no">8</td><td>\(F(b)-F(a) = \displaystyle\int_a^b f(x)\,dx\)</td>
+<td class="why">微积分基本定理（fundamental theorem of calculus）：\(f\) 是 \(F\) 的导数，那么 \(f\) 从 \(a\) 到 \(b\) 的定积分等于 \(F\) 在两端的差</td></tr>
+<tr><td class="no">9</td><td>\(P(a \le X \le b) = \displaystyle\int_a^b f(x)\,dx\)</td>
+<td class="why">第 5 行接第 8 行。左边端点从 \(a \lt X\) 换成 \(a \le X\)，差的那一个点概率为 0（第 12 行），换与不换都成立</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+造完了。<strong>密度自己不是概率</strong>，它是概率对长度的变化率；
+在一段上积起来，才是那一段的概率。第①幕的裂口就此合上：
+单点的概率是 0，而区间的概率是一块面积，一堆 0 加不出 1 这件事不再成为障碍，
+因为加起来的从来不是那些 0，是那些面积。
+</p>
+<p>
+造出来的同时，有三件平时当规定背的事情自己掉了出来。
+</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>掉出来的性质</th><th>它凭什么成立</th></tr></thead>
+<tbody>
+<tr><td class="no">10</td><td>\(f(x) \ge 0\)</td>
+<td class="why">第 2 行说 \(F\) 单调不减，单调不减的函数导数不会是负的</td></tr>
+<tr><td class="no">11</td><td>\(\displaystyle\int_{-\infty}^{\infty} f(x)\,dx = F(\infty)-F(-\infty) = 1-0 = 1\)</td>
+<td class="why">第 8 行把两端推到无穷。\(F(\infty)=1\) 因为 \(X\) 总要取到某个值，\(F(-\infty)=0\) 因为它不可能比任何数都小</td></tr>
+<tr><td class="no">12</td><td>\(P(X=a)=\displaystyle\int_a^a f(x)\,dx = 0\)</td>
+<td class="why">上下限相同的定积分是 0。这正是第①幕那个「每个点的概率都是 0」，现在它成了一条推论</td></tr>
+<tr><td class="no">13</td><td>\(f(x)\) 可以大于 1</td>
+<td class="why">密度的单位是「概率每单位长度」。区间 \([0,\,0.5]\) 上的均匀密度是 2，它在 0.5 的长度上积出来才是 1。<mark>密度大于 1 一点问题也没有，概率大于 1 才有问题</mark></td></tr>
+</tbody>
+</table>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 250" role="img" aria-label="左图密度曲线与阴影面积，右图累积分布函数的高度差">
+  <g font-family="Georgia, serif" font-size="13">
+  <!-- left panel -->
+  <line x1="40" y1="200" x2="270" y2="200" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="40" y1="200" x2="40" y2="40" stroke="currentColor" stroke-width="1.2"/>
+  <defs>
+    <clipPath id="clipAB"><rect x="120" y="30" width="65" height="170"/></clipPath>
+  </defs>
+  <path d="M50 195 C 90 180, 100 70, 155 70 C 210 70, 220 180, 260 195 L260 200 L50 200 Z"
+        fill="#8a5a2b" opacity="0.22" clip-path="url(#clipAB)"/>
+  <path d="M50 195 C 90 180, 100 70, 155 70 C 210 70, 220 180, 260 195" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+  <line x1="120" y1="200" x2="120" y2="206" stroke="currentColor"/>
+  <line x1="185" y1="200" x2="185" y2="206" stroke="currentColor"/>
+  <text x="116" y="222" font-style="italic">a</text>
+  <text x="181" y="222" font-style="italic">b</text>
+  <text x="26" y="46" font-style="italic">f</text>
+  <text x="264" y="222" font-style="italic">x</text>
+  <text x="128" y="150" font-size="12">面积 = P(<tspan font-style="italic">a</tspan> ≤ <tspan font-style="italic">X</tspan> ≤ <tspan font-style="italic">b</tspan>)</text>
+  <!-- right panel -->
+  <line x1="350" y1="200" x2="590" y2="200" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="350" y1="200" x2="350" y2="40" stroke="currentColor" stroke-width="1.2"/>
+  <path d="M360 197 C 400 195, 415 120, 465 95 C 515 70, 540 55, 580 52" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+  <line x1="430" y1="200" x2="430" y2="128" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
+  <line x1="495" y1="200" x2="495" y2="83" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
+  <line x1="350" y1="128" x2="430" y2="128" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
+  <line x1="350" y1="83" x2="495" y2="83" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
+  <path d="M338 128 L338 83" stroke="#a8442a" stroke-width="2"/>
+  <path d="M334 128 L342 128 M334 83 L342 83" stroke="#a8442a" stroke-width="2"/>
+  <text x="290" y="110" font-size="12" fill="#a8442a">高度差</text>
+  <text x="426" y="222" font-style="italic">a</text>
+  <text x="491" y="222" font-style="italic">b</text>
+  <text x="336" y="46" font-style="italic">F</text>
+  <text x="584" y="222" font-style="italic">x</text>
+  </g>
+</svg>
+<figcaption>
+同一件事在两张图上的样子。左边那块阴影的面积，等于右边那两条虚线之间的高度差，
+两者由第 8 行的微积分基本定理连在一起。
+</figcaption>
+</figure>
+
+<div class="act">
+<span class="label">④ 一个跟本题无关的经典例子</span>
+<p>
+回到布丰那根针，把刚造好的密度用一次。这个例子跟火车、跟下半那两道题毫无关系，
+正好拿来看密度自己怎么工作。
+</p>
+<p>
+针长 \(\ell\)，平行线的间距 \(d\)，并且 \(\ell \le d\)（针不会同时压到两条线）。
+把「随手扔上去」翻译成两句话：针的中点到最近一条线的距离 \(X\) 在 \(0\) 到 \(\tfrac{d}{2}\)
+之间均匀分布，针与线的夹角 \(\Theta\) 在 \(0\) 到 \(\tfrac{\pi}{2}\) 之间均匀分布，两者互相独立。
+</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>压线 \(\iff X \le \dfrac{\ell}{2}\sin\Theta\)</td>
+<td class="why">针在垂直于线的方向上投影出的半长是 \(\tfrac{\ell}{2}\sin\Theta\)。中点离线比这个还近，针就跨过去了</td></tr>
+<tr><td class="no">2</td><td>\(f_X(x)=\dfrac{2}{d},\quad f_\Theta(\theta)=\dfrac{2}{\pi}\)</td>
+<td class="why">均匀分布的密度是区间长度的倒数（第二章第③幕）。两段区间长分别是 \(\tfrac{d}{2}\) 与 \(\tfrac{\pi}{2}\)</td></tr>
+<tr><td class="no">3</td><td>\(P = \displaystyle\int_0^{\pi/2}\!\!\int_0^{(\ell/2)\sin\theta} \frac{2}{d}\cdot\frac{2}{\pi}\,dx\,d\theta\)</td>
+<td class="why">独立的时候联合密度是两个密度相乘；把第 1 行那个条件写成积分区域</td></tr>
+<tr><td class="no">4</td><td>\(= \dfrac{4}{\pi d}\displaystyle\int_0^{\pi/2} \frac{\ell}{2}\sin\theta \,d\theta\)</td>
+<td class="why">里层对 \(x\) 积分，被积函数与 \(x\) 无关，积出来就是区间长度 \(\tfrac{\ell}{2}\sin\theta\)</td></tr>
+<tr><td class="no">5</td><td>\(= \dfrac{4}{\pi d}\cdot\dfrac{\ell}{2}\Big[-\cos\theta\Big]_0^{\pi/2}\)</td>
+<td class="why">\(\int \sin\theta\,d\theta = -\cos\theta\)；常数 \(\tfrac{\ell}{2}\) 提到积分号外面</td></tr>
+<tr><td class="no">6</td><td>\(= \dfrac{4}{\pi d}\cdot\dfrac{\ell}{2}\cdot(0-(-1)) = \dfrac{2\ell}{\pi d}\)</td>
+<td class="why">\(\cos\tfrac{\pi}{2}=0\)，\(\cos 0 = 1\)，中括号里的值是 1</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+\(P = \dfrac{2\ell}{\pi d}\)。把针扔上几千次，数一数压线的比例，反解出来的就是 \(\pi\)。
+<mark>这是历史上第一次有人用概率去量一个几何常数。</mark>
+整个推导用到的新东西只有一样，就是刚造好的密度。
+</p>
+</div>
+
+<div class="act">
+<span class="label">⑤ 另一种互相冲突的看法</span>
+<p>
+第②幕留下的那个问题在这里回来了：贝特朗的三个答案到底谁对。这一处有两种回答，
+它们到今天还没有合并。
+</p>
+<p>
+柯尔莫哥洛夫（Andrey Kolmogorov）1933 年在《概率论基础》
+（<em>Grundbegriffe der Wahrscheinlichkeitsrechnung</em>）里的回答是：
+先指定测度，再谈概率。「随机」这个词本身不带信息，
+说清楚是按哪一种方式随机，答案才唯一。贝特朗那三个答案各自对应一种取法，
+三个都对，问题问得不完整。概率论从此建在测度论上面。
+这个回答的代价是，随机成了一个需要人从外面给定的输入。
+</p>
+<p>
+杰恩斯（E. T. Jaynes）1973 年在《The Well-Posed Problem》里不同意。
+他主张问题的陈述本身已经给出了约束：这道题没有提到圆的位置、大小和朝向，
+那么答案就应当在平移、缩放、旋转之下保持不变，这三条不变性合起来只留下一个解，
+也就是 \(\tfrac{1}{2}\)。他还提出用撒麦秆的方式做实物检验。
+</p>
+<p>
+两边分歧收敛在一步上：<em>问题陈述里没说的东西，算不算一种信息</em>。
+柯尔莫哥洛夫那边算作缺失，杰恩斯那边算作对称性。我在这里没有立场，只是转述两边。
+</p>
+</div>
+
+<div class="act">
+<span class="label">⑥ 它自己承认的边界</span>
+<p>
+密度只在「有密度」的分布上存在，而第③幕第 7 行已经把条件写在脸上了：
+那一行要求极限存在，也就是 \(F\) 可导。\(F\) 不可导的地方，密度没有定义。
+</p>
+<p>
+两个现成的例子。第一个是混合型分布：一份保险的赔付额 \(Y\)，有 0.7 的概率恰好是 0
+（这一年没有出险），剩下 0.3 的概率连续地分布在正数上。\(F\) 在 0 这一点向上跳了 0.7，
+跳跃处没有导数，这个 \(Y\) 没有一个处处适用的密度。
+第二个是康托尔分布：它的 \(F\) 处处连续、没有任何跳跃，
+可是它的导数在几乎所有点上都是 0，积出来是 0 而不是 1，密度同样不存在。
+</p>
+<p>
+有名有姓的一条批评来自另一个方向。物理学家很早就想给「集中在一点上的密度」
+写一个符号，狄拉克（Paul Dirac）1930 年在《量子力学原理》里用的 \(\delta\) 函数
+就是这样一件工具。这个东西在函数的意义上并不存在，
+数学上要等到施瓦茨（Laurent Schwartz）1950 年前后的分布理论
+（<em>Théorie des distributions</em>）才站得住。这条批评说的是：
+<mark>密度这个概念的适用范围，比它被使用的范围窄。</mark>
+</p>
+<p>
+结论落在一句话上：<strong>\(F\) 处处都有，密度不一定有，所以 \(F\) 是更基本的那一个。</strong>
+课本为什么总是从 \(F\) 出发，答案就在这里。
+</p>
+</div>
+
+<div class="act">
+<span class="label">⑦ 回到这道题</span>
+<p>
+这一章造出来的东西对应下半的 <a href="#q1a">Q1(a)</a>、<a href="#q2a">Q2(a)</a>、<a href="#q2b">Q2(b)</a>。
+</p>
+</div>
+
+<h3 id="ch2">第二章 · 均匀分布：把「没有偏好」写成一条水平线</h3>
+
+<div class="act">
+<span class="label">① 先造出那个缺口</span>
+<p>
+第一章造出了密度这个工具，手上却还没有任何一条具体的密度。
+题目给的是一句中文：这列火车的偏差「等可能地落在 \(-1.4\) 到 \(6.6\) 之间」。
+这句话要变成一个可以积分的 \(f\)。
+</p>
+<div class="gapbox">
+<p>
+麻烦在于「等可能」这三个字在这里失效了。离散场合它的意思很清楚：
+每个结果的概率相同，六个面各 \(\tfrac{1}{6}\)。
+连续场合按第一章第 12 行，<strong>每个取值的概率都已经是 0</strong>，
+「相同」于是变成 \(0 = 0\)，这句话什么也没有说出来。
+</p>
+<p>
+缺口：<strong>「没有偏好」这句话，怎么写成一条密度。</strong>
+</p>
+</div>
+</div>
+
+<div class="act">
+<span class="label">② 让当年那个人出场</span>
+<p>
+拉普拉斯（Pierre-Simon Laplace）1814 年在《概率的哲学随笔》
+（<em>Essai philosophique sur les probabilités</em>）里把这句话立成了一条原则：
+没有任何理由偏向其中某一个的时候，就把它们当作等可能的。
+他用这条原则处理过太阳明天照常升起的概率，也用它处理过法庭判决的可靠性。
+</p>
+<p>
+凯恩斯（John Maynard Keynes）1921 年在《概率论》（<em>A Treatise on Probability</em>）
+里给这条原则起了现在通用的名字，叫无差别原则（principle of indifference），
+同时指出它会自己跟自己打架。第⑥幕会把他举的那一类反例摆出来。
+</p>
+<p>
+名字有了，可用的式子还没有。下一幕从「没有偏好」这句话本身出发，把式子造出来。
+</p>
+</div>
+
+<div class="act main">
+<span class="label">③ 把公式一步一步造出来（本章主体）</span>
+<p>
+先把「没有偏好」翻译成一句可以检验的话。它的意思是：
+<em>同样长的两段，出现的机会一样大，跟这两段落在什么位置无关。</em>
+位置无关这一条是关键，它把一句心理上的话变成了一个数学要求。
+</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(g(h) = P(X \in \text{任何一段长为 } h \text{ 的子区间})\)</td>
+<td class="why">「跟位置无关」这句话，意思正是这个概率只由长度 \(h\) 决定。于是它可以写成一个只有一个变量的函数</td></tr>
+<tr><td class="no">2</td><td>\(g(h_1+h_2) = g(h_1) + g(h_2)\)</td>
+<td class="why">把一段长 \(h_1+h_2\) 的区间从中间切开，两块互不相交，概率相加（第一章第 4 行）</td></tr>
+<tr><td class="no">3</td><td>\(g(h) = c\,h\)</td>
+<td class="why">第 2 行是柯西函数方程（Cauchy's functional equation）。\(g\) 单调不减，这个条件足以把它的解锁定成正比例函数。\(c\) 是待定的常数</td></tr>
+<tr><td class="no">4</td><td>\(P(x \lt X \le x+h) = c\,h \Rightarrow f(x) = \lim\limits_{h\to 0}\dfrac{c\,h}{h} = c\)</td>
+<td class="why">代进第一章第 7 行那个定义。<mark>密度是一个常数，这就是那条水平线</mark></td></tr>
+<tr><td class="no">5</td><td>\(\displaystyle\int_a^b c\,dx = c\,(b-a) = 1\)</td>
+<td class="why">第一章第 11 行，总概率是 1；区间外面密度为 0，所以只在 \(a\) 到 \(b\) 上积</td></tr>
+<tr><td class="no">6</td><td>\(c = \dfrac{1}{b-a}\)</td>
+<td class="why">第 5 行两边同除以 \(b-a\)。这里用得上 \(b \gt a\)，所以 \(b-a \ne 0\)</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+到这一刻才给它命名：<strong>连续均匀分布（continuous uniform distribution）</strong>，
+记作 \(X \sim U(a,\,b)\)，读作「\(X\) 服从 \(a\) 到 \(b\) 上的均匀分布」。
+它的密度写全是这样：
+</p>
+<p>
+\[ f(x) = \begin{cases} \dfrac{1}{b-a}, & a \le x \le b \\[6pt] 0, & \text{其余} \end{cases} \]
+</p>
+<p>
+下面那一行 \(0\) 是密度的一部分，省掉它，第 5 行那个「只在 \(a\) 到 \(b\) 上积」就没有了依据。
+下半 <a href="#q1a">Q1(a)</a> 的 <em>specify fully</em> 要的正是这一行。
+</p>
+
+<h4>期望：为什么它落在正中间</h4>
+<p>
+图形左右对称，重心落在中点，所以期望是 \(\tfrac{a+b}{2}\)。这句话是对的，
+可是它只是文字层。下面把符号层补上，每个等号一行。
+</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(E(X) = \displaystyle\int_{-\infty}^{\infty} x\,f(x)\,dx\)</td>
+<td class="why">连续型期望的定义式。它是离散型 \(\sum x\,P(X=x)\) 的连续版本：把「取值乘以概率再相加」换成「取值乘以密度再积分」</td></tr>
+<tr><td class="no">2</td><td>\(= \displaystyle\int_a^b \frac{x}{b-a}\,dx\)</td>
+<td class="why">区间外面 \(f = 0\)，那两段积出来是 0；区间里面代入第 6 行</td></tr>
+<tr><td class="no">3</td><td>\(= \dfrac{1}{b-a}\displaystyle\int_a^b x\,dx\)</td>
+<td class="why">\(\tfrac{1}{b-a}\) 与 \(x\) 无关，常数因子可以提到积分号外面</td></tr>
+<tr><td class="no">4</td><td>\(= \dfrac{1}{b-a}\left[\dfrac{x^2}{2}\right]_a^b = \dfrac{b^2-a^2}{2(b-a)}\)</td>
+<td class="why">\(\int x\,dx = \tfrac{x^2}{2}\)，代上限减代下限</td></tr>
+<tr><td class="no">5</td><td>\(= \dfrac{(b-a)(b+a)}{2(b-a)} = \dfrac{a+b}{2}\)</td>
+<td class="why">平方差公式 \(b^2-a^2=(b-a)(b+a)\)；约掉 \(b-a\)，约之前先确认 \(b-a \ne 0\)（第 6 行已经确认过）</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+「重心在中点」这句话，到第 5 行才算兑现。同一条路再走一遍可以拿到方差：
+\(E(X^2) = \dfrac{b^3-a^3}{3(b-a)} = \dfrac{a^2+ab+b^2}{3}\)，
+减去 \(\mu^2 = \dfrac{(a+b)^2}{4}\)，通分之后分子是 \(a^2-2ab+b^2\)，
+于是 \(\mathrm{Var}(X) = \dfrac{(b-a)^2}{12}\)。
+分母那个 12 不是记号约定，它是通分之后剩下来的东西。
+</p>
+
+<figure>
+<svg viewBox="0 0 620 240" role="img" aria-label="均匀分布的密度是一条水平线，期望落在区间中点">
+  <g font-family="Georgia, serif" font-size="13">
+  <line x1="70" y1="170" x2="560" y2="170" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="70" y1="170" x2="70" y2="40" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="140" y="80" width="340" height="90" fill="#8a5a2b" opacity="0.14"/>
+  <rect x="380" y="80" width="100" height="90" fill="#a8442a" opacity="0.28"/>
+  <line x1="140" y1="80" x2="480" y2="80" stroke="#8a5a2b" stroke-width="2.4"/>
+  <line x1="140" y1="80" x2="140" y2="170" stroke="#8a5a2b" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <line x1="480" y1="80" x2="480" y2="170" stroke="#8a5a2b" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <line x1="70" y1="80" x2="140" y2="80" stroke="currentColor" stroke-dasharray="3 3" opacity=".55"/>
+  <!-- 纵轴标注：写成真正的分式，不写成 1/(b−a) -->
+  <g text-anchor="middle" font-size="12.5">
+    <text x="34" y="76">1</text>
+    <line x1="14" y1="81" x2="54" y2="81" stroke="currentColor" stroke-width="1"/>
+    <text x="34" y="96" font-style="italic">b <tspan font-style="normal">−</tspan> a</text>
+  </g>
+  <text x="136" y="190" font-style="italic">a</text>
+  <text x="476" y="190" font-style="italic">b</text>
+  <text x="374" y="190" font-style="italic">t</text>
+  <line x1="310" y1="80" x2="310" y2="176" stroke="#2f6f4f" stroke-width="1.6"/>
+  <polygon points="310,180 304,170 316,170" fill="#2f6f4f"/>
+  <g fill="#2f6f4f" font-size="12.5">
+    <text x="238" y="212">E(<tspan font-style="italic">X</tspan>) =</text>
+    <g text-anchor="middle">
+      <text x="303" y="206" font-style="italic">a <tspan font-style="normal">+</tspan> b</text>
+      <line x1="283" y1="211" x2="323" y2="211" stroke="#2f6f4f" stroke-width="1"/>
+      <text x="303" y="226">2</text>
+    </g>
+  </g>
+  <text x="392" y="132" font-size="12">P(<tspan font-style="italic">X</tspan> &gt; <tspan font-style="italic">t</tspan>)</text>
+  <text x="196" y="132" font-size="12" opacity=".8">总面积 = 1</text>
+  <text x="56" y="46" font-style="italic">f</text>
+  <text x="556" y="190" font-style="italic">x</text>
+  </g>
+</svg>
+<figcaption>
+密度是一条水平线，高度 \(\dfrac{1}{b-a}\)。整块矩形的面积是 1，
+深色那一块是 \(P(X \gt t)\)，它的面积等于宽度除以总宽度，
+所以均匀分布的概率可以直接用长度比来算（下半 <a href="#q1c">Q1(c)</a> 用的正是这一条）。
+</figcaption>
+</figure>
+
+<div class="act">
+<span class="label">④ 一个跟本题无关的经典例子</span>
+<p>
+均匀分布看着简单，它在统计里藏着一个很深的位置。取任何一个连续随机变量 \(X\)，
+把它自己的 \(F\) 作用在自己身上，得到的 \(U = F(X)\) 服从 \(U(0,1)\)。
+这件事叫概率积分变换（probability integral transform）。
+</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(P(U \le u) = P(F(X) \le u)\)</td>
+<td class="why">\(U\) 的定义就是 \(F(X)\)，把它换进去</td></tr>
+<tr><td class="no">2</td><td>\(= P\big(X \le F^{-1}(u)\big)\)</td>
+<td class="why">\(F\) 连续且严格递增，所以它有反函数，并且两边同时作用 \(F^{-1}\) 不改变不等号的方向</td></tr>
+<tr><td class="no">3</td><td>\(= F\big(F^{-1}(u)\big) = u\)</td>
+<td class="why">第一章第 1 行，\(P(X \le x) = F(x)\)；反函数与原函数抵消</td></tr>
+<tr><td class="no">4</td><td>\(P(U \le u) = u \Rightarrow U \sim U(0,1)\)</td>
+<td class="why">\(U(0,1)\) 的累积分布函数正是 \(F(u)=u\)。两个分布的 \(F\) 相同，它们就是同一个分布</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+这个结论有两个用处，都跟火车没有关系。第一个：假设检验里的 \(p\) 值，
+在原假设成立而且检验统计量连续的时候，服从 \(U(0,1)\)。
+<mark>「取显著性水平 5%」这句话之所以成立，靠的正是这一条</mark>：
+\(p\) 均匀分布，落进 \(0\) 到 \(0.05\) 的机会就恰好是 5%。
+第二个：把第 4 行倒过来读，\(X = F^{-1}(U)\)。
+计算机只会生成 \(U(0,1)\) 的随机数，别的分布都是这样变出来的。
+</p>
+</div>
+
+<div class="act">
+<span class="label">⑤ 另一种互相冲突的看法</span>
+<p>
+把均匀分布当作「我一无所知」的表达，这个用法有过一场持续很久的争论。
+</p>
+<p>
+拉普拉斯那一边的做法是：不知道参数是多少，就给它一个均匀先验。
+杰弗里斯（Harold Jeffreys）1946 年在《An invariant form for the prior probability
+in estimation problems》里指出这个做法不稳：\(\theta\) 上的均匀分布，
+换成 \(\theta^2\) 来描述同一件事的时候就不再均匀了。
+同一份无知，换一个参数写法就给出不同的答案。他提出用 Fisher 信息构造的先验，
+它在参数重写之下保持不变。
+</p>
+<p>
+杰恩斯那一边接着往下走，他在 1968 年《Prior Probabilities》里主张，
+先验应当由问题自己的变换群定出来，无知本身有结构，可以被写下来。
+</p>
+<p>
+两边可检验的后果落在同一个地方：同一批数据、不同的先验，
+算出来的区间估计不一样。这一处的分歧到今天还在。我在这里没有立场，只是转述两边。
+</p>
+</div>
+
+<div class="act">
+<span class="label">⑥ 它自己承认的边界</span>
+<p>
+第一条边界在第③幕第 6 行里写着：\(c = \tfrac{1}{b-a}\) 要求 \(b-a\) 是一个有限的正数。
+区间无界的时候这条路走不通。假设在整条实轴上有一个常数密度 \(c\)：
+\(c=0\) 积出来是 0，\(c \gt 0\) 积出来是无穷，两种都不等于 1。
+<strong>「在无穷大的范围里完全没有偏好」这句话写不成一条密度。</strong>
+</p>
+<p>
+第二条边界就是第②幕欠下的那一笔。凯恩斯 1921 年指出无差别原则会自相矛盾，
+常被举出来的一个例子是这样：一个立方体的边长在 1 到 2 之间，此外一无所知。
+按边长均匀，边长的中位数是 1.5，对应体积 3.375；
+按体积均匀（体积在 1 到 8 之间），体积的中位数是 4.5，对应边长约 1.65。
+<mark>同一份无知，两种写法，两个答案。</mark>
+</p>
+<p>
+所以「均匀」这个词依赖于用哪一个量去描述，题目没有指定那个量的时候，
+均匀分布本身是不确定的。这一条跟第一章第⑤幕的贝特朗悖论是同一件事在两处的样子。
+考试里的题目会把那个量写清楚（这道题写的是「时间」），
+把这条边界记住，是为了知道那句话在替我们做一个选择。
+</p>
+</div>
+
+<div class="act">
+<span class="label">⑦ 回到这道题</span>
+<p>
+这一章造出来的东西对应下半的 <a href="#q1a">Q1(a)</a>、<a href="#q1b">Q1(b)</a>、
+<a href="#q1c">Q1(c)</a>、<a href="#q2c">Q2(c)</a>。
+</p>
+</div>
+
+<h2 id="part2">下半 · 做题篇</h2>
+
+<p class="lead">
+按题目自己的顺序往下走，一题一节，一个小问一段，一个也不漏。
+每个小问六样齐全：题干拆解、题干昭示了哪个方法、回接上半哪一幕、公式为什么用这一条、
+每个等号一行并写出依据、最后才是得分位置。
+</p>
+
+<div class="q">
+<p class="stem"><b>Q1.</b> 一列蒸汽小火车相对时刻表的偏差记作 \(W\) 分钟，负数表示早到。
+\(W\) 服从 \(-1.4\) 到 \(6.6\) 之间的连续均匀分布。</p>
+<p class="stem">(a) Specify fully the probability density function \(f(w)\) of \(W\). <span class="marks">(2 marks)</span><br>
+(b) Find \(E(W)\). <span class="marks">(2 marks)</span><br>
+(c) Find \(P(W \gt 3)\). <span class="marks">(2 marks)</span></p>
+</div>
+
+<div class="part" id="q1a">
+<h4>Q1(a) &nbsp;写出 \(W\) 的概率密度函数</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+「相对时刻表的偏差」加上「负数表示早到」这两句话合起来告诉我们取值可以是负的，
+所以区间的左端点是 \(-1.4\) 而不是 \(1.4\)。
+「\(-1.4\) 到 \(6.6\)」给出两个端点，区间长度 \(6.6-(-1.4)=8\)。
+「连续均匀分布」是题目直接给的分布名。
+「\(f(w)\)」这个记号说明答案要用 \(w\) 当变量，跟着题目走。
+2 分这个分值，配的是两样东西：一个常数值，一个完整的定义域。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+关键的词是 <em>specify fully</em>。它要的是把 \(f\) 在整条实轴上都写出来，
+区间外面那一行「其余为 0」同样要写。
+只写 \(f(w)=\tfrac{1}{8}\) 在这里不够用：那样写的话 \(f\) 只在一段上有定义，
+第一章第 11 行那个 \(\int_{-\infty}^{\infty} f = 1\) 就没有了着落，
+而这道题接下来两问都靠它。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+用的是第二章第③幕造出来的那条：从「跟位置无关」推到常数密度（第 4 行），
+再由总概率为 1 定出这个常数（第 5、6 行）。
+分段的那个写法就是那一幕末尾的式子，把字母换成这道题的数字。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+有两条路可以走。一条是直接用 \(f(w)=\tfrac{1}{b-a}\)；
+另一条是先写累积分布函数 \(F(w)=\tfrac{w-a}{b-a}\)，再求导。
+两条都通，第一条更短，因为题目已经把「均匀」这个词给出来了，
+常数密度可以直接拿来用。第二条在题目只给 \(F\) 的时候才需要。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(W \sim U(-1.4,\ 6.6)\)</td>
+<td class="why">题目给的分布名与两个端点，翻译成记号。\(a=-1.4\)，\(b=6.6\)</td></tr>
+<tr><td class="no">2</td><td>\(b-a = 6.6-(-1.4) = 6.6+1.4 = 8\)</td>
+<td class="why">减去一个负数等于加上它的相反数。这一步单独写出来，是因为负号在这里最容易掉</td></tr>
+<tr><td class="no">3</td><td>\(f(w) = \dfrac{1}{b-a} = \dfrac{1}{8} = 0.125\)</td>
+<td class="why">第二章第③幕第 6 行。分数与小数写哪一个都可以，写小数的时候留意 \(0.125\) 是有限小数，没有精度损失</td></tr>
+<tr><td class="no">4</td><td>\(f(w) = \begin{cases} 0.125, & -1.4 \le w \le 6.6\\ 0, & \text{其余}\end{cases}\)</td>
+<td class="why"><em>specify fully</em> 要的完整形式。第二行那个 0 覆盖了实轴上其余的全部位置</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>B1</b> 给常数值 \(0.125\)（或 \(\tfrac{1}{8}\)）。
+<b>B1</b> 给完整的分段形式，含区间与「其余为 0」那一行。
+只写常数、漏掉分段的答案拿一分。
+</p>
+</div>
+</div>
+
+<div class="part" id="q1b">
+<h4>Q1(b) &nbsp;求 \(E(W)\)</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+这一问接着 (a) 的设定，没有新的条件。
+\(E(W)\) 问的是这列火车「平均偏差多少分钟」，答案带单位，是分钟。
+2 分对应两样：一条公式，一个数值。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+题目在 (a) 里已经确认了均匀分布，所以这里可以直接用均匀分布的期望公式，
+不必回到 \(\int w f(w)\,dw\) 那条定义式。
+定义式当然算得出来，只是要多写三行，而这一问只给 2 分，出题人等的是那条现成的式子。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+第二章第③幕「期望：为什么它落在正中间」那张表，五行推导的终点就是 \(\tfrac{a+b}{2}\)。
+那一幕还说明了这条式子的来路：它是重心落在中点这句话的兑现，
+不是一条需要单独记忆的规定。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+\(E(X)=\dfrac{a+b}{2}\) 这一条在公式册里印着，可以直接引用。
+另一条路是 \(E(W)=\int_{-1.4}^{6.6} 0.125\,w\,dw\)，
+它在密度不是常数的时候才必须用（比如下面的 Q2）。
+两条路给出同一个答案，选短的那一条。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(E(W) = \dfrac{a+b}{2}\)</td>
+<td class="why">均匀分布期望的一般式，公式册里有；适用条件是 \(W\) 服从均匀分布，(a) 已经确认</td></tr>
+<tr><td class="no">2</td><td>\(= \dfrac{-1.4+6.6}{2}\)</td>
+<td class="why">把这道题的 \(a=-1.4\)、\(b=6.6\) 代进去。字母先于数字，代入单独占一行</td></tr>
+<tr><td class="no">3</td><td>\(= \dfrac{5.2}{2}\)</td>
+<td class="why">先算分子。这一步留着，方法分有落点，也让下一步只剩一次除法</td></tr>
+<tr><td class="no">4</td><td>\(= 2.6\)</td>
+<td class="why">除法算完。单位是分钟，写成「平均晚 2.6 分钟」</td></tr>
+</tbody>
+</table>
+</div>
+<p>
+第 3 行常常被合并掉。写着它的好处是：万一 \(5.2\) 这个数算错了，
+错的位置当场看得见，而合并之后错误藏在一个等号里面。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>M1</b> 给写出 \(\tfrac{a+b}{2}\) 或者正确代入的算式。
+<b>A1</b> 给 \(2.6\)。带上单位不扣分，漏掉单位在这一类题里通常也不扣，写上更稳。
+</p>
+</div>
+</div>
+
+<div class="part" id="q1c">
+<h4>Q1(c) &nbsp;求 \(P(W \gt 3)\)</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+\(P(W \gt 3)\) 问的是偏差超过 3 分钟的概率。
+严格大于还是大于等于，在连续分布里给出同一个答案，
+理由是第一章第 12 行：单点的概率是 0。
+3 落在 \(-1.4\) 与 \(6.6\) 之间，所以这是区间内部的一次切分，
+不涉及区间外面那一段。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+密度是常数，这一点让「面积」退化成「矩形面积」，宽乘高就够了。
+题目没有写 <em>algebraic integration</em> 或者 <em>by integration</em>，
+所以长度比这条捷径可以直接用。
+题目要是写了 <em>using algebraic integration</em>，那就得把 \(\int_3^{6.6} 0.125\,dw\) 写出来，
+面积公式再快也替代不了那两行。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+第二章那张图里深色的那一块，就是这一问要的面积。
+它成立的依据是第③幕第 3 行：概率与长度成正比，比例系数是 \(\tfrac{1}{b-a}\)。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+两条路摆在一起看：
+</p>
+<p>
+路径一，长度比：\(P(W \gt 3) = \dfrac{6.6-3}{6.6-(-1.4)}\)。
+路径二，积分：\(P(W \gt 3) = \int_3^{6.6} 0.125\,dw\)。
+</p>
+<p>
+两条路的第一步是同一件事，路径一把「常数乘以长度」这一步直接写成了比值。
+密度是常数的时候选路径一；密度随 \(x\) 变化的时候（Q2）路径一失效，
+因为那时候概率与长度不再成正比。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(P(W \gt 3) = \displaystyle\int_3^{6.6} f(w)\,dw\)</td>
+<td class="why">第一章第 9 行。上限取 \(6.6\) 而不是 \(\infty\)，因为 \(6.6\) 以上密度为 0（(a) 的第二行）</td></tr>
+<tr><td class="no">2</td><td>\(= 0.125 \times (6.6-3)\)</td>
+<td class="why">被积函数是常数，积出来等于常数乘以区间长度。这一行也可以读成矩形的宽乘高</td></tr>
+<tr><td class="no">3</td><td>\(= 0.125 \times 3.6\)</td>
+<td class="why">先把括号里的长度算出来</td></tr>
+<tr><td class="no">4</td><td>\(= 0.45\)</td>
+<td class="why">乘法算完。概率落在 0 与 1 之间，数值合理</td></tr>
+</tbody>
+</table>
+</div>
+<p>
+横向查一遍第 4 行：\(0.45\) 是一个概率，它落在 0 到 1 之间，量级也说得通，
+因为 3 分钟比中点 2.6 稍微靠右一点，答案应当略小于 0.5。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>M1</b> 给正确的区间与方法（长度比或者积分都算）。
+<b>A1</b> 给 \(0.45\)。
+上限误用 \(\infty\) 而写成发散的积分，方法分也拿不到，因为那一步说明区间外的 0 没有用上。
+</p>
+</div>
+</div>
+
+<div class="q">
+<p class="stem"><b>Q2.</b> 一段旅程所花的时间记作 \(S\) 分钟，它的概率密度函数是</p>
+<p class="stem">\[ f(s) = \begin{cases} k\,(s-2)(10-s), & 2 \le s \le 10 \\ 0, & \text{其余} \end{cases} \]</p>
+<p class="stem">(a) Show that \(k = \dfrac{3}{256}\). <span class="marks">(5 marks)</span><br>
+(b) Find \(P(S \le 4)\). <span class="marks">(4 marks)</span><br>
+(c) Write down \(E(S)\). <span class="marks">(1 mark)</span></p>
+</div>
+
+<div class="part" id="q2a">
+<h4>Q2(a) &nbsp;证明 \(k = \dfrac{3}{256}\)</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+密度写成了分段的形式，区间外面那一行 0 已经给出来了，
+它的用处是把积分范围锁定在 2 到 10 上。
+\(k\) 是一个待定常数，题目管它叫 constant，说明它与 \(s\) 无关，可以提到积分号外面。
+<em>Show that</em> 加上 5 分，两样合起来说明这一问要的是完整过程。
+答案 \(\tfrac{3}{256}\) 已经印在题面上，写出这个数拿不到分，中间那几行才是分。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+题目给了一个待定常数，同时给了一个完整的密度，这两样凑在一起只指向一个方法：
+归一化条件 \(\int f = 1\)。这是唯一一条把「未知常数」与「已知的 1」连起来的式子。
+</p>
+<p>
+<em>Show that</em> 这个词还额外要求一件事：目标已经给出来了，
+每一步都要落在纸上，跳步会被扣过程分。
+在这里直接写「由 \(\int f=1\) 得 \(k=\tfrac{3}{256}\)」拿不到中间那三分。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+第一章第 11 行：\(\int_{-\infty}^{\infty} f(x)\,dx = 1\)。
+那一行是从 \(F(\infty)=1\) 推出来的，它就是「\(X\) 总要取到某个值」
+这句话写成积分的样子，用不着当作一条额外的规定去记。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+这里没有第二条路。密度里带着未知常数的时候，能够定出它的条件只有总面积为 1。
+需要留意的是积分范围：写成 \(\int_{-\infty}^{\infty}\) 也对，
+只是区间外面那两段积出来是 0，所以实际写的时候从 2 积到 10。
+这一步的依据是题目给的第二行，不是习惯。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(\displaystyle\int_2^{10} k\,(s-2)(10-s)\,ds = 1\)</td>
+<td class="why">总概率为 1（第一章第 11 行）；密度在 2 到 10 之外为 0，所以只在这一段上积</td></tr>
+<tr><td class="no">2</td><td>\(k \displaystyle\int_2^{10} (s-2)(10-s)\,ds = 1\)</td>
+<td class="why">\(k\) 与 \(s\) 无关，定积分对常数因子是线性的，可以提到积分号外面</td></tr>
+<tr><td class="no">3</td><td>\((s-2)(10-s) = 10s - s^2 - 20 + 2s = -s^2 + 12s - 20\)</td>
+<td class="why">多项式乘法，逐项展开；展开之后才好逐项积分</td></tr>
+<tr><td class="no">4</td><td>\(\displaystyle\int (-s^2+12s-20)\,ds = -\dfrac{s^3}{3} + 6s^2 - 20s\)</td>
+<td class="why">\(\int s^n ds = \tfrac{s^{n+1}}{n+1}\)（\(n \ne -1\)），逐项求原函数；定积分不必写常数 \(C\)</td></tr>
+<tr><td class="no">5</td><td>\(s=10:\ -\dfrac{1000}{3} + 600 - 200 = -\dfrac{1000}{3} + \dfrac{1200}{3} = \dfrac{200}{3}\)</td>
+<td class="why">代上限；\(400\) 通分写成 \(\tfrac{1200}{3}\) 再相加</td></tr>
+<tr><td class="no">6</td><td>\(s=2:\ -\dfrac{8}{3} + 24 - 40 = -\dfrac{8}{3} - \dfrac{48}{3} = -\dfrac{56}{3}\)</td>
+<td class="why">代下限；\(-16\) 通分写成 \(-\tfrac{48}{3}\)。<mark>这一行的负号是这道题最常出错的位置</mark></td></tr>
+<tr><td class="no">7</td><td>\(\dfrac{200}{3} - \left(-\dfrac{56}{3}\right) = \dfrac{256}{3}\)</td>
+<td class="why">微积分基本定理，上限的值减去下限的值；减去负数等于加上正数</td></tr>
+<tr><td class="no">8</td><td>\(k \times \dfrac{256}{3} = 1 \Rightarrow k = \dfrac{3}{256}\)</td>
+<td class="why">回到第 2 行那条式子，两边同除以 \(\tfrac{256}{3}\)，也就是同乘 \(\tfrac{3}{256}\)</td></tr>
+</tbody>
+</table>
+</div>
+<p>
+八行，每一行有依据，每一行单独拿出来看都挑不出毛病。
+把这八行压成三行的时候，第 6 行那个 \(-\tfrac{56}{3}\) 一旦写错，
+最终答案照样能凑对（因为答案已经印在题面上），错误就没有地方露出来。
+<mark>一步一行的好处是错的那一步在写的当下就被自己看见。</mark>
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>M1</b> 写出 \(\int_2^{10} f(s)\,ds = 1\)。
+<b>M1</b> 正确展开被积式。
+<b>M1</b> 求出原函数。
+<b>A1</b> 得到 \(\tfrac{256}{3}\)。
+<b>A1</b> 解出 \(k=\tfrac{3}{256}\)。
+<em>Show that</em> 题里，最后那一分只给完整过程，直接抄答案不给分。
+</p>
+</div>
+</div>
+
+<div class="part" id="q2b">
+<h4>Q2(b) &nbsp;求 \(P(S \le 4)\)</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+\(P(S \le 4)\) 要的是从密度的左端点积到 4。
+左端点是 2 而不是 \(-\infty\)，理由是 2 以下密度为 0。
+\(k\) 在上一问已经定下来，这里可以直接用 \(\tfrac{3}{256}\)。
+4 分说明这一问的过程比 Q1(c) 长。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+密度是一条抛物线，随 \(s\) 变化，所以 Q1(c) 那条长度比在这里失效：
+概率与长度不再成正比。剩下的路只有积分。
+题干「Given that…」式的提示这里没有出现，而 (a) 的答案正是这一问的输入，
+这也是小问顺序给出的信号：先回头看上一问。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+第一章第 9 行：\(P(a \le X \le b) = \int_a^b f(x)\,dx\)。
+那一行是第 5 行与第 8 行接起来的结果，
+所以这一问算的其实是 \(F(4) - F(2)\)，而 \(F(2)=0\)。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+原函数在 (a) 的第 4 行已经求过了，这一问换一组上下限再用一次。
+另一种写法是先求出 \(F(s)\) 的表达式再代入 4，
+它在同一道题要问好几个概率的时候更省事；只问一次的时候，直接定积分更短。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(P(S \le 4) = \displaystyle\int_2^{4} \dfrac{3}{256}(s-2)(10-s)\,ds\)</td>
+<td class="why">第一章第 9 行；下限取 2 是因为 2 以下密度为 0，\(k\) 用 (a) 的结果</td></tr>
+<tr><td class="no">2</td><td>\(= \dfrac{3}{256}\displaystyle\int_2^{4} (-s^2+12s-20)\,ds\)</td>
+<td class="why">常数因子提到外面；被积式用 (a) 第 3 行展开好的形式</td></tr>
+<tr><td class="no">3</td><td>\(= \dfrac{3}{256}\left[-\dfrac{s^3}{3}+6s^2-20s\right]_2^{4}\)</td>
+<td class="why">原函数与 (a) 第 4 行相同，换成新的上下限</td></tr>
+<tr><td class="no">4</td><td>\(s=4:\ -\dfrac{64}{3}+96-80 = -\dfrac{64}{3}+\dfrac{48}{3} = -\dfrac{16}{3}\)</td>
+<td class="why">代上限；\(96-80=16\)，通分写成 \(\tfrac{48}{3}\)</td></tr>
+<tr><td class="no">5</td><td>\(s=2:\ -\dfrac{56}{3}\)</td>
+<td class="why">代下限；这个值在 (a) 第 6 行已经算过，直接引用</td></tr>
+<tr><td class="no">6</td><td>\(-\dfrac{16}{3}-\left(-\dfrac{56}{3}\right) = \dfrac{40}{3}\)</td>
+<td class="why">上限的值减去下限的值</td></tr>
+<tr><td class="no">7</td><td>\(P(S \le 4) = \dfrac{3}{256}\times\dfrac{40}{3} = \dfrac{40}{256} = \dfrac{5}{32}\)</td>
+<td class="why">分子分母同时约掉 3，再约掉 8。约分之前确认 3 与 8 都不为 0</td></tr>
+<tr><td class="no">8</td><td>\(= 0.15625\)</td>
+<td class="why">化成小数。答案落在 0 与 1 之间</td></tr>
+</tbody>
+</table>
+</div>
+<p>
+横向再查一眼：整条密度关于 \(s=6\) 对称，4 落在中点左边，
+所以答案应当明显小于 \(0.5\)，\(0.156\) 说得通。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>M1</b> 写出带正确上下限的积分。
+<b>M1</b> 代入上下限。
+<b>A1</b> 得到 \(\tfrac{40}{3}\) 或等价值。
+<b>A1</b> 得到 \(\tfrac{5}{32}\) 或 \(0.15625\)。
+下限写成 0 或者 \(-\infty\) 是这一问最常见的丢分处。
+</p>
+</div>
+</div>
+
+<div class="part" id="q2c">
+<h4>Q2(c) &nbsp;写出 \(E(S)\)</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+\(E(S)\) 问的是这段旅程的平均时间，单位是分钟。
+这一问只给 1 分，而且用的词是 <em>write down</em>。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+<em>write down</em> 加上 1 分，这两个信号一起出现的时候，
+出题人等的是一眼看出来的理由，动手积分就说明读错了信号。
+这道题里那个理由是对称性：密度关于区间中点对称，期望就落在中点。
+按定义式 \(\int_2^{10} s f(s)\,ds\) 算出来的答案一样，可是要多花四五分钟，
+在一张限时的卷子上，这几分钟通常比这一分值钱。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+第二章第③幕「期望：为什么它落在正中间」。那一幕讲的是均匀分布，
+而重心那句话的适用面更宽：<em>任何一条关于某点对称的密度，期望都落在那一点上</em>。
+均匀分布是它最简单的一个例子。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+先把对称性验证一遍，这一步值得写在草稿上。中点是 \(\tfrac{2+10}{2}=6\)。
+把 \(s\) 换成 \(12-s\)（关于 6 的镜像）代进密度：
+</p>
+<p>
+\[ f(12-s) = k\,(12-s-2)\,(10-(12-s)) = k\,(10-s)\,(s-2) = f(s) \]
+</p>
+<p>
+两个括号恰好互换，密度值不变。所以这条抛物线关于 \(s=6\) 对称，期望落在 6。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(f(12-s) = f(s)\)</td>
+<td class="why">上面那一步验证，两个因式互换</td></tr>
+<tr><td class="no">2</td><td>密度关于 \(s = \dfrac{2+10}{2} = 6\) 对称</td>
+<td class="why">\(s\) 与 \(12-s\) 关于 6 互为镜像，密度在镜像的两点上取值相同</td></tr>
+<tr><td class="no">3</td><td>\(E(S) = 6\)</td>
+<td class="why">对称密度的重心落在对称轴上（第二章第③幕）。单位是分钟</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>B1</b> 给 \(6\)。这一分不看过程，写对数就有；
+写错的常见来源是把 \(k\) 也带进对称性的判断里，
+而 \(k\) 是一个正的常数因子，它不影响对称轴的位置。
+</p>
+</div>
+</div>
+
+<footer>
+<p>
+这一页由 <b>dialogue-tutor（简易对话）</b> 按它自己的规格生成，用作演示：
+上半按对象分章、每章七幕，下半按题目顺序一个小问一段、每个等号一行并写出依据。
+完整的一份作业讲解通常包含四到六章与二十多个小问。
+</p>
+<p>
+两道题是为演示编写的，取材于 Edexcel IAL Statistics S2 常见的题型。
+文中的人名、年份与书名都可以自行核对；查不准的地方这份技能要求写「未能核实」，
+所以这里没有出现无法核实的引文。
+</p>
+<p>
+技能与安装说明：<a href="https://github.com/jinshanbaihai/dialogue-tutor">github.com/jinshanbaihai/dialogue-tutor</a> · MIT License
+</p>
+</footer>
+
+</main>
+</body>
+</html>
