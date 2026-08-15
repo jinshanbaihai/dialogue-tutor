@@ -13,13 +13,13 @@
 [![Skill](https://img.shields.io/badge/Agent-Skill-8a5a2b)](plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md)
 [![科目](https://img.shields.io/badge/TMUA%20%7C%20IAL%20S2%20%7C%20CIE%209708-2f6f4f)](#三科的链拆法不同)
 
-### ▶ [打开演示页：《连续随机变量与均匀分布》](https://raw.githack.com/jinshanbaihai/dialogue-tutor/main/docs/index.html)
+### ▶ [打开演示页：《连续随机变量与均匀分布》](https://jinshanbaihai.github.io/dialogue-tutor/)
 
 <sub>真实产物的样章：上半两章七幕，下半六个小问，320 条公式，一万三千字。</sub>
 
 </div>
 
-[![演示页首屏](docs/images/hero.png)](https://raw.githack.com/jinshanbaihai/dialogue-tutor/main/docs/index.html)
+[![演示页首屏](docs/images/hero.png)](https://jinshanbaihai.github.io/dialogue-tutor/)
 
 ---
 
@@ -53,7 +53,7 @@ SKILL.md §1.8 记着这一条的原话：**罗列不是讲解**。
 
 ## 演示页里可以直接看到的东西
 
-[演示页](https://raw.githack.com/jinshanbaihai/dialogue-tutor/main/docs/index.html)是按这个技能自己的规格生成的样章，
+[演示页](https://jinshanbaihai.github.io/dialogue-tutor/)是按这个技能自己的规格生成的样章，
 源文件就是本仓库的 `docs/index.html`，下载下来用浏览器打开是同一份。点开能够看到下面这些：
 
 | 在页面上找 | 对应 SKILL.md 的哪一条 |
@@ -222,7 +222,7 @@ claude.ai/customize/skills →「+」→ Create skill → Upload a skill。
 ```
 .claude-plugin/marketplace.json           ← 市场清单
 docs/
-├── index.html                            ← 演示页，README 里那个链接指向它
+├── index.html                            ← 演示页，GitHub Pages 的根
 └── images/                               ← README 用的截图
 plugins/dialogue-tutor/
 ├── .claude-plugin/plugin.json            ← 插件清单
