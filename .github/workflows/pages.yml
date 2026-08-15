@@ -1,8 +1,16 @@
 name: 部署演示页
 
 # docs/ 里那份演示页发布到 GitHub Pages。
-# configure-pages 的 enablement 会在仓库还没开启 Pages 的时候替它开启，
-# 所以这份工作流第一次跑完，https://<用户名>.github.io/dialogue-tutor/ 就通了。
+#
+# 仓库还没有开启 Pages 的时候，第一步会失败（Actions 的 token 没有创建 Pages 站点的权限，
+# 报的是 Resource not accessible by integration）。这时候这份工作流跳过部署、留一条说明就结束，
+# 不在 Actions 页面上留红叉。开启的办法有两种，任选一种：
+#
+#   A. Settings → Pages → Source 选 GitHub Actions（或者 Deploy from a branch，main + /docs）
+#   B. Settings → Actions → General → Workflow permissions 改成 Read and write permissions，
+#      再手动重跑一次本工作流，它会自己把 Pages 开起来
+#
+# 开启之后 docs/ 一有改动就自动重新部署。
 
 on:
   push:
@@ -33,15 +41,24 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 配置 Pages（没开启的话顺手开启）
+        id: pages
         uses: actions/configure-pages@v5
+        continue-on-error: true
         with:
           enablement: true
 
+      - name: Pages 还没有开启，这次跳过部署
+        if: steps.pages.outcome != 'success'
+        run: |
+          echo "::notice title=Pages 还没有开启::演示页这次没有部署。开启办法见 .github/workflows/pages.yml 顶部的注释：Settings → Pages 选一个来源，或者把 Actions 的 Workflow permissions 改成读写之后重跑本工作流。在那之前 README 里的演示链接走 raw.githack 镜像，照样打得开。"
+
       - name: 打包 docs/
+        if: steps.pages.outcome == 'success'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
       - name: 部署
         id: deployment
+        if: steps.pages.outcome == 'success'
         uses: actions/deploy-pages@v4
