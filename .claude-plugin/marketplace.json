@@ -10,7 +10,7 @@
       "name": "dialogue-tutor",
       "source": "./plugins/dialogue-tutor",
       "displayName": "简易对话",
-      "description": "对话式学习教练，治的是「题会做、讲不出为什么」。上半讲解篇按对象分章、每章七幕，把公式从缺口一步步造出来；下半做题篇一题一节一个小问一段、六样齐全，每个等号单独一行并写出这一行凭什么成立。演示页：https://jinshanbaihai.github.io/dialogue-tutor/",
+      "description": "对话式学习教练，治的是「题会做、讲不出为什么」。上半讲解篇按对象分章、每章七幕，把公式从缺口一步步造出来；下半做题篇一题一节一个小问一段、六样齐全，每个等号单独一行并写出这一行凭什么成立。仓库 README 里有一份可以直接打开的在线演示页。",
       "version": "1.0.0",
       "author": {
         "name": "StevenZhou",
