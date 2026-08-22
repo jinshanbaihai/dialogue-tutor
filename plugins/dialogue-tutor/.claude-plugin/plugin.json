@@ -1,7 +1,7 @@
 {
   "name": "dialogue-tutor",
-  "description": "对话式学习教练，口语名「简易对话」。上半讲解篇按对象分章、每章七幕，下半做题篇一题一节一个小问一段、每个小问六样齐全；对话侧先讲再问、追问回合零工具调用，答案由学习者自己说出。科目落在 TMUA 数学、Edexcel IAL 统计 S2、CIE 9708 经济。分类指令：bgct 全额写两半、bbct 上半整个换成板书内容的讲解、olct 只写做题那一半，后面跟 plustts 的另交一份完全基于 HTML 的讲解稿供 TTS 收听。演示页：https://jinshanbaihai.github.io/dialogue-tutor/",
-  "version": "1.2.0",
+  "description": "对话式学习教练，口语名「简易对话」。上半讲解篇按对象分章、每章七幕，主体是一道自己写的例题（题干清晰、风格照后面那份作业、跟作业没有关系、讲解详细程度跟下半对标），来历与批评几句带过；下半做题篇一题一节一个小问一段、每个小问六样齐全；对话侧先讲再问、追问回合零工具调用，答案由学习者自己说出。科目落在 TMUA 数学、Edexcel IAL 统计 S2、CIE 9708 经济。分类指令：bgct 全额写两半、bbct 上半整个换成板书内容的讲解、olct 只写做题那一半，后面跟 plustts 的另交一份完全基于 HTML 的讲解稿供 TTS 收听。演示页：https://jinshanbaihai.github.io/dialogue-tutor/",
+  "version": "1.3.0",
   "author": {
     "name": "StevenZhou",
     "url": "https://github.com/jinshanbaihai"
