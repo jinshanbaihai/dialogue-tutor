@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>连续随机变量与均匀分布 · 作业讲解（dialogue-tutor 样章）</title>
-<meta name="description" content="dialogue-tutor（简易对话）产出的 HTML 讲解样章：上半按对象分章、每章七幕，下半按题目顺序一个小问一段、每个等号一行并写出依据。">
+<meta name="description" content="dialogue-tutor（简易对话）产出的 HTML 讲解样章：上半按对象分章、每章七幕，主体是一道自己出的例题；下半按题目顺序一个小问一段、每个等号一行并写出依据。">
 <script>
 window.MathJax = {
   tex: {
@@ -132,7 +132,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <main>
 
 <h1>连续随机变量与均匀分布</h1>
-<p class="sub">作业讲解 · 样章 &nbsp;|&nbsp; 上半两章七幕，下半六个小问 &nbsp;|&nbsp; Edexcel IAL Statistics S2</p>
+<p class="sub">作业讲解 · 样章 &nbsp;|&nbsp; 上半两章七幕，每章一道例题，下半六个小问 &nbsp;|&nbsp; Edexcel IAL Statistics S2</p>
 
 <nav class="toc">
   <h5>这一份的走法</h5>
@@ -153,7 +153,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 下半的六个小问会用到四条式子：\(P(a \le X \le b)=\int_a^b f(x)\,dx\)、\(\int_{-\infty}^{\infty} f(x)\,dx = 1\)、
 \(f(x)=\dfrac{1}{b-a}\)（均匀分布）、\(E(X)=\dfrac{a+b}{2}\)。
 这四条的来历与推导排在全篇最前面，其余的讲到读得懂为止。
-两道题在这一半里不出现，它们只是把人领进来的钩子；上半讲的是这两个数学对象本身。
+下半那两道题在这一半里不出现，它们只是把人领进来的钩子；上半讲的是这两个数学对象本身。
+每一章的主体是第④幕那道<b>自己出的例题</b>：题干照下半的样子写，跟下半那两道没有关系，
+讲解的详细程度跟下半的小问对齐。
 </p>
 
 <h3 id="ch1">第一章 · 概率密度函数：一个自己不是概率的东西</h3>
@@ -191,32 +193,26 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 </div>
 
 <div class="act">
-<span class="label">② 让当年那个人出场</span>
+<span class="label">② 它从哪里来（两三句）</span>
 <p>
 1777 年，布丰（Georges-Louis Leclerc, Comte de Buffon）在《道德算术试论》
-（<em>Essai d'arithmétique morale</em>）里问了一个古怪的问题：
-地板上画着一组间距相同的平行线，把一根针随手扔上去，它压到线的概率是多少？
+（<em>Essai d'arithmétique morale</em>）里把一根针扔到画着平行线的地板上，问它压到线的概率是多少。
+他手上只有「有利结果数除以总结果数」，而针的位置与角度数不清，
+于是他把「数个数」换成了「量大小」。一百多年后，贝特朗（Joseph Bertrand）1889 年在
+《概率演算》（<em>Calcul des probabilités</em>）里问：圆里随机取一条弦，
+它比内接正三角形的边长的概率是多少？三种都说得通的取法给出三个答案：
+\(\tfrac{1}{2}\)、\(\tfrac{1}{3}\)、\(\tfrac{1}{4}\)。
 </p>
 <p>
-他手上有的是「有利结果数除以总结果数」，而这里的结果是针的位置和角度，
-一个连续的两维的东西，数不清。布丰的办法是把「数个数」换成「量大小」：
-针中点落在哪里、针斜成什么角度，各自占据一段长度和一段角度，
-用长度和角度的比去代替个数的比。
-</p>
-<p>
-一百多年后，贝特朗（Joseph Bertrand）1889 年在《概率演算》
-（<em>Calcul des probabilités</em>）里指出这个替换还不够稳。他的问题是：
-在一个圆里随机取一条弦，它比这个圆的内接正三角形的边长的概率是多少？
-他给出三种都说得通的取法，答案分别是 \(\tfrac{1}{2}\)、\(\tfrac{1}{3}\)、\(\tfrac{1}{4}\)。
-</p>
-<p>
-<mark>同一句「随机」，三个答案。</mark>这说明「等可能」这个词搬到连续场合以后，
-本身还没有被定义清楚。第③幕造出来的那个东西，正是为了给它一个说得明白的形式。
+<mark>同一句「随机」，三个答案。</mark>「等可能」这个词搬到连续场合以后本身还没有定义清楚，
+第③幕造出来的东西正是为了给它一个说得明白的形式。
+（布丰那根针后来算出压线的概率是 \(\tfrac{2\ell}{\pi d}\)，
+历史上第一次有人用概率去量 \(\pi\)。来历在这里就这么长，篇幅让给第③幕与第④幕。）
 </p>
 </div>
 
-<div class="act main">
-<span class="label">③ 把公式一步一步造出来（本章主体）</span>
+<div class="act">
+<span class="label">③ 把公式一步一步造出来</span>
 <p>
 第①幕已经证明了一件事：<em>给单个取值分配概率这条路走不通</em>。
 既然走不通，就换一个承受概率的东西。区间是现成的候选，因为区间有长度，
@@ -339,92 +335,245 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 两者由第 8 行的微积分基本定理连在一起。
 </figcaption>
 </figure>
+</div>
 
-<div class="act">
-<span class="label">④ 一个跟本题无关的经典例子</span>
+<div class="act main" id="ex1">
+<span class="label">④ 例题：把刚造好的密度用一次（本章主体）</span>
 <p>
-回到布丰那根针，把刚造好的密度用一次。这个例子跟火车、跟下半那两道题毫无关系，
-正好拿来看密度自己怎么工作。
-</p>
-<p>
-针长 \(\ell\)，平行线的间距 \(d\)，并且 \(\ell \le d\)（针不会同时压到两条线）。
-把「随手扔上去」翻译成两句话：针的中点到最近一条线的距离 \(X\) 在 \(0\) 到 \(\tfrac{d}{2}\)
-之间均匀分布，针与线的夹角 \(\Theta\) 在 \(0\) 到 \(\tfrac{\pi}{2}\) 之间均匀分布，两者互相独立。
+这一道是本章自己出的题，跟下半那两道没有共同的情境，也没有共同的问法。
+它只用得上第③幕刚造出来的东西，所以它检验的正是这一章。
+题干先单独摆在这里，看完可以自己先动手算一遍，再往下读讲解。
 </p>
 
+<div class="q">
+<p class="stem"><b>例题.</b> 一台机器一天里的空转时间占全天的比例记作 \(X\)。\(X\) 的概率密度函数是</p>
+<p class="stem">\[ f(x) = \begin{cases} 2-2x, & 0 \le x \le 1 \\ 0, & \text{其余} \end{cases} \]</p>
+<p class="stem">(a) Find \(P(X \le 0.1)\). <span class="marks">(3 marks)</span><br>
+(b) Given that \(f(0)=2\), explain why this does not contradict the fact that a probability cannot exceed 1. <span class="marks">(2 marks)</span></p>
+</div>
+
+<h4>例题(a) &nbsp;求 \(P(X \le 0.1)\)</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+「占全天的比例」这五个字撑住了取值范围：比例落在 0 与 1 之间，
+所以两个端点用不着另找条件，题干那一行 \(0 \le x \le 1\) 只是把它写了出来。
+分段写法里第二行那个 0 管着 \(0\) 到 \(1\) 以外的整条实轴，(a) 的积分下限因此写 0，不写 \(-\infty\)。
+\(f(x)=2-2x\) 是一次函数，在 \(x=0\) 处取到最大值 2，在 \(x=1\) 处降到 0。
+</p>
+<p>
+顺手核一句题干自己立不立得住：\(\int_0^1 (2-2x)\,dx = \big[2x-x^2\big]_0^1 = 2-1 = 1\)，
+并且这一段上 \(f \ge 0\)。第③幕第 10、11 行那两条要求都满足，题干给的确实是一条合法的密度。
+</p>
+<p>
+分值也在说话。(a) 给 3 分，配的是三样东西：一个带着上下限的积分式、一个原函数、一个数值。
+(b) 给 2 分并且用的是 <em>explain</em>，配的是两句话。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+<em>Find \(P(X \le 0.1)\)</em> 问的是一段区间的概率。第③幕第 8 行把区间的概率交给了积分，
+所以主线是在这一段上积分。
+</p>
+<p>
+别的方法在这里为什么不合适，值得逐条点一遍。<strong>把 \(f(0.1)=1.8\) 当成答案</strong>走不通，
+那是把密度当成了概率，而第③幕第 12 行刚刚否掉这条路。
+<strong>先求 \(F\) 再代值</strong>方向反了，题目给的是 \(f\)，
+\(F\) 还得先由 \(f\) 积出来，多绕一圈。
+<strong>梯形面积</strong>这条路是通的，因为 \(f\) 在这里是一次函数，
+着色的那一块正好是一个梯形；它在这道题里当验算，主线仍旧走积分，
+理由是下一章要用到的是原函数这条路子。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+用的是本章第③幕第 8 行 \(P(a \le X \le b)=\int_a^b f(x)\,dx\)。
+那一行的来历是第①幕那个裂口：单个取值分不到概率，概率只好交给区间。
+积分下限写 0 不写 \(-\infty\)，凭的是第③幕第 11 行那条归一化条件在区间外面留下的 0。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+同一个量有两条路可走，两条都摆出来。
+</p>
+<ul>
+<li><b>积分</b>：\(P(X \le 0.1)=\int_0^{0.1}(2-2x)\,dx\)。它对任何形状的 \(f\) 都成立，
+换成二次的密度（下半 Q2 就是二次的）照样能用。</li>
+<li><b>梯形面积</b>：\(f\) 是直线，\(0\) 到 \(0.1\) 这一段下面是一个上底 \(f(0.1)=1.8\)、
+下底 \(f(0)=2\)、高 \(0.1\) 的梯形，面积 \(\tfrac{2+1.8}{2}\times 0.1\)。它只在 \(f\) 是直线的时候好用。</li>
+</ul>
+<p>
+这道题走积分，理由有两条：一条是它可以迁移，另一条是原函数 \(2x-x^2\) 正是这个 \(X\) 的 \(F\)，
+下一步问别的区间的时候直接拿来代值就行。梯形那条留着当第⑤样末尾的横向检查。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
 <div class="scroll">
 <table>
 <thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
 <tbody>
-<tr><td class="no">1</td><td>压线 \(\iff X \le \dfrac{\ell}{2}\sin\Theta\)</td>
-<td class="why">针在垂直于线的方向上投影出的半长是 \(\tfrac{\ell}{2}\sin\Theta\)。中点离线比这个还近，针就跨过去了</td></tr>
-<tr><td class="no">2</td><td>\(f_X(x)=\dfrac{2}{d},\quad f_\Theta(\theta)=\dfrac{2}{\pi}\)</td>
-<td class="why">均匀分布的密度是区间长度的倒数（第二章第③幕）。两段区间长分别是 \(\tfrac{d}{2}\) 与 \(\tfrac{\pi}{2}\)</td></tr>
-<tr><td class="no">3</td><td>\(P = \displaystyle\int_0^{\pi/2}\!\!\int_0^{(\ell/2)\sin\theta} \frac{2}{d}\cdot\frac{2}{\pi}\,dx\,d\theta\)</td>
-<td class="why">独立的时候联合密度是两个密度相乘；把第 1 行那个条件写成积分区域</td></tr>
-<tr><td class="no">4</td><td>\(= \dfrac{4}{\pi d}\displaystyle\int_0^{\pi/2} \frac{\ell}{2}\sin\theta \,d\theta\)</td>
-<td class="why">里层对 \(x\) 积分，被积函数与 \(x\) 无关，积出来就是区间长度 \(\tfrac{\ell}{2}\sin\theta\)</td></tr>
-<tr><td class="no">5</td><td>\(= \dfrac{4}{\pi d}\cdot\dfrac{\ell}{2}\Big[-\cos\theta\Big]_0^{\pi/2}\)</td>
-<td class="why">\(\int \sin\theta\,d\theta = -\cos\theta\)；常数 \(\tfrac{\ell}{2}\) 提到积分号外面</td></tr>
-<tr><td class="no">6</td><td>\(= \dfrac{4}{\pi d}\cdot\dfrac{\ell}{2}\cdot(0-(-1)) = \dfrac{2\ell}{\pi d}\)</td>
-<td class="why">\(\cos\tfrac{\pi}{2}=0\)，\(\cos 0 = 1\)，中括号里的值是 1</td></tr>
+<tr><td class="no">1</td><td>\(P(X \le 0.1) = P(0 \le X \le 0.1)\)</td>
+<td class="why">\(X\) 落在 \(0\) 到 \(1\) 之外的概率是 0（题干第二行），所以下限从 0 起算，不从 \(-\infty\) 起算</td></tr>
+<tr><td class="no">2</td><td>\(= \displaystyle\int_0^{0.1} (2-2x)\,dx\)</td>
+<td class="why">第③幕第 8 行：一段区间的概率等于密度在这一段上的积分</td></tr>
+<tr><td class="no">3</td><td>\(\displaystyle\int (2-2x)\,dx = 2x - x^2\)</td>
+<td class="why">逐项积分，\(\int x^n dx = \tfrac{x^{n+1}}{n+1}\)（\(n \ne -1\)）。定积分不必写积分常数</td></tr>
+<tr><td class="no">4</td><td>\(x=0.1:\ 2(0.1)-(0.1)^2 = 0.2 - 0.01 = 0.19\)</td>
+<td class="why">代上限。\((0.1)^2 = 0.01\) 这一步单独写出来，是因为平方的小数点最容易挪错位</td></tr>
+<tr><td class="no">5</td><td>\(x=0:\ 2(0)-0^2 = 0\)</td>
+<td class="why">代下限。下限是 0 的时候这一行常常被跳过去，写出来是为了让第 6 行的减法有两个端点可减</td></tr>
+<tr><td class="no">6</td><td>\(P(X \le 0.1) = 0.19 - 0 = 0.19\)</td>
+<td class="why">微积分基本定理（fundamental theorem of calculus），上限的值减去下限的值</td></tr>
 </tbody>
 </table>
 </div>
+<p>
+<b>横向再查一遍每一行自己立不立得住。</b>\(0.19\) 落在 0 与 1 之间，概率的取值范围没有越界；
+概率没有单位，量纲这一项不必对；上限 \(0.1\) 落在 \([0,1]\) 里面，用的是同一段解析式，
+不必分段讨论。最后拿梯形那条路验一次：\(\tfrac{2+1.8}{2}\times 0.1 = 1.9 \times 0.1 = 0.19\)，
+两条路对上了。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>M1</b> 给带着上下限 \(0\) 与 \(0.1\) 的积分式（第 2 行）。
+<b>M1</b> 给正确的原函数 \(2x-x^2\)（第 3 行）。
+<b>A1</b> 给 \(0.19\)。
+下限误写成 \(-\infty\) 而得到发散的积分，第一个方法分就没有了，
+因为那一步说明区间外的 0 没有用上。
+这道题是本章自己出的，分值照 Edexcel 同类题的样子给。
+</p>
+</div>
+
+<h4>例题(b) &nbsp;\(f(0)=2\) 为什么不跟「概率不超过 1」冲突</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+题干把两句话摆在一起：\(f(0)=2\) 是从解析式里直接读出来的（\(2-2\times 0 = 2\)），
+「概率不会大于 1」是概率自己的性质。题目问的是它们为什么并不冲突，
+所以答案要落在「\(f\) 到底是什么」这一点上。2 分、<em>explain</em>，要的是两句话。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+<em>explain</em> 加上 2 分，昭示的是<strong>不必动手积分</strong>。
+这里算出任何一个数都不得分，因为题目问的不是某个概率的值。
+出题人等的是一句定义层面的话。看到 explain 就开始积分，说明信号读反了。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+回接第③幕造完密度那一刻掉出来的第一件事（第 12 行）：<strong>密度不是概率</strong>。
+那一行当时是顺带掉出来的推论，这一问把它单独拿出来考一次。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+用的仍旧是 \(P(a \le X \le b)=\int_a^b f(x)\,dx\)，只是这一次读它的方式反过来：
+它说的是概率等于 <em>面积</em>，而 \(f(x)\) 只是这块面积的高。
+高可以大于 1，面积照旧可以不超过 1，只要底足够短。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 一句一句写出来，每一句写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">句</th><th>写下的东西</th><th>这一句凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(f(0)=2\) 的读法是「在 \(x=0\) 附近，每单位比例上的概率是 2」</td>
+<td class="why">第③幕第 9 行：\(f\) 是概率对长度的变化率，它的单位是「概率每单位 \(x\)」，本身不是概率</td></tr>
+<tr><td class="no">2</td><td>概率是 \(f\) 下面的面积，不是 \(f\) 的高</td>
+<td class="why">第③幕第 8 行。面积等于高乘以底，底一短，面积就小</td></tr>
+<tr><td class="no">3</td><td>\(P(0 \le X \le 0.1) = 0.19 \le 1\)</td>
+<td class="why">(a) 已经算出来了。高是 2 的那一段，面积只有 0.19</td></tr>
+<tr><td class="no">4</td><td>\(P(X=0)=0\)</td>
+<td class="why">第③幕第 13 行。单点的区间长度是 0，面积是 0。\(f(0)=2\) 与 \(P(X=0)=0\) 同时成立，正说明这两样是两回事</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>B1</b> 说出密度不是概率（或者：\(f(x)\) 是单位长度上的概率）。
+<b>B1</b> 说出概率是密度下面的面积或者积分，面积不超过 1。
+只写「因为这是密度」拿不到第二分，那句话没有回答面积为什么仍旧不超过 1。
+</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 250" role="img" aria-label="密度 f(x)=2-2x 的图像，0 到 0.1 这一段下面的面积着色">
+  <g font-family="Georgia, serif" font-size="13">
+  <line x1="60" y1="200" x2="510" y2="200" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="60" y1="200" x2="60" y2="35" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="60" y1="125" x2="500" y2="125" stroke="currentColor" stroke-dasharray="3 3" opacity=".45"/>
+  <text x="514" y="129" font-size="12" opacity=".7">高度 1</text>
+  <polygon points="60,200 60,50 100,65 100,200" fill="#8a5a2b" opacity="0.28"/>
+  <path d="M60 50 L460 200" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+  <line x1="100" y1="200" x2="100" y2="206" stroke="currentColor"/>
+  <line x1="460" y1="200" x2="460" y2="206" stroke="currentColor"/>
+  <line x1="54" y1="50" x2="60" y2="50" stroke="currentColor"/>
+  <line x1="54" y1="125" x2="60" y2="125" stroke="currentColor"/>
+  <text x="52" y="222">0</text>
+  <text x="86" y="222">0.1</text>
+  <text x="456" y="222">1</text>
+  <text x="42" y="55">2</text>
+  <text x="42" y="130">1</text>
+  <text x="42" y="35" font-style="italic">f</text>
+  <text x="506" y="222" font-style="italic">x</text>
+  <line x1="150" y1="120" x2="96" y2="152" stroke="#a8442a" stroke-width="1"/>
+  <text x="154" y="116" font-size="12" fill="#a8442a">这一块的面积 = 0.19</text>
+  </g>
+</svg>
+<figcaption>
+这条密度从高度 2 起步，越过了「高度 1」那条虚线，概率照旧没有越过 1。
+概率是这条线下面的面积，着色的那一块就是 \(P(X \le 0.1)=0.19\)。
+</figcaption>
+</figure>
 
 <p>
-\(P = \dfrac{2\ell}{\pi d}\)。把针扔上几千次，数一数压线的比例，反解出来的就是 \(\pi\)。
-<mark>这是历史上第一次有人用概率去量一个几何常数。</mark>
-整个推导用到的新东西只有一样，就是刚造好的密度。
+两问走完，这一章造出来的那个东西被完整地用了一次：
+<mark>密度给出高，积分把高变成面积，面积才是概率。</mark>
+下半那两道题换了情境、换了函数、换了问法，用的仍旧是这三句话。
 </p>
 </div>
 
 <div class="act">
-<span class="label">⑤ 另一种互相冲突的看法</span>
+<span class="label">⑤ 另一种看法（一两句）</span>
 <p>
-第②幕留下的那个问题在这里回来了：贝特朗的三个答案到底谁对。这一处有两种回答，
-它们到今天还没有合并。
-</p>
-<p>
+贝特朗那三个答案到底谁对，两种回答到今天还没有合并。
 柯尔莫哥洛夫（Andrey Kolmogorov）1933 年在《概率论基础》
-（<em>Grundbegriffe der Wahrscheinlichkeitsrechnung</em>）里的回答是：
-先指定测度，再谈概率。「随机」这个词本身不带信息，
-说清楚是按哪一种方式随机，答案才唯一。贝特朗那三个答案各自对应一种取法，
-三个都对，问题问得不完整。概率论从此建在测度论上面。
-这个回答的代价是，随机成了一个需要人从外面给定的输入。
-</p>
-<p>
-杰恩斯（E. T. Jaynes）1973 年在《The Well-Posed Problem》里不同意。
-他主张问题的陈述本身已经给出了约束：这道题没有提到圆的位置、大小和朝向，
-那么答案就应当在平移、缩放、旋转之下保持不变，这三条不变性合起来只留下一个解，
-也就是 \(\tfrac{1}{2}\)。他还提出用撒麦秆的方式做实物检验。
-</p>
-<p>
-两边分歧收敛在一步上：<em>问题陈述里没说的东西，算不算一种信息</em>。
-柯尔莫哥洛夫那边算作缺失，杰恩斯那边算作对称性。我在这里没有立场，只是转述两边。
+（<em>Grundbegriffe der Wahrscheinlichkeitsrechnung</em>）里说：先指定测度，再谈概率；
+三个答案各自对应一种取法，三个都对，问题问得不完整。
+杰恩斯（E. T. Jaynes）1973 年在《The Well-Posed Problem》里说：
+题目没有提到圆的位置、大小与朝向，平移、缩放、旋转这三条不变性合起来只留下
+\(\tfrac{1}{2}\)。分歧收敛在一步上：<em>问题陈述里没说的东西，算不算一种信息</em>。
+我在这里没有立场，只是转述两边。
 </p>
 </div>
 
 <div class="act">
 <span class="label">⑥ 它自己承认的边界</span>
 <p>
-密度只在「有密度」的分布上存在，而第③幕第 7 行已经把条件写在脸上了：
+密度只在「有密度」的分布上存在，第③幕第 7 行已经把条件写在脸上：
 那一行要求极限存在，也就是 \(F\) 可导。\(F\) 不可导的地方，密度没有定义。
 </p>
 <p>
-两个现成的例子。第一个是混合型分布：一份保险的赔付额 \(Y\)，有 0.7 的概率恰好是 0
-（这一年没有出险），剩下 0.3 的概率连续地分布在正数上。\(F\) 在 0 这一点向上跳了 0.7，
-跳跃处没有导数，这个 \(Y\) 没有一个处处适用的密度。
-第二个是康托尔分布：它的 \(F\) 处处连续、没有任何跳跃，
-可是它的导数在几乎所有点上都是 0，积出来是 0 而不是 1，密度同样不存在。
-</p>
-<p>
-有名有姓的一条批评来自另一个方向。物理学家很早就想给「集中在一点上的密度」
-写一个符号，狄拉克（Paul Dirac）1930 年在《量子力学原理》里用的 \(\delta\) 函数
-就是这样一件工具。这个东西在函数的意义上并不存在，
-数学上要等到施瓦茨（Laurent Schwartz）1950 年前后的分布理论
-（<em>Théorie des distributions</em>）才站得住。这条批评说的是：
-<mark>密度这个概念的适用范围，比它被使用的范围窄。</mark>
+两个现成的例子。<b>混合型分布</b>：一份保险的赔付额 \(Y\)，有 0.7 的概率恰好是 0
+（这一年没有出险），剩下 0.3 连续地分布在正数上；\(F\) 在 0 这一点向上跳了 0.7，
+跳跃处没有导数，\(Y\) 没有一个处处适用的密度。<b>康托尔分布</b>：\(F\) 处处连续、
+没有任何跳跃，导数却在几乎所有点上都是 0，积出来是 0 而不是 1，密度同样不存在。
+有名有姓的批评一条：狄拉克（Paul Dirac）1930 年在《量子力学原理》里用的
+\(\delta\) 函数在函数的意义上并不存在，要等到施瓦茨（Laurent Schwartz）
+1950 年前后的分布理论才站得住，<mark>密度的适用范围比它被使用的范围窄</mark>。
 </p>
 <p>
 结论落在一句话上：<strong>\(F\) 处处都有，密度不一定有，所以 \(F\) 是更基本的那一个。</strong>
@@ -462,7 +611,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 </div>
 
 <div class="act">
-<span class="label">② 让当年那个人出场</span>
+<span class="label">② 它从哪里来（两三句）</span>
 <p>
 拉普拉斯（Pierre-Simon Laplace）1814 年在《概率的哲学随笔》
 （<em>Essai philosophique sur les probabilités</em>）里把这句话立成了一条原则：
@@ -476,11 +625,15 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 </p>
 <p>
 名字有了，可用的式子还没有。下一幕从「没有偏好」这句话本身出发，把式子造出来。
+（均匀分布在统计里还有一个很深的位置：任何一个连续随机变量把自己的 \(F\) 作用在自己身上，
+得到的 \(U=F(X)\) 都服从 \(U(0,1)\)，这叫概率积分变换（probability integral transform）。
+假设检验里「取显著性水平 5%」这句话之所以成立，靠的正是它；计算机只会生成 \(U(0,1)\)，
+别的分布都是把这一条倒过来变出来的。来历在这里就这么长。）
 </p>
 </div>
 
-<div class="act main">
-<span class="label">③ 把公式一步一步造出来（本章主体）</span>
+<div class="act">
+<span class="label">③ 把公式一步一步造出来</span>
 <p>
 先把「没有偏好」翻译成一句可以检验的话。它的意思是：
 <em>同样长的两段，出现的机会一样大，跟这两段落在什么位置无关。</em>
@@ -594,84 +747,255 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 所以均匀分布的概率可以直接用长度比来算（下半 <a href="#q1c">Q1(c)</a> 用的正是这一条）。
 </figcaption>
 </figure>
+</div>
 
-<div class="act">
-<span class="label">④ 一个跟本题无关的经典例子</span>
+<div class="act main" id="ex2">
+<span class="label">④ 例题：把这条水平线用一次（本章主体）</span>
 <p>
-均匀分布看着简单，它在统计里藏着一个很深的位置。取任何一个连续随机变量 \(X\)，
-把它自己的 \(F\) 作用在自己身上，得到的 \(U = F(X)\) 服从 \(U(0,1)\)。
-这件事叫概率积分变换（probability integral transform）。
+这一道同样是本章自己出的题。下半的 Q1 给了两个端点，正着求密度、期望与概率；
+这一道反过来走：给一个概率，反求端点。情境、方向、问法都跟下半那两道不一样，
+用到的仍旧只有第③幕造出来的这条水平线。
 </p>
 
+<div class="q">
+<p class="stem"><b>例题.</b> 一段长 \(a\) 厘米的细绳在一个随机的位置被剪断。
+剪断处到左端的距离记作 \(X\) 厘米，\(X\) 服从 \(0\) 到 \(a\) 之间的连续均匀分布。
+已知 \(P(X \lt 12) = 0.3\)。</p>
+<p class="stem">(a) Find the value of \(a\). <span class="marks">(3 marks)</span><br>
+(b) Find \(P(20 \lt X \lt 32)\). <span class="marks">(2 marks)</span></p>
+</div>
+
+<h4>例题(a) &nbsp;求 \(a\) 的值</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+「在一个随机的位置被剪断」这一句就是「没有偏好」，它是第③幕开头那句话的原样，
+所以这里可以直接用均匀分布，用不着再论证一次。
+「到左端的距离」把左端点钉成 0：距离从左端量起，最小值是 0。
+右端点是 \(a\)，绳子有多长，距离最大就是多少；\(a\) 没有给出来，正是要求的那个东西。
+</p>
+<p>
+\(P(X \lt 12)=0.3\) 这一句给了两样东西：一个位置 12，一个概率 0.3。
+0.3 落在 0 与 1 之间而且两头都不取到，说明 12 落在区间<em>里面</em>，
+也就是 \(a \gt 12\)。这一句在最后当横向检查用。
+3 分配的是三样：一条把 \(a\) 装进去的式子、一次解方程、一个数值。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+题目给的是概率、要的是端点，方向是反的。所以这里的动作是<strong>列一条含 \(a\) 的方程再解它</strong>，
+而不是代进公式算一个数。
+</p>
+<p>
+别的方法为什么不合适。<strong>\(E(X)=\tfrac{a+b}{2}\)</strong> 用不上，题目一个字都没有提期望。
+<strong>把 \(f(12)\) 算出来</strong>更走不通：\(f\) 是常数 \(\tfrac{1}{a}\)，跟 12 没有关系，
+而且密度不是概率（第一章第③幕第 12 行）。
+<strong>先写 \(F\) 再代 12</strong> 这条路是通的，它和下面那条积分的路子是同一件事的两种写法。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+用的是本章第③幕第 6 行 \(f(x)=\tfrac{1}{b-a}\)，这里 \(b-a = a-0 = a\)。
+更深一层是第③幕第 1 行那句话：概率只由长度决定。
+它让「\(0\) 到 12 这一段的概率」可以写成「12 除以总长」，方程于是列得出来。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+两条路都摆出来，它们同源。
+</p>
+<ul>
+<li><b>密度加积分</b>：\(P(X \lt 12)=\int_0^{12}\tfrac{1}{a}\,dx = \tfrac{12}{a}\)。
+这条路对任何密度都成立，写出 \(f=\tfrac{1}{a}\) 那一步就拿到了方法分。</li>
+<li><b>长度比</b>：\(P = \dfrac{\text{那一段的长}}{\text{总长}} = \dfrac{12}{a}\)。
+它是第③幕第 3 行 \(g(h)=ch\) 的直接读法，考场上更快。</li>
+</ul>
+<p>
+这道题两条写哪一条都拿满分。下面走密度那一条，因为它把 \(f=\tfrac{1}{a}\) 这一步落在了纸上，
+阅卷人看得见方法；长度比那一条留着当横向检查。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
 <div class="scroll">
 <table>
 <thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
 <tbody>
-<tr><td class="no">1</td><td>\(P(U \le u) = P(F(X) \le u)\)</td>
-<td class="why">\(U\) 的定义就是 \(F(X)\)，把它换进去</td></tr>
-<tr><td class="no">2</td><td>\(= P\big(X \le F^{-1}(u)\big)\)</td>
-<td class="why">\(F\) 连续且严格递增，所以它有反函数，并且两边同时作用 \(F^{-1}\) 不改变不等号的方向</td></tr>
-<tr><td class="no">3</td><td>\(= F\big(F^{-1}(u)\big) = u\)</td>
-<td class="why">第一章第 1 行，\(P(X \le x) = F(x)\)；反函数与原函数抵消</td></tr>
-<tr><td class="no">4</td><td>\(P(U \le u) = u \Rightarrow U \sim U(0,1)\)</td>
-<td class="why">\(U(0,1)\) 的累积分布函数正是 \(F(u)=u\)。两个分布的 \(F\) 相同，它们就是同一个分布</td></tr>
+<tr><td class="no">1</td><td>\(X \sim U(0,\ a)\)</td>
+<td class="why">「随机的位置」给出均匀，「到左端的距离」给出左端点 0，绳长给出右端点 \(a\)</td></tr>
+<tr><td class="no">2</td><td>\(f(x) = \dfrac{1}{a-0} = \dfrac{1}{a},\quad 0 \le x \le a\)</td>
+<td class="why">第③幕第 6 行 \(f=\tfrac{1}{b-a}\)，代入 \(b=a\)、\(a_{\text{左}}=0\)</td></tr>
+<tr><td class="no">3</td><td>\(P(X \lt 12) = \displaystyle\int_0^{12}\frac{1}{a}\,dx\)</td>
+<td class="why">第一章第③幕第 8 行。下限写 0，因为区间外的密度是 0</td></tr>
+<tr><td class="no">4</td><td>\(= \Big[\dfrac{x}{a}\Big]_0^{12} = \dfrac{12}{a} - 0 = \dfrac{12}{a}\)</td>
+<td class="why">\(\tfrac{1}{a}\) 与 \(x\) 无关，可以提到积分号外面；\(\int dx = x\)</td></tr>
+<tr><td class="no">5</td><td>\(\dfrac{12}{a} = 0.3\)</td>
+<td class="why">题干给的那句 \(P(X \lt 12)=0.3\)，把第 4 行的结果接上去</td></tr>
+<tr><td class="no">6</td><td>\(a = \dfrac{12}{0.3} = 40\)</td>
+<td class="why">两边乘 \(a\) 再除以 0.3。\(a\) 是绳长，\(a \ne 0\)，所以乘除都合法</td></tr>
 </tbody>
 </table>
 </div>
+<p>
+<b>横向查一遍。</b>\(a = 40 \gt 12\)，跟第①样里那句「12 落在区间里面」对得上；
+单位是厘米，跟题干一致；拿长度比那条路验一次，\(\tfrac{12}{40}=0.3\)，两条对上了。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>M1</b> 写出 \(\tfrac{12}{a}\)（积分式或者长度比都算）。
+<b>M1</b> 列出方程 \(\tfrac{12}{a}=0.3\) 并且动手解它。
+<b>A1</b> 给 \(a=40\)。
+漏掉单位不扣分，把 \(a\) 解成 \(12 \times 0.3 = 3.6\) 的时候，
+横向那一句「\(a\) 要大于 12」当场就能拦住。
+</p>
+</div>
+
+<h4>例题(b) &nbsp;求 \(P(20 \lt X \lt 32)\)</h4>
+
+<div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
+<p>
+(a) 已经把 \(a\) 定成 40，所以这一问的区间是 \([0,40]\)。
+20 与 32 都落在里面，两头都没有被截断，整段都在密度非零的那一片上。
+这一段的长度是 \(32-20=12\)。<mark>12 这个数刚刚出现过</mark>，
+它正是 (a) 里那一段的长度。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
+<p>
+2 分，而且紧接在 (a) 后面，昭示的是<strong>上一问的答案要用上</strong>。
+更省事的一条信号藏在长度里：这一段与 (a) 里那一段一样长，都是 12。
+第③幕第 1 行说概率只由长度决定，跟位置无关，
+所以答案跟 (a) 里给出的 0.3 相同，一步计算都不必做。
+</p>
+<p>
+考场上照常列式当然也对，两分照拿。把这条信号点出来，是因为它正是这一章的那句话本身：
+<em>同样长的两段，机会一样大。</em>
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
+<p>
+回接第③幕第 1 行：\(g(h)\) 只跟长度 \(h\) 有关。
+那一行当时是为了把「没有偏好」写成一个数学要求，这一问把它反过来用了一次。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">④</span> 公式为什么用这一条</span>
+<p>
+仍旧是长度比与积分两条，同源。这一问走长度比，因为区间的两个端点都在里面，
+密度是常数，积分算出来就是长度乘以 \(\tfrac{1}{40}\)，中间那一步没有新东西。
+积分那条留着当横向检查。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑤</span> 每个等号一行，每一行写出依据</span>
+<div class="scroll">
+<table>
+<thead><tr><th class="no">行</th><th>写下的东西</th><th>这一行凭什么</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td>\(0 \le 20 \lt 32 \le 40\)</td>
+<td class="why">先确认两个端点都落在 \([0,40]\) 里面。落在外面的话要先截断，这一行是为了排除那种情形</td></tr>
+<tr><td class="no">2</td><td>\(P(20 \lt X \lt 32) = \dfrac{32-20}{40}\)</td>
+<td class="why">第③幕第 1 行与第 6 行：概率等于这一段的长度乘以常数密度 \(\tfrac{1}{40}\)</td></tr>
+<tr><td class="no">3</td><td>\(= \dfrac{12}{40} = 0.3\)</td>
+<td class="why">\(32-20=12\)；\(12 \div 40 = 0.3\)</td></tr>
+<tr><td class="no">4</td><td>\(P(20 \lt X \lt 32) = P(X \lt 12)\)</td>
+<td class="why">两段一样长，都是 12。第③幕第 1 行说概率只由长度决定，所以这两个概率相等</td></tr>
+</tbody>
+</table>
+</div>
+<p>
+<b>横向查一遍。</b>拿积分那条路验一次：\(\int_{20}^{32}\tfrac{1}{40}\,dx
+= \big[\tfrac{x}{40}\big]_{20}^{32} = \tfrac{32}{40}-\tfrac{20}{40} = 0.3\)，对上了。
+\(0.3\) 落在 0 与 1 之间；连续型里 \(P(X=20)=P(X=32)=0\)，
+所以不等号写成严格的还是带等号的，答案一样。
+</p>
+</div>
+
+<div class="six"><span class="tag"><span class="num">⑥</span> 得分位置</span>
+<p class="score">
+<b>M1</b> 给正确的区间长度与总长（\(\tfrac{12}{40}\)，或者等价的积分式）。
+<b>A1</b> 给 \(0.3\)。
+直接写「与 (a) 相同，等于 0.3」并且说明理由是两段一样长，同样拿满两分。
+</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 250" role="img" aria-label="0 到 40 上的均匀密度，0 到 12 与 20 到 32 两块等长的面积着色">
+  <g font-family="Georgia, serif" font-size="13">
+  <line x1="60" y1="200" x2="530" y2="200" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="60" y1="200" x2="60" y2="60" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="60" y="100" width="132" height="100" fill="#8a5a2b" opacity="0.28"/>
+  <rect x="280" y="100" width="132" height="100" fill="#8a5a2b" opacity="0.28"/>
+  <line x1="60" y1="100" x2="500" y2="100" stroke="#8a5a2b" stroke-width="2"/>
+  <line x1="500" y1="100" x2="500" y2="200" stroke="#8a5a2b" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="192" y1="200" x2="192" y2="206" stroke="currentColor"/>
+  <line x1="280" y1="200" x2="280" y2="206" stroke="currentColor"/>
+  <line x1="412" y1="200" x2="412" y2="206" stroke="currentColor"/>
+  <line x1="500" y1="200" x2="500" y2="206" stroke="currentColor"/>
+  <text x="52" y="222">0</text>
+  <text x="184" y="222">12</text>
+  <text x="272" y="222">20</text>
+  <text x="404" y="222">32</text>
+  <text x="492" y="222">40</text>
+  <line x1="54" y1="100" x2="60" y2="100" stroke="currentColor"/>
+  <text x="20" y="104" font-size="12">1/40</text>
+  <text x="42" y="58" font-style="italic">f</text>
+  <text x="534" y="222" font-style="italic">x</text>
+  <text x="84" y="88" font-size="12" fill="#a8442a">长 12</text>
+  <text x="304" y="88" font-size="12" fill="#a8442a">长 12</text>
+  <text x="196" y="150" font-size="12" fill="#a8442a">两块一样宽，也就一样大</text>
+  </g>
+</svg>
+<figcaption>
+密度是一条水平线，所以面积只由宽度决定。左边那块是 \(P(X \lt 12)\)，
+右边那块是 \(P(20 \lt X \lt 32)\)，两块一样宽，两个概率都是 0.3。
+</figcaption>
+</figure>
 
 <p>
-这个结论有两个用处，都跟火车没有关系。第一个：假设检验里的 \(p\) 值，
-在原假设成立而且检验统计量连续的时候，服从 \(U(0,1)\)。
-<mark>「取显著性水平 5%」这句话之所以成立，靠的正是这一条</mark>：
-\(p\) 均匀分布，落进 \(0\) 到 \(0.05\) 的机会就恰好是 5%。
-第二个：把第 4 行倒过来读，\(X = F^{-1}(U)\)。
-计算机只会生成 \(U(0,1)\) 的随机数，别的分布都是这样变出来的。
+两问走完，这一章那句话被用了一个来回：
+<mark>先由「概率只由长度决定」反求出总长，再由同一句话看出两段等长就等概率。</mark>
 </p>
 </div>
 
 <div class="act">
-<span class="label">⑤ 另一种互相冲突的看法</span>
+<span class="label">⑤ 另一种看法（一两句）</span>
 <p>
-把均匀分布当作「我一无所知」的表达，这个用法有过一场持续很久的争论。
-</p>
-<p>
-拉普拉斯那一边的做法是：不知道参数是多少，就给它一个均匀先验。
+把均匀分布当作「我一无所知」的表达，这个用法有过一场很长的争论。
+拉普拉斯那一边：不知道参数是多少，就给它一个均匀先验。
 杰弗里斯（Harold Jeffreys）1946 年在《An invariant form for the prior probability
-in estimation problems》里指出这个做法不稳：\(\theta\) 上的均匀分布，
-换成 \(\theta^2\) 来描述同一件事的时候就不再均匀了。
-同一份无知，换一个参数写法就给出不同的答案。他提出用 Fisher 信息构造的先验，
-它在参数重写之下保持不变。
-</p>
-<p>
-杰恩斯那一边接着往下走，他在 1968 年《Prior Probabilities》里主张，
-先验应当由问题自己的变换群定出来，无知本身有结构，可以被写下来。
-</p>
-<p>
-两边可检验的后果落在同一个地方：同一批数据、不同的先验，
-算出来的区间估计不一样。这一处的分歧到今天还在。我在这里没有立场，只是转述两边。
+in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀分布换成 \(\theta^2\)
+描述同一件事的时候就不再均匀，于是他提出用 Fisher 信息构造的先验，它在参数重写之下保持不变。
+杰恩斯 1968 年在《Prior Probabilities》里接着往下走，主张先验应当由问题自己的变换群定出来。
+可检验的后果落在同一处：同一批数据、不同的先验，算出来的区间估计不一样。
+我在这里没有立场，只是转述两边。
 </p>
 </div>
 
 <div class="act">
 <span class="label">⑥ 它自己承认的边界</span>
 <p>
-第一条边界在第③幕第 6 行里写着：\(c = \tfrac{1}{b-a}\) 要求 \(b-a\) 是一个有限的正数。
+第一条边界写在第③幕第 6 行里：\(c=\tfrac{1}{b-a}\) 要求 \(b-a\) 是一个有限的正数。
 区间无界的时候这条路走不通。假设在整条实轴上有一个常数密度 \(c\)：
 \(c=0\) 积出来是 0，\(c \gt 0\) 积出来是无穷，两种都不等于 1。
 <strong>「在无穷大的范围里完全没有偏好」这句话写不成一条密度。</strong>
 </p>
 <p>
-第二条边界就是第②幕欠下的那一笔。凯恩斯 1921 年指出无差别原则会自相矛盾，
-常被举出来的一个例子是这样：一个立方体的边长在 1 到 2 之间，此外一无所知。
-按边长均匀，边长的中位数是 1.5，对应体积 3.375；
-按体积均匀（体积在 1 到 8 之间），体积的中位数是 4.5，对应边长约 1.65。
+第二条边界是第②幕欠下的那一笔，也是那条有名有姓的批评：凯恩斯 1921 年指出无差别原则会自相矛盾。
+一个立方体的边长在 1 到 2 之间，此外一无所知；按边长均匀，中位数边长 1.5，对应体积 3.375；
+按体积均匀（体积在 1 到 8 之间），中位数体积 4.5，对应边长约 1.65。
 <mark>同一份无知，两种写法，两个答案。</mark>
-</p>
-<p>
-所以「均匀」这个词依赖于用哪一个量去描述，题目没有指定那个量的时候，
-均匀分布本身是不确定的。这一条跟第一章第⑤幕的贝特朗悖论是同一件事在两处的样子。
-考试里的题目会把那个量写清楚（这道题写的是「时间」），
-把这条边界记住，是为了知道那句话在替我们做一个选择。
+所以「均匀」依赖于用哪一个量去描述，题目没有指定那个量的时候，均匀分布本身是不确定的。
+这一条跟第一章第⑤幕的贝特朗悖论是同一件事在两处的样子。
+考试里的题目会把那个量写清楚（例题写的是「距离」，下半 Q1 写的是「时间」），
+记住这条边界，是为了知道那句话在替我们做一个选择。
 </p>
 </div>
 
