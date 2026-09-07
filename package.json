@@ -1,9 +1,10 @@
 {
   "name": "dialogue-tutor-validation",
   "private": true,
-  "version": "1.6.0",
+  "version": "1.7.0",
   "scripts": {
-    "test": "node --test tests/*.test.cjs"
+    "test": "node --test tests/*.test.cjs",
+    "dev": "node scripts/preview.mjs"
   },
   "devDependencies": {
     "jsdom": "26.1.0"

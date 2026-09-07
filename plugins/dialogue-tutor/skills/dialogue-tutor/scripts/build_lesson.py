@@ -17,6 +17,8 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "met
 KINDS = {"memory", "concept", "procedure", "design"}
 TYPES = {"flashcards", "quiz", "steps", "explore", "interactive"}
 MODES = {"bgct", "bbct", "olct", "onct"}
+PATHWAY_OUTCOMES = {"incorrect", "assisted", "correct", "skipped"}
+SOURCE_REPOSITORIES = {"HKUDS/DeepTutor", "DialogueTutor"}
 ID = re.compile(r"^[A-Za-z][A-Za-z0-9_-]*$")
 RESERVED_NAMES = {"__proto__", "prototype", "constructor"}
 RUNTIME_IDS = {"dt-lesson", "dt-runtime", "dt-runtime-style"}
@@ -69,6 +71,7 @@ def validate_lesson(lesson):
     for field in ("revision", "title"):
         text_field(lesson, field, "lesson")
     require(lesson.get("mode", "bgct") in MODES, "mode must be bgct, bbct, olct or onct")
+    require(lesson.get("presentation", "document") in {"document", "studio"}, "presentation must be document or studio")
     objectives = lesson.get("objectives")
     require(isinstance(objectives, list) and objectives, "objectives must be a nonempty array")
     objective_ids = set()
@@ -96,7 +99,7 @@ def validate_lesson(lesson):
         source = activity.get("source")
         if isinstance(source, dict):
             text_field(source, "path", context + ".source")
-            require(source.get("repository", "HKUDS/DeepTutor") == "HKUDS/DeepTutor", f"{context}.source must identify HKUDS/DeepTutor")
+            require(source.get("repository", "HKUDS/DeepTutor") in SOURCE_REPOSITORIES, f"{context}.source.repository must be HKUDS/DeepTutor or DialogueTutor")
         else:
             require(isinstance(source, str) and (source.startswith(("deeptutor/", "web/")) or "HKUDS/DeepTutor" in source), f"{context}.source must identify a DeepTutor implementation")
         placement = activity.get("placement")
@@ -157,9 +160,28 @@ def validate_lesson(lesson):
         else:
             text_field(activity, "bodyHtml", context)
             text_field(activity, "script", context, required=False)
+    pathways = lesson.get("pathways", [])
+    require(isinstance(pathways, list), "pathways must be an array")
+    pathway_keys = set()
+    for index, pathway in enumerate(pathways):
+        context = f"pathways[{index}]"
+        require(isinstance(pathway, dict), f"{context} must be an object")
+        require(pathway.get("from") in activity_ids, f"{context}.from must identify an activity")
+        require(pathway.get("to") in activity_ids, f"{context}.to must identify an activity")
+        require(pathway.get("on") in PATHWAY_OUTCOMES, f"{context}.on must be incorrect, assisted, correct or skipped")
+        text_field(pathway, "label", context)
+        key = (pathway["from"], pathway["on"], pathway["to"])
+        require(key not in pathway_keys, f"{context} duplicates a pathway")
+        pathway_keys.add(key)
+    sections = lesson.get("sections", [])
+    require(isinstance(sections, list), "sections must be an array")
+    if lesson.get("presentation") == "studio":
+        require(sections, "studio presentation needs sections")
+        covered = {activity["objectiveId"] for activity in activities}
+        require(covered == objective_ids, "studio objectives must each have at least one activity")
     section_ids = set()
     assigned = []
-    for index, section in enumerate(lesson.get("sections", [])):
+    for index, section in enumerate(sections):
         context = f"sections[{index}]"
         require(isinstance(section, dict), f"{context} must be an object")
         identifier(section.get("id"), context + ".id")
@@ -167,8 +189,13 @@ def validate_lesson(lesson):
         section_ids.add(section["id"])
         text_field(section, "title", context)
         text_field(section, "bodyHtml", context)
+        for field in ("lead", "explanationTitle"):
+            if field in section:
+                text_field(section, field, context)
         section_activities = section.get("activityIds", [])
         require(isinstance(section_activities, list), f"{context}.activityIds must be an array")
+        if lesson.get("presentation") == "studio":
+            require(section_activities, f"{context}.activityIds must be nonempty in studio presentation")
         for activity_id in section_activities:
             require(activity_id in activity_ids, f"{context} refers to unknown activity: {activity_id}")
             assigned.append(activity_id)
@@ -376,10 +403,9 @@ def place_activities(document, lesson):
 
 
 BASE_CSS = """
-:root{color-scheme:light dark;--paper:#faf8f2;--ink:#262b32;--muted:#656c73;--line:#deddd5;--accent:#215d59}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,'Noto Sans SC',sans-serif;line-height:1.85}
-main{max-width:52rem;margin:0 auto;padding:3rem 1.3rem 6rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.35}h2{margin-top:3rem;font-size:1.5rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--accent)}figure{margin:1.7rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:#eceee9}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--accent);font-size:.8rem;letter-spacing:.12em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
-@media(prefers-color-scheme:dark){:root{--paper:#161b20;--ink:#e6e6df;--muted:#abb2b8;--line:#384048;--accent:#9edbd0}pre{background:#222b30}}
+:root{color-scheme:light dark;--paper:var(--dt-canvas);--ink:var(--dt-ink);--muted:var(--dt-muted);--line:var(--dt-line);--accent:var(--dt-action)}
+*{box-sizing:border-box}body{margin:0;background:var(--dt-canvas);color:var(--dt-ink);font-family:system-ui,-apple-system,'Noto Sans SC',sans-serif;font-size:16px;line-height:1.8}
+main{max-width:800px;margin:0 auto;padding:2.2rem 1.25rem 5rem}h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.3}h2{margin-top:2.6rem;font-size:1.45rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--dt-action)}figure{margin:1.5rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--dt-line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:var(--dt-surface2)}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--dt-muted);font-size:.875rem;letter-spacing:.08em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
 """
 
 
@@ -387,13 +413,31 @@ def make_new_document(lesson):
     require(lesson.get("sections"), "New lessons need sections; existing lessons need --base-html")
     title = html.escape(lesson["title"])
     language = html.escape(lesson.get("language", "zh-CN"), quote=True)
-    content = [f'<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><style>{BASE_CSS}</style></head><body><main><header><p class="dt-lesson-kicker">DIALOGUETUTOR · 互动学习</p><h1>{title}</h1></header>']
+    studio = lesson.get("presentation") == "studio"
+    en = lesson.get("language", "zh-CN").lower().startswith("en")
+    main_class = ' class="dt-studio"' if studio else ""
+    content = [f'<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><style>{BASE_CSS}</style></head><body><main{main_class}><header><p class="dt-lesson-kicker">DIALOGUETUTOR · {"LEARNING STUDIO" if en else "互动学习"}</p><h1>{title}</h1></header>']
+    if studio:
+        content.append('<nav data-dt-studio-nav></nav><div data-dt-stage>')
     for section in lesson["sections"]:
-        content.append(f'<section id="{html.escape(section["id"], quote=True)}"><h2>{html.escape(section["title"])}</h2>{section["bodyHtml"]}')
+        section_id = html.escape(section["id"], quote=True)
         embedded = [node.attrs["data-dt-activity"] for node in Document(section["bodyHtml"]).root.descendants() if "data-dt-activity" in node.attrs]
         require(set(embedded).issubset(set(section.get("activityIds", []))), f"Section {section['id']} contains an unassigned activity mount")
-        content.extend(activity_mount(activity_id) for activity_id in section.get("activityIds", []) if activity_id not in embedded)
+        if studio:
+            require(not embedded, f"Studio section {section['id']} must put activities in activityIds, outside bodyHtml")
+            content.append(f'<section id="{section_id}" class="dt-scene" data-dt-scene="{section_id}"><h2>{html.escape(section["title"])}</h2>')
+            if section.get("lead"):
+                content.append(f'<p class="dt-scene-lead">{html.escape(section["lead"])}</p>')
+            content.append('<p class="dt-scene-evidence" data-dt-scene-evidence></p>')
+            content.extend(activity_mount(activity_id) for activity_id in section["activityIds"])
+            summary = html.escape(section.get("explanationTitle", "Complete explanation" if en else "查看完整讲解"))
+            content.append(f'<details id="dt-explanation-{section_id}" class="dt-worked-solution dt-scene-explanation" data-dt-solution><summary>{summary}</summary><div class="dt-authored">{section["bodyHtml"]}</div></details>')
+        else:
+            content.append(f'<section id="{section_id}"><h2>{html.escape(section["title"])}</h2>{section["bodyHtml"]}')
+            content.extend(activity_mount(activity_id) for activity_id in section.get("activityIds", []) if activity_id not in embedded)
         content.append("</section>")
+    if studio:
+        content.append('</div><nav data-dt-studio-sequence></nav>')
     content.append("</main></body></html>")
     return Document("".join(content))
 
@@ -410,6 +454,7 @@ def assemble(lesson, base_html=None, asset_root=None):
     if base_html is None:
         document = make_new_document(lesson)
     else:
+        require(lesson.get("presentation") != "studio", "studio presentation is built from sections; omit --base-html")
         document = Document(base_html)
         require(not select(document.root, "#dt-lesson"), "Base HTML already has a DialogueTutor lesson; use the original content source to rebuild")
         wrap_solutions(document, lesson)
@@ -436,7 +481,7 @@ def assemble(lesson, base_html=None, asset_root=None):
     study.parent = main
     # Keep the lesson title as the first visible content where a header is present.
     first_header = next((node for node in main.children if node.tag == "header"), None)
-    insertion = main.children.index(first_header) + 1 if first_header else 0
+    insertion = len(main.children) if lesson.get("presentation") == "studio" else main.children.index(first_header) + 1 if first_header else 0
     main.children.insert(insertion, study)
     head.append(Node(raw=f'<style id="dt-runtime-style">{css}</style>'))
     for activity in lesson["activities"]:

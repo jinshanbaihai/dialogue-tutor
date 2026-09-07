@@ -21,7 +21,75 @@ def small_lesson():
     }
 
 
+def studio_lesson():
+    lesson = small_lesson()
+    lesson["presentation"] = "studio"
+    lesson["sections"][0].update({"lead": "先独立计算，再查阅完整过程。", "bodyHtml": "<p>1÷4=0.25</p>", "explanationTitle": "分数的完整解答"})
+    lesson["activities"][0]["solutionId"] = "dt-explanation-section-one"
+    lesson["activities"][0]["source"] = {"repository": "DialogueTutor", "path": "assets/interactive/lesson-runtime.js"}
+    return lesson
+
+
 class BuilderTests(unittest.TestCase):
+    def test_studio_places_an_action_before_its_closed_full_explanation(self):
+        lesson = studio_lesson()
+        doc = builder.Document(builder.assemble(lesson))
+        section = builder.unique(doc.root, "#section-one")
+        self.assertEqual(section.attrs["data-dt-scene"], "section-one")
+        children = [node for node in section.children if node.tag]
+        activity = next(node for node in children if node.attrs.get("data-dt-activity") == "answer")
+        solution = builder.unique(doc.root, "#dt-explanation-section-one")
+        self.assertLess(children.index(activity), children.index(solution))
+        self.assertEqual(solution.tag, "details")
+        self.assertNotIn("open", solution.attrs)
+        self.assertIn("分数的完整解答", solution.render())
+        self.assertIn("1÷4=0.25", solution.render())
+        main = builder.unique(doc.root, "main")
+        self.assertEqual([node for node in main.children if node.tag][-1].attrs.get("data-dt-study"), None)
+        self.assertIn("data-dt-study", [node for node in main.children if node.tag][-1].attrs)
+
+    def test_studio_requires_complete_activity_and_objective_coverage(self):
+        lesson = studio_lesson()
+        lesson["objectives"].append({"id": "uncovered", "title": "缺少证据的目标", "kind": "concept"})
+        with self.assertRaisesRegex(builder.LessonError, "objectives must each"):
+            builder.validate_lesson(lesson)
+        lesson.pop("presentation")
+        builder.validate_lesson(lesson)  # Legacy v1 remains accepted.
+        lesson = studio_lesson()
+        lesson["sections"][0]["activityIds"] = []
+        with self.assertRaisesRegex(builder.LessonError, "nonempty"):
+            builder.validate_lesson(lesson)
+
+    def test_studio_rejects_activity_mounts_inside_explanation_and_base_html(self):
+        lesson = studio_lesson()
+        lesson["sections"][0]["bodyHtml"] += '<div data-dt-activity="answer"></div>'
+        with self.assertRaisesRegex(builder.LessonError, "outside bodyHtml"):
+            builder.assemble(lesson)
+        with self.assertRaisesRegex(builder.LessonError, "omit --base-html"):
+            builder.assemble(studio_lesson(), "<html><head></head><body><main></main></body></html>")
+
+    def test_pathways_validate_exact_activity_targets_and_explicit_outcomes(self):
+        for outcome in ("incorrect", "assisted", "correct", "skipped"):
+            lesson = studio_lesson()
+            lesson["pathways"] = [{"from": "answer", "on": outcome, "to": "answer", "label": "再次尝试本题"}]
+            builder.validate_lesson(lesson)
+        for changes in ({"from": "missing"}, {"to": "missing"}, {"on": "self-passed"}, {"label": ""}):
+            lesson = studio_lesson()
+            lesson["pathways"] = [{"from": "answer", "on": "correct", "to": "answer", "label": "重试", **changes}]
+            with self.assertRaises(builder.LessonError):
+                builder.validate_lesson(lesson)
+        lesson = studio_lesson()
+        lesson["pathways"] = [{"from": "answer", "on": "correct", "to": "answer", "label": "重试"}] * 2
+        with self.assertRaisesRegex(builder.LessonError, "duplicates"):
+            builder.validate_lesson(lesson)
+
+    def test_authored_source_is_not_mislabelled_as_deeptutor(self):
+        lesson = studio_lesson()
+        builder.validate_lesson(lesson)
+        lesson["activities"][0]["source"]["repository"] = "unknown-project"
+        with self.assertRaisesRegex(builder.LessonError, "source.repository"):
+            builder.validate_lesson(lesson)
+
     def test_original_markup_roundtrips_including_svg_case(self):
         source = (SKILL / "examples/s2-source.html").read_text()
         self.assertEqual(builder.Document(source).root.render(), source)

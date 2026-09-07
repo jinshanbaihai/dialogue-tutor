@@ -337,6 +337,58 @@ test("same-card checks remain assisted within a session, while a due new session
   assert.equal(next.flash.cards["0"].review.intervalIndex, 1);
 });
 
+test("linked flashcard solutions constrain every subsequent recall without rewriting a frozen self-report", () => {
+  const activity = {...fixture().activities[3], solutionId: "shared-solution"};
+  const before = reducer(activity);
+  before.event({type: "reveal"}); before.event({type: "flash-flip"});
+  let saved = before.event({type: "flash-rate", correct: true});
+  assert.equal(saved.exposure.reference, true);
+  assert.equal(saved.attempts[0].assisted, true, "a complete solution read before the first flip assists recall");
+  assert.equal(saved.attempts[0].source, "self");
+  before.event({type: "flash-index", index: 1}); before.event({type: "flash-flip"});
+  saved = before.event({type: "flash-rate", correct: true});
+  assert.equal(saved.attempts[1].assisted, true, "the linked solution also applies to an unflipped card");
+
+  const after = reducer(activity);
+  after.event({type: "flash-flip"}); after.at(NOW + 1).event({type: "reveal"});
+  saved = after.event({type: "flash-rate", correct: true});
+  assert.equal(saved.attempts[0].assisted, false, "first-flip evidence precedes a later complete-solution view");
+  after.at(NOW + 2).event({type: "reveal"});
+  assert.equal(after.value.attempts[0].assisted, false, "a completed self-report is immutable");
+  after.event({type: "flash-restart"}); after.event({type: "flash-flip"});
+  saved = after.event({type: "flash-rate", correct: true});
+  assert.equal(saved.attempts[1].assisted, true, "the subsequent recall retains reference exposure");
+});
+
+test("linked flashcard solutions obey the same before-flip boundary on a due review and after import", () => {
+  const lesson = fixture(), activity = lesson.activities[3]; activity.solutionId = "shared-solution";
+  const practice = reducer(activity); practice.event({type: "flash-flip"}); practice.event({type: "flash-rate", correct: true});
+  const prior = runtime.createState(lesson, NOW); prior.activities.cards = practice.value;
+  const due = NOW + DAY;
+  let before = runtime.prepareSession(lesson, prior, due, "session-b");
+  before.activities.cards = runtime.reduceActivity(activity, before.activities.cards, {type: "reveal"}, due, "session-b");
+  // Importing the older snapshot cannot erase a solution seen in this open page.
+  let restored = runtime.prepareSession(lesson, prior, due, "session-b", before).activities.cards;
+  restored = runtime.reduceActivity(activity, restored, {type: "flash-flip"}, due, "session-b");
+  restored = runtime.reduceActivity(activity, restored, {type: "flash-rate", correct: true}, due, "session-b");
+  assert.equal(restored.attempts.at(-1).assisted, true); assert.equal(restored.flash.cards["0"].review.intervalIndex, 0);
+
+  let after = runtime.prepareSession(lesson, prior, due, "session-c").activities.cards;
+  after = runtime.reduceActivity(activity, after, {type: "flash-flip"}, due, "session-c");
+  after = runtime.reduceActivity(activity, after, {type: "reveal"}, due + 1, "session-c");
+  after = runtime.reduceActivity(activity, after, {type: "flash-rate", correct: true}, due + 1, "session-c");
+  assert.equal(after.attempts.at(-1).assisted, false); assert.equal(after.flash.cards["0"].review.intervalIndex, 1);
+  assert.equal(after.attempts.at(-1).source, "self");
+
+  const waiting = runtime.createState(lesson, NOW); waiting.activities.cards = restored;
+  const nextTime = due + DAY;
+  let fresh = runtime.prepareSession(lesson, waiting, nextTime, "session-d").activities.cards;
+  assert.equal(fresh.answerRevealed, false, "old linked-details display state is not a fresh exposure");
+  fresh = runtime.reduceActivity(activity, fresh, {type: "flash-flip"}, nextTime, "session-d");
+  fresh = runtime.reduceActivity(activity, fresh, {type: "flash-rate", correct: true}, nextTime, "session-d");
+  assert.equal(fresh.attempts.at(-1).assisted, false); assert.equal(fresh.flash.cards["0"].review.intervalIndex, 1);
+});
+
 test("import preparation hides due references but retains exposure already recorded in the current page", () => {
   const lesson = fixture(), activity = lesson.activities[0], practice = reducer(activity);
   practice.event({ type: "draft", value: "b" }); practice.event({ type: "submit" });

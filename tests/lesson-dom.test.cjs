@@ -5,7 +5,11 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const {JSDOM, VirtualConsole} = require('jsdom');
-const html = fs.readFileSync(path.join(__dirname, '../docs/index.html'), 'utf8');
+// Exercise today's runtime against the unchanged legacy generated document.
+const runtimeSource = fs.readFileSync(path.join(__dirname,
+  '../plugins/dialogue-tutor/skills/dialogue-tutor/assets/interactive/lesson-runtime.js'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, '../docs/index.html'), 'utf8')
+  .replace(/(<script id="dt-runtime">)[\s\S]*?(<\/script>)/, (_, start, end) => start + runtimeSource.replace(/<\/script/gi, '<\\/script') + end);
 const lesson = JSON.parse(fs.readFileSync(path.join(__dirname,
   '../plugins/dialogue-tutor/skills/dialogue-tutor/examples/s2-interactive.json'), 'utf8'));
 const plain = value => JSON.parse(JSON.stringify(value));
@@ -209,6 +213,46 @@ test('both probability explorers update SVG and computed metrics, reset and reta
   }
 });
 
+test('uniform event markers distinguish original endpoints from the shaded intersection and matching CDF', async t => {
+  const p = await page(t), activity = activities('explore').find(item => item.model === 'uniform');
+  const cases = [
+    {a: -2, b: 10, clipped: [0, 8], area: true, cdfA: 0, cdfB: 1, probability: 1},
+    {a: -2, b: 4, clipped: [0], area: true, cdfA: 0, cdfB: 0.5, probability: 0.5},
+    {a: 4, b: 10, clipped: [8], area: true, cdfA: 0.5, cdfB: 1, probability: 0.5},
+    {a: 9, b: 10, clipped: [], area: false, cdfA: 1, cdfB: 1, probability: 0},
+    {a: -4, b: -2, clipped: [], area: false, cdfA: 0, cdfB: 0, probability: 0},
+    {a: 4, b: 4, clipped: [], area: false, cdfA: 0.5, cdfB: 0.5, probability: 0}
+  ];
+  for (const scenario of cases) {
+    // Set the upper endpoint first so the control's ordering guard cannot clamp a.
+    input(p, activity.id, 'parameter-eventB', '10');
+    input(p, activity.id, 'parameter-eventA', String(scenario.a));
+    input(p, activity.id, 'parameter-eventB', String(scenario.b));
+    const [density, cdf] = p.box(activity.id).querySelectorAll('.dt-graph');
+    const points = (graph, kind) => [...graph.querySelectorAll('[data-dt-marker-kind="' + kind + '"]')];
+    const values = (graph, kind) => points(graph, kind).map(node => Number(node.dataset.dtValue));
+    assert.deepEqual(values(density, 'event'), [scenario.a, scenario.b]);
+    assert.deepEqual(values(cdf, 'event'), [scenario.a, scenario.b], 'CDF keeps original event endpoints');
+    assert.deepEqual(values(density, 'clipped'), scenario.clipped);
+    assert.ok(points(density, 'event').every(node => node.tagName === 'circle'));
+    assert.ok(points(density, 'clipped').every(node => node.tagName === 'rect'));
+    assert.equal(Boolean(density.querySelector('.dt-graph-area')), scenario.area, 'empty intersections have no shaded region');
+    assert.deepEqual(points(cdf, 'event').map(node => Number(node.getAttribute('cy'))), [207 - scenario.cdfA * 159, 207 - scenario.cdfB * 159]);
+    const summary = p.box(activity.id).querySelector('.dt-event-summary').textContent;
+    assert.ok(summary.includes('a = ' + scenario.a)); assert.ok(summary.includes('b = ' + scenario.b));
+    assert.ok(summary.includes('F(a) = ' + scenario.cdfA)); assert.ok(summary.includes('F(b) = ' + scenario.cdfB));
+    assert.ok(summary.includes('F(b) − F(a) = ' + scenario.probability));
+    if (scenario.a > 8 || scenario.b < 0) assert.match(summary, /无交集/);
+    for (const graph of [density, cdf]) {
+      const labels = [...graph.querySelectorAll('.dt-graph-event-label')];
+      assert.deepEqual(labels.map(node => node.textContent), ['a', 'b']);
+      assert.ok(labels.every(node => Number(node.getAttribute('y')) > 230), 'event labels sit below numeric ticks');
+      assert.notEqual(labels[0].getAttribute('y'), labels[1].getAttribute('y'), 'coincident endpoints retain separate labels');
+    }
+  }
+  assert.equal(p.state(activity.id).attempts.length, 0);
+});
+
 test('notes, bookmarks, drafts and last position restore in a fresh page', async t => {
   const p = await page(t), quiz = activities('quiz').find(a => a.format === 'numeric');
   input(p, quiz.id, 'answer', '13/5');
@@ -318,6 +362,54 @@ test('a due flashcard opens on the question side before navigation or rating', a
   click(next, card.id, 'flash-flip'); click(next, card.id, 'flash-good');
   assert.equal(next.state(card.id).attempts.at(-1).assisted, false);
   assert.equal(next.state(card.id).flash.cards['0'].review.intervalIndex, 1);
+});
+
+test('linked flashcard details opened before a flip mark assistance even before native toggle fires', async t => {
+  const fixture = plain(lesson), card = fixture.activities.find(activity => activity.type === 'flashcards');
+  card.solutionId = fixture.activities.find(activity => activity.solutionId).solutionId;
+  const p = await page(t, {lessonData: fixture}), solution = p.doc.getElementById(card.solutionId);
+  solution.open = true;
+  click(p, card.id, 'flash-flip'); click(p, card.id, 'flash-good');
+  assert.equal(p.state(card.id).attempts.at(-1).assisted, true);
+  assert.equal(p.state(card.id).attempts.at(-1).source, 'self');
+  click(p, card.id, 'flash-next'); click(p, card.id, 'flash-flip'); click(p, card.id, 'flash-good');
+  assert.equal(p.state(card.id).attempts.at(-1).assisted, true, 'a still-open solution constrains the next card');
+  await pause();
+  const stored = {[p.api.storageKey]: p.win.localStorage.getItem(p.api.storageKey)};
+  const next = await page(t, {stored, time: 1788739200000 + 86400000 + 1, lessonData: fixture});
+  const due = next.win.DialogueTutor.getReviews(fixture, next.api.getState(), next.win.Date.now()).find(item => item.activityId === card.id && item.cardIndex === 0);
+  assert.equal(due.due, true); next.api.navigate(card.id, due);
+  assert.equal(next.doc.getElementById(card.solutionId).open, false);
+  assert.equal(next.state(card.id).flash.cards['0'].revealed, false);
+  click(next, card.id, 'flash-flip'); click(next, card.id, 'flash-good');
+  assert.equal(next.state(card.id).attempts.at(-1).assisted, false);
+  assert.equal(next.state(card.id).flash.cards['0'].review.intervalIndex, 1);
+  next.doc.getElementById(card.solutionId).open = true;
+  click(next, card.id, 'flash-next'); click(next, card.id, 'flash-flip'); click(next, card.id, 'flash-good');
+  assert.equal(next.state(card.id).attempts.at(-1).assisted, true, 'reopening on a due day records new assistance');
+});
+
+test('linked flashcard details opened after the first flip preserve that recall and constrain later cards', async t => {
+  const fixture = plain(lesson), card = fixture.activities.find(activity => activity.type === 'flashcards');
+  card.solutionId = fixture.activities.find(activity => activity.solutionId).solutionId;
+  const p = await page(t, {lessonData: fixture});
+  click(p, card.id, 'flash-flip'); p.doc.getElementById(card.solutionId).open = true;
+  click(p, card.id, 'flash-good'); await pause();
+  assert.equal(p.state(card.id).attempts[0].assisted, false);
+  assert.equal(p.state(card.id).exposure.reference, true);
+  click(p, card.id, 'flash-next'); click(p, card.id, 'flash-flip'); click(p, card.id, 'flash-good');
+  assert.equal(p.state(card.id).attempts.at(-1).assisted, true);
+  click(p, card.id, 'flash-prev'); click(p, card.id, 'flash-restart'); click(p, card.id, 'flash-flip'); click(p, card.id, 'flash-good');
+  assert.equal(p.state(card.id).attempts.at(-1).assisted, true);
+  assert.equal(p.state(card.id).attempts[0].assisted, false);
+  const stored = {[p.api.storageKey]: p.win.localStorage.getItem(p.api.storageKey)};
+  const next = await page(t, {stored, time: 1788739200000 + 86400000 + 1, lessonData: fixture});
+  const due = next.win.DialogueTutor.getReviews(fixture, next.api.getState(), next.win.Date.now()).find(item => item.activityId === card.id && item.cardIndex === 0);
+  next.api.navigate(card.id, due); click(next, card.id, 'flash-flip');
+  next.doc.getElementById(card.solutionId).open = true; click(next, card.id, 'flash-good');
+  await pause();
+  assert.equal(next.state(card.id).attempts.at(-1).assisted, false);
+  assert.equal(next.state(card.id).flash.cards['0'].review.intervalIndex, 1, 'a delayed toggle does not retroactively undo a due recall');
 });
 
 test('activities remain usable when browser storage is unavailable', async t => {

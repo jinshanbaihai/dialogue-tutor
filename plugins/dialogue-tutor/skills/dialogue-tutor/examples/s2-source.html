@@ -263,7 +263,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <tr><td class="no">8</td><td>\(F(b)-F(a) = \displaystyle\int_a^b f(x)\,dx\)</td>
 <td class="why">微积分基本定理（fundamental theorem of calculus）：\(f\) 是 \(F\) 的导数，那么 \(f\) 从 \(a\) 到 \(b\) 的定积分等于 \(F\) 在两端的差</td></tr>
 <tr><td class="no">9</td><td>\(P(a \le X \le b) = \displaystyle\int_a^b f(x)\,dx\)</td>
-<td class="why">第 5 行接第 8 行。左边端点从 \(a \lt X\) 换成 \(a \le X\)，差的那一个点概率为 0（第 12 行），换与不换都成立</td></tr>
+<td class="why">第 5 行接第 8 行。左边端点从 \(a \lt X\) 换成 \(a \le X\)，本章讨论具有分段连续密度的分布，CDF 连续，因此 \(P(X=a)=F(a)-\lim_{t\uparrow a}F(t)=0\)，两个端点写法等价</td></tr>
 </tbody>
 </table>
 </div>
@@ -389,9 +389,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 
 <div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
 <p>
-用的是本章第③幕第 8 行 \(P(a \le X \le b)=\int_a^b f(x)\,dx\)。
+用的是本章第③幕第 9 行 \(P(a \le X \le b)=\int_a^b f(x)\,dx\)。
 那一行的来历是第①幕那个裂口：单个取值分不到概率，概率只好交给区间。
-积分下限写 0 不写 \(-\infty\)，凭的是第③幕第 11 行那条归一化条件在区间外面留下的 0。
+积分下限写 0 不写 \(-\infty\)，凭的是题面规定 \(x<0\) 时密度为 0，因此 \(-\infty\) 到 0 的积分为 0；归一化本身不能确定支持区间。
 </p>
 </div>
 
@@ -1417,18 +1417,16 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 
 <div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
 <p>
-<em>write down</em> 加上 1 分，这两个信号一起出现的时候，
-出题人等的是一眼看出来的理由，动手积分就说明读错了信号。
-这道题里那个理由是对称性：密度关于区间中点对称，期望就落在中点。
-按定义式 \(\int_2^{10} s f(s)\,ds\) 算出来的答案一样，可是要多花四五分钟，
-在一张限时的卷子上，这几分钟通常比这一分值钱。
+<em>write down</em> 允许直接写出结果。验证本题密度关于区间中点对称、且有限支持保证期望存在后，
+可以直接用该中点给出期望。按定义式 \(\int_2^{10} s f(s)\,ds\) 积分同样合法，也能用来核对；
+本题利用对称性可以省去这一步计算。
 </p>
 </div>
 
 <div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
 <p>
 第二章第③幕「期望：为什么它落在正中间」。那一幕讲的是均匀分布，
-而重心那句话的适用面更宽：<em>任何一条关于某点对称的密度，期望都落在那一点上</em>。
+而重心那句话的适用面更宽：<em>关于某点对称且期望存在的分布，期望等于该对称中心；本题支持区间有限，因此期望存在</em>。
 均匀分布是它最简单的一个例子。
 </p>
 </div>

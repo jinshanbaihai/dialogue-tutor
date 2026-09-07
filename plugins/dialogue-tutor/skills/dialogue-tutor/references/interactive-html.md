@@ -1,6 +1,6 @@
 # 交互 HTML：活动编排、数据与生成
 
-生成或更新 HTML 时读取本文件。只进行短回合追问时，继续使用 SKILL.md §1–§2。
+生成或更新 HTML 时读取本文件。只进行短回合追问时，继续使用 SKILL.md 的“教学对话”。
 本文件维护活动 schema 与操作流程；DeepTutor 的逐项出处见 `deeptutor-provenance.md`，
 提取、反馈、间隔与伴读的研究范围见 `learning-evidence.md`。
 
@@ -10,8 +10,8 @@
 先列活动蓝图，再制作课程数据。蓝图每行填写：**内容位置、目标、类型、DeepTutor 来源、
 放置理由、反馈、保存记录**。这些是作者的编排说明，不需要原样显示在学习者页面。
 
-所有新增交互的灵感来自 HKUDS/DeepTutor。源代码快照为
-`42fab3cf429a1fbf36b257ab8d116a3814964202`；科学文献用于限定采用方式，不充当另一套功能来源。
+既有五类交互借鉴 HKUDS/DeepTutor，新增任务编排与表现分支标为 DialogueTutor 原创组合。DeepTutor 源代码快照为
+`42fab3cf429a1fbf36b257ab8d116a3814964202`；科学文献用于限定采用方式。
 
 | 内容与学习动作 | 选择的活动 | DeepTutor 实现来源 | 本课程记录 |
 | --- | --- | --- | --- |
@@ -30,13 +30,13 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 ### 模式决定范围，活动服务当前内容
 
-- `bgct`：按对象保留七幕与完整例题、完整下半；在概念、图形、推导和原题附近安排活动。
+- `bgct`：覆盖材料需要的原理、完整例题和全部所给小问；按任务组织，完整解释按需查阅。
 - `bbct`：按板书顺序与考纲边界安排活动，板书未覆盖的作业仍按原规则补齐。
 - `olct` / `onct`：保留公式定义前置块和完整做题；活动不借机引入背景章节或考纲外内容。
 - 一个短问题选择足以检查该目标的活动；完整章节覆盖实际存在的不同学习环节。
   不固定每章闪卡数量，不给每段重复配置同一种题卡。复习、笔记与书签由共同组件提供。
 - 所有原题小问与六项讲解仍然保留。作答入口位于该小问附近；完整解法进入对应参考区域，
-  提交后或学习者主动揭示时查看。公式首次讲解仍按七幕逐步建立，不用题卡代替推导。
+  提交后或学习者主动揭示时查看。公式首次学习提供必要前提、操作或示例；完整推导保持可查。
 
 ## 制作课程 JSON
 
@@ -47,10 +47,12 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 | `schemaVersion` | 固定数字 `1` |
 | `lessonId` | 稳定课程 ID，例如 `probability-s2-ch1` |
 | `revision` | 非空版本字符串。题目、答案或目标含义变化时更新，避免误用旧学习记录 |
+| `presentation` | 新课程使用 `"studio"`；省略时保留 1.6.0 连续正文布局 |
+| `pathways` | 可选表现分支数组，见下方“任务舞台与表现分支” |
 | `title`、`language`、`mode` | 课程标题；语言默认为 `zh-CN`；模式为 `bgct`、`bbct`、`olct` 或 `onct` |
 | `objectives` | 非空数组，元素为 `{id,title,kind}`；`kind` 为 `memory`、`concept`、`procedure`、`design` |
 | `activities` | 非空活动数组，见下节 |
-| `sections` | 新页面的正文结构：`{id,title,bodyHtml,activityIds}`；已有 HTML 使用 `--base-html` |
+| `sections` | 新页面的任务结构：`{id,title,bodyHtml,activityIds,lead?,explanationTitle?}`；已有 HTML 使用 `--base-html` |
 | `solutionWraps` | 可选；已有 HTML 中需要折叠的完整解答区域，见“沿用已有正文” |
 | `tts` | `plustts` 的分段数据，见“伴读” |
 
@@ -61,7 +63,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 每个活动包含 `{id,objectiveId,type,title,prompt,source}`，再加相应 payload。
 `objectiveId` 引用已有目标；每个活动只挂载一次。
-`source` 可以是 DeepTutor 仓库内的 `deeptutor/...` 或 `web/...` 路径，也可以使用：
+`source` 可以是 `{repository:"DialogueTutor",path:"references/teaching-design.md",case:"任务编排"}` 来标记本项目设计；既有组件使用 DeepTutor 仓库内的 `deeptutor/...` 或 `web/...` 路径，也可以使用：
 
 ```json
 {
@@ -76,6 +78,42 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 复杂公式与推导放入 `bodyHtml` 或步骤的 `bodyHtml`，新页面优先用原生 MathML，图形用内联 SVG。
 默认组装器没有从网络加载数学排版库；仅写入 LaTeX 不会自动变成公式。
 已有 HTML 保留原本的 MathJax 或 KaTeX 时，按原有依赖实际检查显示结果。
+
+### 任务舞台与表现分支
+
+`presentation: "studio"` 只用于通过 `sections` 新建页面，不与 `--base-html` 同用。
+省略 presentation 或显式采用 `"document"` 时使用旧连续正文。studio 的每个目标至少关联一项活动；
+教学蓝图另外核查活动是否提供该目标真正需要的解释或应用证据。
+
+`presentation: "studio"` 时，场景一次显示一个主要活动，学习者可用任务导航与前后按钮自由浏览。
+`section.lead` 承载简短场景与必要目标，`bodyHtml` 承载完整讲解，组装器将后者放入
+`id="dt-explanation-场景ID"` 的关闭 `details`；`explanationTitle` 设置具名查阅标题。
+活动可把 `solutionId` 指向该 ID；多个题可关联同一全解。打开含答案的说明后，关联题保留辅助接触。
+闪卡活动的 `solutionId` 对整组卡片生效；只有部分卡片被该全解覆盖时拆成对应活动组。翻面前的辅助状态冻结为本次回忆依据，翻面后查看参考不倒改已经完成的回忆，但影响后续回忆和该组其他卡片。复习入口收起关联全解。
+场景的完整解说不要内嵌活动挂载标记；操作图示使用活动的 `bodyHtml`，避免被收入全解。
+
+每条 `pathways` 为 `{from,on,to,label}`，`from/to` 引用活动 ID，`label` 指明具体下一任务。
+`on` 采用 `incorrect`、`assisted`、`correct` 或 `skipped`。独立客观正确才触发 `correct`；
+`assisted` 表示已使用提示或参考，可在提交前出现，并不保证答对；`incorrect` 包含客观错误、开放题自评尚未达到要点和闪卡自评仍需回忆；跳过触发 `skipped`。
+分支只是下一步建议，标签写具体支持任务，不凭结果码声称“辅助答对”或诊断错误成因。
+开放题自评、翻卡和探索参与不触发客观正确。推荐不会封锁自由导航；补救目标确实存在，不能填空链接。
+新课程覆盖实际存在的错误、辅助与正确路径，避免把四种结果全部指向同一题。
+
+公共接口 `DialogueTutor.pathwayOutcome(activity,saved)` 返回可用结果条件；
+`DialogueTutor.getRecommendations(lesson,state,activityId)` 返回推荐数组。
+已挂载实例的 `navigate(activityId)` 导航至实际活动，`getRecommendations(activityId)` 返回数组，元素为
+`{from,on,to,label,targetTitle}`。导航事件为 `dt:navigate`，detail 含 `activityId`、`sectionId`。
+这些接口用于课程内具名选择；不能改变学习记录来伪造成功。
+
+复习入口先用 `DialogueTutor.getReviews(lesson,state,Date.now())` 取真实记录，再调用
+`instance.navigate(item.activityId,item)`。第二参数会复用现有重试流程：收起旧题答案与输入，保留历史；
+有未完成草稿或待自评回答时保留工作，继续当前作答；作者入口应相应命名。普通单参数导航不会重置答案，不能称作新的提取。
+完整收束与复访配方见 [engagement-and-narrative.md](engagement-and-narrative.md)。
+
+提交即验证的题目使用普通 quiz，提交后图示用于解释已知结果。探索承担验证时，
+使用自定义 interactive 先保存并冻结未评分预测，再由具名操作揭示；不使用会立即公布答案的普通 quiz。
+阶段、原输入、时间、历史和参数由自定义状态保存，后续参数变化不能覆盖旧预测。自定义控件需要同时处理初始化、
+`dt:restore` 以及 `dt:exploration`，恢复流程见下方。复杂自定义练习的客观评分不能冒用探索事件。
 
 ### 五种活动 payload
 
@@ -105,6 +143,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 `steps` 至少两项，每项 `{title,bodyHtml}`。每步保留依据，学习者可以前进、回退、重置。
 步进只控制显示的节奏，不压缩原有完整推导；“下一步”不产生答对证据。
+需要步骤补全时，另设真实接收提交的 quiz/choice、quiz/numeric 或 quiz/open，不能把 steps 重命名成补全。
 
 **`explore`**
 
@@ -112,6 +151,9 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 - `linear-density`：函数固定为 `f(x)=2−2x`、支持区间为 `[0,1]`；改变事件端点，联动面积与 CDF 差值。
 - `uniform`：调整均匀分布支持区间和事件区间，联动密度高度、期望与区间概率。
+
+事件面积同时使用填色和不透明边界；原始事件端点 `a,b` 与支持区间裁剪后的交集端点使用不同形状并配文字。
+密度图的交集面积对应原始端点的 `F(b)−F(a)`，不把裁剪端点冒名为原始端点。
 
 这两种模型只在课程确实讨论相应对象时使用。其他学科和函数用下面的 `interactive`，
 不要把默认概率滑杆套进不相干的课程。
@@ -156,17 +198,16 @@ document.dispatchEvent(new CustomEvent('dt:exploration', {
 python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
 ```
 
-`sections` 按阅读顺序放完整正文，每节的全部活动由 `activityIds` 指定。
-可以在 `bodyHtml` 的准确位置预置 `<div data-dt-activity="活动ID"></div>`，
-组装器只将尚未预置的活动追加到节尾，并检查每个 ID 恰好出现一次。
-题目练习优先采用“完整题面 → 活动挂载点 → 关闭的完整解答”的顺序。
-把正文划分为实际学习节点，避免整章只有一个 `bodyHtml` 且没有预置位置，导致所有活动挤在章末。
-下面只演示可运行数据形状，实际课程的讲解详细度仍按对应模式写足：
+新课程的 `sections` 按任务关系排列，使用 `presentation: "studio"`；每节活动由 `activityIds` 指定。
+`lead` 只放必要场景，题目全文与条件进入活动 `prompt`，完整解释放入 `bodyHtml`。
+场景全解由组装器自动生成关闭入口；`solutionId` 绑定其中确实给出答案的题目。
+下面只演示一项任务的可运行结构，完整章节仍需目标蓝图及表现分支：
 
 ```json
 {
   "schemaVersion": 1,
   "lessonId": "probability-density-check",
+  "presentation": "studio",
   "revision": "1",
   "title": "密度与概率的区别",
   "language": "zh-CN",
@@ -177,7 +218,9 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
   "sections": [
     {
       "id": "density-definition",
-      "title": "做题需要的定义",
+      "title": "辨认密度与概率",
+      "lead": "模型在一个位置的密度为 1.5。请根据概率条件作出判断。",
+      "explanationTitle": "查看密度条件与完整理由",
       "bodyHtml": "<p>概率密度的高度描述概率在附近的集中程度。某段区间的概率对应这段曲线下方的面积；单个位置的高度与整段面积是不同的量。</p>",
       "activityIds": ["density-quick-check"]
     }
@@ -185,6 +228,7 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
   "activities": [
     {
       "id": "density-quick-check",
+      "solutionId": "dt-explanation-density-definition",
       "objectiveId": "density-meaning",
       "type": "quiz",
       "format": "choice",
@@ -192,7 +236,7 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
       "prompt": "概率密度在某个位置大于一，是否足以判定这个分布不合法？",
       "source": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
       "choices": [
-        {"id": "height", "text": "足够，因为密度高度就是概率。", "feedback": "这个选项把某个位置的高度与区间面积混淆。"},
+        {"id": "height", "text": "足够，因为密度高度就是概率。", "feedback": "这个选项用单点高度判断合法性。先比较高度 2、宽度 0.5 的矩形：面积等于多少，再判断概率条件约束哪个量。"},
         {"id": "area", "text": "不足够，还需检查密度非负与总面积等于一。", "feedback": "密度的高度可以超过一，概率条件约束的是区间面积。"}
       ],
       "answer": "area",
@@ -204,6 +248,12 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
 
 组装器将运行 CSS、JavaScript 和课程 JSON 内联，自动挂载学习记录面板。
 交付实际生成的 HTML。课程 JSON 可以作为可维护源文件一并保留；只提供 JSON 不算 HTML 交付。
+
+## 兼容旧连续正文
+
+以下流程用于明确要求沿用 1.6.0 正文的任务。旧布局省略 `presentation`；`sections.bodyHtml`
+按阅读顺序排布，也可预置 `<div data-dt-activity="活动ID"></div>`，剩余活动追加至节尾。
+这些内嵌挂载方式不用于新 `studio` 场景，避免活动被折叠进完整解答。
 
 ## 沿用已有正文
 
@@ -228,7 +278,7 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html --base
 组装器保留 `#q1` 标题，把标题之后、下一边界之前的完整内容放入关闭的 `details`。
 对应活动填写 `solutionId:"q1-solution"`，并放在 `#q1` 之后。
 原题、条件、推导和得分位置仍需逐项核对；有助于首次作答的题面写入活动的 `prompt`，
-不能只留在折叠的解答里。新页面可在 `bodyHtml` 里直接创建关闭的同名 `details`。
+不能只留在折叠的解答里。旧连续正文可以在 `bodyHtml` 里创建关闭的同名 `details`；studio 使用自动生成的场景全解入口。
 主动展开完整解答会被记录为辅助，完整解答不在首次打开时自动出现。
 
 从原正文与课程 JSON 重新组装，不在已经内联运行组件的旧生成结果上再注入一次。

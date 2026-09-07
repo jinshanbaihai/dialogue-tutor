@@ -31,6 +31,7 @@
   var DAY = 86400000;
   var INTERVAL_DAYS = [1, 3, 7, 14, 30];
   var TYPES = ["flashcards", "quiz", "steps", "explore", "interactive"];
+  var PATHWAY_OUTCOMES = ["incorrect", "assisted", "correct", "skipped"];
   var has = function (object, key) { return Object.prototype.hasOwnProperty.call(object, key); };
   var copy = function (value) { return JSON.parse(JSON.stringify(value)); };
   var clamp = function (value, lower, upper) { return Math.min(upper, Math.max(lower, value)); };
@@ -202,6 +203,9 @@
         }
       }
       if (activity.type === "flashcards") {
+        // Linked details start closed when loading a page; their prior exposure
+        // still constrains recall, but a display flag must not imply a fresh view.
+        saved.answerRevealed = false;
         if (previous) Object.keys(previous.flash.cards).forEach(function (key) {
           var oldCard = previous.flash.cards[key];
           if (oldCard.exposure && oldCard.exposure.sessionId === sessionId) flashCardState(saved, Number(key)).exposure = copy(oldCard.exposure);
@@ -212,7 +216,7 @@
           if (oldCard && oldCard.exposure && oldCard.exposure.sessionId === sessionId) card.exposure = copy(oldCard.exposure);
           if (card.review && card.review.dueAt <= now && card.rating !== null) {
             card.revealed = false; card.hintUsed = false; card.rating = null; card.attemptId = null;
-            card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId);
+            card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId) || exposureAssists(saved.exposure, card.review, now, sessionId);
             card.recallSessionId = null;
           } else if (Number(key) === saved.flash.index) {
             if (card.revealed) {
@@ -232,6 +236,7 @@
 
   function reduceActivity(activity, current, event, now, sessionId) {
     var state = copy(current);
+    if (state.status === "skipped" && ["step", "explore", "explore-reset", "flash-index", "flash-flip", "flash-hint", "flash-rate", "flash-restart"].includes(event.type)) state.status = "idle";
     var attempt, card, grade;
     function makeAttempt(answer, correct, source, assisted, cardIndex) {
       var result = { id: activity.id + ":" + now + ":" + (state.attempts.length + 1), answer: answer,
@@ -247,14 +252,21 @@
       case "hint":
         state.hintUsed = true;
         state.exposure = markExposure(state.exposure, "hint", now, sessionId);
-        state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
+        if (activity.type === "quiz") state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
         break;
       case "reveal":
-        if (!state.answerRevealed && state.status !== "submitted") {
+        if (activity.type === "quiz" && !state.answerRevealed && state.status !== "submitted") {
           state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
         }
         state.answerRevealed = true;
         state.exposure = markExposure(state.exposure, "reference", now, sessionId);
+        if (activity.type === "flashcards") activity.cards.forEach(function (_, index) {
+          var linkedCard = flashCardState(state, index);
+          // The learner's reported recall precedes the first flip. A later
+          // reference view constrains future recalls, not that frozen recall.
+          var pendingRecall = linkedCard.revealed && linkedCard.rating === null && linkedCard.recallSessionId === sessionId;
+          if (!pendingRecall) linkedCard.review = scheduleReview(linkedCard.review, { correct: null, assisted: true, source: "self" }, now, sessionId);
+        });
         break;
       case "submit":
         if (state.status !== "idle") return state;
@@ -291,7 +303,7 @@
       case "flash-flip":
         card = flashCardState(state, state.flash.index);
         if (!card.revealed) {
-          card.recallAssisted = !!card.recallAssisted || exposureAssists(card.exposure, card.review, now, sessionId);
+          card.recallAssisted = !!card.recallAssisted || exposureAssists(card.exposure, card.review, now, sessionId) || exposureAssists(state.exposure, card.review, now, sessionId);
           card.recallSessionId = sessionId;
           card.exposure = markExposure(card.exposure, "reference", now, sessionId);
         }
@@ -315,7 +327,7 @@
         if (event.index !== undefined) state.flash.index = clamp(event.index, 0, activity.cards.length - 1);
         card = flashCardState(state, state.flash.index);
         card.revealed = false; card.hintUsed = false; card.rating = null; card.attemptId = null;
-        card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId);
+        card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId) || exposureAssists(state.exposure, card.review, now, sessionId);
         card.recallSessionId = null;
         break;
       case "step": state.stepIndex = clamp(event.index, 0, activity.steps.length - 1); break;
@@ -328,7 +340,7 @@
       case "bookmark": state.bookmarked = !state.bookmarked; break;
       default: return state;
     }
-    if (!["bookmark", "draft"].includes(event.type)) state.participated = true;
+    if (!["bookmark", "draft", "skip", "retry", "note"].includes(event.type)) state.participated = true;
     state.lastInteractionAt = now;
     return state;
   }
@@ -367,8 +379,37 @@
     return latest.source;
   }
 
+  // Recommendations describe recorded evidence; a self-report never becomes an
+  // independent pass, and merely browsing or moving a parameter is not a score.
+  function pathwayOutcome(activity, saved) {
+    if (saved.status === "skipped") return "skipped";
+    var attempt = activity.type === "quiz" && saved.status === "submitted" ? saved.attempts.find(function (item) { return item.id === saved.submittedAttemptId; }) : null;
+    if (activity.type === "flashcards") {
+      var card = saved.flash.cards[String(saved.flash.index)];
+      if (card && card.attemptId) attempt = saved.attempts.find(function (item) { return item.id === card.attemptId; });
+      if (!attempt && card && card.hintUsed) return "assisted";
+    }
+    if (attempt) {
+      if (attempt.correct === false) return "incorrect";
+      if (attempt.assisted) return "assisted";
+      return attempt.source === "objective" && attempt.correct === true ? "correct" : null;
+    }
+    return saved.hintUsed || saved.answerRevealed ? "assisted" : null;
+  }
+
+  function getRecommendations(lesson, state, activityId) {
+    var activity = lesson.activities.find(function (item) { return item.id === activityId; });
+    if (!activity || !state.activities[activityId]) return [];
+    var outcome = pathwayOutcome(activity, state.activities[activityId]);
+    return (lesson.pathways || []).filter(function (pathway) { return pathway.from === activityId && pathway.on === outcome; }).map(function (pathway) {
+      var target = lesson.activities.find(function (item) { return item.id === pathway.to; });
+      return Object.assign({}, pathway, { targetTitle: target.title });
+    });
+  }
+
   function validateLesson(lesson) {
     if (!record(lesson) || lesson.schemaVersion !== 1 || !safeId(lesson.lessonId) || !["string", "number"].includes(typeof lesson.revision)) throw new Error("Invalid lesson identity/version");
+    if (lesson.presentation !== undefined && !["document", "studio"].includes(lesson.presentation)) throw new Error("Unknown presentation");
     if (!Array.isArray(lesson.objectives) || !Array.isArray(lesson.activities)) throw new Error("Missing lesson objectives or activities");
     var objectiveIds = new Set();
     lesson.objectives.forEach(function (objective) {
@@ -379,7 +420,8 @@
     lesson.activities.forEach(function (activity) {
       if (!safeId(activity.id) || activityIds.has(activity.id) || !objectiveIds.has(activity.objectiveId) || !TYPES.includes(activity.type)) throw new Error("Invalid activity identity/type");
       activityIds.add(activity.id);
-      if (!(typeof activity.source === "string" && activity.source.trim()) && !(record(activity.source) && typeof activity.source.path === "string" && activity.source.path.trim())) throw new Error("Activity needs its DeepTutor source");
+      if (!(typeof activity.source === "string" && activity.source.trim()) && !(record(activity.source) && typeof activity.source.path === "string" && activity.source.path.trim())) throw new Error("Activity needs its implementation source");
+      if (record(activity.source) && activity.source.repository !== undefined && !["HKUDS/DeepTutor", "DialogueTutor"].includes(activity.source.repository)) throw new Error("Unknown source repository");
       if (activity.type === "flashcards" && (!Array.isArray(activity.cards) || !activity.cards.length)) throw new Error("Flashcards need cards");
       if (activity.type === "steps" && (!Array.isArray(activity.steps) || !activity.steps.length)) throw new Error("Steps need stages");
       if (activity.type === "explore" && !["linear-density", "uniform"].includes(activity.model)) throw new Error("Unknown exploration model");
@@ -389,6 +431,33 @@
         if (activity.format === "numeric" && (parseNumeric(activity.answer) === null || (activity.tolerance !== undefined && (!finite(activity.tolerance) || activity.tolerance < 0)))) throw new Error("Numeric quiz needs a finite answer and tolerance");
       }
     });
+    if (lesson.pathways !== undefined && !Array.isArray(lesson.pathways)) throw new Error("Pathways must be an array");
+    var pathwayKeys = new Set();
+    (lesson.pathways || []).forEach(function (pathway) {
+      if (!record(pathway) || !activityIds.has(pathway.from) || !activityIds.has(pathway.to) || !PATHWAY_OUTCOMES.includes(pathway.on) || typeof pathway.label !== "string" || !pathway.label.trim()) throw new Error("Invalid pathway");
+      var key = JSON.stringify([pathway.from, pathway.on, pathway.to]);
+      if (pathwayKeys.has(key)) throw new Error("Duplicate pathway");
+      pathwayKeys.add(key);
+    });
+    if (lesson.sections !== undefined && !Array.isArray(lesson.sections)) throw new Error("Sections must be an array");
+    if (lesson.presentation === "studio" && (!lesson.sections || !lesson.sections.length)) throw new Error("Studio presentation needs sections");
+    if (lesson.presentation === "studio" && lesson.objectives.some(function (objective) { return !lesson.activities.some(function (activity) { return activity.objectiveId === objective.id; }); })) throw new Error("Studio objectives must each have an activity");
+    if (lesson.sections && lesson.sections.length) {
+      var sectionIds = new Set(), placed = new Set();
+      lesson.sections.forEach(function (section) {
+        if (!record(section) || !safeId(section.id) || sectionIds.has(section.id) || typeof section.title !== "string" || !section.title.trim()) throw new Error("Invalid section");
+        var ids = section.activityIds === undefined ? [] : section.activityIds;
+        if (!Array.isArray(ids)) throw new Error("Invalid section activities");
+        if (lesson.presentation === "studio" && !ids.length) throw new Error("Studio scene needs an activity");
+        ["lead", "explanationTitle"].forEach(function (field) { if (section[field] !== undefined && (typeof section[field] !== "string" || !section[field].trim())) throw new Error("Invalid section " + field); });
+        sectionIds.add(section.id);
+        ids.forEach(function (id) {
+          if (!activityIds.has(id) || placed.has(id)) throw new Error("Unknown or repeated section activity");
+          placed.add(id);
+        });
+      });
+      if (placed.size !== activityIds.size) throw new Error("Sections must place every activity");
+    }
     return lesson;
   }
 
@@ -486,10 +555,17 @@
     var en = /^en\b/i.test(lesson.language || "zh-CN");
     var t = function (zh, english) { return en ? english : zh; };
     var now = options.now || Date.now;
+    var studio = lesson.presentation === "studio";
     var sessionId = options.sessionId || "session-" + now() + "-" + Math.random().toString(36).slice(2);
     var state = createState(lesson, now());
     var key = storageKey(lesson), storage = null, storageMessage = "", panelMessage = "";
     var views = new Map(), definitions = new Map();
+    var sceneFor = new Map(), sceneNodes = new Map();
+    var activityOrder = studio ? lesson.sections.reduce(function (ids, section) {
+      section.activityIds.forEach(function (id) { sceneFor.set(id, section); });
+      return ids.concat(section.activityIds);
+    }, []) : lesson.activities.map(function (activity) { return activity.id; });
+    var studioNav = null, studioSequence = null, sceneSelect, activitySelect, studioProgress, dueSuggestion;
     lesson.activities.forEach(function (activity) { definitions.set(activity.id, activity); });
     try {
       storage = options.storage === undefined ? win.localStorage : options.storage;
@@ -502,7 +578,8 @@
     function closeDueSolutions() {
       lesson.activities.forEach(function (activity) {
         var saved = state.activities[activity.id];
-        if (activity.solutionId && saved.review && saved.review.dueAt <= now()) {
+        var due = saved.review && saved.review.dueAt <= now() || activity.type === "flashcards" && Object.keys(saved.flash.cards).some(function (index) { var card = saved.flash.cards[index]; return card.review && card.review.dueAt <= now(); });
+        if (activity.solutionId && due) {
           var solution = doc.getElementById(activity.solutionId);
           if (solution) solution.open = false;
         }
@@ -530,16 +607,27 @@
       try { if (storage) storage.setItem(key, JSON.stringify(exportEnvelope(lesson, state, now()))); else throw new Error("storage"); }
       catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); }
     }
-    function transition(activity, event, render) {
+    function transition(activity, event, render, preservePosition) {
       state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
-      state.currentActivity = activity.id;
+      if (!preservePosition) state.currentActivity = activity.id;
       save();
       if (render !== false) renderActivity(activity);
       renderPanel();
+      renderStudio();
       return state.activities[activity.id];
     }
     function announce(activity, text) { var view = views.get(activity.id); if (view) message(view, text); }
     function pretty(value) { return Number(value.toFixed(5)).toLocaleString(en ? "en-GB" : "zh-CN", { maximumFractionDigits: 5 }); }
+
+    function captureFlashSolution(activity) {
+      if (!activity.solutionId) return;
+      var solution = doc.getElementById(activity.solutionId), view = views.get(activity.id);
+      if (!solution || !view) return;
+      if (!solution.open) { view.solutionOpenObserved = false; return; }
+      if (view.solutionOpenObserved) return;
+      view.solutionOpenObserved = true;
+      transition(activity, { type: "reveal" }, false, true);
+    }
 
     function renderFlash(activity, view, saved) {
       var index = saved.flash.index;
@@ -548,7 +636,7 @@
       var caption = el("div", "dt-row dt-spread");
       caption.append(el("span", "dt-small", t("先尝试回忆，再翻面核对。", "Try to recall before turning the card.")), el("span", "dt-counter", (index + 1) + " / " + activity.cards.length));
       view.body.appendChild(caption);
-      var card = button("", function () { transition(activity, { type: "flash-flip" }); announce(activity, cardState.revealed ? t("问题正面", "Question side") : t("参考背面", "Answer side")); }, "dt-flashcard" + (cardState.revealed ? " dt-flashcard-back" : ""), "flash-flip");
+      var card = button("", function () { captureFlashSolution(activity); transition(activity, { type: "flash-flip" }); announce(activity, cardState.revealed ? t("问题正面", "Question side") : t("参考背面", "Answer side")); }, "dt-flashcard" + (cardState.revealed ? " dt-flashcard-back" : ""), "flash-flip");
       card.setAttribute("aria-label", (cardState.revealed ? t("参考答案：", "Reference answer: ") : t("回忆问题：", "Recall question: ")) + (cardState.revealed ? content.back : content.front));
       card.append(el("span", "dt-eyebrow", cardState.revealed ? t("参考背面", "Answer side") : t("回忆正面", "Question side")), el("span", "dt-flashcard-text", cardState.revealed ? content.back : content.front), el("span", "dt-small", t("点击或按回车翻面", "Click or press Enter to turn")));
       view.body.appendChild(card);
@@ -564,8 +652,8 @@
       if (cardState.revealed) {
         var rating = el("div", "dt-self-rating");
         rating.appendChild(el("p", "dt-small", t("自评记录：依据翻面之前的回忆作出选择。", "Self-report: rate what you recalled before turning the card.")));
-        var good = button(t("自评：翻面前已回忆", "Self-report: recalled before turning"), function () { transition(activity, { type: "flash-rate", correct: true }); }, "dt-button-primary", "flash-good");
-        var again = button(t("自评：继续练习", "Self-report: practise again"), function () { transition(activity, { type: "flash-rate", correct: false }); }, "", "flash-again");
+        var good = button(t("自评：翻面前已回忆", "Self-report: recalled before turning"), function () { captureFlashSolution(activity); transition(activity, { type: "flash-rate", correct: true }); }, "dt-button-primary", "flash-good");
+        var again = button(t("自评：继续练习", "Self-report: practise again"), function () { captureFlashSolution(activity); transition(activity, { type: "flash-rate", correct: false }); }, "", "flash-again");
         good.disabled = again.disabled = cardState.rating !== null;
         rating.append(good, again);
         if (cardState.rating !== null) rating.appendChild(el("p", "dt-small", cardState.rating === "recalled" ? t("已保存「翻面前已回忆」自评；这不是自动核对结果。", "Saved your recalled-before-turning rating; this is not an automatically checked result.") : t("已保存「继续练习」自评。", "Saved your practise-again rating.")));
@@ -581,8 +669,9 @@
 
     function quizReference(activity, body, saved) {
       if (!saved.answerRevealed) return;
-      var reference = el("div", "dt-reference");
-      reference.appendChild(el("h4", "dt-small-heading", t("参考与解析", "Reference and explanation")));
+      var reference = el(studio ? "details" : "div", "dt-reference");
+      reference.appendChild(el(studio ? "summary" : "h4", "dt-small-heading", t("参考与解析", "Reference and explanation")));
+      if (studio) reference.open = true;
       var answer;
       if (activity.format === "choice") {
         var choice = activity.choices.find(function (item) { return item.id === String(activity.answer); });
@@ -737,17 +826,19 @@
       if (text !== undefined) node.textContent = String(text);
       return node;
     }
-    function graph(title, xMin, xMax, yMax, curvePoints, shadePoints, markers, ticks) {
-      var svg = svgElement("svg", { viewBox: "0 0 420 252", role: "img", "aria-label": title, class: "dt-graph" });
+    function graph(title, xMin, xMax, yMax, curvePoints, shadePoints, markers, ticks, description) {
+      var labelled = (markers || []).some(function (marker) { return marker.label; });
+      var svg = svgElement("svg", { viewBox: labelled ? "0 0 420 286" : "0 0 420 252", role: "img", "aria-label": title + (description ? ". " + description : ""), class: "dt-graph" });
       svg.appendChild(svgElement("title", {}, title));
-      var x = function (value) { return 49 + (value - xMin) / (xMax - xMin) * 345; };
+      if (description) svg.appendChild(svgElement("desc", {}, description));
+      var x = function (value) { return 84 + (value - xMin) / (xMax - xMin) * 310; };
       var y = function (value) { return 207 - value / yMax * 159; };
-      svg.appendChild(svgElement("text", { x: 49, y: 23, class: "dt-graph-title" }, title));
+      svg.appendChild(svgElement("text", { x: 24, y: 25, class: "dt-graph-title" }, title));
       [0, yMax / 2, yMax].forEach(function (value) {
-        svg.appendChild(svgElement("line", { x1: 49, y1: y(value), x2: 394, y2: y(value), class: "dt-graph-grid" }));
-        svg.appendChild(svgElement("text", { x: 42, y: y(value) + 4, "text-anchor": "end", class: "dt-graph-label" }, pretty(value)));
+        svg.appendChild(svgElement("line", { x1: 84, y1: y(value), x2: 394, y2: y(value), class: "dt-graph-grid" }));
+        svg.appendChild(svgElement("text", { x: 76, y: y(value) + 5, "text-anchor": "end", class: "dt-graph-label" }, pretty(Number(value.toPrecision(3)))));
       });
-      svg.appendChild(svgElement("path", { d: "M49 43V207H398", class: "dt-graph-axis", fill: "none" }));
+      svg.appendChild(svgElement("path", { d: "M84 43V207H398", class: "dt-graph-axis", fill: "none" }));
       (ticks || [xMin, (xMin + xMax) / 2, xMax]).forEach(function (value) {
         svg.appendChild(svgElement("line", { x1: x(value), y1: 207, x2: x(value), y2: 212, class: "dt-graph-axis" }));
         svg.appendChild(svgElement("text", { x: x(value), y: 230, "text-anchor": "middle", class: "dt-graph-label" }, pretty(value)));
@@ -755,8 +846,19 @@
       if (shadePoints && shadePoints.length) svg.appendChild(svgElement("polygon", { points: shadePoints.map(function (point) { return x(point[0]) + "," + y(point[1]); }).join(" "), class: "dt-graph-area" }));
       svg.appendChild(svgElement("polyline", { points: curvePoints.map(function (point) { return x(point[0]) + "," + y(point[1]); }).join(" "), class: "dt-graph-curve", fill: "none" }));
       (markers || []).forEach(function (point, index) {
-        svg.appendChild(svgElement("line", { x1: x(point[0]), y1: 207, x2: x(point[0]), y2: y(point[1]), class: "dt-graph-guide" }));
-        svg.appendChild(svgElement("circle", { cx: x(point[0]), cy: y(point[1]), r: 4.4, class: index ? "dt-graph-dot dt-graph-dot-second" : "dt-graph-dot" }));
+        var marker = Array.isArray(point) ? { x: point[0], y: point[1], endpoint: index ? "b" : "a" } : point;
+        var second = marker.endpoint === "b", clipped = marker.kind === "clipped";
+        var markerX = x(marker.x), markerY = y(marker.y);
+        svg.appendChild(svgElement("line", { x1: markerX, y1: 207, x2: markerX, y2: markerY, class: "dt-graph-guide" + (second ? " dt-graph-guide-second" : "") + (clipped ? " dt-graph-clipped-guide" : "") }));
+        var attributes = clipped ? { x: markerX - 4.5, y: markerY - 4.5, width: 9, height: 9 } : { cx: markerX, cy: markerY, r: 4.4 };
+        attributes.class = "dt-graph-dot" + (second ? " dt-graph-dot-second" : "") + (clipped ? " dt-graph-clipped-dot" : "");
+        if (marker.kind) {
+          attributes["data-dt-marker-kind"] = marker.kind;
+          attributes["data-dt-endpoint"] = marker.endpoint;
+          attributes["data-dt-value"] = marker.x;
+        }
+        svg.appendChild(svgElement(clipped ? "rect" : "circle", attributes));
+        if (marker.label) svg.appendChild(svgElement("text", { x: markerX, y: second ? 278 : 254, "text-anchor": markerX > 350 ? "end" : "middle", class: "dt-graph-event-label" + (second ? " dt-graph-event-label-second" : "") }, marker.label));
       });
       return svg;
     }
@@ -766,6 +868,7 @@
       var plot = el("div", "dt-plots"), values = el("div", "dt-metrics"), controls = el("div", "dt-parameters");
       var inputs = {};
       var linear = activity.model === "linear-density";
+      var eventSummary = linear ? null : el("p", "dt-event-summary dt-small");
       var specifications = linear ? [["a", t("区间起点 a", "Interval start a"), 0, 1, 0.01], ["b", t("区间终点 b", "Interval end b"), 0, 1, 0.01]] : [["lower", t("分布左界 L", "Support lower bound L"), -5, 10, 0.1], ["upper", t("分布右界 U", "Support upper bound U"), -5, 10, 0.1], ["eventA", t("事件起点 a", "Event start a"), -5, 10, 0.1], ["eventB", t("事件终点 b", "Event end b"), -5, 10, 0.1]];
       specifications.forEach(function (spec) {
         var label = el("label", "dt-parameter");
@@ -780,7 +883,9 @@
           transition(activity, { type: "explore", key: spec[0], value: Number(range.value) }, false); update();
         });
       });
-      view.body.append(controls, plot, values);
+      view.body.append(controls, plot);
+      if (eventSummary) view.body.appendChild(eventSummary);
+      view.body.appendChild(values);
       view.body.appendChild(button(t("恢复初始参数", "Reset parameters"), function () { transition(activity, { type: "explore-reset" }, false); update(); }, "dt-button-quiet", "explore-reset"));
       view.body.appendChild(el("p", "dt-small", t("参数变化记录为探索，不计入独立答对。", "Parameter changes count as exploration, not independent correct answers.")));
       function metric(label, value) { var cell = el("div", "dt-metric"); cell.append(el("span", "dt-small", label), el("strong", "", value)); values.appendChild(cell); }
@@ -797,9 +902,21 @@
         } else {
           var distribution = uniformDistribution(parameters);
           var ceiling = Math.max(0.5, distribution.height * 1.2);
-          plot.appendChild(graph(t("均匀分布密度", "Uniform density"), -5, 10, ceiling, [[-5, 0], [distribution.lower, 0], [distribution.lower, distribution.height], [distribution.upper, distribution.height], [distribution.upper, 0], [10, 0]], [[distribution.clippedA, 0], [distribution.clippedA, distribution.height], [distribution.clippedB, distribution.height], [distribution.clippedB, 0]], null, [-5, 0, 5, 10]));
-          plot.appendChild(graph(t("累积概率 F(x)", "Cumulative probability F(x)"), -5, 10, 1, [[-5, 0], [distribution.lower, 0], [distribution.upper, 1], [10, 1]], null, [[distribution.eventA, distribution.cdfA], [distribution.eventB, distribution.cdfB]], [-5, 0, 5, 10]));
-          metric(t("密度高度", "Density height"), pretty(distribution.height)); metric(t("均值（端点的平均值）", "Mean (midpoint of the support)"), pretty(distribution.mean)); metric("P(a ≤ X ≤ b)", pretty(distribution.probability));
+          var overlapA = Math.max(distribution.eventA, distribution.lower), overlapB = Math.min(distribution.eventB, distribution.upper);
+          var hasArea = overlapA < overlapB;
+          var intersection = overlapA > overlapB ? t("无交集（面积为 0）", "empty (area 0)") : "[" + pretty(overlapA) + ", " + pretty(overlapB) + "]";
+          eventSummary.textContent = t("原事件：", "Original event: ") + "a = " + pretty(distribution.eventA) + ", b = " + pretty(distribution.eventB) + t("；支持区间：", "; support: ") + "[" + pretty(distribution.lower) + ", " + pretty(distribution.upper) + "]" + t("；阴影交集：", "; shaded intersection: ") + intersection + t("。实心圆标原事件端点 a/b，空心方框标截取边界。两图使用同一事件：", ". Filled circles mark the original a/b; hollow squares mark clipped boundaries. Both plots use the same event: ") + "F(a) = " + pretty(distribution.cdfA) + ", F(b) = " + pretty(distribution.cdfB) + "; F(b) − F(a) = " + pretty(distribution.probability) + ".";
+          var densityMarkers = ["a", "b"].map(function (endpoint) {
+            var value = endpoint === "a" ? distribution.eventA : distribution.eventB;
+            return { x: value, y: value >= distribution.lower && value <= distribution.upper ? distribution.height : 0, endpoint: endpoint, kind: "event", label: endpoint };
+          });
+          if (hasArea) [["a", distribution.eventA, overlapA], ["b", distribution.eventB, overlapB]].forEach(function (item) {
+            if (item[1] !== item[2]) densityMarkers.push({ x: item[2], y: distribution.height, endpoint: item[0], kind: "clipped" });
+          });
+          var area = hasArea ? [[overlapA, 0], [overlapA, distribution.height], [overlapB, distribution.height], [overlapB, 0]] : null;
+          plot.appendChild(graph(t("均匀分布密度", "Uniform density"), -5, 10, ceiling, [[-5, 0], [distribution.lower, 0], [distribution.lower, distribution.height], [distribution.upper, distribution.height], [distribution.upper, 0], [10, 0]], area, densityMarkers, [-5, 0, 5, 10], eventSummary.textContent));
+          plot.appendChild(graph(t("累积概率 F(x)", "Cumulative probability F(x)"), -5, 10, 1, [[-5, 0], [distribution.lower, 0], [distribution.upper, 1], [10, 1]], null, [{ x: distribution.eventA, y: distribution.cdfA, endpoint: "a", kind: "event", label: "a" }, { x: distribution.eventB, y: distribution.cdfB, endpoint: "b", kind: "event", label: "b" }], [-5, 0, 5, 10], eventSummary.textContent));
+          metric(t("密度高度", "Density height"), pretty(distribution.height)); metric(t("均值（端点的平均值）", "Mean (midpoint of the support)"), pretty(distribution.mean)); metric("P(a ≤ X ≤ b) = F(b) − F(a)", pretty(distribution.probability));
         }
       }
       update();
@@ -814,6 +931,29 @@
         details.append(el("summary", "", followup.question), el("p", "", followup.answer)); group.appendChild(details);
       });
       view.body.appendChild(group);
+    }
+
+    function renderRecommendations(activity, view) {
+      view.recommendations.replaceChildren();
+      var recommendations = getRecommendations(lesson, state, activity.id);
+      view.recommendations.hidden = !recommendations.length;
+      if (!recommendations.length) return;
+      var outcome = recommendations[0].on;
+      var saved = state.activities[activity.id];
+      var attempt = saved.attempts.find(function (item) { return item.id === saved.submittedAttemptId; });
+      var selfReported = attempt && attempt.source === "self" || activity.type === "flashcards";
+      var reason = {
+        incorrect: selfReported ? t("你自评仍需练习，可以先完成：", "You reported needing practice. You can try:") : t("本次核对需要修正，可以先完成：", "This answer needs revision. You can try:"),
+        assisted: t("已使用提示或参考，建议再试一项：", "After using a hint or reference, try another task:"),
+        correct: t("本次独立核对通过，可以继续挑战：", "This independent answer passed. You can try:"),
+        skipped: t("已暂时跳过；需要铺垫时可以先做：", "Skipped for now. For preparation, you can try:")
+      }[outcome];
+      view.recommendations.appendChild(el("p", "dt-small-heading", reason));
+      recommendations.forEach(function (pathway, index) {
+        var action = button(pathway.label + " → " + pathway.targetTitle, function () { navigate(pathway.to); }, index === 0 ? "dt-button-primary" : "", "pathway-" + pathway.on + "-" + pathway.to);
+        action.dataset.dtPathway = pathway.on;
+        view.recommendations.appendChild(action);
+      });
     }
 
     function renderActivity(activity) {
@@ -839,6 +979,12 @@
       view.bookmark.textContent = saved.bookmarked ? t("已收藏", "Bookmarked") : t("收藏活动", "Bookmark activity");
       view.bookmark.setAttribute("aria-pressed", String(saved.bookmarked));
       if (doc.activeElement !== view.noteInput) view.noteInput.value = saved.notes;
+      renderRecommendations(activity, view);
+      if (view.skip) {
+        view.skip.textContent = saved.status === "skipped" ? t("返回这项活动", "Return to this activity") : t("暂时跳过", "Skip for now");
+        view.skip.dataset.dtControl = saved.status === "skipped" ? "retry" : "skip";
+        view.skipStatus.textContent = saved.status === "skipped" ? t("已暂时跳过；可随时返回。", "Skipped for now; return whenever you choose.") : "";
+      }
       if (focus) {
         var candidates = Array.from(view.body.querySelectorAll("[data-dt-control]"));
         var target = candidates.find(function (item) { return item.dataset.dtControl === focus && !item.disabled; });
@@ -880,7 +1026,8 @@
       var typeLabels = { flashcards: t("回忆闪卡", "Recall cards"), quiz: t("就地自测", "Quick check"), steps: t("分步探索", "Step through"), explore: t("参数探索", "Explore parameters"), interactive: t("交互探索", "Interactive exploration") };
       header.append(el("span", "dt-eyebrow", typeLabels[activity.type]), el("h3", "dt-activity-title", activity.title));
       var prompt = el("p", "dt-prompt", activity.prompt);
-      var body = el("div", "dt-activity-body"), footer = el("div", "dt-activity-footer");
+      var body = el("div", "dt-activity-body"), footer = el("details", "dt-activity-footer dt-tools");
+      footer.appendChild(el("summary", "", t("学习工具", "Learning tools")));
       var bookmark = button(t("收藏活动", "Bookmark activity"), function () { transition(activity, { type: "bookmark" }, false); renderActivity(activity); }, "dt-button-quiet", "bookmark");
       var note = el("details", "dt-note");
       note.appendChild(el("summary", "", t("本地笔记", "Local note")));
@@ -903,21 +1050,35 @@
         }
       }, "dt-button-quiet", "copy-context");
       var row = el("div", "dt-row"); row.append(bookmark, copyButton); footer.append(row, note);
-      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · DeepTutor", "Interaction source · DeepTutor")));
+      var repository = typeof activity.source === "string" ? "HKUDS/DeepTutor" : activity.source.repository || "HKUDS/DeepTutor";
+      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("技术来源 · ", "Implementation source · ") + repository));
       var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
       source.appendChild(el("p", "dt-small", sourceText)); footer.appendChild(source);
       var status = el("p", "dt-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
-      target.append(header, prompt, body, footer, status);
-      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false };
+      var recommendations = el("div", "dt-recommendations"); recommendations.hidden = true;
+      recommendations.setAttribute("aria-label", t("建议下一步", "Suggested next task"));
+      target.append(header, prompt, body, recommendations);
+      var skip, skipStatus;
+      if (studio && activity.type !== "quiz") {
+        skip = button(t("暂时跳过", "Skip for now"), function () {
+          var skipped = state.activities[activity.id].status === "skipped";
+          transition(activity, { type: skipped ? "retry" : "skip" });
+        }, "dt-button-quiet", "skip");
+        skipStatus = el("p", "dt-small"); target.append(skip, skipStatus);
+      }
+      target.append(footer, status);
+      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, recommendations: recommendations, skip: skip, skipStatus: skipStatus, customMounted: false };
       views.set(activity.id, view);
-      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
+      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); renderStudio(); } });
       renderActivity(activity);
       if (activity.solutionId) {
         var solution = doc.getElementById(activity.solutionId);
         if (solution) {
           var watch = function () {
-            if (solution.open && state.activities[activity.id].status !== "submitted" && !state.activities[activity.id].answerRevealed) {
-              transition(activity, { type: "reveal" }); announce(activity, t("已查看原题详解；当前尝试保留参考辅助标识。", "Worked solution revealed. This attempt is marked assisted."));
+            if (activity.type === "flashcards") {
+              captureFlashSolution(activity); renderActivity(activity);
+            } else if (solution.open && state.activities[activity.id].status !== "submitted" && !state.activities[activity.id].answerRevealed) {
+              transition(activity, { type: "reveal" }, true, true); announce(activity, t("已查看原题详解；当前尝试保留参考辅助标识。", "Worked solution revealed. This attempt is marked assisted."));
             }
           };
           solution.addEventListener("toggle", watch); watch();
@@ -933,19 +1094,101 @@
       panelSummary = el("summary", "dt-study-summary");
       panelBody = el("div", "dt-study-body"); panel.append(panelSummary, panelBody); panelTarget.appendChild(panel);
     }
+
+    function initializeStudio() {
+      if (!studio) return;
+      studioNav = doc.querySelector("[data-dt-studio-nav]");
+      studioSequence = doc.querySelector("[data-dt-studio-sequence]");
+      if (!studioNav || !studioSequence) throw new Error("Studio presentation needs the section-based builder document");
+      lesson.sections.forEach(function (section) {
+        var node = doc.getElementById(section.id);
+        if (!node || node.dataset.dtScene !== section.id) throw new Error("Missing studio scene: " + section.id);
+        sceneNodes.set(section.id, node);
+      });
+      studioNav.classList.add("dt-studio-nav");
+      studioNav.setAttribute("aria-label", t("任务导航", "Task navigation"));
+      studioSequence.classList.add("dt-studio-sequence");
+      studioSequence.setAttribute("aria-label", t("前后活动", "Previous and next activities"));
+      var sceneLabel = el("label", "dt-scene-picker", t("任务场景", "Scene"));
+      sceneSelect = el("select", "dt-input"); sceneSelect.dataset.dtControl = "scene-select";
+      lesson.sections.forEach(function (section, index) {
+        var option = el("option", "", (index + 1) + ". " + section.title); option.value = section.id; sceneSelect.appendChild(option);
+      });
+      sceneSelect.addEventListener("change", function () {
+        var section = lesson.sections.find(function (item) { return item.id === sceneSelect.value; });
+        navigate(section.activityIds[0]);
+      });
+      sceneLabel.appendChild(sceneSelect);
+      var activityLabel = el("label", "dt-scene-picker", t("场景内活动", "Activity in this scene"));
+      activitySelect = el("select", "dt-input"); activitySelect.dataset.dtControl = "activity-select";
+      activitySelect.addEventListener("change", function () { navigate(activitySelect.value); }); activityLabel.appendChild(activitySelect);
+      studioProgress = el("p", "dt-studio-progress");
+      dueSuggestion = el("div", "dt-due-suggestion");
+      studioNav.append(sceneLabel, activityLabel, studioProgress, dueSuggestion);
+      if (!state.currentActivity || !sceneFor.has(state.currentActivity)) state.currentActivity = activityOrder[0];
+      renderStudio();
+    }
+
+    function renderStudio() {
+      if (!studio || !studioNav) return;
+      var current = state.currentActivity && sceneFor.has(state.currentActivity) ? state.currentActivity : activityOrder[0];
+      var section = sceneFor.get(current), sceneIndex = lesson.sections.indexOf(section);
+      sceneNodes.forEach(function (node, id) { node.hidden = id !== section.id; });
+      views.forEach(function (view, id) { view.root.hidden = id !== current; });
+      sceneSelect.value = section.id;
+      if (activitySelect.dataset.dtOptionsScene !== section.id) {
+        activitySelect.replaceChildren();
+        section.activityIds.forEach(function (id, index) {
+          var option = el("option", "", (index + 1) + ". " + definitions.get(id).title); option.value = id; activitySelect.appendChild(option);
+        });
+        activitySelect.dataset.dtOptionsScene = section.id;
+      }
+      activitySelect.value = current;
+      var summary = evidenceSummary(lesson, state, now());
+      studioProgress.textContent = t("场景 ", "Scene ") + (sceneIndex + 1) + " / " + lesson.sections.length + " · " + t("本章独立核对 ", "Independent checks in this lesson ") + summary.independentPassed + " · " + t("自评 ", "Self-reports ") + summary.selfReviewed;
+      var sceneSummary = evidenceSummary({ activities: section.activityIds.map(function (id) { return definitions.get(id); }) }, state, now());
+      var evidence = sceneNodes.get(section.id).querySelector("[data-dt-scene-evidence]");
+      if (evidence) evidence.textContent = t("本场景已参与 ", "Activities explored in this scene ") + sceneSummary.participated + " / " + sceneSummary.total + " · " + t("独立核对 ", "Independent checks ") + sceneSummary.independentPassed + " · " + t("当前目标：", "Current goal: ") + lesson.objectives.find(function (objective) { return objective.id === definitions.get(current).objectiveId; }).title;
+      dueSuggestion.replaceChildren();
+      var due = getReviews(lesson, state, now()).filter(function (item) { return item.due; });
+      if (due.length) {
+        var item = due[0];
+        dueSuggestion.appendChild(button(t("到期复习：", "Review due: ") + item.title + (due.length > 1 ? " (+" + (due.length - 1) + ")" : ""), function () { navigate(item.activityId, item); }, "dt-button-quiet", "studio-review"));
+      }
+      studioSequence.replaceChildren();
+      var position = activityOrder.indexOf(current);
+      [[-1, t("上一项：", "Previous: "), "studio-prev"], [1, t("下一项：", "Next: "), "studio-next"]].forEach(function (spec) {
+        var id = activityOrder[position + spec[0]];
+        var label = id ? spec[1] + definitions.get(id).title : spec[0] < 0 ? t("已在第一项", "First activity") : t("已到最后一项", "Last activity");
+        var action = button(label, function () { navigate(id); }, "", spec[2]); action.disabled = !id; studioSequence.appendChild(action);
+      });
+    }
+
     function navigate(activityId, reviewItem) {
       var activity = definitions.get(activityId), view = views.get(activityId);
-      if (!activity || !view) return;
+      if (!activity || !view) return false;
       if (reviewItem) {
         if (activity.type === "quiz") {
-          if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
-          transition(activity, { type: "retry" });
-        } else if (activity.type === "flashcards") transition(activity, { type: "flash-restart", index: reviewItem.cardIndex });
+          var saved = state.activities[activityId];
+          var pending = saved.attempts.find(function (item) { return item.id === saved.submittedAttemptId; });
+          var unfinished = saved.status === "idle" && saved.draft.trim() || pending && pending.source === "self" && pending.correct === null;
+          if (!unfinished) {
+            if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
+            transition(activity, { type: "retry" });
+          }
+        } else if (activity.type === "flashcards") {
+          captureFlashSolution(activity);
+          if (activity.solutionId) { var linked = doc.getElementById(activity.solutionId); if (linked) linked.open = false; }
+          transition(activity, { type: "flash-restart", index: reviewItem.cardIndex });
+        }
       }
-      view.root.scrollIntoView({ behavior: win.matchMedia && win.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
+      state.currentActivity = activityId; save(); renderStudio();
+      if (typeof view.root.scrollIntoView === "function") view.root.scrollIntoView({ behavior: win.matchMedia && win.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
       var focus = view.body.querySelector("button:not([disabled]),input:not([disabled]),textarea:not([disabled])");
       if (focus) focus.focus({ preventScroll: true });
-      state.currentActivity = activityId; save();
+      else { view.root.tabIndex = -1; view.root.focus({ preventScroll: true }); }
+      doc.dispatchEvent(new win.CustomEvent("dt:navigate", { detail: { activityId: activityId, sectionId: studio ? sceneFor.get(activityId).id : null } }));
+      return true;
     }
 
     function renderPanel() {
@@ -1013,7 +1256,7 @@
           notifyCustomRestore();
           panelMessage = t("已导入相同课程版本的记录。", "Imported records for this lesson revision.");
         } catch (error) { panelMessage = t("导入未应用：", "Import not applied: ") + error.message; }
-        renderPanel();
+        renderPanel(); renderStudio();
       });
       actions.appendChild(button(t("导入学习记录", "Import progress"), function () { upload.click(); }, "", "import")); actions.appendChild(upload); panelBody.appendChild(actions);
       if (state.currentActivity) panelBody.appendChild(button(t("返回上次活动", "Return to last activity"), function () { navigate(state.currentActivity); }, "dt-button-quiet", "resume"));
@@ -1027,6 +1270,7 @@
       var target = Array.from(doc.querySelectorAll("[data-dt-activity]")).find(function (node) { return node.dataset.dtActivity === activity.id; });
       if (target && target.dataset.dtMounted !== "true") createActivityView(activity, target);
     });
+    initializeStudio();
     save(); renderPanel();
     var explorationListener = function (event) {
       var detail = event.detail;
@@ -1036,7 +1280,7 @@
       try {
         var serialized = JSON.stringify(detail.state);
         if (serialized.length > 100000) return;
-        transition(activity, { type: "explore", state: JSON.parse(serialized) }, false);
+        transition(activity, { type: "explore", state: JSON.parse(serialized) }, false, studio && views.get(activity.id) && views.get(activity.id).root.hidden);
       } catch (error) { announce(activity, t("本次探索状态未保存，活动仍可继续。", "This exploration state was not saved; you can continue.")); }
     };
     doc.addEventListener("dt:exploration", explorationListener);
@@ -1051,8 +1295,10 @@
       storageKey: key,
       getState: function () { return copy(state); },
       exportState: function () { return exportEnvelope(lesson, state, now()); },
-      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
-      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); },
+      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); renderStudio(); return copy(state); },
+      navigate: navigate,
+      getRecommendations: function (activityId) { return getRecommendations(lesson, state, activityId || state.currentActivity); },
+      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); renderStudio(); },
       destroy: function () { doc.removeEventListener("dt:exploration", explorationListener); }
     };
   }
@@ -1064,6 +1310,7 @@
     defaultExploration: defaultExploration, blankActivity: blankActivity, createState: createState,
     markExposure: markExposure, exposureAssists: exposureAssists, prepareSession: prepareSession,
     reduceActivity: reduceActivity, getReviews: getReviews, evidenceSummary: evidenceSummary, reviewEvidenceKind: reviewEvidenceKind,
+    pathwayOutcome: pathwayOutcome, getRecommendations: getRecommendations,
     validateLesson: validateLesson, exportEnvelope: exportEnvelope, validateImport: validateImport,
     storageKey: storageKey, mount: mount
   };

@@ -122,24 +122,48 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .mjx-container{overflow-x:auto; overflow-y:hidden; max-width:100%}
 </style>
 <style id="dt-runtime-style">/* Portable DialogueTutor interactions. All selectors are namespaced. */
+/* Public semantic tokens are shared by generated pages and authored figures. */
+:root,
+.dt-activity,
+.dt-study,
+.dt-studio {
+  --dt-canvas: #F3F6FA;
+  --dt-surface: #FFFFFF;
+  --dt-surface2: #E8EEF5;
+  --dt-ink: #15273B;
+  --dt-muted: #52647A;
+  --dt-line: #CBD5E1;
+  --dt-control-line: #718198;
+  --dt-action: #A84420;
+  --dt-action-hover: #8B3519;
+  --dt-action-soft: #FBE9DF;
+  --dt-on-action: #FFFFFF;
+  --dt-focus: #1C64D1;
+  --dt-success: #15704F;
+  --dt-success-soft: #E7F4ED;
+  --dt-error: #B53645;
+  --dt-error-soft: #FDECEF;
+  --dt-hint: #735414;
+  --dt-hint-soft: #FFF3D6;
+  --dt-plot-function: #235CC7;
+  --dt-plot-compare: #6945B8;
+  --dt-parameter-a: #A84420;
+  --dt-parameter-b: #1D6B88;
+  /* v1 aliases retained for existing custom widgets. */
+  --dt-paper: var(--dt-surface);
+  --dt-accent: var(--dt-action);
+  --dt-accent-soft: var(--dt-action-soft);
+  --dt-good: var(--dt-success);
+  --dt-good-soft: var(--dt-success-soft);
+  --dt-again: var(--dt-error);
+  --dt-again-soft: var(--dt-error-soft);
+}
 .dt-activity,
 .dt-study {
-  --dt-paper: #fffdf7;
-  --dt-surface: #f7f3e9;
-  --dt-ink: #302e28;
-  --dt-muted: #706b60;
-  --dt-line: #dcd5c6;
-  --dt-accent: #35685c;
-  --dt-accent-soft: #edf3e9;
-  --dt-good: #24624b;
-  --dt-good-soft: #eef5ec;
-  --dt-again: #8b4a2c;
-  --dt-again-soft: #fcf0e5;
-  --dt-focus: #9a6026;
   box-sizing: border-box;
   color: var(--dt-ink);
   font-family: inherit;
-  font-size: 0.96rem;
+  font-size: 1rem;
   line-height: 1.7;
   text-align: left;
   overflow-wrap: anywhere;
@@ -171,7 +195,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   display: block;
   color: var(--dt-accent);
   font-family: system-ui, -apple-system, "Noto Sans SC", sans-serif;
-  font-size: 0.69rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.5;
@@ -180,7 +204,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-activity .dt-small,
 .dt-study .dt-small {
   color: var(--dt-muted);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   line-height: 1.65;
   text-indent: 0;
 }
@@ -189,13 +213,13 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   display: block;
   margin: 0 0 0.45rem;
   color: var(--dt-ink);
-  font-size: 0.87rem;
+  font-size: 0.875rem;
   font-weight: 650;
   line-height: 1.6;
 }
 .dt-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
 .dt-spread { justify-content: space-between; }
-.dt-counter { color: var(--dt-muted); font-size: 0.76rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dt-counter { color: var(--dt-muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .dt-activity .dt-button,
 .dt-study .dt-button {
   display: inline-flex;
@@ -206,12 +230,12 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   max-width: 100%;
   margin: 0;
   padding: 0.48rem 0.82rem;
-  border: 1px solid var(--dt-line);
+  border: 1px solid var(--dt-control-line);
   border-radius: 0.38rem;
   background: var(--dt-paper);
   color: var(--dt-ink);
   font: inherit;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 550;
   line-height: 1.5;
   text-align: center;
@@ -225,9 +249,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-activity .dt-button:hover:not(:disabled),
 .dt-study .dt-button:hover:not(:disabled) { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
 .dt-activity .dt-button-primary,
-.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: #fffdf7; }
+.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: var(--dt-on-action); }
 .dt-activity .dt-button-primary:hover:not(:disabled),
-.dt-study .dt-button-primary:hover:not(:disabled) { background: #285649; color: #fffdf7; }
+.dt-study .dt-button-primary:hover:not(:disabled) { background: var(--dt-action-hover); color: var(--dt-on-action); }
 .dt-activity .dt-button-quiet,
 .dt-study .dt-button-quiet { border-color: transparent; background: transparent; color: var(--dt-accent); }
 .dt-activity .dt-button:disabled,
@@ -243,7 +267,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   min-width: 0;
   margin: 0.45rem 0 0;
   padding: 0.75rem 0.8rem;
-  border: 1px solid var(--dt-line);
+  border: 1px solid var(--dt-control-line);
   border-radius: 0.38rem;
   background: var(--dt-paper);
   color: var(--dt-ink);
@@ -254,8 +278,8 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   text-align: left;
   resize: vertical;
 }
-.dt-input:disabled { background: var(--dt-surface); opacity: 1; -webkit-text-fill-color: var(--dt-ink); }
-.dt-input-label { display: block; margin: 0.4rem 0 0.85rem; color: var(--dt-muted); font-size: 0.8rem; }
+.dt-input:disabled { background: var(--dt-surface2); opacity: 1; -webkit-text-fill-color: var(--dt-ink); }
+.dt-input-label { display: block; margin: 0.4rem 0 0.85rem; color: var(--dt-muted); font-size: 0.875rem; }
 .dt-activity .dt-flashcard {
   display: flex;
   flex-direction: column;
@@ -265,12 +289,12 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   margin: 0.75rem 0;
   padding: 1.65rem 1.3rem;
   border: 1px solid var(--dt-line);
-  background: linear-gradient(140deg, var(--dt-paper), var(--dt-surface));
+  background: linear-gradient(140deg, var(--dt-paper), var(--dt-surface2));
   text-align: center;
 }
-.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: #a4bbae; }
+.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: var(--dt-control-line); }
 .dt-flashcard-text { display: block; font-size: 1.05rem; font-weight: 500; line-height: 1.8; white-space: pre-wrap; }
-.dt-self-rating { margin: 1rem 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--dt-line); background: var(--dt-surface); }
+.dt-self-rating { margin: 1rem 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--dt-line); background: var(--dt-surface2); }
 .dt-self-rating .dt-button { margin: 0.25rem 0.4rem 0.25rem 0; }
 .dt-self-rating p { margin: 0.15rem 0 0.5rem; }
 .dt-choices { display: grid; gap: 0.6rem; min-inline-size: 0; margin: 0 0 1rem; padding: 0; border: 0; }
@@ -281,14 +305,14 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   min-width: 0;
   margin: 0;
   padding: 0.78rem 0.85rem;
-  border: 1px solid var(--dt-line);
+  border: 1px solid var(--dt-control-line);
   border-radius: 0.38rem;
   background: var(--dt-paper);
   font-size: 0.94rem;
   line-height: 1.7;
   cursor: pointer;
 }
-.dt-choice:hover { border-color: #9aae9f; }
+.dt-choice:hover { border-color: var(--dt-action); }
 .dt-choice-selected { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
 .dt-choice-label { min-width: 0; }
 .dt-radio { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; margin: 0.24rem 0 0; accent-color: var(--dt-accent); }
@@ -299,7 +323,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   margin: 0.9rem 0;
   padding: 0.9rem 1rem;
   border-radius: 0.4rem;
-  background: var(--dt-surface);
+  background: var(--dt-surface2);
   text-indent: 0;
   white-space: pre-wrap;
 }
@@ -310,36 +334,46 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-reference { border: 1px solid var(--dt-line); background: transparent; }
 .dt-reference-answer { font-weight: 600; }
 .dt-reference .dt-rubric { margin: 0.5rem 0 0; padding-left: 1.2rem; }
-.dt-hint { border-left: 3px solid #ac9464; color: #675638; font-size: 0.85rem; }
+.dt-hint { border-left: 3px solid var(--dt-hint); color: var(--dt-hint); background: var(--dt-hint-soft); font-size: 0.875rem; }
 .dt-error,
-.dt-storage-warning { color: #8a351e; font-size: 0.82rem; line-height: 1.6; }
+.dt-storage-warning { color: var(--dt-error); font-size: 0.875rem; line-height: 1.6; }
 .dt-error:empty { display: none; }
 .dt-step-markers { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
 .dt-step-markers li { margin: 0; padding: 0; }
-.dt-step-markers .dt-button { min-height: 2.4rem; padding: 0.4rem 0.6rem; font-size: 0.74rem; }
+.dt-step-markers .dt-button { min-height: 2.4rem; padding: 0.4rem 0.6rem; font-size: 0.875rem; }
 .dt-step-markers .dt-step-current { border-color: var(--dt-accent); background: var(--dt-accent-soft); color: var(--dt-accent); }
-.dt-step-stage { min-height: 9rem; margin: 0 0 1rem; padding: 1.1rem; border-left: 3px solid var(--dt-accent); background: var(--dt-surface); }
+.dt-step-stage { min-height: 9rem; margin: 0 0 1rem; padding: 1.1rem; border-left: 3px solid var(--dt-accent); background: var(--dt-surface2); }
 .dt-authored { overflow-wrap: anywhere; }
 .dt-authored p { text-indent: 0; }
 .dt-authored img,
 .dt-authored svg,
 .dt-authored video { max-width: 100%; height: auto; }
-.dt-authored pre { max-width: 100%; overflow-x: auto; font-size: 0.86rem; }
+.dt-authored pre { max-width: 100%; overflow-x: auto; font-size: 0.875rem; }
 .dt-parameters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem 1.4rem; margin: 1rem 0 0.8rem; }
-.dt-parameter { display: block; min-width: 0; font-size: 0.81rem; }
-.dt-parameter-value { padding: 0.05rem 0.42rem; border-radius: 0.25rem; background: var(--dt-surface); font-variant-numeric: tabular-nums; }
+.dt-parameter { display: block; min-width: 0; font-size: 0.875rem; }
+.dt-parameter-value { padding: 0.05rem 0.42rem; border-radius: 0.25rem; background: var(--dt-surface2); font-variant-numeric: tabular-nums; }
 .dt-range { display: block; width: 100%; min-height: 2.75rem; margin: 0; padding: 0; accent-color: var(--dt-accent); cursor: pointer; }
-.dt-plots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 0.8rem 0; }
+.dt-plots { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1rem; margin: 0.8rem 0; }
 .dt-activity .dt-graph { display: block; width: 100%; height: auto; margin: 0; border: 1px solid var(--dt-line); border-radius: 0.4rem; background: var(--dt-paper); overflow: visible; }
-.dt-graph text { fill: var(--dt-muted); font-family: system-ui, sans-serif; font-size: 15px; }
-.dt-graph .dt-graph-title { fill: var(--dt-ink); font-size: 16px; font-weight: 600; }
+.dt-graph text { fill: var(--dt-muted); font-family: system-ui, sans-serif; font-size: 20px; }
+.dt-graph .dt-graph-title { fill: var(--dt-ink); font-size: 20px; font-weight: 600; }
 .dt-graph-grid { stroke: var(--dt-line); stroke-width: 0.8; stroke-dasharray: 3 4; }
 .dt-graph-axis { stroke: var(--dt-muted); stroke-width: 1; }
-.dt-graph-curve { stroke: var(--dt-accent); stroke-width: 3; stroke-linejoin: round; }
-.dt-graph-area { fill: #8db0a1; fill-opacity: 0.38; }
-.dt-graph-guide { stroke: #a47746; stroke-width: 1.4; stroke-dasharray: 4 4; }
-.dt-graph-dot { fill: #9a6026; stroke: var(--dt-paper); stroke-width: 1.5; }
-.dt-graph-dot-second { fill: #306b7b; }
+.dt-graph-curve { stroke: var(--dt-plot-function); stroke-width: 3; stroke-linejoin: round; }
+.dt-graph-area { fill: var(--dt-plot-function); fill-opacity: 0.38; stroke: var(--dt-action); stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.dt-graph-guide { stroke: var(--dt-parameter-a); stroke-width: 1.4; stroke-dasharray: 4 4; }
+.dt-graph-dot { fill: var(--dt-parameter-a); stroke: var(--dt-paper); stroke-width: 1.5; }
+.dt-graph-dot-second { fill: var(--dt-parameter-b); }
+.dt-graph-guide-second { stroke: var(--dt-parameter-b); stroke-dasharray: 2 5; }
+.dt-graph-clipped-guide { stroke-width: 2; stroke-dasharray: none; vector-effect: non-scaling-stroke; }
+.dt-graph-clipped-dot { fill: var(--dt-paper); stroke: var(--dt-parameter-a); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.dt-graph-clipped-dot.dt-graph-dot-second { stroke: var(--dt-parameter-b); }
+.dt-graph .dt-graph-event-label { fill: var(--dt-parameter-a); font-weight: 650; }
+.dt-graph .dt-graph-event-label-second { fill: var(--dt-parameter-b); }
+.dt-event-summary { margin: 0.5rem 0 0.8rem; }
+.dt-plots .dt-graph:nth-child(2) .dt-graph-curve { stroke: var(--dt-plot-compare); }
+.dt-parameter .dt-range { accent-color: var(--dt-parameter-a); }
+.dt-parameter:nth-child(even) .dt-range { accent-color: var(--dt-parameter-b); }
 .dt-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; margin: 0.8rem 0; }
 .dt-metric { display: flex; flex-direction: column; min-width: 0; padding: 0.65rem 0.7rem; border: 1px solid var(--dt-line); border-radius: 0.35rem; }
 .dt-metric strong { margin-top: 0.15rem; font-size: 1.12rem; font-variant-numeric: tabular-nums; }
@@ -349,32 +383,73 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-panel-section { margin: 0.5rem 0; border-top: 1px solid var(--dt-line); }
 .dt-followup > summary,
 .dt-note > summary,
+.dt-tools > summary,
 .dt-source > summary,
-.dt-panel-section > summary { padding: 0.7rem 0.1rem; color: var(--dt-accent); font-size: 0.83rem; line-height: 1.6; cursor: pointer; }
+.dt-panel-section > summary { padding: 0.7rem 0.1rem; color: var(--dt-accent); font-size: 0.875rem; line-height: 1.6; cursor: pointer; }
 .dt-followup p { margin: 0.15rem 0 0.85rem; white-space: pre-wrap; text-indent: 0; }
 .dt-note > .dt-button { margin-bottom: 0.7rem; }
 .dt-source { margin: 0; }
-.dt-source > summary { color: var(--dt-muted); font-size: 0.72rem; padding: 0.35rem 0.1rem; }
+.dt-source > summary { color: var(--dt-muted); font-size: 0.875rem; padding: 0.35rem 0.1rem; }
 .dt-source p { white-space: pre-wrap; word-break: break-word; }
 .dt-activity-footer { margin-top: 1.15rem; padding-top: 0.6rem; border-top: 1px solid var(--dt-line); }
-.dt-status { min-height: 0; margin: 0.35rem 0 0; color: var(--dt-accent); font-size: 0.78rem; line-height: 1.6; text-indent: 0; }
+.dt-status { min-height: 0; margin: 0.35rem 0 0; color: var(--dt-accent); font-size: 0.875rem; line-height: 1.6; text-indent: 0; }
 .dt-status:empty { display: none; }
 .dt-copy-fallback { margin-top: 0.75rem; }
 .dt-study { margin: 1.4rem 0 2rem; }
 .dt-study-panel { border: 1px solid var(--dt-line); border-radius: 0.5rem; background: var(--dt-paper); }
-.dt-study-summary { padding: 0.8rem 1rem; color: var(--dt-accent); font-size: 0.86rem; font-weight: 600; line-height: 1.65; cursor: pointer; }
+.dt-study-summary { padding: 0.8rem 1rem; color: var(--dt-accent); font-size: 0.875rem; font-weight: 600; line-height: 1.65; cursor: pointer; }
 .dt-study-panel[open] > .dt-study-summary { border-bottom: 1px solid var(--dt-line); }
 .dt-study-body { padding: 1rem; }
 .dt-study-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.55rem; }
-.dt-study-stat { display: flex; flex-direction: column; padding: 0.55rem 0.7rem; border-radius: 0.35rem; background: var(--dt-surface); }
+.dt-study-stat { display: flex; flex-direction: column; padding: 0.55rem 0.7rem; border-radius: 0.35rem; background: var(--dt-surface2); }
 .dt-study-stat strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
 .dt-objective { padding: 0.7rem 0; border-top: 1px solid var(--dt-line); }
-.dt-study .dt-activity-link { padding: 0.25rem 0.4rem; min-height: 2rem; font-size: 0.75rem; text-align: left; }
+.dt-study .dt-activity-link { padding: 0.25rem 0.4rem; min-height: 2rem; font-size: 0.875rem; text-align: left; }
 .dt-review-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.3rem 0; padding: 0.25rem 0.4rem; }
 .dt-review-due { background: var(--dt-again-soft); border-radius: 0.35rem; }
 .dt-note-entry { margin: 0.35rem 0; padding: 0.25rem 0; }
-.dt-note-text { margin: 0.2rem 0 0.6rem; padding: 0 0.8rem; color: var(--dt-muted); font-size: 0.85rem; white-space: pre-wrap; text-indent: 0; }
+.dt-note-text { margin: 0.2rem 0 0.6rem; padding: 0 0.8rem; color: var(--dt-muted); font-size: 0.875rem; white-space: pre-wrap; text-indent: 0; }
 .dt-transfer { margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--dt-line); }
+.dt-activity [hidden], .dt-studio [hidden] { display: none !important; }
+.dt-recommendations { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1rem 0; padding: 1rem; background: var(--dt-action-soft); border-radius: 0.4rem; }
+.dt-recommendations > p { flex-basis: 100%; margin: 0; }
+.dt-reference > summary { cursor: pointer; }
+.dt-tools > summary { font-size: 0.875rem; }
+.dt-tools[open] > summary { margin-bottom: 0.4rem; }
+
+/* The studio is a single task stage, with retained DOM for every other task. */
+main.dt-studio { max-width: 1080px; padding: 1.25rem 1.25rem 4rem; }
+.dt-studio > header { max-width: 740px; margin: 0 auto 1rem; }
+.dt-studio > header .dt-lesson-kicker { margin: 0 0 0.25rem; }
+.dt-studio > header h1 { margin: 0; }
+.dt-studio .dt-studio-nav { max-width: 740px; margin: 0 auto 1rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.45rem 1rem; }
+.dt-studio .dt-scene-picker { min-width: 0; color: var(--dt-muted); font-size: 0.875rem; }
+.dt-studio .dt-scene-picker .dt-input { width: 100%; min-height: 2.75rem; margin: 0.2rem 0 0; padding: 0.5rem; border: 1px solid var(--dt-control-line); border-radius: 0.35rem; background: var(--dt-surface); color: var(--dt-ink); font: inherit; }
+.dt-studio-progress, .dt-due-suggestion { grid-column: 1 / -1; margin: 0; font-size: 0.875rem; color: var(--dt-muted); }
+.dt-studio .dt-due-suggestion:empty { display: none; }
+.dt-studio .dt-scene { padding: 1.25rem; border: 1px solid var(--dt-line); border-radius: 0.6rem; background: var(--dt-surface); }
+.dt-studio .dt-scene > h2 { max-width: 740px; margin: 0 auto 0.35rem; font-size: 1.35rem; line-height: 1.45; }
+.dt-studio .dt-scene-lead { max-width: 740px; margin: 0 auto 0.55rem; font-size: 1rem; }
+.dt-studio .dt-scene-evidence { max-width: 740px; margin: 0 auto 1rem; color: var(--dt-muted); font-size: 0.875rem; }
+.dt-studio .dt-activity { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.dt-studio .dt-activity-heading, .dt-studio .dt-activity > .dt-prompt,
+.dt-studio .dt-activity-footer, .dt-studio .dt-activity > .dt-status,
+.dt-studio .dt-activity-body > :not(.dt-plots):not(.dt-custom),
+.dt-studio .dt-activity > .dt-recommendations,
+.dt-studio .dt-scene-explanation { max-width: 740px; margin-left: auto; margin-right: auto; }
+.dt-studio .dt-activity > .dt-prompt { margin-top: 0.6rem; margin-bottom: 0.85rem; }
+.dt-studio .dt-activity-body > .dt-authored { max-width: none; }
+.dt-studio .dt-scene-explanation { margin-top: 1rem; margin-bottom: 0; border-top: 1px solid var(--dt-line); }
+.dt-studio .dt-scene-explanation > summary { color: var(--dt-action); font-size: 1rem; }
+.dt-studio .dt-scene-explanation > .dt-authored { padding-bottom: 1rem; }
+.dt-studio .dt-scene-explanation h2 { font-size: 1.3rem; }
+.dt-studio .dt-studio-sequence { display: flex; justify-content: space-between; gap: 1rem; max-width: 740px; margin: 1rem auto; }
+.dt-studio .dt-studio-sequence .dt-button { flex: 1 1 0; min-width: 0; }
+.dt-studio > .dt-study { max-width: 740px; margin: 1.5rem auto 0; }
+.dt-studio .dt-studio-nav .dt-button, .dt-studio .dt-studio-sequence .dt-button { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: 0.55rem 0.75rem; border: 1px solid var(--dt-control-line); border-radius: 0.35rem; background: var(--dt-surface); color: var(--dt-ink); font: inherit; font-size: 0.875rem; line-height: 1.5; cursor: pointer; }
+.dt-studio .dt-studio-nav .dt-button:hover, .dt-studio .dt-studio-sequence .dt-button:hover:not(:disabled) { background: var(--dt-action-soft); border-color: var(--dt-action); }
+.dt-studio .dt-studio-sequence .dt-button:disabled { opacity: 0.5; cursor: default; }
+.dt-studio :focus-visible { outline: 3px solid var(--dt-focus); outline-offset: 3px; }
 .dt-sr {
   position: absolute !important;
   width: 1px !important;
@@ -388,6 +463,8 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 }
 
 @media (max-width: 620px) {
+  main.dt-studio { padding: 1rem 0.75rem 3rem; }
+  .dt-studio .dt-scene { padding: 1rem; }
   .dt-activity { padding: 1.15rem 1rem 0.9rem; margin: 2rem 0; }
   .dt-activity .dt-activity-title { font-size: 1.06rem; }
   .dt-plots { grid-template-columns: minmax(0, 1fr); }
@@ -402,33 +479,43 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   .dt-study .dt-button { min-height: 2.75rem; }
 }
 @media (max-width: 380px) {
+  .dt-graph text, .dt-graph .dt-graph-title { font-size: 24px; }
+  .dt-studio .dt-studio-nav { grid-template-columns: minmax(0, 1fr); }
   .dt-parameters { grid-template-columns: minmax(0, 1fr); }
   .dt-activity { padding-left: 0.8rem; padding-right: 0.8rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .dt-activity *, .dt-study * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .dt-activity *, .dt-study *, .dt-studio * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
 @media (prefers-color-scheme: dark) {
-  .dt-activity, .dt-study {
-    --dt-paper: #24241f;
-    --dt-surface: #2d2e27;
-    --dt-ink: #e9e5d9;
-    --dt-muted: #b5b09f;
-    --dt-line: #484b3e;
-    --dt-accent: #a0c9b4;
-    --dt-accent-soft: #303f34;
-    --dt-good: #abd5ac;
-    --dt-good-soft: #2b3d2b;
-    --dt-again: #e3b18c;
-    --dt-again-soft: #48372a;
-    --dt-focus: #e9bd82;
+  :root, .dt-activity, .dt-study, .dt-studio {
+    --dt-canvas: #0B1524;
+    --dt-surface: #122238;
+    --dt-surface2: #1B304B;
+    --dt-ink: #ECF2FA;
+    --dt-muted: #A7B7CC;
+    --dt-line: #2D455F;
+    --dt-control-line: #6E85A1;
+    --dt-action: #F0A16B;
+    --dt-action-hover: #FFB67E;
+    --dt-action-soft: #382B29;
+    --dt-on-action: #15273B;
+    --dt-focus: #81B8FF;
+    --dt-success: #6ED5A8;
+    --dt-success-soft: #13362C;
+    --dt-error: #FF93A0;
+    --dt-error-soft: #3A222D;
+    --dt-hint: #E7C470;
+    --dt-hint-soft: #332F1D;
+    --dt-plot-function: #86B7FF;
+    --dt-plot-compare: #C2A4FF;
+    --dt-parameter-a: #F0A16B;
+    --dt-parameter-b: #78CEDC;
   }
-  .dt-activity .dt-button-primary, .dt-study .dt-button-primary { background: #a0c9b4; color: #172b22; }
-  .dt-activity .dt-button-primary:hover:not(:disabled), .dt-study .dt-button-primary:hover:not(:disabled) { background: #c0ddcd; color: #172b22; }
-  .dt-hint { color: #ded0ac; }
-  .dt-error, .dt-storage-warning { color: #ffc2a2; }
 }
 @media print {
+  .dt-studio [data-dt-scene][hidden], .dt-studio [data-dt-activity][hidden] { display: block !important; }
+  .dt-studio .dt-studio-nav, .dt-studio .dt-studio-sequence { display: none; }
   .dt-activity { box-shadow: none; break-inside: avoid; }
   .dt-study, .dt-activity-footer, .dt-source { display: none; }
   .dt-activity .dt-button { border-color: #888; }
@@ -576,7 +663,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <tr><td class="no">8</td><td>\(F(b)-F(a) = \displaystyle\int_a^b f(x)\,dx\)</td>
 <td class="why">微积分基本定理（fundamental theorem of calculus）：\(f\) 是 \(F\) 的导数，那么 \(f\) 从 \(a\) 到 \(b\) 的定积分等于 \(F\) 在两端的差</td></tr>
 <tr><td class="no">9</td><td>\(P(a \le X \le b) = \displaystyle\int_a^b f(x)\,dx\)</td>
-<td class="why">第 5 行接第 8 行。左边端点从 \(a \lt X\) 换成 \(a \le X\)，差的那一个点概率为 0（第 12 行），换与不换都成立</td></tr>
+<td class="why">第 5 行接第 8 行。左边端点从 \(a \lt X\) 换成 \(a \le X\)，本章讨论具有分段连续密度的分布，CDF 连续，因此 \(P(X=a)=F(a)-\lim_{t\uparrow a}F(t)=0\)，两个端点写法等价</td></tr>
 </tbody>
 </table>
 </div><div data-dt-activity="cdf-density-steps"></div>
@@ -702,9 +789,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 
 <div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
 <p>
-用的是本章第③幕第 8 行 \(P(a \le X \le b)=\int_a^b f(x)\,dx\)。
+用的是本章第③幕第 9 行 \(P(a \le X \le b)=\int_a^b f(x)\,dx\)。
 那一行的来历是第①幕那个裂口：单个取值分不到概率，概率只好交给区间。
-积分下限写 0 不写 \(-\infty\)，凭的是第③幕第 11 行那条归一化条件在区间外面留下的 0。
+积分下限写 0 不写 \(-\infty\)，凭的是题面规定 \(x<0\) 时密度为 0，因此 \(-\infty\) 到 0 的积分为 0；归一化本身不能确定支持区间。
 </p>
 </div>
 
@@ -1730,18 +1817,16 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 
 <div class="six"><span class="tag"><span class="num">②</span> 题干昭示了哪个方法</span>
 <p>
-<em>write down</em> 加上 1 分，这两个信号一起出现的时候，
-出题人等的是一眼看出来的理由，动手积分就说明读错了信号。
-这道题里那个理由是对称性：密度关于区间中点对称，期望就落在中点。
-按定义式 \(\int_2^{10} s f(s)\,ds\) 算出来的答案一样，可是要多花四五分钟，
-在一张限时的卷子上，这几分钟通常比这一分值钱。
+<em>write down</em> 允许直接写出结果。验证本题密度关于区间中点对称、且有限支持保证期望存在后，
+可以直接用该中点给出期望。按定义式 \(\int_2^{10} s f(s)\,ds\) 积分同样合法，也能用来核对；
+本题利用对称性可以省去这一步计算。
 </p>
 </div>
 
 <div class="six"><span class="tag"><span class="num">③</span> 回接上半</span>
 <p>
 第二章第③幕「期望：为什么它落在正中间」。那一幕讲的是均匀分布，
-而重心那句话的适用面更宽：<em>任何一条关于某点对称的密度，期望都落在那一点上</em>。
+而重心那句话的适用面更宽：<em>关于某点对称且期望存在的分布，期望等于该对称中心；本题支持区间有限，因此期望存在</em>。
 均匀分布是它最简单的一个例子。
 </p>
 </div>
@@ -1834,6 +1919,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
   var DAY = 86400000;
   var INTERVAL_DAYS = [1, 3, 7, 14, 30];
   var TYPES = ["flashcards", "quiz", "steps", "explore", "interactive"];
+  var PATHWAY_OUTCOMES = ["incorrect", "assisted", "correct", "skipped"];
   var has = function (object, key) { return Object.prototype.hasOwnProperty.call(object, key); };
   var copy = function (value) { return JSON.parse(JSON.stringify(value)); };
   var clamp = function (value, lower, upper) { return Math.min(upper, Math.max(lower, value)); };
@@ -2005,6 +2091,9 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         }
       }
       if (activity.type === "flashcards") {
+        // Linked details start closed when loading a page; their prior exposure
+        // still constrains recall, but a display flag must not imply a fresh view.
+        saved.answerRevealed = false;
         if (previous) Object.keys(previous.flash.cards).forEach(function (key) {
           var oldCard = previous.flash.cards[key];
           if (oldCard.exposure && oldCard.exposure.sessionId === sessionId) flashCardState(saved, Number(key)).exposure = copy(oldCard.exposure);
@@ -2015,7 +2104,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
           if (oldCard && oldCard.exposure && oldCard.exposure.sessionId === sessionId) card.exposure = copy(oldCard.exposure);
           if (card.review && card.review.dueAt <= now && card.rating !== null) {
             card.revealed = false; card.hintUsed = false; card.rating = null; card.attemptId = null;
-            card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId);
+            card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId) || exposureAssists(saved.exposure, card.review, now, sessionId);
             card.recallSessionId = null;
           } else if (Number(key) === saved.flash.index) {
             if (card.revealed) {
@@ -2035,6 +2124,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 
   function reduceActivity(activity, current, event, now, sessionId) {
     var state = copy(current);
+    if (state.status === "skipped" && ["step", "explore", "explore-reset", "flash-index", "flash-flip", "flash-hint", "flash-rate", "flash-restart"].includes(event.type)) state.status = "idle";
     var attempt, card, grade;
     function makeAttempt(answer, correct, source, assisted, cardIndex) {
       var result = { id: activity.id + ":" + now + ":" + (state.attempts.length + 1), answer: answer,
@@ -2050,14 +2140,21 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       case "hint":
         state.hintUsed = true;
         state.exposure = markExposure(state.exposure, "hint", now, sessionId);
-        state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
+        if (activity.type === "quiz") state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
         break;
       case "reveal":
-        if (!state.answerRevealed && state.status !== "submitted") {
+        if (activity.type === "quiz" && !state.answerRevealed && state.status !== "submitted") {
           state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
         }
         state.answerRevealed = true;
         state.exposure = markExposure(state.exposure, "reference", now, sessionId);
+        if (activity.type === "flashcards") activity.cards.forEach(function (_, index) {
+          var linkedCard = flashCardState(state, index);
+          // The learner's reported recall precedes the first flip. A later
+          // reference view constrains future recalls, not that frozen recall.
+          var pendingRecall = linkedCard.revealed && linkedCard.rating === null && linkedCard.recallSessionId === sessionId;
+          if (!pendingRecall) linkedCard.review = scheduleReview(linkedCard.review, { correct: null, assisted: true, source: "self" }, now, sessionId);
+        });
         break;
       case "submit":
         if (state.status !== "idle") return state;
@@ -2094,7 +2191,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       case "flash-flip":
         card = flashCardState(state, state.flash.index);
         if (!card.revealed) {
-          card.recallAssisted = !!card.recallAssisted || exposureAssists(card.exposure, card.review, now, sessionId);
+          card.recallAssisted = !!card.recallAssisted || exposureAssists(card.exposure, card.review, now, sessionId) || exposureAssists(state.exposure, card.review, now, sessionId);
           card.recallSessionId = sessionId;
           card.exposure = markExposure(card.exposure, "reference", now, sessionId);
         }
@@ -2118,7 +2215,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         if (event.index !== undefined) state.flash.index = clamp(event.index, 0, activity.cards.length - 1);
         card = flashCardState(state, state.flash.index);
         card.revealed = false; card.hintUsed = false; card.rating = null; card.attemptId = null;
-        card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId);
+        card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId) || exposureAssists(state.exposure, card.review, now, sessionId);
         card.recallSessionId = null;
         break;
       case "step": state.stepIndex = clamp(event.index, 0, activity.steps.length - 1); break;
@@ -2131,7 +2228,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       case "bookmark": state.bookmarked = !state.bookmarked; break;
       default: return state;
     }
-    if (!["bookmark", "draft"].includes(event.type)) state.participated = true;
+    if (!["bookmark", "draft", "skip", "retry", "note"].includes(event.type)) state.participated = true;
     state.lastInteractionAt = now;
     return state;
   }
@@ -2170,8 +2267,37 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     return latest.source;
   }
 
+  // Recommendations describe recorded evidence; a self-report never becomes an
+  // independent pass, and merely browsing or moving a parameter is not a score.
+  function pathwayOutcome(activity, saved) {
+    if (saved.status === "skipped") return "skipped";
+    var attempt = activity.type === "quiz" && saved.status === "submitted" ? saved.attempts.find(function (item) { return item.id === saved.submittedAttemptId; }) : null;
+    if (activity.type === "flashcards") {
+      var card = saved.flash.cards[String(saved.flash.index)];
+      if (card && card.attemptId) attempt = saved.attempts.find(function (item) { return item.id === card.attemptId; });
+      if (!attempt && card && card.hintUsed) return "assisted";
+    }
+    if (attempt) {
+      if (attempt.correct === false) return "incorrect";
+      if (attempt.assisted) return "assisted";
+      return attempt.source === "objective" && attempt.correct === true ? "correct" : null;
+    }
+    return saved.hintUsed || saved.answerRevealed ? "assisted" : null;
+  }
+
+  function getRecommendations(lesson, state, activityId) {
+    var activity = lesson.activities.find(function (item) { return item.id === activityId; });
+    if (!activity || !state.activities[activityId]) return [];
+    var outcome = pathwayOutcome(activity, state.activities[activityId]);
+    return (lesson.pathways || []).filter(function (pathway) { return pathway.from === activityId && pathway.on === outcome; }).map(function (pathway) {
+      var target = lesson.activities.find(function (item) { return item.id === pathway.to; });
+      return Object.assign({}, pathway, { targetTitle: target.title });
+    });
+  }
+
   function validateLesson(lesson) {
     if (!record(lesson) || lesson.schemaVersion !== 1 || !safeId(lesson.lessonId) || !["string", "number"].includes(typeof lesson.revision)) throw new Error("Invalid lesson identity/version");
+    if (lesson.presentation !== undefined && !["document", "studio"].includes(lesson.presentation)) throw new Error("Unknown presentation");
     if (!Array.isArray(lesson.objectives) || !Array.isArray(lesson.activities)) throw new Error("Missing lesson objectives or activities");
     var objectiveIds = new Set();
     lesson.objectives.forEach(function (objective) {
@@ -2182,7 +2308,8 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     lesson.activities.forEach(function (activity) {
       if (!safeId(activity.id) || activityIds.has(activity.id) || !objectiveIds.has(activity.objectiveId) || !TYPES.includes(activity.type)) throw new Error("Invalid activity identity/type");
       activityIds.add(activity.id);
-      if (!(typeof activity.source === "string" && activity.source.trim()) && !(record(activity.source) && typeof activity.source.path === "string" && activity.source.path.trim())) throw new Error("Activity needs its DeepTutor source");
+      if (!(typeof activity.source === "string" && activity.source.trim()) && !(record(activity.source) && typeof activity.source.path === "string" && activity.source.path.trim())) throw new Error("Activity needs its implementation source");
+      if (record(activity.source) && activity.source.repository !== undefined && !["HKUDS/DeepTutor", "DialogueTutor"].includes(activity.source.repository)) throw new Error("Unknown source repository");
       if (activity.type === "flashcards" && (!Array.isArray(activity.cards) || !activity.cards.length)) throw new Error("Flashcards need cards");
       if (activity.type === "steps" && (!Array.isArray(activity.steps) || !activity.steps.length)) throw new Error("Steps need stages");
       if (activity.type === "explore" && !["linear-density", "uniform"].includes(activity.model)) throw new Error("Unknown exploration model");
@@ -2192,6 +2319,33 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         if (activity.format === "numeric" && (parseNumeric(activity.answer) === null || (activity.tolerance !== undefined && (!finite(activity.tolerance) || activity.tolerance < 0)))) throw new Error("Numeric quiz needs a finite answer and tolerance");
       }
     });
+    if (lesson.pathways !== undefined && !Array.isArray(lesson.pathways)) throw new Error("Pathways must be an array");
+    var pathwayKeys = new Set();
+    (lesson.pathways || []).forEach(function (pathway) {
+      if (!record(pathway) || !activityIds.has(pathway.from) || !activityIds.has(pathway.to) || !PATHWAY_OUTCOMES.includes(pathway.on) || typeof pathway.label !== "string" || !pathway.label.trim()) throw new Error("Invalid pathway");
+      var key = JSON.stringify([pathway.from, pathway.on, pathway.to]);
+      if (pathwayKeys.has(key)) throw new Error("Duplicate pathway");
+      pathwayKeys.add(key);
+    });
+    if (lesson.sections !== undefined && !Array.isArray(lesson.sections)) throw new Error("Sections must be an array");
+    if (lesson.presentation === "studio" && (!lesson.sections || !lesson.sections.length)) throw new Error("Studio presentation needs sections");
+    if (lesson.presentation === "studio" && lesson.objectives.some(function (objective) { return !lesson.activities.some(function (activity) { return activity.objectiveId === objective.id; }); })) throw new Error("Studio objectives must each have an activity");
+    if (lesson.sections && lesson.sections.length) {
+      var sectionIds = new Set(), placed = new Set();
+      lesson.sections.forEach(function (section) {
+        if (!record(section) || !safeId(section.id) || sectionIds.has(section.id) || typeof section.title !== "string" || !section.title.trim()) throw new Error("Invalid section");
+        var ids = section.activityIds === undefined ? [] : section.activityIds;
+        if (!Array.isArray(ids)) throw new Error("Invalid section activities");
+        if (lesson.presentation === "studio" && !ids.length) throw new Error("Studio scene needs an activity");
+        ["lead", "explanationTitle"].forEach(function (field) { if (section[field] !== undefined && (typeof section[field] !== "string" || !section[field].trim())) throw new Error("Invalid section " + field); });
+        sectionIds.add(section.id);
+        ids.forEach(function (id) {
+          if (!activityIds.has(id) || placed.has(id)) throw new Error("Unknown or repeated section activity");
+          placed.add(id);
+        });
+      });
+      if (placed.size !== activityIds.size) throw new Error("Sections must place every activity");
+    }
     return lesson;
   }
 
@@ -2289,10 +2443,17 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     var en = /^en\b/i.test(lesson.language || "zh-CN");
     var t = function (zh, english) { return en ? english : zh; };
     var now = options.now || Date.now;
+    var studio = lesson.presentation === "studio";
     var sessionId = options.sessionId || "session-" + now() + "-" + Math.random().toString(36).slice(2);
     var state = createState(lesson, now());
     var key = storageKey(lesson), storage = null, storageMessage = "", panelMessage = "";
     var views = new Map(), definitions = new Map();
+    var sceneFor = new Map(), sceneNodes = new Map();
+    var activityOrder = studio ? lesson.sections.reduce(function (ids, section) {
+      section.activityIds.forEach(function (id) { sceneFor.set(id, section); });
+      return ids.concat(section.activityIds);
+    }, []) : lesson.activities.map(function (activity) { return activity.id; });
+    var studioNav = null, studioSequence = null, sceneSelect, activitySelect, studioProgress, dueSuggestion;
     lesson.activities.forEach(function (activity) { definitions.set(activity.id, activity); });
     try {
       storage = options.storage === undefined ? win.localStorage : options.storage;
@@ -2305,7 +2466,8 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     function closeDueSolutions() {
       lesson.activities.forEach(function (activity) {
         var saved = state.activities[activity.id];
-        if (activity.solutionId && saved.review && saved.review.dueAt <= now()) {
+        var due = saved.review && saved.review.dueAt <= now() || activity.type === "flashcards" && Object.keys(saved.flash.cards).some(function (index) { var card = saved.flash.cards[index]; return card.review && card.review.dueAt <= now(); });
+        if (activity.solutionId && due) {
           var solution = doc.getElementById(activity.solutionId);
           if (solution) solution.open = false;
         }
@@ -2333,16 +2495,27 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       try { if (storage) storage.setItem(key, JSON.stringify(exportEnvelope(lesson, state, now()))); else throw new Error("storage"); }
       catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); }
     }
-    function transition(activity, event, render) {
+    function transition(activity, event, render, preservePosition) {
       state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
-      state.currentActivity = activity.id;
+      if (!preservePosition) state.currentActivity = activity.id;
       save();
       if (render !== false) renderActivity(activity);
       renderPanel();
+      renderStudio();
       return state.activities[activity.id];
     }
     function announce(activity, text) { var view = views.get(activity.id); if (view) message(view, text); }
     function pretty(value) { return Number(value.toFixed(5)).toLocaleString(en ? "en-GB" : "zh-CN", { maximumFractionDigits: 5 }); }
+
+    function captureFlashSolution(activity) {
+      if (!activity.solutionId) return;
+      var solution = doc.getElementById(activity.solutionId), view = views.get(activity.id);
+      if (!solution || !view) return;
+      if (!solution.open) { view.solutionOpenObserved = false; return; }
+      if (view.solutionOpenObserved) return;
+      view.solutionOpenObserved = true;
+      transition(activity, { type: "reveal" }, false, true);
+    }
 
     function renderFlash(activity, view, saved) {
       var index = saved.flash.index;
@@ -2351,7 +2524,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       var caption = el("div", "dt-row dt-spread");
       caption.append(el("span", "dt-small", t("先尝试回忆，再翻面核对。", "Try to recall before turning the card.")), el("span", "dt-counter", (index + 1) + " / " + activity.cards.length));
       view.body.appendChild(caption);
-      var card = button("", function () { transition(activity, { type: "flash-flip" }); announce(activity, cardState.revealed ? t("问题正面", "Question side") : t("参考背面", "Answer side")); }, "dt-flashcard" + (cardState.revealed ? " dt-flashcard-back" : ""), "flash-flip");
+      var card = button("", function () { captureFlashSolution(activity); transition(activity, { type: "flash-flip" }); announce(activity, cardState.revealed ? t("问题正面", "Question side") : t("参考背面", "Answer side")); }, "dt-flashcard" + (cardState.revealed ? " dt-flashcard-back" : ""), "flash-flip");
       card.setAttribute("aria-label", (cardState.revealed ? t("参考答案：", "Reference answer: ") : t("回忆问题：", "Recall question: ")) + (cardState.revealed ? content.back : content.front));
       card.append(el("span", "dt-eyebrow", cardState.revealed ? t("参考背面", "Answer side") : t("回忆正面", "Question side")), el("span", "dt-flashcard-text", cardState.revealed ? content.back : content.front), el("span", "dt-small", t("点击或按回车翻面", "Click or press Enter to turn")));
       view.body.appendChild(card);
@@ -2367,8 +2540,8 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       if (cardState.revealed) {
         var rating = el("div", "dt-self-rating");
         rating.appendChild(el("p", "dt-small", t("自评记录：依据翻面之前的回忆作出选择。", "Self-report: rate what you recalled before turning the card.")));
-        var good = button(t("自评：翻面前已回忆", "Self-report: recalled before turning"), function () { transition(activity, { type: "flash-rate", correct: true }); }, "dt-button-primary", "flash-good");
-        var again = button(t("自评：继续练习", "Self-report: practise again"), function () { transition(activity, { type: "flash-rate", correct: false }); }, "", "flash-again");
+        var good = button(t("自评：翻面前已回忆", "Self-report: recalled before turning"), function () { captureFlashSolution(activity); transition(activity, { type: "flash-rate", correct: true }); }, "dt-button-primary", "flash-good");
+        var again = button(t("自评：继续练习", "Self-report: practise again"), function () { captureFlashSolution(activity); transition(activity, { type: "flash-rate", correct: false }); }, "", "flash-again");
         good.disabled = again.disabled = cardState.rating !== null;
         rating.append(good, again);
         if (cardState.rating !== null) rating.appendChild(el("p", "dt-small", cardState.rating === "recalled" ? t("已保存「翻面前已回忆」自评；这不是自动核对结果。", "Saved your recalled-before-turning rating; this is not an automatically checked result.") : t("已保存「继续练习」自评。", "Saved your practise-again rating.")));
@@ -2384,8 +2557,9 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 
     function quizReference(activity, body, saved) {
       if (!saved.answerRevealed) return;
-      var reference = el("div", "dt-reference");
-      reference.appendChild(el("h4", "dt-small-heading", t("参考与解析", "Reference and explanation")));
+      var reference = el(studio ? "details" : "div", "dt-reference");
+      reference.appendChild(el(studio ? "summary" : "h4", "dt-small-heading", t("参考与解析", "Reference and explanation")));
+      if (studio) reference.open = true;
       var answer;
       if (activity.format === "choice") {
         var choice = activity.choices.find(function (item) { return item.id === String(activity.answer); });
@@ -2540,17 +2714,19 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       if (text !== undefined) node.textContent = String(text);
       return node;
     }
-    function graph(title, xMin, xMax, yMax, curvePoints, shadePoints, markers, ticks) {
-      var svg = svgElement("svg", { viewBox: "0 0 420 252", role: "img", "aria-label": title, class: "dt-graph" });
+    function graph(title, xMin, xMax, yMax, curvePoints, shadePoints, markers, ticks, description) {
+      var labelled = (markers || []).some(function (marker) { return marker.label; });
+      var svg = svgElement("svg", { viewBox: labelled ? "0 0 420 286" : "0 0 420 252", role: "img", "aria-label": title + (description ? ". " + description : ""), class: "dt-graph" });
       svg.appendChild(svgElement("title", {}, title));
-      var x = function (value) { return 49 + (value - xMin) / (xMax - xMin) * 345; };
+      if (description) svg.appendChild(svgElement("desc", {}, description));
+      var x = function (value) { return 84 + (value - xMin) / (xMax - xMin) * 310; };
       var y = function (value) { return 207 - value / yMax * 159; };
-      svg.appendChild(svgElement("text", { x: 49, y: 23, class: "dt-graph-title" }, title));
+      svg.appendChild(svgElement("text", { x: 24, y: 25, class: "dt-graph-title" }, title));
       [0, yMax / 2, yMax].forEach(function (value) {
-        svg.appendChild(svgElement("line", { x1: 49, y1: y(value), x2: 394, y2: y(value), class: "dt-graph-grid" }));
-        svg.appendChild(svgElement("text", { x: 42, y: y(value) + 4, "text-anchor": "end", class: "dt-graph-label" }, pretty(value)));
+        svg.appendChild(svgElement("line", { x1: 84, y1: y(value), x2: 394, y2: y(value), class: "dt-graph-grid" }));
+        svg.appendChild(svgElement("text", { x: 76, y: y(value) + 5, "text-anchor": "end", class: "dt-graph-label" }, pretty(Number(value.toPrecision(3)))));
       });
-      svg.appendChild(svgElement("path", { d: "M49 43V207H398", class: "dt-graph-axis", fill: "none" }));
+      svg.appendChild(svgElement("path", { d: "M84 43V207H398", class: "dt-graph-axis", fill: "none" }));
       (ticks || [xMin, (xMin + xMax) / 2, xMax]).forEach(function (value) {
         svg.appendChild(svgElement("line", { x1: x(value), y1: 207, x2: x(value), y2: 212, class: "dt-graph-axis" }));
         svg.appendChild(svgElement("text", { x: x(value), y: 230, "text-anchor": "middle", class: "dt-graph-label" }, pretty(value)));
@@ -2558,8 +2734,19 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       if (shadePoints && shadePoints.length) svg.appendChild(svgElement("polygon", { points: shadePoints.map(function (point) { return x(point[0]) + "," + y(point[1]); }).join(" "), class: "dt-graph-area" }));
       svg.appendChild(svgElement("polyline", { points: curvePoints.map(function (point) { return x(point[0]) + "," + y(point[1]); }).join(" "), class: "dt-graph-curve", fill: "none" }));
       (markers || []).forEach(function (point, index) {
-        svg.appendChild(svgElement("line", { x1: x(point[0]), y1: 207, x2: x(point[0]), y2: y(point[1]), class: "dt-graph-guide" }));
-        svg.appendChild(svgElement("circle", { cx: x(point[0]), cy: y(point[1]), r: 4.4, class: index ? "dt-graph-dot dt-graph-dot-second" : "dt-graph-dot" }));
+        var marker = Array.isArray(point) ? { x: point[0], y: point[1], endpoint: index ? "b" : "a" } : point;
+        var second = marker.endpoint === "b", clipped = marker.kind === "clipped";
+        var markerX = x(marker.x), markerY = y(marker.y);
+        svg.appendChild(svgElement("line", { x1: markerX, y1: 207, x2: markerX, y2: markerY, class: "dt-graph-guide" + (second ? " dt-graph-guide-second" : "") + (clipped ? " dt-graph-clipped-guide" : "") }));
+        var attributes = clipped ? { x: markerX - 4.5, y: markerY - 4.5, width: 9, height: 9 } : { cx: markerX, cy: markerY, r: 4.4 };
+        attributes.class = "dt-graph-dot" + (second ? " dt-graph-dot-second" : "") + (clipped ? " dt-graph-clipped-dot" : "");
+        if (marker.kind) {
+          attributes["data-dt-marker-kind"] = marker.kind;
+          attributes["data-dt-endpoint"] = marker.endpoint;
+          attributes["data-dt-value"] = marker.x;
+        }
+        svg.appendChild(svgElement(clipped ? "rect" : "circle", attributes));
+        if (marker.label) svg.appendChild(svgElement("text", { x: markerX, y: second ? 278 : 254, "text-anchor": markerX > 350 ? "end" : "middle", class: "dt-graph-event-label" + (second ? " dt-graph-event-label-second" : "") }, marker.label));
       });
       return svg;
     }
@@ -2569,6 +2756,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       var plot = el("div", "dt-plots"), values = el("div", "dt-metrics"), controls = el("div", "dt-parameters");
       var inputs = {};
       var linear = activity.model === "linear-density";
+      var eventSummary = linear ? null : el("p", "dt-event-summary dt-small");
       var specifications = linear ? [["a", t("区间起点 a", "Interval start a"), 0, 1, 0.01], ["b", t("区间终点 b", "Interval end b"), 0, 1, 0.01]] : [["lower", t("分布左界 L", "Support lower bound L"), -5, 10, 0.1], ["upper", t("分布右界 U", "Support upper bound U"), -5, 10, 0.1], ["eventA", t("事件起点 a", "Event start a"), -5, 10, 0.1], ["eventB", t("事件终点 b", "Event end b"), -5, 10, 0.1]];
       specifications.forEach(function (spec) {
         var label = el("label", "dt-parameter");
@@ -2583,7 +2771,9 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
           transition(activity, { type: "explore", key: spec[0], value: Number(range.value) }, false); update();
         });
       });
-      view.body.append(controls, plot, values);
+      view.body.append(controls, plot);
+      if (eventSummary) view.body.appendChild(eventSummary);
+      view.body.appendChild(values);
       view.body.appendChild(button(t("恢复初始参数", "Reset parameters"), function () { transition(activity, { type: "explore-reset" }, false); update(); }, "dt-button-quiet", "explore-reset"));
       view.body.appendChild(el("p", "dt-small", t("参数变化记录为探索，不计入独立答对。", "Parameter changes count as exploration, not independent correct answers.")));
       function metric(label, value) { var cell = el("div", "dt-metric"); cell.append(el("span", "dt-small", label), el("strong", "", value)); values.appendChild(cell); }
@@ -2600,9 +2790,21 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         } else {
           var distribution = uniformDistribution(parameters);
           var ceiling = Math.max(0.5, distribution.height * 1.2);
-          plot.appendChild(graph(t("均匀分布密度", "Uniform density"), -5, 10, ceiling, [[-5, 0], [distribution.lower, 0], [distribution.lower, distribution.height], [distribution.upper, distribution.height], [distribution.upper, 0], [10, 0]], [[distribution.clippedA, 0], [distribution.clippedA, distribution.height], [distribution.clippedB, distribution.height], [distribution.clippedB, 0]], null, [-5, 0, 5, 10]));
-          plot.appendChild(graph(t("累积概率 F(x)", "Cumulative probability F(x)"), -5, 10, 1, [[-5, 0], [distribution.lower, 0], [distribution.upper, 1], [10, 1]], null, [[distribution.eventA, distribution.cdfA], [distribution.eventB, distribution.cdfB]], [-5, 0, 5, 10]));
-          metric(t("密度高度", "Density height"), pretty(distribution.height)); metric(t("均值（端点的平均值）", "Mean (midpoint of the support)"), pretty(distribution.mean)); metric("P(a ≤ X ≤ b)", pretty(distribution.probability));
+          var overlapA = Math.max(distribution.eventA, distribution.lower), overlapB = Math.min(distribution.eventB, distribution.upper);
+          var hasArea = overlapA < overlapB;
+          var intersection = overlapA > overlapB ? t("无交集（面积为 0）", "empty (area 0)") : "[" + pretty(overlapA) + ", " + pretty(overlapB) + "]";
+          eventSummary.textContent = t("原事件：", "Original event: ") + "a = " + pretty(distribution.eventA) + ", b = " + pretty(distribution.eventB) + t("；支持区间：", "; support: ") + "[" + pretty(distribution.lower) + ", " + pretty(distribution.upper) + "]" + t("；阴影交集：", "; shaded intersection: ") + intersection + t("。实心圆标原事件端点 a/b，空心方框标截取边界。两图使用同一事件：", ". Filled circles mark the original a/b; hollow squares mark clipped boundaries. Both plots use the same event: ") + "F(a) = " + pretty(distribution.cdfA) + ", F(b) = " + pretty(distribution.cdfB) + "; F(b) − F(a) = " + pretty(distribution.probability) + ".";
+          var densityMarkers = ["a", "b"].map(function (endpoint) {
+            var value = endpoint === "a" ? distribution.eventA : distribution.eventB;
+            return { x: value, y: value >= distribution.lower && value <= distribution.upper ? distribution.height : 0, endpoint: endpoint, kind: "event", label: endpoint };
+          });
+          if (hasArea) [["a", distribution.eventA, overlapA], ["b", distribution.eventB, overlapB]].forEach(function (item) {
+            if (item[1] !== item[2]) densityMarkers.push({ x: item[2], y: distribution.height, endpoint: item[0], kind: "clipped" });
+          });
+          var area = hasArea ? [[overlapA, 0], [overlapA, distribution.height], [overlapB, distribution.height], [overlapB, 0]] : null;
+          plot.appendChild(graph(t("均匀分布密度", "Uniform density"), -5, 10, ceiling, [[-5, 0], [distribution.lower, 0], [distribution.lower, distribution.height], [distribution.upper, distribution.height], [distribution.upper, 0], [10, 0]], area, densityMarkers, [-5, 0, 5, 10], eventSummary.textContent));
+          plot.appendChild(graph(t("累积概率 F(x)", "Cumulative probability F(x)"), -5, 10, 1, [[-5, 0], [distribution.lower, 0], [distribution.upper, 1], [10, 1]], null, [{ x: distribution.eventA, y: distribution.cdfA, endpoint: "a", kind: "event", label: "a" }, { x: distribution.eventB, y: distribution.cdfB, endpoint: "b", kind: "event", label: "b" }], [-5, 0, 5, 10], eventSummary.textContent));
+          metric(t("密度高度", "Density height"), pretty(distribution.height)); metric(t("均值（端点的平均值）", "Mean (midpoint of the support)"), pretty(distribution.mean)); metric("P(a ≤ X ≤ b) = F(b) − F(a)", pretty(distribution.probability));
         }
       }
       update();
@@ -2617,6 +2819,29 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         details.append(el("summary", "", followup.question), el("p", "", followup.answer)); group.appendChild(details);
       });
       view.body.appendChild(group);
+    }
+
+    function renderRecommendations(activity, view) {
+      view.recommendations.replaceChildren();
+      var recommendations = getRecommendations(lesson, state, activity.id);
+      view.recommendations.hidden = !recommendations.length;
+      if (!recommendations.length) return;
+      var outcome = recommendations[0].on;
+      var saved = state.activities[activity.id];
+      var attempt = saved.attempts.find(function (item) { return item.id === saved.submittedAttemptId; });
+      var selfReported = attempt && attempt.source === "self" || activity.type === "flashcards";
+      var reason = {
+        incorrect: selfReported ? t("你自评仍需练习，可以先完成：", "You reported needing practice. You can try:") : t("本次核对需要修正，可以先完成：", "This answer needs revision. You can try:"),
+        assisted: t("已使用提示或参考，建议再试一项：", "After using a hint or reference, try another task:"),
+        correct: t("本次独立核对通过，可以继续挑战：", "This independent answer passed. You can try:"),
+        skipped: t("已暂时跳过；需要铺垫时可以先做：", "Skipped for now. For preparation, you can try:")
+      }[outcome];
+      view.recommendations.appendChild(el("p", "dt-small-heading", reason));
+      recommendations.forEach(function (pathway, index) {
+        var action = button(pathway.label + " → " + pathway.targetTitle, function () { navigate(pathway.to); }, index === 0 ? "dt-button-primary" : "", "pathway-" + pathway.on + "-" + pathway.to);
+        action.dataset.dtPathway = pathway.on;
+        view.recommendations.appendChild(action);
+      });
     }
 
     function renderActivity(activity) {
@@ -2642,6 +2867,12 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       view.bookmark.textContent = saved.bookmarked ? t("已收藏", "Bookmarked") : t("收藏活动", "Bookmark activity");
       view.bookmark.setAttribute("aria-pressed", String(saved.bookmarked));
       if (doc.activeElement !== view.noteInput) view.noteInput.value = saved.notes;
+      renderRecommendations(activity, view);
+      if (view.skip) {
+        view.skip.textContent = saved.status === "skipped" ? t("返回这项活动", "Return to this activity") : t("暂时跳过", "Skip for now");
+        view.skip.dataset.dtControl = saved.status === "skipped" ? "retry" : "skip";
+        view.skipStatus.textContent = saved.status === "skipped" ? t("已暂时跳过；可随时返回。", "Skipped for now; return whenever you choose.") : "";
+      }
       if (focus) {
         var candidates = Array.from(view.body.querySelectorAll("[data-dt-control]"));
         var target = candidates.find(function (item) { return item.dataset.dtControl === focus && !item.disabled; });
@@ -2683,7 +2914,8 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       var typeLabels = { flashcards: t("回忆闪卡", "Recall cards"), quiz: t("就地自测", "Quick check"), steps: t("分步探索", "Step through"), explore: t("参数探索", "Explore parameters"), interactive: t("交互探索", "Interactive exploration") };
       header.append(el("span", "dt-eyebrow", typeLabels[activity.type]), el("h3", "dt-activity-title", activity.title));
       var prompt = el("p", "dt-prompt", activity.prompt);
-      var body = el("div", "dt-activity-body"), footer = el("div", "dt-activity-footer");
+      var body = el("div", "dt-activity-body"), footer = el("details", "dt-activity-footer dt-tools");
+      footer.appendChild(el("summary", "", t("学习工具", "Learning tools")));
       var bookmark = button(t("收藏活动", "Bookmark activity"), function () { transition(activity, { type: "bookmark" }, false); renderActivity(activity); }, "dt-button-quiet", "bookmark");
       var note = el("details", "dt-note");
       note.appendChild(el("summary", "", t("本地笔记", "Local note")));
@@ -2706,21 +2938,35 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         }
       }, "dt-button-quiet", "copy-context");
       var row = el("div", "dt-row"); row.append(bookmark, copyButton); footer.append(row, note);
-      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · DeepTutor", "Interaction source · DeepTutor")));
+      var repository = typeof activity.source === "string" ? "HKUDS/DeepTutor" : activity.source.repository || "HKUDS/DeepTutor";
+      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("技术来源 · ", "Implementation source · ") + repository));
       var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
       source.appendChild(el("p", "dt-small", sourceText)); footer.appendChild(source);
       var status = el("p", "dt-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
-      target.append(header, prompt, body, footer, status);
-      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false };
+      var recommendations = el("div", "dt-recommendations"); recommendations.hidden = true;
+      recommendations.setAttribute("aria-label", t("建议下一步", "Suggested next task"));
+      target.append(header, prompt, body, recommendations);
+      var skip, skipStatus;
+      if (studio && activity.type !== "quiz") {
+        skip = button(t("暂时跳过", "Skip for now"), function () {
+          var skipped = state.activities[activity.id].status === "skipped";
+          transition(activity, { type: skipped ? "retry" : "skip" });
+        }, "dt-button-quiet", "skip");
+        skipStatus = el("p", "dt-small"); target.append(skip, skipStatus);
+      }
+      target.append(footer, status);
+      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, recommendations: recommendations, skip: skip, skipStatus: skipStatus, customMounted: false };
       views.set(activity.id, view);
-      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
+      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); renderStudio(); } });
       renderActivity(activity);
       if (activity.solutionId) {
         var solution = doc.getElementById(activity.solutionId);
         if (solution) {
           var watch = function () {
-            if (solution.open && state.activities[activity.id].status !== "submitted" && !state.activities[activity.id].answerRevealed) {
-              transition(activity, { type: "reveal" }); announce(activity, t("已查看原题详解；当前尝试保留参考辅助标识。", "Worked solution revealed. This attempt is marked assisted."));
+            if (activity.type === "flashcards") {
+              captureFlashSolution(activity); renderActivity(activity);
+            } else if (solution.open && state.activities[activity.id].status !== "submitted" && !state.activities[activity.id].answerRevealed) {
+              transition(activity, { type: "reveal" }, true, true); announce(activity, t("已查看原题详解；当前尝试保留参考辅助标识。", "Worked solution revealed. This attempt is marked assisted."));
             }
           };
           solution.addEventListener("toggle", watch); watch();
@@ -2736,19 +2982,101 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       panelSummary = el("summary", "dt-study-summary");
       panelBody = el("div", "dt-study-body"); panel.append(panelSummary, panelBody); panelTarget.appendChild(panel);
     }
+
+    function initializeStudio() {
+      if (!studio) return;
+      studioNav = doc.querySelector("[data-dt-studio-nav]");
+      studioSequence = doc.querySelector("[data-dt-studio-sequence]");
+      if (!studioNav || !studioSequence) throw new Error("Studio presentation needs the section-based builder document");
+      lesson.sections.forEach(function (section) {
+        var node = doc.getElementById(section.id);
+        if (!node || node.dataset.dtScene !== section.id) throw new Error("Missing studio scene: " + section.id);
+        sceneNodes.set(section.id, node);
+      });
+      studioNav.classList.add("dt-studio-nav");
+      studioNav.setAttribute("aria-label", t("任务导航", "Task navigation"));
+      studioSequence.classList.add("dt-studio-sequence");
+      studioSequence.setAttribute("aria-label", t("前后活动", "Previous and next activities"));
+      var sceneLabel = el("label", "dt-scene-picker", t("任务场景", "Scene"));
+      sceneSelect = el("select", "dt-input"); sceneSelect.dataset.dtControl = "scene-select";
+      lesson.sections.forEach(function (section, index) {
+        var option = el("option", "", (index + 1) + ". " + section.title); option.value = section.id; sceneSelect.appendChild(option);
+      });
+      sceneSelect.addEventListener("change", function () {
+        var section = lesson.sections.find(function (item) { return item.id === sceneSelect.value; });
+        navigate(section.activityIds[0]);
+      });
+      sceneLabel.appendChild(sceneSelect);
+      var activityLabel = el("label", "dt-scene-picker", t("场景内活动", "Activity in this scene"));
+      activitySelect = el("select", "dt-input"); activitySelect.dataset.dtControl = "activity-select";
+      activitySelect.addEventListener("change", function () { navigate(activitySelect.value); }); activityLabel.appendChild(activitySelect);
+      studioProgress = el("p", "dt-studio-progress");
+      dueSuggestion = el("div", "dt-due-suggestion");
+      studioNav.append(sceneLabel, activityLabel, studioProgress, dueSuggestion);
+      if (!state.currentActivity || !sceneFor.has(state.currentActivity)) state.currentActivity = activityOrder[0];
+      renderStudio();
+    }
+
+    function renderStudio() {
+      if (!studio || !studioNav) return;
+      var current = state.currentActivity && sceneFor.has(state.currentActivity) ? state.currentActivity : activityOrder[0];
+      var section = sceneFor.get(current), sceneIndex = lesson.sections.indexOf(section);
+      sceneNodes.forEach(function (node, id) { node.hidden = id !== section.id; });
+      views.forEach(function (view, id) { view.root.hidden = id !== current; });
+      sceneSelect.value = section.id;
+      if (activitySelect.dataset.dtOptionsScene !== section.id) {
+        activitySelect.replaceChildren();
+        section.activityIds.forEach(function (id, index) {
+          var option = el("option", "", (index + 1) + ". " + definitions.get(id).title); option.value = id; activitySelect.appendChild(option);
+        });
+        activitySelect.dataset.dtOptionsScene = section.id;
+      }
+      activitySelect.value = current;
+      var summary = evidenceSummary(lesson, state, now());
+      studioProgress.textContent = t("场景 ", "Scene ") + (sceneIndex + 1) + " / " + lesson.sections.length + " · " + t("本章独立核对 ", "Independent checks in this lesson ") + summary.independentPassed + " · " + t("自评 ", "Self-reports ") + summary.selfReviewed;
+      var sceneSummary = evidenceSummary({ activities: section.activityIds.map(function (id) { return definitions.get(id); }) }, state, now());
+      var evidence = sceneNodes.get(section.id).querySelector("[data-dt-scene-evidence]");
+      if (evidence) evidence.textContent = t("本场景已参与 ", "Activities explored in this scene ") + sceneSummary.participated + " / " + sceneSummary.total + " · " + t("独立核对 ", "Independent checks ") + sceneSummary.independentPassed + " · " + t("当前目标：", "Current goal: ") + lesson.objectives.find(function (objective) { return objective.id === definitions.get(current).objectiveId; }).title;
+      dueSuggestion.replaceChildren();
+      var due = getReviews(lesson, state, now()).filter(function (item) { return item.due; });
+      if (due.length) {
+        var item = due[0];
+        dueSuggestion.appendChild(button(t("到期复习：", "Review due: ") + item.title + (due.length > 1 ? " (+" + (due.length - 1) + ")" : ""), function () { navigate(item.activityId, item); }, "dt-button-quiet", "studio-review"));
+      }
+      studioSequence.replaceChildren();
+      var position = activityOrder.indexOf(current);
+      [[-1, t("上一项：", "Previous: "), "studio-prev"], [1, t("下一项：", "Next: "), "studio-next"]].forEach(function (spec) {
+        var id = activityOrder[position + spec[0]];
+        var label = id ? spec[1] + definitions.get(id).title : spec[0] < 0 ? t("已在第一项", "First activity") : t("已到最后一项", "Last activity");
+        var action = button(label, function () { navigate(id); }, "", spec[2]); action.disabled = !id; studioSequence.appendChild(action);
+      });
+    }
+
     function navigate(activityId, reviewItem) {
       var activity = definitions.get(activityId), view = views.get(activityId);
-      if (!activity || !view) return;
+      if (!activity || !view) return false;
       if (reviewItem) {
         if (activity.type === "quiz") {
-          if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
-          transition(activity, { type: "retry" });
-        } else if (activity.type === "flashcards") transition(activity, { type: "flash-restart", index: reviewItem.cardIndex });
+          var saved = state.activities[activityId];
+          var pending = saved.attempts.find(function (item) { return item.id === saved.submittedAttemptId; });
+          var unfinished = saved.status === "idle" && saved.draft.trim() || pending && pending.source === "self" && pending.correct === null;
+          if (!unfinished) {
+            if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
+            transition(activity, { type: "retry" });
+          }
+        } else if (activity.type === "flashcards") {
+          captureFlashSolution(activity);
+          if (activity.solutionId) { var linked = doc.getElementById(activity.solutionId); if (linked) linked.open = false; }
+          transition(activity, { type: "flash-restart", index: reviewItem.cardIndex });
+        }
       }
-      view.root.scrollIntoView({ behavior: win.matchMedia && win.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
+      state.currentActivity = activityId; save(); renderStudio();
+      if (typeof view.root.scrollIntoView === "function") view.root.scrollIntoView({ behavior: win.matchMedia && win.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
       var focus = view.body.querySelector("button:not([disabled]),input:not([disabled]),textarea:not([disabled])");
       if (focus) focus.focus({ preventScroll: true });
-      state.currentActivity = activityId; save();
+      else { view.root.tabIndex = -1; view.root.focus({ preventScroll: true }); }
+      doc.dispatchEvent(new win.CustomEvent("dt:navigate", { detail: { activityId: activityId, sectionId: studio ? sceneFor.get(activityId).id : null } }));
+      return true;
     }
 
     function renderPanel() {
@@ -2816,7 +3144,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
           notifyCustomRestore();
           panelMessage = t("已导入相同课程版本的记录。", "Imported records for this lesson revision.");
         } catch (error) { panelMessage = t("导入未应用：", "Import not applied: ") + error.message; }
-        renderPanel();
+        renderPanel(); renderStudio();
       });
       actions.appendChild(button(t("导入学习记录", "Import progress"), function () { upload.click(); }, "", "import")); actions.appendChild(upload); panelBody.appendChild(actions);
       if (state.currentActivity) panelBody.appendChild(button(t("返回上次活动", "Return to last activity"), function () { navigate(state.currentActivity); }, "dt-button-quiet", "resume"));
@@ -2830,6 +3158,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       var target = Array.from(doc.querySelectorAll("[data-dt-activity]")).find(function (node) { return node.dataset.dtActivity === activity.id; });
       if (target && target.dataset.dtMounted !== "true") createActivityView(activity, target);
     });
+    initializeStudio();
     save(); renderPanel();
     var explorationListener = function (event) {
       var detail = event.detail;
@@ -2839,7 +3168,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       try {
         var serialized = JSON.stringify(detail.state);
         if (serialized.length > 100000) return;
-        transition(activity, { type: "explore", state: JSON.parse(serialized) }, false);
+        transition(activity, { type: "explore", state: JSON.parse(serialized) }, false, studio && views.get(activity.id) && views.get(activity.id).root.hidden);
       } catch (error) { announce(activity, t("本次探索状态未保存，活动仍可继续。", "This exploration state was not saved; you can continue.")); }
     };
     doc.addEventListener("dt:exploration", explorationListener);
@@ -2854,8 +3183,10 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       storageKey: key,
       getState: function () { return copy(state); },
       exportState: function () { return exportEnvelope(lesson, state, now()); },
-      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
-      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); },
+      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); renderStudio(); return copy(state); },
+      navigate: navigate,
+      getRecommendations: function (activityId) { return getRecommendations(lesson, state, activityId || state.currentActivity); },
+      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); renderStudio(); },
       destroy: function () { doc.removeEventListener("dt:exploration", explorationListener); }
     };
   }
@@ -2867,6 +3198,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     defaultExploration: defaultExploration, blankActivity: blankActivity, createState: createState,
     markExposure: markExposure, exposureAssists: exposureAssists, prepareSession: prepareSession,
     reduceActivity: reduceActivity, getReviews: getReviews, evidenceSummary: evidenceSummary, reviewEvidenceKind: reviewEvidenceKind,
+    pathwayOutcome: pathwayOutcome, getRecommendations: getRecommendations,
     validateLesson: validateLesson, exportEnvelope: exportEnvelope, validateImport: validateImport,
     storageKey: storageKey, mount: mount
   };

@@ -1,8 +1,18 @@
 # 交互 HTML 的学习证据与使用边界
 
-维护日期：2026-09-07。新增交互的来源限定为 DeepTutor，见[来源追溯](deeptutor-provenance.md)；本文只校准使用时机、反馈和判断，操作契约见[交互规格](interactive-html.md)。这些研究没有直接测试本次 HTML。
+维护日期：2026-09-07。1.6.0 的交互实现借鉴 DeepTutor，1.7.0 的编排与表现分支属于本项目设计，见[来源追溯](deeptutor-provenance.md)；本文只校准使用时机、反馈和判断，操作契约见[交互规格](interactive-html.md)。这些研究没有直接测试本次 HTML。
 
 “全文”表示核查原论文的方法与结果；“摘要”表示仅核查作者或出版社提供的摘要；元分析与单项实验分别标明。具体界面与调度参数属于工程选择，不能升级为研究结论。
+
+下方 E1–E8 与 A1–A9 的访问层级承接 1.6.0 台账；本轮保留其边界并修正与取消字数地板有关的 A1，不声称重新完成了全部旧研究核查。新增 B1–B3 于 2026-09-07 定点读取作者原文，用于当前结构决策。
+
+## 1.7.0 结构决策的补充依据
+
+**B1 · Chi & Wylie（2014）。** [The ICAP Framework](https://education.asu.edu/sites/default/files/lcl/chiwylie2014icap_2.pdf)，DOI `10.1080/00461520.2014.965823`。原文 §1 的四类活动定义、§2 的研究比较及 §3 的例外。本文是理论框架与研究综合，非单次网页实验；interactive 指相互建设性的对话，不等于鼠标交互。设计据此区分操作、产生解释与独立推理，不能从点击量推断理解，不能把用户的“交互＞可视化＞文字”说成该论文证明的通用排序。
+
+**B2 · Renkl、Atkinson & Maier（2000）。** [From Studying Examples to Solving Problems: Fading Worked-Out Solution Steps Helps Learning](https://escholarship.org/uc/item/81b9j9hs)，[原文 PDF](https://escholarship.org/content/qt81b9j9hs/qt81b9j9hs_noSplash_ef3e30a960524adc5157ece2d6fa3130.pdf?t=reckzt)。方法与结果见 PDF 第3–5页。35名九年级学生的电学准实验在两天后测量，54名大学生的概率随机实验在学习后测量；相较例题—问题配对，渐隐支持近迁移，远迁移没有相应显著结果。新程序安排例题、真实补全、独立新题；本项目的任务数量和具体支持强度仍是工程选择，不保证远迁移或跨周保持。
+
+**B3 · Chance、Garfield & delMas（2000）。** [Developing Simulation Activities to Improve Students' Statistical Reasoning](https://files.eric.ed.gov/fulltext/ED474052.pdf)，阶段研究与局限见 PDF 第3–8页。大学统计课程的连续课堂改进：首阶段89份完整前后测，第二阶段141人，第三阶段55人；不同阶段结果并非持续改善，先备概念混淆仍存在。这些不是随机对照组之间的因果效应。设计借鉴预测与结果对照、一次样本到统计量的可追踪关系和先备支持；模拟画面本身不能证明学会，枚举理论概率与随机频率分开核查。
 
 ## 8 项核心一手研究
 
@@ -44,7 +54,7 @@ E1、E2、E3、E6、E7、E8核查原始全文；E4、E5核查原始摘要。研�
 
 **A1 · Adesope & Nesbit（2012）。** [Verbal Redundancy in Multimedia Learning Environments: A Meta-Analysis](https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842)。DOI：`10.1037/a0026147`。
 
-作者机构摘要；元分析。57项研究的结果受先备知识、节奏与图像调节，关键词文字也可能优于逐字重复。完整伴读和长度地板保留为用户偏好，不能写成科学效果阈值。
+作者机构摘要；元分析。57项研究的结果受先备知识、节奏与图像调节，关键词文字也可能优于逐字重复。完整伴读保留为覆盖偏好；新版本已取消字数地板，不能写成科学效果阈值。
 
 **A2 · Wong、Leahy、Marcus & Sweller（2012）。** [Cognitive load theory, the transient information effect and e-learning](https://researchers.mq.edu.au/en/publications/cognitive-load-theory-the-transient-information-effect-and-e-lear/)。DOI：`10.1016/j.learninstruc.2012.05.004`。
 
