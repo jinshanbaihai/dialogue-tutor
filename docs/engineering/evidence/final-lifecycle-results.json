@@ -1,0 +1,108 @@
+{
+  "due_open_draft_survives_refresh": {
+    "passed": true,
+    "draft": "长证明已写到 G(10)−G(2)=256/3，还未提交",
+    "status": "idle",
+    "attempts": 1
+  },
+  "due_numeric_hint_survives_refresh": {
+    "passed": true,
+    "attempt": {
+      "id": "q1b-answer:1788868800002:2",
+      "answer": "2.6",
+      "correct": true,
+      "source": "objective",
+      "assisted": true,
+      "time": 1788868800002,
+      "sessionId": "session-1788868800002-ovmhmy2frch"
+    },
+    "review": {
+      "intervalIndex": 0,
+      "dueAt": 1788955200002,
+      "lastReviewedAt": 1788868800002,
+      "lastSessionId": "session-1788868800002-ovmhmy2frch",
+      "evidenceSource": "objective"
+    }
+  },
+  "due_open_pending_self_assessment_survives_refresh": {
+    "passed": true,
+    "restoredStatus": "submitted",
+    "original": "新的原答：支持区间内积分为256/3，所以k=3/256。",
+    "assessedAttempt": {
+      "id": "q2a-answer:1788868800001:2",
+      "answer": "新的原答：支持区间内积分为256/3，所以k=3/256。",
+      "correct": true,
+      "source": "self",
+      "assisted": false,
+      "time": 1788868800001,
+      "sessionId": "session-1788868800001-eko52zfts2t",
+      "selfRating": "meets-rubric",
+      "assessedAt": 1788868800002
+    },
+    "review": {
+      "intervalIndex": 1,
+      "dueAt": 1789128000002,
+      "lastReviewedAt": 1788868800002,
+      "lastSessionId": "session-1788868800002-wo0whf85khq",
+      "evidenceSource": "self"
+    }
+  },
+  "due_import_starts_unrevealed_and_keeps_history": {
+    "passed": true,
+    "restoredAttemptCount": 1,
+    "unrevealed": true,
+    "independentDueInterval": 1
+  },
+  "same_page_import_cannot_erase_reference_exposure": {
+    "passed": true,
+    "attempt": {
+      "id": "q1b-answer:1788868800001:2",
+      "answer": "2.6",
+      "correct": true,
+      "source": "objective",
+      "assisted": true,
+      "time": 1788868800001,
+      "sessionId": "session-1788868800001-8js2pisy4eh"
+    },
+    "interval": 0
+  },
+  "due_flashcard_hint_survives_refresh": {
+    "passed": true,
+    "attempt": {
+      "id": "cdf-recall:1788868800002:2",
+      "answer": "自评：翻面前已回忆",
+      "correct": true,
+      "source": "self",
+      "assisted": true,
+      "time": 1788868800002,
+      "sessionId": "session-1788868800002-6o22s4s44oi",
+      "cardIndex": 0
+    },
+    "interval": 0
+  },
+  "due_flashcard_genuine_recall_then_immediate_repeat": {
+    "passed": true,
+    "first": {
+      "id": "cdf-recall:1788868800001:2",
+      "answer": "自评：翻面前已回忆",
+      "correct": true,
+      "source": "self",
+      "assisted": false,
+      "time": 1788868800001,
+      "sessionId": "session-1788868800001-sbkgnn8a8xg",
+      "cardIndex": 0
+    },
+    "repeat": {
+      "id": "cdf-recall:1788868800001:3",
+      "answer": "自评：翻面前已回忆",
+      "correct": true,
+      "source": "self",
+      "assisted": true,
+      "time": 1788868800001,
+      "sessionId": "session-1788868800001-sbkgnn8a8xg",
+      "cardIndex": 0
+    }
+  },
+  "runtimeLoadErrors": [],
+  "unhandledRuntimeErrors": []
+}

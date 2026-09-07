@@ -1,0 +1,115 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "jsdom": "26.1.0"
+  },
+  "scope": "Generated standalone HTML executed in jsdom; actual DOM events and localStorage/FileReader paths. No browser layout engine or external service used.",
+  "adapters": [
+    "URL.createObjectURL and anchor download click captured, because jsdom lacks native download handling.",
+    "Blob.text/File.text, missing in jsdom 26, supplied using real jsdom FileReader.",
+    "scrollIntoView replaced with a no-op; scrolling layout was not tested.",
+    "Clipboard API not provided; real runtime manual-copy fallback was exercised.",
+    "Fresh jsdom window seeded with actual serialized localStorage data to simulate refresh."
+  ],
+  "notTested": [
+    "Browser visual rendering",
+    "Mobile-width layout or overflow",
+    "Native keyboard activation of buttons and range controls",
+    "Native OS clipboard",
+    "Native file save dialog/download",
+    "Real delayed learner outcomes"
+  ],
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "页面实际执行脚本，七处活动各挂载一次，初始无错误",
+      "status": "PASS"
+    },
+    {
+      "name": "板书四条顺序正确，三个完整解答初始关闭",
+      "status": "PASS"
+    },
+    {
+      "name": "选择题先选择不揭示，明确提交才判错并保留原选项",
+      "status": "PASS"
+    },
+    {
+      "name": "重复提交去重；错后重试答对仍保留同会话参考辅助，复习间隔不推进",
+      "status": "PASS"
+    },
+    {
+      "name": "数值题拒绝零分母输入；接受精确分数 k=1/2 并记录独立客观通过",
+      "status": "PASS"
+    },
+    {
+      "name": "跳过不计错，返回后查看提示再答 3/4 记录辅助",
+      "status": "PASS"
+    },
+    {
+      "name": "主动展开原题详解触发辅助；开放原答完整保存，提交后不自动判义",
+      "status": "PASS"
+    },
+    {
+      "name": "开放题自评来源保留，重复选择不覆盖首次自评",
+      "status": "PASS"
+    },
+    {
+      "name": "翻卡前后导航、提示、翻面、自评及重复评价去重",
+      "status": "PASS"
+    },
+    {
+      "name": "步进支持前进、回退、重置；显示实际推导并不新增正确记录",
+      "status": "PASS"
+    },
+    {
+      "name": "自定义滑杆在支持左侧、内部、右侧更新面积、数值、点坐标与状态",
+      "status": "PASS"
+    },
+    {
+      "name": "自定义重置同步恢复滑杆、图、读数与保存参数",
+      "status": "PASS"
+    },
+    {
+      "name": "笔记、书签保存；反馈重绘不破坏自定义滑杆",
+      "status": "PASS"
+    },
+    {
+      "name": "预备解释可展开；无剪贴板 API 时提供包含题目、参数、笔记的手动复制框",
+      "status": "PASS"
+    },
+    {
+      "name": "点击导出生成真实 JSON Blob；可由导入文件事件恢复状态并更新自定义图",
+      "status": "PASS"
+    },
+    {
+      "name": "导入参数恢复不制造新的探索记录；导入之后仍只有一个监听器",
+      "status": "PASS"
+    },
+    {
+      "name": "错误课程版本导入被拒绝，现有状态保留",
+      "status": "PASS"
+    },
+    {
+      "name": "重建页面并恢复实际 localStorage：原答、笔记、书签、参数与图形一致",
+      "status": "PASS"
+    },
+    {
+      "name": "新内容版本使用独立记录，不沿用旧版成绩",
+      "status": "PASS"
+    },
+    {
+      "name": "本地文件来源无可用存储时仍能操作，并显示存储提示",
+      "status": "PASS"
+    },
+    {
+      "name": "静态结构：原生 MathML、无裸 LaTeX 或外部资源，具名表单与窄屏/减少动效规则存在",
+      "status": "PASS"
+    },
+    {
+      "name": "全部运行过程中没有未捕获的脚本错误",
+      "status": "PASS"
+    }
+  ],
+  "runtimeErrors": []
+}

@@ -121,7 +121,320 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   font-family:system-ui,-apple-system,"PingFang SC",sans-serif}
 .mjx-container{overflow-x:auto; overflow-y:hidden; max-width:100%}
 </style>
-</head>
+<style id="dt-runtime-style">/* Portable DialogueTutor interactions. All selectors are namespaced. */
+.dt-activity,
+.dt-study {
+  --dt-paper: #fffdf7;
+  --dt-surface: #f7f3e9;
+  --dt-ink: #302e28;
+  --dt-muted: #706b60;
+  --dt-line: #dcd5c6;
+  --dt-accent: #35685c;
+  --dt-accent-soft: #edf3e9;
+  --dt-good: #24624b;
+  --dt-good-soft: #eef5ec;
+  --dt-again: #8b4a2c;
+  --dt-again-soft: #fcf0e5;
+  --dt-focus: #9a6026;
+  box-sizing: border-box;
+  color: var(--dt-ink);
+  font-family: inherit;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.dt-activity *,
+.dt-study * { box-sizing: border-box; }
+.dt-activity {
+  margin: 2.6rem 0;
+  padding: 1.5rem 1.65rem 1.15rem;
+  background: var(--dt-paper);
+  border: 1px solid var(--dt-line);
+  border-top: 3px solid var(--dt-accent);
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 18px rgb(64 47 23 / 3%);
+  scroll-margin-top: 1.2rem;
+}
+.dt-activity .dt-activity-title {
+  margin: 0.3rem 0 0;
+  padding: 0;
+  border: 0;
+  color: var(--dt-ink);
+  font-size: 1.14rem;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: left;
+}
+.dt-eyebrow {
+  display: block;
+  color: var(--dt-accent);
+  font-family: system-ui, -apple-system, "Noto Sans SC", sans-serif;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+.dt-activity .dt-prompt { margin: 0.85rem 0 1.2rem; text-indent: 0; }
+.dt-activity .dt-small,
+.dt-study .dt-small {
+  color: var(--dt-muted);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  text-indent: 0;
+}
+.dt-activity .dt-small-heading,
+.dt-study .dt-small-heading {
+  display: block;
+  margin: 0 0 0.45rem;
+  color: var(--dt-ink);
+  font-size: 0.87rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+.dt-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
+.dt-spread { justify-content: space-between; }
+.dt-counter { color: var(--dt-muted); font-size: 0.76rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dt-activity .dt-button,
+.dt-study .dt-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 2.5rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.48rem 0.82rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  color: var(--dt-ink);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 550;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 130ms ease, border-color 130ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.dt-activity .dt-button:hover:not(:disabled),
+.dt-study .dt-button:hover:not(:disabled) { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+.dt-activity .dt-button-primary,
+.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: #fffdf7; }
+.dt-activity .dt-button-primary:hover:not(:disabled),
+.dt-study .dt-button-primary:hover:not(:disabled) { background: #285649; color: #fffdf7; }
+.dt-activity .dt-button-quiet,
+.dt-study .dt-button-quiet { border-color: transparent; background: transparent; color: var(--dt-accent); }
+.dt-activity .dt-button:disabled,
+.dt-study .dt-button:disabled { opacity: 0.48; cursor: default; }
+.dt-activity :focus-visible,
+.dt-study :focus-visible { outline: 3px solid var(--dt-focus); outline-offset: 3px; }
+.dt-activity .dt-button[aria-pressed="true"],
+.dt-study .dt-button[aria-pressed="true"] { background: var(--dt-accent-soft); color: var(--dt-accent); }
+.dt-activity .dt-input,
+.dt-study .dt-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0.45rem 0 0;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  color: var(--dt-ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  resize: vertical;
+}
+.dt-input:disabled { background: var(--dt-surface); opacity: 1; -webkit-text-fill-color: var(--dt-ink); }
+.dt-input-label { display: block; margin: 0.4rem 0 0.85rem; color: var(--dt-muted); font-size: 0.8rem; }
+.dt-activity .dt-flashcard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  min-height: 13rem;
+  margin: 0.75rem 0;
+  padding: 1.65rem 1.3rem;
+  border: 1px solid var(--dt-line);
+  background: linear-gradient(140deg, var(--dt-paper), var(--dt-surface));
+  text-align: center;
+}
+.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: #a4bbae; }
+.dt-flashcard-text { display: block; font-size: 1.05rem; font-weight: 500; line-height: 1.8; white-space: pre-wrap; }
+.dt-self-rating { margin: 1rem 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--dt-line); background: var(--dt-surface); }
+.dt-self-rating .dt-button { margin: 0.25rem 0.4rem 0.25rem 0; }
+.dt-self-rating p { margin: 0.15rem 0 0.5rem; }
+.dt-choices { display: grid; gap: 0.6rem; min-inline-size: 0; margin: 0 0 1rem; padding: 0; border: 0; }
+.dt-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.72rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0.78rem 0.85rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  cursor: pointer;
+}
+.dt-choice:hover { border-color: #9aae9f; }
+.dt-choice-selected { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+.dt-choice-label { min-width: 0; }
+.dt-radio { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; margin: 0.24rem 0 0; accent-color: var(--dt-accent); }
+.dt-quiz { margin: 0 0 0.6rem; }
+.dt-feedback,
+.dt-reference,
+.dt-hint {
+  margin: 0.9rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: 0.4rem;
+  background: var(--dt-surface);
+  text-indent: 0;
+  white-space: pre-wrap;
+}
+.dt-activity .dt-feedback p,
+.dt-activity .dt-reference p { margin: 0.5rem 0 0; text-indent: 0; }
+.dt-feedback-good { border-left: 3px solid var(--dt-good); background: var(--dt-good-soft); }
+.dt-feedback-again { border-left: 3px solid var(--dt-again); background: var(--dt-again-soft); }
+.dt-reference { border: 1px solid var(--dt-line); background: transparent; }
+.dt-reference-answer { font-weight: 600; }
+.dt-reference .dt-rubric { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+.dt-hint { border-left: 3px solid #ac9464; color: #675638; font-size: 0.85rem; }
+.dt-error,
+.dt-storage-warning { color: #8a351e; font-size: 0.82rem; line-height: 1.6; }
+.dt-error:empty { display: none; }
+.dt-step-markers { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.dt-step-markers li { margin: 0; padding: 0; }
+.dt-step-markers .dt-button { min-height: 2.4rem; padding: 0.4rem 0.6rem; font-size: 0.74rem; }
+.dt-step-markers .dt-step-current { border-color: var(--dt-accent); background: var(--dt-accent-soft); color: var(--dt-accent); }
+.dt-step-stage { min-height: 9rem; margin: 0 0 1rem; padding: 1.1rem; border-left: 3px solid var(--dt-accent); background: var(--dt-surface); }
+.dt-authored { overflow-wrap: anywhere; }
+.dt-authored p { text-indent: 0; }
+.dt-authored img,
+.dt-authored svg,
+.dt-authored video { max-width: 100%; height: auto; }
+.dt-authored pre { max-width: 100%; overflow-x: auto; font-size: 0.86rem; }
+.dt-parameters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem 1.4rem; margin: 1rem 0 0.8rem; }
+.dt-parameter { display: block; min-width: 0; font-size: 0.81rem; }
+.dt-parameter-value { padding: 0.05rem 0.42rem; border-radius: 0.25rem; background: var(--dt-surface); font-variant-numeric: tabular-nums; }
+.dt-range { display: block; width: 100%; min-height: 2.75rem; margin: 0; padding: 0; accent-color: var(--dt-accent); cursor: pointer; }
+.dt-plots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 0.8rem 0; }
+.dt-activity .dt-graph { display: block; width: 100%; height: auto; margin: 0; border: 1px solid var(--dt-line); border-radius: 0.4rem; background: var(--dt-paper); overflow: visible; }
+.dt-graph text { fill: var(--dt-muted); font-family: system-ui, sans-serif; font-size: 15px; }
+.dt-graph .dt-graph-title { fill: var(--dt-ink); font-size: 16px; font-weight: 600; }
+.dt-graph-grid { stroke: var(--dt-line); stroke-width: 0.8; stroke-dasharray: 3 4; }
+.dt-graph-axis { stroke: var(--dt-muted); stroke-width: 1; }
+.dt-graph-curve { stroke: var(--dt-accent); stroke-width: 3; stroke-linejoin: round; }
+.dt-graph-area { fill: #8db0a1; fill-opacity: 0.38; }
+.dt-graph-guide { stroke: #a47746; stroke-width: 1.4; stroke-dasharray: 4 4; }
+.dt-graph-dot { fill: #9a6026; stroke: var(--dt-paper); stroke-width: 1.5; }
+.dt-graph-dot-second { fill: #306b7b; }
+.dt-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; margin: 0.8rem 0; }
+.dt-metric { display: flex; flex-direction: column; min-width: 0; padding: 0.65rem 0.7rem; border: 1px solid var(--dt-line); border-radius: 0.35rem; }
+.dt-metric strong { margin-top: 0.15rem; font-size: 1.12rem; font-variant-numeric: tabular-nums; }
+.dt-followups { margin-top: 1rem; }
+.dt-followup,
+.dt-note,
+.dt-panel-section { margin: 0.5rem 0; border-top: 1px solid var(--dt-line); }
+.dt-followup > summary,
+.dt-note > summary,
+.dt-source > summary,
+.dt-panel-section > summary { padding: 0.7rem 0.1rem; color: var(--dt-accent); font-size: 0.83rem; line-height: 1.6; cursor: pointer; }
+.dt-followup p { margin: 0.15rem 0 0.85rem; white-space: pre-wrap; text-indent: 0; }
+.dt-note > .dt-button { margin-bottom: 0.7rem; }
+.dt-source { margin: 0; }
+.dt-source > summary { color: var(--dt-muted); font-size: 0.72rem; padding: 0.35rem 0.1rem; }
+.dt-source p { white-space: pre-wrap; word-break: break-word; }
+.dt-activity-footer { margin-top: 1.15rem; padding-top: 0.6rem; border-top: 1px solid var(--dt-line); }
+.dt-status { min-height: 0; margin: 0.35rem 0 0; color: var(--dt-accent); font-size: 0.78rem; line-height: 1.6; text-indent: 0; }
+.dt-status:empty { display: none; }
+.dt-copy-fallback { margin-top: 0.75rem; }
+.dt-study { margin: 1.4rem 0 2rem; }
+.dt-study-panel { border: 1px solid var(--dt-line); border-radius: 0.5rem; background: var(--dt-paper); }
+.dt-study-summary { padding: 0.8rem 1rem; color: var(--dt-accent); font-size: 0.86rem; font-weight: 600; line-height: 1.65; cursor: pointer; }
+.dt-study-panel[open] > .dt-study-summary { border-bottom: 1px solid var(--dt-line); }
+.dt-study-body { padding: 1rem; }
+.dt-study-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.55rem; }
+.dt-study-stat { display: flex; flex-direction: column; padding: 0.55rem 0.7rem; border-radius: 0.35rem; background: var(--dt-surface); }
+.dt-study-stat strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+.dt-objective { padding: 0.7rem 0; border-top: 1px solid var(--dt-line); }
+.dt-study .dt-activity-link { padding: 0.25rem 0.4rem; min-height: 2rem; font-size: 0.75rem; text-align: left; }
+.dt-review-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.3rem 0; padding: 0.25rem 0.4rem; }
+.dt-review-due { background: var(--dt-again-soft); border-radius: 0.35rem; }
+.dt-note-entry { margin: 0.35rem 0; padding: 0.25rem 0; }
+.dt-note-text { margin: 0.2rem 0 0.6rem; padding: 0 0.8rem; color: var(--dt-muted); font-size: 0.85rem; white-space: pre-wrap; text-indent: 0; }
+.dt-transfer { margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--dt-line); }
+.dt-sr {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 620px) {
+  .dt-activity { padding: 1.15rem 1rem 0.9rem; margin: 2rem 0; }
+  .dt-activity .dt-activity-title { font-size: 1.06rem; }
+  .dt-plots { grid-template-columns: minmax(0, 1fr); }
+  .dt-parameters { gap: 0.6rem 1rem; }
+  .dt-metrics { grid-template-columns: minmax(0, 1fr); }
+  .dt-metric { flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; }
+  .dt-study-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dt-study-body { padding: 0.8rem; }
+  .dt-activity .dt-flashcard { min-height: 13rem; padding: 1.2rem 0.85rem; }
+  .dt-activity-footer .dt-row { gap: 0.15rem; }
+  .dt-activity .dt-button,
+  .dt-study .dt-button { min-height: 2.75rem; }
+}
+@media (max-width: 380px) {
+  .dt-parameters { grid-template-columns: minmax(0, 1fr); }
+  .dt-activity { padding-left: 0.8rem; padding-right: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dt-activity *, .dt-study * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+@media (prefers-color-scheme: dark) {
+  .dt-activity, .dt-study {
+    --dt-paper: #24241f;
+    --dt-surface: #2d2e27;
+    --dt-ink: #e9e5d9;
+    --dt-muted: #b5b09f;
+    --dt-line: #484b3e;
+    --dt-accent: #a0c9b4;
+    --dt-accent-soft: #303f34;
+    --dt-good: #abd5ac;
+    --dt-good-soft: #2b3d2b;
+    --dt-again: #e3b18c;
+    --dt-again-soft: #48372a;
+    --dt-focus: #e9bd82;
+  }
+  .dt-activity .dt-button-primary, .dt-study .dt-button-primary { background: #a0c9b4; color: #172b22; }
+  .dt-activity .dt-button-primary:hover:not(:disabled), .dt-study .dt-button-primary:hover:not(:disabled) { background: #c0ddcd; color: #172b22; }
+  .dt-hint { color: #ded0ac; }
+  .dt-error, .dt-storage-warning { color: #ffc2a2; }
+}
+@media print {
+  .dt-activity { box-shadow: none; break-inside: avoid; }
+  .dt-study, .dt-activity-footer, .dt-source { display: none; }
+  .dt-activity .dt-button { border-color: #888; }
+  .dt-activity .dt-reference { break-inside: avoid; }
+}
+</style></head>
 <body>
 
 <div class="banner">
@@ -129,7 +442,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <a href="https://github.com/jinshanbaihai/dialogue-tutor">← 回到仓库</a>
 </div>
 
-<main>
+<main><aside data-dt-study aria-label="学习记录与复习"></aside>
 
 <h1>连续随机变量与均匀分布</h1>
 <p class="sub">作业讲解 · 样章 &nbsp;|&nbsp; 上半两章七幕，每章一道例题，下半六个小问 &nbsp;|&nbsp; Edexcel IAL Statistics S2</p>
@@ -239,7 +552,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <td class="why">第 4 行两边同减 \(F(a)\)。<mark>到这里，区间的概率已经完全由 \(F\) 决定</mark></td></tr>
 </tbody>
 </table>
-</div>
+</div><div data-dt-activity="cdf-recall"></div>
 
 <p>
 第 5 行是一个可以停下来看一眼的位置。它说：想知道任何一段区间的概率，
@@ -266,7 +579,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <td class="why">第 5 行接第 8 行。左边端点从 \(a \lt X\) 换成 \(a \le X\)，差的那一个点概率为 0（第 12 行），换与不换都成立</td></tr>
 </tbody>
 </table>
-</div>
+</div><div data-dt-activity="cdf-density-steps"></div>
 
 <p>
 造完了。<strong>密度自己不是概率</strong>，它是概率对长度的变化率；
@@ -292,7 +605,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <td class="why">密度的单位是「概率每单位长度」。区间 \([0,\,0.5]\) 上的均匀密度是 2，它在 0.5 的长度上积出来才是 1。<mark>密度大于 1 一点问题也没有，概率大于 1 才有问题</mark></td></tr>
 </tbody>
 </table>
-</div>
+</div><div data-dt-activity="density-recall"></div>
 
 <figure>
 <svg viewBox="0 0 620 250" role="img" aria-label="左图密度曲线与阴影面积，右图累积分布函数的高度差">
@@ -334,7 +647,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 同一件事在两张图上的样子。左边那块阴影的面积，等于右边那两条虚线之间的高度差，
 两者由第 8 行的微积分基本定理连在一起。
 </figcaption>
-</figure>
+</figure><div data-dt-activity="density-concept-check"></div>
 </div>
 
 <div class="act main" id="ex1">
@@ -537,14 +850,14 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 这条密度从高度 2 起步，越过了「高度 1」那条虚线，概率照旧没有越过 1。
 概率是这条线下面的面积，着色的那一块就是 \(P(X \le 0.1)=0.19\)。
 </figcaption>
-</figure>
+</figure><div data-dt-activity="linear-density-explore"></div>
 
 <p>
 两问走完，这一章造出来的那个东西被完整地用了一次：
 <mark>密度给出高，积分把高变成面积，面积才是概率。</mark>
 下半那两道题换了情境、换了函数、换了问法，用的仍旧是这三句话。
 </p>
-</div>
+<div data-dt-activity="normalization-recall"></div></div>
 
 <div class="act">
 <span class="label">⑤ 另一种看法（一两句）</span>
@@ -658,7 +971,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <td class="why">第 5 行两边同除以 \(b-a\)。这里用得上 \(b \gt a\)，所以 \(b-a \ne 0\)</td></tr>
 </tbody>
 </table>
-</div>
+</div><div data-dt-activity="uniform-density-steps"></div>
 
 <p>
 到这一刻才给它命名：<strong>连续均匀分布（continuous uniform distribution）</strong>，
@@ -673,7 +986,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 下半 <a href="#q1a">Q1(a)</a> 的 <em>specify fully</em> 要的正是这一行。
 </p>
 
-<h4>期望：为什么它落在正中间</h4>
+<div data-dt-activity="uniform-parameters-recall"></div><h4>期望：为什么它落在正中间</h4>
 <p>
 图形左右对称，重心落在中点，所以期望是 \(\tfrac{a+b}{2}\)。这句话是对的，
 可是它只是文字层。下面把符号层补上，每个等号一行。
@@ -746,7 +1059,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 深色那一块是 \(P(X \gt t)\)，它的面积等于宽度除以总宽度，
 所以均匀分布的概率可以直接用长度比来算（下半 <a href="#q1c">Q1(c)</a> 用的正是这一条）。
 </figcaption>
-</figure>
+</figure><div data-dt-activity="uniform-explore"></div>
 </div>
 
 <div class="act main" id="ex2">
@@ -1024,7 +1337,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 </div>
 
 <div class="part" id="q1a">
-<h4>Q1(a) &nbsp;写出 \(W\) 的概率密度函数</h4>
+<h4>Q1(a) &nbsp;写出 \(W\) 的概率密度函数</h4><div data-dt-activity="q1a-answer"></div><details id="solution-q1a" class="dt-worked-solution" data-dt-solution><summary>查看 Q1(a) 完整解答</summary>
 
 <div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
 <p>
@@ -1089,10 +1402,10 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 只写常数、漏掉分段的答案拿一分。
 </p>
 </div>
-</div>
+</details></div>
 
 <div class="part" id="q1b">
-<h4>Q1(b) &nbsp;求 \(E(W)\)</h4>
+<h4>Q1(b) &nbsp;求 \(E(W)\)</h4><div data-dt-activity="q1b-answer"></div><details id="solution-q1b" class="dt-worked-solution" data-dt-solution><summary>查看 Q1(b) 完整解答</summary>
 
 <div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
 <p>
@@ -1155,10 +1468,10 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 <b>A1</b> 给 \(2.6\)。带上单位不扣分，漏掉单位在这一类题里通常也不扣，写上更稳。
 </p>
 </div>
-</div>
+</details></div>
 
 <div class="part" id="q1c">
-<h4>Q1(c) &nbsp;求 \(P(W \gt 3)\)</h4>
+<h4>Q1(c) &nbsp;求 \(P(W \gt 3)\)</h4><div data-dt-activity="q1c-answer"></div><details id="solution-q1c" class="dt-worked-solution" data-dt-solution><summary>查看 Q1(c) 完整解答</summary>
 
 <div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
 <p>
@@ -1231,7 +1544,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 上限误用 \(\infty\) 而写成发散的积分，方法分也拿不到，因为那一步说明区间外的 0 没有用上。
 </p>
 </div>
-</div>
+</details></div>
 
 <div class="q">
 <p class="stem"><b>Q2.</b> 一段旅程所花的时间记作 \(S\) 分钟，它的概率密度函数是</p>
@@ -1242,7 +1555,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 </div>
 
 <div class="part" id="q2a">
-<h4>Q2(a) &nbsp;证明 \(k = \dfrac{3}{256}\)</h4>
+<h4>Q2(a) &nbsp;证明 \(k = \dfrac{3}{256}\)</h4><div data-dt-activity="q2a-answer"></div><details id="solution-q2a" class="dt-worked-solution" data-dt-solution><summary>查看 Q2(a) 完整解答</summary>
 
 <div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
 <p>
@@ -1325,10 +1638,10 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 <em>Show that</em> 题里，最后那一分只给完整过程，直接抄答案不给分。
 </p>
 </div>
-</div>
+</details></div>
 
 <div class="part" id="q2b">
-<h4>Q2(b) &nbsp;求 \(P(S \le 4)\)</h4>
+<h4>Q2(b) &nbsp;求 \(P(S \le 4)\)</h4><div data-dt-activity="q2b-answer"></div><details id="solution-q2b" class="dt-worked-solution" data-dt-solution><summary>查看 Q2(b) 完整解答</summary>
 
 <div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
 <p>
@@ -1389,8 +1702,8 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 </table>
 </div>
 <p>
-横向再查一眼：整条密度关于 \(s=6\) 对称，4 落在中点左边，
-所以答案应当明显小于 \(0.5\)，\(0.156\) 说得通。
+横向验算：\(P(S\le4)\) 落在 0 与 1 之间；
+还可以对同一区间进行数值面积估计，检查积分结果是否合理。
 </p>
 </div>
 
@@ -1403,10 +1716,10 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 下限写成 0 或者 \(-\infty\) 是这一问最常见的丢分处。
 </p>
 </div>
-</div>
+</details></div>
 
 <div class="part" id="q2c">
-<h4>Q2(c) &nbsp;写出 \(E(S)\)</h4>
+<h4>Q2(c) &nbsp;写出 \(E(S)\)</h4><div data-dt-activity="q2c-answer"></div><details id="solution-q2c" class="dt-worked-solution" data-dt-solution><summary>查看 Q2(c) 完整解答</summary>
 
 <div class="six"><span class="tag"><span class="num">①</span> 题干拆解</span>
 <p>
@@ -1469,7 +1782,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 而 \(k\) 是一个正的常数因子，它不影响对称轴的位置。
 </p>
 </div>
-</div>
+</details></div>
 
 <footer>
 <p>
@@ -1488,5 +1801,1075 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 </footer>
 
 </main>
-</body>
+<script type="application/json" id="dt-lesson">{"schemaVersion":1,"lessonId":"dialoguetutor-s2-continuous-uniform","revision":"1.6.0-s2.1","title":"连续随机变量与均匀分布 · 交互学习样章","language":"zh-CN","mode":"bgct","objectives":[{"id":"cdf-relation","title":"解释累计概率、密度面积与区间概率的对应关系","kind":"concept"},{"id":"density-meaning","title":"区分密度高度、单点概率与区间概率","kind":"concept"},{"id":"density-normalization","title":"使用非负条件与总概率确定合法密度","kind":"procedure"},{"id":"uniform-parameters","title":"完整表达均匀分布的端点、密度与适用条件","kind":"memory"},{"id":"uniform-model","title":"解释支持区间变化如何影响均匀密度与概率","kind":"concept"},{"id":"expectation","title":"根据均匀性或已验证的对称性求期望","kind":"procedure"},{"id":"uniform-probability","title":"确定均匀分布的目标区间并计算概率","kind":"procedure"},{"id":"quadratic-probability","title":"对非常数密度积分计算区间概率","kind":"procedure"}],"activities":[{"id":"cdf-recall","objectiveId":"cdf-relation","type":"flashcards","title":"回忆卡：累计概率表示什么","prompt":"先用自己的语言回答，再翻面核对。卡片自评记录回忆情况。","placement":{"selector":"#ch1 + .act + .act + .act > .scroll:nth-of-type(1)","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / FlashCardsBlock","path":"web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png","evidenceLevel":"official-menu-and-source","adaptation":"把 Books 正反面卡片放在 CDF 定义与区间差值首次解释之后；翻面和自评分别记录。","relatedPaths":["deeptutor/book/blocks/flash_cards.py","deeptutor/book/agents/page_planner.py"]},"cards":[{"front":"F(x) 对应哪一个事件的概率？","back":"F(x) = P(X ≤ x)，表示随机变量不超过 x 的累计概率。F(x) 是概率，不是密度高度。","hint":"观察定义中的不等号方向。"},{"front":"已知 F(a) 和 F(b)，怎样表示 P(a \u003c X ≤ b)？其中 a \u003c b。","back":"P(a \u003c X ≤ b) = F(b) − F(a)。从“不超过 b”的事件中扣除“不超过 a”的部分。","hint":"两个累计事件存在包含关系。"},{"front":"为什么 F(x) 随 x 增大只能保持不变或增加？","back":"较小阈值对应的事件包含在较大阈值对应的事件中；扩大事件范围不会减少概率。","hint":"把阈值变化理解为事件范围变化。"}]},{"id":"cdf-density-steps","objectiveId":"cdf-relation","type":"steps","title":"逐步推导：累计概率怎样连接密度","prompt":"每次前进之前，先说明当前等式怎样支持下一步；可以回退检查依据。本活动记录探索过程。","placement":{"selector":"#ch1 + .act + .act + .act > .scroll:nth-of-type(2)","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Visualize / rules_html stepper","path":"deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://github.com/HKUDS/DeepTutor/blob/42fab3cf429a1fbf36b257ab8d116a3814964202/deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml#L116-L135","evidenceLevel":"source-rule-only","adaptation":"采用 Visualize HTML 规则中的阶段面板、位置提示与前后操作，把本章 CDF—密度—积分关系拆成六步。"},"steps":[{"title":"确定累计事件","bodyHtml":"\u003cp>\u003cstrong>F(x) = P(X ≤ x)\u003c/strong>\u003c/p>\u003cp>累计分布函数把一个阈值对应到一个事件的概率。这里讨论具有概率密度的分布。\u003c/p>"},{"title":"扣除前段概率","bodyHtml":"\u003cp>\u003cstrong>P(a &lt; X ≤ b) = F(b) − F(a)\u003c/strong>\u003c/p>\u003cp>事件 {X ≤ b} 可以分成互不重叠的 {X ≤ a} 与 {a &lt; X ≤ b}，因此右侧差值保留目标区间。\u003c/p>\u003csvg viewBox=\"0 0 500 100\" role=\"img\" aria-label=\"数轴上 a 左侧的累计区间与 a 到 b 的目标区间\">\u003cline x1=\"25\" y1=\"45\" x2=\"470\" y2=\"45\" stroke=\"currentColor\"/>\u003crect x=\"35\" y=\"35\" width=\"170\" height=\"20\" fill=\"#5a6970\" opacity=\"0.45\"/>\u003crect x=\"205\" y=\"35\" width=\"185\" height=\"20\" fill=\"#8a5a2b\" opacity=\"0.65\"/>\u003ctext x=\"195\" y=\"80\" fill=\"currentColor\">a\u003c/text>\u003ctext x=\"382\" y=\"80\" fill=\"currentColor\">b\u003c/text>\u003ctext x=\"47\" y=\"25\" fill=\"currentColor\">累计前段\u003c/text>\u003ctext x=\"238\" y=\"25\" fill=\"currentColor\">目标区间\u003c/text>\u003c/svg>"},{"title":"求邻域平均密度","bodyHtml":"\u003cp>\u003cstrong>P(x &lt; X ≤ x+h) / h = [F(x+h) − F(x)] / h\u003c/strong>，其中 h &gt; 0。\u003c/p>\u003cp>分子是小区间概率，分母是区间长度。比值表示这段区间的平均概率密度。\u003c/p>"},{"title":"用极限定义局部密度","bodyHtml":"\u003cp>\u003cstrong>f(x) = lim\u003csub>h→0\u003c/sub> [F(x+h) − F(x)] / h\u003c/strong>\u003c/p>\u003cp>在 F 可导的位置，这个极限就是 F 的导数。密度描述累计概率变化的快慢。\u003c/p>"},{"title":"用积分恢复累计差值","bodyHtml":"\u003cp>\u003cstrong>F(b) − F(a) = ∫\u003csub>a\u003c/sub>\u003csup>b\u003c/sup> f(x) dx\u003c/strong>\u003c/p>\u003cp>对于本章具有密度的分布，累计概率可以由密度的积分恢复。密度曲线下面的面积对应累计概率的增量。\u003c/p>"},{"title":"将面积解释为区间概率","bodyHtml":"\u003cp>\u003cstrong>P(a ≤ X ≤ b) = ∫\u003csub>a\u003c/sub>\u003csup>b\u003c/sup> f(x) dx\u003c/strong>\u003c/p>\u003cp>具有密度的分布在单个端点上的概率为零，因此目标区间可以包含端点。回顾整条推导：累计事件相减，得到目标区间；密度积分，得到同一个差值。\u003c/p>"}]},{"id":"density-recall","objectiveId":"density-meaning","type":"flashcards","title":"回忆卡：密度、面积与单点","prompt":"每张卡片只核对一个区别。先尝试解释，再查看背面。","placement":{"selector":"#ch1 + .act + .act + .act > .scroll:nth-of-type(3)","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / FlashCardsBlock","path":"web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png","evidenceLevel":"official-menu-and-source","adaptation":"沿用 Books 翻卡操作，在密度性质已经解释的位置进行短小回忆；提示由学习者主动查看。","relatedPaths":["deeptutor/book/blocks/flash_cards.py","deeptutor/book/agents/page_planner.py"]},"cards":[{"front":"密度 f(x) 与区间概率分别对应图形中的什么？","back":"密度 f(x) 对应曲线高度；区间概率对应密度曲线下该区间的面积。高度与面积是不同的量。","hint":"比较纵轴读数与阴影区域。"},{"front":"当 X 的单位是分钟时，f(x) 的单位是什么？","back":"f(x) 的单位是每分钟。密度与以分钟计的微小长度相乘，得到没有单位的概率。","hint":"概率没有单位；积分中的 dx 带有分钟单位。"},{"front":"具有密度的分布中，f(a) > 0 是否意味着 P(X = a) > 0？","back":"并不意味着。单点区间的长度为零，P(X = a) = 0；f(a) 的正值描述附近的密度。","hint":"单点区间能否围出正面积？"}]},{"id":"density-concept-check","objectiveId":"density-meaning","type":"quiz","title":"就地检查：高度超过 1 是否矛盾","prompt":"随机变量 Y 在 [0, 0.25] 上的密度恒为 4，其余位置为 0。下面哪种解释成立？","placement":{"selector":"#ch1 + .act + .act + .act > figure","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / QuizBlock","path":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png","evidenceLevel":"official-screenshot-and-source","adaptation":"把官方 Books Quick Check 的选答与解释反馈放在密度/CDF图之后；干扰选项分别对应高度、面积与连续性的混淆。","relatedPaths":["web/components/quiz/QuizViewer.tsx","web/components/quiz/QuizFollowupTabBody.tsx","deeptutor/book/agents/page_planner.py"]},"format":"choice","choices":[{"id":"height-is-probability","text":"这个模型不合法，因为密度高度 4 超过了 1。","feedback":"这里把密度高度当成了概率。密度可以超过 1；需要核对的是全部面积和非负条件。"},{"id":"area-is-probability","text":"这个模型合法；总面积是 1，P(0 ≤ Y ≤ 0.1) 是 0.4。","feedback":"这个解释分别核对了总面积与目标区间面积，区分了密度高度和概率。"},{"id":"point-has-density-probability","text":"这个模型合法，而且 P(Y = 0.1) 是 4。","feedback":"单点概率不是该位置的密度读数。具有密度的分布在单点上的概率是 0。"},{"id":"all-intervals-zero","text":"每个单点的概率都是 0，因此每个区间的概率也都是 0。","feedback":"连续区间的概率由积分给出。逐个单点的零概率不能直接当成区间面积。"}],"answer":"area-is-probability","explanation":"总面积为 4 × 0.25 = 1，密度处处非负，所以模型合法。目标区间的面积为 4 × 0.1 = 0.4。密度高度、单点概率和区间概率需要分别辨认。","hint":"先检查整块矩形的面积，再检查目标区间的面积。","remediation":"把“高度”与“面积”分别写在草稿中；为高度补上单位，然后重新核对两种量。","followups":[{"question":"这个例子为什么可以直接使用矩形面积？","answer":"因为密度在整个支持区间内保持常数。改变区间位置不会改变高度，面积由区间长度与常数高度相乘得到。"},{"question":"把 ≤ 改成 \u003c 会改变这里的概率吗？","answer":"这里具有概率密度，端点单点概率为零，所以加入或移除有限个端点不会改变区间概率。"}]},{"id":"linear-density-explore","objectiveId":"cdf-relation","type":"explore","title":"参数探索：阴影面积与累计差值同步变化","prompt":"先预测区间改变后概率怎样变化，再调整左右端点，比较阴影面积与 F(右端点) − F(左端点)。","placement":{"selector":"#ex1 > figure","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / InteractiveGenerator","path":"deeptutor/book/blocks/interactive.py","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/03-book-demo-interactive-module.png","evidenceLevel":"official-screenshot-and-source-adaptation","adaptation":"把官方书本采样频率滑杆的参数—图形—数值联动迁移到本章线性密度；数学模型沿用已有机器空转例题。","relatedPaths":["deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml","web/app/(workspace)/books/components/blocks/InteractiveBlock.tsx"]},"model":"linear-density","instructions":"模型固定为 f(x) = 2 − 2x，0 ≤ x ≤ 1。尝试三件事情：保持区间长度不变并向右移动；让两个端点重合；将区间扩展到整个 [0,1]。每次移动之前先预测变化方向，然后观察两个图形与概率读数。","followups":[{"question":"等长区间向右移动，概率为什么下降？","answer":"这条密度随 x 增大而下降。同样宽度覆盖到更低的曲线时，阴影面积减小；因此等长区间不一定具有相同概率。"},{"question":"两个端点重合时，为什么密度读数可能为正，而概率变成零？","answer":"密度读取的是一个位置的高度；区间面积还需要宽度。宽度为零时，目标区间的面积为零。"},{"question":"怎样核对整个支持区间的概率？","answer":"本模型在 [0,1] 上的累计函数是 F(x) = 2x − x²；F(1) − F(0) = 1。曲线下面的全部面积也是 1。"}]},{"id":"normalization-recall","objectiveId":"density-normalization","type":"flashcards","title":"回忆卡：归一化为什么确定常数","prompt":"例题已经展示了合法密度。现在回忆检查顺序，卡片只涉及条件与方法。","placement":{"selector":"#ex1","position":"append"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / FlashCardsBlock","path":"web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png","evidenceLevel":"official-menu-and-source","adaptation":"沿用 Books 短卡片组合；卡片放在机器例题总结之后，为后面的未知系数题保留独立方法提取。","relatedPaths":["deeptutor/book/blocks/flash_cards.py","deeptutor/book/agents/page_planner.py"]},"cards":[{"front":"一个可积函数成为概率密度，需要核对哪两个条件？","back":"函数处处非负，且整条实轴上的积分等于 1。对于分段定义的密度，也需要明确支持区间外的取值。","hint":"一个条件约束符号，另一个条件约束总量。"},{"front":"密度在支持区间以外为 0，怎样简化总概率积分？","back":"可以只在支持区间内积分，因为区间外的积分贡献为 0。简化依据来自分段定义。","hint":"先查看题面的“其余为 0”。"},{"front":"密度写成 k·g(x)，且 k 与 x 无关时，哪条方程通常用于确定 k？","back":"k × ∫支持区间 g(x) dx = 1。先求总面积，再解出常数，并核对非负条件。","hint":"把未知常数与已知的总概率联系起来。"}]},{"id":"uniform-density-steps","objectiveId":"uniform-model","type":"steps","title":"逐步推导：均匀密度的高度从哪里来","prompt":"每次前进之前，先说明当前条件怎样确定下一步。推导使用一般端点，不代入后面的作业数据。","placement":{"selector":"#ch2 + .act + .act + .act > .scroll:nth-of-type(1)","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Visualize / rules_html stepper","path":"deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://github.com/HKUDS/DeepTutor/blob/42fab3cf429a1fbf36b257ab8d116a3814964202/deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml#L116-L135","evidenceLevel":"source-rule-only","adaptation":"采用 DeepTutor Visualize 的分阶段 HTML 面板，让学习者依次连接等长等概率、常数密度与归一化。"},"steps":[{"title":"明确均匀性的含义","bodyHtml":"\u003cp>在有限支持区间 [a,b] 内，\u003cstrong>等长子区间具有相同概率\u003c/strong>，其中 a &lt; b。\u003c/p>\u003cp>这里比较的是区间概率。仅仅说所有单点概率相同，还不能表达均匀性。\u003c/p>"},{"title":"把概率写成长短的函数","bodyHtml":"\u003cp>\u003cstrong>g(h) = 长度为 h 的任意子区间的概率\u003c/strong>\u003c/p>\u003cp>位置不影响结果，因此只需要用区间长度 h 作为输入。\u003c/p>"},{"title":"使用可加性与单调性","bodyHtml":"\u003cp>\u003cstrong>g(h₁+h₂) = g(h₁) + g(h₂)\u003c/strong>\u003c/p>\u003cp>相邻且不重叠的区间可以合并，概率随之相加。结合概率的单调性，区间概率与区间长度成正比。\u003c/p>\u003cp>\u003cstrong>g(h) = c·h\u003c/strong>\u003c/p>"},{"title":"识别常数密度","bodyHtml":"\u003cp>\u003cstrong>f(x) = c\u003c/strong>，其中 a &lt; x &lt; b。\u003c/p>\u003cp>每单位长度具有相同概率密度，所以图形在支持区间内是一条水平线。\u003c/p>\u003csvg viewBox=\"0 0 500 130\" role=\"img\" aria-label=\"均匀密度矩形，底边长度 b 减 a，高度 c\">\u003cline x1=\"35\" y1=\"95\" x2=\"470\" y2=\"95\" stroke=\"currentColor\"/>\u003crect x=\"110\" y=\"35\" width=\"270\" height=\"60\" fill=\"#8a5a2b\" opacity=\"0.25\"/>\u003cpath d=\"M110 95 V35 H380 V95\" fill=\"none\" stroke=\"currentColor\"/>\u003ctext x=\"100\" y=\"118\" fill=\"currentColor\">a\u003c/text>\u003ctext x=\"374\" y=\"118\" fill=\"currentColor\">b\u003c/text>\u003ctext x=\"78\" y=\"50\" fill=\"currentColor\">c\u003c/text>\u003ctext x=\"212\" y=\"73\" fill=\"currentColor\">总面积\u003c/text>\u003c/svg>"},{"title":"用总概率确定高度","bodyHtml":"\u003cp>\u003cstrong>c·(b−a) = 1\u003c/strong>\u003c/p>\u003cp>矩形总面积等于 1，底边长度是 b−a。由于 b−a 为正数，可以在两边同时除以这个长度。\u003c/p>"},{"title":"写出完整密度","bodyHtml":"\u003cp>\u003cstrong>c = 1/(b−a)\u003c/strong>\u003c/p>\u003cp>因此，支持区间 a ≤ x ≤ b 内，f(x) = 1/(b−a)；其余位置，f(x) = 0。\u003c/p>\u003cp>完整答案同时包括高度、支持区间和区间外的取值。\u003c/p>"}]},{"id":"uniform-parameters-recall","objectiveId":"uniform-parameters","type":"flashcards","title":"回忆卡：均匀分布的参数与条件","prompt":"先回忆两个端点分别表示什么，再核对公式中的长度。期望推导随后展开。","placement":{"selector":"#ch2 + .act + .act + .act > h4","position":"before"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / FlashCardsBlock","path":"web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png","evidenceLevel":"official-menu-and-source","adaptation":"把 Books 卡片放在完整密度写法之后；卡片只提取刚刚出现的端点与密度条件，不提前给出下一段期望推导。","relatedPaths":["deeptutor/book/blocks/flash_cards.py","deeptutor/book/agents/page_planner.py"]},"cards":[{"front":"X ~ U(a,b) 中，a 和 b 分别表示什么？","back":"a 是支持区间的左端点，b 是右端点。两者都是有限实数，并且 a \u003c b。","hint":"先在数轴标出整个支持区间。"},{"front":"均匀分布的密度高度取决于端点的和，还是端点的差？","back":"密度高度取决于长度 b−a，等于这段长度的倒数。长度必须为正。","hint":"总面积等于矩形的宽度乘以高度。"},{"front":"完整写出均匀密度时，支持区间以外还需要写什么？","back":"还需要写 f(x) = 0，并说明这些位置位于支持区间以外。只写区间内的常数还没有完整定义整条实轴上的密度。","hint":"对应题面中的 specify fully。"}]},{"id":"uniform-explore","objectiveId":"uniform-model","type":"explore","title":"参数探索：支持区间、密度与概率","prompt":"先预测支持区间扩大或平移的影响，再改变参数，比较高度、期望位置与事件概率。","placement":{"selector":"#ch2 + .act + .act + .act > figure","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / InteractiveGenerator","path":"deeptutor/book/blocks/interactive.py","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/03-book-demo-interactive-module.png","evidenceLevel":"official-screenshot-and-source-adaptation","adaptation":"借鉴官方 Books 采样交互中一个参数联动多个读数的呈现方式，迁移为均匀分布支持区间与事件区间联动。","relatedPaths":["deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml","web/app/(workspace)/books/components/blocks/InteractiveBlock.tsx"]},"model":"uniform","instructions":"使用图中的一般参数进行探索。先保持事件区间不变并扩大支持区间；再保持支持区间长度不变，同时平移两个端点；最后让事件区间越过支持区间。比较密度高度、期望位置和实际交集的阴影面积。","followups":[{"question":"支持区间变宽时，高度为什么下降？","answer":"全部概率保持为 1。支持区间的长度变大时，矩形高度必须下降到长度的倒数，总面积才仍然等于 1。"},{"question":"同时平移两个支持端点，密度高度与期望怎样变化？","answer":"支持区间长度保持不变，所以密度高度保持不变。区间中点随两个端点一起平移，期望也发生相同的平移。"},{"question":"事件区间伸到支持区间外面，为什么外面的部分不增加概率？","answer":"支持区间外的密度为 0。只有事件区间与支持区间的交集贡献面积，实际概率由交集长度除以支持区间长度得到。"}]},{"id":"q1a-answer","objectiveId":"uniform-parameters","type":"quiz","title":"Q1(a)：选择完整的密度写法","prompt":"已知 W ~ U(−1.4, 6.6)，W 的单位为分钟。原题要求 specify fully the probability density function f(w)。请选择完整且正确的写法。","placement":{"selector":"#q1a > h4","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / QuizBlock","path":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png","evidenceLevel":"official-screenshot-and-source","adaptation":"沿用 Books Quick Check 的选答和解释反馈，将原题完整密度写法变为辨析题；原题条件与完整解答另行保留。","relatedPaths":["web/components/quiz/QuizViewer.tsx","web/components/quiz/QuizFollowupTabBody.tsx","deeptutor/book/agents/page_planner.py"]},"solutionId":"solution-q1a","format":"choice","choices":[{"id":"correct-full-density","text":"当 −1.4 ≤ w ≤ 6.6 时，f(w) = 1/8；其余位置，f(w) = 0。","feedback":"这个写法包含正确高度、完整支持区间和区间外的零密度。"},{"id":"negative-bound-error","text":"当 1.4 ≤ w ≤ 6.6 时，f(w) = 1/5.2；其余位置，f(w) = 0。","feedback":"这个写法遗漏了左端点的负号，改动了题目给定的支持区间。负数表示早到，必须保留。"},{"id":"height-width-error","text":"当 −1.4 ≤ w ≤ 6.6 时，f(w) = 8；其余位置，f(w) = 0。","feedback":"这个写法把区间长度当成密度高度。高度需要由总面积为 1 的条件确定。"},{"id":"missing-outside","text":"当 −1.4 ≤ w ≤ 6.6 时，f(w) = 1/8；区间外不作定义。","feedback":"这个写法没有满足 specify fully。完整密度还需要说明支持区间外的取值为 0。"}],"answer":"correct-full-density","explanation":"支持区间长度为 6.6 − (−1.4) = 8，因此区间内的常数密度为 1/8，区间外为 0。这条密度处处非负，总面积为 1。","hint":"分别核对左端点的负号、矩形总面积和区间外的定义。","remediation":"在数轴上重新标出题目给定的两个端点，再用“高度 × 支持区间长度 = 1”确定高度。","followups":[{"question":"为什么密度需要写出“其余为 0”？","answer":"题目要求在整条实轴上完整指定 f(w)。这列火车的偏差只支持题目给定的区间，区间外没有概率贡献。"},{"question":"端点能否改用严格不等号？","answer":"对于具有密度的分布，修改有限个单点的密度取值不会改变积分概率。原题采用闭区间写法最便于对照题面。"}]},{"id":"q1b-answer","objectiveId":"expectation","type":"quiz","title":"Q1(b)：输入平均偏差","prompt":"沿用 W ~ U(−1.4, 6.6)。求 E(W)，单位为分钟。请先在草稿中写出计算式，再输入数值；输入框无需填写单位。","placement":{"selector":"#q1b > h4","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / QuizBlock","path":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png","evidenceLevel":"official-screenshot-and-source","adaptation":"使用 Books 就地测验与通用 Quiz 数值作答思路，将平均偏差的结果核对与原解答对照分开；自动判定只覆盖数值。 数值容差与等价分数识别是本次对简答输入的确定性实现，不归为 DeepTutor 原版评分能力。","relatedPaths":["web/components/quiz/QuizViewer.tsx","web/components/quiz/QuizFollowupTabBody.tsx","deeptutor/book/agents/page_planner.py"]},"solutionId":"solution-q1b","format":"numeric","answer":2.6,"tolerance":1e-06,"explanation":"E(W) = [−1.4 + 6.6]/2 = 2.6 分钟，表示平均晚到 2.6 分钟。数值正确只核对最终结果；原题的方法步骤还需要自行对照完整解答。","hint":"期望对应均匀分布支持区间的中点。先确认左端点的符号。","remediation":"把中点与区间长度分别写出：中点使用端点相加再除以 2；长度使用右端点减左端点。","followups":[{"question":"平均偏差为正，为什么对应晚到？","answer":"题面把负数规定为早到，因此正数表示晚到。期望继承同一个符号约定。"},{"question":"直接积分是否也能求出期望？","answer":"可以。按照期望定义，在支持区间内积分 w·f(w)，也会得到 2.6。中点公式在本题中更简短。"}]},{"id":"q1c-answer","objectiveId":"uniform-probability","type":"quiz","title":"Q1(c)：输入超过三分钟的概率","prompt":"沿用 W ~ U(−1.4, 6.6)。求 P(W > 3)。请先在草稿中标出目标区间，再输入小数或简单分数。","placement":{"selector":"#q1c > h4","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / QuizBlock","path":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png","evidenceLevel":"official-screenshot-and-source","adaptation":"沿用 Books 问题—作答—解析的活动顺序，数值输入支持等价分数；后续解释只讨论当前小问。 数值容差与等价分数识别是本次对简答输入的确定性实现，不归为 DeepTutor 原版评分能力。","relatedPaths":["web/components/quiz/QuizViewer.tsx","web/components/quiz/QuizFollowupTabBody.tsx","deeptutor/book/agents/page_planner.py"]},"solutionId":"solution-q1c","format":"numeric","answer":0.45,"tolerance":1e-06,"explanation":"目标区间是从 3 到 6.6，长度为 3.6；整个支持区间长度为 8。因此 P(W > 3) = 3.6/8 = 9/20 = 0.45。数值核对不替代对区间和方法步骤的检查。","hint":"在数轴上标出 3，目标区间位于这个阈值的右侧。只计算支持区间内的部分。","remediation":"先确定目标区间的两个端点，再分别计算目标长度与总长度。请检查自己是否计算了补事件。","followups":[{"question":"为什么这里可以使用长度比？","answer":"本题密度在支持区间内为常数，区间面积等于统一高度乘以区间长度，因此概率可以写成目标长度与总长度的比值。"},{"question":"P(W > 3) 与 P(W ≥ 3) 是否相等？","answer":"两者相等。这个模型具有密度，P(W = 3) = 0，阈值本身不贡献概率。"}]},{"id":"q2a-answer","objectiveId":"density-normalization","type":"quiz","title":"Q2(a)：写出归一化证明","prompt":"S 的密度在 2 ≤ s ≤ 10 内为 k(s−2)(10−s)，其余位置为 0。原题要求证明 k = 3/256。请保留积分条件、计算过程和结论；目标数值本来就在题面中。","placement":{"selector":"#q2a > h4","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / QuizBlock","path":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png","evidenceLevel":"official-screenshot-and-source","adaptation":"采用 Books 开放题揭示参考与自评流程，补上可保留的学习者原答和逐项评价要点；不使用全文字符串比较判断证明。","relatedPaths":["web/components/quiz/QuizViewer.tsx","web/components/quiz/QuizFollowupTabBody.tsx","deeptutor/book/agents/page_planner.py"]},"solutionId":"solution-q2a","format":"open","modelAnswer":"由总概率为 1，k∫₂¹⁰(s−2)(10−s) ds = 1。展开得到 (s−2)(10−s) = −s² + 12s − 20。取原函数 G(s) = −s³/3 + 6s² − 20s，则 G(10) = 200/3，G(2) = −56/3。积分为 G(10) − G(2) = 256/3，因此 k·256/3 = 1，得到 k = 3/256。支持区间内两个因子非负，且求出的 k 为正，满足非负条件。","rubric":["原答把总概率为 1 写成支持区间 [2,10] 上的积分条件，并正确处理常数 k。","原答使用正确展开式和原函数，或者给出数学等价且可检查的代换积分过程。","原答正确计算上下限之差，得到不含 k 的总面积 256/3；负的下限值需要被减去。","原答由 k·256/3 = 1 推出 3/256；仅抄题面给出的结果不构成证明。"],"explanation":"本题评价重点是从归一化条件通向目标常数的证明过程。提交后请逐项对照自己的原答，选择明确标示为自评的结果；页面不会把解释文本自动判定为正确。","hint":"密度在支持区间以外为 0。先写总概率等于 1 的积分条件，再决定是否展开多项式。","remediation":"先单独计算不含 k 的积分，再回到归一化等式。上下限代入之后先分别写出数值，再执行相减。","followups":[{"question":"使用 t = s−2 代换，证明过程是否成立？","answer":"成立。代换后积分区间为 [0,8]，被积式变成 t(8−t)。积分得到 256/3，再用总概率条件求出 k。这种等价方法也满足评价要点。"},{"question":"为什么不能从题面给出的 k 值直接结束证明？","answer":"show that 要求给出支持目标结论的推导。目标数值帮助核对结果，但原答还需要说明积分条件、计算过程和解方程步骤。"}]},{"id":"q2b-answer","objectiveId":"quadratic-probability","type":"quiz","title":"Q2(b)：保留积分过程并求概率","prompt":"沿用上一问的密度，k = 3/256。求 P(S ≤ 4)。请写出积分上下限、原函数代入与最终概率；允许使用等价方法和等价分数。","placement":{"selector":"#q2b > h4","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / QuizBlock","path":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png","evidenceLevel":"official-screenshot-and-source","adaptation":"沿用 DeepTutor 开放题参考答案与自评机制；保留原题四分计算所需的过程空间，并围绕当前区间准备局部追问。","relatedPaths":["web/components/quiz/QuizViewer.tsx","web/components/quiz/QuizFollowupTabBody.tsx","deeptutor/book/agents/page_planner.py"]},"solutionId":"solution-q2b","format":"open","modelAnswer":"P(S ≤ 4) = (3/256)∫₂⁴(s−2)(10−s) ds。沿用原函数 G(s) = −s³/3 + 6s² − 20s，G(4) = −16/3，G(2) = −56/3，因此目标积分为 40/3。乘上 3/256 后，概率为 5/32，即 0.15625。","rubric":["原答把目标概率写成从 2 到 4 的积分，并代入 k = 3/256；支持区间外的零密度需要得到正确处理。","原答使用正确原函数或者等价代换方法，并计算上限值减下限值。","原答得到不含常数因子的目标积分 40/3，或者通过等价计算得到相同的加权面积。","原答包含最终概率 5/32 或 0.15625，并保持所有计算步骤与这个结果相符。"],"explanation":"这里的密度随 s 变化，目标概率由曲线下的面积给出。提交后请对照自己的积分区间、计算过程与最终概率进行自评。评价只涉及当前小问。","hint":"先查看密度的支持区间，再确定事件 S ≤ 4 与支持区间的交集；本题的密度不是常数。","remediation":"如果使用了区间长度比，请回到积分。先写出目标区间，随后沿用上一问的原函数，最后再乘归一化常数。","followups":[{"question":"为什么这里不能照搬均匀分布的长度比？","answer":"本题的密度在支持区间内随位置变化。相同长度可能覆盖不同高度，所以概率不能只由目标长度与总长度的比值决定。"},{"question":"原函数在端点上出现负数，会不会导致概率为负？","answer":"不会。定积分取上限值与下限值的差。原函数本身可以是负数；这里相减之后得到正面积，再乘正的归一化常数。"}]},{"id":"q2c-answer","objectiveId":"expectation","type":"quiz","title":"Q2(c)：输入平均旅程时间","prompt":"沿用密度 f(s) = (3/256)(s−2)(10−s)，2 ≤ s ≤ 10，其余位置为 0。原题要求 write down E(S)，单位为分钟。请输入数值；输入框无需填写单位。","placement":{"selector":"#q2c > h4","position":"after"},"source":{"repository":"HKUDS/DeepTutor","module":"Books / QuizBlock","path":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","commit":"42fab3cf429a1fbf36b257ab8d116a3814964202","case":"https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png","evidenceLevel":"official-screenshot-and-source","adaptation":"沿用 DeepTutor 就地题卡和当前题目追问机制；按原题 write down 的要求直接核对数值，在提交后提供对称性解释。 数值容差与等价分数识别是本次对简答输入的确定性实现，不归为 DeepTutor 原版评分能力。","relatedPaths":["web/components/quiz/QuizViewer.tsx","web/components/quiz/QuizFollowupTabBody.tsx","deeptutor/book/agents/page_planner.py"]},"solutionId":"solution-q2c","format":"numeric","answer":6,"tolerance":1e-06,"explanation":"E(S) = 6 分钟。将 s 替换为 12−s 后，两个因子互换，密度值保持相同，因此密度关于 6 对称。分布具有有限支持，期望存在并位于这个对称中心。","hint":"观察支持区间两端等距的位置：两个因子会怎样变化？","remediation":"比较距离两个端点相同的镜像位置。确认密度关于区间中点对称后，再确定期望。","followups":[{"question":"只知道支持区间是 [2,10]，就能断定期望是中点吗？","answer":"单凭支持区间不能断定。这里还需要密度的对称性；本题的两个因子在镜像位置互换，才支持期望位于中点。"},{"question":"归一化常数为什么没有改变对称中心？","answer":"常数对所有位置的密度进行同样的缩放，镜像两点仍然具有相同密度，因此对称中心不变。"},{"question":"用期望定义积分是否也成立？","answer":"成立。在支持区间上积分 s·f(s) 也得到 6。原题只要求写出结果，对称性提供更直接的判断。"}]}],"solutionWraps":[{"id":"solution-q1a","startSelector":"#q1a > h4","endSelector":"#q1b","summary":"查看 Q1(a) 完整解答"},{"id":"solution-q1b","startSelector":"#q1b > h4","endSelector":"#q1c","summary":"查看 Q1(b) 完整解答"},{"id":"solution-q1c","startSelector":"#q1c > h4","endSelector":"#q1c + .q","summary":"查看 Q1(c) 完整解答"},{"id":"solution-q2a","startSelector":"#q2a > h4","endSelector":"#q2b","summary":"查看 Q2(a) 完整解答"},{"id":"solution-q2b","startSelector":"#q2b > h4","endSelector":"#q2c","summary":"查看 Q2(b) 完整解答"},{"id":"solution-q2c","startSelector":"#q2c > h4","endSelector":"main > footer","summary":"查看 Q2(c) 完整解答"}]}</script><script id="dt-runtime">/* DialogueTutor portable learning interactions, contract v1.
+ * Design sources: HKUDS/DeepTutor Books FlashCardsBlock, QuizBlock,
+ * InteractiveBlock, PageReader, BookLearningOverlay; shared QuizViewer;
+ * learning/scheduler.py. This implementation is independent vanilla JS.
+ * Review intervals are a disclosed heuristic, not a fitted forgetting curve.
+ */
+(function (root, factory) {
+  "use strict";
+  var api = factory();
+  if (typeof module === "object" && module.exports) module.exports = api;
+  if (root && root.document) {
+    root.DialogueTutor = api;
+    var start = function () {
+      var data = root.document.getElementById("dt-lesson");
+      if (data && !api.instance) {
+        try { api.instance = api.mount(JSON.parse(data.textContent), root.document); }
+        catch (error) {
+          var target = root.document.querySelector("[data-dt-study]") || data.parentNode;
+          var notice = root.document.createElement("p");
+          notice.className = "dt-error";
+          notice.textContent = "学习活动载入错误：" + error.message;
+          target.appendChild(notice);
+        }
+      }
+    };
+    if (root.document.readyState === "loading") root.document.addEventListener("DOMContentLoaded", start, { once: true });
+    else start();
+  }
+})(typeof globalThis !== "undefined" ? globalThis : this, function () {
+  "use strict";
+  var DAY = 86400000;
+  var INTERVAL_DAYS = [1, 3, 7, 14, 30];
+  var TYPES = ["flashcards", "quiz", "steps", "explore", "interactive"];
+  var has = function (object, key) { return Object.prototype.hasOwnProperty.call(object, key); };
+  var copy = function (value) { return JSON.parse(JSON.stringify(value)); };
+  var clamp = function (value, lower, upper) { return Math.min(upper, Math.max(lower, value)); };
+  var finite = function (value) { return typeof value === "number" && Number.isFinite(value); };
+  var record = function (value) { return value !== null && typeof value === "object" && !Array.isArray(value); };
+  var safeId = function (value) { return typeof value === "string" && value.length > 0 && !["__proto__", "prototype", "constructor"].includes(value); };
+
+  function parseNumeric(value) {
+    if (typeof value === "number") return Number.isFinite(value) ? value : null;
+    if (typeof value !== "string") return null;
+    var input = value.trim().replace(/\u2212/g, "-");
+    var number = "[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+-]?\\d+)?";
+    if (new RegExp("^" + number + "$", "u").test(input)) {
+      var decimal = Number(input);
+      return Number.isFinite(decimal) ? decimal : null;
+    }
+    var fraction = input.match(new RegExp("^(" + number + ")\\s*/\\s*(" + number + ")$", "u"));
+    if (!fraction || Number(fraction[2]) === 0) return null;
+    var result = Number(fraction[1]) / Number(fraction[2]);
+    return Number.isFinite(result) ? result : null;
+  }
+
+  function evaluateQuiz(activity, answer) {
+    var text = String(answer == null ? "" : answer).trim();
+    if (!text) return { valid: false, correct: null, error: "empty" };
+    if (activity.format === "open") return { valid: true, correct: null, source: "self" };
+    if (activity.format === "choice") {
+      if (!activity.choices.some(function (choice) { return choice.id === text; })) return { valid: false, correct: null, error: "choice" };
+      return { valid: true, correct: text === String(activity.answer), source: "objective" };
+    }
+    var actual = parseNumeric(text);
+    var expected = parseNumeric(activity.answer);
+    if (actual === null || expected === null) return { valid: false, correct: null, error: "numeric" };
+    var tolerance = activity.tolerance === undefined ? 1e-8 : activity.tolerance;
+    return { valid: true, correct: Math.abs(actual - expected) <= tolerance, source: "objective" };
+  }
+
+  function scheduleReview(previous, evidence, now, sessionId) {
+    if (evidence.skipped) return previous ? copy(previous) : null;
+    var next = previous ? copy(previous) : null;
+    var failedOrAssisted = evidence.correct === false || evidence.assisted === true;
+    if (evidence.correct === null && !failedOrAssisted) return next;
+    if (!next || failedOrAssisted) {
+      return { intervalIndex: 0, dueAt: now + DAY, lastReviewedAt: now, lastSessionId: sessionId, evidenceSource: evidence.source };
+    }
+    // Early practice and repeated actions in this browser session do not move the due date.
+    if (evidence.correct === true && !evidence.assisted && now >= next.dueAt && next.lastSessionId !== sessionId) {
+      next.intervalIndex = Math.min(INTERVAL_DAYS.length - 1, next.intervalIndex + 1);
+      next.dueAt = now + INTERVAL_DAYS[next.intervalIndex] * DAY;
+      next.lastReviewedAt = now;
+      next.lastSessionId = sessionId;
+      next.evidenceSource = evidence.source;
+    }
+    return next;
+  }
+
+  function linearDensity(interval) {
+    if (!finite(Number(interval.a)) || !finite(Number(interval.b))) throw new Error("Invalid density interval");
+    var a = clamp(Number(interval.a), 0, 1);
+    var b = clamp(Number(interval.b), a, 1);
+    var cdf = function (x) { return x <= 0 ? 0 : x >= 1 ? 1 : 2 * x - x * x; };
+    return { a: a, b: b, fa: 2 - 2 * a, fb: 2 - 2 * b, cdfA: cdf(a), cdfB: cdf(b), probability: cdf(b) - cdf(a) };
+  }
+
+  function uniformDistribution(parameters) {
+    var lower = Number(parameters.lower), upper = Number(parameters.upper);
+    var eventA = Number(parameters.eventA), eventB = Number(parameters.eventB);
+    if (![lower, upper, eventA, eventB].every(Number.isFinite) || upper <= lower || eventB < eventA) throw new Error("Invalid uniform parameters");
+    var cdf = function (x) { return clamp((x - lower) / (upper - lower), 0, 1); };
+    return {
+      lower: lower, upper: upper, eventA: eventA, eventB: eventB,
+      height: 1 / (upper - lower), mean: (lower + upper) / 2,
+      clippedA: clamp(eventA, lower, upper), clippedB: clamp(eventB, lower, upper),
+      cdfA: cdf(eventA), cdfB: cdf(eventB), probability: cdf(eventB) - cdf(eventA)
+    };
+  }
+
+  function defaultExploration(model) {
+    return model === "linear-density" ? { a: 0.2, b: 0.5 } : { lower: 0, upper: 8, eventA: 2, eventB: 5 };
+  }
+
+  function updateParameter(model, parameters, key, value) {
+    var next = Object.assign({}, parameters);
+    if (!finite(Number(value)) || !has(next, key)) return next;
+    if (model === "linear-density") {
+      next[key] = clamp(Number(value), 0, 1);
+      if (key === "a") next.a = Math.min(next.a, next.b);
+      else next.b = Math.max(next.b, next.a);
+    } else {
+      next[key] = clamp(Number(value), -5, 10);
+      if (key === "lower") next.lower = Math.min(next.lower, next.upper - 0.1);
+      if (key === "upper") next.upper = Math.max(next.upper, next.lower + 0.1);
+      if (key === "eventA") next.eventA = Math.min(next.eventA, next.eventB);
+      if (key === "eventB") next.eventB = Math.max(next.eventB, next.eventA);
+      next[key] = Math.round(next[key] * 10000) / 10000;
+    }
+    return next;
+  }
+
+  function blankActivity(activity) {
+    return {
+      id: activity.id, objectiveId: activity.objectiveId, type: activity.type,
+      draft: "", status: "idle", answerRevealed: false, hintUsed: false,
+      exposure: null,
+      attempts: [], submittedAttemptId: null, review: null,
+      participated: false, lastInteractionAt: null, notes: "", bookmarked: false,
+      flash: { index: 0, cards: {} }, stepIndex: 0,
+      exploration: activity.type === "explore" ? defaultExploration(activity.model) : {}, explorationCount: 0
+    };
+  }
+
+  function createState(lesson, now) {
+    var activities = {};
+    lesson.activities.forEach(function (activity) { activities[activity.id] = blankActivity(activity); });
+    return { lessonId: lesson.lessonId, revision: lesson.revision, createdAt: now, updatedAt: now, currentActivity: null, activities: activities };
+  }
+
+  function flashCardState(state, index) {
+    if (!has(state.flash.cards, String(index))) state.flash.cards[String(index)] = {
+      revealed: false, hintUsed: false, rating: null, review: null, attemptId: null,
+      exposure: null, recallAssisted: false, recallSessionId: null
+    };
+    return state.flash.cards[String(index)];
+  }
+
+  function markExposure(previous, kind, now, sessionId) {
+    var next = previous && previous.sessionId === sessionId && !previous.inferred ? copy(previous) : {
+      sessionId: sessionId, hint: false, reference: false, observedAt: now, inferred: false
+    };
+    next[kind] = true;
+    next.observedAt = now;
+    next.inferred = false;
+    return next;
+  }
+
+  function exposureAssists(exposure, review, now, sessionId) {
+    if (!exposure || (!exposure.hint && !exposure.reference)) return false;
+    if (exposure.sessionId === sessionId) return true;
+    // An early new-tab retry is still practice after seeing the reference.
+    var nextIndependentAt = Math.max(review ? review.dueAt : 0, exposure.observedAt + DAY);
+    return now < nextIndependentAt;
+  }
+
+  function prepareSession(lesson, savedState, now, sessionId, previousState) {
+    var prepared = copy(savedState);
+    lesson.activities.forEach(function (activity) {
+      var saved = prepared.activities[activity.id];
+      var previous = previousState && previousState.activities[activity.id];
+      // Importing an older file must not erase references already seen in this open page.
+      if (previous && previous.exposure && previous.exposure.sessionId === sessionId) saved.exposure = copy(previous.exposure);
+      if (activity.type === "quiz") {
+        var submitted = saved.attempts.find(function (attempt) { return attempt.id === saved.submittedAttemptId; });
+        var pendingSelfReview = saved.status === "submitted" && submitted && submitted.source === "self" && submitted.correct === null;
+        // A due timestamp is not an attempt status: preserve an unfinished response.
+        if (saved.review && saved.review.dueAt <= now && saved.status === "submitted" && !pendingSelfReview) {
+          saved.status = "idle"; saved.draft = ""; saved.answerRevealed = false;
+          saved.hintUsed = false; saved.submittedAttemptId = null;
+        } else {
+          if (saved.answerRevealed) {
+            saved.exposure = markExposure(saved.exposure, "reference", now, sessionId);
+            // Feedback shown after a submitted response only constrains future attempts;
+            // it must not rewrite the pending response's original due-review eligibility.
+            if (!pendingSelfReview) saved.review = scheduleReview(saved.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
+          }
+          if (saved.hintUsed && activity.hint) {
+            saved.exposure = markExposure(saved.exposure, "hint", now, sessionId);
+            if (!pendingSelfReview) saved.review = scheduleReview(saved.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
+          }
+        }
+      }
+      if (activity.type === "flashcards") {
+        if (previous) Object.keys(previous.flash.cards).forEach(function (key) {
+          var oldCard = previous.flash.cards[key];
+          if (oldCard.exposure && oldCard.exposure.sessionId === sessionId) flashCardState(saved, Number(key)).exposure = copy(oldCard.exposure);
+        });
+        Object.keys(saved.flash.cards).forEach(function (key) {
+          var card = saved.flash.cards[key];
+          var oldCard = previous && previous.flash.cards[key];
+          if (oldCard && oldCard.exposure && oldCard.exposure.sessionId === sessionId) card.exposure = copy(oldCard.exposure);
+          if (card.review && card.review.dueAt <= now && card.rating !== null) {
+            card.revealed = false; card.hintUsed = false; card.rating = null; card.attemptId = null;
+            card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId);
+            card.recallSessionId = null;
+          } else if (Number(key) === saved.flash.index) {
+            if (card.revealed) {
+              card.exposure = markExposure(card.exposure, "reference", now, sessionId);
+              card.review = scheduleReview(card.review, { correct: null, assisted: true, source: "self" }, now, sessionId);
+            }
+            if (card.hintUsed && activity.cards[Number(key)].hint) {
+              card.exposure = markExposure(card.exposure, "hint", now, sessionId);
+              card.review = scheduleReview(card.review, { correct: null, assisted: true, source: "self" }, now, sessionId);
+            }
+          }
+        });
+      }
+    });
+    return prepared;
+  }
+
+  function reduceActivity(activity, current, event, now, sessionId) {
+    var state = copy(current);
+    var attempt, card, grade;
+    function makeAttempt(answer, correct, source, assisted, cardIndex) {
+      var result = { id: activity.id + ":" + now + ":" + (state.attempts.length + 1), answer: answer,
+        correct: correct, source: source, assisted: !!assisted, time: now, sessionId: sessionId };
+      if (cardIndex !== undefined) result.cardIndex = cardIndex;
+      state.attempts.push(result);
+      return result;
+    }
+    switch (event.type) {
+      case "draft":
+        if (state.status !== "idle") return state;
+        state.draft = String(event.value); break;
+      case "hint":
+        state.hintUsed = true;
+        state.exposure = markExposure(state.exposure, "hint", now, sessionId);
+        state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
+        break;
+      case "reveal":
+        if (!state.answerRevealed && state.status !== "submitted") {
+          state.review = scheduleReview(state.review, { correct: null, assisted: true, source: activity.format === "open" ? "self" : "objective" }, now, sessionId);
+        }
+        state.answerRevealed = true;
+        state.exposure = markExposure(state.exposure, "reference", now, sessionId);
+        break;
+      case "submit":
+        if (state.status !== "idle") return state;
+        grade = evaluateQuiz(activity, state.draft);
+        if (!grade.valid) return state;
+        attempt = makeAttempt(state.draft, grade.correct, grade.source, state.hintUsed || state.answerRevealed || exposureAssists(state.exposure, state.review, now, sessionId));
+        state.submittedAttemptId = attempt.id;
+        state.status = "submitted";
+        state.answerRevealed = true;
+        state.review = scheduleReview(state.review, attempt, now, sessionId);
+        // Freeze the just-submitted attempt before exposing its feedback.
+        state.exposure = markExposure(state.exposure, "reference", now, sessionId);
+        break;
+      case "self-assess":
+        if (activity.format !== "open" || state.status !== "submitted" || typeof event.correct !== "boolean") return state;
+        attempt = state.attempts.find(function (item) { return item.id === state.submittedAttemptId; });
+        if (!attempt || attempt.correct !== null) return state;
+        attempt.correct = event.correct;
+        attempt.selfRating = event.correct ? "meets-rubric" : "needs-practice";
+        attempt.assessedAt = now;
+        state.review = scheduleReview(state.review, attempt, now, sessionId);
+        break;
+      case "retry":
+        state.status = "idle"; state.draft = ""; state.answerRevealed = false; state.hintUsed = false; state.submittedAttemptId = null; break;
+      case "skip":
+        if (state.status !== "idle") return state;
+        state.status = "skipped"; break;
+      case "flash-index":
+        state.flash.index = clamp(event.index, 0, activity.cards.length - 1);
+        card = flashCardState(state, state.flash.index);
+        if (card.revealed) card.exposure = markExposure(card.exposure, "reference", now, sessionId);
+        if (card.hintUsed && activity.cards[state.flash.index].hint) card.exposure = markExposure(card.exposure, "hint", now, sessionId);
+        break;
+      case "flash-flip":
+        card = flashCardState(state, state.flash.index);
+        if (!card.revealed) {
+          card.recallAssisted = !!card.recallAssisted || exposureAssists(card.exposure, card.review, now, sessionId);
+          card.recallSessionId = sessionId;
+          card.exposure = markExposure(card.exposure, "reference", now, sessionId);
+        }
+        card.revealed = !card.revealed;
+        break;
+      case "flash-hint":
+        card = flashCardState(state, state.flash.index); card.hintUsed = true;
+        card.recallAssisted = true;
+        card.exposure = markExposure(card.exposure, "hint", now, sessionId);
+        card.review = scheduleReview(card.review, { correct: null, assisted: true, source: "self" }, now, sessionId);
+        break;
+      case "flash-rate":
+        card = flashCardState(state, state.flash.index);
+        if (!card.revealed || card.rating !== null || typeof event.correct !== "boolean") return state;
+        card.rating = event.correct ? "recalled" : "again";
+        attempt = makeAttempt(event.correct ? "自评：翻面前已回忆" : "自评：仍需回忆", event.correct, "self", card.hintUsed || card.recallAssisted || card.recallSessionId !== sessionId, state.flash.index);
+        card.attemptId = attempt.id;
+        card.review = scheduleReview(card.review, attempt, now, sessionId);
+        break;
+      case "flash-restart":
+        if (event.index !== undefined) state.flash.index = clamp(event.index, 0, activity.cards.length - 1);
+        card = flashCardState(state, state.flash.index);
+        card.revealed = false; card.hintUsed = false; card.rating = null; card.attemptId = null;
+        card.recallAssisted = exposureAssists(card.exposure, card.review, now, sessionId);
+        card.recallSessionId = null;
+        break;
+      case "step": state.stepIndex = clamp(event.index, 0, activity.steps.length - 1); break;
+      case "explore":
+        state.exploration = activity.type === "explore" ? updateParameter(activity.model, state.exploration, event.key, event.value) : copy(event.state || {});
+        state.explorationCount += 1; break;
+      case "explore-reset":
+        state.exploration = defaultExploration(activity.model); state.explorationCount += 1; break;
+      case "note": state.notes = String(event.value); break;
+      case "bookmark": state.bookmarked = !state.bookmarked; break;
+      default: return state;
+    }
+    if (!["bookmark", "draft"].includes(event.type)) state.participated = true;
+    state.lastInteractionAt = now;
+    return state;
+  }
+
+  function getReviews(lesson, state, now) {
+    var items = [];
+    lesson.activities.forEach(function (activity) {
+      var saved = state.activities[activity.id];
+      if (saved.review) items.push({ activityId: activity.id, title: activity.title, review: saved.review, due: saved.review.dueAt <= now });
+      Object.keys(saved.flash.cards).forEach(function (key) {
+        var card = saved.flash.cards[key];
+        if (card.review) items.push({ activityId: activity.id, cardIndex: Number(key), title: activity.title + " · " + (Number(key) + 1), review: card.review, due: card.review.dueAt <= now });
+      });
+    });
+    return items.sort(function (a, b) { return a.review.dueAt - b.review.dueAt; });
+  }
+
+  function evidenceSummary(lesson, state, now) {
+    var summary = { participated: 0, independentPassed: 0, selfReviewed: 0, due: 0, total: lesson.activities.length };
+    lesson.activities.forEach(function (activity) {
+      var saved = state.activities[activity.id];
+      if (saved.participated) summary.participated += 1;
+      if (saved.attempts.some(function (attempt) { return attempt.source === "objective" && attempt.correct === true && !attempt.assisted; })) summary.independentPassed += 1;
+      if (saved.attempts.some(function (attempt) { return attempt.source === "self" && attempt.correct !== null; })) summary.selfReviewed += 1;
+    });
+    summary.due = getReviews(lesson, state, now).filter(function (item) { return item.due; }).length;
+    return summary;
+  }
+
+  function reviewEvidenceKind(state, item) {
+    var saved = state.activities[item.activityId];
+    var attempts = saved.attempts.filter(function (attempt) { return item.cardIndex === undefined || attempt.cardIndex === item.cardIndex; });
+    if (!attempts.length) return item.cardIndex === undefined ? "not-attempted" : "not-self-reviewed";
+    var latest = attempts[attempts.length - 1];
+    if (latest.source === "self" && latest.correct === null) return "not-self-reviewed";
+    return latest.source;
+  }
+
+  function validateLesson(lesson) {
+    if (!record(lesson) || lesson.schemaVersion !== 1 || !safeId(lesson.lessonId) || !["string", "number"].includes(typeof lesson.revision)) throw new Error("Invalid lesson identity/version");
+    if (!Array.isArray(lesson.objectives) || !Array.isArray(lesson.activities)) throw new Error("Missing lesson objectives or activities");
+    var objectiveIds = new Set();
+    lesson.objectives.forEach(function (objective) {
+      if (!safeId(objective.id) || objectiveIds.has(objective.id)) throw new Error("Invalid or duplicate objective ID");
+      objectiveIds.add(objective.id);
+    });
+    var activityIds = new Set();
+    lesson.activities.forEach(function (activity) {
+      if (!safeId(activity.id) || activityIds.has(activity.id) || !objectiveIds.has(activity.objectiveId) || !TYPES.includes(activity.type)) throw new Error("Invalid activity identity/type");
+      activityIds.add(activity.id);
+      if (!(typeof activity.source === "string" && activity.source.trim()) && !(record(activity.source) && typeof activity.source.path === "string" && activity.source.path.trim())) throw new Error("Activity needs its DeepTutor source");
+      if (activity.type === "flashcards" && (!Array.isArray(activity.cards) || !activity.cards.length)) throw new Error("Flashcards need cards");
+      if (activity.type === "steps" && (!Array.isArray(activity.steps) || !activity.steps.length)) throw new Error("Steps need stages");
+      if (activity.type === "explore" && !["linear-density", "uniform"].includes(activity.model)) throw new Error("Unknown exploration model");
+      if (activity.type === "quiz") {
+        if (!["choice", "numeric", "open"].includes(activity.format)) throw new Error("Unknown quiz format");
+        if (activity.format === "choice" && (!Array.isArray(activity.choices) || !activity.choices.some(function (choice) { return choice.id === activity.answer; }))) throw new Error("Choice quiz needs a valid answer");
+        if (activity.format === "numeric" && (parseNumeric(activity.answer) === null || (activity.tolerance !== undefined && (!finite(activity.tolerance) || activity.tolerance < 0)))) throw new Error("Numeric quiz needs a finite answer and tolerance");
+      }
+    });
+    return lesson;
+  }
+
+  function exportEnvelope(lesson, state, now) {
+    return { kind: "dialoguetutor-progress", schemaVersion: 1, lessonId: lesson.lessonId, revision: lesson.revision, exportedAt: now, state: copy(state) };
+  }
+
+  function validateImport(lesson, value) {
+    var input = typeof value === "string" ? JSON.parse(value) : value;
+    if (!record(input) || input.kind !== "dialoguetutor-progress" || input.schemaVersion !== 1) throw new Error("记录格式或版本不匹配 / Invalid progress format");
+    if (input.lessonId !== lesson.lessonId || input.revision !== lesson.revision) throw new Error("课程身份或内容版本不匹配 / Lesson or revision mismatch");
+    var raw = input.state;
+    if (!record(raw) || raw.lessonId !== lesson.lessonId || raw.revision !== lesson.revision || !record(raw.activities)) throw new Error("记录身份字段缺失 / Invalid state identity");
+    if (!finite(raw.createdAt) || !finite(raw.updatedAt)) throw new Error("记录时间格式错误 / Invalid timestamp");
+    var definitions = new Map(lesson.activities.map(function (activity) { return [activity.id, activity]; }));
+    if (Object.keys(raw.activities).some(function (id) { return !definitions.has(id); })) throw new Error("记录含有其他活动 / Unknown activity");
+    if (raw.currentActivity !== null && !definitions.has(raw.currentActivity)) throw new Error("当前位置标识错误 / Unknown current activity");
+    var result = createState(lesson, raw.createdAt);
+    result.updatedAt = raw.updatedAt;
+    result.currentActivity = raw.currentActivity;
+    function validReview(review) {
+      return review === null || (record(review) && Number.isInteger(review.intervalIndex) && review.intervalIndex >= 0 && review.intervalIndex < INTERVAL_DAYS.length && finite(review.dueAt) && finite(review.lastReviewedAt) && typeof review.lastSessionId === "string" && ["self", "objective"].includes(review.evidenceSource));
+    }
+    function validExposure(exposure) {
+      return exposure === null || (record(exposure) && (exposure.sessionId === null || typeof exposure.sessionId === "string") && typeof exposure.hint === "boolean" && typeof exposure.reference === "boolean" && finite(exposure.observedAt) && typeof exposure.inferred === "boolean");
+    }
+    function legacyExposure(saved, latestAttempt, revealed) {
+      if (!saved.hintUsed && !revealed && !latestAttempt) return null;
+      // Older v1 files recorded display flags and attempts, but no exposure event.
+      // Keep that reconstruction explicitly inferred; observedAt is the snapshot time.
+      return {
+        sessionId: latestAttempt ? latestAttempt.sessionId : saved.review ? saved.review.lastSessionId : null,
+        hint: saved.hintUsed, reference: !!(revealed || latestAttempt), observedAt: raw.updatedAt, inferred: true
+      };
+    }
+    lesson.activities.forEach(function (activity) {
+      if (!has(raw.activities, activity.id)) return;
+      var saved = raw.activities[activity.id];
+      if (!record(saved) || saved.id !== activity.id || saved.objectiveId !== activity.objectiveId || saved.type !== activity.type) throw new Error("活动与学习目标不匹配 / Activity identity mismatch");
+      if (typeof saved.draft !== "string" || typeof saved.notes !== "string" || !["idle", "submitted", "skipped"].includes(saved.status) || !Array.isArray(saved.attempts)) throw new Error("作答记录格式错误 / Invalid response state");
+      if (![saved.answerRevealed, saved.hintUsed, saved.participated, saved.bookmarked].every(function (field) { return typeof field === "boolean"; })) throw new Error("活动状态标识错误 / Invalid state flags");
+      if (has(saved, "exposure") && !validExposure(saved.exposure)) throw new Error("参考接触记录格式错误 / Invalid exposure record");
+      if (!validReview(saved.review) || !record(saved.flash) || !record(saved.flash.cards) || !Number.isInteger(saved.flash.index)) throw new Error("复习记录格式错误 / Invalid review state");
+      if (saved.review && (activity.type !== "quiz" || saved.review.evidenceSource !== (activity.format === "open" ? "self" : "objective"))) throw new Error("复习证据类别不匹配 / Invalid review evidence source");
+      if (!Number.isInteger(saved.stepIndex) || saved.stepIndex < 0 || !Number.isInteger(saved.explorationCount) || saved.explorationCount < 0 || !record(saved.exploration)) throw new Error("探索记录格式错误 / Invalid exploration state");
+      if (saved.lastInteractionAt !== null && !finite(saved.lastInteractionAt)) throw new Error("活动时间格式错误 / Invalid activity timestamp");
+      var attemptIds = new Set();
+      saved.attempts.forEach(function (attempt) {
+        if (!record(attempt) || !safeId(attempt.id) || attemptIds.has(attempt.id) || typeof attempt.answer !== "string" || ![true, false, null].includes(attempt.correct) || !["self", "objective"].includes(attempt.source) || typeof attempt.assisted !== "boolean" || !finite(attempt.time) || typeof attempt.sessionId !== "string") throw new Error("尝试记录格式错误 / Invalid attempt");
+        if ((activity.type === "flashcards" || activity.format === "open") && attempt.source !== "self") throw new Error("自评证据类别不匹配 / Invalid self-report source");
+        if (activity.type === "quiz" && activity.format !== "open" && attempt.source !== "objective") throw new Error("自动核对证据类别不匹配 / Invalid automatic-check source");
+        if (activity.type !== "quiz" && activity.type !== "flashcards") throw new Error("探索活动不能含评分记录 / Exploration cannot contain scores");
+        if (activity.type === "flashcards" && (!Number.isInteger(attempt.cardIndex) || attempt.cardIndex < 0 || attempt.cardIndex >= activity.cards.length)) throw new Error("闪卡尝试标识错误 / Invalid flashcard attempt");
+        attemptIds.add(attempt.id);
+      });
+      if (saved.submittedAttemptId !== null && !attemptIds.has(saved.submittedAttemptId)) throw new Error("提交尝试标识错误 / Missing submitted attempt");
+      if (saved.status === "submitted" && !saved.submittedAttemptId) throw new Error("提交结果缺失 / Missing submitted result");
+      Object.keys(saved.flash.cards).forEach(function (key) {
+        var card = saved.flash.cards[key];
+        if (activity.type !== "flashcards" || !/^\d+$/.test(key) || Number(key) >= activity.cards.length || !record(card) || typeof card.revealed !== "boolean" || typeof card.hintUsed !== "boolean" || ![null, "recalled", "again"].includes(card.rating) || !validReview(card.review) || (card.review && card.review.evidenceSource !== "self") || (card.attemptId !== null && !attemptIds.has(card.attemptId))) throw new Error("闪卡记录格式错误 / Invalid flashcard state");
+        if ((has(card, "exposure") && !validExposure(card.exposure)) || (has(card, "recallAssisted") && typeof card.recallAssisted !== "boolean") || (has(card, "recallSessionId") && card.recallSessionId !== null && typeof card.recallSessionId !== "string")) throw new Error("闪卡回忆记录格式错误 / Invalid flashcard recall state");
+      });
+      if (activity.type === "flashcards" && (saved.flash.index < 0 || saved.flash.index >= activity.cards.length)) throw new Error("闪卡位置超出范围 / Invalid card index");
+      if (activity.type === "steps" && saved.stepIndex >= activity.steps.length) throw new Error("阶段位置超出范围 / Invalid stage index");
+      if (activity.type === "explore") {
+        if (activity.model === "linear-density") {
+          if (!finite(saved.exploration.a) || !finite(saved.exploration.b) || saved.exploration.a < 0 || saved.exploration.b > 1 || saved.exploration.a > saved.exploration.b) throw new Error("概率区间记录错误 / Invalid interval");
+        } else {
+          uniformDistribution(saved.exploration);
+          if (Object.keys(defaultExploration("uniform")).some(function (key) { return saved.exploration[key] < -5 || saved.exploration[key] > 10; })) throw new Error("均匀分布参数超出范围 / Invalid uniform range");
+        }
+      }
+      // Rebuild on a known shape; imported display strings are always rendered as text.
+      var clean = blankActivity(activity);
+      Object.keys(clean).forEach(function (key) { if (has(saved, key)) clean[key] = copy(saved[key]); });
+      if (activity.type === "quiz" && !has(saved, "exposure")) clean.exposure = legacyExposure(saved, saved.attempts[saved.attempts.length - 1], saved.answerRevealed);
+      if (activity.type === "flashcards") Object.keys(clean.flash.cards).forEach(function (key) {
+        var card = clean.flash.cards[key];
+        var attempts = clean.attempts.filter(function (attempt) { return attempt.cardIndex === Number(key); });
+        if (!has(card, "exposure")) card.exposure = legacyExposure(card, attempts[attempts.length - 1], card.revealed);
+        if (!has(card, "recallAssisted")) card.recallAssisted = false;
+        if (!has(card, "recallSessionId")) card.recallSessionId = null;
+      });
+      result.activities[activity.id] = clean;
+    });
+    return result;
+  }
+
+  function storageKey(lesson) { return "dialoguetutor:v1:" + encodeURIComponent(lesson.lessonId) + ":" + encodeURIComponent(String(lesson.revision)); }
+
+  function mount(lesson, doc, options) {
+    validateLesson(lesson);
+    options = options || {};
+    var win = doc.defaultView;
+    var en = /^en\b/i.test(lesson.language || "zh-CN");
+    var t = function (zh, english) { return en ? english : zh; };
+    var now = options.now || Date.now;
+    var sessionId = options.sessionId || "session-" + now() + "-" + Math.random().toString(36).slice(2);
+    var state = createState(lesson, now());
+    var key = storageKey(lesson), storage = null, storageMessage = "", panelMessage = "";
+    var views = new Map(), definitions = new Map();
+    lesson.activities.forEach(function (activity) { definitions.set(activity.id, activity); });
+    try {
+      storage = options.storage === undefined ? win.localStorage : options.storage;
+      var stored = storage && storage.getItem(key);
+      if (stored) state = validateImport(lesson, stored);
+    } catch (error) {
+      storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. You can keep working and export progress.");
+    }
+    state = prepareSession(lesson, state, now(), sessionId);
+    function closeDueSolutions() {
+      lesson.activities.forEach(function (activity) {
+        var saved = state.activities[activity.id];
+        if (activity.solutionId && saved.review && saved.review.dueAt <= now()) {
+          var solution = doc.getElementById(activity.solutionId);
+          if (solution) solution.open = false;
+        }
+      });
+    }
+    closeDueSolutions();
+
+    function el(tag, className, text) {
+      var node = doc.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined && text !== null) node.textContent = String(text);
+      return node;
+    }
+    function button(label, action, className, control) {
+      var node = el("button", "dt-button" + (className ? " " + className : ""), label);
+      node.type = "button";
+      if (control) node.dataset.dtControl = control;
+      node.addEventListener("click", action);
+      return node;
+    }
+    function message(view, text) { view.status.textContent = text; }
+    function dateLabel(time) { return new Date(time).toLocaleDateString(en ? "en-GB" : "zh-CN", { year: "numeric", month: "short", day: "numeric" }); }
+    function save() {
+      state.updatedAt = now();
+      try { if (storage) storage.setItem(key, JSON.stringify(exportEnvelope(lesson, state, now()))); else throw new Error("storage"); }
+      catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); }
+    }
+    function transition(activity, event, render) {
+      state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
+      state.currentActivity = activity.id;
+      save();
+      if (render !== false) renderActivity(activity);
+      renderPanel();
+      return state.activities[activity.id];
+    }
+    function announce(activity, text) { var view = views.get(activity.id); if (view) message(view, text); }
+    function pretty(value) { return Number(value.toFixed(5)).toLocaleString(en ? "en-GB" : "zh-CN", { maximumFractionDigits: 5 }); }
+
+    function renderFlash(activity, view, saved) {
+      var index = saved.flash.index;
+      var content = activity.cards[index];
+      var cardState = saved.flash.cards[String(index)] || { revealed: false, hintUsed: false, rating: null };
+      var caption = el("div", "dt-row dt-spread");
+      caption.append(el("span", "dt-small", t("先尝试回忆，再翻面核对。", "Try to recall before turning the card.")), el("span", "dt-counter", (index + 1) + " / " + activity.cards.length));
+      view.body.appendChild(caption);
+      var card = button("", function () { transition(activity, { type: "flash-flip" }); announce(activity, cardState.revealed ? t("问题正面", "Question side") : t("参考背面", "Answer side")); }, "dt-flashcard" + (cardState.revealed ? " dt-flashcard-back" : ""), "flash-flip");
+      card.setAttribute("aria-label", (cardState.revealed ? t("参考答案：", "Reference answer: ") : t("回忆问题：", "Recall question: ")) + (cardState.revealed ? content.back : content.front));
+      card.append(el("span", "dt-eyebrow", cardState.revealed ? t("参考背面", "Answer side") : t("回忆正面", "Question side")), el("span", "dt-flashcard-text", cardState.revealed ? content.back : content.front), el("span", "dt-small", t("点击或按回车翻面", "Click or press Enter to turn")));
+      view.body.appendChild(card);
+      if (content.hint) {
+        if (cardState.hintUsed) view.body.appendChild(el("p", "dt-hint", content.hint));
+        else view.body.appendChild(button(t("查看提示", "Show hint"), function () { transition(activity, { type: "flash-hint" }); }, "dt-button-quiet", "flash-hint"));
+      }
+      var navigation = el("div", "dt-row dt-spread");
+      var prev = button(t("上一张", "Previous card"), function () { transition(activity, { type: "flash-index", index: index - 1 }); }, "", "flash-prev");
+      var next = button(t("下一张", "Next card"), function () { transition(activity, { type: "flash-index", index: index + 1 }); }, "", "flash-next");
+      prev.disabled = index === 0; next.disabled = index === activity.cards.length - 1;
+      navigation.append(prev, next); view.body.appendChild(navigation);
+      if (cardState.revealed) {
+        var rating = el("div", "dt-self-rating");
+        rating.appendChild(el("p", "dt-small", t("自评记录：依据翻面之前的回忆作出选择。", "Self-report: rate what you recalled before turning the card.")));
+        var good = button(t("自评：翻面前已回忆", "Self-report: recalled before turning"), function () { transition(activity, { type: "flash-rate", correct: true }); }, "dt-button-primary", "flash-good");
+        var again = button(t("自评：继续练习", "Self-report: practise again"), function () { transition(activity, { type: "flash-rate", correct: false }); }, "", "flash-again");
+        good.disabled = again.disabled = cardState.rating !== null;
+        rating.append(good, again);
+        if (cardState.rating !== null) rating.appendChild(el("p", "dt-small", cardState.rating === "recalled" ? t("已保存「翻面前已回忆」自评；这不是自动核对结果。", "Saved your recalled-before-turning rating; this is not an automatically checked result.") : t("已保存「继续练习」自评。", "Saved your practise-again rating.")));
+        if (cardState.rating !== null && cardState.attemptId) {
+          var cardAttempt = saved.attempts.find(function (item) { return item.id === cardState.attemptId; });
+          if (cardAttempt && cardAttempt.assisted) rating.appendChild(el("p", "dt-small", t("本次回忆已接触提示或参考，保留辅助标识；同会话重复核对不会成为独立回忆。", "This recall followed hint or reference exposure and is marked assisted; same-session checking does not become independent recall.")));
+        }
+        view.body.appendChild(rating);
+      }
+      if (cardState.rating !== null) view.body.appendChild(button(t("再次回忆本卡", "Recall this card again"), function () { transition(activity, { type: "flash-restart" }); }, "dt-button-quiet", "flash-restart"));
+      if (cardState.review) view.body.appendChild(el("p", "dt-small", t("本卡复习：", "Review this card: ") + dateLabel(cardState.review.dueAt)));
+    }
+
+    function quizReference(activity, body, saved) {
+      if (!saved.answerRevealed) return;
+      var reference = el("div", "dt-reference");
+      reference.appendChild(el("h4", "dt-small-heading", t("参考与解析", "Reference and explanation")));
+      var answer;
+      if (activity.format === "choice") {
+        var choice = activity.choices.find(function (item) { return item.id === String(activity.answer); });
+        answer = choice ? choice.text : activity.answer;
+      } else answer = activity.format === "open" ? activity.modelAnswer || activity.answer : activity.answer;
+      if (answer !== undefined) {
+        var answerLine = el("p", "dt-reference-answer");
+        if (activity.format === "numeric" && typeof answer === "string" && answer.includes("/") && parseNumeric(answer) !== null) {
+          var mathNamespace = "http://www.w3.org/1998/Math/MathML";
+          var math = doc.createElementNS(mathNamespace, "math");
+          var fraction = doc.createElementNS(mathNamespace, "mfrac");
+          answer.split("/").forEach(function (part) {
+            var number = doc.createElementNS(mathNamespace, "mn");
+            number.textContent = part.trim(); fraction.appendChild(number);
+          });
+          math.appendChild(fraction); answerLine.appendChild(math);
+        } else answerLine.textContent = String(answer);
+        reference.appendChild(answerLine);
+      }
+      if (activity.explanation) reference.appendChild(el("p", "", activity.explanation));
+      if (activity.format === "open" && activity.rubric && activity.rubric.length) {
+        reference.appendChild(el("h4", "dt-small-heading", t("自评要点", "Self-review criteria")));
+        var list = el("ul", "dt-rubric");
+        activity.rubric.forEach(function (criterion) { list.appendChild(el("li", "", criterion)); });
+        reference.appendChild(list);
+      }
+      body.appendChild(reference);
+    }
+
+    function renderQuiz(activity, view, saved) {
+      var form = el("form", "dt-quiz");
+      var locked = saved.status !== "idle";
+      var input, submit;
+      var controls = [];
+      var error = el("p", "dt-error"); error.setAttribute("role", "status");
+      if (activity.format === "choice") {
+        var fieldset = el("fieldset", "dt-choices");
+        var legend = el("legend", "dt-sr", t("选择一个答案，然后提交", "Choose one answer, then submit"));
+        fieldset.appendChild(legend);
+        activity.choices.forEach(function (choice, index) {
+          var label = el("label", "dt-choice" + (saved.draft === choice.id ? " dt-choice-selected" : ""));
+          var radio = el("input", "dt-radio");
+          radio.type = "radio"; radio.name = "dt-choice-" + activity.id; radio.value = choice.id;
+          radio.checked = saved.draft === choice.id; radio.disabled = locked;
+          radio.dataset.dtControl = "choice-" + index;
+          radio.addEventListener("change", function () {
+            transition(activity, { type: "draft", value: choice.id }, false);
+            Array.from(fieldset.querySelectorAll(".dt-choice")).forEach(function (item) { item.classList.toggle("dt-choice-selected", item.contains(radio)); });
+            submit.disabled = false;
+          });
+          label.append(radio, el("span", "dt-choice-label", choice.text)); fieldset.appendChild(label); controls.push(radio);
+        });
+        form.appendChild(fieldset);
+      } else {
+        var label = el("label", "dt-input-label", activity.format === "open" ? t("写下你的解释", "Write your explanation") : t("填写数值，可使用小数或简单分数", "Enter a decimal or a simple fraction"));
+        input = el(activity.format === "open" ? "textarea" : "input", "dt-input");
+        if (activity.format === "open") input.rows = 5;
+        else { input.type = "text"; input.inputMode = "text"; input.autocomplete = "off"; input.spellcheck = false; }
+        input.value = saved.draft; input.disabled = locked;
+        input.dataset.dtControl = "answer";
+        input.addEventListener("input", function () { transition(activity, { type: "draft", value: input.value }, false); submit.disabled = !input.value.trim(); error.textContent = ""; });
+        label.appendChild(input); form.appendChild(label); controls.push(input);
+      }
+      var actions = el("div", "dt-row");
+      submit = button(t("提交作答", "Submit answer"), function () {}, "dt-button-primary", "submit");
+      submit.type = "submit"; submit.disabled = locked || !saved.draft.trim();
+      actions.appendChild(submit);
+      if (!locked) actions.appendChild(button(t("暂时跳过", "Skip for now"), function () { transition(activity, { type: "skip" }); announce(activity, t("已跳过，没有计入答错。", "Skipped; no incorrect attempt was recorded.")); }, "dt-button-quiet", "skip"));
+      form.append(actions, error);
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Native details toggle events may arrive after the submit event.
+        var visibleSolution = activity.solutionId && doc.getElementById(activity.solutionId);
+        if (visibleSolution && visibleSolution.open && !state.activities[activity.id].answerRevealed) transition(activity, { type: "reveal" }, false);
+        var current = state.activities[activity.id];
+        var result = evaluateQuiz(activity, current.draft);
+        if (!result.valid) {
+          error.textContent = result.error === "numeric" ? t("请输入有限数值，例如 0.375 或 3/8。", "Enter a finite number such as 0.375 or 3/8.") : t("请先填写作答。", "Enter an answer first.");
+          if (input) input.focus(); return;
+        }
+        transition(activity, { type: "submit" });
+        announce(activity, result.correct === null ? t("回答已保存，请依据参考要点自行评价。", "Response saved. Compare it with the criteria and self-review.") : result.correct ? t("数值或选项核对通过。", "Your answer matches the reference.") : t("本次作答与参考不符，请阅读反馈。", "Your answer differs from the reference. Read the feedback."));
+      });
+      view.body.appendChild(form);
+      if (saved.status === "skipped") view.body.appendChild(el("p", "dt-feedback", t("本题已暂时跳过，没有计入答错。", "Skipped for now; no incorrect attempt was recorded.")));
+      var attempt = saved.attempts.find(function (item) { return item.id === saved.submittedAttemptId; });
+      if (attempt) {
+        var feedback = el("div", "dt-feedback" + (attempt.correct === true ? " dt-feedback-good" : attempt.correct === false ? " dt-feedback-again" : ""));
+        feedback.tabIndex = -1;
+        var status = attempt.source === "self" ? (attempt.correct === null ? t("回答已保存，等待自行评价", "Response saved; self-review pending") : attempt.correct ? t("自评：达到要点", "Self-report: meets the criteria") : t("自评：仍需练习", "Self-report: more practice needed")) : attempt.correct ? (attempt.assisted ? t("参考辅助后核对通过", "Correct with assistance") : t("独立作答核对通过", "Correct without assistance")) : t("本次作答需要修正", "This answer needs revision");
+        feedback.appendChild(el("strong", "", status));
+        if (attempt.assisted) feedback.appendChild(el("p", "dt-small", t("本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。", "This attempt followed hint or reference exposure, including feedback from an earlier attempt in this session; it is marked assisted.")));
+        if (activity.format === "choice") {
+          var picked = activity.choices.find(function (choice) { return choice.id === attempt.answer; });
+          if (picked && picked.feedback) feedback.appendChild(el("p", "", picked.feedback));
+        }
+        view.body.appendChild(feedback);
+      }
+      if (activity.hint && !saved.hintUsed && !locked) view.body.appendChild(button(t("查看提示（记录辅助）", "Show hint (marks assistance)"), function () { transition(activity, { type: "hint" }); }, "dt-button-quiet", "hint"));
+      if (saved.hintUsed && activity.hint) view.body.appendChild(el("p", "dt-hint", activity.hint));
+      if (!saved.answerRevealed) view.body.appendChild(button(t("直接查看参考", "Reveal reference"), function () {
+        transition(activity, { type: "reveal" }); announce(activity, t("参考已展开；后续提交会标记参考辅助。", "Reference revealed; a later submission will be marked assisted."));
+      }, "dt-button-quiet", "reveal"));
+      quizReference(activity, view.body, saved);
+      if (attempt && activity.format === "open") {
+        var self = el("div", "dt-self-rating");
+        self.appendChild(el("p", "dt-small", t("以下结果来自你的自评；页面不会用字面匹配判断解释质量。", "These are your self-reports; this page does not string-match explanations.")));
+        [true, false].forEach(function (correct) {
+          var rating = button(correct ? t("自评：达到要点", "Self-report: meets criteria") : t("自评：仍需练习", "Self-report: needs practice"), function () { transition(activity, { type: "self-assess", correct: correct }); }, correct ? "dt-button-primary" : "", correct ? "self-good" : "self-again");
+          rating.disabled = attempt.correct !== null; self.appendChild(rating);
+        });
+        view.body.appendChild(self);
+      }
+      if (attempt && attempt.correct === false && activity.remediation) {
+        var remediation = el("details", "dt-followup");
+        remediation.appendChild(el("summary", "", t("针对本题的预备补充解释", "Prepared explanation for this question")));
+        if (typeof activity.remediation === "string") remediation.appendChild(el("p", "", activity.remediation));
+        else if (activity.remediation.bodyHtml) { var authored = el("div", "dt-authored"); authored.innerHTML = activity.remediation.bodyHtml; remediation.appendChild(authored); }
+        else remediation.appendChild(el("p", "", activity.remediation.text || activity.remediation.body || ""));
+        view.body.appendChild(remediation);
+      }
+      if (locked || saved.answerRevealed) view.body.appendChild(button(t("重新作答", "Try again"), function () {
+        if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
+        transition(activity, { type: "retry" }); announce(activity, t("已开始新尝试；本会话已有的提示或参考接触仍记为辅助。", "New attempt started; hints or references already seen in this session remain assistance."));
+      }, "", "retry"));
+      if (saved.review) view.body.appendChild(el("p", "dt-small", t("本题复习：", "Review this question: ") + dateLabel(saved.review.dueAt)));
+    }
+
+    function renderSteps(activity, view, saved) {
+      var index = saved.stepIndex, step = activity.steps[index];
+      var markers = el("ol", "dt-step-markers");
+      activity.steps.forEach(function (item, i) {
+        var marker = el("li", "");
+        var jump = button((i + 1) + ". " + item.title, function () { transition(activity, { type: "step", index: i }); }, i === index ? "dt-step-current" : "", "step-" + i);
+        if (i === index) jump.setAttribute("aria-current", "step");
+        marker.appendChild(jump); markers.appendChild(marker);
+      });
+      var stage = el("div", "dt-step-stage dt-authored");
+      stage.appendChild(el("h4", "dt-small-heading", step.title));
+      var body = el("div", ""); body.innerHTML = step.bodyHtml; stage.appendChild(body);
+      view.body.append(markers, stage);
+      var nav = el("div", "dt-row");
+      var prev = button(t("上一步", "Previous step"), function () { transition(activity, { type: "step", index: index - 1 }); }, "", "step-prev"); prev.disabled = index === 0;
+      var next = button(t("下一步", "Next step"), function () { transition(activity, { type: "step", index: index + 1 }); }, "dt-button-primary", "step-next"); next.disabled = index === activity.steps.length - 1;
+      nav.append(prev, next, button(t("回到起点", "Reset steps"), function () { transition(activity, { type: "step", index: 0 }); }, "dt-button-quiet", "step-reset"));
+      view.body.append(nav, el("p", "dt-small", t("分步浏览记录探索过程，不作为答题通过证据。", "Step navigation records exploration, not a passed answer.")));
+    }
+
+    function svgElement(tag, attributes, text) {
+      var node = doc.createElementNS("http://www.w3.org/2000/svg", tag);
+      Object.keys(attributes || {}).forEach(function (key) { node.setAttribute(key, String(attributes[key])); });
+      if (text !== undefined) node.textContent = String(text);
+      return node;
+    }
+    function graph(title, xMin, xMax, yMax, curvePoints, shadePoints, markers, ticks) {
+      var svg = svgElement("svg", { viewBox: "0 0 420 252", role: "img", "aria-label": title, class: "dt-graph" });
+      svg.appendChild(svgElement("title", {}, title));
+      var x = function (value) { return 49 + (value - xMin) / (xMax - xMin) * 345; };
+      var y = function (value) { return 207 - value / yMax * 159; };
+      svg.appendChild(svgElement("text", { x: 49, y: 23, class: "dt-graph-title" }, title));
+      [0, yMax / 2, yMax].forEach(function (value) {
+        svg.appendChild(svgElement("line", { x1: 49, y1: y(value), x2: 394, y2: y(value), class: "dt-graph-grid" }));
+        svg.appendChild(svgElement("text", { x: 42, y: y(value) + 4, "text-anchor": "end", class: "dt-graph-label" }, pretty(value)));
+      });
+      svg.appendChild(svgElement("path", { d: "M49 43V207H398", class: "dt-graph-axis", fill: "none" }));
+      (ticks || [xMin, (xMin + xMax) / 2, xMax]).forEach(function (value) {
+        svg.appendChild(svgElement("line", { x1: x(value), y1: 207, x2: x(value), y2: 212, class: "dt-graph-axis" }));
+        svg.appendChild(svgElement("text", { x: x(value), y: 230, "text-anchor": "middle", class: "dt-graph-label" }, pretty(value)));
+      });
+      if (shadePoints && shadePoints.length) svg.appendChild(svgElement("polygon", { points: shadePoints.map(function (point) { return x(point[0]) + "," + y(point[1]); }).join(" "), class: "dt-graph-area" }));
+      svg.appendChild(svgElement("polyline", { points: curvePoints.map(function (point) { return x(point[0]) + "," + y(point[1]); }).join(" "), class: "dt-graph-curve", fill: "none" }));
+      (markers || []).forEach(function (point, index) {
+        svg.appendChild(svgElement("line", { x1: x(point[0]), y1: 207, x2: x(point[0]), y2: y(point[1]), class: "dt-graph-guide" }));
+        svg.appendChild(svgElement("circle", { cx: x(point[0]), cy: y(point[1]), r: 4.4, class: index ? "dt-graph-dot dt-graph-dot-second" : "dt-graph-dot" }));
+      });
+      return svg;
+    }
+
+    function renderExplore(activity, view, saved) {
+      if (activity.instructions) view.body.appendChild(el("p", "dt-small", activity.instructions));
+      var plot = el("div", "dt-plots"), values = el("div", "dt-metrics"), controls = el("div", "dt-parameters");
+      var inputs = {};
+      var linear = activity.model === "linear-density";
+      var specifications = linear ? [["a", t("区间起点 a", "Interval start a"), 0, 1, 0.01], ["b", t("区间终点 b", "Interval end b"), 0, 1, 0.01]] : [["lower", t("分布左界 L", "Support lower bound L"), -5, 10, 0.1], ["upper", t("分布右界 U", "Support upper bound U"), -5, 10, 0.1], ["eventA", t("事件起点 a", "Event start a"), -5, 10, 0.1], ["eventB", t("事件终点 b", "Event end b"), -5, 10, 0.1]];
+      specifications.forEach(function (spec) {
+        var label = el("label", "dt-parameter");
+        var row = el("span", "dt-row dt-spread");
+        var output = el("output", "dt-parameter-value");
+        var range = el("input", "dt-range");
+        range.type = "range"; range.min = String(spec[2]); range.max = String(spec[3]); range.step = String(spec[4]); range.value = saved.exploration[spec[0]];
+        range.dataset.dtControl = "parameter-" + spec[0];
+        row.append(el("span", "", spec[1]), output); label.append(row, range); controls.appendChild(label);
+        inputs[spec[0]] = { input: range, output: output };
+        range.addEventListener("input", function () {
+          transition(activity, { type: "explore", key: spec[0], value: Number(range.value) }, false); update();
+        });
+      });
+      view.body.append(controls, plot, values);
+      view.body.appendChild(button(t("恢复初始参数", "Reset parameters"), function () { transition(activity, { type: "explore-reset" }, false); update(); }, "dt-button-quiet", "explore-reset"));
+      view.body.appendChild(el("p", "dt-small", t("参数变化记录为探索，不计入独立答对。", "Parameter changes count as exploration, not independent correct answers.")));
+      function metric(label, value) { var cell = el("div", "dt-metric"); cell.append(el("span", "dt-small", label), el("strong", "", value)); values.appendChild(cell); }
+      function update() {
+        var parameters = state.activities[activity.id].exploration;
+        Object.keys(inputs).forEach(function (name) { inputs[name].input.value = String(parameters[name]); inputs[name].input.setAttribute("aria-valuetext", pretty(parameters[name])); inputs[name].output.textContent = pretty(parameters[name]); });
+        plot.replaceChildren(); values.replaceChildren();
+        if (linear) {
+          var result = linearDensity(parameters);
+          plot.appendChild(graph("f(x) = 2 − 2x", 0, 1, 2, [[0, 2], [1, 0]], [[result.a, 0], [result.a, result.fa], [result.b, result.fb], [result.b, 0]], [[result.a, result.fa], [result.b, result.fb]], [0, 0.25, 0.5, 0.75, 1]));
+          var cdf = []; for (var i = 0; i <= 40; i++) { var point = i / 40; cdf.push([point, 2 * point - point * point]); }
+          plot.appendChild(graph("F(x) = 2x − x²", 0, 1, 1, cdf, null, [[result.a, result.cdfA], [result.b, result.cdfB]], [0, 0.25, 0.5, 0.75, 1]));
+          metric("F(a)", pretty(result.cdfA)); metric("F(b)", pretty(result.cdfB)); metric("P(a ≤ X ≤ b) = F(b) − F(a)", pretty(result.probability));
+        } else {
+          var distribution = uniformDistribution(parameters);
+          var ceiling = Math.max(0.5, distribution.height * 1.2);
+          plot.appendChild(graph(t("均匀分布密度", "Uniform density"), -5, 10, ceiling, [[-5, 0], [distribution.lower, 0], [distribution.lower, distribution.height], [distribution.upper, distribution.height], [distribution.upper, 0], [10, 0]], [[distribution.clippedA, 0], [distribution.clippedA, distribution.height], [distribution.clippedB, distribution.height], [distribution.clippedB, 0]], null, [-5, 0, 5, 10]));
+          plot.appendChild(graph(t("累积概率 F(x)", "Cumulative probability F(x)"), -5, 10, 1, [[-5, 0], [distribution.lower, 0], [distribution.upper, 1], [10, 1]], null, [[distribution.eventA, distribution.cdfA], [distribution.eventB, distribution.cdfB]], [-5, 0, 5, 10]));
+          metric(t("密度高度", "Density height"), pretty(distribution.height)); metric(t("均值（端点的平均值）", "Mean (midpoint of the support)"), pretty(distribution.mean)); metric("P(a ≤ X ≤ b)", pretty(distribution.probability));
+        }
+      }
+      update();
+    }
+
+    function followups(activity, view) {
+      if (!activity.followups || !activity.followups.length) return;
+      var group = el("div", "dt-followups");
+      group.appendChild(el("h4", "dt-small-heading", t("继续理解 · 预先准备的解释", "Go further · prepared explanations")));
+      activity.followups.forEach(function (followup) {
+        var details = el("details", "dt-followup");
+        details.append(el("summary", "", followup.question), el("p", "", followup.answer)); group.appendChild(details);
+      });
+      view.body.appendChild(group);
+    }
+
+    function renderActivity(activity) {
+      var view = views.get(activity.id); if (!view) return;
+      var saved = state.activities[activity.id];
+      var focus = view.body.contains(doc.activeElement) ? doc.activeElement.dataset.dtControl : null;
+      // Custom widget nodes retain their own event listeners and DOM state.
+      if (activity.type !== "interactive" || !view.customMounted) {
+        if (win.MathJax && typeof win.MathJax.typesetClear === "function") win.MathJax.typesetClear([view.body]);
+        view.body.replaceChildren();
+        if (activity.type === "flashcards") renderFlash(activity, view, saved);
+        else if (activity.type === "quiz") renderQuiz(activity, view, saved);
+        else if (activity.type === "steps") renderSteps(activity, view, saved);
+        else if (activity.type === "explore") renderExplore(activity, view, saved);
+        else {
+          var authored = el("div", "dt-authored dt-custom"); authored.innerHTML = activity.bodyHtml;
+          view.body.appendChild(authored); view.customMounted = true;
+        }
+        // Quiz follow-ups can contain the solution and therefore appear only after reveal.
+        if (activity.type !== "quiz" || saved.answerRevealed) followups(activity, view);
+        if (win.MathJax && typeof win.MathJax.typesetPromise === "function") win.MathJax.typesetPromise([view.body]).catch(function () {});
+      }
+      view.bookmark.textContent = saved.bookmarked ? t("已收藏", "Bookmarked") : t("收藏活动", "Bookmark activity");
+      view.bookmark.setAttribute("aria-pressed", String(saved.bookmarked));
+      if (doc.activeElement !== view.noteInput) view.noteInput.value = saved.notes;
+      if (focus) {
+        var candidates = Array.from(view.body.querySelectorAll("[data-dt-control]"));
+        var target = candidates.find(function (item) { return item.dataset.dtControl === focus && !item.disabled; });
+        if (target) target.focus({ preventScroll: true });
+        else { var feedback = view.body.querySelector(".dt-feedback"); if (feedback) feedback.focus({ preventScroll: true }); }
+      }
+    }
+
+    function conversationText(activity) {
+      var saved = state.activities[activity.id];
+      var selection = win.getSelection && String(win.getSelection()).trim();
+      var lines = [t("课程：", "Lesson: ") + lesson.title, t("活动：", "Activity: ") + activity.title, t("问题：", "Question: ") + activity.prompt];
+      if (selection) lines.push(t("选中内容：", "Selected text: ") + selection);
+      if (saved.draft) lines.push(t("我的作答：", "My response: ") + saved.draft);
+      if (activity.type === "flashcards") {
+        var card = activity.cards[saved.flash.index], cardState = saved.flash.cards[String(saved.flash.index)];
+        lines.push(t("当前闪卡：", "Current card: ") + card.front);
+        if (cardState && cardState.revealed) lines.push(t("已查看的参考：", "Revealed reference: ") + card.back);
+      }
+      if (saved.answerRevealed && activity.explanation) lines.push(t("已查看的解析：", "Revealed explanation: ") + activity.explanation);
+      if (activity.type === "explore" || activity.type === "interactive") lines.push(t("探索参数：", "Exploration state: ") + JSON.stringify(saved.exploration));
+      if (saved.notes) lines.push(t("我的笔记：", "My note: ") + saved.notes);
+      lines.push(t("请围绕以上上下文继续解释我的疑问：", "Please help me explore this question in the context above: "));
+      return lines.join("\n\n");
+    }
+
+    function notifyCustomRestore() {
+      lesson.activities.filter(function (activity) { return activity.type === "interactive" && views.has(activity.id); }).forEach(function (activity) {
+        doc.dispatchEvent(new win.CustomEvent("dt:restore", { detail: { activityId: activity.id, state: copy(state.activities[activity.id].exploration) } }));
+      });
+    }
+
+    function createActivityView(activity, target) {
+      target.classList.add("dt-activity");
+      target.setAttribute("role", "group"); target.setAttribute("aria-label", activity.title);
+      target.dataset.dtMounted = "true";
+      if (!target.id) target.id = "dt-activity-" + activity.id;
+      var header = el("div", "dt-activity-heading");
+      var typeLabels = { flashcards: t("回忆闪卡", "Recall cards"), quiz: t("就地自测", "Quick check"), steps: t("分步探索", "Step through"), explore: t("参数探索", "Explore parameters"), interactive: t("交互探索", "Interactive exploration") };
+      header.append(el("span", "dt-eyebrow", typeLabels[activity.type]), el("h3", "dt-activity-title", activity.title));
+      var prompt = el("p", "dt-prompt", activity.prompt);
+      var body = el("div", "dt-activity-body"), footer = el("div", "dt-activity-footer");
+      var bookmark = button(t("收藏活动", "Bookmark activity"), function () { transition(activity, { type: "bookmark" }, false); renderActivity(activity); }, "dt-button-quiet", "bookmark");
+      var note = el("details", "dt-note");
+      note.appendChild(el("summary", "", t("本地笔记", "Local note")));
+      var noteLabel = el("label", "dt-input-label", t("写下疑问、思路或容易混淆的地方", "Record questions, reasoning or points of confusion"));
+      var noteInput = el("textarea", "dt-input"); noteInput.rows = 3; noteInput.value = state.activities[activity.id].notes;
+      noteInput.addEventListener("input", function () { transition(activity, { type: "note", value: noteInput.value }, false); });
+      noteLabel.appendChild(noteInput); note.appendChild(noteLabel);
+      note.appendChild(button(t("保存笔记", "Save note"), function () { transition(activity, { type: "note", value: noteInput.value }, false); announce(activity, storageMessage || t("笔记已保存在当前浏览器。", "Note saved in this browser.")); }, "", "note-save"));
+      var copyButton = button(t("复制上下文，继续对话", "Copy context to continue in chat"), async function () {
+        var content = conversationText(activity);
+        try {
+          if (!win.navigator.clipboard || !win.navigator.clipboard.writeText) throw new Error("clipboard");
+          await win.navigator.clipboard.writeText(content);
+          announce(activity, t("上下文已复制，请粘贴到原对话继续提问。", "Context copied. Paste it into your conversation to continue."));
+        } catch (error) {
+          var fallback = view.footer.querySelector(".dt-copy-fallback");
+          if (!fallback) { fallback = el("textarea", "dt-input dt-copy-fallback"); fallback.rows = 8; fallback.readOnly = true; fallback.setAttribute("aria-label", t("请手动复制这些上下文", "Copy this context manually")); view.footer.appendChild(fallback); }
+          fallback.value = content; fallback.focus(); fallback.select();
+          announce(activity, t("上下文已选中，请使用复制快捷键后粘贴到原对话。", "Context selected. Copy it and paste it into your conversation."));
+        }
+      }, "dt-button-quiet", "copy-context");
+      var row = el("div", "dt-row"); row.append(bookmark, copyButton); footer.append(row, note);
+      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · DeepTutor", "Interaction source · DeepTutor")));
+      var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
+      source.appendChild(el("p", "dt-small", sourceText)); footer.appendChild(source);
+      var status = el("p", "dt-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
+      target.append(header, prompt, body, footer, status);
+      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false };
+      views.set(activity.id, view);
+      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
+      renderActivity(activity);
+      if (activity.solutionId) {
+        var solution = doc.getElementById(activity.solutionId);
+        if (solution) {
+          var watch = function () {
+            if (solution.open && state.activities[activity.id].status !== "submitted" && !state.activities[activity.id].answerRevealed) {
+              transition(activity, { type: "reveal" }); announce(activity, t("已查看原题详解；当前尝试保留参考辅助标识。", "Worked solution revealed. This attempt is marked assisted."));
+            }
+          };
+          solution.addEventListener("toggle", watch); watch();
+        }
+      }
+    }
+
+    var panelTarget = doc.querySelector("[data-dt-study]");
+    var panel = null, panelSummary, panelBody;
+    if (panelTarget) {
+      panelTarget.classList.add("dt-study");
+      panel = el("details", "dt-study-panel");
+      panelSummary = el("summary", "dt-study-summary");
+      panelBody = el("div", "dt-study-body"); panel.append(panelSummary, panelBody); panelTarget.appendChild(panel);
+    }
+    function navigate(activityId, reviewItem) {
+      var activity = definitions.get(activityId), view = views.get(activityId);
+      if (!activity || !view) return;
+      if (reviewItem) {
+        if (activity.type === "quiz") {
+          if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
+          transition(activity, { type: "retry" });
+        } else if (activity.type === "flashcards") transition(activity, { type: "flash-restart", index: reviewItem.cardIndex });
+      }
+      view.root.scrollIntoView({ behavior: win.matchMedia && win.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
+      var focus = view.body.querySelector("button:not([disabled]),input:not([disabled]),textarea:not([disabled])");
+      if (focus) focus.focus({ preventScroll: true });
+      state.currentActivity = activityId; save();
+    }
+
+    function renderPanel() {
+      if (!panel) return;
+      var summary = evidenceSummary(lesson, state, now());
+      panelSummary.textContent = t("学习记录", "Study record") + " · " + t("参与 ", "Participation ") + summary.participated + "/" + summary.total + " · " + t("待复习 ", "Due ") + summary.due;
+      var wasFocused = panelBody.contains(doc.activeElement) ? doc.activeElement.dataset.dtControl : null;
+      panelBody.replaceChildren();
+      var stats = el("div", "dt-study-stats");
+      [[summary.participated, t("参与活动", "Activities explored")], [summary.independentPassed, t("独立核对通过", "Independent passes")], [summary.selfReviewed, t("自行评价活动", "Self-reviewed activities")], [summary.due, t("到期复习项目", "Reviews due")]].forEach(function (item) { var box = el("div", "dt-study-stat"); box.append(el("strong", "", item[0]), el("span", "dt-small", item[1])); stats.appendChild(box); });
+      panelBody.append(stats, el("p", "dt-small", t("这些数量分别表示参与、独立作答与自行评价，不代表掌握百分比。记录仅保存在当前设备的浏览器中。", "These counts distinguish participation, independent checks and self-reports; they are not mastery percentages. Records stay in this browser on this device.")));
+      if (storageMessage) panelBody.appendChild(el("p", "dt-storage-warning", storageMessage));
+      if (panelMessage) { var notice = el("p", "dt-status", panelMessage); notice.setAttribute("role", "status"); panelBody.appendChild(notice); }
+      var objectiveList = el("div", "dt-objectives");
+      lesson.objectives.forEach(function (objective) {
+        var row = el("div", "dt-objective"); row.appendChild(el("strong", "dt-small-heading", objective.title));
+        var matching = lesson.activities.filter(function (activity) { return activity.objectiveId === objective.id; });
+        var links = el("div", "dt-row");
+        matching.forEach(function (activity) {
+          var saved = state.activities[activity.id];
+          var label = activity.title + (saved.participated ? t(" · 已参与", " · explored") : "");
+          links.appendChild(button(label, function () { navigate(activity.id); }, "dt-button-quiet dt-activity-link", "nav-" + activity.id));
+        });
+        row.appendChild(links); objectiveList.appendChild(row);
+      }); panelBody.appendChild(objectiveList);
+      var reviewDetails = el("details", "dt-panel-section");
+      reviewDetails.appendChild(el("summary", "", t("复习安排与依据", "Review schedule and method")));
+      reviewDetails.appendChild(el("p", "dt-small", t("当前规则依次采用 1、3、7、14、30 天，仅到期且无辅助的成功复习推进间隔。独立复习还需距离最近接触提示或参考至少一天；同一会话的重试不推进间隔。答错、查看提示或参考回到次日，查看本身不会添加答错记录。此规则是公开的工程启发式，没有拟合个人遗忘曲线。闪卡与开放回答保留自评标签。", "The disclosed heuristic uses 1, 3, 7, 14 and 30 days. Only successful unassisted due reviews advance the interval, at least a day after the latest hint or reference exposure. Same-session retries do not advance it. Incorrect answers and hint/reference viewing return to the next day; viewing alone adds no incorrect attempt. This is not a fitted personal forgetting curve. Card and open-response evidence stays labelled self-report.")));
+      var reviews = getReviews(lesson, state, now());
+      if (!reviews.length) reviewDetails.appendChild(el("p", "dt-small", t("提交并核对作答，或完成闪卡自评后，这里会出现复习日期。", "Review dates appear after a checked answer or a flashcard self-rating.")));
+      reviews.forEach(function (item) {
+        var row = el("div", "dt-review-row" + (item.due ? " dt-review-due" : ""));
+        row.appendChild(button(item.title, function () { navigate(item.activityId, item); }, "dt-button-quiet", "review-" + item.activityId + "-" + item.cardIndex));
+        var evidenceLabels = { "not-attempted": t("尚未作答", "Not attempted"), "not-self-reviewed": t("尚未自评", "Not self-reviewed"), "self": t("已有自评记录", "Has self-report"), "objective": t("已有自动核对记录", "Has automatically checked attempt") };
+        row.appendChild(el("span", "dt-small", (item.due ? t("已经到期 · ", "Due · ") : "") + dateLabel(item.review.dueAt) + " · " + evidenceLabels[reviewEvidenceKind(state, item)])); reviewDetails.appendChild(row);
+      });
+      if (summary.due) reviewDetails.open = true;
+      panelBody.appendChild(reviewDetails);
+      var collected = lesson.activities.filter(function (activity) { var saved = state.activities[activity.id]; return saved.bookmarked || saved.notes; });
+      if (collected.length) {
+        var collection = el("details", "dt-panel-section"); collection.appendChild(el("summary", "", t("收藏与笔记", "Bookmarks and notes")));
+        collected.forEach(function (activity) {
+          var saved = state.activities[activity.id];
+          var entry = el("div", "dt-note-entry");
+          entry.appendChild(button((saved.bookmarked ? "★ " : "") + activity.title, function () { navigate(activity.id); }, "dt-button-quiet", "note-nav-" + activity.id));
+          if (saved.notes) entry.appendChild(el("p", "dt-note-text", saved.notes)); collection.appendChild(entry);
+        }); panelBody.appendChild(collection);
+      }
+      var actions = el("div", "dt-row dt-transfer");
+      actions.appendChild(button(t("导出学习记录", "Export progress"), function () {
+        var blob = new win.Blob([JSON.stringify(exportEnvelope(lesson, state, now()), null, 2)], { type: "application/json" });
+        var url = win.URL.createObjectURL(blob), link = el("a", "");
+        link.href = url; link.download = lesson.lessonId.replace(/[^a-zA-Z0-9_-]/g, "-") + "-progress.json"; doc.body.appendChild(link); link.click(); link.remove();
+        win.setTimeout(function () { win.URL.revokeObjectURL(url); }, 1000);
+        panelMessage = t("记录导出已发起。导入时需要相同课程与内容版本。", "Progress export started. Import requires the same lesson and content revision."); renderPanel();
+      }, "", "export"));
+      var upload = el("input", "dt-sr"); upload.type = "file"; upload.accept = "application/json,.json"; upload.tabIndex = -1; upload.setAttribute("aria-label", t("选择学习记录 JSON 文件", "Choose a progress JSON file"));
+      upload.addEventListener("change", async function () {
+        if (!upload.files || !upload.files[0]) return;
+        try {
+          if (upload.files[0].size > 5000000) throw new Error(t("记录文件超过 5 MB。", "Progress file exceeds 5 MB."));
+          state = prepareSession(lesson, validateImport(lesson, await upload.files[0].text()), now(), sessionId, state);
+          closeDueSolutions(); save();
+          lesson.activities.forEach(renderActivity);
+          notifyCustomRestore();
+          panelMessage = t("已导入相同课程版本的记录。", "Imported records for this lesson revision.");
+        } catch (error) { panelMessage = t("导入未应用：", "Import not applied: ") + error.message; }
+        renderPanel();
+      });
+      actions.appendChild(button(t("导入学习记录", "Import progress"), function () { upload.click(); }, "", "import")); actions.appendChild(upload); panelBody.appendChild(actions);
+      if (state.currentActivity) panelBody.appendChild(button(t("返回上次活动", "Return to last activity"), function () { navigate(state.currentActivity); }, "dt-button-quiet", "resume"));
+      if (wasFocused) {
+        var candidate = Array.from(panelBody.querySelectorAll("[data-dt-control]")).find(function (node) { return node.dataset.dtControl === wasFocused; });
+        if (candidate) candidate.focus({ preventScroll: true });
+      }
+    }
+
+    lesson.activities.forEach(function (activity) {
+      var target = Array.from(doc.querySelectorAll("[data-dt-activity]")).find(function (node) { return node.dataset.dtActivity === activity.id; });
+      if (target && target.dataset.dtMounted !== "true") createActivityView(activity, target);
+    });
+    save(); renderPanel();
+    var explorationListener = function (event) {
+      var detail = event.detail;
+      if (!record(detail) || !definitions.has(detail.activityId)) return;
+      var activity = definitions.get(detail.activityId);
+      if (activity.type !== "interactive" || !record(detail.state)) return;
+      try {
+        var serialized = JSON.stringify(detail.state);
+        if (serialized.length > 100000) return;
+        transition(activity, { type: "explore", state: JSON.parse(serialized) }, false);
+      } catch (error) { announce(activity, t("本次探索状态未保存，活动仍可继续。", "This exploration state was not saved; you can continue.")); }
+    };
+    doc.addEventListener("dt:exploration", explorationListener);
+    // A microtask lets the UMD auto-mount expose DialogueTutor.instance before callbacks run.
+    Promise.resolve().then(function () {
+      lesson.activities.filter(function (activity) { return activity.type === "interactive" && views.has(activity.id); }).forEach(function (activity) {
+        doc.dispatchEvent(new win.CustomEvent("dt:activity-mounted", { detail: { activityId: activity.id, state: copy(state.activities[activity.id].exploration) } }));
+      });
+      doc.dispatchEvent(new win.CustomEvent("dt:ready", { detail: { lessonId: lesson.lessonId, revision: lesson.revision } }));
+    });
+    return {
+      storageKey: key,
+      getState: function () { return copy(state); },
+      exportState: function () { return exportEnvelope(lesson, state, now()); },
+      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
+      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); },
+      destroy: function () { doc.removeEventListener("dt:exploration", explorationListener); }
+    };
+  }
+
+  return {
+    version: "1.0.0", DAY: DAY, INTERVAL_DAYS: INTERVAL_DAYS.slice(),
+    parseNumeric: parseNumeric, evaluateQuiz: evaluateQuiz, scheduleReview: scheduleReview,
+    linearDensity: linearDensity, uniformDistribution: uniformDistribution, updateParameter: updateParameter,
+    defaultExploration: defaultExploration, blankActivity: blankActivity, createState: createState,
+    markExposure: markExposure, exposureAssists: exposureAssists, prepareSession: prepareSession,
+    reduceActivity: reduceActivity, getReviews: getReviews, evidenceSummary: evidenceSummary, reviewEvidenceKind: reviewEvidenceKind,
+    validateLesson: validateLesson, exportEnvelope: exportEnvelope, validateImport: validateImport,
+    storageKey: storageKey, mount: mount
+  };
+});
+</script><noscript><p>这份讲义的交互活动需要浏览器启用 JavaScript；正文与完整解答仍可阅读。</p></noscript></body>
 </html>

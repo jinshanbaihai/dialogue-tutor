@@ -1,2 +1,6 @@
 .DS_Store
 *.zip
+!dist/dialogue-tutor-*.zip
+__pycache__/
+*.py[cod]
+node_modules/

@@ -1,0 +1,775 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "dialoguetutor-s2-continuous-uniform",
+  "revision": "1.6.0-s2.1",
+  "title": "连续随机变量与均匀分布 · 交互学习样章",
+  "language": "zh-CN",
+  "mode": "bgct",
+  "objectives": [
+    {
+      "id": "cdf-relation",
+      "title": "解释累计概率、密度面积与区间概率的对应关系",
+      "kind": "concept"
+    },
+    {
+      "id": "density-meaning",
+      "title": "区分密度高度、单点概率与区间概率",
+      "kind": "concept"
+    },
+    {
+      "id": "density-normalization",
+      "title": "使用非负条件与总概率确定合法密度",
+      "kind": "procedure"
+    },
+    {
+      "id": "uniform-parameters",
+      "title": "完整表达均匀分布的端点、密度与适用条件",
+      "kind": "memory"
+    },
+    {
+      "id": "uniform-model",
+      "title": "解释支持区间变化如何影响均匀密度与概率",
+      "kind": "concept"
+    },
+    {
+      "id": "expectation",
+      "title": "根据均匀性或已验证的对称性求期望",
+      "kind": "procedure"
+    },
+    {
+      "id": "uniform-probability",
+      "title": "确定均匀分布的目标区间并计算概率",
+      "kind": "procedure"
+    },
+    {
+      "id": "quadratic-probability",
+      "title": "对非常数密度积分计算区间概率",
+      "kind": "procedure"
+    }
+  ],
+  "activities": [
+    {
+      "id": "cdf-recall",
+      "objectiveId": "cdf-relation",
+      "type": "flashcards",
+      "title": "回忆卡：累计概率表示什么",
+      "prompt": "先用自己的语言回答，再翻面核对。卡片自评记录回忆情况。",
+      "placement": {
+        "selector": "#ch1 + .act + .act + .act > .scroll:nth-of-type(1)",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / FlashCardsBlock",
+        "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png",
+        "evidenceLevel": "official-menu-and-source",
+        "adaptation": "把 Books 正反面卡片放在 CDF 定义与区间差值首次解释之后；翻面和自评分别记录。",
+        "relatedPaths": [
+          "deeptutor/book/blocks/flash_cards.py",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "cards": [
+        {
+          "front": "F(x) 对应哪一个事件的概率？",
+          "back": "F(x) = P(X ≤ x)，表示随机变量不超过 x 的累计概率。F(x) 是概率，不是密度高度。",
+          "hint": "观察定义中的不等号方向。"
+        },
+        {
+          "front": "已知 F(a) 和 F(b)，怎样表示 P(a < X ≤ b)？其中 a < b。",
+          "back": "P(a < X ≤ b) = F(b) − F(a)。从“不超过 b”的事件中扣除“不超过 a”的部分。",
+          "hint": "两个累计事件存在包含关系。"
+        },
+        {
+          "front": "为什么 F(x) 随 x 增大只能保持不变或增加？",
+          "back": "较小阈值对应的事件包含在较大阈值对应的事件中；扩大事件范围不会减少概率。",
+          "hint": "把阈值变化理解为事件范围变化。"
+        }
+      ]
+    },
+    {
+      "id": "cdf-density-steps",
+      "objectiveId": "cdf-relation",
+      "type": "steps",
+      "title": "逐步推导：累计概率怎样连接密度",
+      "prompt": "每次前进之前，先说明当前等式怎样支持下一步；可以回退检查依据。本活动记录探索过程。",
+      "placement": {
+        "selector": "#ch1 + .act + .act + .act > .scroll:nth-of-type(2)",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Visualize / rules_html stepper",
+        "path": "deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://github.com/HKUDS/DeepTutor/blob/42fab3cf429a1fbf36b257ab8d116a3814964202/deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml#L116-L135",
+        "evidenceLevel": "source-rule-only",
+        "adaptation": "采用 Visualize HTML 规则中的阶段面板、位置提示与前后操作，把本章 CDF—密度—积分关系拆成六步。"
+      },
+      "steps": [
+        {
+          "title": "确定累计事件",
+          "bodyHtml": "<p><strong>F(x) = P(X ≤ x)</strong></p><p>累计分布函数把一个阈值对应到一个事件的概率。这里讨论具有概率密度的分布。</p>"
+        },
+        {
+          "title": "扣除前段概率",
+          "bodyHtml": "<p><strong>P(a &lt; X ≤ b) = F(b) − F(a)</strong></p><p>事件 {X ≤ b} 可以分成互不重叠的 {X ≤ a} 与 {a &lt; X ≤ b}，因此右侧差值保留目标区间。</p><svg viewBox=\"0 0 500 100\" role=\"img\" aria-label=\"数轴上 a 左侧的累计区间与 a 到 b 的目标区间\"><line x1=\"25\" y1=\"45\" x2=\"470\" y2=\"45\" stroke=\"currentColor\"/><rect x=\"35\" y=\"35\" width=\"170\" height=\"20\" fill=\"#5a6970\" opacity=\"0.45\"/><rect x=\"205\" y=\"35\" width=\"185\" height=\"20\" fill=\"#8a5a2b\" opacity=\"0.65\"/><text x=\"195\" y=\"80\" fill=\"currentColor\">a</text><text x=\"382\" y=\"80\" fill=\"currentColor\">b</text><text x=\"47\" y=\"25\" fill=\"currentColor\">累计前段</text><text x=\"238\" y=\"25\" fill=\"currentColor\">目标区间</text></svg>"
+        },
+        {
+          "title": "求邻域平均密度",
+          "bodyHtml": "<p><strong>P(x &lt; X ≤ x+h) / h = [F(x+h) − F(x)] / h</strong>，其中 h &gt; 0。</p><p>分子是小区间概率，分母是区间长度。比值表示这段区间的平均概率密度。</p>"
+        },
+        {
+          "title": "用极限定义局部密度",
+          "bodyHtml": "<p><strong>f(x) = lim<sub>h→0</sub> [F(x+h) − F(x)] / h</strong></p><p>在 F 可导的位置，这个极限就是 F 的导数。密度描述累计概率变化的快慢。</p>"
+        },
+        {
+          "title": "用积分恢复累计差值",
+          "bodyHtml": "<p><strong>F(b) − F(a) = ∫<sub>a</sub><sup>b</sup> f(x) dx</strong></p><p>对于本章具有密度的分布，累计概率可以由密度的积分恢复。密度曲线下面的面积对应累计概率的增量。</p>"
+        },
+        {
+          "title": "将面积解释为区间概率",
+          "bodyHtml": "<p><strong>P(a ≤ X ≤ b) = ∫<sub>a</sub><sup>b</sup> f(x) dx</strong></p><p>具有密度的分布在单个端点上的概率为零，因此目标区间可以包含端点。回顾整条推导：累计事件相减，得到目标区间；密度积分，得到同一个差值。</p>"
+        }
+      ]
+    },
+    {
+      "id": "density-recall",
+      "objectiveId": "density-meaning",
+      "type": "flashcards",
+      "title": "回忆卡：密度、面积与单点",
+      "prompt": "每张卡片只核对一个区别。先尝试解释，再查看背面。",
+      "placement": {
+        "selector": "#ch1 + .act + .act + .act > .scroll:nth-of-type(3)",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / FlashCardsBlock",
+        "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png",
+        "evidenceLevel": "official-menu-and-source",
+        "adaptation": "沿用 Books 翻卡操作，在密度性质已经解释的位置进行短小回忆；提示由学习者主动查看。",
+        "relatedPaths": [
+          "deeptutor/book/blocks/flash_cards.py",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "cards": [
+        {
+          "front": "密度 f(x) 与区间概率分别对应图形中的什么？",
+          "back": "密度 f(x) 对应曲线高度；区间概率对应密度曲线下该区间的面积。高度与面积是不同的量。",
+          "hint": "比较纵轴读数与阴影区域。"
+        },
+        {
+          "front": "当 X 的单位是分钟时，f(x) 的单位是什么？",
+          "back": "f(x) 的单位是每分钟。密度与以分钟计的微小长度相乘，得到没有单位的概率。",
+          "hint": "概率没有单位；积分中的 dx 带有分钟单位。"
+        },
+        {
+          "front": "具有密度的分布中，f(a) > 0 是否意味着 P(X = a) > 0？",
+          "back": "并不意味着。单点区间的长度为零，P(X = a) = 0；f(a) 的正值描述附近的密度。",
+          "hint": "单点区间能否围出正面积？"
+        }
+      ]
+    },
+    {
+      "id": "density-concept-check",
+      "objectiveId": "density-meaning",
+      "type": "quiz",
+      "title": "就地检查：高度超过 1 是否矛盾",
+      "prompt": "随机变量 Y 在 [0, 0.25] 上的密度恒为 4，其余位置为 0。下面哪种解释成立？",
+      "placement": {
+        "selector": "#ch1 + .act + .act + .act > figure",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / QuizBlock",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png",
+        "evidenceLevel": "official-screenshot-and-source",
+        "adaptation": "把官方 Books Quick Check 的选答与解释反馈放在密度/CDF图之后；干扰选项分别对应高度、面积与连续性的混淆。",
+        "relatedPaths": [
+          "web/components/quiz/QuizViewer.tsx",
+          "web/components/quiz/QuizFollowupTabBody.tsx",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "format": "choice",
+      "choices": [
+        {
+          "id": "height-is-probability",
+          "text": "这个模型不合法，因为密度高度 4 超过了 1。",
+          "feedback": "这里把密度高度当成了概率。密度可以超过 1；需要核对的是全部面积和非负条件。"
+        },
+        {
+          "id": "area-is-probability",
+          "text": "这个模型合法；总面积是 1，P(0 ≤ Y ≤ 0.1) 是 0.4。",
+          "feedback": "这个解释分别核对了总面积与目标区间面积，区分了密度高度和概率。"
+        },
+        {
+          "id": "point-has-density-probability",
+          "text": "这个模型合法，而且 P(Y = 0.1) 是 4。",
+          "feedback": "单点概率不是该位置的密度读数。具有密度的分布在单点上的概率是 0。"
+        },
+        {
+          "id": "all-intervals-zero",
+          "text": "每个单点的概率都是 0，因此每个区间的概率也都是 0。",
+          "feedback": "连续区间的概率由积分给出。逐个单点的零概率不能直接当成区间面积。"
+        }
+      ],
+      "answer": "area-is-probability",
+      "explanation": "总面积为 4 × 0.25 = 1，密度处处非负，所以模型合法。目标区间的面积为 4 × 0.1 = 0.4。密度高度、单点概率和区间概率需要分别辨认。",
+      "hint": "先检查整块矩形的面积，再检查目标区间的面积。",
+      "remediation": "把“高度”与“面积”分别写在草稿中；为高度补上单位，然后重新核对两种量。",
+      "followups": [
+        {
+          "question": "这个例子为什么可以直接使用矩形面积？",
+          "answer": "因为密度在整个支持区间内保持常数。改变区间位置不会改变高度，面积由区间长度与常数高度相乘得到。"
+        },
+        {
+          "question": "把 ≤ 改成 < 会改变这里的概率吗？",
+          "answer": "这里具有概率密度，端点单点概率为零，所以加入或移除有限个端点不会改变区间概率。"
+        }
+      ]
+    },
+    {
+      "id": "linear-density-explore",
+      "objectiveId": "cdf-relation",
+      "type": "explore",
+      "title": "参数探索：阴影面积与累计差值同步变化",
+      "prompt": "先预测区间改变后概率怎样变化，再调整左右端点，比较阴影面积与 F(右端点) − F(左端点)。",
+      "placement": {
+        "selector": "#ex1 > figure",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / InteractiveGenerator",
+        "path": "deeptutor/book/blocks/interactive.py",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/03-book-demo-interactive-module.png",
+        "evidenceLevel": "official-screenshot-and-source-adaptation",
+        "adaptation": "把官方书本采样频率滑杆的参数—图形—数值联动迁移到本章线性密度；数学模型沿用已有机器空转例题。",
+        "relatedPaths": [
+          "deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml",
+          "web/app/(workspace)/books/components/blocks/InteractiveBlock.tsx"
+        ]
+      },
+      "model": "linear-density",
+      "instructions": "模型固定为 f(x) = 2 − 2x，0 ≤ x ≤ 1。尝试三件事情：保持区间长度不变并向右移动；让两个端点重合；将区间扩展到整个 [0,1]。每次移动之前先预测变化方向，然后观察两个图形与概率读数。",
+      "followups": [
+        {
+          "question": "等长区间向右移动，概率为什么下降？",
+          "answer": "这条密度随 x 增大而下降。同样宽度覆盖到更低的曲线时，阴影面积减小；因此等长区间不一定具有相同概率。"
+        },
+        {
+          "question": "两个端点重合时，为什么密度读数可能为正，而概率变成零？",
+          "answer": "密度读取的是一个位置的高度；区间面积还需要宽度。宽度为零时，目标区间的面积为零。"
+        },
+        {
+          "question": "怎样核对整个支持区间的概率？",
+          "answer": "本模型在 [0,1] 上的累计函数是 F(x) = 2x − x²；F(1) − F(0) = 1。曲线下面的全部面积也是 1。"
+        }
+      ]
+    },
+    {
+      "id": "normalization-recall",
+      "objectiveId": "density-normalization",
+      "type": "flashcards",
+      "title": "回忆卡：归一化为什么确定常数",
+      "prompt": "例题已经展示了合法密度。现在回忆检查顺序，卡片只涉及条件与方法。",
+      "placement": {
+        "selector": "#ex1",
+        "position": "append"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / FlashCardsBlock",
+        "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png",
+        "evidenceLevel": "official-menu-and-source",
+        "adaptation": "沿用 Books 短卡片组合；卡片放在机器例题总结之后，为后面的未知系数题保留独立方法提取。",
+        "relatedPaths": [
+          "deeptutor/book/blocks/flash_cards.py",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "cards": [
+        {
+          "front": "一个可积函数成为概率密度，需要核对哪两个条件？",
+          "back": "函数处处非负，且整条实轴上的积分等于 1。对于分段定义的密度，也需要明确支持区间外的取值。",
+          "hint": "一个条件约束符号，另一个条件约束总量。"
+        },
+        {
+          "front": "密度在支持区间以外为 0，怎样简化总概率积分？",
+          "back": "可以只在支持区间内积分，因为区间外的积分贡献为 0。简化依据来自分段定义。",
+          "hint": "先查看题面的“其余为 0”。"
+        },
+        {
+          "front": "密度写成 k·g(x)，且 k 与 x 无关时，哪条方程通常用于确定 k？",
+          "back": "k × ∫支持区间 g(x) dx = 1。先求总面积，再解出常数，并核对非负条件。",
+          "hint": "把未知常数与已知的总概率联系起来。"
+        }
+      ]
+    },
+    {
+      "id": "uniform-density-steps",
+      "objectiveId": "uniform-model",
+      "type": "steps",
+      "title": "逐步推导：均匀密度的高度从哪里来",
+      "prompt": "每次前进之前，先说明当前条件怎样确定下一步。推导使用一般端点，不代入后面的作业数据。",
+      "placement": {
+        "selector": "#ch2 + .act + .act + .act > .scroll:nth-of-type(1)",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Visualize / rules_html stepper",
+        "path": "deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://github.com/HKUDS/DeepTutor/blob/42fab3cf429a1fbf36b257ab8d116a3814964202/deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml#L116-L135",
+        "evidenceLevel": "source-rule-only",
+        "adaptation": "采用 DeepTutor Visualize 的分阶段 HTML 面板，让学习者依次连接等长等概率、常数密度与归一化。"
+      },
+      "steps": [
+        {
+          "title": "明确均匀性的含义",
+          "bodyHtml": "<p>在有限支持区间 [a,b] 内，<strong>等长子区间具有相同概率</strong>，其中 a &lt; b。</p><p>这里比较的是区间概率。仅仅说所有单点概率相同，还不能表达均匀性。</p>"
+        },
+        {
+          "title": "把概率写成长短的函数",
+          "bodyHtml": "<p><strong>g(h) = 长度为 h 的任意子区间的概率</strong></p><p>位置不影响结果，因此只需要用区间长度 h 作为输入。</p>"
+        },
+        {
+          "title": "使用可加性与单调性",
+          "bodyHtml": "<p><strong>g(h₁+h₂) = g(h₁) + g(h₂)</strong></p><p>相邻且不重叠的区间可以合并，概率随之相加。结合概率的单调性，区间概率与区间长度成正比。</p><p><strong>g(h) = c·h</strong></p>"
+        },
+        {
+          "title": "识别常数密度",
+          "bodyHtml": "<p><strong>f(x) = c</strong>，其中 a &lt; x &lt; b。</p><p>每单位长度具有相同概率密度，所以图形在支持区间内是一条水平线。</p><svg viewBox=\"0 0 500 130\" role=\"img\" aria-label=\"均匀密度矩形，底边长度 b 减 a，高度 c\"><line x1=\"35\" y1=\"95\" x2=\"470\" y2=\"95\" stroke=\"currentColor\"/><rect x=\"110\" y=\"35\" width=\"270\" height=\"60\" fill=\"#8a5a2b\" opacity=\"0.25\"/><path d=\"M110 95 V35 H380 V95\" fill=\"none\" stroke=\"currentColor\"/><text x=\"100\" y=\"118\" fill=\"currentColor\">a</text><text x=\"374\" y=\"118\" fill=\"currentColor\">b</text><text x=\"78\" y=\"50\" fill=\"currentColor\">c</text><text x=\"212\" y=\"73\" fill=\"currentColor\">总面积</text></svg>"
+        },
+        {
+          "title": "用总概率确定高度",
+          "bodyHtml": "<p><strong>c·(b−a) = 1</strong></p><p>矩形总面积等于 1，底边长度是 b−a。由于 b−a 为正数，可以在两边同时除以这个长度。</p>"
+        },
+        {
+          "title": "写出完整密度",
+          "bodyHtml": "<p><strong>c = 1/(b−a)</strong></p><p>因此，支持区间 a ≤ x ≤ b 内，f(x) = 1/(b−a)；其余位置，f(x) = 0。</p><p>完整答案同时包括高度、支持区间和区间外的取值。</p>"
+        }
+      ]
+    },
+    {
+      "id": "uniform-parameters-recall",
+      "objectiveId": "uniform-parameters",
+      "type": "flashcards",
+      "title": "回忆卡：均匀分布的参数与条件",
+      "prompt": "先回忆两个端点分别表示什么，再核对公式中的长度。期望推导随后展开。",
+      "placement": {
+        "selector": "#ch2 + .act + .act + .act > h4",
+        "position": "before"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / FlashCardsBlock",
+        "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/06-book-switch-the-block-type.png",
+        "evidenceLevel": "official-menu-and-source",
+        "adaptation": "把 Books 卡片放在完整密度写法之后；卡片只提取刚刚出现的端点与密度条件，不提前给出下一段期望推导。",
+        "relatedPaths": [
+          "deeptutor/book/blocks/flash_cards.py",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "cards": [
+        {
+          "front": "X ~ U(a,b) 中，a 和 b 分别表示什么？",
+          "back": "a 是支持区间的左端点，b 是右端点。两者都是有限实数，并且 a < b。",
+          "hint": "先在数轴标出整个支持区间。"
+        },
+        {
+          "front": "均匀分布的密度高度取决于端点的和，还是端点的差？",
+          "back": "密度高度取决于长度 b−a，等于这段长度的倒数。长度必须为正。",
+          "hint": "总面积等于矩形的宽度乘以高度。"
+        },
+        {
+          "front": "完整写出均匀密度时，支持区间以外还需要写什么？",
+          "back": "还需要写 f(x) = 0，并说明这些位置位于支持区间以外。只写区间内的常数还没有完整定义整条实轴上的密度。",
+          "hint": "对应题面中的 specify fully。"
+        }
+      ]
+    },
+    {
+      "id": "uniform-explore",
+      "objectiveId": "uniform-model",
+      "type": "explore",
+      "title": "参数探索：支持区间、密度与概率",
+      "prompt": "先预测支持区间扩大或平移的影响，再改变参数，比较高度、期望位置与事件概率。",
+      "placement": {
+        "selector": "#ch2 + .act + .act + .act > figure",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / InteractiveGenerator",
+        "path": "deeptutor/book/blocks/interactive.py",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/03-book-demo-interactive-module.png",
+        "evidenceLevel": "official-screenshot-and-source-adaptation",
+        "adaptation": "借鉴官方 Books 采样交互中一个参数联动多个读数的呈现方式，迁移为均匀分布支持区间与事件区间联动。",
+        "relatedPaths": [
+          "deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml",
+          "web/app/(workspace)/books/components/blocks/InteractiveBlock.tsx"
+        ]
+      },
+      "model": "uniform",
+      "instructions": "使用图中的一般参数进行探索。先保持事件区间不变并扩大支持区间；再保持支持区间长度不变，同时平移两个端点；最后让事件区间越过支持区间。比较密度高度、期望位置和实际交集的阴影面积。",
+      "followups": [
+        {
+          "question": "支持区间变宽时，高度为什么下降？",
+          "answer": "全部概率保持为 1。支持区间的长度变大时，矩形高度必须下降到长度的倒数，总面积才仍然等于 1。"
+        },
+        {
+          "question": "同时平移两个支持端点，密度高度与期望怎样变化？",
+          "answer": "支持区间长度保持不变，所以密度高度保持不变。区间中点随两个端点一起平移，期望也发生相同的平移。"
+        },
+        {
+          "question": "事件区间伸到支持区间外面，为什么外面的部分不增加概率？",
+          "answer": "支持区间外的密度为 0。只有事件区间与支持区间的交集贡献面积，实际概率由交集长度除以支持区间长度得到。"
+        }
+      ]
+    },
+    {
+      "id": "q1a-answer",
+      "objectiveId": "uniform-parameters",
+      "type": "quiz",
+      "title": "Q1(a)：选择完整的密度写法",
+      "prompt": "已知 W ~ U(−1.4, 6.6)，W 的单位为分钟。原题要求 specify fully the probability density function f(w)。请选择完整且正确的写法。",
+      "placement": {
+        "selector": "#q1a > h4",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / QuizBlock",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png",
+        "evidenceLevel": "official-screenshot-and-source",
+        "adaptation": "沿用 Books Quick Check 的选答和解释反馈，将原题完整密度写法变为辨析题；原题条件与完整解答另行保留。",
+        "relatedPaths": [
+          "web/components/quiz/QuizViewer.tsx",
+          "web/components/quiz/QuizFollowupTabBody.tsx",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "solutionId": "solution-q1a",
+      "format": "choice",
+      "choices": [
+        {
+          "id": "correct-full-density",
+          "text": "当 −1.4 ≤ w ≤ 6.6 时，f(w) = 1/8；其余位置，f(w) = 0。",
+          "feedback": "这个写法包含正确高度、完整支持区间和区间外的零密度。"
+        },
+        {
+          "id": "negative-bound-error",
+          "text": "当 1.4 ≤ w ≤ 6.6 时，f(w) = 1/5.2；其余位置，f(w) = 0。",
+          "feedback": "这个写法遗漏了左端点的负号，改动了题目给定的支持区间。负数表示早到，必须保留。"
+        },
+        {
+          "id": "height-width-error",
+          "text": "当 −1.4 ≤ w ≤ 6.6 时，f(w) = 8；其余位置，f(w) = 0。",
+          "feedback": "这个写法把区间长度当成密度高度。高度需要由总面积为 1 的条件确定。"
+        },
+        {
+          "id": "missing-outside",
+          "text": "当 −1.4 ≤ w ≤ 6.6 时，f(w) = 1/8；区间外不作定义。",
+          "feedback": "这个写法没有满足 specify fully。完整密度还需要说明支持区间外的取值为 0。"
+        }
+      ],
+      "answer": "correct-full-density",
+      "explanation": "支持区间长度为 6.6 − (−1.4) = 8，因此区间内的常数密度为 1/8，区间外为 0。这条密度处处非负，总面积为 1。",
+      "hint": "分别核对左端点的负号、矩形总面积和区间外的定义。",
+      "remediation": "在数轴上重新标出题目给定的两个端点，再用“高度 × 支持区间长度 = 1”确定高度。",
+      "followups": [
+        {
+          "question": "为什么密度需要写出“其余为 0”？",
+          "answer": "题目要求在整条实轴上完整指定 f(w)。这列火车的偏差只支持题目给定的区间，区间外没有概率贡献。"
+        },
+        {
+          "question": "端点能否改用严格不等号？",
+          "answer": "对于具有密度的分布，修改有限个单点的密度取值不会改变积分概率。原题采用闭区间写法最便于对照题面。"
+        }
+      ]
+    },
+    {
+      "id": "q1b-answer",
+      "objectiveId": "expectation",
+      "type": "quiz",
+      "title": "Q1(b)：输入平均偏差",
+      "prompt": "沿用 W ~ U(−1.4, 6.6)。求 E(W)，单位为分钟。请先在草稿中写出计算式，再输入数值；输入框无需填写单位。",
+      "placement": {
+        "selector": "#q1b > h4",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / QuizBlock",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png",
+        "evidenceLevel": "official-screenshot-and-source",
+        "adaptation": "使用 Books 就地测验与通用 Quiz 数值作答思路，将平均偏差的结果核对与原解答对照分开；自动判定只覆盖数值。 数值容差与等价分数识别是本次对简答输入的确定性实现，不归为 DeepTutor 原版评分能力。",
+        "relatedPaths": [
+          "web/components/quiz/QuizViewer.tsx",
+          "web/components/quiz/QuizFollowupTabBody.tsx",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "solutionId": "solution-q1b",
+      "format": "numeric",
+      "answer": 2.6,
+      "tolerance": 1e-06,
+      "explanation": "E(W) = [−1.4 + 6.6]/2 = 2.6 分钟，表示平均晚到 2.6 分钟。数值正确只核对最终结果；原题的方法步骤还需要自行对照完整解答。",
+      "hint": "期望对应均匀分布支持区间的中点。先确认左端点的符号。",
+      "remediation": "把中点与区间长度分别写出：中点使用端点相加再除以 2；长度使用右端点减左端点。",
+      "followups": [
+        {
+          "question": "平均偏差为正，为什么对应晚到？",
+          "answer": "题面把负数规定为早到，因此正数表示晚到。期望继承同一个符号约定。"
+        },
+        {
+          "question": "直接积分是否也能求出期望？",
+          "answer": "可以。按照期望定义，在支持区间内积分 w·f(w)，也会得到 2.6。中点公式在本题中更简短。"
+        }
+      ]
+    },
+    {
+      "id": "q1c-answer",
+      "objectiveId": "uniform-probability",
+      "type": "quiz",
+      "title": "Q1(c)：输入超过三分钟的概率",
+      "prompt": "沿用 W ~ U(−1.4, 6.6)。求 P(W > 3)。请先在草稿中标出目标区间，再输入小数或简单分数。",
+      "placement": {
+        "selector": "#q1c > h4",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / QuizBlock",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png",
+        "evidenceLevel": "official-screenshot-and-source",
+        "adaptation": "沿用 Books 问题—作答—解析的活动顺序，数值输入支持等价分数；后续解释只讨论当前小问。 数值容差与等价分数识别是本次对简答输入的确定性实现，不归为 DeepTutor 原版评分能力。",
+        "relatedPaths": [
+          "web/components/quiz/QuizViewer.tsx",
+          "web/components/quiz/QuizFollowupTabBody.tsx",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "solutionId": "solution-q1c",
+      "format": "numeric",
+      "answer": 0.45,
+      "tolerance": 1e-06,
+      "explanation": "目标区间是从 3 到 6.6，长度为 3.6；整个支持区间长度为 8。因此 P(W > 3) = 3.6/8 = 9/20 = 0.45。数值核对不替代对区间和方法步骤的检查。",
+      "hint": "在数轴上标出 3，目标区间位于这个阈值的右侧。只计算支持区间内的部分。",
+      "remediation": "先确定目标区间的两个端点，再分别计算目标长度与总长度。请检查自己是否计算了补事件。",
+      "followups": [
+        {
+          "question": "为什么这里可以使用长度比？",
+          "answer": "本题密度在支持区间内为常数，区间面积等于统一高度乘以区间长度，因此概率可以写成目标长度与总长度的比值。"
+        },
+        {
+          "question": "P(W > 3) 与 P(W ≥ 3) 是否相等？",
+          "answer": "两者相等。这个模型具有密度，P(W = 3) = 0，阈值本身不贡献概率。"
+        }
+      ]
+    },
+    {
+      "id": "q2a-answer",
+      "objectiveId": "density-normalization",
+      "type": "quiz",
+      "title": "Q2(a)：写出归一化证明",
+      "prompt": "S 的密度在 2 ≤ s ≤ 10 内为 k(s−2)(10−s)，其余位置为 0。原题要求证明 k = 3/256。请保留积分条件、计算过程和结论；目标数值本来就在题面中。",
+      "placement": {
+        "selector": "#q2a > h4",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / QuizBlock",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png",
+        "evidenceLevel": "official-screenshot-and-source",
+        "adaptation": "采用 Books 开放题揭示参考与自评流程，补上可保留的学习者原答和逐项评价要点；不使用全文字符串比较判断证明。",
+        "relatedPaths": [
+          "web/components/quiz/QuizViewer.tsx",
+          "web/components/quiz/QuizFollowupTabBody.tsx",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "solutionId": "solution-q2a",
+      "format": "open",
+      "modelAnswer": "由总概率为 1，k∫₂¹⁰(s−2)(10−s) ds = 1。展开得到 (s−2)(10−s) = −s² + 12s − 20。取原函数 G(s) = −s³/3 + 6s² − 20s，则 G(10) = 200/3，G(2) = −56/3。积分为 G(10) − G(2) = 256/3，因此 k·256/3 = 1，得到 k = 3/256。支持区间内两个因子非负，且求出的 k 为正，满足非负条件。",
+      "rubric": [
+        "原答把总概率为 1 写成支持区间 [2,10] 上的积分条件，并正确处理常数 k。",
+        "原答使用正确展开式和原函数，或者给出数学等价且可检查的代换积分过程。",
+        "原答正确计算上下限之差，得到不含 k 的总面积 256/3；负的下限值需要被减去。",
+        "原答由 k·256/3 = 1 推出 3/256；仅抄题面给出的结果不构成证明。"
+      ],
+      "explanation": "本题评价重点是从归一化条件通向目标常数的证明过程。提交后请逐项对照自己的原答，选择明确标示为自评的结果；页面不会把解释文本自动判定为正确。",
+      "hint": "密度在支持区间以外为 0。先写总概率等于 1 的积分条件，再决定是否展开多项式。",
+      "remediation": "先单独计算不含 k 的积分，再回到归一化等式。上下限代入之后先分别写出数值，再执行相减。",
+      "followups": [
+        {
+          "question": "使用 t = s−2 代换，证明过程是否成立？",
+          "answer": "成立。代换后积分区间为 [0,8]，被积式变成 t(8−t)。积分得到 256/3，再用总概率条件求出 k。这种等价方法也满足评价要点。"
+        },
+        {
+          "question": "为什么不能从题面给出的 k 值直接结束证明？",
+          "answer": "show that 要求给出支持目标结论的推导。目标数值帮助核对结果，但原答还需要说明积分条件、计算过程和解方程步骤。"
+        }
+      ]
+    },
+    {
+      "id": "q2b-answer",
+      "objectiveId": "quadratic-probability",
+      "type": "quiz",
+      "title": "Q2(b)：保留积分过程并求概率",
+      "prompt": "沿用上一问的密度，k = 3/256。求 P(S ≤ 4)。请写出积分上下限、原函数代入与最终概率；允许使用等价方法和等价分数。",
+      "placement": {
+        "selector": "#q2b > h4",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / QuizBlock",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png",
+        "evidenceLevel": "official-screenshot-and-source",
+        "adaptation": "沿用 DeepTutor 开放题参考答案与自评机制；保留原题四分计算所需的过程空间，并围绕当前区间准备局部追问。",
+        "relatedPaths": [
+          "web/components/quiz/QuizViewer.tsx",
+          "web/components/quiz/QuizFollowupTabBody.tsx",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "solutionId": "solution-q2b",
+      "format": "open",
+      "modelAnswer": "P(S ≤ 4) = (3/256)∫₂⁴(s−2)(10−s) ds。沿用原函数 G(s) = −s³/3 + 6s² − 20s，G(4) = −16/3，G(2) = −56/3，因此目标积分为 40/3。乘上 3/256 后，概率为 5/32，即 0.15625。",
+      "rubric": [
+        "原答把目标概率写成从 2 到 4 的积分，并代入 k = 3/256；支持区间外的零密度需要得到正确处理。",
+        "原答使用正确原函数或者等价代换方法，并计算上限值减下限值。",
+        "原答得到不含常数因子的目标积分 40/3，或者通过等价计算得到相同的加权面积。",
+        "原答包含最终概率 5/32 或 0.15625，并保持所有计算步骤与这个结果相符。"
+      ],
+      "explanation": "这里的密度随 s 变化，目标概率由曲线下的面积给出。提交后请对照自己的积分区间、计算过程与最终概率进行自评。评价只涉及当前小问。",
+      "hint": "先查看密度的支持区间，再确定事件 S ≤ 4 与支持区间的交集；本题的密度不是常数。",
+      "remediation": "如果使用了区间长度比，请回到积分。先写出目标区间，随后沿用上一问的原函数，最后再乘归一化常数。",
+      "followups": [
+        {
+          "question": "为什么这里不能照搬均匀分布的长度比？",
+          "answer": "本题的密度在支持区间内随位置变化。相同长度可能覆盖不同高度，所以概率不能只由目标长度与总长度的比值决定。"
+        },
+        {
+          "question": "原函数在端点上出现负数，会不会导致概率为负？",
+          "answer": "不会。定积分取上限值与下限值的差。原函数本身可以是负数；这里相减之后得到正面积，再乘正的归一化常数。"
+        }
+      ]
+    },
+    {
+      "id": "q2c-answer",
+      "objectiveId": "expectation",
+      "type": "quiz",
+      "title": "Q2(c)：输入平均旅程时间",
+      "prompt": "沿用密度 f(s) = (3/256)(s−2)(10−s)，2 ≤ s ≤ 10，其余位置为 0。原题要求 write down E(S)，单位为分钟。请输入数值；输入框无需填写单位。",
+      "placement": {
+        "selector": "#q2c > h4",
+        "position": "after"
+      },
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "module": "Books / QuizBlock",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "https://docs.deeptutor.info/screenshots/guide/book/01-book-demo-quiz-card.png",
+        "evidenceLevel": "official-screenshot-and-source",
+        "adaptation": "沿用 DeepTutor 就地题卡和当前题目追问机制；按原题 write down 的要求直接核对数值，在提交后提供对称性解释。 数值容差与等价分数识别是本次对简答输入的确定性实现，不归为 DeepTutor 原版评分能力。",
+        "relatedPaths": [
+          "web/components/quiz/QuizViewer.tsx",
+          "web/components/quiz/QuizFollowupTabBody.tsx",
+          "deeptutor/book/agents/page_planner.py"
+        ]
+      },
+      "solutionId": "solution-q2c",
+      "format": "numeric",
+      "answer": 6,
+      "tolerance": 1e-06,
+      "explanation": "E(S) = 6 分钟。将 s 替换为 12−s 后，两个因子互换，密度值保持相同，因此密度关于 6 对称。分布具有有限支持，期望存在并位于这个对称中心。",
+      "hint": "观察支持区间两端等距的位置：两个因子会怎样变化？",
+      "remediation": "比较距离两个端点相同的镜像位置。确认密度关于区间中点对称后，再确定期望。",
+      "followups": [
+        {
+          "question": "只知道支持区间是 [2,10]，就能断定期望是中点吗？",
+          "answer": "单凭支持区间不能断定。这里还需要密度的对称性；本题的两个因子在镜像位置互换，才支持期望位于中点。"
+        },
+        {
+          "question": "归一化常数为什么没有改变对称中心？",
+          "answer": "常数对所有位置的密度进行同样的缩放，镜像两点仍然具有相同密度，因此对称中心不变。"
+        },
+        {
+          "question": "用期望定义积分是否也成立？",
+          "answer": "成立。在支持区间上积分 s·f(s) 也得到 6。原题只要求写出结果，对称性提供更直接的判断。"
+        }
+      ]
+    }
+  ],
+  "solutionWraps": [
+    {
+      "id": "solution-q1a",
+      "startSelector": "#q1a > h4",
+      "endSelector": "#q1b",
+      "summary": "查看 Q1(a) 完整解答"
+    },
+    {
+      "id": "solution-q1b",
+      "startSelector": "#q1b > h4",
+      "endSelector": "#q1c",
+      "summary": "查看 Q1(b) 完整解答"
+    },
+    {
+      "id": "solution-q1c",
+      "startSelector": "#q1c > h4",
+      "endSelector": "#q1c + .q",
+      "summary": "查看 Q1(c) 完整解答"
+    },
+    {
+      "id": "solution-q2a",
+      "startSelector": "#q2a > h4",
+      "endSelector": "#q2b",
+      "summary": "查看 Q2(a) 完整解答"
+    },
+    {
+      "id": "solution-q2b",
+      "startSelector": "#q2b > h4",
+      "endSelector": "#q2c",
+      "summary": "查看 Q2(b) 完整解答"
+    },
+    {
+      "id": "solution-q2c",
+      "startSelector": "#q2c > h4",
+      "endSelector": "main > footer",
+      "summary": "查看 Q2(c) 完整解答"
+    }
+  ]
+}

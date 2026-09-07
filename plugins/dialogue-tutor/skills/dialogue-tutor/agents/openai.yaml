@@ -1,0 +1,4 @@
+interface:
+  display_name: "DialogueTutor 简易对话"
+  short_description: "逐步讲透数学、统计与经济，生成含翻卡、自测、探索和复习的交互式 HTML"
+  default_prompt: "使用 $dialogue-tutor 按 bgct 讲透这份材料，并生成可以翻卡、自测与探索的 HTML。"

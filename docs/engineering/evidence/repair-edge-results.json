@@ -1,0 +1,26 @@
+{
+  "dueDraftLoss": {
+    "draftBefore": "长证明已写到 G(10)−G(2)=256/3，还未提交",
+    "draftAfter": ""
+  },
+  "dueHintRefresh": {
+    "hintBefore": true,
+    "exposure": {
+      "sessionId": "x2",
+      "hint": true,
+      "reference": false,
+      "observedAt": 1788868800001,
+      "inferred": false
+    },
+    "afterAttempt": {
+      "id": "q1b-answer:1788868800002:2",
+      "answer": "2.6",
+      "correct": true,
+      "source": "objective",
+      "assisted": false,
+      "time": 1788868800002,
+      "sessionId": "x3"
+    },
+    "afterInterval": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "section_dt_lesson_rejected": {
+    "passed": true,
+    "error": "Duplicate or reserved DOM ID: dt-lesson"
+  },
+  "objective_constructor_rejected": {
+    "passed": true,
+    "error": "objectives[0].id uses a reserved runtime name: constructor"
+  },
+  "generated_mount_id_collision_rejected": {
+    "passed": true,
+    "error": "Duplicate or reserved DOM ID: dt-activity-answer"
+  },
+  "ordinary_small_lesson_assembles": {
+    "passed": true,
+    "mounts": 1,
+    "runtimeDataId": true
+  },
+  "ordinary_s2_assembles": {
+    "passed": true,
+    "mounts": 15,
+    "solutions": 6,
+    "runtimeDataId": true
+  }
+}
