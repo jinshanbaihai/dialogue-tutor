@@ -1,0 +1,67 @@
+{
+  "revealImmediateRetry": {
+    "attempt": {
+      "id": "q1b-answer:1788782400000:1",
+      "answer": "2.6",
+      "correct": true,
+      "source": "objective",
+      "assisted": true,
+      "time": 1788782400000,
+      "sessionId": "session-1788782400000-ybty4ibsx9"
+    },
+    "feedback": "参考辅助后核对通过本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。",
+    "independent": 0
+  },
+  "dueQuizBeforeAction": {
+    "answerRevealed": false,
+    "draft": "",
+    "status": "idle"
+  },
+  "dueQuizAfterReview": {
+    "attempt": {
+      "id": "q1b-answer:1788868800001:2",
+      "answer": "2.6",
+      "correct": true,
+      "source": "objective",
+      "assisted": false,
+      "time": 1788868800001,
+      "sessionId": "session-1788868800001-ur1gel8hsoa"
+    },
+    "interval": 1
+  },
+  "dueCardBeforeAction": {
+    "card": {
+      "revealed": false,
+      "hintUsed": false,
+      "rating": null,
+      "review": {
+        "intervalIndex": 0,
+        "dueAt": 1788868800000,
+        "lastReviewedAt": 1788782400000,
+        "lastSessionId": "session-1788782400000-32vmrtnh5z6",
+        "evidenceSource": "self"
+      },
+      "attemptId": null,
+      "exposure": {
+        "sessionId": "session-1788782400000-32vmrtnh5z6",
+        "hint": false,
+        "reference": true,
+        "observedAt": 1788782400000,
+        "inferred": false
+      },
+      "recallAssisted": false,
+      "recallSessionId": null
+    },
+    "answerVisible": false
+  },
+  "sourcePreservation": {
+    "identicalDOM": true,
+    "originalSix": 60,
+    "finalSix": 60,
+    "originalSVG": 4,
+    "finalSVG": 4,
+    "originalTables": 15,
+    "finalTables": 15
+  },
+  "errors": []
+}

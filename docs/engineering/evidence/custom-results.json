@@ -1,0 +1,14 @@
+{
+  "initial": "6",
+  "afterInput": "12",
+  "saved": {
+    "q": 4
+  },
+  "attempts": 0,
+  "reset": "6",
+  "afterImport": "12",
+  "countAfterOneMoreAction": 2,
+  "afterRefresh": "15",
+  "errors": [],
+  "mathML": 1
+}

@@ -1,0 +1,6 @@
+{
+  "section-reserved": "REJECTED: Duplicate or reserved DOM ID: dt-lesson",
+  "objective-reserved": "REJECTED: objectives[0].id uses a reserved runtime name: constructor",
+  "future-mount-collision": "REJECTED: Duplicate or reserved DOM ID: dt-activity-answer",
+  "sha256": "ac93011d3526dcbfa80635e1c6342d713420f58334f6517c741989570a57e57a"
+}

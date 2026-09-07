@@ -1,0 +1,41 @@
+{
+  "current_session_exposure_survives_retry": {
+    "passed": true,
+    "attemptAssisted": true,
+    "independentPassed": 0
+  },
+  "first_submission_feedback_does_not_rewrite_attempt": {
+    "passed": true,
+    "firstAssisted": false,
+    "retryAssisted": true,
+    "attempts": 2
+  },
+  "due_initial_view_hides_old_answer": {
+    "passed": true,
+    "status": "idle",
+    "draft": "",
+    "referenceVisible": false,
+    "solutionOpen": false
+  },
+  "pending_open_response_and_self_review_restore": {
+    "passed": true,
+    "restoredStatus": "submitted",
+    "preservedDraft": true,
+    "sameAttemptAssessed": true,
+    "intervalIndex": 1
+  },
+  "due_hint_remains_assisted_and_does_not_advance": {
+    "passed": true,
+    "hintNoAttempt": true,
+    "attemptAssisted": true,
+    "intervalIndex": 0
+  },
+  "due_flashcard_starts_front_and_genuine_recall_qualifies": {
+    "passed": true,
+    "initialFront": true,
+    "initialRatingVisible": false,
+    "genuineRecallAssisted": false,
+    "intervalIndex": 1
+  },
+  "runtimeLoadErrors": []
+}

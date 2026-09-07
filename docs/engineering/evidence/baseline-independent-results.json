@@ -1,0 +1,59 @@
+{
+  "revealImmediateRetry": {
+    "attempt": {
+      "id": "q1b-answer:1788782400000:1",
+      "answer": "2.6",
+      "correct": true,
+      "source": "objective",
+      "assisted": false,
+      "time": 1788782400000,
+      "sessionId": "session-1788782400000-kd8e9mkjgda"
+    },
+    "feedback": "独立作答核对通过",
+    "independent": 1
+  },
+  "dueQuizBeforeAction": {
+    "answerRevealed": true,
+    "draft": "2.6",
+    "referenceText": "参考与解析2.6E(W) = [−1.4 + 6.6]/2 = 2.6 分钟，表示平均晚到 2.6 分钟。数值正确只核对最终结果；原题的方法步骤还需要自行对照完整解答。",
+    "status": "submitted"
+  },
+  "dueQuizAfterReview": {
+    "attempt": {
+      "id": "q1b-answer:1788868800001:2",
+      "answer": "2.6",
+      "correct": true,
+      "source": "objective",
+      "assisted": false,
+      "time": 1788868800001,
+      "sessionId": "session-1788868800001-e4srzbqdjzm"
+    },
+    "interval": 1
+  },
+  "dueCardBeforeAction": {
+    "card": {
+      "revealed": true,
+      "hintUsed": false,
+      "rating": "recalled",
+      "review": {
+        "intervalIndex": 0,
+        "dueAt": 1788868800000,
+        "lastReviewedAt": 1788782400000,
+        "lastSessionId": "session-1788782400000-98e2cngni09",
+        "evidenceSource": "self"
+      },
+      "attemptId": "cdf-recall:1788782400000:1"
+    },
+    "answerVisible": true
+  },
+  "sourcePreservation": {
+    "identicalDOM": true,
+    "originalSix": 60,
+    "finalSix": 60,
+    "originalSVG": 4,
+    "finalSVG": 4,
+    "originalTables": 15,
+    "finalTables": 15
+  },
+  "errors": []
+}
