@@ -1,0 +1,278 @@
+{
+  "kind": "dialoguetutor-progress",
+  "schemaVersion": 1,
+  "lessonId": "s2-ch6-workshop-cards-run03",
+  "revision": "run03-v2",
+  "exportedAt": 1788838434716,
+  "state": {
+    "lessonId": "s2-ch6-workshop-cards-run03",
+    "revision": "run03-v2",
+    "createdAt": 1788838434672,
+    "updatedAt": 1788838434713,
+    "currentActivity": "survey-plan",
+    "activities": {
+      "survey-plan": {
+        "id": "survey-plan",
+        "objectiveId": "population-design",
+        "type": "quiz",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "statistic-check": {
+        "id": "statistic-check",
+        "objectiveId": "statistic-concept",
+        "type": "quiz",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "sample-lab": {
+        "id": "sample-lab",
+        "objectiveId": "sampling-distribution",
+        "type": "interactive",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {
+          "version": 1,
+          "roundId": null,
+          "phase": "draft",
+          "parameters": {
+            "n": 2,
+            "mechanism": "with",
+            "threshold": 5
+          },
+          "predictionDraft": "",
+          "prediction": null,
+          "predictionAt": null,
+          "predictionHadReference": false,
+          "predictionHadResult": false,
+          "revealedAt": null,
+          "revealHadReference": false,
+          "selectedPath": null,
+          "pathSelections": [],
+          "history": [
+            {
+              "roundId": "round-1788838434700-1",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "phase": "revealed",
+              "prediction": "less",
+              "predictionAt": 1788838434703,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": 1788838434706,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": []
+            }
+          ],
+          "resultContacts": [
+            {
+              "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+              "at": 1788838434706,
+              "source": "exact-enumeration-reveal"
+            }
+          ],
+          "referenceViewed": false,
+          "lastAction": null
+        },
+        "explorationCount": 0
+      },
+      "worked-distribution": {
+        "id": "worked-distribution",
+        "objectiveId": "sampling-distribution",
+        "type": "steps",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "distribution-completion": {
+        "id": "distribution-completion",
+        "objectiveId": "sampling-distribution",
+        "type": "quiz",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "distribution-independent": {
+        "id": "distribution-independent",
+        "objectiveId": "sampling-distribution",
+        "type": "quiz",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "distribution-probability": {
+        "id": "distribution-probability",
+        "objectiveId": "sampling-distribution",
+        "type": "quiz",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "without-replacement": {
+        "id": "without-replacement",
+        "objectiveId": "statistic-concept",
+        "type": "quiz",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "evidence-close": {
+        "id": "evidence-close",
+        "objectiveId": "sampling-distribution",
+        "type": "interactive",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": null,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      }
+    }
+  }
+}

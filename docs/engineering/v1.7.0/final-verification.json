@@ -1,0 +1,104 @@
+{
+  "date": "2026-09-08",
+  "candidateVersion": "1.7.0",
+  "status": "reviewable_candidate_visual_gate_pending",
+  "skill": {
+    "files": 18,
+    "lastSkillChangeApproval": {
+      "education": "reviews/restore-api-education-recheck.md",
+      "color": "reviews/restore-api-color-recheck.md",
+      "game": "reviews/restore-api-game-recheck.md",
+      "narrative": "reviews/restore-api-narrative-recheck.md"
+    },
+    "manifest": "run-03-skill-manifest.json",
+    "package": "../../../dist/dialogue-tutor-1.7.0.zip",
+    "entries": 19,
+    "bytes": 138087,
+    "sha256": "f657c6b993647b9c4075d199e49305001e7375342e5ec39f949bff2572dc1b12"
+  },
+  "lesson": {
+    "lessonId": "s2-ch6-workshop-cards-run03",
+    "revision": "run03-v2",
+    "objectives": 3,
+    "activities": 9,
+    "html": "../../s2-ch6.html",
+    "json": "../../lessons/s2-ch6.json",
+    "frozenCopy": "runs/run-03",
+    "htmlSha256": "d9624b533e838edf4b06b974f15c07b0bb3bf653f36e4ea3b5e663c5adfe7c2c",
+    "jsonSha256": "ab478d575b7c3147c2ed1c997ec81ed28d44db54657aeb36374cfa2348502b91",
+    "identicalAfterRebuild": true
+  },
+  "actualArtifactReviews": {
+    "education": {
+      "score": 2,
+      "outOf": 3,
+      "status": "passed_in_scope",
+      "critical": 0,
+      "important": 0,
+      "minorAcceptedUnfixed": 3,
+      "report": "reviews/education-html-run-03.md"
+    },
+    "game": {
+      "score": 2,
+      "outOf": 3,
+      "status": "passed_in_scope",
+      "critical": 0,
+      "important": 0,
+      "minorAcceptedUnfixed": 2,
+      "report": "reviews/game-html-run-03.md"
+    },
+    "narrative": {
+      "score": 3,
+      "outOf": 3,
+      "status": "passed_targeted_scope",
+      "critical": 0,
+      "important": 0,
+      "minor": 0,
+      "report": "reviews/narrative-html-run-03.md"
+    },
+    "color": {
+      "score": null,
+      "status": "source_review_passed_rendered_review_pending",
+      "report": "reviews/color-html-run-03.md"
+    }
+  },
+  "gates": {
+    "H1": "passed_in_reviewed_scope",
+    "H2": "passed_in_reviewed_scope_with_minor_disposition",
+    "H3": "passed_in_reviewed_scope_with_minor_disposition",
+    "H4": "passed_in_reviewed_scope",
+    "H5": "pending_actual_browser_visual_evidence",
+    "H6": "skill_four_roles_passed_actual_html_total_gate_pending_color",
+    "H7": "local_runtime_builder_course_and_package_checks_passed_latest_remote_CI_tracked_on_PR"
+  },
+  "engineeringEvidence": {
+    "unchangedRuntimeNodeTests": {
+      "passed": 66,
+      "record": "node-runtime-gate.txt"
+    },
+    "unchangedPythonBuilderTests": {
+      "passed": 15,
+      "record": "python-builder-gate.txt"
+    },
+    "newCourseIntegrationTests": {
+      "passed": 4,
+      "record": "run-03-integration-gate.txt"
+    },
+    "rootComparison": {
+      "passed": 14,
+      "record": "reviews/root-math-run-03.json"
+    },
+    "continuousIntegration": "https://github.com/jinshanbaihai/dialogue-tutor/pull/14/checks"
+  },
+  "limits": [
+    "H5 unavailable; no rendered desktop/mobile/light/dark/focus screenshots",
+    "No four-role total approval of the actual HTML yet",
+    "Three accepted distinct Minor items remain, not reported fixed",
+    "No actual learner retention, transfer or return-behavior experiment",
+    "One chapter case with iterations does not establish all-mode or cross-model generation stability"
+  ],
+  "pr": {
+    "url": "https://github.com/jinshanbaihai/dialogue-tutor/pull/14",
+    "draft": true
+  }
+}

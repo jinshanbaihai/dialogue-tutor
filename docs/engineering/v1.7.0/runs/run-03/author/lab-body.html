@@ -1,0 +1,58 @@
+<style>
+.r3-lab .r3-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem}
+.r3-lab select{font:inherit;min-height:44px;width:100%;padding:.5rem;border:1px solid var(--dt-control-line);border-radius:.35rem;background:var(--dt-surface);color:var(--dt-ink)}
+.r3-lab label{display:block;font-size:1rem}
+.r3-lab fieldset{padding:1rem;border:1px solid var(--dt-control-line);margin:1rem 0}
+.r3-lab fieldset label{padding:.35rem 0}
+.r3-lab .r3-cards{display:flex;gap:.65rem;flex-wrap:wrap;margin:.65rem 0 1rem}
+.r3-lab .r3-card{border:2px solid var(--dt-parameter-a);background:var(--dt-action-soft);padding:.7rem 1.3rem;border-radius:.4rem;color:var(--dt-ink)}
+.r3-lab .r3-callout{border-left:4px solid var(--dt-parameter-b);background:var(--dt-surface2);padding:.8rem 1rem;margin:1rem 0}
+.r3-lab table{width:100%;border-collapse:collapse;font-size:1rem}
+.r3-lab th,.r3-lab td{border-bottom:1px solid var(--dt-line);padding:.5rem;text-align:left}
+.r3-lab .r3-bar-row{display:grid;grid-template-columns:4.3rem minmax(60px,1fr) 4.3rem;gap:.5rem;align-items:center;margin:.6rem 0;font-size:1rem}
+.r3-lab .r3-track{height:26px;border:1px solid var(--dt-control-line);background:var(--dt-surface2)}
+.r3-lab .r3-bar{height:100%;min-width:1px;background:var(--dt-plot-function);border:1px solid var(--dt-plot-function)}
+.r3-lab .r3-path{font-size:1.05rem;padding:.75rem;border:1px solid var(--dt-control-line);background:var(--dt-surface2);margin:.8rem 0}
+.r3-lab .r3-history{font-size:1rem}
+.r3-lab [hidden]{display:none!important}
+@media(max-width:480px){.r3-lab .r3-controls{grid-template-columns:1fr}.r3-lab .r3-card{padding:.5rem 1rem}.r3-lab .r3-bar-row{grid-template-columns:3.4rem minmax(45px,1fr) 3.8rem}}
+</style>
+<div class="r3-lab" id="r3-lab-root">
+  <p>三张不同工序卡分别写着工时（分钟）。每次都从当时可抽的卡中等概率抽一张。样本均值 <math><mover><mi>X</mi><mo>¯</mo></mover></math> 是抽到的工时总和除以张数。</p>
+  <div class="r3-cards" aria-label="总体中三张卡的值：2、4、8分钟"><span class="r3-card">2 分钟</span><span class="r3-card">4 分钟</span><span class="r3-card">8 分钟</span></div>
+  <div class="r3-controls">
+    <label for="r3-n">一次样本量 n<select id="r3-n"><option value="1">1 张</option><option value="2" selected>2 张</option></select></label>
+    <label for="r3-mechanism">抽样机制<select id="r3-mechanism"><option value="with">有放回 with replacement</option><option value="without">无放回 without replacement</option></select></label>
+    <label for="r3-threshold">关注事件：均值至少<select id="r3-threshold"><option value="5">5 分钟</option><option value="6">6 分钟</option><option value="8">8 分钟</option></select></label>
+  </div>
+  <p id="r3-condition"></p>
+  <p>问题：在当前条件下，“样本均值达到门槛”的概率，与“单抽一张卡达到同一门槛”的概率相比怎样？单卡记作 X。</p>
+  <fieldset id="r3-prediction"><legend>先留下判断，再查看全部可能样本</legend>
+    <label><input type="radio" name="r3-prediction" value="less"> 样本均值事件的概率更小</label>
+    <label><input type="radio" name="r3-prediction" value="equal"> 两个概率相等</label>
+    <label><input type="radio" name="r3-prediction" value="greater"> 样本均值事件的概率更大</label>
+  </fieldset>
+  <div class="dt-row">
+    <button type="button" class="dt-button dt-button-primary" id="r3-freeze">保存预测</button>
+    <button type="button" class="dt-button dt-button-primary" id="r3-reveal" hidden>揭示精确枚举</button>
+    <button type="button" class="dt-button dt-button-quiet" id="r3-direct">不作预测，直接观察</button>
+    <button type="button" class="dt-button dt-button-quiet" id="r3-new">同条件开始新一轮</button>
+  </div>
+  <p id="r3-status" role="status" aria-live="polite"></p>
+  <p id="r3-contact"></p>
+  <div id="r3-results" hidden>
+    <p class="r3-callout" id="r3-comparison"></p>
+    <p id="r3-prediction-response"></p>
+    <label for="r3-path-select">选择一条有序样本路径，检查它产生哪个均值<select id="r3-path-select"></select></label>
+    <div class="r3-path" id="r3-path-view"></div>
+    <h4>每种均值从哪些路径得到？</h4>
+    <div id="r3-path-table"></div>
+    <h4>均值的理论抽样分布</h4>
+    <p>每行的横条长度表示概率；满宽表示概率 1。左侧为均值（分钟），右侧为精确概率。这里采用穷举，不是随机模拟频率。</p>
+    <div id="r3-distribution" role="group" aria-label="均值的理论抽样分布：横轴概率，纵向列出均值（分钟）"></div>
+    <p id="r3-total"></p>
+    <div class="dt-row"><button type="button" class="dt-button" id="r3-switch">改为无放回再验证</button><button type="button" class="dt-button" id="r3-completion">试做另一组卡的概率补全</button></div>
+  </div>
+  <details><summary>本实验的历史轮次与原判断</summary><div id="r3-history" class="r3-history"></div></details>
+  <p class="dt-small">预测和查看路径属于探索记录。要检验能否独立构造分布，请提交后面的新题。全解可随时查阅。</p>
+</div>

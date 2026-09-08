@@ -6,6 +6,8 @@ DialogueTutor 将数学、统计与经济材料组织成可以操作的学习课
 
 [下载完整技能包](dist/dialogue-tutor-1.7.0.zip) · [技能入口](plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md) · [本轮改造与评审](docs/engineering/v1.7.0/README.md)
 
+[S2 第六章新课件](docs/s2-ch6.html)由独立代理按照本技能从空白生成，包含3个目标和9项活动。教育与游戏评审各2/3通过，叙事定点复审3/3通过；真实浏览器视觉验收仍待完成，因此本次PR保留草稿。[实际评审与已知问题](docs/engineering/v1.7.0/run-03-decisions.md)对应同一冻结文件。
+
 ## 课程如何运行
 
 新课程使用任务舞台，一次呈现一个主要活动。页面保留前后导航、具名完整解释以及折叠学习工具。选择题与数值题保存首次作答；开放题保存原答与自评，探索记录参数及参与。
@@ -49,6 +51,8 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
 ```
 
 新课程的数据接口见 [interactive-html.md](plugins/dialogue-tutor/skills/dialogue-tutor/references/interactive-html.md)。`presentation: "studio"` 启用任务舞台；省略该字段时继续支持 1.6.0 连续正文课程。原 `s2-source.html` 与 `s2-interactive.json` 仅用于兼容性回归，不作为新布局范本。
+
+新课件的可编辑课程数据在 [docs/lessons/s2-ch6.json](docs/lessons/s2-ch6.json)，由同一组装器生成。`scripts/build_demo.py` 同时重建新课件与旧兼容演示；CI 核对生成文件与提交内容一致。新课例放在仓库文档中，技能包保持四位评委审核过的内容。
 
 仓库验证与打包：
 

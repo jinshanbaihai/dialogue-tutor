@@ -1,0 +1,541 @@
+{
+  "method": "Independent Python Fraction arithmetic over product/permutations; no author code imported.",
+  "checks": [
+    {
+      "name": "worked distribution",
+      "inputs": [
+        1,
+        7
+      ],
+      "actual": "{'1': '1/4', '4': '1/2', '7': '1/4'}",
+      "expected": "{'1': '1/4', '4': '1/2', '7': '1/4'}",
+      "pass": true
+    },
+    {
+      "name": "completion answer",
+      "inputs": [
+        0,
+        3,
+        6
+      ],
+      "actual": "1/3",
+      "expected": "1/3",
+      "pass": true
+    },
+    {
+      "name": "independent maximum distribution",
+      "inputs": [
+        1,
+        4,
+        9
+      ],
+      "actual": "{'1': '1/9', '4': '1/3', '9': '5/9'}",
+      "expected": "{'1': '1/9', '4': '1/3', '9': '5/9'}",
+      "pass": true
+    },
+    {
+      "name": "range distribution",
+      "inputs": [
+        2,
+        5,
+        10
+      ],
+      "actual": "{'0': '1/3', '3': '2/9', '5': '2/9', '8': '2/9'}",
+      "expected": "{'0': '1/3', '3': '2/9', '5': '2/9', '8': '2/9'}",
+      "pass": true
+    },
+    {
+      "name": "range tail probability",
+      "inputs": [
+        2,
+        5,
+        10
+      ],
+      "actual": "4/9",
+      "expected": "4/9",
+      "pass": true
+    },
+    {
+      "name": "without replacement distribution",
+      "inputs": [
+        3,
+        6,
+        12
+      ],
+      "actual": "{'9/2': '1/3', '15/2': '1/3', '9': '1/3'}",
+      "expected": "{'9/2': '1/3', '15/2': '1/3', '9': '1/3'}",
+      "pass": true
+    },
+    {
+      "name": "JSON numeric completion",
+      "inputs": "lesson.json",
+      "actual": "1/3",
+      "expected": "1/3",
+      "pass": true
+    },
+    {
+      "name": "JSON numeric transfer",
+      "inputs": "lesson.json",
+      "actual": "4/9",
+      "expected": "4/9",
+      "pass": true
+    },
+    {
+      "name": "default lab tail",
+      "inputs": "n=2 with replacement threshold=5",
+      "actual": "5/9",
+      "expected": "5/9",
+      "pass": true
+    }
+  ],
+  "lab": [
+    {
+      "parameters": {
+        "n": 1,
+        "mechanism": "with",
+        "threshold": 5
+      },
+      "distribution": {
+        "2": "1/3",
+        "4": "1/3",
+        "8": "1/3"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 1,
+        "mechanism": "with",
+        "threshold": 6
+      },
+      "distribution": {
+        "2": "1/3",
+        "4": "1/3",
+        "8": "1/3"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 1,
+        "mechanism": "with",
+        "threshold": 8
+      },
+      "distribution": {
+        "2": "1/3",
+        "4": "1/3",
+        "8": "1/3"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 1,
+        "mechanism": "without",
+        "threshold": 5
+      },
+      "distribution": {
+        "2": "1/3",
+        "4": "1/3",
+        "8": "1/3"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 1,
+        "mechanism": "without",
+        "threshold": 6
+      },
+      "distribution": {
+        "2": "1/3",
+        "4": "1/3",
+        "8": "1/3"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 1,
+        "mechanism": "without",
+        "threshold": 8
+      },
+      "distribution": {
+        "2": "1/3",
+        "4": "1/3",
+        "8": "1/3"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 2,
+        "mechanism": "with",
+        "threshold": 5
+      },
+      "distribution": {
+        "2": "1/9",
+        "3": "2/9",
+        "4": "1/9",
+        "5": "2/9",
+        "6": "2/9",
+        "8": "1/9"
+      },
+      "probability": "5/9",
+      "singleProbability": "1/3",
+      "relation": "greater",
+      "orderedSamples": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 2,
+        "mechanism": "with",
+        "threshold": 6
+      },
+      "distribution": {
+        "2": "1/9",
+        "3": "2/9",
+        "4": "1/9",
+        "5": "2/9",
+        "6": "2/9",
+        "8": "1/9"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 2,
+        "mechanism": "with",
+        "threshold": 8
+      },
+      "distribution": {
+        "2": "1/9",
+        "3": "2/9",
+        "4": "1/9",
+        "5": "2/9",
+        "6": "2/9",
+        "8": "1/9"
+      },
+      "probability": "1/9",
+      "singleProbability": "1/3",
+      "relation": "less",
+      "orderedSamples": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 2,
+        "mechanism": "without",
+        "threshold": 5
+      },
+      "distribution": {
+        "3": "1/3",
+        "5": "1/3",
+        "6": "1/3"
+      },
+      "probability": "2/3",
+      "singleProbability": "1/3",
+      "relation": "greater",
+      "orderedSamples": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 2,
+        "mechanism": "without",
+        "threshold": 6
+      },
+      "distribution": {
+        "3": "1/3",
+        "5": "1/3",
+        "6": "1/3"
+      },
+      "probability": "1/3",
+      "singleProbability": "1/3",
+      "relation": "equal",
+      "orderedSamples": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "n": 2,
+        "mechanism": "without",
+        "threshold": 8
+      },
+      "distribution": {
+        "3": "1/3",
+        "5": "1/3",
+        "6": "1/3"
+      },
+      "probability": "0",
+      "singleProbability": "1/3",
+      "relation": "less",
+      "orderedSamples": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          4
+        ]
+      ]
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,49 @@
+{
+  "algorithm": "SHA-256",
+  "recordedAtUtc": "2026-09-08T03:36:34.136017+00:00",
+  "skillFingerprintDefinition": "SHA256 of sorted relative-path + NUL + file-sha256 + newline for the consumed allowed skill files below; not a complete package hash; forbidden examples are excluded.",
+  "skillConsumedFiles": {
+    "SKILL.md": "61af8371b3cf41be3ca9cbf179a045b3a56de9ab24328d4f9721d73a3fbc0052",
+    "references/teaching-design.md": "1cf2d22da4db2cbd2ed979840d2505b02af015750f35f188fb914143db6b5c40",
+    "references/interactive-html.md": "d85e93a23d1baaa6b1ec69b87bf6d214c7a9bf981c81cb2047ee2440f5754605",
+    "references/visual-design.md": "ff6c2cdc10e6e09d3e45bc3bd1d2b65cfd43024ae0dfd7445e7e9df108d34652",
+    "references/engagement-and-narrative.md": "38b27dfb2994df6534d970acbc9ab25edcbbac2c86b693576e2a7ac7eadd8ce1",
+    "references/modes-and-explanations.md": "d8251c0f0357798bbc338130bc544ebfcd10b8bb2e10a79e04150f184c5e8f64",
+    "references/考纲与考试局.md": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+    "references/统计术语中英对照.md": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+    "references/deeptutor-provenance.md": "353abdabb033d2848d8511feaa66366365e7383eb7514f4462b3397967af5dcf",
+    "scripts/build_lesson.py": "b98d444160ac3656a9e3a842410eedc0153b7cd7b9839d96df366261516b04a0",
+    "assets/interactive/lesson-runtime.js": "db7b07aa2feb4b0e2a9c938a504117639e441d2ac5db2212b293e21332708b8d",
+    "assets/interactive/lesson-runtime.css": "4a933a8981688d8d04d780528988edd6f3b6073c7456f0f816f9d00b11672d3b"
+  },
+  "skillConsumedFilesFingerprint": "bd6901266226695788183ec2803e3f29b0960a8bfb8caf2d35911d5b09e7e4cb",
+  "officialScope": {
+    "path": "/workspace/scratch/b4c4b2db70f4/repo/docs/engineering/v1.7.0/official-scope.md",
+    "sha256": "9bb5187c2adc91afef038b7ea8c89367b29b29d490025ead1b6bbe7e4c52b82d"
+  },
+  "artifacts": {
+    "author/close-body.html": "7a41aa5456912063607c23cc82ced3c6fd0096a27b81ffbc64e5e584ad479924",
+    "author/close.js": "57c238b96d62f1b43238d26b4c047f7ad358db87366afb42b02bf23abe243e43",
+    "author/generate.py": "c8a985e0b3e9d3cc29484fdc7064671edeafb7841e2d50274b3cacb29088c302",
+    "author/lab-body.html": "56e761f2217988b32f8311a8c3fd66c70fb2078f12a5e6f71d521824fd216b49",
+    "author/lab.js": "c2b8ff85894c40587a0937a34696bcf1fd1904c00ae835c4955e0c93dc0400ba",
+    "blueprint.md": "3cacd2a26c1e615ed6d20ae2148dd0630091205a8a46b41b22f1bf4575e0fa4b",
+    "checks/check_dom.cjs": "ed008dba3bc02fc1459cd183f41081ca4ca2304c16b65c1fdbf64dabc37bdf50",
+    "checks/check_math.py": "48247400d70e60c32862bb9f0c45650acef246d5042607a8ffd46c5ef932567a",
+    "checks/rebuild.py": "50b6d5d43435e1fc2691a72c9478c462599e61a5f77dd72750d007b75b7207a6",
+    "frozen.json": "b393f6ed5dc70d9b55052f6b0b40e290ff3b5fbb2defe00f139145aa6d58bd14",
+    "generation-config.json": "8e48d6fdee9686f06cb77c8125238c741f70124960b6692b60489bc89082f3d1",
+    "lesson.html": "d9624b533e838edf4b06b974f15c07b0bb3bf653f36e4ea3b5e663c5adfe7c2c",
+    "lesson.json": "ab478d575b7c3147c2ed1c997ec81ed28d44db54657aeb36374cfa2348502b91",
+    "records/build-check.json": "46a9de91a84bd64128a62f99a8bfc84c9025af96d00b671aa75586dd0e5797ce",
+    "records/dom-check-initial-failure.json": "f744cda5f0727f136fd9276599ddacf13779ceb21ad0cd1b1f3691e20ba80149",
+    "records/dom-check.json": "39f7df6ae2b335d56da93befcd98d942d742890145e04b3d5e6edd5b33da2687",
+    "records/math-check.json": "a39848b2a3aa100680e0af8758f2690f59f281f6012feca8e3a773201f5bdc2d",
+    "records/reference-merged-immediate-export.json": "0de00866e4ae701747b0606e9bbe64229e111c51c470ca8efb1f439310e8a4d5",
+    "records/result-merged-immediate-export.json": "a802ee10cd772c0502b02ea34390cc1b899f29d785b0b5d2d4de8ae4c65b3761",
+    "validation.md": "c2390eb9fccdfd6d77ea466964939f7d6e795c39cb603cbc10e632585503bd51"
+  },
+  "excludedFromOwnManifest": [
+    "hashes.json"
+  ]
+}

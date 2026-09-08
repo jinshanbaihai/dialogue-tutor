@@ -34,8 +34,25 @@
 | --- | --- | --- |
 | run-01 | 形成独立HTML；教育、游戏、叙事退回，色彩等待真实视觉证据 | [逐项裁定并先修技能](run-01-decisions.md)，再取得四项技能定点复审 |
 | run-02 | 生成中发现恢复写回的API缺口，保留草稿和最小复现；未形成HTML | [先补公共接口与技能契约](run-02-decisions.md)，11项studio与66项完整Node回归通过，四位专家再次准许生成 |
-| run-03 | 使用新的无历史代理和空目录生成中 | 输入身份见 [第三轮技能清单](run-03-skill-manifest.json)，按原门槛审查实际新产物 |
+| run-03 | 从空白形成3目标、9活动的实际HTML；教育2/3、游戏2/3、叙事定点3/3通过；色彩源码范围无新增缺陷，真实视觉仍待验收 | [逐项裁定与整合](run-03-decisions.md)、[第三轮技能清单](run-03-skill-manifest.json)、[真实生成条件](runs/run-03/generation-config.json) |
 
 上述“一个任务案例”指同一章节的生成验收范围，包含失败后的迭代；不是把多次迭代写成多个独立学科案例。API修复的实际执行输出见 [Node记录](node-runtime-gate.txt) 与 [Python记录](python-builder-gate.txt)。[GitHub PR #14](https://github.com/jinshanbaihai/dialogue-tutor/pull/14) 已直接创建，当前保持草稿。
+
+## 当前可审阅产物
+
+[S2 第六章 HTML](../../s2-ch6.html) 与 [课程 JSON](../../lessons/s2-ch6.json) 和 run-03 冻结文件逐字节相同。四位对最后一次技能变动的准入记录分别为 [教育](reviews/restore-api-education-recheck.md)、[色彩](reviews/restore-api-color-recheck.md)、[游戏](reviews/restore-api-game-recheck.md)、[叙事](reviews/restore-api-narrative-recheck.md)。整合没有修改这18份技能文件或完整ZIP。
+
+| 实际成品评委 | 结论与证据范围 |
+| --- | --- |
+| [教育](reviews/education-html-run-03.md) | 2/3；独立精确数学、实际DOM8组38条观察；无Critical/Important，3项Minor接受并保留 |
+| [游戏](reviews/game-html-run-03.md) | 2/3；16组实际操作与路径；无Critical/Important，2项Minor与教育意见重合 |
+| [叙事](reviews/narrative-html-run-03.md) | 定点3/3；11条实际路径，先前退回问题关闭 |
+| [色彩](reviews/color-html-run-03.md) | 实际自定义图源码无新增缺陷；没有真实视觉评分，H5仍待验收 |
+
+当前工程复跑入口是仓库根目录的 `python3 scripts/build_demo.py`、`node --test tests/s2-ch6.test.cjs`、`npm test`、`python3 -m unittest discover -s tests -p 'test_*.py' -v` 和 `python3 scripts/package_skill.py`。新增4项课程回归抽取独立评审已验证的真实路径，覆盖数学图表、恢复写回、四种推荐以及真实回顾；执行记录见 [课程整合检查](run-03-integration-gate.txt)。原作者和评委探针保留当时的路径及输入输出，作为历史证据；不把归档路径搬动写成原脚本已经在新路径复跑。
+
+整合检查首跑发现测试直接比较两个JavaScript执行域的数组原型而失败；仅将预期对象规范化后复跑4/4通过，课件、技能和数学预期均未改变。这项测试适配与 run-01 的真实课件退回是不同事件。
+
+[当前验证状态](final-verification.json)把已完成工程条件与待完成视觉条件分开记录。H5缺失也意味着实际课件的四领域总准入尚未完成；PR没有被标成最终通过。
 
 实际真人延迟保持、迁移和持续参与收益尚未测量；同题重试、模拟时间、模型专家批准不能代替这些数据。
