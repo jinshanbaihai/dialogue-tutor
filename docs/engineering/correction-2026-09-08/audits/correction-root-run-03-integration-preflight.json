@@ -1,0 +1,11 @@
+{
+  "scope": "Root new whole-course integration preflight while author self-checks; not formal final review",
+  "sha256": "19217bf6d9e91f2085d6ca74ccad109d07e2ba5f081324da9262d3973344a658",
+  "operation": "native max full-solution -> real export/localStorage -> new jsdom window",
+  "beforeOpen": true,
+  "afterOpen": true,
+  "openSources": [
+    "solution-q3a"
+  ],
+  "errors": []
+}

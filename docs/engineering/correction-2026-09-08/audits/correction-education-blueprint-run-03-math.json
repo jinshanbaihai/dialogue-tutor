@@ -1,0 +1,569 @@
+{
+  "scope": "Independent blueprint arithmetic, not DOM or final HTML approval",
+  "contractSHA256": "fac910c860ca8edbd179e281e90e66d6b07f3a87375913c9d06180b89caa4230",
+  "cases": [
+    {
+      "id": "mean-wr",
+      "paths": [
+        {
+          "id": "AA",
+          "observations": [
+            2,
+            2
+          ],
+          "statistic": "2",
+          "weight": "1/9"
+        },
+        {
+          "id": "AB",
+          "observations": [
+            2,
+            6
+          ],
+          "statistic": "4",
+          "weight": "1/9"
+        },
+        {
+          "id": "AC",
+          "observations": [
+            2,
+            10
+          ],
+          "statistic": "6",
+          "weight": "1/9"
+        },
+        {
+          "id": "BA",
+          "observations": [
+            6,
+            2
+          ],
+          "statistic": "4",
+          "weight": "1/9"
+        },
+        {
+          "id": "BB",
+          "observations": [
+            6,
+            6
+          ],
+          "statistic": "6",
+          "weight": "1/9"
+        },
+        {
+          "id": "BC",
+          "observations": [
+            6,
+            10
+          ],
+          "statistic": "8",
+          "weight": "1/9"
+        },
+        {
+          "id": "CA",
+          "observations": [
+            10,
+            2
+          ],
+          "statistic": "6",
+          "weight": "1/9"
+        },
+        {
+          "id": "CB",
+          "observations": [
+            10,
+            6
+          ],
+          "statistic": "8",
+          "weight": "1/9"
+        },
+        {
+          "id": "CC",
+          "observations": [
+            10,
+            10
+          ],
+          "statistic": "10",
+          "weight": "1/9"
+        }
+      ],
+      "distribution": {
+        "2": "1/9",
+        "4": "2/9",
+        "6": "1/3",
+        "8": "2/9",
+        "10": "1/9"
+      },
+      "preimages": {
+        "2": [
+          "AA"
+        ],
+        "4": [
+          "AB",
+          "BA"
+        ],
+        "6": [
+          "AC",
+          "BB",
+          "CA"
+        ],
+        "8": [
+          "BC",
+          "CB"
+        ],
+        "10": [
+          "CC"
+        ]
+      }
+    },
+    {
+      "id": "mean-wor",
+      "paths": [
+        {
+          "id": "AB",
+          "observations": [
+            2,
+            6
+          ],
+          "statistic": "4",
+          "weight": "1/6"
+        },
+        {
+          "id": "AC",
+          "observations": [
+            2,
+            10
+          ],
+          "statistic": "6",
+          "weight": "1/6"
+        },
+        {
+          "id": "BA",
+          "observations": [
+            6,
+            2
+          ],
+          "statistic": "4",
+          "weight": "1/6"
+        },
+        {
+          "id": "BC",
+          "observations": [
+            6,
+            10
+          ],
+          "statistic": "8",
+          "weight": "1/6"
+        },
+        {
+          "id": "CA",
+          "observations": [
+            10,
+            2
+          ],
+          "statistic": "6",
+          "weight": "1/6"
+        },
+        {
+          "id": "CB",
+          "observations": [
+            10,
+            6
+          ],
+          "statistic": "8",
+          "weight": "1/6"
+        }
+      ],
+      "distribution": {
+        "4": "1/3",
+        "6": "1/3",
+        "8": "1/3"
+      },
+      "preimages": {
+        "4": [
+          "AB",
+          "BA"
+        ],
+        "6": [
+          "AC",
+          "CA"
+        ],
+        "8": [
+          "BC",
+          "CB"
+        ]
+      }
+    },
+    {
+      "id": "max-wr",
+      "paths": [
+        {
+          "id": "RR",
+          "observations": [
+            1,
+            1
+          ],
+          "statistic": "1",
+          "weight": "1/9"
+        },
+        {
+          "id": "RS",
+          "observations": [
+            1,
+            1
+          ],
+          "statistic": "1",
+          "weight": "1/9"
+        },
+        {
+          "id": "RT",
+          "observations": [
+            1,
+            5
+          ],
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "id": "SR",
+          "observations": [
+            1,
+            1
+          ],
+          "statistic": "1",
+          "weight": "1/9"
+        },
+        {
+          "id": "SS",
+          "observations": [
+            1,
+            1
+          ],
+          "statistic": "1",
+          "weight": "1/9"
+        },
+        {
+          "id": "ST",
+          "observations": [
+            1,
+            5
+          ],
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "id": "TR",
+          "observations": [
+            5,
+            1
+          ],
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "id": "TS",
+          "observations": [
+            5,
+            1
+          ],
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "id": "TT",
+          "observations": [
+            5,
+            5
+          ],
+          "statistic": "5",
+          "weight": "1/9"
+        }
+      ],
+      "distribution": {
+        "1": "4/9",
+        "5": "5/9"
+      },
+      "preimages": {
+        "1": [
+          "RR",
+          "RS",
+          "SR",
+          "SS"
+        ],
+        "5": [
+          "RT",
+          "ST",
+          "TR",
+          "TS",
+          "TT"
+        ]
+      }
+    },
+    {
+      "id": "max-wor",
+      "paths": [
+        {
+          "id": "RS",
+          "observations": [
+            1,
+            1
+          ],
+          "statistic": "1",
+          "weight": "1/6"
+        },
+        {
+          "id": "RT",
+          "observations": [
+            1,
+            5
+          ],
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "id": "SR",
+          "observations": [
+            1,
+            1
+          ],
+          "statistic": "1",
+          "weight": "1/6"
+        },
+        {
+          "id": "ST",
+          "observations": [
+            1,
+            5
+          ],
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "id": "TR",
+          "observations": [
+            5,
+            1
+          ],
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "id": "TS",
+          "observations": [
+            5,
+            1
+          ],
+          "statistic": "5",
+          "weight": "1/6"
+        }
+      ],
+      "distribution": {
+        "1": "1/3",
+        "5": "2/3"
+      },
+      "preimages": {
+        "1": [
+          "RS",
+          "SR"
+        ],
+        "5": [
+          "RT",
+          "ST",
+          "TR",
+          "TS"
+        ]
+      }
+    },
+    {
+      "id": "range-wr",
+      "paths": [
+        {
+          "id": "DD",
+          "observations": [
+            0,
+            0
+          ],
+          "statistic": "0",
+          "weight": "1/9"
+        },
+        {
+          "id": "DE",
+          "observations": [
+            0,
+            3
+          ],
+          "statistic": "3",
+          "weight": "1/9"
+        },
+        {
+          "id": "DF",
+          "observations": [
+            0,
+            9
+          ],
+          "statistic": "9",
+          "weight": "1/9"
+        },
+        {
+          "id": "ED",
+          "observations": [
+            3,
+            0
+          ],
+          "statistic": "3",
+          "weight": "1/9"
+        },
+        {
+          "id": "EE",
+          "observations": [
+            3,
+            3
+          ],
+          "statistic": "0",
+          "weight": "1/9"
+        },
+        {
+          "id": "EF",
+          "observations": [
+            3,
+            9
+          ],
+          "statistic": "6",
+          "weight": "1/9"
+        },
+        {
+          "id": "FD",
+          "observations": [
+            9,
+            0
+          ],
+          "statistic": "9",
+          "weight": "1/9"
+        },
+        {
+          "id": "FE",
+          "observations": [
+            9,
+            3
+          ],
+          "statistic": "6",
+          "weight": "1/9"
+        },
+        {
+          "id": "FF",
+          "observations": [
+            9,
+            9
+          ],
+          "statistic": "0",
+          "weight": "1/9"
+        }
+      ],
+      "distribution": {
+        "0": "1/3",
+        "3": "2/9",
+        "6": "2/9",
+        "9": "2/9"
+      },
+      "preimages": {
+        "0": [
+          "DD",
+          "EE",
+          "FF"
+        ],
+        "3": [
+          "DE",
+          "ED"
+        ],
+        "6": [
+          "EF",
+          "FE"
+        ],
+        "9": [
+          "DF",
+          "FD"
+        ]
+      }
+    },
+    {
+      "id": "q4-wor",
+      "paths": [
+        {
+          "id": "GH",
+          "observations": [
+            2,
+            5
+          ],
+          "statistic": "7/2",
+          "weight": "1/6"
+        },
+        {
+          "id": "GJ",
+          "observations": [
+            2,
+            9
+          ],
+          "statistic": "11/2",
+          "weight": "1/6"
+        },
+        {
+          "id": "HG",
+          "observations": [
+            5,
+            2
+          ],
+          "statistic": "7/2",
+          "weight": "1/6"
+        },
+        {
+          "id": "HJ",
+          "observations": [
+            5,
+            9
+          ],
+          "statistic": "7",
+          "weight": "1/6"
+        },
+        {
+          "id": "JG",
+          "observations": [
+            9,
+            2
+          ],
+          "statistic": "11/2",
+          "weight": "1/6"
+        },
+        {
+          "id": "JH",
+          "observations": [
+            9,
+            5
+          ],
+          "statistic": "7",
+          "weight": "1/6"
+        }
+      ],
+      "distribution": {
+        "7/2": "1/3",
+        "11/2": "1/3",
+        "7": "1/3"
+      },
+      "preimages": {
+        "7/2": [
+          "GH",
+          "HG"
+        ],
+        "11/2": [
+          "GJ",
+          "JG"
+        ],
+        "7": [
+          "HJ",
+          "JH"
+        ]
+      }
+    }
+  ],
+  "q4PMeanAtLeast7": "1/3",
+  "q4BothIndependentGroups": "1/9"
+}

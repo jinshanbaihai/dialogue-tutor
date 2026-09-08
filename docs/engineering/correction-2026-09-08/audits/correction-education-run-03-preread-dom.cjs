@@ -1,0 +1,10 @@
+const fs=require('fs'),crypto=require('crypto'),{JSDOM,VirtualConsole}=require('../repo/node_modules/jsdom');
+const html=fs.readFileSync('generation/correction-run-03/lesson.html','utf8');
+const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
+const dom=new JSDOM(html,{url:'https://education-preread03.invalid/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.HTMLElement.prototype.scrollIntoView=function(){};w.HTMLElement.prototype.getBoundingClientRect=function(){return{width:300,height:20,top:2000,bottom:2020,left:0,right:300}}}});
+setTimeout(()=>{try{
+const d=dom.window.document,p=d.getElementById('probability-prerequisites'),act=d.getElementById('dist-act3');
+const rows=Array.from(p.querySelectorAll('.r3-line')).map(n=>({id:n.id,html:n.outerHTML,text:n.textContent}));
+const result={scope:'Targeted prefreeze content exit only: jsdom parsed/executed compiled HTML; fixed offscreen geometry, no browser/layout or final-course operation claim.',htmlSHA256:crypto.createHash('sha256').update(html).digest('hex'),checks:{approvedHash:crypto.createHash('sha256').update(html).digest('hex')==='15cd0a2d867084ded7aebc05908a99ebc4b3d78c063d5758e7905482f6549f20',insideDuty3:act.contains(p),afterMeanAB:!!(d.getElementById('mean-first-AB-4').compareDocumentPosition(p)&4),beforeMeanLab:!!(p.compareDocumentPosition(d.getElementById('dt-activity-mean-lab'))&4),beforePathProbability:!!(p.compareDocumentPosition(d.getElementById('mean-wr-AA-weight-1'))&4),elevenActualMath:p.querySelectorAll('math').length===11,constantWording:d.getElementById('stat-act3').textContent.includes('常数统计量可以看作取值固定的随机变量'),noJsdomErrors:errors.length===0},primerText:p.textContent,rows,statText:d.getElementById('stat-act3').textContent,errors};
+fs.writeFileSync('reviews/correction-education-run-03-preread-dom.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+}catch(e){console.error(e);process.exitCode=1;}finally{dom.window.close()}},20);

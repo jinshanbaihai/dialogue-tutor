@@ -1,0 +1,52 @@
+{
+  "htmlHash": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "scope": "Static DOM parse of final anchor-only draft delta; no JS execution or image decode asserted.",
+  "checks": [
+    {
+      "name": "lesson JSON exact equality after reversing two anchor prefixes",
+      "pass": true
+    },
+    {
+      "name": "components JS byte identical",
+      "pass": true
+    },
+    {
+      "name": "shelf-wor-group-7over2/unique actual section",
+      "pass": true
+    },
+    {
+      "name": "shelf-wor-group-7over2/metadata and complete written group",
+      "pass": true,
+      "evidence": {
+        "lines": 7
+      }
+    },
+    {
+      "name": "shelf-wor-group-11over2/unique actual section",
+      "pass": true
+    },
+    {
+      "name": "shelf-wor-group-11over2/metadata and complete written group",
+      "pass": true,
+      "evidence": {
+        "lines": 7
+      }
+    },
+    {
+      "name": "all shelf metadata anchors actual and unique",
+      "pass": true
+    },
+    {
+      "name": "actual static image bytes match shelf manifest",
+      "pass": true,
+      "evidence": {
+        "expected": "819ba5978fe4d7ea961b55513ce91bce6ff4de23ed104872a49bdfd6e5cf5cb1"
+      }
+    }
+  ],
+  "summary": {
+    "checks": 8,
+    "passed": 8,
+    "failed": []
+  }
+}

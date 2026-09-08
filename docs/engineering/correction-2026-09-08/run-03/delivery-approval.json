@@ -1,0 +1,12 @@
+{
+  "decision": "approved",
+  "Critical": 0,
+  "Important": 0,
+  "Minor": 0,
+  "checks": 29,
+  "report": "../audits/correction-code-delivery-run-03-review.md",
+  "reportSha256": "861d9f4d8c49fa68b5d8cd9cd2a4291eac5df21709045610f89707408d5b1768",
+  "rootReadFullReport": true,
+  "frozenCourseChanged": false,
+  "archivalWhitespace": "git diff --check flags whitespace in preserved verbatim historical execution logs; these raw records are intentionally not reformatted. Product/source/documentation changes have no whitespace errors."
+}

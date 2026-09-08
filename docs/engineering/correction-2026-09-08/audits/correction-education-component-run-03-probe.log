@@ -1,0 +1,41 @@
+PASS default offscreen does not mark targets
+PASS prediction remains pending before result
+PASS one visible target remains pending
+PASS both visible targets show wrong and recommend repair
+PASS WR source does not contaminate WOR
+PASS mean repair opens complete derivation
+PASS repair own return keeps original submission
+PASS repair restart resets only draft keeps old assistance history
+PASS assisted wrong still wrong and repair preferred
+PASS incomplete all not frozen/revealed
+PASS incomplete mapping not frozen/revealed
+PASS incomplete weight not frozen/revealed
+PASS incomplete p5 not frozen/revealed
+PASS explicit empty full wrong is submitted
+PASS cancel final path explicitly empty with prior instruction
+PASS undo path restores unanswered
+PASS max wr assisted=false correct=false
+PASS wrong recommendation wr/false
+PASS wrong repair full math wr/false
+PASS wrong repair return condition wr/false
+PASS max wr assisted=false correct=true
+PASS max wr assisted=true correct=false
+PASS wrong recommendation wr/true
+PASS wrong repair full math wr/true
+PASS wrong repair return condition wr/true
+PASS max wr assisted=true correct=true
+PASS max wor assisted=false correct=false
+PASS wrong recommendation wor/false
+PASS wrong repair full math wor/false
+PASS wrong repair return condition wor/false
+PASS max wor assisted=false correct=true
+PASS max wor assisted=true correct=false
+PASS wrong recommendation wor/true
+PASS wrong repair full math wor/true
+PASS wrong repair return condition wor/true
+PASS max wor assisted=true correct=true
+PASS native summary immediate old import export retains contact
+FAIL new window restores actual reference visibility
+PASS new window frozen answer retains assistance
+PASS no uncaught jsdom exception
+{"total":40,"failed":1,"html":"3c08d4ba081019c85af71fc4694d58838e680f8ae3df27a81564c04f8e3b77dd"}

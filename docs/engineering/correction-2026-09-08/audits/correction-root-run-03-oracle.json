@@ -1,0 +1,814 @@
+{
+  "scope": "Root independent arithmetic against exact-data only; no DOM/course approval",
+  "authorDataSha256": "95f8b0e67f268c062f2291dad55ecdb6c0dc877495541e242c74deafd120f95a",
+  "cases": [
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "distribution": {
+        "2": "1/9",
+        "4": "2/9",
+        "6": "1/3",
+        "8": "2/9",
+        "10": "1/9"
+      },
+      "preimages": {
+        "2": [
+          "AA"
+        ],
+        "4": [
+          "AB",
+          "BA"
+        ],
+        "6": [
+          "AC",
+          "BB",
+          "CA"
+        ],
+        "8": [
+          "BC",
+          "CB"
+        ],
+        "10": [
+          "CC"
+        ]
+      }
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "distribution": {
+        "4": "1/3",
+        "6": "1/3",
+        "8": "1/3"
+      },
+      "preimages": {
+        "4": [
+          "AB",
+          "BA"
+        ],
+        "6": [
+          "AC",
+          "CA"
+        ],
+        "8": [
+          "BC",
+          "CB"
+        ]
+      }
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "distribution": {
+        "1": "4/9",
+        "5": "5/9"
+      },
+      "preimages": {
+        "1": [
+          "RR",
+          "RS",
+          "SR",
+          "SS"
+        ],
+        "5": [
+          "RT",
+          "ST",
+          "TR",
+          "TS",
+          "TT"
+        ]
+      }
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "distribution": {
+        "1": "1/3",
+        "5": "2/3"
+      },
+      "preimages": {
+        "1": [
+          "RS",
+          "SR"
+        ],
+        "5": [
+          "RT",
+          "ST",
+          "TR",
+          "TS"
+        ]
+      }
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "distribution": {
+        "0": "1/3",
+        "3": "2/9",
+        "6": "2/9",
+        "9": "2/9"
+      },
+      "preimages": {
+        "0": [
+          "DD",
+          "EE",
+          "FF"
+        ],
+        "3": [
+          "DE",
+          "ED"
+        ],
+        "6": [
+          "EF",
+          "FE"
+        ],
+        "9": [
+          "DF",
+          "FD"
+        ]
+      }
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "distribution": {
+        "7/2": "1/3",
+        "11/2": "1/3",
+        "7": "1/3"
+      },
+      "preimages": {
+        "7/2": [
+          "JK",
+          "KJ"
+        ],
+        "11/2": [
+          "JL",
+          "LJ"
+        ],
+        "7": [
+          "KL",
+          "LK"
+        ]
+      }
+    }
+  ],
+  "paths": [
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "AA",
+      "x1": 2,
+      "x2": 2,
+      "statistic": "2",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "AB",
+      "x1": 2,
+      "x2": 6,
+      "statistic": "4",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "AC",
+      "x1": 2,
+      "x2": 10,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "BA",
+      "x1": 6,
+      "x2": 2,
+      "statistic": "4",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "BB",
+      "x1": 6,
+      "x2": 6,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "BC",
+      "x1": 6,
+      "x2": 10,
+      "statistic": "8",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "CA",
+      "x1": 10,
+      "x2": 2,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "CB",
+      "x1": 10,
+      "x2": 6,
+      "statistic": "8",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wr",
+      "path": "CC",
+      "x1": 10,
+      "x2": 10,
+      "statistic": "10",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "AA",
+      "x1": 2,
+      "x2": 2,
+      "statistic": "2",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "AB",
+      "x1": 2,
+      "x2": 6,
+      "statistic": "4",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "AC",
+      "x1": 2,
+      "x2": 10,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "BA",
+      "x1": 6,
+      "x2": 2,
+      "statistic": "4",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "BB",
+      "x1": 6,
+      "x2": 6,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "BC",
+      "x1": 6,
+      "x2": 10,
+      "statistic": "8",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "CA",
+      "x1": 10,
+      "x2": 2,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "CB",
+      "x1": 10,
+      "x2": 6,
+      "statistic": "8",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "mean",
+      "condition": "wor",
+      "path": "CC",
+      "x1": 10,
+      "x2": 10,
+      "statistic": "10",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "RR",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "RS",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "RT",
+      "x1": 1,
+      "x2": 5,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "SR",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "SS",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "ST",
+      "x1": 1,
+      "x2": 5,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "TR",
+      "x1": 5,
+      "x2": 1,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "TS",
+      "x1": 5,
+      "x2": 1,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wr",
+      "path": "TT",
+      "x1": 5,
+      "x2": 5,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "RR",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "RS",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "RT",
+      "x1": 1,
+      "x2": 5,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "SR",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "SS",
+      "x1": 1,
+      "x2": 1,
+      "statistic": "1",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "ST",
+      "x1": 1,
+      "x2": 5,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "TR",
+      "x1": 5,
+      "x2": 1,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "TS",
+      "x1": 5,
+      "x2": 1,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "max",
+      "condition": "wor",
+      "path": "TT",
+      "x1": 5,
+      "x2": 5,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "DD",
+      "x1": 0,
+      "x2": 0,
+      "statistic": "0",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "DE",
+      "x1": 0,
+      "x2": 3,
+      "statistic": "3",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "DF",
+      "x1": 0,
+      "x2": 9,
+      "statistic": "9",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "ED",
+      "x1": 3,
+      "x2": 0,
+      "statistic": "3",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "EE",
+      "x1": 3,
+      "x2": 3,
+      "statistic": "0",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "EF",
+      "x1": 3,
+      "x2": 9,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "FD",
+      "x1": 9,
+      "x2": 0,
+      "statistic": "9",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "FE",
+      "x1": 9,
+      "x2": 3,
+      "statistic": "6",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "range",
+      "condition": "wr",
+      "path": "FF",
+      "x1": 9,
+      "x2": 9,
+      "statistic": "0",
+      "first": "1/3",
+      "second": "1/3",
+      "weight": "1/9",
+      "allowed": true
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "JJ",
+      "x1": 2,
+      "x2": 2,
+      "statistic": "2",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "JK",
+      "x1": 2,
+      "x2": 5,
+      "statistic": "7/2",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "JL",
+      "x1": 2,
+      "x2": 9,
+      "statistic": "11/2",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "KJ",
+      "x1": 5,
+      "x2": 2,
+      "statistic": "7/2",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "KK",
+      "x1": 5,
+      "x2": 5,
+      "statistic": "5",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "KL",
+      "x1": 5,
+      "x2": 9,
+      "statistic": "7",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "LJ",
+      "x1": 9,
+      "x2": 2,
+      "statistic": "11/2",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "LK",
+      "x1": 9,
+      "x2": 5,
+      "statistic": "7",
+      "first": "1/3",
+      "second": "1/2",
+      "weight": "1/6",
+      "allowed": true
+    },
+    {
+      "dataset": "shelf",
+      "condition": "wor",
+      "path": "LL",
+      "x1": 9,
+      "x2": 9,
+      "statistic": "9",
+      "first": "1/3",
+      "second": "0",
+      "weight": "0",
+      "allowed": false
+    }
+  ],
+  "pathRecords": 54,
+  "q4": {
+    "singleGroupMeanAtLeast7": "1/3",
+    "twoIndependentGroups": "1/9",
+    "requires": "independent groups; replacement alone is insufficient"
+  },
+  "failures": [],
+  "passed": true
+}

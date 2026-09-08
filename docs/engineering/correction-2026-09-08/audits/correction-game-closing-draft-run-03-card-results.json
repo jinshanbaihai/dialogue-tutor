@@ -1,0 +1,177 @@
+{
+  "htmlSHA": "dcf48266c5a6c9676673073a6381adeef18d8326bd8eba64e747ccd7b04b68fc",
+  "scope": "independent bounded closing draft DOM review; no Image load stub, no browser layout or whole-course claim",
+  "scenes": [
+    {
+      "name": "closing-native-card-priority-immediate-refresh",
+      "assertions": [
+        {
+          "name": "initial exact card1",
+          "pass": true,
+          "actual": "开始卡1的初次回忆"
+        },
+        {
+          "name": "initial reaches card index0 front",
+          "pass": true,
+          "actual": {
+            "index": 0,
+            "cards": {}
+          }
+        },
+        {
+          "name": "native flip immediately changes closing to unfinished card1",
+          "pass": true,
+          "actual": "继续卡1尚未自评的回忆"
+        },
+        {
+          "name": "rated first card has real review item",
+          "pass": true,
+          "actual": {
+            "activityId": "recall-core",
+            "cardIndex": 0,
+            "title": "两张定义回忆卡 · 1",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1800086400000,
+              "lastReviewedAt": 1800000000000,
+              "lastSessionId": "session-1800000000000-eltv6p9n4si",
+              "evidenceSource": "self"
+            },
+            "due": false
+          }
+        },
+        {
+          "name": "initial card2 priority after real first rating",
+          "pass": true,
+          "actual": "开始卡2的初次回忆"
+        },
+        {
+          "name": "unfinished card2 priority",
+          "pass": true,
+          "actual": "继续卡2尚未自评的回忆"
+        },
+        {
+          "name": "continue preserves card2 back without rating",
+          "pass": true,
+          "actual": {
+            "index": 1,
+            "cards": {
+              "0": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": "recalled",
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1800086400000,
+                  "lastReviewedAt": 1800000000000,
+                  "lastSessionId": "session-1800000000000-eltv6p9n4si",
+                  "evidenceSource": "self"
+                },
+                "attemptId": "recall-core:1800000000000:1",
+                "exposure": {
+                  "sessionId": "session-1800000000000-eltv6p9n4si",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1800000000000-eltv6p9n4si"
+              },
+              "1": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": null,
+                "review": null,
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1800000000000-eltv6p9n4si",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1800000000000-eltv6p9n4si"
+              }
+            }
+          }
+        },
+        {
+          "name": "explicit early review uses actual card0 item front",
+          "pass": true,
+          "actual": {
+            "index": 0,
+            "cards": {
+              "0": {
+                "revealed": false,
+                "hintUsed": false,
+                "rating": null,
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1800086400000,
+                  "lastReviewedAt": 1800000000000,
+                  "lastSessionId": "session-1800000000000-eltv6p9n4si",
+                  "evidenceSource": "self"
+                },
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1800000000000-eltv6p9n4si",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": true,
+                "recallSessionId": null
+              },
+              "1": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": null,
+                "review": null,
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1800000000000-eltv6p9n4si",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1800000000000-eltv6p9n4si"
+              }
+            }
+          }
+        },
+        {
+          "name": "early reopen preserves card2 and previous review",
+          "pass": true,
+          "actual": [
+            {
+              "activityId": "recall-core",
+              "cardIndex": 0,
+              "title": "两张定义回忆卡 · 1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1800086400000,
+                "lastReviewedAt": 1800000000000,
+                "lastSessionId": "session-1800000000000-eltv6p9n4si",
+                "evidenceSource": "self"
+              },
+              "due": false
+            }
+          ]
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 10,
+  "failed": [],
+  "errors": []
+}

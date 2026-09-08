@@ -1,0 +1,76 @@
+{
+  "htmlSHA": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "scope": "independent frozen complete-course component DOM review; no Image load stub, no browser layout claim",
+  "scenes": [
+    {
+      "name": "twenty-finite-questions-wrong-source-return-retry",
+      "assertions": [
+        {
+          "name": "frame-opening finite pre-authored alternatives",
+          "pass": false,
+          "actual": 3
+        },
+        {
+          "name": "frame-opening native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        }
+      ],
+      "error": "SyntaxError: \"undefined\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at plain (/workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:5:21)\n    at /workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:26:16\n    at async scene (/workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:15:123)\n    at async /workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:20:1"
+    },
+    {
+      "name": "five-checkpoints-live-inside-derivation-and-choice-only",
+      "assertions": [
+        {
+          "name": "path distinction after AB result, before exploration",
+          "pass": true
+        },
+        {
+          "name": "wr probability check occurs between AB and BA path derivations",
+          "pass": true
+        },
+        {
+          "name": "wr grouping check occurs between output4 and output6",
+          "pass": true
+        },
+        {
+          "name": "wor probability check occurs between AB and BA path derivations",
+          "pass": true
+        },
+        {
+          "name": "wor grouping check occurs between output4 and output6",
+          "pass": true
+        },
+        {
+          "name": "complete course main answers require no typing",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "actual closing and recall controls occur after worked exercises",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 10,
+  "failed": [
+    {
+      "scene": "twenty-finite-questions-wrong-source-return-retry",
+      "name": "frame-opening finite pre-authored alternatives",
+      "pass": false,
+      "actual": 3
+    }
+  ],
+  "errors": [
+    {
+      "scene": "twenty-finite-questions-wrong-source-return-retry",
+      "error": "SyntaxError: \"undefined\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at plain (/workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:5:21)\n    at /workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:26:16\n    at async scene (/workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:15:123)\n    at async /workspace/scratch/b4c4b2db70f4/reviews/correction-game-course-run-03-native-probe.cjs:20:1"
+    }
+  ]
+}

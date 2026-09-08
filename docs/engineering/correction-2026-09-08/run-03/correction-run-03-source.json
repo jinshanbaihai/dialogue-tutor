@@ -1,0 +1,29 @@
+{
+  "archive": "correction-run-03-source.tar.xz",
+  "files": 199,
+  "bytes": 21864556,
+  "sha256": "de2d32c0720fcd7ec6d8e13517e00fddf580abbeceb3117a9701d68b609a9377",
+  "gitBlobSha": "57c21cef94604b64c824df56b7ca3e3e10c7e8fd",
+  "scope": "All 197 author manifest files plus final-hashes.json and FREEZE.json; no omitted manifest files. Includes original source, exact data, full HTML/JSON, real PNGs, font and OFL. Frozen author record remains unchanged.",
+  "transportPieces": [
+    {
+      "path": "correction-run-03-source.tar.xz.part-001",
+      "bytes": 7864320,
+      "sha256": "45796325f99882b0ebcbb956d8c9ca9d730b827837b8ae7b6539a5b5500a728d",
+      "gitBlobSha": "4846366778139cf8499f0fbecbd9c6f92b35fb4b"
+    },
+    {
+      "path": "correction-run-03-source.tar.xz.part-002",
+      "bytes": 7864320,
+      "sha256": "3d26d4ed4630967b8336cc3329054da0956a6353f7a28a25aa16f84ddd3a81ed",
+      "gitBlobSha": "ed3b6548cbbc7ad78c7aaa296171e71629db9e7f"
+    },
+    {
+      "path": "correction-run-03-source.tar.xz.part-003",
+      "bytes": 6135916,
+      "sha256": "45897e67249998ff94d4eff6132261d8a4fdea7c16d5f704f90ce31dd3347030",
+      "gitBlobSha": "5aa7926230718d39bf3921b3ca48719409fcf7e8"
+    }
+  ],
+  "reassemble": "cat correction-run-03-source.tar.xz.part-* > correction-run-03-source.tar.xz"
+}

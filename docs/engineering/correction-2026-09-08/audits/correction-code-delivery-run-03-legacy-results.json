@@ -1,0 +1,6 @@
+{
+  "legacyInstalled": "2c6f9f4599ef3ec226362b7aca0af724c4bbac2c24979aadf3010713d3fe0786",
+  "legacyRebuilt": "2c6f9f4599ef3ec226362b7aca0af724c4bbac2c24979aadf3010713d3fe0786",
+  "byteEqual": true,
+  "scope": "Approved builder + unchanged approved legacy example/base; not a fresh-course generation test"
+}

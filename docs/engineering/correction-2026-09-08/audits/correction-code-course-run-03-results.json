@@ -1,0 +1,381 @@
+{
+  "htmlHash": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "scope": "Frozen final full lesson; actual inline JS in jsdom. Explicit geometry/Image/time/storage fixtures, no browser-render or decode claim.",
+  "checks": [
+    {
+      "name": "freeze/html",
+      "pass": true
+    },
+    {
+      "name": "freeze/json",
+      "pass": true
+    },
+    {
+      "name": "freeze/file-manifest",
+      "pass": true
+    },
+    {
+      "name": "freeze/exact-entire-data",
+      "pass": true
+    },
+    {
+      "name": "freeze/scene",
+      "pass": true
+    },
+    {
+      "name": "DOM/no-main-typing/initial",
+      "pass": true
+    },
+    {
+      "name": "DOM/actual-local-links/initial",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "ready/blank-not-frozen",
+      "pass": true
+    },
+    {
+      "name": "ready/named-missing-groups",
+      "pass": true,
+      "evidence": "待填：路径RR的maximum、路径概率依据、输出1的概率、输出5的概率。已有选择保留。"
+    },
+    {
+      "name": "ready/last-probability-required",
+      "pass": true
+    },
+    {
+      "name": "judge/complete-bad-mass-and-missing-freezes",
+      "pass": true
+    },
+    {
+      "name": "freeze/double-submit-once",
+      "pass": true
+    },
+    {
+      "name": "DOM/no-main-typing/actual-repair",
+      "pass": true
+    },
+    {
+      "name": "DOM/actual-local-links/actual-repair",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "repair/owner-submission-bound",
+      "pass": true
+    },
+    {
+      "name": "repair/returns-original-wr",
+      "pass": true
+    },
+    {
+      "name": "repair/full-source-actual-focus",
+      "pass": true
+    },
+    {
+      "name": "retry/correct-assisted-and-first-immutable",
+      "pass": true
+    },
+    {
+      "name": "judge/wor-extra-path-specific",
+      "pass": true
+    },
+    {
+      "name": "ready/explicit-empty-valid-wrong",
+      "pass": true
+    },
+    {
+      "name": "routing/assisted-wrong-still-repair",
+      "pass": true
+    },
+    {
+      "name": "isolation/two-conditions-no-mean-history",
+      "pass": true
+    },
+    {
+      "name": "DOM/no-main-typing/after-retries",
+      "pass": true
+    },
+    {
+      "name": "DOM/actual-local-links/after-retries",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "no-errors/ready-complete-wrong-empty-and-two-conditions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "prediction/offscreen-no-leak",
+      "pass": true
+    },
+    {
+      "name": "viewport/hidden-parent-no-coverage",
+      "pass": true
+    },
+    {
+      "name": "viewport/one-target-pending",
+      "pass": true
+    },
+    {
+      "name": "viewport/both-presentation-no-first-rewrite",
+      "pass": true
+    },
+    {
+      "name": "summary/same-queue-submit-assisted-wrong",
+      "pass": true
+    },
+    {
+      "name": "prediction/correct-assisted-separate",
+      "pass": true
+    },
+    {
+      "name": "prediction/no-max-pollution",
+      "pass": true
+    },
+    {
+      "name": "DOM/no-main-typing/prediction",
+      "pass": true
+    },
+    {
+      "name": "DOM/actual-local-links/prediction",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "no-errors/prediction-targets-static-visibility-and-summary-submit",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "reject/identity-keeps-trusted-both-owners",
+      "pass": true,
+      "evidence": "组件身份错误"
+    },
+    {
+      "name": "reject/version",
+      "pass": true,
+      "evidence": "组件身份错误"
+    },
+    {
+      "name": "reject/data-hash",
+      "pass": true,
+      "evidence": "题面条件不匹配"
+    },
+    {
+      "name": "reject/fake-source",
+      "pass": true,
+      "evidence": "未知来源或覆盖不一致"
+    },
+    {
+      "name": "reject/targets",
+      "pass": true,
+      "evidence": "未知来源或覆盖不一致"
+    },
+    {
+      "name": "reject/half-frozen",
+      "pass": true,
+      "evidence": "冻结答卷含未填项"
+    },
+    {
+      "name": "reject/bad-envelope-preserves-current",
+      "pass": true
+    },
+    {
+      "name": "union/earliest-contact",
+      "pass": true
+    },
+    {
+      "name": "restore/old-state-union-and-no-cross-pollution",
+      "pass": true
+    },
+    {
+      "name": "file/read-completion-collects-current-reference",
+      "pass": true
+    },
+    {
+      "name": "export/native-current-source-union",
+      "pass": true
+    },
+    {
+      "name": "no-errors/restore-union-rejection-and-file-boundary",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "reopen/actual-open-ranges",
+      "pass": true
+    },
+    {
+      "name": "reopen/no-fabricated-learning",
+      "pass": true
+    },
+    {
+      "name": "reopen/immediate-export-contacts",
+      "pass": true
+    },
+    {
+      "name": "no-errors/reopen-immediate-export-and-open-ranges",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "media/current-written-proof-before-image/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "media/no-targets/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "media/failure-keeps-proof/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "media/current-written-proof-before-image/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "media/no-targets/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "media/failure-keeps-proof/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/current-written-proof-before-image/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/one-target-only",
+      "pass": true
+    },
+    {
+      "name": "media/failure-keeps-proof/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wr-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/current-written-proof-before-image/mean-wr-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/failure-keeps-proof/mean-wr-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/two-written-targets-already-presented",
+      "pass": true
+    },
+    {
+      "name": "media/late-callback-cannot-replace-current",
+      "pass": true
+    },
+    {
+      "name": "media/null-import-invalidates-clears",
+      "pass": true
+    },
+    {
+      "name": "media/import-retains-reference-history",
+      "pass": true
+    },
+    {
+      "name": "no-errors/real-media-request-display-late-and-restore",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "media/restore-request-without-display",
+      "pass": true
+    },
+    {
+      "name": "media/retry-displays-current",
+      "pass": true
+    },
+    {
+      "name": "media/return-actual-current-row",
+      "pass": true
+    },
+    {
+      "name": "DOM/no-main-typing/media-return",
+      "pass": true
+    },
+    {
+      "name": "DOM/actual-local-links/media-return",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "no-errors/media-reopen-pending-proof",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "storage/in-memory-correct-first-answer",
+      "pass": true
+    },
+    {
+      "name": "storage/export-still-available",
+      "pass": true
+    },
+    {
+      "name": "no-errors/storage-unavailable-still-completes",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "ready-complete-wrong-empty-and-two-conditions",
+      "errors": []
+    },
+    {
+      "name": "prediction-targets-static-visibility-and-summary-submit",
+      "errors": []
+    },
+    {
+      "name": "restore-union-rejection-and-file-boundary",
+      "errors": []
+    },
+    {
+      "name": "reopen-immediate-export-and-open-ranges",
+      "errors": []
+    },
+    {
+      "name": "real-media-request-display-late-and-restore",
+      "errors": []
+    },
+    {
+      "name": "media-reopen-pending-proof",
+      "errors": []
+    },
+    {
+      "name": "storage-unavailable-still-completes",
+      "errors": []
+    }
+  ],
+  "summary": {
+    "checks": 80,
+    "passed": 80,
+    "failed": [],
+    "scenarios": 7
+  }
+}

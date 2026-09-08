@@ -1,0 +1,353 @@
+{
+  "htmlHash": "338a9e12ceb3419a4767507e24a989014da994da725fb79aac2a1e4359f49285",
+  "scope": "Frozen component trial actual inline JS. Explicit viewport/Image/manifest fixtures; no final course or real PNG claims.",
+  "checks": [
+    {
+      "name": "snapshot/script-contained",
+      "pass": true
+    },
+    {
+      "name": "ready/blank-no-freeze",
+      "pass": true,
+      "evidence": "待填：路径集合、路径概率依据、输出1的概率、输出5的概率。已有选择保留。"
+    },
+    {
+      "name": "ready/missing-all-required",
+      "pass": true,
+      "evidence": "待填：路径RR的maximum、路径概率依据、输出1的概率、输出5的概率。已有选择保留。"
+    },
+    {
+      "name": "ready/missing-one-probability",
+      "pass": true
+    },
+    {
+      "name": "judge/complete-missing-paths-freezes",
+      "pass": true
+    },
+    {
+      "name": "freeze/no-double",
+      "pass": true
+    },
+    {
+      "name": "ready/explicit-empty-and-bad-mass-freezes",
+      "pass": true
+    },
+    {
+      "name": "no-errors/ready-freeze-and-empty",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "viewport/offscreen-pending",
+      "pass": true
+    },
+    {
+      "name": "viewport/one-target-pending",
+      "pass": true
+    },
+    {
+      "name": "viewport/both-targets-presented",
+      "pass": true
+    },
+    {
+      "name": "boundary/same-queue-api-reference-retained",
+      "pass": true
+    },
+    {
+      "name": "boundary/no-cross-condition-component-pollution",
+      "pass": true
+    },
+    {
+      "name": "no-errors/viewport-summary-import",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "restore/reference-open",
+      "pass": false,
+      "evidence": {
+        "open": false,
+        "contacts": {
+          "max-wr-reference": {
+            "sourceId": "max-wr-reference",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "kind": "reference",
+            "targets": [
+              1,
+              5
+            ],
+            "at": 1788852827720
+          }
+        }
+      }
+    },
+    {
+      "name": "restore/no-action",
+      "pass": true
+    },
+    {
+      "name": "no-errors/reopen-reference",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "boundary/file-current-open-captured",
+      "pass": true
+    },
+    {
+      "name": "reject/source",
+      "pass": true,
+      "evidence": "未知来源或覆盖不一致"
+    },
+    {
+      "name": "reject/targets",
+      "pass": true,
+      "evidence": "未知来源或覆盖不一致"
+    },
+    {
+      "name": "reject/condition",
+      "pass": true,
+      "evidence": "接触记录不合法"
+    },
+    {
+      "name": "reject/unsupported-target",
+      "pass": true,
+      "evidence": "目标覆盖错误"
+    },
+    {
+      "name": "reject/frozen-incomplete",
+      "pass": true,
+      "evidence": "冻结答卷含未填项"
+    },
+    {
+      "name": "reject/identity",
+      "pass": true,
+      "evidence": "题面条件不匹配"
+    },
+    {
+      "name": "union/earliest-time",
+      "pass": false,
+      "evidence": {
+        "original": 1788852828523,
+        "incoming": 1788852818523,
+        "actual": 1788852828523
+      }
+    },
+    {
+      "name": "no-errors/native-file-and-forgery",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "media/after-sync-writes-current-state",
+      "pass": true
+    },
+    {
+      "name": "media/late-old-callbacks-isolated",
+      "pass": true
+    },
+    {
+      "name": "media/import-null-clears-and-invalidates",
+      "pass": true,
+      "evidence": {
+        "round": {
+          "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+          "draft": {
+            "choice": null
+          },
+          "active": null,
+          "history": [],
+          "contacts": {
+            "fixture-wr-A": {
+              "sourceId": "fixture-wr-A",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "frame",
+              "targets": [],
+              "at": 1788852829196
+            },
+            "fixture-wr-C": {
+              "sourceId": "fixture-wr-C",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "frame",
+              "targets": [
+                4,
+                6
+              ],
+              "at": 1788852829230
+            }
+          },
+          "targets": [
+            4,
+            6
+          ],
+          "requested": null,
+          "displayed": null
+        },
+        "dom": ""
+      }
+    },
+    {
+      "name": "media/failed-current-fallback",
+      "pass": true
+    },
+    {
+      "name": "media/retry-success",
+      "pass": true
+    },
+    {
+      "name": "no-errors/async-current-object-and-clear",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "repair/has-source-return-restart",
+      "pass": true
+    },
+    {
+      "name": "repair/return-fixed-original-condition",
+      "pass": true
+    },
+    {
+      "name": "repair/source-target-focus",
+      "pass": true
+    },
+    {
+      "name": "repair/retry-retains-assistance-after-full-solution",
+      "pass": false,
+      "evidence": {
+        "contacts": {},
+        "first": {
+          "id": "max-board-wr-1788852830081-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "0",
+              "5": "5/9"
+            }
+          },
+          "judge": {
+            "correct": false,
+            "differences": [
+              "distribution:1"
+            ]
+          },
+          "assisted": false,
+          "presented": true,
+          "at": 1788852830081
+        },
+        "second": {
+          "id": "max-board-wr-1788852830631-2",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "judge": {
+            "correct": true,
+            "differences": []
+          },
+          "assisted": false,
+          "presented": true,
+          "at": 1788852830631
+        }
+      }
+    },
+    {
+      "name": "repair/frozen-answer-unchanged",
+      "pass": true
+    },
+    {
+      "name": "no-errors/repair-history-contact-and-owner",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "ready-freeze-and-empty",
+      "errors": []
+    },
+    {
+      "name": "viewport-summary-import",
+      "errors": []
+    },
+    {
+      "name": "reopen-reference",
+      "errors": []
+    },
+    {
+      "name": "native-file-and-forgery",
+      "errors": []
+    },
+    {
+      "name": "async-current-object-and-clear",
+      "errors": []
+    },
+    {
+      "name": "repair-history-contact-and-owner",
+      "errors": []
+    }
+  ],
+  "summary": {
+    "checks": 38,
+    "passed": 35,
+    "failed": [
+      "restore/reference-open",
+      "union/earliest-time",
+      "repair/retry-retains-assistance-after-full-solution"
+    ],
+    "scenarios": 6
+  }
+}

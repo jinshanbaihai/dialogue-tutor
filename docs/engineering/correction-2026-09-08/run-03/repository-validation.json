@@ -1,0 +1,35 @@
+{
+  "node": {
+    "version": "v24.19.0",
+    "command": "npm test",
+    "tests": 91,
+    "passed": 91,
+    "failed": 0,
+    "skipped": 0,
+    "evidence": "node-tests.log",
+    "processExitReceipt": "Final node:test summary proves completion and results. Later session-poll tool failed independently with network approval cancelled; no fabricated exit code."
+  },
+  "python": {
+    "version": "Python 3.12.13",
+    "command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+    "tests": 20,
+    "passed": 20,
+    "exitCode": 0,
+    "evidence": "python-tests.log"
+  },
+  "build": {
+    "command": "python scripts/build_demo.py",
+    "exitCode": 0,
+    "htmlEqualsFrozen": true,
+    "jsonEqualsFrozen": true,
+    "htmlSha256": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3"
+  },
+  "package": {
+    "command": "python scripts/package_skill.py",
+    "exitCode": 0,
+    "entries": 20,
+    "sha256": "bc86956cfd04cb95d81812ec679e97426da11ac1a1457aec6d39f480c231b903",
+    "approvedSourcesMatched": 19
+  },
+  "scope": "Repository regression includes archived compatibility tests and two new-course maintenance tests; five final independent expert reports carry whole-course assessment. No remote CI or browser result claimed."
+}

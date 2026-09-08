@@ -1,0 +1,1634 @@
+{
+  "htmlSHA": "bb42f74c700b6ec21705e23e86fd7401028d2b0fac054e3be0570ea48b3b5ec2",
+  "scope": "independent component DOM review; no Image load stub, no browser layout claim",
+  "scenes": [
+    {
+      "name": "ready-default",
+      "assertions": [
+        {
+          "name": "unfinished not frozen",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "draft retained",
+          "pass": true
+        },
+        {
+          "name": "only missing field guidance",
+          "pass": true,
+          "actual": "待填：路径集合、路径概率依据、输出1的概率、输出5的概率。已有选择保留。"
+        },
+        {
+          "name": "no judge feedback",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "ready-only-path",
+      "assertions": [
+        {
+          "name": "unfinished not frozen",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "draft retained",
+          "pass": true
+        },
+        {
+          "name": "only missing field guidance",
+          "pass": true,
+          "actual": "待填：路径RS的maximum、路径概率依据、输出1的概率、输出5的概率。已有选择保留。"
+        },
+        {
+          "name": "no judge feedback",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "ready-mapping",
+      "assertions": [
+        {
+          "name": "unfinished not frozen",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "draft retained",
+          "pass": true
+        },
+        {
+          "name": "only missing field guidance",
+          "pass": true,
+          "actual": "待填：路径RR的maximum。已有选择保留。"
+        },
+        {
+          "name": "no judge feedback",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "ready-weight",
+      "assertions": [
+        {
+          "name": "unfinished not frozen",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "draft retained",
+          "pass": true
+        },
+        {
+          "name": "only missing field guidance",
+          "pass": true,
+          "actual": "待填：路径概率依据。已有选择保留。"
+        },
+        {
+          "name": "no judge feedback",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "ready-distribution",
+      "assertions": [
+        {
+          "name": "unfinished not frozen",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "draft retained",
+          "pass": true
+        },
+        {
+          "name": "only missing field guidance",
+          "pass": true,
+          "actual": "待填：输出1的概率、输出5的概率。已有选择保留。"
+        },
+        {
+          "name": "no judge feedback",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "explicit-empty-and-undo",
+      "assertions": [
+        {
+          "name": "cancel final is visible explicit empty",
+          "pass": true,
+          "actual": "抽样条件有放回 · 两抽独立无放回 · 逐次均匀① 有序身份路径集合取消最后一项会把答案改为空集。撤销本组回答可恢复未答，其他组保留。R → RR → SR → TS → RS → SS → TT → RT → ST → T我的路径集合为空撤销本组回答已选择空集② 本人路径的maximum本人当前没有路径行。③ 每条有效路径的概率依据(1/3) × (1/3)(1/3) × (1/2)每条路径概率为1/2④ maximum的分布P(maximum=1)01/92/91/34/91/25/92/31P(maximum=5)01/92/91/34/91/25/92/31提交当前全部选择"
+        },
+        {
+          "name": "undo returns unanswered",
+          "pass": true
+        },
+        {
+          "name": "complete empty is valid wrong attempt",
+          "pass": true,
+          "actual": [
+            {
+              "id": "max-board-wr-1800000000000-1",
+              "owner": "max-board",
+              "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+              "draft": {
+                "pathAnswered": true,
+                "paths": [],
+                "mappings": {},
+                "weightReason": "wr",
+                "distribution": {
+                  "1": "1/2",
+                  "5": "1/2"
+                }
+              },
+              "judge": {
+                "correct": false,
+                "differences": [
+                  "missing:RR",
+                  "missing:RS",
+                  "missing:RT",
+                  "missing:SR",
+                  "missing:SS",
+                  "missing:ST",
+                  "missing:TR",
+                  "missing:TS",
+                  "missing:TT",
+                  "distribution:1",
+                  "distribution:5"
+                ]
+              },
+              "assisted": false,
+              "presented": true,
+              "at": 1800000000000
+            }
+          ]
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wr-unassisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wr-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "lt"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": false,
+            "presented": false,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "before presented no correctness leak",
+          "pass": true,
+          "actual": "判断已保存，待核对。先核看两个目标的概率。继续核看均值4自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "one target still pending",
+          "pass": true,
+          "actual": "判断已保存，待核对。已核看均值4；还需另一目标。继续核看均值6自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前未记录参考接触。你选了小于；1/3大于2/9。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次比较"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "mean-wr-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 129,
+            "text": "1+1=3。P(mean=6)=3÷39÷3分子与分母同除以公因子3，分数的值保持相同。P(mean=6)=19÷3计算分子：3÷3=1。P(mean=6)=13计算分母：9÷3=3。输出 8 的全部原像原像即产生这一输出的路径：BC, CB。这些路径对应不同抽样结果，互不重叠。P(mean=8)=P(BC)+P(CB)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=8)=19+19将每条路径已经算出的权重分别代入。P(mean=8)=1+19各项同分母，保留分母，把分子逐项相加。P(mean=8)=29各项分母相同，分母保留，分子相加：1+1=2。输出 10 的全部原像原像即产生这一输出的路径：CC。这些路径对应不同抽样结果，互不重叠。P(mean=10)=P(CC)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=10)=19将每条路径已经算出的权重分别代入。mean概率219429613829101919+29+13+29+19=19+29+39+29+19取分母最小公倍数9，各分数分子分母同乘相同整数。19+29+39+29+19=1+2+3+2+19同分母相加，保留分母，把各分子放到同一分数的分子中。1+2+3+2+19=99完成分子加法：1+2+3+2+1=9。99=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。13=1×33×3把三分之一通分到分母9：分子、分母同乘3。33×3先计算分子1×3=3。39再计算分母3×3=9。3>2两个分数分母相同且为正，比较分子3与2。39>29同除以正数9保持不等号方向。13>29有放回时1/3=3/9而3>2；无放回时两个分数相同。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wr-unassisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wr-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "gt"
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": false,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "before presented no correctness leak",
+          "pass": true,
+          "actual": "判断已保存，待核对。先核看两个目标的概率。继续核看均值4自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "one target still pending",
+          "pass": true,
+          "actual": "判断已保存，待核对。已核看均值4；还需另一目标。继续核看均值6自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前未记录参考接触。你选了大于；1/3大于2/9。开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "开始无放回 · 逐次均匀作答"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wr-assisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wr-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "lt"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前已接触参考，保留辅助标识。你选了小于；1/3大于2/9。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次比较"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "mean-wr-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 129,
+            "text": "1+1=3。P(mean=6)=3÷39÷3分子与分母同除以公因子3，分数的值保持相同。P(mean=6)=19÷3计算分子：3÷3=1。P(mean=6)=13计算分母：9÷3=3。输出 8 的全部原像原像即产生这一输出的路径：BC, CB。这些路径对应不同抽样结果，互不重叠。P(mean=8)=P(BC)+P(CB)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=8)=19+19将每条路径已经算出的权重分别代入。P(mean=8)=1+19各项同分母，保留分母，把分子逐项相加。P(mean=8)=29各项分母相同，分母保留，分子相加：1+1=2。输出 10 的全部原像原像即产生这一输出的路径：CC。这些路径对应不同抽样结果，互不重叠。P(mean=10)=P(CC)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=10)=19将每条路径已经算出的权重分别代入。mean概率219429613829101919+29+13+29+19=19+29+39+29+19取分母最小公倍数9，各分数分子分母同乘相同整数。19+29+39+29+19=1+2+3+2+19同分母相加，保留分母，把各分子放到同一分数的分子中。1+2+3+2+19=99完成分子加法：1+2+3+2+1=9。99=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。13=1×33×3把三分之一通分到分母9：分子、分母同乘3。33×3先计算分子1×3=3。39再计算分母3×3=9。3>2两个分数分母相同且为正，比较分子3与2。39>29同除以正数9保持不等号方向。13>29有放回时1/3=3/9而3>2；无放回时两个分数相同。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wr-assisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wr-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "gt"
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前已接触参考，保留辅助标识。你选了大于；1/3大于2/9。回看本条件完整原行开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "回看本条件完整原行"
+        },
+        {
+          "name": "assisted correct also offers optional other task",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wor-unassisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wor-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "gt"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": false,
+            "presented": false,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "before presented no correctness leak",
+          "pass": true,
+          "actual": "判断已保存，待核对。先核看两个目标的概率。继续核看均值4自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "one target still pending",
+          "pass": true,
+          "actual": "判断已保存，待核对。已核看均值4；还需另一目标。继续核看均值6自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前未记录参考接触。你选了大于；两边都是1/3。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次比较"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "mean-wor-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 91,
+            "text": "ean=4)=13计算分母：6÷2=3。输出 6 的全部原像原像即产生这一输出的路径：AC, CA。这些路径对应不同抽样结果，互不重叠。P(mean=6)=P(AC)+P(CA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=6)=16+16将每条路径已经算出的权重分别代入。P(mean=6)=1+16各项同分母，保留分母，把分子逐项相加。P(mean=6)=26各项分母相同，分母保留，分子相加：1+1=2。P(mean=6)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(mean=6)=16÷2计算分子：2÷2=1。P(mean=6)=13计算分母：6÷2=3。输出 8 的全部原像原像即产生这一输出的路径：BC, CB。这些路径对应不同抽样结果，互不重叠。P(mean=8)=P(BC)+P(CB)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=8)=16+16将每条路径已经算出的权重分别代入。P(mean=8)=1+16各项同分母，保留分母，把分子逐项相加。P(mean=8)=26各项分母相同，分母保留，分子相加：1+1=2。P(mean=8)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(mean=8)=16÷2计算分子：2÷2=1。P(mean=8)=13计算分母：6÷2=3。mean概率41361381313+13+13=1+1+13同分母相加，保留分母，把各分子放到同一分数的分子中。1+1+13=33完成分子加法：1+1+1=3。33=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。13=13有放回时1/3=3/9而3>2；无放回时两个分数相同。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wor-unassisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wor-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "eq"
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": false,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "before presented no correctness leak",
+          "pass": true,
+          "actual": "判断已保存，待核对。先核看两个目标的概率。继续核看均值4自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "one target still pending",
+          "pass": true,
+          "actual": "判断已保存，待核对。已核看均值4；还需另一目标。继续核看均值6自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前未记录参考接触。你选了相等；两边都是1/3。开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "开始有放回 · 两抽独立作答"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wor-assisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wor-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "gt"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前已接触参考，保留辅助标识。你选了大于；两边都是1/3。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次比较"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "mean-wor-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 91,
+            "text": "ean=4)=13计算分母：6÷2=3。输出 6 的全部原像原像即产生这一输出的路径：AC, CA。这些路径对应不同抽样结果，互不重叠。P(mean=6)=P(AC)+P(CA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=6)=16+16将每条路径已经算出的权重分别代入。P(mean=6)=1+16各项同分母，保留分母，把分子逐项相加。P(mean=6)=26各项分母相同，分母保留，分子相加：1+1=2。P(mean=6)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(mean=6)=16÷2计算分子：2÷2=1。P(mean=6)=13计算分母：6÷2=3。输出 8 的全部原像原像即产生这一输出的路径：BC, CB。这些路径对应不同抽样结果，互不重叠。P(mean=8)=P(BC)+P(CB)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=8)=16+16将每条路径已经算出的权重分别代入。P(mean=8)=1+16各项同分母，保留分母，把分子逐项相加。P(mean=8)=26各项分母相同，分母保留，分子相加：1+1=2。P(mean=8)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(mean=8)=16÷2计算分子：2÷2=1。P(mean=8)=13计算分母：6÷2=3。mean概率41361381313+13+13=1+1+13同分母相加，保留分母，把各分子放到同一分数的分子中。1+1+13=33完成分子加法：1+1+1=3。33=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。13=13有放回时1/3=3/9而3>2；无放回时两个分数相同。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "mean-lab-wor-assisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "mean-lab-wor-1800000000000-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "eq"
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前已接触参考，保留辅助标识。你选了相等；两边都是1/3。回看本条件完整原行开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "回看本条件完整原行"
+        },
+        {
+          "name": "assisted correct also offers optional other task",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wr-unassisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wr-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight"
+              ]
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次构造"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "max-wr-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 105,
+            "text": "乘放在分母。13×3先计算分子：1×1=1；分母乘积保留。P(TT)=19再计算分母：3×3=9。全部有效路径为 RR, RS, RT, SR, SS, ST, TR, TS, TT。逐行列出第一身份，再列该条件允许的第二身份，故没有漏掉有效路径。输出 1 的全部原像原像即产生这一输出的路径：RR, RS, SR, SS。这些路径对应不同抽样结果，互不重叠。P(maximum=1)=P(RR)+P(RS)+P(SR)+P(SS)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=1)=19+19+19+19将每条路径已经算出的权重分别代入。P(maximum=1)=1+1+1+19各项同分母，保留分母，把分子逐项相加。P(maximum=1)=49各项分母相同，分母保留，分子相加：1+1+1+1=4。输出 5 的全部原像原像即产生这一输出的路径：RT, ST, TR, TS, TT。这些路径对应不同抽样结果，互不重叠。P(maximum=5)=P(RT)+P(ST)+P(TR)+P(TS)+P(TT)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=5)=19+19+19+19+19将每条路径已经算出的权重分别代入。P(maximum=5)=1+1+1+1+19各项同分母，保留分母，把分子逐项相加。P(maximum=5)=59各项分母相同，分母保留，分子相加：1+1+1+1+1=5。maximum概率14955949+59=4+59同分母相加，保留分母，把各分子放到同一分数的分子中。4+59=99完成分子加法：4+5=9。99=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wr-unassisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wr-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "wr",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前未记录参考接触。开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "开始无放回 · 逐次均匀作答"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wr-assisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wr-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight"
+              ]
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次构造"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "max-wr-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 105,
+            "text": "乘放在分母。13×3先计算分子：1×1=1；分母乘积保留。P(TT)=19再计算分母：3×3=9。全部有效路径为 RR, RS, RT, SR, SS, ST, TR, TS, TT。逐行列出第一身份，再列该条件允许的第二身份，故没有漏掉有效路径。输出 1 的全部原像原像即产生这一输出的路径：RR, RS, SR, SS。这些路径对应不同抽样结果，互不重叠。P(maximum=1)=P(RR)+P(RS)+P(SR)+P(SS)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=1)=19+19+19+19将每条路径已经算出的权重分别代入。P(maximum=1)=1+1+1+19各项同分母，保留分母，把分子逐项相加。P(maximum=1)=49各项分母相同，分母保留，分子相加：1+1+1+1=4。输出 5 的全部原像原像即产生这一输出的路径：RT, ST, TR, TS, TT。这些路径对应不同抽样结果，互不重叠。P(maximum=5)=P(RT)+P(ST)+P(TR)+P(TS)+P(TT)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=5)=19+19+19+19+19将每条路径已经算出的权重分别代入。P(maximum=5)=1+1+1+1+19各项同分母，保留分母，把分子逐项相加。P(maximum=5)=59各项分母相同，分母保留，分子相加：1+1+1+1+1=5。maximum概率14955949+59=4+59同分母相加，保留分母，把各分子放到同一分数的分子中。4+59=99完成分子加法：4+5=9。99=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wr-assisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wr-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "wr",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前已接触参考，保留辅助标识。回看本条件完整原行开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "回看本条件完整原行"
+        },
+        {
+          "name": "assisted correct also offers optional other task",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wor-unassisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wor-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1/3",
+                "5": "2/3"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight"
+              ]
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次构造"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "max-wor-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 81,
+            "text": "这一输出的路径：RS, SR。这些路径对应不同抽样结果，互不重叠。P(maximum=1)=P(RS)+P(SR)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=1)=16+16将每条路径已经算出的权重分别代入。P(maximum=1)=1+16各项同分母，保留分母，把分子逐项相加。P(maximum=1)=26各项分母相同，分母保留，分子相加：1+1=2。P(maximum=1)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(maximum=1)=16÷2计算分子：2÷2=1。P(maximum=1)=13计算分母：6÷2=3。输出 5 的全部原像原像即产生这一输出的路径：RT, ST, TR, TS。这些路径对应不同抽样结果，互不重叠。P(maximum=5)=P(RT)+P(ST)+P(TR)+P(TS)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=5)=16+16+16+16将每条路径已经算出的权重分别代入。P(maximum=5)=1+1+1+16各项同分母，保留分母，把分子逐项相加。P(maximum=5)=46各项分母相同，分母保留，分子相加：1+1+1+1=4。P(maximum=5)=4÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(maximum=5)=26÷2计算分子：4÷2=2。P(maximum=5)=23计算分母：6÷2=3。maximum概率11352313+23=1+23同分母相加，保留分母，把各分子放到同一分数的分子中。1+23=33完成分子加法：1+2=3。33=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wor-unassisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wor-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "wor",
+              "distribution": {
+                "1": "1/3",
+                "5": "2/3"
+              }
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前未记录参考接触。开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "开始有放回 · 两抽独立作答"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wor-assisted-wrong",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wor-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1/3",
+                "5": "2/3"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight"
+              ]
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "wrong always recommends repair",
+          "pass": true,
+          "actual": "重查这次构造"
+        },
+        {
+          "name": "repair is visible",
+          "pass": true
+        },
+        {
+          "name": "repair opens actual complete source",
+          "pass": true,
+          "actual": "max-wor-complete"
+        },
+        {
+          "name": "complete source contains derivation",
+          "pass": true,
+          "actual": {
+            "math": 81,
+            "text": "这一输出的路径：RS, SR。这些路径对应不同抽样结果，互不重叠。P(maximum=1)=P(RS)+P(SR)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=1)=16+16将每条路径已经算出的权重分别代入。P(maximum=1)=1+16各项同分母，保留分母，把分子逐项相加。P(maximum=1)=26各项分母相同，分母保留，分子相加：1+1=2。P(maximum=1)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(maximum=1)=16÷2计算分子：2÷2=1。P(maximum=1)=13计算分母：6÷2=3。输出 5 的全部原像原像即产生这一输出的路径：RT, ST, TR, TS。这些路径对应不同抽样结果，互不重叠。P(maximum=5)=P(RT)+P(ST)+P(TR)+P(TS)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(maximum=5)=16+16+16+16将每条路径已经算出的权重分别代入。P(maximum=5)=1+1+1+16各项同分母，保留分母，把分子逐项相加。P(maximum=5)=46各项分母相同，分母保留，分子相加：1+1+1+1=4。P(maximum=5)=4÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(maximum=5)=26÷2计算分子：4÷2=2。P(maximum=5)=23计算分母：6÷2=3。maximum概率11352313+23=1+23同分母相加，保留分母，把各分子放到同一分数的分子中。1+23=33完成分子加法：1+2=3。33=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。返回本条件当前作答（保留草稿）"
+          }
+        },
+        {
+          "name": "return exact condition no history deletion",
+          "pass": true
+        },
+        {
+          "name": "explicit restart preserves history and clears active",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-board-wor-assisted-correct",
+      "assertions": [
+        {
+          "name": "freeze correctness and assistance separately",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wor-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "wor",
+              "distribution": {
+                "1": "1/3",
+                "5": "2/3"
+              }
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "actual feedback matches correctness",
+          "pass": true,
+          "actual": "本次核对正确。作答前已接触参考，保留辅助标识。回看本条件完整原行开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "frozen aid remains original",
+          "pass": true
+        },
+        {
+          "name": "correct has actual next control",
+          "pass": true,
+          "actual": "回看本条件完整原行"
+        },
+        {
+          "name": "assisted correct also offers optional other task",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-repair-set",
+      "assertions": [
+        {
+          "name": "repair specifies actual selected difference",
+          "pass": true,
+          "actual": "无放回 · 逐次均匀 · 答卷 max-board-wor-1800000000000-1按你实际提交的字段逐项重查：路径RS尚未选入；路径RR在本条件不能发生。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+        },
+        {
+          "name": "old repair still returns original condition",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-repair-mapping",
+      "assertions": [
+        {
+          "name": "repair specifies actual selected difference",
+          "pass": true,
+          "actual": "无放回 · 逐次均匀 · 答卷 max-board-wor-1800000000000-1按你实际提交的字段逐项重查：路径RS的maximum选择为5。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+        },
+        {
+          "name": "old repair still returns original condition",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-repair-weight",
+      "assertions": [
+        {
+          "name": "repair specifies actual selected difference",
+          "pass": true,
+          "actual": "无放回 · 逐次均匀 · 答卷 max-board-wor-1800000000000-1按你实际提交的字段逐项重查：路径概率依据选择为放回独立两抽。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+        },
+        {
+          "name": "old repair still returns original condition",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "max-repair-distribution",
+      "assertions": [
+        {
+          "name": "repair specifies actual selected difference",
+          "pass": true,
+          "actual": "无放回 · 逐次均匀 · 答卷 max-board-wor-1800000000000-1按你实际提交的字段逐项重查：输出1的概率选择为1/2；输出5的概率选择为1/2。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+        },
+        {
+          "name": "old repair still returns original condition",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "next-target-reference-status",
+      "assertions": [
+        {
+          "name": "seen target labelled assisted continue",
+          "pass": true,
+          "actual": "带参考继续无放回 · 逐次均匀作答"
+        },
+        {
+          "name": "real route switches target condition",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "next-after-both-max-complete",
+      "assertions": [
+        {
+          "name": "next routes to Q4",
+          "pass": true,
+          "actual": "继续Q4(a)"
+        },
+        {
+          "name": "actual current activity Q4",
+          "pass": true
+        },
+        {
+          "name": "completed Q4 now labelled review",
+          "pass": true,
+          "actual": "回看Q4(a)"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "recall-native-index-and-real-items",
+      "assertions": [
+        {
+          "name": "continue retains unfinished second back",
+          "pass": true
+        },
+        {
+          "name": "browse first preserves revealed state",
+          "pass": true
+        },
+        {
+          "name": "early review actual first front",
+          "pass": true
+        },
+        {
+          "name": "early unchanged due/history",
+          "pass": true
+        },
+        {
+          "name": "second unfinished preserved",
+          "pass": true
+        },
+        {
+          "name": "due label reflects true item",
+          "pass": true,
+          "actual": "到期复习卡1"
+        },
+        {
+          "name": "due actual first front",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "no-main-text-input-and-restorable-repair",
+      "assertions": [
+        {
+          "name": "reopened wrong history and contact survive",
+          "pass": true,
+          "actual": {
+            "key": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1/3",
+                "5": "2/3"
+              }
+            },
+            "active": "max-board-wor-1800000000000-1",
+            "history": [
+              {
+                "id": "max-board-wor-1800000000000-1",
+                "owner": "max-board",
+                "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+                "draft": {
+                  "pathAnswered": true,
+                  "paths": [
+                    "RS",
+                    "RT",
+                    "SR",
+                    "ST",
+                    "TR",
+                    "TS"
+                  ],
+                  "mappings": {
+                    "RS": "1",
+                    "RT": "5",
+                    "SR": "1",
+                    "ST": "5",
+                    "TR": "5",
+                    "TS": "5"
+                  },
+                  "weightReason": "half",
+                  "distribution": {
+                    "1": "1/3",
+                    "5": "2/3"
+                  }
+                },
+                "judge": {
+                  "correct": false,
+                  "differences": [
+                    "weight"
+                  ]
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "max-wor-feedback-contact": {
+                "sourceId": "max-wor-feedback-contact",
+                "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              },
+              "max-wor-complete": {
+                "sourceId": "max-wor-complete",
+                "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [],
+            "targets": [],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "reopen did not add exploration action",
+          "pass": true
+        },
+        {
+          "name": "no main typing inputs",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "no main typing inputs",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 193,
+  "failed": [],
+  "errors": []
+}

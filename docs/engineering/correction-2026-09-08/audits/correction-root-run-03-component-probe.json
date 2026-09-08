@@ -1,0 +1,141 @@
+{
+  "sha256": "38a7df93c88c10c7995afcc015a1f6d11ff44117efb1a5b24188484049370365",
+  "scope": "Root actual native button clicks in jsdom; no browser/layout evidence. scrollIntoView no-op, native jsdom zero rectangles; component draft snapshot only.",
+  "log": [
+    {
+      "case": "incomplete own path submission",
+      "message": "待填：路径RR的maximum、路径概率依据、输出1的概率、输出5的概率。已有选择保留。",
+      "state": {
+        "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RR"
+          ],
+          "mappings": {},
+          "weightReason": null,
+          "distribution": {
+            "1": null,
+            "5": null
+          }
+        },
+        "active": null,
+        "history": [],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "case": "complete mathematically wrong probability sum two is still an answer",
+      "feedback": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。",
+      "state": {
+        "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RR"
+          ],
+          "mappings": {
+            "RR": "1"
+          },
+          "weightReason": "wr",
+          "distribution": {
+            "1": "1",
+            "5": "1"
+          }
+        },
+        "active": "max-board-wr-1788852785559-1",
+        "history": [
+          {
+            "id": "max-board-wr-1788852785559-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR"
+              ],
+              "mappings": {
+                "RR": "1"
+              },
+              "weightReason": "wr",
+              "distribution": {
+                "1": "1",
+                "5": "1"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "missing:RS",
+                "missing:RT",
+                "missing:SR",
+                "missing:SS",
+                "missing:ST",
+                "missing:TR",
+                "missing:TS",
+                "missing:TT",
+                "distribution:1",
+                "distribution:5"
+              ]
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1788852785559
+          }
+        ],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "case": "wrong answer next action",
+      "repair": "有放回 · 两抽独立 · 答卷 max-board-wr-1788852785559-1按你实际提交的字段逐项重查：路径RS尚未选入；路径RT尚未选入；路径SR尚未选入；路径SS尚未选入；路径ST尚未选入；路径TR尚未选入；路径TS尚未选入；路径TT尚未选入；输出1的概率选择为1；输出5的概率选择为1。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回有放回 · 两抽独立当前草稿（保留答卷）重开有放回 · 两抽独立答卷"
+    },
+    {
+      "case": "repair actual full source navigation",
+      "active": "max-wr-complete",
+      "repairStillPresent": true
+    },
+    {
+      "case": "prediction with no geometric/display evidence remains pending",
+      "feedback": "判断已保存，待核对。先核看两个目标的概率。继续核看均值4自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。",
+      "state": {
+        "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+        "draft": {
+          "choice": "eq"
+        },
+        "active": "mean-lab-wr-1788852785810-2",
+        "history": [
+          {
+            "id": "mean-lab-wr-1788852785810-2",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "eq"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": false,
+            "presented": false,
+            "at": 1788852785810
+          }
+        ],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -4,7 +4,7 @@ DialogueTutor 以完整、逐行有依据的讲解为主线，把选择、翻卡
 
 1.7.1 从用户提供的1.6.0全文恢复教学结构，修正1.7.0候选版压缩推导、整体折叠正文、主流程输入作答及遗漏具名外部技能的问题。bgct保留上半七幕的教学职责与下半逐题六项讲解；局部追问补在实际断点。
 
-[完整技能包](dist/dialogue-tutor-1.7.1.zip) · [技能入口](plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md) · [本轮纠偏与验收](docs/engineering/correction-2026-09-08/README.md)
+[完整技能包](dist/dialogue-tutor-1.7.1.zip) · [S2第6章完整交互课](docs/s2-ch6.html) · [技能入口](plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md) · [本轮纠偏与验收](docs/engineering/correction-2026-09-08/README.md)
 
 ## 学习过程
 
@@ -42,7 +42,7 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
 
 新课程的数据接口见 [interactive-html.md](plugins/dialogue-tutor/skills/dialogue-tutor/references/interactive-html.md)。新课使用 `presentation: "document"`、`generationPolicy: "no-typing"` 与 `theme: "light"`；正文内静态挂载活动。旧 studio / numeric / open 仍能运行。原 `s2-source.html` 与 `s2-interactive.json` 仅用于兼容性回归，不作为新布局范本。
 
-新课件的可编辑课程数据在 [docs/lessons/s2-ch6.json](docs/lessons/s2-ch6.json)，由同一组装器生成。`scripts/build_demo.py` 同时重建新课件与旧兼容演示；CI 核对生成文件与提交内容一致。新课例放在仓库文档中，本轮评审记录见纠偏目录。
+新课件的可编辑课程数据在 [docs/lessons/s2-ch6.json](docs/lessons/s2-ch6.json)，由同一组装器生成。`scripts/build_demo.py` 同时重建新课件与旧兼容演示；CI 核对生成文件与提交内容一致。新课例放在仓库文档中，包含23项活动和38张实际Manim图。五席已对冻结整课正式批准；[实际检查及未测边界](docs/engineering/correction-2026-09-08/run-03/README.md)逐项记录，DOM和PNG检查不冒称浏览器或真人学习效果验证。
 
 仓库验证与打包：
 

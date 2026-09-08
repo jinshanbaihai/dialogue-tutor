@@ -1,0 +1,84 @@
+{
+  "htmlHash": "dcf48266c5a6c9676673073a6381adeef18d8326bd8eba64e747ccd7b04b68fc",
+  "scope": "Pre-freeze full-lesson draft; actual inline JS in jsdom. Explicit geometry/Image/time fixtures; no real browser rendering or image-decode claim.",
+  "checks": [
+    {
+      "name": "closing/initial-pending",
+      "pass": true
+    },
+    {
+      "name": "closing/saved-unpresented",
+      "pass": true
+    },
+    {
+      "name": "closing/first-target-route",
+      "pass": true
+    },
+    {
+      "name": "closing/second-target-actual-result",
+      "pass": true
+    },
+    {
+      "name": "closing/wrong-to-original-repair",
+      "pass": true
+    },
+    {
+      "name": "closing/return-keeps-history",
+      "pass": true
+    },
+    {
+      "name": "closing/condition-current-equality",
+      "pass": true
+    },
+    {
+      "name": "no-errors/closing-actual-routes",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "recall/first-real-card-front",
+      "pass": true
+    },
+    {
+      "name": "recall/unrated-second-priority",
+      "pass": true
+    },
+    {
+      "name": "recall/continue-keeps-second-back",
+      "pass": true
+    },
+    {
+      "name": "recall/explicit-early-first-uses-item",
+      "pass": true
+    },
+    {
+      "name": "recall/due-priority-real-first",
+      "pass": true,
+      "evidence": {
+        "label": "到期复习卡1"
+      }
+    },
+    {
+      "name": "no-errors/end-recall-latest-state-and-real-item",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "closing-actual-routes",
+      "errors": []
+    },
+    {
+      "name": "end-recall-latest-state-and-real-item",
+      "errors": []
+    }
+  ],
+  "summary": {
+    "checks": 14,
+    "passed": 14,
+    "failed": [],
+    "scenarios": 2
+  },
+  "metadataCorrection": "Scope label corrected after execution; check outcomes unchanged."
+}

@@ -1,0 +1,13 @@
+{
+  "candidate": "correction-run-03",
+  "htmlSha256": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "jsonSha256": "33b41f47356499201bdcfb3a4dd6044f7fae17fd43bcc95f570af73afde8cceb",
+  "manifestSha256": "1ea901b8d9ea18201f905d71ec2d84e2ee0578385b546b24463bf6f4a42d6481",
+  "freezeSha256": "3ffc817e2b926d882cdafd2443ded1e8f294d211e817a804b068a115f1b55e6d",
+  "filesVerified": 197,
+  "sourceFilesVerified": 19,
+  "differences": [],
+  "rootReadingScope": "Original 2230-line skill and six references; full run03 text extraction plus all 464 changed lines, probability primer and full Manim Scene; all 38 PNGs at 280px plus representative full-resolution images. Full 38 full-resolution image inspection belongs to the color reviewer.",
+  "authorRecordCorrection": "author-validation.md groups root and color reviewer as having viewed all originals; root did not independently view all 38 full-resolution originals. This external correction preserves the immutable author record.",
+  "reviewStatus": "Five independent whole-course reviews pending; prior draft/component passes are not whole-course approvals."
+}

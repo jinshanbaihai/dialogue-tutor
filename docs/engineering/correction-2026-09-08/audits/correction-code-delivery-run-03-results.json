@@ -1,0 +1,272 @@
+{
+  "checks": [
+    {
+      "name": "installed/docs/s2-ch6.html",
+      "pass_": true,
+      "evidence": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3"
+    },
+    {
+      "name": "installed/docs/lessons/s2-ch6.json",
+      "pass_": true,
+      "evidence": "33b41f47356499201bdcfb3a4dd6044f7fae17fd43bcc95f570af73afde8cceb"
+    },
+    {
+      "name": "approval/report/education",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "approval/report/game",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "approval/report/color",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "approval/report/narrative",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "approval/report/code",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "approval/skill-link",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "approval/frozen-manifest",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "zip/exact-20-entries",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "zip/all19-approved-bytes",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "zip/license",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "zip/crc",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "tests/only-install-path-adaptations",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/piece/correction-run-03-source.tar.xz.part-001",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/piece/correction-run-03-source.tar.xz.part-002",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/piece/correction-run-03-source.tar.xz.part-003",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/reassembled/correction-run-03-source",
+      "pass_": true,
+      "evidence": "de2d32c0720fcd7ec6d8e13517e00fddf580abbeceb3117a9701d68b609a9377"
+    },
+    {
+      "name": "archive/count/correction-run-03-source",
+      "pass_": true,
+      "evidence": 199
+    },
+    {
+      "name": "archive/safe-paths/correction-run-03-source",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/all-members/correction-run-03-source",
+      "pass_": true,
+      "evidence": []
+    },
+    {
+      "name": "archive/piece/correction-run-03-review-data.tar.xz.part-001",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/piece/correction-run-03-review-data.tar.xz.part-002",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/piece/correction-run-03-review-data.tar.xz.part-003",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/reassembled/correction-run-03-review-data",
+      "pass_": true,
+      "evidence": "811d1c8bf0983344326b3be0ce028beaf6b9038ea1c1925b298f4163b90b2be3"
+    },
+    {
+      "name": "archive/count/correction-run-03-review-data",
+      "pass_": true,
+      "evidence": 459
+    },
+    {
+      "name": "archive/safe-paths/correction-run-03-review-data",
+      "pass_": true,
+      "evidence": null
+    },
+    {
+      "name": "archive/all-members/correction-run-03-review-data",
+      "pass_": true,
+      "evidence": []
+    },
+    {
+      "name": "docs/relative-links",
+      "pass_": true,
+      "evidence": []
+    }
+  ],
+  "archives": [
+    {
+      "name": "correction-run-03-source",
+      "sha256": "de2d32c0720fcd7ec6d8e13517e00fddf580abbeceb3117a9701d68b609a9377",
+      "members": 199,
+      "prefixes": [
+        "correction-run-03/"
+      ],
+      "hardlinks": 0
+    },
+    {
+      "name": "correction-run-03-review-data",
+      "sha256": "811d1c8bf0983344326b3be0ce028beaf6b9038ea1c1925b298f4163b90b2be3",
+      "members": 459,
+      "prefixes": [
+        "reviews/"
+      ],
+      "hardlinks": 67
+    }
+  ],
+  "zipSha256": "bc86956cfd04cb95d81812ec679e97426da11ac1a1457aec6d39f480c231b903",
+  "links": [
+    {
+      "from": "README.md",
+      "url": "dist/dialogue-tutor-1.7.1.zip",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "docs/s2-ch6.html",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "docs/engineering/correction-2026-09-08/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "plugins/dialogue-tutor/skills/dialogue-tutor/references/interactive-html.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "docs/lessons/s2-ch6.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "plugins/dialogue-tutor/skills/dialogue-tutor/references/deeptutor-provenance.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "plugins/dialogue-tutor/skills/dialogue-tutor/references/learning-evidence.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "url": "LICENSE",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/README.md",
+      "url": "run-03/README.md",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/README.md",
+      "url": "validation-plan.md",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "url": "approval.json",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "url": "../audits/correction-education-course-run-03-review.md",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "url": "../audits/correction-game-course-run-03-review.md",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "url": "../audits/correction-code-course-run-03-review.md",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "url": "../audits/correction-color-course-run-03-review.md",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "url": "../audits/correction-narrative-course-run-03-review.md",
+      "exists": true
+    },
+    {
+      "from": "docs/engineering/correction-2026-09-08/run-03/README.md",
+      "url": "repository-validation.json",
+      "exists": true
+    }
+  ],
+  "summary": {
+    "checks": 29,
+    "passed": 29,
+    "failed": []
+  }
+}

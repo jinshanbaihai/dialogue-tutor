@@ -1,0 +1,69 @@
+{
+  "htmlSHA": "4645c34f5f00f12cc1c0fe71e3a7da64d1954002862a6ee265ae40ed5f7c57eb",
+  "scope": "independent component DOM review; no Image load stub, no browser layout claim",
+  "scenes": [
+    {
+      "name": "optional-next-seen-max",
+      "assertions": [
+        {
+          "name": "label respects destination evidence",
+          "pass": true,
+          "actual": "带参考继续maximum构造 · 有放回 · 两抽独立"
+        },
+        {
+          "name": "actual cross-owner destination",
+          "pass": true,
+          "actual": "max-board"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "optional-next-all-max-done",
+      "assertions": [
+        {
+          "name": "label respects destination evidence",
+          "pass": true,
+          "actual": "继续Q4(a)"
+        },
+        {
+          "name": "actual cross-owner destination",
+          "pass": true,
+          "actual": "q4a"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "optional-next-q4-done",
+      "assertions": [
+        {
+          "name": "label respects destination evidence",
+          "pass": true,
+          "actual": "回看Q4(a)"
+        },
+        {
+          "name": "actual cross-owner destination",
+          "pass": true,
+          "actual": "q4a"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 9,
+  "failed": [],
+  "errors": []
+}

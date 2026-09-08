@@ -1,0 +1,216 @@
+{
+  "htmlSHA256": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "scope": "Independent final HTML DOM/state/text; zero static rects, no-scroll stub, explicit Image callbacks; not browser rendering or learning evidence",
+  "scenarios": [
+    {
+      "name": "unsubmitted-free-navigation-document-mode",
+      "status": "PASS",
+      "snapshots": [
+        {
+          "label": "unsubmitted-navigation-to-Q4",
+          "owner": "mean-lab",
+          "condition": "wr",
+          "draft": {
+            "choice": null
+          },
+          "history": [],
+          "targets": [],
+          "feedback": "尚未提交。做一次判断自由查看本条件全解本条件已保存 0 份答卷；重开保留历史与参考接触。",
+          "closing": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。当前尚未提交判断。当前条件尚未记录参考接触。核看均值4的原像与概率自由回看当前条件完整推导",
+          "next": {
+            "label": "做一次判断",
+            "type": "draft",
+            "owner": "mean-lab",
+            "condition": "wr",
+            "id": "mean-lab-draft"
+          },
+          "scroll": "dt-activity-q4a"
+        },
+        {
+          "label": "unsubmitted-free-full-solution",
+          "owner": "mean-lab",
+          "condition": "wr",
+          "draft": {
+            "choice": null
+          },
+          "history": [],
+          "targets": [],
+          "feedback": "尚未提交。继续带参考作答自由查看本条件全解本条件已保存 0 份答卷；重开保留历史与参考接触。",
+          "closing": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。当前尚未提交判断。当前条件已有参考接触，继续作答会保留辅助标识。核看均值4的原像与概率自由回看当前条件完整推导",
+          "next": {
+            "label": "继续带参考作答",
+            "type": "draft",
+            "owner": "mean-lab",
+            "condition": "wr",
+            "id": "mean-lab-draft"
+          },
+          "scroll": "mean-wr-complete"
+        }
+      ],
+      "scope": "This document provides free navigation, not a custom Skip button; imported skipped compatibility is not claimed as a locally clicked path.",
+      "errors": []
+    },
+    {
+      "name": "constructor-complete-and-q4-no-scroll-return",
+      "status": "PASS",
+      "snapshots": [
+        {
+          "label": "both-constructors-complete",
+          "owner": "max-board",
+          "condition": "wor",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS",
+              "RT",
+              "SR",
+              "ST",
+              "TR",
+              "TS"
+            ],
+            "mappings": {
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5"
+            },
+            "weightReason": "wor",
+            "distribution": {
+              "1": "1/3",
+              "5": "2/3"
+            }
+          },
+          "history": [
+            {
+              "id": "max-board-wor-1788855693016-2",
+              "owner": "max-board",
+              "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+              "draft": {
+                "pathAnswered": true,
+                "paths": [
+                  "RS",
+                  "RT",
+                  "SR",
+                  "ST",
+                  "TR",
+                  "TS"
+                ],
+                "mappings": {
+                  "RS": "1",
+                  "RT": "5",
+                  "SR": "1",
+                  "ST": "5",
+                  "TR": "5",
+                  "TS": "5"
+                },
+                "weightReason": "wor",
+                "distribution": {
+                  "1": "1/3",
+                  "5": "2/3"
+                }
+              },
+              "judge": {
+                "correct": true,
+                "differences": []
+              },
+              "assisted": false,
+              "presented": true,
+              "at": 1788855693016
+            }
+          ],
+          "targets": [],
+          "feedback": "本次核对正确。作答前未记录参考接触。继续Q4(a)自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。",
+          "closing": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。当前尚未提交判断。当前条件尚未记录参考接触。核看均值4的原像与概率自由回看当前条件完整推导",
+          "next": {
+            "label": "继续Q4(a)",
+            "type": "native",
+            "id": "q4a"
+          }
+        },
+        {
+          "label": "q4-complete-return",
+          "owner": "max-board",
+          "condition": "wor",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS",
+              "RT",
+              "SR",
+              "ST",
+              "TR",
+              "TS"
+            ],
+            "mappings": {
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5"
+            },
+            "weightReason": "wor",
+            "distribution": {
+              "1": "1/3",
+              "5": "2/3"
+            }
+          },
+          "history": [
+            {
+              "id": "max-board-wor-1788855693016-2",
+              "owner": "max-board",
+              "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+              "draft": {
+                "pathAnswered": true,
+                "paths": [
+                  "RS",
+                  "RT",
+                  "SR",
+                  "ST",
+                  "TR",
+                  "TS"
+                ],
+                "mappings": {
+                  "RS": "1",
+                  "RT": "5",
+                  "SR": "1",
+                  "ST": "5",
+                  "TR": "5",
+                  "TS": "5"
+                },
+                "weightReason": "wor",
+                "distribution": {
+                  "1": "1/3",
+                  "5": "2/3"
+                }
+              },
+              "judge": {
+                "correct": true,
+                "differences": []
+              },
+              "assisted": false,
+              "presented": true,
+              "at": 1788855693016
+            }
+          ],
+          "targets": [],
+          "feedback": "本次核对正确。作答前未记录参考接触。回看Q4(a)自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。",
+          "closing": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。当前尚未提交判断。当前条件尚未记录参考接触。核看均值4的原像与概率自由回看当前条件完整推导",
+          "next": {
+            "label": "回看Q4(a)",
+            "type": "native",
+            "id": "q4a"
+          },
+          "scroll": "dt-activity-max-board"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "passed": 2,
+  "total": 2,
+  "status": "PASS"
+}

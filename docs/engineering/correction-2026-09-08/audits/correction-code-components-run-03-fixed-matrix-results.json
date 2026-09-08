@@ -1,0 +1,427 @@
+{
+  "htmlHash": "bb42f74c700b6ec21705e23e86fd7401028d2b0fac054e3be0570ea48b3b5ec2",
+  "scope": "Frozen component trial actual inline JS. Explicit viewport/Image/manifest fixtures; no final course or real PNG claims.",
+  "checks": [
+    {
+      "name": "outcome/mean-lab/wr/unassisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "comparison"
+          ]
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "重查这次比较",
+        "feedback": "本次核对有差异。作答前未记录参考接触。你选了相等；1/3大于2/9。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wr/unassisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/mean-lab/wr/unassisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "开始无放回 · 逐次均匀作答",
+        "feedback": "本次核对正确。作答前未记录参考接触。你选了大于；1/3大于2/9。开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wr/unassisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/mean-lab/wr/assisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "comparison"
+          ]
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "重查这次比较",
+        "feedback": "本次核对有差异。作答前已接触参考，保留辅助标识。你选了相等；1/3大于2/9。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wr/assisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/mean-lab/wr/assisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "回看本条件完整原行",
+        "feedback": "本次核对正确。作答前已接触参考，保留辅助标识。你选了大于；1/3大于2/9。回看本条件完整原行开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wr/assisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/mean-lab/wor/unassisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "comparison"
+          ]
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "重查这次比较",
+        "feedback": "本次核对有差异。作答前未记录参考接触。你选了大于；两边都是1/3。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wor/unassisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/mean-lab/wor/unassisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "开始有放回 · 两抽独立作答",
+        "feedback": "本次核对正确。作答前未记录参考接触。你选了相等；两边都是1/3。开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wor/unassisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/mean-lab/wor/assisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "comparison"
+          ]
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "重查这次比较",
+        "feedback": "本次核对有差异。作答前已接触参考，保留辅助标识。你选了大于；两边都是1/3。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wor/assisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/mean-lab/wor/assisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "回看本条件完整原行",
+        "feedback": "本次核对正确。作答前已接触参考，保留辅助标识。你选了相等；两边都是1/3。回看本条件完整原行开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/mean-lab/wor/assisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wr/unassisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "distribution:1"
+          ]
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "重查这次构造",
+        "feedback": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wr/unassisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wr/unassisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "开始无放回 · 逐次均匀作答",
+        "feedback": "本次核对正确。作答前未记录参考接触。开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wr/unassisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wr/assisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "distribution:1"
+          ]
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "重查这次构造",
+        "feedback": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wr/assisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wr/assisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "回看本条件完整原行",
+        "feedback": "本次核对正确。作答前已接触参考，保留辅助标识。回看本条件完整原行开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wr/assisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wor/unassisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "distribution:1"
+          ]
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "重查这次构造",
+        "feedback": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wor/unassisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wor/unassisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": false,
+        "expectedAssisted": false,
+        "presented": true,
+        "next": "开始有放回 · 两抽独立作答",
+        "feedback": "本次核对正确。作答前未记录参考接触。开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wor/unassisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wor/assisted/wrong",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": false,
+          "differences": [
+            "distribution:1"
+          ]
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "重查这次构造",
+        "feedback": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wor/assisted/wrong",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "outcome/max-board/wor/assisted/correct",
+      "pass": true,
+      "evidence": {
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": true,
+        "expectedAssisted": true,
+        "presented": true,
+        "next": "回看本条件完整原行",
+        "feedback": "本次核对正确。作答前已接触参考，保留辅助标识。回看本条件完整原行开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "name": "no-errors/max-board/wor/assisted/correct",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "boundary/native-export-reference",
+      "pass": true
+    },
+    {
+      "name": "no-errors/native-export-same-queue",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "mean-lab/wr/unassisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "mean-lab/wr/unassisted/correct",
+      "errors": []
+    },
+    {
+      "name": "mean-lab/wr/assisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "mean-lab/wr/assisted/correct",
+      "errors": []
+    },
+    {
+      "name": "mean-lab/wor/unassisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "mean-lab/wor/unassisted/correct",
+      "errors": []
+    },
+    {
+      "name": "mean-lab/wor/assisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "mean-lab/wor/assisted/correct",
+      "errors": []
+    },
+    {
+      "name": "max-board/wr/unassisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "max-board/wr/unassisted/correct",
+      "errors": []
+    },
+    {
+      "name": "max-board/wr/assisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "max-board/wr/assisted/correct",
+      "errors": []
+    },
+    {
+      "name": "max-board/wor/unassisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "max-board/wor/unassisted/correct",
+      "errors": []
+    },
+    {
+      "name": "max-board/wor/assisted/wrong",
+      "errors": []
+    },
+    {
+      "name": "max-board/wor/assisted/correct",
+      "errors": []
+    },
+    {
+      "name": "native-export-same-queue",
+      "errors": []
+    }
+  ],
+  "summary": {
+    "checks": 34,
+    "passed": 34,
+    "failed": [],
+    "scenarios": 17
+  }
+}

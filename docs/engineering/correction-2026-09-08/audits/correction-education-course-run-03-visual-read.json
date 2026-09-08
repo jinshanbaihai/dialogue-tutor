@@ -1,0 +1,32 @@
+[
+  {
+    "frame": "mean-wr-bars",
+    "sha256": "a322a705add23b4453f0d2ea9fc8159e5192a5754eee7ce92f2c0e6555063888",
+    "observed": "Actually viewed PNG pixels using view_image; probabilities, support positions, mechanism title and total-probability line checked against independent mathematics."
+  },
+  {
+    "frame": "mean-wor-bars",
+    "sha256": "948f7dcac41a9f8dea9960eee32d72b6887ae88424ba748a38f3afc9895ae1c2",
+    "observed": "Actually viewed PNG pixels using view_image; probabilities, support positions, mechanism title and total-probability line checked against independent mathematics."
+  },
+  {
+    "frame": "max-wr-bars",
+    "sha256": "bd72dc382dd1b0073f93e1139dde7443055195ff6e22dcbfd1ae244636acfe83",
+    "observed": "Actually viewed PNG pixels using view_image; probabilities, support positions, mechanism title and total-probability line checked against independent mathematics."
+  },
+  {
+    "frame": "max-wor-bars",
+    "sha256": "0e278a27e0b135af1da5dac7b321cb14a2d8613bc23688937ac1ee21767c6020",
+    "observed": "Actually viewed PNG pixels using view_image; probabilities, support positions, mechanism title and total-probability line checked against independent mathematics."
+  },
+  {
+    "frame": "range-wr-bars",
+    "sha256": "09df2ddeff78a4a2fd00a11c8adcbbb78d437273600f413fde9eb8670c54bbe8",
+    "observed": "Actually viewed PNG pixels using view_image; probabilities, support positions, mechanism title and total-probability line checked against independent mathematics."
+  },
+  {
+    "frame": "shelf-wor-bars",
+    "sha256": "819ba5978fe4d7ea961b55513ce91bce6ff4de23ed104872a49bdfd6e5cf5cb1",
+    "observed": "Actually viewed PNG pixels using view_image; probabilities, support positions, mechanism title and total-probability line checked against independent mathematics."
+  }
+]

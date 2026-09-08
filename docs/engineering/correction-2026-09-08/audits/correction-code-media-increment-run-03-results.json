@@ -1,0 +1,1774 @@
+{
+  "htmlHash": "06fc2c97a1252fcb119e1b4cd81700ec6d49a9047778fcb2e99f71ada3660ea2",
+  "scope": "Frozen component trial actual inline JS. Explicit viewport/Image/manifest fixtures; no final course or real PNG claims.",
+  "checks": [
+    {
+      "name": "frozen-hash",
+      "pass": true
+    },
+    {
+      "name": "frames/36-actual-controls",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/max-wor-bars",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "max-wor-distribution",
+          "max-wor-group-1",
+          "max-wor-group-5"
+        ],
+        "actualProofHash": "081eccc8ea61825981722239c614b494275022448e52d4bd245fa0f45d16c235",
+        "expectedHash": "081eccc8ea61825981722239c614b494275022448e52d4bd245fa0f45d16c235"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/max-wor-bars",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "max-wor-distribution",
+          "max-wor-group-1",
+          "max-wor-group-5"
+        ],
+        "actualSources": [
+          "max-wor-distribution",
+          "max-wor-group-1",
+          "max-wor-group-5"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/max-wor-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/max-wor-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/max-wor-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/max-wr-bars",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "max-wr-distribution",
+          "max-wr-group-1",
+          "max-wr-group-5"
+        ],
+        "actualProofHash": "00559cd3fcd389d499df0fa1b8a6d4a116153710e87cd9b8061852a245fc8a6a",
+        "expectedHash": "00559cd3fcd389d499df0fa1b8a6d4a116153710e87cd9b8061852a245fc8a6a"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/max-wr-bars",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "max-wr-distribution",
+          "max-wr-group-1",
+          "max-wr-group-5"
+        ],
+        "actualSources": [
+          "max-wr-distribution",
+          "max-wr-group-1",
+          "max-wr-group-5"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/max-wr-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/max-wr-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/max-wr-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-AB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-group-4"
+        ],
+        "actualProofHash": "f0d86e0a29309c8b8aa15ad1d17538b86ba5437afc59e9a5c85fd1547bcb6165",
+        "expectedHash": "f0d86e0a29309c8b8aa15ad1d17538b86ba5437afc59e9a5c85fd1547bcb6165"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-AB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-group-4"
+        ],
+        "actualSources": [
+          "mean-wor-group-4"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-AB-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-AB-path"
+        ],
+        "actualProofHash": "12239b7063236fa5715b0700930d81cb2c814a0399c9ebb4ccfe1746b78f8a7a",
+        "expectedHash": "12239b7063236fa5715b0700930d81cb2c814a0399c9ebb4ccfe1746b78f8a7a"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-AB-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wor-AB-map",
+          "mean-wor-AB-weight"
+        ],
+        "actualSources": [
+          "mean-wor-AB-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-AB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-AB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-AB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-AC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-group-6"
+        ],
+        "actualProofHash": "64780a0bde9bf51f2b7190cb9eb5f9dca971f9f3416456d2721d52b279590b05",
+        "expectedHash": "64780a0bde9bf51f2b7190cb9eb5f9dca971f9f3416456d2721d52b279590b05"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-AC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-group-6"
+        ],
+        "actualSources": [
+          "mean-wor-group-6"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-AC-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-AC-path"
+        ],
+        "actualProofHash": "e5b8a283a6a29ff63be44278330c3a3af18bfd6e1697cbc2e68592d9a527a1d7",
+        "expectedHash": "e5b8a283a6a29ff63be44278330c3a3af18bfd6e1697cbc2e68592d9a527a1d7"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-AC-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wor-AC-map",
+          "mean-wor-AC-weight"
+        ],
+        "actualSources": [
+          "mean-wor-AC-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-BA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-group-4"
+        ],
+        "actualProofHash": "f0d86e0a29309c8b8aa15ad1d17538b86ba5437afc59e9a5c85fd1547bcb6165",
+        "expectedHash": "f0d86e0a29309c8b8aa15ad1d17538b86ba5437afc59e9a5c85fd1547bcb6165"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-BA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-group-4"
+        ],
+        "actualSources": [
+          "mean-wor-group-4"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-BA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-BA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-BA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-BA-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-BA-path"
+        ],
+        "actualProofHash": "624331d8cf298374b10bd9962f8fbd99b8c41ec519c8e347f91818326952edb6",
+        "expectedHash": "624331d8cf298374b10bd9962f8fbd99b8c41ec519c8e347f91818326952edb6"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-BA-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wor-BA-map",
+          "mean-wor-BA-weight"
+        ],
+        "actualSources": [
+          "mean-wor-BA-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-BA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-BA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-BA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-BC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-group-8"
+        ],
+        "actualProofHash": "9d40e88269c8a422e7b2402ecbe019148de323aa8469d2cc92cb1ff3d998be66",
+        "expectedHash": "9d40e88269c8a422e7b2402ecbe019148de323aa8469d2cc92cb1ff3d998be66"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-BC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-group-8"
+        ],
+        "actualSources": [
+          "mean-wor-group-8"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-BC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-BC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-BC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-BC-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-BC-path"
+        ],
+        "actualProofHash": "fc3e8cbf681d9f99f320d4bfbb26e24e54f9c4d4c7105bd07783d29214adb360",
+        "expectedHash": "fc3e8cbf681d9f99f320d4bfbb26e24e54f9c4d4c7105bd07783d29214adb360"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-BC-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wor-BC-map",
+          "mean-wor-BC-weight"
+        ],
+        "actualSources": [
+          "mean-wor-BC-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-BC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-BC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-BC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-CA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-group-6"
+        ],
+        "actualProofHash": "64780a0bde9bf51f2b7190cb9eb5f9dca971f9f3416456d2721d52b279590b05",
+        "expectedHash": "64780a0bde9bf51f2b7190cb9eb5f9dca971f9f3416456d2721d52b279590b05"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-CA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-group-6"
+        ],
+        "actualSources": [
+          "mean-wor-group-6"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-CA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-CA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-CA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-CA-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-CA-path"
+        ],
+        "actualProofHash": "0e054f2589bb1669dd597909f8c6655789aa3e04978d9f4958bb76ba3aaae902",
+        "expectedHash": "0e054f2589bb1669dd597909f8c6655789aa3e04978d9f4958bb76ba3aaae902"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-CA-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wor-CA-map",
+          "mean-wor-CA-weight"
+        ],
+        "actualSources": [
+          "mean-wor-CA-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-CA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-CA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-CA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-CB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-group-8"
+        ],
+        "actualProofHash": "9d40e88269c8a422e7b2402ecbe019148de323aa8469d2cc92cb1ff3d998be66",
+        "expectedHash": "9d40e88269c8a422e7b2402ecbe019148de323aa8469d2cc92cb1ff3d998be66"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-CB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-group-8"
+        ],
+        "actualSources": [
+          "mean-wor-group-8"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-CB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-CB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-CB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-CB-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-CB-path"
+        ],
+        "actualProofHash": "e845aa0097b898fcdc5c31b4923c8b616ac8e2a49dae6160dcc9eb3caa3ae024",
+        "expectedHash": "e845aa0097b898fcdc5c31b4923c8b616ac8e2a49dae6160dcc9eb3caa3ae024"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-CB-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wor-CB-map",
+          "mean-wor-CB-weight"
+        ],
+        "actualSources": [
+          "mean-wor-CB-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-CB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-CB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-CB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-bars",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-distribution",
+          "mean-wor-group-4",
+          "mean-wor-group-6",
+          "mean-wor-group-8"
+        ],
+        "actualProofHash": "3b4fd673abe75ddac49d46664d098cc0eb4a3496a719c721ef941534644d16cd",
+        "expectedHash": "3b4fd673abe75ddac49d46664d098cc0eb4a3496a719c721ef941534644d16cd"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-bars",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-distribution",
+          "mean-wor-group-4",
+          "mean-wor-group-6",
+          "mean-wor-group-8"
+        ],
+        "actualSources": [
+          "mean-wor-distribution",
+          "mean-wor-group-4",
+          "mean-wor-group-6",
+          "mean-wor-group-8"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wor-overview",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wor-paths",
+          "mean-wor-AB-weight-1",
+          "mean-wor-AB-weight-2",
+          "mean-wor-AB-weight-3",
+          "mean-wor-AB-weight-product",
+          "mean-wor-AB-weight-numerator",
+          "mean-wor-AB-weight"
+        ],
+        "actualProofHash": "79e5e3e66371d479fed70ee72be12a14774339ff9371ea04c20c912fd47a9a3b",
+        "expectedHash": "79e5e3e66371d479fed70ee72be12a14774339ff9371ea04c20c912fd47a9a3b"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wor-overview",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wor-paths",
+          "mean-wor-AB-weight-1",
+          "mean-wor-AB-weight-2",
+          "mean-wor-AB-weight-3",
+          "mean-wor-AB-weight-product",
+          "mean-wor-AB-weight-numerator",
+          "mean-wor-AB-weight"
+        ],
+        "actualSources": [
+          "mean-wor-paths",
+          "mean-wor-AB-weight-1",
+          "mean-wor-AB-weight-2",
+          "mean-wor-AB-weight-3",
+          "mean-wor-AB-weight-product",
+          "mean-wor-AB-weight-numerator",
+          "mean-wor-AB-weight"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wor-overview",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wor-overview",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wor-overview",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-AA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-2"
+        ],
+        "actualProofHash": "6e69cb35beb179cf4c4b62d551e87cd8dd12c45ab457c92c722d359733e09e0b",
+        "expectedHash": "6e69cb35beb179cf4c4b62d551e87cd8dd12c45ab457c92c722d359733e09e0b"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-AA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-2"
+        ],
+        "actualSources": [
+          "mean-wr-group-2"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-AA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-AA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-AA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-AA-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-AA-path"
+        ],
+        "actualProofHash": "59beae3e1c685171e0deb7e486ca0a3eb29f586c4a8e8524aa6b8543b8eaa96b",
+        "expectedHash": "59beae3e1c685171e0deb7e486ca0a3eb29f586c4a8e8524aa6b8543b8eaa96b"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-AA-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-AA-map",
+          "mean-wr-AA-weight"
+        ],
+        "actualSources": [
+          "mean-wr-AA-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-AA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-AA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-AA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-AB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-4"
+        ],
+        "actualProofHash": "be827af24b90b3c6163be8a3b0d1ec765fc782aee650e36237daacebb8e04fae",
+        "expectedHash": "be827af24b90b3c6163be8a3b0d1ec765fc782aee650e36237daacebb8e04fae"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-AB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-4"
+        ],
+        "actualSources": [
+          "mean-wr-group-4"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-AB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-AB-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-AB-path"
+        ],
+        "actualProofHash": "1e1f9785ebc0b88c005323fda313a599d762aa23c611f82fa975ab4f277c1d60",
+        "expectedHash": "1e1f9785ebc0b88c005323fda313a599d762aa23c611f82fa975ab4f277c1d60"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-AB-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-AB-map",
+          "mean-wr-AB-weight"
+        ],
+        "actualSources": [
+          "mean-wr-AB-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-AB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-AB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-AB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-AC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-6"
+        ],
+        "actualProofHash": "41c8e63019310d328300b58d0a1a7a635b0ab2466e7aeeddfc3435d50bd67b3b",
+        "expectedHash": "41c8e63019310d328300b58d0a1a7a635b0ab2466e7aeeddfc3435d50bd67b3b"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-AC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-6"
+        ],
+        "actualSources": [
+          "mean-wr-group-6"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-AC-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-AC-path"
+        ],
+        "actualProofHash": "b49faba54ab6de0e904930202c25f995db6b18f2a6cd3e843e9a2a4f41e70689",
+        "expectedHash": "b49faba54ab6de0e904930202c25f995db6b18f2a6cd3e843e9a2a4f41e70689"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-AC-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-AC-map",
+          "mean-wr-AC-weight"
+        ],
+        "actualSources": [
+          "mean-wr-AC-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-BA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-4"
+        ],
+        "actualProofHash": "be827af24b90b3c6163be8a3b0d1ec765fc782aee650e36237daacebb8e04fae",
+        "expectedHash": "be827af24b90b3c6163be8a3b0d1ec765fc782aee650e36237daacebb8e04fae"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-BA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-4"
+        ],
+        "actualSources": [
+          "mean-wr-group-4"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-BA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-BA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-BA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-BA-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-BA-path"
+        ],
+        "actualProofHash": "96a9e3cefbbc11d3c9d806808f85d531950f3a08c37738bb04fd4fd25b7c5e98",
+        "expectedHash": "96a9e3cefbbc11d3c9d806808f85d531950f3a08c37738bb04fd4fd25b7c5e98"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-BA-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-BA-map",
+          "mean-wr-BA-weight"
+        ],
+        "actualSources": [
+          "mean-wr-BA-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-BA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-BA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-BA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-BB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-6"
+        ],
+        "actualProofHash": "41c8e63019310d328300b58d0a1a7a635b0ab2466e7aeeddfc3435d50bd67b3b",
+        "expectedHash": "41c8e63019310d328300b58d0a1a7a635b0ab2466e7aeeddfc3435d50bd67b3b"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-BB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-6"
+        ],
+        "actualSources": [
+          "mean-wr-group-6"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-BB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-BB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-BB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-BB-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-BB-path"
+        ],
+        "actualProofHash": "d4087f7da29381ed2339ff1eb93003c06195d759c21e327dc75a06ef7ee8f7ce",
+        "expectedHash": "d4087f7da29381ed2339ff1eb93003c06195d759c21e327dc75a06ef7ee8f7ce"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-BB-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-BB-map",
+          "mean-wr-BB-weight"
+        ],
+        "actualSources": [
+          "mean-wr-BB-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-BB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-BB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-BB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-BC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-8"
+        ],
+        "actualProofHash": "25e992a5da823343ca71933a86386e9cf30c1c37d2a70b8a8eeb9f7807d1fe91",
+        "expectedHash": "25e992a5da823343ca71933a86386e9cf30c1c37d2a70b8a8eeb9f7807d1fe91"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-BC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-8"
+        ],
+        "actualSources": [
+          "mean-wr-group-8"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-BC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-BC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-BC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-BC-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-BC-path"
+        ],
+        "actualProofHash": "018b7aec9d9ddf2ca63e70c1fee57286c0ba5c8b74533677ddc64990e44a9ab1",
+        "expectedHash": "018b7aec9d9ddf2ca63e70c1fee57286c0ba5c8b74533677ddc64990e44a9ab1"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-BC-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-BC-map",
+          "mean-wr-BC-weight"
+        ],
+        "actualSources": [
+          "mean-wr-BC-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-BC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-BC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-BC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-CA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-6"
+        ],
+        "actualProofHash": "41c8e63019310d328300b58d0a1a7a635b0ab2466e7aeeddfc3435d50bd67b3b",
+        "expectedHash": "41c8e63019310d328300b58d0a1a7a635b0ab2466e7aeeddfc3435d50bd67b3b"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-CA-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-6"
+        ],
+        "actualSources": [
+          "mean-wr-group-6"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-CA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-CA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-CA-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-CA-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-CA-path"
+        ],
+        "actualProofHash": "e68907cb469183f93268dbe94d11bc4b33eaf8911add3c3f6a2c5ad3239f4e60",
+        "expectedHash": "e68907cb469183f93268dbe94d11bc4b33eaf8911add3c3f6a2c5ad3239f4e60"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-CA-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-CA-map",
+          "mean-wr-CA-weight"
+        ],
+        "actualSources": [
+          "mean-wr-CA-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-CA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-CA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-CA-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-CB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-8"
+        ],
+        "actualProofHash": "25e992a5da823343ca71933a86386e9cf30c1c37d2a70b8a8eeb9f7807d1fe91",
+        "expectedHash": "25e992a5da823343ca71933a86386e9cf30c1c37d2a70b8a8eeb9f7807d1fe91"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-CB-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-8"
+        ],
+        "actualSources": [
+          "mean-wr-group-8"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-CB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-CB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-CB-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-CB-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-CB-path"
+        ],
+        "actualProofHash": "5676c2ecef6c38aa38bdc60bbf71de2f6bb19d9d9f8209315d892d197d37082b",
+        "expectedHash": "5676c2ecef6c38aa38bdc60bbf71de2f6bb19d9d9f8209315d892d197d37082b"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-CB-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-CB-map",
+          "mean-wr-CB-weight"
+        ],
+        "actualSources": [
+          "mean-wr-CB-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-CB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-CB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-CB-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-CC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-group-10"
+        ],
+        "actualProofHash": "8ac18f218e6c6e2290b2c322b1db8cbe253fab638b555c42a7fd236a0943987a",
+        "expectedHash": "8ac18f218e6c6e2290b2c322b1db8cbe253fab638b555c42a7fd236a0943987a"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-CC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-group-10"
+        ],
+        "actualSources": [
+          "mean-wr-group-10"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-CC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-CC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-CC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-CC-path-focus",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-CC-path"
+        ],
+        "actualProofHash": "9ac6a210b3e191fb312e5bc59c2b269aea04ebf3f3d48cc363e223b7279a385d",
+        "expectedHash": "9ac6a210b3e191fb312e5bc59c2b269aea04ebf3f3d48cc363e223b7279a385d"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-CC-path-focus",
+      "pass": false,
+      "evidence": {
+        "declared": [
+          "mean-wr-CC-map",
+          "mean-wr-CC-weight"
+        ],
+        "actualSources": [
+          "mean-wr-CC-path"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-CC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-CC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-CC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-bars",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-distribution",
+          "mean-wr-group-2",
+          "mean-wr-group-4",
+          "mean-wr-group-6",
+          "mean-wr-group-8",
+          "mean-wr-group-10"
+        ],
+        "actualProofHash": "9de6f2dc203128480d63fc5023715adce1331c04af5ac1a32f0adea4e26471f4",
+        "expectedHash": "9de6f2dc203128480d63fc5023715adce1331c04af5ac1a32f0adea4e26471f4"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-bars",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-distribution",
+          "mean-wr-group-2",
+          "mean-wr-group-4",
+          "mean-wr-group-6",
+          "mean-wr-group-8",
+          "mean-wr-group-10"
+        ],
+        "actualSources": [
+          "mean-wr-distribution",
+          "mean-wr-group-2",
+          "mean-wr-group-4",
+          "mean-wr-group-6",
+          "mean-wr-group-8",
+          "mean-wr-group-10"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-bars",
+      "pass": true
+    },
+    {
+      "name": "proof/exact-static-content/mean-wr-overview",
+      "pass": true,
+      "evidence": {
+        "sourceIds": [
+          "mean-wr-paths",
+          "mean-wr-AA-weight-1",
+          "mean-wr-AA-weight-2",
+          "mean-wr-AA-weight-3",
+          "mean-wr-AA-weight-product",
+          "mean-wr-AA-weight-numerator",
+          "mean-wr-AA-weight"
+        ],
+        "actualProofHash": "9187391bce198df2c7db7bc27f0edd9c5edf8c64c7b691bf600400f8352cd4cf",
+        "expectedHash": "9187391bce198df2c7db7bc27f0edd9c5edf8c64c7b691bf600400f8352cd4cf"
+      }
+    },
+    {
+      "name": "proof/declared-source-ids/mean-wr-overview",
+      "pass": true,
+      "evidence": {
+        "declared": [
+          "mean-wr-paths",
+          "mean-wr-AA-weight-1",
+          "mean-wr-AA-weight-2",
+          "mean-wr-AA-weight-3",
+          "mean-wr-AA-weight-product",
+          "mean-wr-AA-weight-numerator",
+          "mean-wr-AA-weight"
+        ],
+        "actualSources": [
+          "mean-wr-paths",
+          "mean-wr-AA-weight-1",
+          "mean-wr-AA-weight-2",
+          "mean-wr-AA-weight-3",
+          "mean-wr-AA-weight-product",
+          "mean-wr-AA-weight-numerator",
+          "mean-wr-AA-weight"
+        ]
+      }
+    },
+    {
+      "name": "proof/request-contact-before-image/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "proof/image-request-bytes/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "proof/failure-retains-current/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "no-errors/all-real-written-proof-requests",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "targets/overview-no-comparison",
+      "pass": true
+    },
+    {
+      "name": "targets/path-no-comparison",
+      "pass": true
+    },
+    {
+      "name": "targets/only-six-pending",
+      "pass": true
+    },
+    {
+      "name": "targets/both-proof-results-before-load",
+      "pass": true
+    },
+    {
+      "name": "targets/wor-bars-current-equality",
+      "pass": true
+    },
+    {
+      "name": "no-errors/two-targets-and-first-freeze",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "async/current-object-after-edit-scroll",
+      "pass": true
+    },
+    {
+      "name": "async/old-b-cannot-replace-c",
+      "pass": true
+    },
+    {
+      "name": "restore/null-request-clears-current-proof-image",
+      "pass": true
+    },
+    {
+      "name": "restore/old-import-retains-written-history",
+      "pass": true
+    },
+    {
+      "name": "no-errors/async-edit-and-restore-proof",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "restore/reopen-written-current-and-no-actions",
+      "pass": true
+    },
+    {
+      "name": "restore/reopen-source-time-preserved",
+      "pass": true
+    },
+    {
+      "name": "restore/image-success-after-reopen",
+      "pass": true
+    },
+    {
+      "name": "no-errors/reopen-written-pending",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "restore/offscreen-no-new-contact",
+      "pass": true
+    },
+    {
+      "name": "restore/visible-proof-boundary-captures",
+      "pass": true
+    },
+    {
+      "name": "reject/proof-targets",
+      "pass": true,
+      "evidence": "未知来源或覆盖不一致"
+    },
+    {
+      "name": "reject/proof-identity",
+      "pass": true,
+      "evidence": "接触记录不合法"
+    },
+    {
+      "name": "reject/unknown-proof",
+      "pass": true,
+      "evidence": "未知来源或覆盖不一致"
+    },
+    {
+      "name": "no-errors/restore-offscreen-vs-visible-proof",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "boundary/file-completion-union-written-reference",
+      "pass": true
+    },
+    {
+      "name": "boundary/native-download-has-written-proof",
+      "pass": true
+    },
+    {
+      "name": "navigation/real-current-written-return",
+      "pass": true,
+      "evidence": {
+        "focused": "mean-wor-distribution",
+        "expected": "mean-wor-distribution"
+      }
+    },
+    {
+      "name": "no-errors/file-read-and-native-export-proof",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "all-real-written-proof-requests",
+      "errors": []
+    },
+    {
+      "name": "two-targets-and-first-freeze",
+      "errors": []
+    },
+    {
+      "name": "async-edit-and-restore-proof",
+      "errors": []
+    },
+    {
+      "name": "reopen-written-pending",
+      "errors": []
+    },
+    {
+      "name": "restore-offscreen-vs-visible-proof",
+      "errors": []
+    },
+    {
+      "name": "file-read-and-native-export-proof",
+      "errors": []
+    }
+  ],
+  "requests": [
+    {
+      "id": "max-wor-bars",
+      "proofSourceId": "max-wor-bars-written-proof",
+      "targets": [
+        1,
+        5
+      ],
+      "pngHash": "0e278a27e0b135af1da5dac7b321cb14a2d8613bc23688937ac1ee21767c6020"
+    },
+    {
+      "id": "max-wr-bars",
+      "proofSourceId": "max-wr-bars-written-proof",
+      "targets": [
+        1,
+        5
+      ],
+      "pngHash": "bd72dc382dd1b0073f93e1139dde7443055195ff6e22dcbfd1ae244636acfe83"
+    },
+    {
+      "id": "mean-wor-AB-bar-focus",
+      "proofSourceId": "mean-wor-AB-bar-focus-written-proof",
+      "targets": [
+        4
+      ],
+      "pngHash": "761af889c57fde4aae1cb2957b93d67ed76633c33f2130bce0a69bb3232c202e"
+    },
+    {
+      "id": "mean-wor-AB-path-focus",
+      "proofSourceId": "mean-wor-AB-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "1cc5be576b5b85302d4223a967884d3a28bc6e6cf1e63cdf5d71b3d9ad7a3586"
+    },
+    {
+      "id": "mean-wor-AC-bar-focus",
+      "proofSourceId": "mean-wor-AC-bar-focus-written-proof",
+      "targets": [
+        6
+      ],
+      "pngHash": "a84bd9c07c8076adbfa90182d16eb22742aae95f2f9486b8e44529544e520dd7"
+    },
+    {
+      "id": "mean-wor-AC-path-focus",
+      "proofSourceId": "mean-wor-AC-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "49e76076bc76cb9d8ffd209da4d677cba8d489459da3f5cfc28038643f1e35d7"
+    },
+    {
+      "id": "mean-wor-BA-bar-focus",
+      "proofSourceId": "mean-wor-BA-bar-focus-written-proof",
+      "targets": [
+        4
+      ],
+      "pngHash": "b5b0fa0df0eb942b6e003a507181a93633a9ae9cd1b2648dc8b86b58bf2ee72a"
+    },
+    {
+      "id": "mean-wor-BA-path-focus",
+      "proofSourceId": "mean-wor-BA-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "2800a64d59a1b814d343b9f168ee4af1784fc6f6abef01a9f0390cdeb11f6582"
+    },
+    {
+      "id": "mean-wor-BC-bar-focus",
+      "proofSourceId": "mean-wor-BC-bar-focus-written-proof",
+      "targets": [],
+      "pngHash": "8242a301b78e2efad9823097dcd591bbf989f0125eae49c090839233549ab413"
+    },
+    {
+      "id": "mean-wor-BC-path-focus",
+      "proofSourceId": "mean-wor-BC-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "7d5a445aec16493c33f8ecf56498ed3cc25c60d4fed90b78fbcdb760f7f1f9f2"
+    },
+    {
+      "id": "mean-wor-CA-bar-focus",
+      "proofSourceId": "mean-wor-CA-bar-focus-written-proof",
+      "targets": [
+        6
+      ],
+      "pngHash": "b5e9cc3b05d99bde462c09b0dc82a54e1ccb81b7ca5b8d8bec59f7038f7d1b50"
+    },
+    {
+      "id": "mean-wor-CA-path-focus",
+      "proofSourceId": "mean-wor-CA-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "50ee9be862067e279b0cce53fe38462036589bf629e72ed4ebfb4cc3a992acc0"
+    },
+    {
+      "id": "mean-wor-CB-bar-focus",
+      "proofSourceId": "mean-wor-CB-bar-focus-written-proof",
+      "targets": [],
+      "pngHash": "9a2f8f512153d22dd7bbf02f9266482075ee92c2176c8ea4cf0ffc7650252b40"
+    },
+    {
+      "id": "mean-wor-CB-path-focus",
+      "proofSourceId": "mean-wor-CB-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "007c1a97914427aaffd4d03f44a844197d0f234a6ea4921f8fffb9aafb04f5ca"
+    },
+    {
+      "id": "mean-wor-bars",
+      "proofSourceId": "mean-wor-bars-written-proof",
+      "targets": [
+        4,
+        6
+      ],
+      "pngHash": "948f7dcac41a9f8dea9960eee32d72b6887ae88424ba748a38f3afc9895ae1c2"
+    },
+    {
+      "id": "mean-wor-overview",
+      "proofSourceId": "mean-wor-overview-written-proof",
+      "targets": [],
+      "pngHash": "d6925206255969a5d4aae10346452b68f15f65eaef35645943c999379f730c0d"
+    },
+    {
+      "id": "mean-wr-AA-bar-focus",
+      "proofSourceId": "mean-wr-AA-bar-focus-written-proof",
+      "targets": [],
+      "pngHash": "2a734b63ad3a1888b6c2d25879c36b3c821712613383e2f19b6372474fea7d64"
+    },
+    {
+      "id": "mean-wr-AA-path-focus",
+      "proofSourceId": "mean-wr-AA-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "e82a408972f4705138cd541e43c15ceb2fac356ebd4afe56b12b4c46b35fffc3"
+    },
+    {
+      "id": "mean-wr-AB-bar-focus",
+      "proofSourceId": "mean-wr-AB-bar-focus-written-proof",
+      "targets": [
+        4
+      ],
+      "pngHash": "fd109c94af8db9733d789877dcf4bead902e62ac079326963c3e93adb556460a"
+    },
+    {
+      "id": "mean-wr-AB-path-focus",
+      "proofSourceId": "mean-wr-AB-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "d63ad67da2901c47414a4364664deab6c32c1b395acc3adb894d091eff758db7"
+    },
+    {
+      "id": "mean-wr-AC-bar-focus",
+      "proofSourceId": "mean-wr-AC-bar-focus-written-proof",
+      "targets": [
+        6
+      ],
+      "pngHash": "d68fff0d386db8b53f2aaed50cd493e108e575ba605ead5b44a34dde0545a3e9"
+    },
+    {
+      "id": "mean-wr-AC-path-focus",
+      "proofSourceId": "mean-wr-AC-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "38347cee534cb6ab3cf832dbea6cbd560da4a4b5aa7032464754fca7981fd0ee"
+    },
+    {
+      "id": "mean-wr-BA-bar-focus",
+      "proofSourceId": "mean-wr-BA-bar-focus-written-proof",
+      "targets": [
+        4
+      ],
+      "pngHash": "5890917b792cc46b36e26ed9e6bf0085ad39c86f7aff787b05d9bd93b3a51f2e"
+    },
+    {
+      "id": "mean-wr-BA-path-focus",
+      "proofSourceId": "mean-wr-BA-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "6e2468bb299893c0e48709bc9250032a63099573df51a2ce39e9f01b4ccba6a3"
+    },
+    {
+      "id": "mean-wr-BB-bar-focus",
+      "proofSourceId": "mean-wr-BB-bar-focus-written-proof",
+      "targets": [
+        6
+      ],
+      "pngHash": "5ab7abe0833ba6da34038a34301fe8e44194353cecfff94db8231711bb966c01"
+    },
+    {
+      "id": "mean-wr-BB-path-focus",
+      "proofSourceId": "mean-wr-BB-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "19c1ff47b94dffbf407b018332bee58f4397683189fa5a4e63bc5e8fa9d6495d"
+    },
+    {
+      "id": "mean-wr-BC-bar-focus",
+      "proofSourceId": "mean-wr-BC-bar-focus-written-proof",
+      "targets": [],
+      "pngHash": "487ef608857b5945bc2c03c59a3fcc2617d867f81a3fc2d5d64ba89347a1801d"
+    },
+    {
+      "id": "mean-wr-BC-path-focus",
+      "proofSourceId": "mean-wr-BC-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "1abf6b858e2967437ab167309324159f307f4d7f7d81c12b572412b267e5c3bf"
+    },
+    {
+      "id": "mean-wr-CA-bar-focus",
+      "proofSourceId": "mean-wr-CA-bar-focus-written-proof",
+      "targets": [
+        6
+      ],
+      "pngHash": "ab1d85ccdb8f227ce1c210f72194cea96545c27a43b51198195a1e0d5a7d3523"
+    },
+    {
+      "id": "mean-wr-CA-path-focus",
+      "proofSourceId": "mean-wr-CA-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "59eb72ab64a9f50803f6b3f279f30cd7e5348b9b82fa47e1fe00bd984ba10945"
+    },
+    {
+      "id": "mean-wr-CB-bar-focus",
+      "proofSourceId": "mean-wr-CB-bar-focus-written-proof",
+      "targets": [],
+      "pngHash": "579b46de0a84922aa86968c868b681b88cc13943078f825f139d107d3dc14b89"
+    },
+    {
+      "id": "mean-wr-CB-path-focus",
+      "proofSourceId": "mean-wr-CB-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "22062b137d51cd9a55ca73547017803ed66f5e41c27b6b4ecc3c9766522fc459"
+    },
+    {
+      "id": "mean-wr-CC-bar-focus",
+      "proofSourceId": "mean-wr-CC-bar-focus-written-proof",
+      "targets": [],
+      "pngHash": "fb19438fb3938aa54ba23f797c3bc423ad5249e6ef9f841d3f95b4a62aa4a2e9"
+    },
+    {
+      "id": "mean-wr-CC-path-focus",
+      "proofSourceId": "mean-wr-CC-path-focus-written-proof",
+      "targets": [],
+      "pngHash": "bceeeceeae8e95cc6fff4b2cfc459bc3d7d67f2d7fbb2f5d99d88c823cdcf5d1"
+    },
+    {
+      "id": "mean-wr-bars",
+      "proofSourceId": "mean-wr-bars-written-proof",
+      "targets": [
+        4,
+        6
+      ],
+      "pngHash": "a322a705add23b4453f0d2ea9fc8159e5192a5754eee7ce92f2c0e6555063888"
+    },
+    {
+      "id": "mean-wr-overview",
+      "proofSourceId": "mean-wr-overview-written-proof",
+      "targets": [],
+      "pngHash": "7ef49d90f62bce6e49293bd56c30d75363ce549b9cc399ca6bde6540008d9c84"
+    }
+  ],
+  "summary": {
+    "checks": 208,
+    "passed": 193,
+    "failed": [
+      "proof/declared-source-ids/mean-wor-AB-path-focus",
+      "proof/declared-source-ids/mean-wor-AC-path-focus",
+      "proof/declared-source-ids/mean-wor-BA-path-focus",
+      "proof/declared-source-ids/mean-wor-BC-path-focus",
+      "proof/declared-source-ids/mean-wor-CA-path-focus",
+      "proof/declared-source-ids/mean-wor-CB-path-focus",
+      "proof/declared-source-ids/mean-wr-AA-path-focus",
+      "proof/declared-source-ids/mean-wr-AB-path-focus",
+      "proof/declared-source-ids/mean-wr-AC-path-focus",
+      "proof/declared-source-ids/mean-wr-BA-path-focus",
+      "proof/declared-source-ids/mean-wr-BB-path-focus",
+      "proof/declared-source-ids/mean-wr-BC-path-focus",
+      "proof/declared-source-ids/mean-wr-CA-path-focus",
+      "proof/declared-source-ids/mean-wr-CB-path-focus",
+      "proof/declared-source-ids/mean-wr-CC-path-focus"
+    ],
+    "scenarios": 6
+  }
+}

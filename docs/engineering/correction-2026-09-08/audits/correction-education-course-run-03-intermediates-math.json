@@ -1,0 +1,2048 @@
+[
+  {
+    "id": "mean-wr-AA-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-AA-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-AA-weight",
+    "text": "P(AA)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-AB-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-AB-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-AB-weight",
+    "text": "P(AB)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-AC-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-AC-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-AC-weight",
+    "text": "P(AC)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-BA-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-BA-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-BA-weight",
+    "text": "P(BA)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-BB-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-BB-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-BB-weight",
+    "text": "P(BB)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-BC-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-BC-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-BC-weight",
+    "text": "P(BC)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-CA-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-CA-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-CA-weight",
+    "text": "P(CA)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-CB-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-CB-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-CB-weight",
+    "text": "P(CB)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-CC-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-CC-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-CC-weight",
+    "text": "P(CC)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-group-4-combine",
+    "text": "P(mean=4)=1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wr-group-4-sum-numerator",
+    "text": "P(mean=4)=29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wr-group-6-combine",
+    "text": "P(mean=6)=1+1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wr-group-6-sum-numerator",
+    "text": "P(mean=6)=39",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1=3。"
+  },
+  {
+    "id": "mean-wr-group-6-reduce-divide",
+    "text": "P(mean=6)=3÷39÷3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>3</mn><mo>÷</mo><mn>3</mn></mrow><mrow><mn>9</mn><mo>÷</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子3，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wr-group-6-reduce-top",
+    "text": "P(mean=6)=19÷3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn><mo>÷</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：3÷3=1。"
+  },
+  {
+    "id": "mean-wr-group-6-reduce",
+    "text": "P(mean=6)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：9÷3=3。"
+  },
+  {
+    "id": "mean-wr-group-8-combine",
+    "text": "P(mean=8)=1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wr-group-8-sum-numerator",
+    "text": "P(mean=8)=29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wr-AA-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-AA-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-AA-weight-ref",
+    "text": "P(AA)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-AB-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-AB-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-AB-weight-ref",
+    "text": "P(AB)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-AC-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-AC-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-AC-weight-ref",
+    "text": "P(AC)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-BA-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-BA-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-BA-weight-ref",
+    "text": "P(BA)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-BB-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-BB-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-BB-weight-ref",
+    "text": "P(BB)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-BC-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-BC-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-BC-weight-ref",
+    "text": "P(BC)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-CA-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-CA-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-CA-weight-ref",
+    "text": "P(CA)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-CB-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-CB-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-CB-weight-ref",
+    "text": "P(CB)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-CC-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wr-CC-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wr-CC-weight-ref",
+    "text": "P(CC)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "mean-wr-group-4-ref-combine",
+    "text": "P(mean=4)=1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wr-group-4-ref-sum-numerator",
+    "text": "P(mean=4)=29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wr-group-6-ref-combine",
+    "text": "P(mean=6)=1+1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wr-group-6-ref-sum-numerator",
+    "text": "P(mean=6)=39",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1=3。"
+  },
+  {
+    "id": "mean-wr-group-6-ref-reduce-divide",
+    "text": "P(mean=6)=3÷39÷3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>3</mn><mo>÷</mo><mn>3</mn></mrow><mrow><mn>9</mn><mo>÷</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子3，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wr-group-6-ref-reduce-top",
+    "text": "P(mean=6)=19÷3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn><mo>÷</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：3÷3=1。"
+  },
+  {
+    "id": "mean-wr-group-6-ref-reduce",
+    "text": "P(mean=6)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：9÷3=3。"
+  },
+  {
+    "id": "mean-wr-group-8-ref-combine",
+    "text": "P(mean=8)=1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wr-group-8-ref-sum-numerator",
+    "text": "P(mean=8)=29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wor-AB-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-AB-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-AB-weight",
+    "text": "P(AB)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-AC-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-AC-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-AC-weight",
+    "text": "P(AC)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-BA-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-BA-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-BA-weight",
+    "text": "P(BA)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-BC-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-BC-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-BC-weight",
+    "text": "P(BC)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-CA-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-CA-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-CA-weight",
+    "text": "P(CA)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-CB-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-CB-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-CB-weight",
+    "text": "P(CB)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-group-4-combine",
+    "text": "P(mean=4)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wor-group-4-sum-numerator",
+    "text": "P(mean=4)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wor-group-4-reduce-divide",
+    "text": "P(mean=4)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wor-group-4-reduce-top",
+    "text": "P(mean=4)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "mean-wor-group-4-reduce",
+    "text": "P(mean=4)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "mean-wor-group-6-combine",
+    "text": "P(mean=6)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wor-group-6-sum-numerator",
+    "text": "P(mean=6)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wor-group-6-reduce-divide",
+    "text": "P(mean=6)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wor-group-6-reduce-top",
+    "text": "P(mean=6)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "mean-wor-group-6-reduce",
+    "text": "P(mean=6)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "mean-wor-group-8-combine",
+    "text": "P(mean=8)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wor-group-8-sum-numerator",
+    "text": "P(mean=8)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wor-group-8-reduce-divide",
+    "text": "P(mean=8)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wor-group-8-reduce-top",
+    "text": "P(mean=8)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "mean-wor-group-8-reduce",
+    "text": "P(mean=8)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "mean-wor-AB-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-AB-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-AB-weight-ref",
+    "text": "P(AB)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-AC-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-AC-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-AC-weight-ref",
+    "text": "P(AC)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-BA-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-BA-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-BA-weight-ref",
+    "text": "P(BA)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-BC-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-BC-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-BC-weight-ref",
+    "text": "P(BC)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-CA-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-CA-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-CA-weight-ref",
+    "text": "P(CA)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-CB-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "mean-wor-CB-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "mean-wor-CB-weight-ref",
+    "text": "P(CB)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "mean-wor-group-4-ref-combine",
+    "text": "P(mean=4)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wor-group-4-ref-sum-numerator",
+    "text": "P(mean=4)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wor-group-4-ref-reduce-divide",
+    "text": "P(mean=4)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wor-group-4-ref-reduce-top",
+    "text": "P(mean=4)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "mean-wor-group-4-ref-reduce",
+    "text": "P(mean=4)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=4)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "mean-wor-group-6-ref-combine",
+    "text": "P(mean=6)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wor-group-6-ref-sum-numerator",
+    "text": "P(mean=6)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wor-group-6-ref-reduce-divide",
+    "text": "P(mean=6)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wor-group-6-ref-reduce-top",
+    "text": "P(mean=6)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "mean-wor-group-6-ref-reduce",
+    "text": "P(mean=6)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "mean-wor-group-8-ref-combine",
+    "text": "P(mean=8)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "mean-wor-group-8-ref-sum-numerator",
+    "text": "P(mean=8)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "mean-wor-group-8-ref-reduce-divide",
+    "text": "P(mean=8)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "mean-wor-group-8-ref-reduce-top",
+    "text": "P(mean=8)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "mean-wor-group-8-ref-reduce",
+    "text": "P(mean=8)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=8)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "max-wr-RR-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-RR-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-RR-weight",
+    "text": "P(RR)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-RS-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-RS-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-RS-weight",
+    "text": "P(RS)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-RT-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-RT-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-RT-weight",
+    "text": "P(RT)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-SR-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-SR-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-SR-weight",
+    "text": "P(SR)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-SS-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-SS-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-SS-weight",
+    "text": "P(SS)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-ST-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-ST-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-ST-weight",
+    "text": "P(ST)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ST)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-TR-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-TR-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-TR-weight",
+    "text": "P(TR)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-TS-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-TS-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-TS-weight",
+    "text": "P(TS)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-TT-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-TT-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-TT-weight",
+    "text": "P(TT)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-group-1-combine",
+    "text": "P(maximum=1)=1+1+1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wr-group-1-sum-numerator",
+    "text": "P(maximum=1)=49",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1+1=4。"
+  },
+  {
+    "id": "max-wr-group-5-combine",
+    "text": "P(maximum=5)=1+1+1+1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wr-group-5-sum-numerator",
+    "text": "P(maximum=5)=59",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1+1+1=5。"
+  },
+  {
+    "id": "max-wr-RR-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-RR-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-RR-weight-ref",
+    "text": "P(RR)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-RS-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-RS-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-RS-weight-ref",
+    "text": "P(RS)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-RT-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-RT-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-RT-weight-ref",
+    "text": "P(RT)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-SR-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-SR-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-SR-weight-ref",
+    "text": "P(SR)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-SS-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-SS-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-SS-weight-ref",
+    "text": "P(SS)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-ST-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-ST-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-ST-weight-ref",
+    "text": "P(ST)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ST)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-TR-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-TR-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-TR-weight-ref",
+    "text": "P(TR)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-TS-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-TS-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-TS-weight-ref",
+    "text": "P(TS)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-TT-weight-product-ref",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wr-TT-weight-numerator-ref",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wr-TT-weight-ref",
+    "text": "P(TT)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "max-wr-group-1-ref-combine",
+    "text": "P(maximum=1)=1+1+1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wr-group-1-ref-sum-numerator",
+    "text": "P(maximum=1)=49",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1+1=4。"
+  },
+  {
+    "id": "max-wr-group-5-ref-combine",
+    "text": "P(maximum=5)=1+1+1+1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wr-group-5-ref-sum-numerator",
+    "text": "P(maximum=5)=59",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1+1+1=5。"
+  },
+  {
+    "id": "max-wor-RS-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-RS-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-RS-weight",
+    "text": "P(RS)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-RT-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-RT-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-RT-weight",
+    "text": "P(RT)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-SR-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-SR-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-SR-weight",
+    "text": "P(SR)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-ST-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-ST-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-ST-weight",
+    "text": "P(ST)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ST)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-TR-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-TR-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-TR-weight",
+    "text": "P(TR)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-TS-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-TS-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-TS-weight",
+    "text": "P(TS)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-group-1-combine",
+    "text": "P(maximum=1)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wor-group-1-sum-numerator",
+    "text": "P(maximum=1)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "max-wor-group-1-reduce-divide",
+    "text": "P(maximum=1)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "max-wor-group-1-reduce-top",
+    "text": "P(maximum=1)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "max-wor-group-1-reduce",
+    "text": "P(maximum=1)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "max-wor-group-5-combine",
+    "text": "P(maximum=5)=1+1+1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wor-group-5-sum-numerator",
+    "text": "P(maximum=5)=46",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1+1=4。"
+  },
+  {
+    "id": "max-wor-group-5-reduce-divide",
+    "text": "P(maximum=5)=4÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>4</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "max-wor-group-5-reduce-top",
+    "text": "P(maximum=5)=26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：4÷2=2。"
+  },
+  {
+    "id": "max-wor-group-5-reduce",
+    "text": "P(maximum=5)=23",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "max-wor-RS-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-RS-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-RS-weight-ref",
+    "text": "P(RS)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-RT-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-RT-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-RT-weight-ref",
+    "text": "P(RT)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-SR-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-SR-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-SR-weight-ref",
+    "text": "P(SR)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-ST-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-ST-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-ST-weight-ref",
+    "text": "P(ST)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ST)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-TR-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-TR-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-TR-weight-ref",
+    "text": "P(TR)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-TS-weight-product-ref",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "max-wor-TS-weight-numerator-ref",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "max-wor-TS-weight-ref",
+    "text": "P(TS)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "max-wor-group-1-ref-combine",
+    "text": "P(maximum=1)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wor-group-1-ref-sum-numerator",
+    "text": "P(maximum=1)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "max-wor-group-1-ref-reduce-divide",
+    "text": "P(maximum=1)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "max-wor-group-1-ref-reduce-top",
+    "text": "P(maximum=1)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "max-wor-group-1-ref-reduce",
+    "text": "P(maximum=1)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=1)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "max-wor-group-5-ref-combine",
+    "text": "P(maximum=5)=1+1+1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "max-wor-group-5-ref-sum-numerator",
+    "text": "P(maximum=5)=46",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1+1=4。"
+  },
+  {
+    "id": "max-wor-group-5-ref-reduce-divide",
+    "text": "P(maximum=5)=4÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>4</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "max-wor-group-5-ref-reduce-top",
+    "text": "P(maximum=5)=26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：4÷2=2。"
+  },
+  {
+    "id": "max-wor-group-5-ref-reduce",
+    "text": "P(maximum=5)=23",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(maximum=5)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "range-wr-DD-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-DD-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-DD-weight",
+    "text": "P(DD)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(DD)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-DE-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-DE-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-DE-weight",
+    "text": "P(DE)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(DE)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-DF-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-DF-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-DF-weight",
+    "text": "P(DF)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(DF)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-ED-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-ED-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-ED-weight",
+    "text": "P(ED)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ED)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-EE-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-EE-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-EE-weight",
+    "text": "P(EE)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(EE)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-EF-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-EF-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-EF-weight",
+    "text": "P(EF)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(EF)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-FD-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-FD-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-FD-weight",
+    "text": "P(FD)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(FD)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-FE-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-FE-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-FE-weight",
+    "text": "P(FE)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(FE)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-FF-weight-product",
+    "text": "1×13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "range-wr-FF-weight-numerator",
+    "text": "13×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "range-wr-FF-weight",
+    "text": "P(FF)=19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(FF)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×3=9。"
+  },
+  {
+    "id": "range-wr-group-0-combine",
+    "text": "P(range=0)=1+1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=0)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "range-wr-group-0-sum-numerator",
+    "text": "P(range=0)=39",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=0)</mtext><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1+1=3。"
+  },
+  {
+    "id": "range-wr-group-0-reduce-divide",
+    "text": "P(range=0)=3÷39÷3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=0)</mtext><mo>=</mo><mfrac><mrow><mn>3</mn><mo>÷</mo><mn>3</mn></mrow><mrow><mn>9</mn><mo>÷</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子3，分数的值保持相同。"
+  },
+  {
+    "id": "range-wr-group-0-reduce-top",
+    "text": "P(range=0)=19÷3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=0)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn><mo>÷</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：3÷3=1。"
+  },
+  {
+    "id": "range-wr-group-0-reduce",
+    "text": "P(range=0)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=0)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：9÷3=3。"
+  },
+  {
+    "id": "range-wr-group-3-combine",
+    "text": "P(range=3)=1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=3)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "range-wr-group-3-sum-numerator",
+    "text": "P(range=3)=29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=3)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "range-wr-group-6-combine",
+    "text": "P(range=6)=1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=6)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "range-wr-group-6-sum-numerator",
+    "text": "P(range=6)=29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=6)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "range-wr-group-9-combine",
+    "text": "P(range=9)=1+19",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=9)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "range-wr-group-9-sum-numerator",
+    "text": "P(range=9)=29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(range=9)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "shelf-wor-JK-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "shelf-wor-JK-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "shelf-wor-JK-weight",
+    "text": "P(JK)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(JK)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "shelf-wor-JL-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "shelf-wor-JL-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "shelf-wor-JL-weight",
+    "text": "P(JL)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(JL)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "shelf-wor-KJ-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "shelf-wor-KJ-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "shelf-wor-KJ-weight",
+    "text": "P(KJ)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(KJ)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "shelf-wor-KL-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "shelf-wor-KL-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "shelf-wor-KL-weight",
+    "text": "P(KL)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(KL)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "shelf-wor-LJ-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "shelf-wor-LJ-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "shelf-wor-LJ-weight",
+    "text": "P(LJ)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(LJ)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "shelf-wor-LK-weight-product",
+    "text": "1×13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。"
+  },
+  {
+    "id": "shelf-wor-LK-weight-numerator",
+    "text": "13×2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子：1×1=1；分母乘积保留。"
+  },
+  {
+    "id": "shelf-wor-LK-weight",
+    "text": "P(LK)=16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(LK)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母：3×2=6。"
+  },
+  {
+    "id": "shelf-wor-group-7-combine",
+    "text": "P(mean=7)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "shelf-wor-group-7-sum-numerator",
+    "text": "P(mean=7)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "shelf-wor-group-7-reduce-divide",
+    "text": "P(mean=7)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "shelf-wor-group-7-reduce-top",
+    "text": "P(mean=7)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "shelf-wor-group-7-reduce",
+    "text": "P(mean=7)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "shelf-wor-group-7over2-combine",
+    "text": "P(mean=7/2)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7/2)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "shelf-wor-group-7over2-sum-numerator",
+    "text": "P(mean=7/2)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7/2)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "shelf-wor-group-7over2-reduce-divide",
+    "text": "P(mean=7/2)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7/2)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "shelf-wor-group-7over2-reduce-top",
+    "text": "P(mean=7/2)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7/2)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "shelf-wor-group-7over2-reduce",
+    "text": "P(mean=7/2)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=7/2)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "shelf-wor-group-11over2-combine",
+    "text": "P(mean=11/2)=1+16",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=11/2)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项同分母，保留分母，把分子逐项相加。"
+  },
+  {
+    "id": "shelf-wor-group-11over2-sum-numerator",
+    "text": "P(mean=11/2)=26",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=11/2)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "reason": "各项分母相同，分母保留，分子相加：1+1=2。"
+  },
+  {
+    "id": "shelf-wor-group-11over2-reduce-divide",
+    "text": "P(mean=11/2)=2÷26÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=11/2)</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>÷</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "分子与分母同除以公因子2，分数的值保持相同。"
+  },
+  {
+    "id": "shelf-wor-group-11over2-reduce-top",
+    "text": "P(mean=11/2)=16÷2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=11/2)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn><mo>÷</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分子：2÷2=1。"
+  },
+  {
+    "id": "shelf-wor-group-11over2-reduce",
+    "text": "P(mean=11/2)=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(mean=11/2)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "计算分母：6÷2=3。"
+  },
+  {
+    "id": "mean-wr-compare-scale",
+    "text": "13=1×33×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>3</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "把三分之一通分到分母9：分子、分母同乘3。"
+  },
+  {
+    "id": "mean-wr-compare-top",
+    "text": "33×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子1×3=3。"
+  },
+  {
+    "id": "mean-wr-compare-bottom",
+    "text": "39",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母3×3=9。"
+  },
+  {
+    "id": "mean-wr-compare-numerators",
+    "text": "3>2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>3</mn><mo>&gt;</mo><mn>2</mn></mrow></math>",
+    "reason": "两个分数分母相同且为正，比较分子3与2。"
+  },
+  {
+    "id": "mean-wr-compare-fractions",
+    "text": "39>29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>&gt;</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "同除以正数9保持不等号方向。"
+  },
+  {
+    "id": "mean-wor-comparison",
+    "text": "13=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "无放回时两个目标概率都是1/3，因此相等。"
+  },
+  {
+    "id": "mean-wor-comparison",
+    "text": "13=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "无放回时两个目标概率都是1/3，因此相等。"
+  },
+  {
+    "id": "mean-wr-compare-scale-ref",
+    "text": "13=1×33×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>3</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "把三分之一通分到分母9：分子、分母同乘3。"
+  },
+  {
+    "id": "mean-wr-compare-top-ref",
+    "text": "33×3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "先计算分子1×3=3。"
+  },
+  {
+    "id": "mean-wr-compare-bottom-ref",
+    "text": "39",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "再计算分母3×3=9。"
+  },
+  {
+    "id": "mean-wr-compare-numerators-ref",
+    "text": "3>2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>3</mn><mo>&gt;</mo><mn>2</mn></mrow></math>",
+    "reason": "两个分数分母相同且为正，比较分子3与2。"
+  },
+  {
+    "id": "mean-wr-compare-fractions-ref",
+    "text": "39>29",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>&gt;</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "reason": "同除以正数9保持不等号方向。"
+  },
+  {
+    "id": "mean-wor-comparison-ref",
+    "text": "13=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "无放回时两个目标概率都是1/3，因此相等。"
+  },
+  {
+    "id": "mean-wor-comparison-ref",
+    "text": "13=13",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "reason": "无放回时两个目标概率都是1/3，因此相等。"
+  }
+]

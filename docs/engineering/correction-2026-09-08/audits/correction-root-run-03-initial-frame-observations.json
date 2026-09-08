@@ -1,0 +1,26 @@
+{
+  "scope": "root actual view_image of four WIP source PNGs; no target-width/browser/full-course approval; source files mutable before author submission",
+  "warning": "hashes captured after viewing and may differ if simultaneous author rewrite; do not certify exact viewed version unless later confirmed",
+  "observations": [
+    {
+      "path": "generation/correction-run-03/manim/frames/mean-wr-overview.png",
+      "sha256AtRecordTime": "e044e93ce60e0d5a4f3a00046f8380bf9e867922740364a8adf2780613198afa",
+      "observation": "Viewed source image; displayed row identities+values and column identities, but no column values; footer label has no visible weight equation. Draft only."
+    },
+    {
+      "path": "generation/correction-run-03/manim/frames/mean-wor-overview.png",
+      "sha256AtRecordTime": "bec2d57f82d07490bf55811984f7ed1de4624a15cd3401d463dd66539880f7e7",
+      "observation": "Viewed source image; excluded diagonal clear; column values and footer weight missing. Draft only."
+    },
+    {
+      "path": "generation/correction-run-03/manim/frames/mean-wr-AC-path-focus.png",
+      "sha256AtRecordTime": "1fc3c95fc92100ef65ecdbfde27d8301f180709032ff95eb31865227bfef5ec2",
+      "observation": "Viewed source image; numerical mapping 2,10 -> 12/2 ->6 correct; standalone equal sign disproportionately enlarged relative to digits."
+    },
+    {
+      "path": "generation/correction-run-03/manim/frames/mean-wr-AC-bar-focus.png",
+      "sha256AtRecordTime": "ad8abe3ba6f057a1576df3d2c24c7756c53c2db2b7348560b62f5b93b050785c",
+      "observation": "Viewed source image; 3 preimages AC/BB/CA and each1/9 correct; skip3/9 in sum-to1/3; active marking underline, not enclosing box."
+    }
+  ]
+}
