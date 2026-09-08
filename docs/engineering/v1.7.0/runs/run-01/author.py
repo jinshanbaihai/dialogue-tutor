@@ -1,0 +1,205 @@
+#!/usr/bin/env python3
+"""Original course authoring; the skill builder, not this file, produces HTML."""
+import json
+from pathlib import Path
+from html import escape
+
+ROOT = Path(__file__).resolve().parent
+SOURCE = {"repository": "DialogueTutor", "path": "references/teaching-design.md", "case": "原创校园抽样任务与活动编排"}
+DEEP = {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202", "case": "显式提交与反馈；课程题面原创"}
+
+def p(text): return '<p>' + text + '</p>'
+def h(text): return '<h3>' + text + '</h3>'
+def ul(items): return '<ul>' + ''.join('<li>' + item + '</li>' for item in items) + '</ul>'
+def table(headers, rows):
+    return '<div class="course-table"><table><thead><tr>' + ''.join('<th scope="col">' + str(x) + '</th>' for x in headers) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join('<' + ('th scope="row"' if i == 0 else 'td') + '>' + str(x) + '</' + ('th' if i == 0 else 'td') + '>' for i, x in enumerate(row)) + '</tr>' for row in rows) + '</tbody></table></div>'
+def math(xml): return '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' + xml + '</math>'
+MEAN = math('<mrow><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><mi>n</mi></mfrac></mrow>')
+GROUP = math('<mrow><mi>P</mi><mo>(</mo><mi>T</mi><mo>=</mo><mi>t</mi><mo>)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>s</mi><mo>:</mo><mi>T</mi><mo>(</mo><mi>s</mi><mo>)</mo><mo>=</mo><mi>t</mi></mrow></munder><mi>P</mi><mo>(</mo><mi>S</mi><mo>=</mo><mi>s</mi><mo>)</mo></mrow>')
+
+lesson = {
+    'schemaVersion': 1, 'lessonId': 'ial-s2-ch6-sampling-studio-original',
+    'revision': '1.7.0-run01-1', 'presentation': 'studio',
+    'title': 'S2 第六章｜抽样与抽样分布', 'language': 'zh-CN', 'mode': 'bgct',
+    'objectives': [
+        {'id': 'population', 'title': '明确调查对象与抽样框', 'kind': 'concept'},
+        {'id': 'survey', 'title': '根据约束选择调查方案', 'kind': 'design'},
+        {'id': 'statistic', 'title': '判断统计量及其条件', 'kind': 'concept'},
+        {'id': 'distribution', 'title': '构建统计量的抽样分布', 'kind': 'procedure'},
+        {'id': 'mechanism', 'title': '条件改变后重新计算', 'kind': 'procedure'},
+        {'id': 'interpretation', 'title': '解释抽样结果并再次提取', 'kind': 'concept'},
+    ], 'sections': [], 'activities': [], 'pathways': []
+}
+activity_map = []
+
+def add(activity_id, objective, kind, title, prompt, scene_id, scene_title, lead, full, role, **payload):
+    source = dict(DEEP if kind == 'quiz' else SOURCE)
+    if kind == 'steps': source = {'repository': 'HKUDS/DeepTutor', 'path': 'deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml', 'commit': DEEP['commit'], 'case': '分步展示；原创完整例题'}
+    if kind == 'flashcards': source = {'repository': 'HKUDS/DeepTutor', 'path': 'web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx', 'commit': DEEP['commit'], 'case': '提取与翻面；自评和间隔连接为DialogueTutor适配'}
+    activity = {'id': activity_id, 'objectiveId': objective, 'type': kind, 'title': title, 'prompt': prompt, 'source': source, 'solutionId': 'dt-explanation-' + scene_id, **payload}
+    lesson['activities'].append(activity)
+    lesson['sections'].append({'id': scene_id, 'title': scene_title, 'lead': lead, 'bodyHtml': full, 'activityIds': [activity_id], 'explanationTitle': '查看完整讲解：' + title})
+    activity_map.append({'id': activity_id, 'objectiveId': objective, 'identity': role, 'runtimeType': kind + ('/' + payload.get('format', '') if kind == 'quiz' else ''), 'contentLocation': scene_id, 'fullSolution': activity['solutionId'], 'source': source, 'prompt': prompt, 'record': '本人原答与自评分开' if payload.get('format') == 'open' else '预测与参数作为参与记录' if activity_id == 'sampling-lab' else '运行组件按实际题型记录，不由作者赋分'})
+
+def choices(*rows): return [{'id': a, 'text': b, 'feedback': c} for a,b,c in rows]
+def route(source, event, target, label): lesson['pathways'].append({'from': source, 'on': event, 'to': target, 'label': label})
+
+lab_body = '''<style>
+.sampling-lab .lab-population{display:flex;flex-wrap:wrap;gap:.65rem;margin:.5rem 0 1rem}
+.sampling-lab .lab-token{padding:.6rem 1rem;border:1px solid var(--dt-control-line);border-radius:.5rem;background:var(--dt-surface2);font-size:1rem}
+.sampling-lab .lab-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.sampling-lab label{font-size:1rem;line-height:1.6;display:block}
+.sampling-lab select{width:100%;min-height:44px;padding:.5rem;border:1px solid var(--dt-control-line);border-radius:.35rem;background:var(--dt-surface);color:var(--dt-ink);font:inherit}
+.sampling-lab select:disabled{color:var(--dt-ink);opacity:1;background:var(--dt-surface2)}
+.sampling-lab .lab-callout{padding:.8rem 1rem;background:var(--dt-surface2);border-left:3px solid var(--dt-parameter-a);margin:1rem 0}
+.sampling-lab .lab-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:.9rem 0}
+.sampling-lab .lab-chart{width:100%;min-width:0;margin:1rem 0}
+.sampling-lab .lab-result-title{font-size:1.1rem;margin:1.2rem 0 .4rem}
+.course-table{overflow-x:auto;margin:1rem 0}.course-table table{font-size:1rem;min-width:0}
+.sampling-lab [hidden]{display:none!important}.sampling-lab summary{cursor:pointer}
+.evidence-close li{margin-bottom:1.2rem}.evidence-close li p{margin:.4rem 0}
+@media(max-width:520px){.sampling-lab .lab-controls{grid-template-columns:1fr}.course-table th,.course-table td{padding:.45rem .3rem}.sampling-lab .lab-token{padding:.45rem .75rem}}
+</style>
+<div class="sampling-lab">
+<div class="lab-population" aria-label="微型总体：三个带标签的服务点及固定等候分钟数"><span class="lab-token">A · 1 分钟</span><span class="lab-token">B · 3 分钟</span><span class="lab-token">C · 5 分钟</span></div>
+<div class="lab-controls"><label>每份样本量 n<select data-lab-n aria-label="每份样本量 n"><option value="1">1个服务点</option><option value="2">2个服务点</option><option value="3">3个服务点</option></select></label><label>抽样机制<select data-lab-replacement aria-label="抽样机制"><option value="yes">有放回 with replacement</option><option value="no">无放回 without replacement</option></select></label></div>
+<p data-lab-current></p><label>在当前条件下，均值3与均值1哪个更常见？<select data-lab-prediction aria-label="提交前的预测"><option value="">请选择一个判断</option><option value="equal">两者一样常见</option><option value="centre">均值3更常见</option><option value="edge">均值1更常见</option></select></label>
+<div class="lab-actions"><button type="button" class="dt-button dt-button-primary" data-lab-freeze>冻结我的预测</button><button type="button" class="dt-button" data-lab-skip>不预测，直接观察</button><button type="button" class="dt-button dt-button-primary" data-lab-reveal hidden>枚举样本，检查预测</button><button type="button" class="dt-button" data-lab-reset hidden>换条件，保留本轮</button></div>
+<p role="status" aria-live="polite" data-lab-phase></p>
+<details data-lab-support><summary>不熟悉均值？先看一个小例子</summary><p>样本量（sample size）n 表示一份样本含几个观测。若两个观测为2和8分钟，样本均值（sample mean）是 (2+8)÷2=5分钟。它把这一份样本压缩为一个数。下面的实验使用另外三个数1、3、5。</p></details>
+<div data-lab-results hidden>
+<div class="lab-callout" data-lab-comparison aria-live="polite"></div><p data-lab-count></p>
+<label>定位一个有序样本（ordered sample）<select data-lab-path aria-label="定位一个有序样本"></select></label><p data-lab-trace></p>
+<h3 class="lab-result-title">由样本归组得到的理论分布</h3><p>纵轴为理论概率；柱的横坐标为样本均值。铜橙色轮廓标出当前所选路径归入的位置。</p><div class="lab-chart"></div>
+<div class="course-table"><table><thead><tr><th scope="col">均值 / 分钟</th><th scope="col">路径数</th><th scope="col">理论概率</th><th scope="col">模拟频率</th></tr></thead><tbody data-lab-table></tbody></table></div>
+<h3 class="lab-result-title">让一份随机样本留下一个落点</h3><p data-lab-simulation></p><div class="lab-actions"><button type="button" class="dt-button dt-button-primary" data-lab-one>随机抽1份样本</button><button type="button" class="dt-button" data-lab-many>再抽20份样本</button><button type="button" class="dt-button" data-lab-clear>清空模拟频数</button></div><p data-lab-last></p><p>模拟频率＝落在该均值的份数÷重复抽样份数B。它会波动，表中的理论概率由完整枚举确定。</p><p data-lab-question></p>
+<div class="lab-actions"><button type="button" class="dt-button dt-button-primary" data-lab-next>确定调查中的总体与样本</button><button type="button" class="dt-button" data-lab-completion>用另一组数据补全概率</button></div></div>
+<details><summary>查看本实验已保留的轮次</summary><div data-lab-history></div></details><p class="dt-small" data-lab-reference></p></div>'''
+
+opening_full = h('先固定问题，再谈概率') + p('这里的总体（population）是三个带标签的服务点A、B、C；1、3、5分钟只是本实验用于理解机制的固定值，不是对真实校园的测量结论。一次抽样选出n个观测，形成一份样本（sample）。默认n=2，每次均匀抽取一个点，放回后再抽，因此各次独立（independent）。') + MEAN + p('抽样前，X₁、…、Xₙ表示将抽到的随机观测，X̄表示样本均值这个随机统计量；实际抽到后计算出一个数值。样本均值不是每次都等于总体均值3。') + h('默认条件的完整枚举') + table(['有序样本', '均值 / 分钟', '每条路径概率'], [('AA','1','1/9'),('AB、BA','2','各1/9'),('AC、BB、CA','3','各1/9'),('BC、CB','4','各1/9'),('CC','5','1/9')]) + p('共有3×3=9个等可能有序样本。得到相同均值的路径互斥，所以将各条路径概率相加。均值3有三条路径，概率3/9；均值1只有AA，概率1/9。均值取值之间并不等可能。') + table(['X̄ / 分钟','1','2','3','4','5'], [('P(X̄=x)','1/9','2/9','3/9','2/9','1/9')]) + p('概率总和(1+2+3+2+1)/9=1。枚举表给出样本均值的抽样分布（sampling distribution）：在同一抽样机制下，这个统计量全部可能取值及其概率。') + GROUP + h('更换条件时必须重新建表') + table(['条件','有序样本数','均值取值对应的路径数','P(X̄=3)','P(X̄=1)'], [('有放回 n=1','3','1,3,5各1条','1/3','1/3'),('有放回 n=2','9','1,2,3,4,5对应1,2,3,2,1条','1/3','1/9'),('有放回 n=3','27','1,5/3,7/3,3,11/3,13/3,5对应1,3,6,7,6,3,1条','7/27','1/27'),('无放回 n=1','3','1,3,5各1条','1/3','1/3'),('无放回 n=2','6','2,3,4各2条','1/3','0'),('无放回 n=3','6','均值只有3，共6条','1','0')]) + p('无放回时排除重复服务点，第二次从剩余点中抽取，不能继续写成与第一次独立。n=3无放回时每份都含三个点，均值恒为3。参数变化本身会改变数学对象，旧预测因此必须连同旧条件保留。') + p('模拟每次重新进行同一机制的随机抽样。一份样本产生一个均值，B份样本产生B个均值。B变大是在重复实验；n变大是改变每份样本的构成。理论概率来自枚举，有限次模拟频率不必与它完全相等。')
+
+add('sampling-lab','distribution','interactive','两个均值，谁更常见？','A、B、C三个服务点的固定等候时间为1、3、5分钟。默认每份样本独立、有放回地均匀抽取2次。先判断样本均值3分钟与1分钟哪个更常见，再用枚举检查。','opening-scene','开场实验｜同一总体，会给出相同答案吗？','先作一个判断。每份样本的均值＝本份抽到的分钟数总和÷样本量n。',opening_full,'exploration',bodyHtml=lab_body,script=(ROOT/'sampling-lab.js').read_text())
+
+population_full = h('问题决定总体，操作清单决定抽样框') + table(['术语','本题对应','辨认依据'], [('总体 population','本周全部480张已完成工单','结论要覆盖的全部单位'),('样本 sample','实际选中的30张工单','本次调查实际观测的部分单位'),('抽样单位 sampling unit','一张已完成工单','每次选择的基本个体'),('抽样框 sampling frame','420张电子工单组成的清单','用于实施选择的可操作清单')]) + p('另有60张纸质工单不在电子清单上，所以它们没有被这个抽样过程选中的机会。将电子清单称为目标总体会悄悄改变调查问题。首先把纸质工单纳入完整的480张清单，再决定怎样抽取。') + p('总体可以是人、物或事件，并不必然是全国所有人。样本量n=30，指30张工单，不是记录的分钟数。数值变量是每张工单的维修用时（分钟）。') + p('抽样框遗漏可能造成覆盖偏差（coverage bias），但还不知道纸质工单更快或更慢，不能据此断言平均用时必定被高估或低估。完整框与随机抽样解决不同的问题。')
+add('population-check','population','quiz','四个对象，四个名称','维修站要了解本周全部480张已完成工单的平均维修用时。其中420张为电子工单，60张仅有纸质记录。调查员从420张电子清单中随机抽取30张。下面哪组对应全部正确？','population-scene','6.1｜先确定结论要覆盖谁','先按调查目标识别对象，再按实际操作识别清单。',population_full,'diagnostic',format='choice',choices=choices(('target','总体480张；样本30张；抽样单位一张工单；抽样框420张电子清单','这组分别对准调查目标、实际观测、基本个体和操作清单。下一步检查清单有没有漏掉单位。'),('frame','总体420张；样本30张；抽样单位一张工单；抽样框480张全部工单','这组把目标总体和实际清单对换了。请指出题目要覆盖的工单数，以及调查员实际能从哪张清单选。'),('measure','总体480张；样本30分钟；抽样单位平均用时；抽样框420张电子清单','样本由工单组成，分钟是测量单位。请先圈出“被选中的物或事件”，再给它命名。')),answer='target',hint='总体问“结论要覆盖谁”；抽样框问“实际从哪张清单选”。',explanation='目标总体是480张工单，实际样本是30张，抽样单位是一张工单，抽样框是420张电子清单。遗漏的60张纸质工单没有进入样本的机会。',followups=[{'question':'随机抽取就能消除这个遗漏吗？','answer':'不能。随机抽取仅发生在清单中的420张工单之间。清单之外的60张没有机会入样，应先修复抽样框。'}])
+
+frame_full = h('把结论的范围写回到抽样操作中') + p('总体是本月所有800次借阅事件，抽样单位是一次借阅事件，而非一个读者。抽样框只有650次自助借阅，遗漏150次柜台借阅；从这个框内随机抽80次也不能为遗漏事件创造抽中机会。') + p('可将自助记录与柜台记录合并，检查重复和遗漏，形成800次借阅的完整清单，再随机选择所需事件。若无法补齐，则应明确缩小结论到自助借阅，不能声称代表全部借阅。') + p('数据不足以断定偏差方向；柜台等待可能更长、也可能更短，题目并未提供依据。解释要指出可能的覆盖问题，避免编造方向。')
+add('frame-repair','population','quiz','修好一张有遗漏的清单','图书馆要调查本月800次借阅事件的处理用时。650次自助借阅有电子记录，150次柜台借阅仅有纸本记录。调查员准备只从电子记录随机抽80次。请写出总体、抽样单位、抽样框的缺口，以及一种具体修复。是否能断言平均用时一定被低估？说明理由。','frame-scene','6.1｜让遗漏的单位重新有机会','这次的单位是事件。用三到五句话把调查目标落实到可用清单。',frame_full,'independent',format='open',modelAnswer='总体为本月全部800次借阅事件；抽样单位为一次借阅事件。当前框只有650次自助记录，漏掉150次柜台借阅。可合并电子和纸本记录并去重核漏，再从完整800次记录中随机抽取。不能断言一定低估，因为题目未说明柜台与自助用时的关系。',rubric=['总体明确覆盖全部800次借阅事件，单位为一次借阅事件。','指出电子框遗漏150次柜台借阅，随机抽取不能弥补框外遗漏。','提出可操作的补齐与核对清单方案。','不凭遗漏本身推断偏差方向，并说明缺少用时关系。'],hint='检查“结论覆盖范围”和“有机会入样的范围”是否相同。',explanation='本题按你保存的原答自评。核心是识别框外遗漏并提出修复，偏差方向需要额外数据。')
+
+census_full = h('把成本与后果放到同一张比较表') + table(['维度','普查 census','抽样调查 sample survey'], [('调查范围','观测总体中的每个单位','观测总体的一部分单位'),('资源','总体大时通常更费时、费钱','通常更快且成本较低'),('抽样波动','无因只抽一部分而产生的抽样波动','不同随机样本可给出不同结果'),('其他误差','仍可能测量错、录入错或漏记','也可能测量错、录入错、框不完整或选择偏差'),('破坏性检测','检测全部会毁掉全部产品','只毁掉被检测的样本')]) + p('本题要用放电至损坏的检测了解5000块电池的性能，而且其余电池需要交付。普查将破坏全部电池，因此应从完整批次清单中随机抽取适当数量做检测。') + p('抽样调查保留大部分产品，通常省时省钱，但样本结果存在抽样波动，不能保证恰等于总体。随机抽取有助于避免主观挑选；不能因此声称样本必定完全代表总体。抽样量的专门优化不属于本课任务。')
+add('census-sample','survey','quiz','检测会毁掉产品时怎么选？','一批5000块电池需要交付。测试寿命必须把被测电池放电至损坏，预算只能检测100块。要了解整批性能，哪项方案与理由最合理？','census-scene','6.1｜一次选择会带来什么后果','检测条件已经给定。选择调查方案，也选择它带来的成本。',census_full,'application',format='choice',choices=choices(('sample','从完整批次清单随机抽100块检测；节约成本并保留其余产品，但结果仍有抽样波动。','这个方案同时回应预算与破坏性约束，也保留样本结果的局限。'),('census','检测全部5000块；普查没有任何误差，因此值得毁掉全部产品。','普查仍可能有测量误差，而且本题会毁掉待交付产品并超预算。先将这两个实际后果与目标比较。'),('easy','挑最容易拿到的100块；只要数量够多就等同于随机样本。','方便取得不等于随机选取。请检查每块电池是否有公平的入样机会，而不是只看样本数。')),answer='sample',hint='把“会损坏”“需要交付”“预算100块”分别与方案核对。',explanation='随机抽样调查符合本题资源和破坏性检测约束。它减少检测数量，但存在抽样波动；普查没有抽样误差也不代表没有其他误差。')
+
+survey_full = h('条件改变后，方案也可能改变') + p('本题总体只有40份申请，电子清单完整，读取提交时间不破坏任何对象，全部数据可以在一分钟内导出。因此建议普查全部40份，直接计算这一批申请的实际平均提交时间。') + p('好处是既然取得全体数据的额外成本很小，便无需承受仅抽部分所带来的抽样波动，也能保留每份申请的信息。仍要检查时间戳是否准确、有无重复或漏记；普查不消除这些误差。') + p('若总体变得极大、处理全体数据耗时昂贵，抽样调查可能更合适。本题不要求为了“随机”而坚持抽样，选择要由实际约束支持。')
+add('survey-justify','survey','quiz','少量完整记录值得抽样吗？','社团要知道本次40份报名申请的平均提交时间。40份电子记录完整，一分钟可导出全部时间戳，读取不会破坏记录。请建议普查或抽样调查，给出两条联系本题的理由，并说明一种仍需检查的误差。','survey-scene','6.1｜给方案加上适用条件','换成一份很小、很容易取得的总体。让你的理由跟着条件改变。',survey_full,'transfer',format='open',modelAnswer='建议普查全部40份。总体小，全部数据一分钟即可取得，额外成本很低；使用全体数据可得到这次报名实际均值，没有只抽一部分造成的抽样波动。仍应检查时间戳、重复记录或漏记，因为普查不保证测量和记录都无误。',rubric=['建议与小型、完整且易取得的总体条件一致。','给出至少两条联系本题的理由，例如取得成本很低、覆盖全部申请、无抽样波动。','指出一种具体的测量或记录误差，未声称普查必然完全正确。'],hint='对比刚才的电池情境：这里取得全体数据有什么成本？会损坏对象吗？',explanation='参考建议是普查，但评价重点是方案与约束的连接以及误差边界。请依据本人原答逐条自评。')
+
+stat_full = h('先问：凭手上的样本，能不能算出来？') + p('统计量（statistic）是仅由样本观测和已知常数计算的量，不含未知总体参数。总体参数（population parameter）描述总体，例如未知总体均值μ；样本均值X̄则由样本计算。') + table(['表达式','是否为本题统计量','理由'], [('(X₁+X₂)/2','是','两个观测与已知常数2即可计算'),('X̄−μ','否','μ明确未知，不能仅从样本计算'),('μ','否','直接使用未知总体参数')]) + MEAN + p('抽样前，统计量是随机变量，因为它的输入样本尚不确定。实际观察x₁=6、x₂=10后，样本均值的实现值是x̄=8分钟。这个数值可以变化，不表示它“不是统计量”。统计量也不必一定用作某个参数的估计。')
+add('statistic-check','statistic','quiz','样本能算出的，才够资格','X₁、X₂是随机样本中的两个观测值，总体均值μ未知，n=2已知。以下哪个表达式是统计量（statistic）？','statistic-scene','6.2｜一个数需要哪些输入？','只检查能否由样本和已知常数计算。',stat_full,'diagnostic',format='choice',choices=choices(('samplemean','(X₁+X₂)/2','只需要样本两个观测和已知常数2，可以计算。'),('deviation','X̄−μ','样本均值可算，但μ未知。请把表达式所需的每个输入列出，检查哪个没有数值。'),('parameter','μ','μ是题设未知的总体均值，不能单靠本次样本得知。')),answer='samplemean',hint='把样本观测和已知常数圈出来；若还剩一个未知总体量，表达式就不能仅由样本计算。',explanation='(X₁+X₂)/2只依赖样本观测和已知常数，因此是统计量。μ明确未知，含μ的另外两项不是本题统计量。',followups=[{'question':'演示中把总体三个数都写出来，μ不就知道了吗？','answer':'演示为展示机制而给出完整微型总体。本题独立规定μ未知，应按本题条件判定，不能从另一情境搬入已知信息。'}])
+
+stat_explain_full = h('统计量可以是均值，也可以是极差') + p('极差（range）R=max(X₁,X₂,X₃)−min(X₁,X₂,X₃)只依赖三个样本观测。观察到4、7、11后，R=11−4=7分钟；不需要总体均值μ。') + p('Q=(X₁+X₂+X₃)/3−μ仍需要未知μ，所以不是本题统计量。即使知道样本均值22/3，也不能得到Q的数值。') + p('R作为抽样前的统计量可随随机样本而变化；这次实现值7并不等于“所有可能样本的极差都是7”。这个区别为抽样分布作准备。')
+add('statistic-explain','statistic','quiz','换成极差，再检验一次','某服务总体均值μ未知，随机样本的三个观测为4、7、11分钟。定义R=max(X₁,X₂,X₃)−min(X₁,X₂,X₃)，Q=(X₁+X₂+X₃)/3−μ。分别判断R、Q是否为统计量，并用“需要哪些输入”说明理由；算出能确定的R值。','statistic-explain-scene','6.2｜离开选项，解释你的判据','这次需要把判定条件写进理由。',stat_explain_full,'independent',format='open',modelAnswer='R是统计量，因为只依赖样本观测；R=11−4=7分钟。Q不是本题统计量，因为它还包含未知总体均值μ，不能仅由样本和已知常数计算。R在抽样前会随样本改变，本次7是其实现值。',rubric=['明确R是统计量，理由是仅需样本观测。','R=7分钟，计算使用最大值减最小值。','明确Q不是本题统计量，理由是包含题设未知的μ。'],hint='先尝试给每个表达式代入。在哪个表达式里仍有一个未知量留着？',explanation='请核对保存的原答。判据是依赖的信息，而不是表达式长短或名称。')
+
+worked_steps = [
+    {'title': '列出基本结果与概率', 'bodyHtml': p('两个带标签的卡片U=2、V=8。每次等概率抽一张，放回后独立再抽。共有UU、UV、VU、VV四个有序样本。') + math('<mrow><mi>P</mi><mo>(</mo><mi>U</mi><mi>V</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow>') + p('乘法依据是两次独立；另外三条同样各为1/4。')},
+    {'title': '把每份样本变成一个均值', 'bodyHtml': table(['样本','均值 / 分钟'], [('UU: 2,2','2'),('UV: 2,8','5'),('VU: 8,2','5'),('VV: 8,8','8')]) + p('UV和VU顺序不同，都是可能的基本结果，但映射到同一个均值5。')},
+    {'title': '合并同值路径，检查分布', 'bodyHtml': table(['X̄ / 分钟','2','5','8'], [('P(X̄=x)','1/4','1/2','1/4')]) + p('均值5由UV和VU产生，它们互斥，概率相加为1/4+1/4=1/2。总概率1/4+1/2+1/4=1。')},
+    {'title': '解释这张表回答了什么', 'bodyHtml': p('在相同机制下重新抽一份样本，均值可能为2、5、8；表中概率描述各个可能的均值。它不是单份样本中两个观测值各出现几次的频数表。') + p('例如实际抽到UV，只得到本次均值5；需要考虑所有可能样本，才能得到整张抽样分布。下一项换三张卡片，你来补上归组概率。')}
+]
+worked_full = h('完整例题｜用两张卡片建立方法') + p('U、V两张卡片分别写2、8分钟。独立、有放回、每次等概率抽取一张，样本量n=2。求样本均值的抽样分布。') + MEAN + ''.join(h(step['title']) + step['bodyHtml'] for step in worked_steps) + h('可选核算：分布均值') + p('利用S1离散期望：E(X̄)=2×1/4+5×1/2+8×1/4=5分钟，恰与本例总体均值(2+8)/2=5相同。这里是从完整分布直接算出的结果；单份样本均值仍可能为2或8。')
+add('mean-worked','distribution','steps','从四条路径到一张分布表','完整例题：U=2、V=8分钟。独立、有放回地等概率抽取两次。求样本均值X̄的抽样分布。可以前后查看，也可直接打开全解。','worked-scene','6.3｜先看一条完整推导','每一步只做一个关键选择：列路径、求均值、合并、解释。',worked_full,'example',steps=worked_steps)
+
+completion_full = h('补上的不是新公式，而是同值路径') + p('有放回、独立、均匀抽2次，故3²=9个有序样本等可能，每条概率1/9。均值要等于3.5，两次之和必须等于7。卡片值为1、3、4，符合的是(3,4)、(4,3)。') + math('<mrow><mi>P</mi><mo>(</mo><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mn>3.5</mn><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>9</mn></mfrac></mrow>') + table(['均值','1','2','2.5','3','3.5','4'], [('概率','1/9','2/9','2/9','1/9','2/9','1/9')]) + p('全表的路径数1+2+2+1+2+1=9，概率和为1。只数不同数对而把顺序忽略，会丢掉一条等可能路径。')
+add('mean-completion','distribution','quiz','补全一次归组概率','三张不同卡片写着1、3、4分钟。每次均匀抽一张，放回后独立再抽，n=2。已知9个有序样本等可能，每条概率1/9。请补上P(X̄=3.5)。输入精确分数或误差不超过0.000001的小数，不写单位。','completion-scene','6.3｜轮到你补上关键一步','已给基本结果的概率。你需要决定哪些路径应该合并。',completion_full,'completion',format='numeric',answer='2/9',tolerance=1e-6,hint='先把均值3.5换成两次观测之和7，再列出两个顺序。',explanation='X̄=3.5要求两次之和7，符合(3,4)与(4,3)，两条互斥路径合并得到2/9。若结果不同，核对是否同时保留两个顺序。')
+
+independent_full = h('从事件门槛重新组织方法') + p('三张不同卡片A=0、B=4、C=10，独立均匀有放回抽2次，共9个等可能有序样本。事件X̄≥5等价于两数之和≥10。') + table(['满足的有序样本','均值'], [('AC: 0,10','5'),('CA: 10,0','5'),('BC: 4,10','7'),('CB: 10,4','7'),('CC: 10,10','10')]) + p('(4,4)均值4，不满足；等号包含均值恰为5的两条路径。共有5条，P(X̄≥5)=5/9。') + table(['均值','0','2','4','5','7','10'], [('概率','1/9','2/9','1/9','2/9','2/9','1/9')]) + p('全分布概率和为1，事件概率(2+2+1)/9=5/9。结果在0与1之间。数值核对只能说明最终概率相符，不自动证明每个推导步骤正确；可把过程写入本题笔记。')
+add('mean-independent','distribution','quiz','独立新题：达到门槛的概率','三张不同卡片A、B、C分别写0、4、10分钟。每次均匀抽一张，放回后独立再抽，样本量n=2。自行组织方法，求P(X̄≥5)。输入精确分数或误差不超过0.000001的小数，不写单位；过程可记入本题笔记。','independent-scene','6.3｜把方法带到一个新事件','这次不提供路径数或归组结果。先保留独立尝试；需要时仍可查提示。',independent_full,'independent',format='numeric',answer='5/9',tolerance=1e-6,hint='把平均值的门槛改写成两次观测之和的门槛，再检查等号边界。',explanation='共有9个等可能有序样本。符合两数之和≥10的是(0,10)、(10,0)、(4,10)、(10,4)、(10,10)，所以概率5/9。若你的结果不同，先检查均值恰为5的情况。')
+
+max_full = h('统计量改变，归组标准跟着改变') + p('独立有放回抽2次时，9个有序样本各为1/9。这次T是最大值，不再用均值给样本分组。') + table(['T','有序样本','P(T=t)'], [('1','(1,1)','1/9'),('3','(1,3)、(3,1)、(3,3)','3/9=1/3'),('7','(1,7)、(7,1)、(3,7)、(7,3)、(7,7)','5/9')]) + p('总概率1/9+3/9+5/9=1。也可用累积事件：P(T≤3)=(2/3)²=4/9，再减去P(T=1)=1/9，得到P(T=3)=1/3；P(T=7)=1−4/9=5/9。两种方法都需使用有放回、独立、均匀抽取条件。') + p('只写1、3、7是统计量的可能取值，还不是完整抽样分布；必须把每个取值的概率一并给出。')
+add('max-distribution','distribution','quiz','提交一张完整的最大值分布','三个带标签的物品取值为1、3、7。每次等概率抽取一个，放回后独立再抽，n=2。令T为两次取值中的最大值（maximum）。写出T的完整抽样分布，并说明怎样得到各概率及怎样检查。取值无单位；概率用精确分数。','max-scene','6.3｜统计量换了，方法还能用吗？','你来提交完整过程。此题保存原答后按要点自评。',max_full,'transfer',format='open',modelAnswer='9个有序样本各为1/9。T=1仅由(1,1)产生，概率1/9；T=3由(1,3)、(3,1)、(3,3)产生，概率3/9；T=7由含7的其余5个有序样本产生，概率5/9。分布为1、3、7分别对应1/9、1/3、5/9，概率和为1。',rubric=['保留独立、有放回、等概率条件，给出9个等可能基本结果或等价概率依据。','列出T全部可能取值1、3、7。','对应概率为1/9、1/3、5/9，说明同值路径如何合并或等价累积法。','概率和为1，并未把三个不同取值当作等可能。'],hint='最大值等于3时，两次都不能超过3，而且至少一次必须是3。',explanation='请按原答核对完整表、归组依据和概率总和。自评不代表自动识别了你写的推导。')
+
+mechanism_full = h('无放回先改变分母和可用路径') + p('三个个体值2、4、10，第一次每个概率1/3；抽出后不放回，第二次从剩余两个均匀抽取，条件概率1/2。因此每个允许的有序样本概率(1/3)(1/2)=1/6，共6个。') + table(['最大值M','有序样本','概率'], [('4','(2,4)、(4,2)','2/6=1/3'),('10','(2,10)、(10,2)、(4,10)、(10,4)','4/6=2/3')]) + p('M=10的概率为2/3，M=2不可能，因为不能重复抽取值2的同一个个体。若改为有放回，则允许(10,10)，共9条路径，M=10为5/9；这是另一个抽样机制，不能沿用它的分母。') + p('无序做法也成立：三个二元子集{2,4}、{2,10}、{4,10}等可能，两个包含10，得到2/3。使用无序样本前要说明每个子集为何等可能。')
+add('mechanism-transfer','mechanism','quiz','改为无放回，重新算','三个不同个体的数值为2、4、10。依次抽2个：第一次均匀抽取，抽后不放回（without replacement），第二次从剩余两个均匀抽取。令M为样本最大值。求P(M=10)。输入精确分数或误差不超过0.000001的小数。','mechanism-scene','条件挑战｜第二次还能抽到自己吗？','先决定哪些样本被条件排除了，再给概率。',mechanism_full,'transfer',format='numeric',answer='2/3',tolerance=1e-6,hint='先画出第一取值不同的三行；每行只剩两种第二取值。',explanation='无放回共有6个允许的有序样本，每条概率1/6。包含10的有4条，故P(M=10)=4/6=2/3。若结果不同，核对是否把同一个个体重复抽入了样本。')
+
+repeated_full = h('同值个体不等于同一个抽样单位') + p('A、B、C、D是四个不同个体，数值分别1、1、1、5。每次均匀抽个体，因此单次抽到数值1的概率3/4，抽到5的概率1/4。不能先把数值归成{1,5}再把两类视为各1/2。') + p('极差R=max−min不为0，恰好要求两次数值不同。两个顺序对应互斥事件：(1,5)或(5,1)。有放回使两次独立。') + math('<mrow><mi>P</mi><mo>(</mo><mi>R</mi><mo>≠</mo><mn>0</mn><mo>)</mo><mo>=</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>×</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>8</mn></mfrac></mrow>') + table(['R','标签路径数量','概率'], [('0','AA、AB、AC、BA、BB、BC、CA、CB、CC、DD：10条','10/16=5/8'),('4','AD、BD、CD、DA、DB、DC：6条','6/16=3/8')]) + p('完整分布只有R=0和R=4，概率和5/8+3/8=1。本题增加的判断要求是保留个体身份与数值类别之间的区别。')
+add('repeated-values','mechanism','quiz','相同数值、不同个体','四个不同个体A、B、C、D的数值分别为1、1、1、5。每次均匀抽一个个体，放回后独立再抽，n=2。令R为样本极差（range，最大值减最小值）。求P(R≠0)。输入精确分数或误差不超过0.000001的小数。','repeated-scene','条件挑战｜三个“1”该算几个对象？','保留个体标签，再把样本按统计量归组。',repeated_full,'transfer',format='numeric',answer='3/8',tolerance=1e-6,hint='单次抽到数值1的概率是多少？极差非零时，两次取值必须有什么关系？',explanation='R≠0要求一次取值1、一次取值5。两个顺序的概率为(3/4)(1/4)+(1/4)(3/4)=3/8。若结果不同，先检查三个数值1是否仍对应三个不同个体。')
+
+meaning_full = h('四个对象，各有自己的分母') + table(['对象','一次记录什么','分母或权重'], [('总体分布 population distribution','总体中单个单位的变量值','总体单位的概率权重'),('一次样本的数据','这一次抽到的n个观测','样本内频数用n作分母'),('统计量的抽样分布 sampling distribution','所有可能样本对应的T值','按照抽样机制计算的理论概率'),('模拟结果的经验频率','B份随机样本产生的B个T值','以重复次数B作分母')]) + p('抽取500份样本，算出500个均值再画频率图，是对均值抽样分布的模拟观察；频率是有限实验结果，不自动等于理论概率。精确抽样分布要求所有可能均值及其由机制确定的概率。') + p('n=2且B=500意味着每份含2个观测、重复500份，共产生500个均值。将B增大没有把每份样本量从2改成500。')
+add('distribution-meaning','interpretation','quiz','你手上的究竟是哪一种分布？','某实验每份均匀、有放回、独立抽取2个观测，并计算一个均值；共重复500份样本。下列哪项才完整描述“样本均值的理论抽样分布”？','meaning-scene','6.3｜给每张图一个准确名称','先看图上的一个落点代表什么，再看概率由哪里得到。',meaning_full,'independent',format='choice',choices=choices(('all','所有可能样本产生的均值，以及按既定抽样机制算出的各均值概率。','这里同时包含统计量取值和由机制确定的理论概率。'),('sample','其中某一份样本里两个观测值的频数。','这只描述一次样本的两个观测。请问抽样分布的每个落点应代表一个观测，还是一整份样本算出的均值？'),('simulation','500个已模拟均值的频率；每个频率都必须恰好等于理论概率。','模拟频率会波动。请区分重复500次的实验结果与由所有可能样本确定的理论概率。')),answer='all',hint='“所有可能值”和“由抽样机制确定的概率”都要出现。',explanation='抽样分布是统计量全部可能取值及其理论概率。一次样本的数据分布不同；有限模拟频率可以帮助观察，但不保证恰等于理论概率。')
+
+conclusion_full = h('随机的是样本，因此统计量可以改变') + p('甲乙各自从同一完整总体中重新随机抽样，可能抽到不同个体；样本均值是这些观测的函数，因此可能给出不同数值。这种抽样波动（sampling variation）本身不足以证明有人算错或抽样有偏。') + p('若要比较两人的抽样分布，必须明确总体及其取值/概率、每份样本量n、抽样机制（例如是否放回、是否独立），以及统计量定义。只有条件固定，才是在讨论同一个随机统计量的分布。') + p('知道一次样本均值并不能确定它出现的概率。需枚举或按概率模型推导全部可能样本；重复模拟也只得到有限频率。回到开场，均值3可以由多条样本路径产生，均值1来自较少路径，这解释了默认条件下概率的差异。')
+add('sampling-conclusion','interpretation','quiz','两份报告不同，是否一定有人错？','甲乙分别从同一份完整的校园服务记录中重新随机抽取一份样本。他们都正确计算了本份样本的平均用时，但两个均值不同。用三到五句话解释这是否一定说明有人计算错或抽样有偏；再列出要确定样本均值抽样分布时必须明确的条件。','conclusion-scene','带走一个能解释的结论','把“样本→统计量→分布”连成一段理由。',conclusion_full,'transfer',format='open',modelAnswer='不一定。随机抽样可能选中不同单位，样本均值是本份观测的函数，所以会发生抽样波动；两个均值不同本身不能证明算错或有偏。要确定均值的抽样分布，需明确总体取值及其权重、每份样本量n、抽样机制（有无放回及依赖关系），以及统计量是怎样定义的。',rubric=['差异本身不证明计算错误或抽样有偏。','明确随机样本不同会导致统计量实现值不同。','条件包含总体及权重、样本量、抽样机制和统计量定义。','不把一次样本或有限模拟结果叫完整理论抽样分布。'],hint='从“每次选中哪些观测”出发，说明均值的输入为什么会改变。',explanation='请根据本人保存的原答自评。能解释差异来自哪里，比只复述“随机”更有用。')
+
+recall_cards = [
+    {'front':'抽样框 sampling frame 与总体 population 有什么不同？', 'back':'总体是结论要覆盖的全部单位；抽样框是实施选择所用的清单。框可能遗漏、重复或包含不合范围的单位，因此需要按目标总体检查。', 'hint':'一个由研究目标定义，一个用来实际选择。'},
+    {'front':'怎样判断一个表达式是不是统计量 statistic？抽样前和观测后有什么区别？', 'back':'它只能依赖样本和已知常数，不能含未知总体参数。抽样前它是随样本变化的随机变量；观测后算出的数是它的一次实现值。', 'hint':'列出计算所需的全部输入。'},
+    {'front':'统计量的抽样分布 sampling distribution 包含什么？从枚举样本怎样得到？', 'back':'包含固定抽样条件下统计量的全部可能值及其概率。先列基本样本并按机制赋概率，再计算每份的统计量，把同值路径的概率相加，最后核对总和为1。', 'hint':'取值与概率都要有；同值可以由多条路径产生。'},
+]
+recall_full = h('三张卡的完整参考') + ''.join(h(card['front']) + p(card['back']) for card in recall_cards) + p('请评价翻面之前实际回忆出的内容。翻面后觉得熟悉，不等于刚才已经独立提取。这里的评价是自评；下次到期日期由真实记录和既有复习规则产生。')
+add('return-recall','interpretation','flashcards','三张核心概念卡','先在脑中或纸上回答，再翻面核对。按翻面之前实际回忆出的内容自评；可以使用提示，也可以稍后再来。','recall-scene','回访准备｜先试着从记忆里取出','每张卡只承担一个核心区别，完整参考一直可查。',recall_full,'delayed-same-item',cards=recall_cards)
+
+close_body = '''<div class="evidence-close"><p class="lab-callout" data-close-story></p><ul data-close-evidence></ul><p>这些是本页面记录的作答与参与事实，不是整章掌握认证。数值核对、自评和辅助尝试分别保留。</p><div class="dt-row"><button type="button" class="dt-button dt-button-primary" data-close-challenge>改变条件的挑战</button><button type="button" class="dt-button" data-close-independent>返回独立概率题</button><button type="button" class="dt-button" data-close-lab>返回开场实验与原预测</button></div><h3>给下一次留一个实际入口</h3><button type="button" class="dt-button dt-button-primary" data-close-review>查看回访入口</button><p data-close-review-note></p></div>'''
+sources = h('课程范围与来源') + p('本页讲解Pearson Edexcel IAL Statistics 2第六章 Sampling and sampling distributions，覆盖6.1 Populations and samples、6.2 The concept of a statistic、6.3 The sampling distribution of a statistic。第七章才是Hypothesis testing。本页使用原创情境与练习，不复刻教材题目，不提供官方分值。') + p('范围核对日期：2026-09-07。<a href="https://www.pearson.com/content/dam/one-dot-com/one-dot-com/international-schools/pdfs/secondary-curriculum/international-a-levels/mathematics/International-A-Level-Mathematics-Statistics-2-Student-Book-sample.pdf" target="_blank" rel="noopener">Pearson官方样章目录（PDF第3、5页）</a>用于章节定位；<a href="https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/international-a-level-maths-spec.pdf" target="_blank" rel="noopener">Pearson IAL数学规范Issue 3，S2 4.1–4.2（印刷页59，PDF第65页）</a>用于核心范围。未声称已取得教材第六章全文。') + p('总体与样本、抽样单位、抽样框、普查与抽样调查优缺点，以及统计量及其抽样分布，是本章核心。平均值、互斥加法和独立乘法作为S1前置支持。无放回与同值不同个体用于检验抽样机制；本课未展开中心极限定理、置信区间或假设检验。') + h('怎样使用收束中的证据') + p('可以先完成尚无独立作答的任务，再选择改变条件的挑战。已经看过某题参考后，同一题重试仍保留辅助记录。开放题与闪卡使用自评，不声称机器已经理解或认证你的推导。') + p('回访入口使用已有复习记录。未到期显示实际日期；提前练习不推进间隔。实际到期后先呈现问题，再核对；这份单文件本身不发送通知。')
+add('evidence-close','interpretation','interactive','看看你已经留下了哪些证据','根据下面的实际记录，选择一项还想验证的能力，或留下下次回忆的入口。','close-scene','收束｜能解释，还要能再做一次','你的原答、提示记录和自评各自保留。挑一个具体问题带走。',sources,'reflection',bodyHtml=close_body,script=(ROOT/'evidence-close.js').read_text())
+
+# Recommendations describe actual outcomes and lead to named, real activities.
+route('population-check','incorrect','frame-repair','找出没有入样机会的单位')
+route('population-check','assisted','frame-repair','换一个清单检验区分')
+route('population-check','correct','census-sample','加入检测成本约束')
+route('population-check','skipped','frame-repair','从具体缺口开始')
+route('frame-repair','incorrect','population-check','先核对四个术语')
+route('frame-repair','assisted','census-sample','继续比较调查方案')
+route('frame-repair','skipped','population-check','先做有选项的对应')
+route('census-sample','incorrect','survey-justify','比较不破坏记录的新情境')
+route('census-sample','assisted','survey-justify','独立写出另一方案的依据')
+route('census-sample','correct','statistic-check','确定样本可以算出的量')
+route('census-sample','skipped','survey-justify','从小型电子总体作选择')
+route('survey-justify','incorrect','census-sample','对照破坏性检测的约束')
+route('survey-justify','assisted','statistic-check','转向统计量的计算条件')
+route('statistic-check','incorrect','statistic-explain','列出每个表达式需要的输入')
+route('statistic-check','assisted','statistic-explain','用极差检验同一个判据')
+route('statistic-check','correct','mean-worked','看统计量怎样形成分布')
+route('statistic-check','skipped','mean-worked','先看完整均值例题')
+route('statistic-explain','incorrect','statistic-check','回到可计算性的判据')
+route('statistic-explain','assisted','mean-worked','跟随一次完整枚举')
+route('mean-completion','incorrect','mean-worked','重看不同顺序怎样合并')
+route('mean-completion','assisted','mean-independent','换数据独立算事件概率')
+route('mean-completion','correct','mean-independent','独立组织一个门槛事件')
+route('mean-completion','skipped','mean-worked','先看四条路径的例题')
+route('mean-independent','incorrect','mean-completion','先补上同值路径的概率')
+route('mean-independent','assisted','max-distribution','换统计量提交完整过程')
+route('mean-independent','correct','mechanism-transfer','改为无放回后重新计算')
+route('mean-independent','skipped','mean-worked','从完整枚举开始')
+route('max-distribution','incorrect','mean-worked','按路径再走一次归组方法')
+route('max-distribution','assisted','mechanism-transfer','用新机制检查可用路径')
+route('mechanism-transfer','incorrect','sampling-lab','在实验中切换到无放回')
+route('mechanism-transfer','assisted','repeated-values','保留标签挑战新条件')
+route('mechanism-transfer','correct','repeated-values','加入相同数值的不同个体')
+route('mechanism-transfer','skipped','sampling-lab','先比较有放回与无放回')
+route('repeated-values','incorrect','mean-worked','重看基本样本与数值分组')
+route('repeated-values','assisted','distribution-meaning','核对分布与频率的对象')
+route('repeated-values','correct','distribution-meaning','给结果一个准确解释')
+route('repeated-values','skipped','sampling-lab','先追踪一份样本的落点')
+route('distribution-meaning','incorrect','sampling-lab','追踪一个均值对应哪份样本')
+route('distribution-meaning','assisted','sampling-conclusion','用自己的话解释抽样差异')
+route('distribution-meaning','correct','sampling-conclusion','解释两份报告为什么不同')
+route('distribution-meaning','skipped','sampling-lab','从实际样本与均值开始')
+route('sampling-conclusion','incorrect','distribution-meaning','先辨认四种不同对象')
+route('sampling-conclusion','assisted','return-recall','留下可再次提取的概念卡')
+route('sampling-conclusion','skipped','evidence-close','查看已经留下的真实记录')
+route('return-recall','incorrect','distribution-meaning','用一道判断题重新辨析')
+route('return-recall','assisted','mean-independent','另用计算题验证应用')
+
+# Deterministic, varied option positions prevent a uniform "first option" cue.
+choice_orders = {
+    'population-check': ['frame', 'target', 'measure'],
+    'census-sample': ['census', 'easy', 'sample'],
+    'statistic-check': ['deviation', 'samplemean', 'parameter'],
+    'distribution-meaning': ['all', 'sample', 'simulation'],
+}
+for activity in lesson['activities']:
+    if activity['id'] in choice_orders:
+        by_id = {choice['id']: choice for choice in activity['choices']}
+        activity['choices'] = [by_id[key] for key in choice_orders[activity['id']]]
+
+(ROOT/'lesson.json').write_text(json.dumps(lesson, ensure_ascii=False, indent=2) + '\n')
+(ROOT/'activity-map.json').write_text(json.dumps(activity_map, ensure_ascii=False, indent=2) + '\n')
+print(json.dumps({'activities': len(lesson['activities']), 'sections': len(lesson['sections']), 'objectives': len(lesson['objectives']), 'pathways': len(lesson['pathways'])}, ensure_ascii=False))

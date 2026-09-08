@@ -1,0 +1,1463 @@
+{
+  "html_sha256": "98b5e20e7ba17f01ae691f67b91050a493d3efad702020349acad50eea6e4392",
+  "tool": "jsdom actual final HTML; no browser rendering; Image fixture only final explorer suite",
+  "results": [
+    {
+      "id": "E01 mounts/no typing",
+      "status": "PASS",
+      "evidence": {
+        "mounted": 28,
+        "editable": [
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "E11 all actual local links resolve",
+      "status": "PASS",
+      "evidence": {
+        "links": 498
+      }
+    },
+    {
+      "id": "E06 no cross-component answer supplied",
+      "status": "FAIL",
+      "evidence": {
+        "before_any_action_mapping_rows": [
+          "AB",
+          "AC",
+          "BA",
+          "BC",
+          "CA",
+          "CB"
+        ],
+        "expected_complete_path_set": [
+          "AB",
+          "AC",
+          "BA",
+          "BC",
+          "CA",
+          "CB"
+        ],
+        "visible_instruction": "第 1 组 · 勾选完整允许路径集合AAABACBABBBCCACBCC第 2 组 · 为每条允许路径选择均值（分钟）即使第一组暂时漏选，仍把六行分别完成；最后才统一核对。AB → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟AC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BA → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟CA →"
+      }
+    },
+    {
+      "id": "E06 incomplete no submit",
+      "status": "PASS",
+      "evidence": "还没有完成四组：路径至少选一条，六行均值都要选择，概率依据与完整分布各选一项。暂未核对，也未生成提交记录。"
+    },
+    {
+      "id": "E06 draft not graded",
+      "status": "PASS",
+      "evidence": "还没有完成四组：路径至少选一条，六行均值都要选择，概率依据与完整分布各选一项。暂未核对，也未生成提交记录。"
+    },
+    {
+      "id": "E06 unified immutable first submit",
+      "status": "PASS",
+      "evidence": {
+        "id": "construction:1788845930380:0",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "4",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": false,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": false,
+          "feedback": false,
+          "referenceCoverage": [],
+          "revealedThrough": 0
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": false,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845930380
+      }
+    },
+    {
+      "id": "E08 retry assisted first unchanged",
+      "status": "PASS",
+      "evidence": {
+        "id": "construction:1788845930874:1",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "2",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": true,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": true,
+          "feedback": true,
+          "referenceCoverage": [
+            "construction-four-feedback"
+          ],
+          "revealedThrough": 0
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": true,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845930874
+      }
+    },
+    {
+      "id": "E03-05 equal repair and new numeric question",
+      "status": "PASS",
+      "evidence": {
+        "feedback": "本次作答需要修正不同均值的来路数量并不相同；需要把 AB 和 BA 两条路径的概率相加。",
+        "branch": "equal",
+        "lines": [
+          "repair1-object",
+          "repair1-preimage",
+          "repair1-sum",
+          "repair1-sub",
+          "repair1-one",
+          "repair1-count",
+          "repair-equal-pathset",
+          "repair-equal-first",
+          "repair-equal-second",
+          "repair-equal-rule",
+          "repair-equal-factors",
+          "repair-equal-fraction",
+          "repair-equal-numerator",
+          "repair-equal-weight",
+          "repair-equal-AA-sub",
+          "repair-equal-AA-add",
+          "repair-equal-AA-div",
+          "repair-equal-AB-sub",
+          "repair-equal-AB-add",
+          "repair-equal-AB-div",
+          "repair-equal-AC-sub",
+          "repair-equal-AC-add",
+          "repair-equal-AC-div",
+          "repair-equal-BA-sub",
+          "repair-equal-BA-add",
+          "repair-equal-BA-div",
+          "repair-equal-BB-sub",
+          "repair-equal-BB-add",
+          "repair-equal-BB-div",
+          "repair-equal-BC-sub",
+          "repair-equal-BC-add",
+          "repair-equal-BC-div",
+          "repair-equal-CA-sub",
+          "repair-equal-CA-add",
+          "repair-equal-CA-div",
+          "repair-equal-CB-sub",
+          "repair-equal-CB-add",
+          "repair-equal-CB-div",
+          "repair-equal-CC-sub",
+          "repair-equal-CC-add",
+          "repair-equal-CC-div",
+          "repair-equal-group-0-paths",
+          "repair-equal-group-0-events",
+          "repair-equal-group-0-sub",
+          "repair-equal-group-0",
+          "repair-equal-group-1-paths",
+          "repair-equal-group-1-events",
+          "repair-equal-group-1-sub",
+          "repair-equal-group-1-common",
+          "repair-equal-group-1-count",
+          "repair-equal-group-1",
+          "repair-equal-group-2-paths",
+          "repair-equal-group-2-events",
+          "repair-equal-group-2-sub",
+          "repair-equal-group-2-common",
+          "repair-equal-group-2-count",
+          "repair-equal-group-2",
+          "repair-equal-group-3-paths",
+          "repair-equal-group-3-events",
+          "repair-equal-group-3-sub",
+          "repair-equal-group-3-common",
+          "repair-equal-group-3-count",
+          "repair-equal-group-3",
+          "repair-equal-group-4-paths",
+          "repair-equal-group-4-events",
+          "repair-equal-group-4-sub",
+          "repair-equal-group-4",
+          "repair-equal-total-sub",
+          "repair-equal-total-common",
+          "repair-equal-total-one",
+          "repair-equal-total-sum",
+          "repair-equal-total",
+          "repair-equal-q-event-support",
+          "repair-equal-q-event-sum",
+          "repair-equal-q-event-sub",
+          "repair-equal-q-event-common",
+          "repair-equal-q-event-joined",
+          "repair-equal-q-event-num",
+          "repair-equal-q-event-answer"
+        ],
+        "newAttempt": {
+          "id": "repair-equal-q-answer:1788845931094:1",
+          "answer": "third",
+          "correct": true,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788845931094,
+          "sessionId": "session-1788845928367-w6sfzxsdjz"
+        },
+        "recommendations": []
+      }
+    },
+    {
+      "id": "E11 wrong has free reference main-equal",
+      "status": "PASS",
+      "evidence": {
+        "status": "submitted"
+      }
+    },
+    {
+      "id": "E03-05 reverse repair and new numeric question",
+      "status": "PASS",
+      "evidence": {
+        "feedback": "本次作答需要修正本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。记录顺序时BA仍是另一条允许输入。",
+        "branch": "reverse",
+        "lines": [
+          "repair2-records",
+          "repair2-ab-sub",
+          "repair2-ab-add",
+          "repair2-ab-div",
+          "repair2-ba-sub",
+          "repair2-ba-add",
+          "repair2-ba-div",
+          "repair2-conclusion",
+          "repair2-mass-sub",
+          "repair2-mass-common",
+          "repair2-mass",
+          "repair-reverse-pathset",
+          "repair-reverse-first",
+          "repair-reverse-second",
+          "repair-reverse-rule",
+          "repair-reverse-factors",
+          "repair-reverse-fraction",
+          "repair-reverse-numerator",
+          "repair-reverse-weight",
+          "repair-reverse-AA-sub",
+          "repair-reverse-AA-add",
+          "repair-reverse-AA-div",
+          "repair-reverse-AB-sub",
+          "repair-reverse-AB-add",
+          "repair-reverse-AB-div",
+          "repair-reverse-AC-sub",
+          "repair-reverse-AC-add",
+          "repair-reverse-AC-div",
+          "repair-reverse-BA-sub",
+          "repair-reverse-BA-add",
+          "repair-reverse-BA-div",
+          "repair-reverse-BB-sub",
+          "repair-reverse-BB-add",
+          "repair-reverse-BB-div",
+          "repair-reverse-BC-sub",
+          "repair-reverse-BC-add",
+          "repair-reverse-BC-div",
+          "repair-reverse-CA-sub",
+          "repair-reverse-CA-add",
+          "repair-reverse-CA-div",
+          "repair-reverse-CB-sub",
+          "repair-reverse-CB-add",
+          "repair-reverse-CB-div",
+          "repair-reverse-CC-sub",
+          "repair-reverse-CC-add",
+          "repair-reverse-CC-div",
+          "repair-reverse-group-0-paths",
+          "repair-reverse-group-0-events",
+          "repair-reverse-group-0-sub",
+          "repair-reverse-group-0",
+          "repair-reverse-group-1-paths",
+          "repair-reverse-group-1-events",
+          "repair-reverse-group-1-sub",
+          "repair-reverse-group-1-common",
+          "repair-reverse-group-1-count",
+          "repair-reverse-group-1",
+          "repair-reverse-group-2-paths",
+          "repair-reverse-group-2-events",
+          "repair-reverse-group-2-sub",
+          "repair-reverse-group-2",
+          "repair-reverse-group-3-paths",
+          "repair-reverse-group-3-events",
+          "repair-reverse-group-3-sub",
+          "repair-reverse-group-3-common",
+          "repair-reverse-group-3-count",
+          "repair-reverse-group-3",
+          "repair-reverse-group-4-paths",
+          "repair-reverse-group-4-events",
+          "repair-reverse-group-4-sub",
+          "repair-reverse-group-4-common",
+          "repair-reverse-group-4-count",
+          "repair-reverse-group-4",
+          "repair-reverse-group-5-paths",
+          "repair-reverse-group-5-events",
+          "repair-reverse-group-5-sub",
+          "repair-reverse-group-5",
+          "repair-reverse-total-sub",
+          "repair-reverse-total-common",
+          "repair-reverse-total-one",
+          "repair-reverse-total-sum",
+          "repair-reverse-total",
+          "repair-reverse-q-event-support",
+          "repair-reverse-q-event-sum",
+          "repair-reverse-q-event-sub",
+          "repair-reverse-q-event-common",
+          "repair-reverse-q-event-joined",
+          "repair-reverse-q-event-num",
+          "repair-reverse-q-event-answer"
+        ],
+        "newAttempt": {
+          "id": "repair-reverse-q-answer:1788845931320:1",
+          "answer": "two",
+          "correct": true,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788845931320,
+          "sessionId": "session-1788845928367-w6sfzxsdjz"
+        },
+        "recommendations": []
+      }
+    },
+    {
+      "id": "E11 wrong has free reference main-reverse",
+      "status": "PASS",
+      "evidence": {
+        "status": "submitted"
+      }
+    },
+    {
+      "id": "E03-05 weight repair and new numeric question",
+      "status": "PASS",
+      "evidence": {
+        "feedback": "本次作答需要修正第一抽后剩两个身份，条件概率的分母需要重算。",
+        "branch": "weight",
+        "lines": [
+          "repair3-first",
+          "repair3-remaining",
+          "repair3-second",
+          "repair3-rule",
+          "repair3-sub",
+          "repair3-product",
+          "repair3-numerator",
+          "repair3-answer",
+          "repair3-total-sub",
+          "repair3-total-fraction",
+          "repair3-total",
+          "repair-weight-pathset",
+          "repair-weight-first",
+          "repair-weight-second",
+          "repair-weight-rule",
+          "repair-weight-factors",
+          "repair-weight-fraction",
+          "repair-weight-numerator",
+          "repair-weight-weight",
+          "repair-weight-diagonal",
+          "repair-weight-AB-sub",
+          "repair-weight-AB-add",
+          "repair-weight-AB-div",
+          "repair-weight-AC-sub",
+          "repair-weight-AC-add",
+          "repair-weight-AC-div",
+          "repair-weight-BA-sub",
+          "repair-weight-BA-add",
+          "repair-weight-BA-div",
+          "repair-weight-BC-sub",
+          "repair-weight-BC-add",
+          "repair-weight-BC-div",
+          "repair-weight-CA-sub",
+          "repair-weight-CA-add",
+          "repair-weight-CA-div",
+          "repair-weight-CB-sub",
+          "repair-weight-CB-add",
+          "repair-weight-CB-div",
+          "repair-weight-group-0-paths",
+          "repair-weight-group-0-events",
+          "repair-weight-group-0-sub",
+          "repair-weight-group-0-common",
+          "repair-weight-group-0-count",
+          "repair-weight-group-0",
+          "repair-weight-group-1-paths",
+          "repair-weight-group-1-events",
+          "repair-weight-group-1-sub",
+          "repair-weight-group-1-common",
+          "repair-weight-group-1-count",
+          "repair-weight-group-1",
+          "repair-weight-group-2-paths",
+          "repair-weight-group-2-events",
+          "repair-weight-group-2-sub",
+          "repair-weight-group-2-common",
+          "repair-weight-group-2-count",
+          "repair-weight-group-2",
+          "repair-weight-total-sub",
+          "repair-weight-total-common",
+          "repair-weight-total-one",
+          "repair-weight-total-sum",
+          "repair-weight-total",
+          "repair-weight-q-event-support",
+          "repair-weight-q-event-sum",
+          "repair-weight-q-event-sub",
+          "repair-weight-q-event-common",
+          "repair-weight-q-event-joined",
+          "repair-weight-q-event-num",
+          "repair-weight-q-event-answer"
+        ],
+        "newAttempt": {
+          "id": "repair-weight-q-answer:1788845931578:1",
+          "answer": "third",
+          "correct": true,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788845931578,
+          "sessionId": "session-1788845928367-w6sfzxsdjz"
+        },
+        "recommendations": []
+      }
+    },
+    {
+      "id": "E11 wrong has free reference main-weight",
+      "status": "PASS",
+      "evidence": {
+        "status": "submitted"
+      }
+    },
+    {
+      "id": "E04 equal count wrong membership rejected",
+      "status": "PASS",
+      "evidence": {
+        "submission": {
+          "id": "preimage:1788845931778:0",
+          "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+          "answers": {
+            "paths": [
+              "AB",
+              "AC",
+              "BB"
+            ]
+          },
+          "assistedAtSubmit": false,
+          "assistanceSnapshot": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "componentChecks": {
+            "paths": false
+          },
+          "evidence": "component-check-only"
+        },
+        "feedback": "原像组件核对：本次选择需要修正。原始选择：AB、AC、BB。全部来路为 AC、BB、CA。它们的均值均为4；三条路径各自的代入、相加与相除保留在对应书面推导中。提交前未记录该条件参考；本次仍只核对原像组件。查看逐项归组证明"
+      }
+    },
+    {
+      "id": "E04 exact set corrected with assistance",
+      "status": "PASS",
+      "evidence": {
+        "id": "preimage:1788845931985:1",
+        "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+        "answers": {
+          "paths": [
+            "AC",
+            "BB",
+            "CA"
+          ]
+        },
+        "assistedAtSubmit": true,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": true,
+          "feedback": true,
+          "referenceCoverage": [
+            "preimage-four-feedback"
+          ],
+          "revealedThrough": 0
+        },
+        "componentChecks": {
+          "paths": true
+        },
+        "evidence": "component-check-only"
+      }
+    },
+    {
+      "id": "E10 hint/flip self evidence",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "final-recall:1788845932109:1",
+          "answer": "自评：翻面前已回忆",
+          "correct": true,
+          "source": "self",
+          "assisted": true,
+          "time": 1788845932109,
+          "sessionId": "session-1788845928367-w6sfzxsdjz",
+          "cardIndex": 0
+        },
+        "face": "参考背面先固定抽法和身份顺序；列全允许路径；用条件概率求路径权重；每条代入均值；按相同输出收集全部路径并累加概率；列全分布及其余值0，检查无遗漏重计和总概率1。点击或按回车翻面"
+      }
+    },
+    {
+      "id": "E12 closing return starts real recall",
+      "status": "FAIL",
+      "evidence": {
+        "current": "final-recall",
+        "face": "参考背面先固定抽法和身份顺序；列全允许路径；用条件概率求路径权重；每条代入均值；按相同输出收集全部路径并累加概率；列全分布及其余值0，检查无遗漏重计和总概率1。点击或按回车翻面"
+      }
+    },
+    {
+      "id": "E10 can next card",
+      "status": "PASS",
+      "evidence": 1
+    },
+    {
+      "id": "E12 closing answers initial event probability",
+      "status": "FAIL",
+      "evidence": "当前记录：无辅助且正确的客观选择 3 次；闪卡自评 1 次；带辅助的作答/自评 2 次；Q3完整构造组件核对 2 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。"
+    },
+    {
+      "id": "E07 immediate all-reference submit",
+      "status": "PASS",
+      "evidence": {
+        "id": "construction:1788845940381:0",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "2",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": true,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": true,
+          "feedback": false,
+          "referenceCoverage": [
+            "all-reference",
+            "q3-a-solution",
+            "q3-b-solution",
+            "q3-c-solution",
+            "q3-d-solution"
+          ],
+          "revealedThrough": 3
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": true,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845940381
+      }
+    },
+    {
+      "id": "E09 old import retains first and contact",
+      "status": "PASS",
+      "evidence": {
+        "schemaVersion": 1,
+        "componentId": "construction-four",
+        "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+        "contacts": {
+          "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": true,
+            "feedback": true,
+            "referenceCoverage": [
+              "all-reference",
+              "q3-a-solution",
+              "q3-b-solution",
+              "q3-c-solution",
+              "q3-d-solution",
+              "construction-four-feedback"
+            ],
+            "revealedThrough": 3
+          },
+          "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          }
+        },
+        "selection": {},
+        "submissions": [
+          {
+            "id": "construction:1788845940381:0",
+            "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+            "answers": {
+              "paths": [
+                "AB",
+                "AC",
+                "BA",
+                "BC",
+                "CA",
+                "CB"
+              ],
+              "mapping": {
+                "AB": "2",
+                "AC": "5",
+                "BA": "2",
+                "BC": "7",
+                "CA": "5",
+                "CB": "7"
+              },
+              "probabilityReason": "remaining",
+              "distribution": "thirds"
+            },
+            "assistedAtSubmit": true,
+            "assistanceSnapshot": {
+              "hint": false,
+              "reference": true,
+              "feedback": false,
+              "referenceCoverage": [
+                "all-reference",
+                "q3-a-solution",
+                "q3-b-solution",
+                "q3-c-solution",
+                "q3-d-solution"
+              ],
+              "revealedThrough": 3
+            },
+            "componentChecks": {
+              "paths": true,
+              "mapping": true,
+              "probability": true,
+              "distribution": true
+            },
+            "evidence": "component-check-only",
+            "submittedAt": 1788845940381
+          }
+        ],
+        "locked": false,
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "currentFrame": null,
+        "selectedPath": null,
+        "stage": "paths"
+      }
+    },
+    {
+      "id": "E09 actual saved envelope reload",
+      "status": "PASS",
+      "evidence": {
+        "submissions": [
+          {
+            "id": "construction:1788845940381:0",
+            "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+            "answers": {
+              "paths": [
+                "AB",
+                "AC",
+                "BA",
+                "BC",
+                "CA",
+                "CB"
+              ],
+              "mapping": {
+                "AB": "2",
+                "AC": "5",
+                "BA": "2",
+                "BC": "7",
+                "CA": "5",
+                "CB": "7"
+              },
+              "probabilityReason": "remaining",
+              "distribution": "thirds"
+            },
+            "assistedAtSubmit": true,
+            "assistanceSnapshot": {
+              "hint": false,
+              "reference": true,
+              "feedback": false,
+              "referenceCoverage": [
+                "all-reference",
+                "q3-a-solution",
+                "q3-b-solution",
+                "q3-c-solution",
+                "q3-d-solution"
+              ],
+              "revealedThrough": 3
+            },
+            "componentChecks": {
+              "paths": true,
+              "mapping": true,
+              "probability": true,
+              "distribution": true
+            },
+            "evidence": "component-check-only",
+            "submittedAt": 1788845940381
+          }
+        ]
+      }
+    },
+    {
+      "id": "E07 reference remains on retry",
+      "status": "PASS",
+      "evidence": {
+        "id": "construction:1788845945434:1",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "2",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": true,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": true,
+          "feedback": true,
+          "referenceCoverage": [
+            "all-reference",
+            "q3-a-solution",
+            "q3-b-solution",
+            "q3-c-solution",
+            "q3-d-solution",
+            "construction-four-feedback"
+          ],
+          "revealedThrough": 3
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": true,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845945434
+      }
+    },
+    {
+      "id": "E08 first hint marked",
+      "status": "PASS",
+      "evidence": {
+        "id": "construction:1788845949235:0",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "2",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": true,
+        "assistanceSnapshot": {
+          "hint": true,
+          "reference": false,
+          "feedback": false,
+          "referenceCoverage": [
+            "construction-route-hint"
+          ],
+          "revealedThrough": 0
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": true,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845949235
+      }
+    },
+    {
+      "id": "E08 other conditions not falsely tainted",
+      "status": "PASS",
+      "evidence": {
+        "id": "q2-a-answer:1788845949317:1",
+        "answer": "six",
+        "correct": true,
+        "source": "objective",
+        "assisted": false,
+        "time": 1788845949317,
+        "sessionId": "session-1788845947513-ewv85lxsdso"
+      }
+    },
+    {
+      "id": "E12 correct outcome has actual next recommendation",
+      "status": "FAIL",
+      "evidence": []
+    },
+    {
+      "id": "E07 immediate native choice reference",
+      "status": "PASS",
+      "evidence": {
+        "id": "q2-c-answer:1788845949398:1",
+        "answer": "given",
+        "correct": true,
+        "source": "objective",
+        "assisted": true,
+        "time": 1788845949398,
+        "sessionId": "session-1788845947513-ewv85lxsdso"
+      }
+    },
+    {
+      "id": "E11 skip no incorrect attempt",
+      "status": "PASS",
+      "evidence": "skipped"
+    },
+    {
+      "id": "E11 skip exposes all proofs",
+      "status": "PASS",
+      "evidence": 1
+    },
+    {
+      "id": "E02 selected and reverse frame identities",
+      "status": "PASS",
+      "evidence": [
+        {
+          "state": {
+            "schemaVersion": 1,
+            "componentId": "sampling-explorer",
+            "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+            "contacts": {
+              "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 2
+              },
+              "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              }
+            },
+            "selection": {},
+            "submissions": [],
+            "locked": false,
+            "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+            "currentFrame": "main-wr-AC-mapping",
+            "selectedPath": "AC",
+            "stage": "mapping"
+          },
+          "formula": "<div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>+</mo><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>代入当前路径的两次观测。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>8</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>只把分子相加。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>4</mn></mrow></math><p>总和除以样本量2，单位天。</p></div>",
+          "target": "下一步把这条允许路径送入同一个统计量规则。",
+          "line": "#main-wr-AC-sub"
+        },
+        {
+          "state": {
+            "schemaVersion": 1,
+            "componentId": "sampling-explorer",
+            "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+            "contacts": {
+              "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 2
+              },
+              "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              }
+            },
+            "selection": {},
+            "submissions": [],
+            "locked": false,
+            "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+            "currentFrame": "main-wr-CA-mapping",
+            "selectedPath": "CA",
+            "stage": "mapping"
+          },
+          "formula": "<div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>6</mn><mo>+</mo><mn>2</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>代入当前路径的两次观测。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>8</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>只把分子相加。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>4</mn></mrow></math><p>总和除以样本量2，单位天。</p></div>",
+          "target": "下一步把这条允许路径送入同一个统计量规则。",
+          "line": "#main-wr-CA-sub"
+        },
+        {
+          "state": {
+            "schemaVersion": 1,
+            "componentId": "sampling-explorer",
+            "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+            "contacts": {
+              "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 2
+              },
+              "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              }
+            },
+            "selection": {},
+            "submissions": [],
+            "locked": false,
+            "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+            "currentFrame": "main-wr-AB-mapping",
+            "selectedPath": "AB",
+            "stage": "mapping"
+          },
+          "formula": "<div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>+</mo><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>代入当前路径的两次观测。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>只把分子相加。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>3</mn></mrow></math><p>总和除以样本量2，单位天。</p></div>",
+          "target": "下一步把这条允许路径送入同一个统计量规则。",
+          "line": "#main-wr-AB-sub"
+        }
+      ]
+    },
+    {
+      "id": "E02 group view then back retains coverage",
+      "status": "PASS",
+      "evidence": {
+        "target": "当前目标：T=3；完整原像 AB, BA。此组概率：P(T=3)=29。对应柱子在图中使用青色突出。",
+        "state": {
+          "schemaVersion": 1,
+          "componentId": "sampling-explorer",
+          "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+          "contacts": {
+            "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": true,
+              "feedback": false,
+              "referenceCoverage": [
+                "main-wr-distribution-solution"
+              ],
+              "revealedThrough": 3
+            },
+            "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            }
+          },
+          "selection": {},
+          "submissions": [],
+          "locked": false,
+          "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+          "currentFrame": "main-wr-AB-paths",
+          "selectedPath": "AB",
+          "stage": "paths"
+        }
+      }
+    },
+    {
+      "id": "E05 NR disabled identity diagonals and reweighted group",
+      "status": "PASS",
+      "evidence": {
+        "state": {
+          "schemaVersion": 1,
+          "componentId": "sampling-explorer",
+          "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+          "contacts": {
+            "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": true,
+              "feedback": false,
+              "referenceCoverage": [
+                "main-wr-distribution-solution"
+              ],
+              "revealedThrough": 3
+            },
+            "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": true,
+              "feedback": false,
+              "referenceCoverage": [
+                "main-nr-distribution-solution"
+              ],
+              "revealedThrough": 3
+            },
+            "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            }
+          },
+          "selection": {},
+          "submissions": [],
+          "locked": false,
+          "conditionKey": "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean",
+          "currentFrame": "main-nr-AB-grouping",
+          "selectedPath": "AB",
+          "stage": "grouping"
+        },
+        "formula": "<div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>+</mo><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>代入当前路径的两次观测。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><p>只把分子相加。</p></div><div class=\"proof-line\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>3</mn></mrow></math><p>总和除以样本量2，单位天。</p></div>",
+        "target": "<p>当前目标：<math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>3</mn></mrow></math>；完整原像 AB, BA。</p><p>此组概率：<math xmlns=\"http://www.w3.org/1998/Math/MathML\" displaystyle=\"true\"><mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>3</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>。对应柱子在图中使用青色突出。</p>",
+        "line": "#main-nr-group-0"
+      }
+    },
+    {
+      "id": "runtime uncaught errors",
+      "status": "PASS",
+      "evidence": []
+    }
+  ]
+}

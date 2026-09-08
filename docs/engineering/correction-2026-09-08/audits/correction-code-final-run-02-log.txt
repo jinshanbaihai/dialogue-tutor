@@ -1,0 +1,37 @@
+START baseline-and-incomplete
+DONE baseline-and-incomplete checks=16
+START construction-two-conditions
+DONE construction-two-conditions checks=27
+START reopen-history
+DONE reopen-history checks=30
+START same-queue-summary
+DONE same-queue-summary checks=36
+START reopen-same-queue
+DONE reopen-same-queue checks=40
+START native-file-boundaries
+DONE native-file-boundaries checks=43
+START reopen-file-boundaries
+DONE reopen-file-boundaries checks=45
+START reject-invalid-components
+DONE reject-invalid-components checks=55
+START reopen-rejected-contact
+DONE reopen-rejected-contact checks=57
+START viewport-and-condition-freeze
+DONE viewport-and-condition-freeze checks=65
+START all-media-requests
+DONE all-media-requests checks=116
+START media-races-and-navigation
+DONE media-races-and-navigation checks=135
+START all-native-learning-controls
+DONE all-native-learning-controls checks=154
+START storage-blocked
+DONE storage-blocked checks=156
+{
+  "checks": 156,
+  "passed": 154,
+  "failed": [
+    "construction/reject-blank-before-freeze",
+    "construction/reject-missing-map-weight-distribution"
+  ],
+  "scenarios": 14
+}

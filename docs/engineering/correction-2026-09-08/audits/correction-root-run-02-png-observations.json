@@ -1,0 +1,37 @@
+{
+  "scope": "Root inspected two actual PNG contact sheets, six main panels plus four additional distributions, at the provided 300px panel width. This is not all51-frame expert approval or browser layout verification.",
+  "manifestSHA256": "a0ab742f57cb68d3e4c2816645c7b800b5db9084cfd125205894c1b3a658b8d5",
+  "sceneSHA256": "daa7cf736a3b575bd887231abff0362e56bc48753dcee627fd23711d8fef8a6f",
+  "all51PNGHashesMatch": true,
+  "viewed": [
+    {
+      "path": "media/qa/phone-contact-sheet.png",
+      "sha256": "7979b4eb8d8ad37b9c610a241be5e79c902fb2ebda3ea2e69f74713978818bac"
+    },
+    {
+      "path": "media/qa/additional-phone-contact-sheet.png",
+      "sha256": "f514c48477acb6bcd225f12ad1a76e17f786588b98593fe11522cdc89f6fab54"
+    }
+  ],
+  "observations": [
+    "Ordered identity matrices distinguish first/second positions; forbidden diagonal is visibly crossed for no replacement.",
+    "AB and BB mapping panels preserve blue/purple observation values, dark intermediate sum/denominator, and teal final statistic.",
+    "Selected probability column and its preimage are linked visibly; main no-replacement endpoints have explicit zero markers.",
+    "Task pair shares probability scale up to2/3 and matches independently computed weights; additional maximum panels show correct finite distributions."
+  ],
+  "notVerified": [
+    "all51 individual panels by root",
+    "real viewport/padding",
+    "native MathML/browser text",
+    "image decode and dynamic state"
+  ],
+  "revisedBatchRootObservation": {
+    "manifestSHA256": "1a5f49abe96909c1b1f769cee2e54416ebcd1966bd4827c6a902ee276346b53d",
+    "viewed": [
+      "reviews/frame-probes-run-02-recheck/sheet-1.png",
+      "reviews/frame-probes-run-02-recheck/sheet-2.png"
+    ],
+    "panelsViewed": 7,
+    "observation": "Seven actual revised WO path PNGs at 326px panels: identity exclusion diagonal, row/column observation-role colours and visible footer verified; no clipped footer seen. Not browser layout verification. All 51 PNG and 4 metadata files independently rehashed against final-hashes.json without differences."
+  }
+}

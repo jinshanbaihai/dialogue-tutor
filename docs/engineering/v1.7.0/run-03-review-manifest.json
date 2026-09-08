@@ -1,0 +1,81 @@
+{
+  "recordedAt": "2026-09-08T03:46:55.570454+00:00",
+  "files": {
+    "color-html-run-03.md": {
+      "sha256": "5c494da2437abd72761217c0905e714d01a006a392de8340fe74ef453c716608",
+      "bytes": 6146
+    },
+    "education-html-run-03.md": {
+      "sha256": "8c39006a699aeb50949b7622966218a0813e8478ff9ff766028290b5d7ba5694",
+      "bytes": 19652
+    },
+    "education-html-run03-math.json": {
+      "sha256": "4134f3ef7d7a419355aa92d53b04f7c6af79d51e2da4d02d0a3996691150b73e",
+      "bytes": 9884
+    },
+    "education-html-run03-math.py": {
+      "sha256": "f42a507a9fd590a35ad580eccc8635df08a38dfbcf059bc0996ffc45c26498c7",
+      "bytes": 3379
+    },
+    "education-html-run03-probe.cjs": {
+      "sha256": "395098551af88b07a8f7e737f1c1e5846030b7119b4f8cfd52831a0cb84b7cd9",
+      "bytes": 21803
+    },
+    "education-html-run03-probe.json": {
+      "sha256": "8d3b0967f0b1b1f03b8027bc01bc5768a9483049eba3f479f865c04cb04f1a81",
+      "bytes": 98228
+    },
+    "education-html-run03-reference-closed-immediate.json": {
+      "sha256": "d62f6f152dddb50904a248320dfc798cdb23deba2f9d9577aeb4423fe808a42a",
+      "bytes": 6921
+    },
+    "education-html-run03-reference-open-immediate.json": {
+      "sha256": "be6c752c03791dcf7482e5132ecca07baa4946c203ce60451c84d855e8f70fc1",
+      "bytes": 6919
+    },
+    "education-html-run03-result-immediate.json": {
+      "sha256": "f93b88dfe9365e8ed9e2308a8f9aab7ee441ea1d0afcdb4263499441bdb1ed91",
+      "bytes": 7657
+    },
+    "game-html-run-03-probe.cjs": {
+      "sha256": "3de7d5aaaf3fc6d0d279cd31a64497dab9e66fbb9c8eb75f3ac0e9fbf944bdd8",
+      "bytes": 28453
+    },
+    "game-html-run-03-transcript.json": {
+      "sha256": "a6635392a52e0d3455adc624e736871caf5456d9ce0ab567530d6c48571e7438",
+      "bytes": 112526
+    },
+    "game-html-run-03.md": {
+      "sha256": "a1ee347a6ab2bc11e46bfb532ffae5e0577435331bbb159b052ca144eadd0a09",
+      "bytes": 15044
+    },
+    "narrative-dom-run-03.cjs": {
+      "sha256": "f851e93c0a74921be2507ca444f8ccb854abbd57b2b563d2ac4e706903cad66c",
+      "bytes": 15290
+    },
+    "narrative-dom-run-03.json": {
+      "sha256": "ac878175fe4774cafb3a2acc39467f6ace80867a31fb9450faf4cf5709d4a7cc",
+      "bytes": 29454
+    },
+    "narrative-html-run-03.md": {
+      "sha256": "1b5ac3cdee4c3c48e8a83dcddea5b6a6b436c0d1c39c968c19faef0b6d268434",
+      "bytes": 7575
+    },
+    "root-math-run-03.json": {
+      "sha256": "90f48abe529e8d790b9ebd49e101801dfa1c290b82aee0cb0c7a873d31343514",
+      "bytes": 9628
+    },
+    "root-math-run-03.py": {
+      "sha256": "0fa2d22162e5c4a738ebe494950fc560737c2856d5087540d431e76b70a71cbd",
+      "bytes": 2976
+    },
+    "run-03-math-oracle.json": {
+      "sha256": "fa9f79137d5b46f17eb3165643a156277979a327b954c91257d403013503e6f5",
+      "bytes": 7231
+    },
+    "run-03-math-oracle.py": {
+      "sha256": "39d5b47d4531c4b8932aefa165b1ef790c53deb8aafed4f614e03e8524a84c9b",
+      "bytes": 2553
+    }
+  }
+}

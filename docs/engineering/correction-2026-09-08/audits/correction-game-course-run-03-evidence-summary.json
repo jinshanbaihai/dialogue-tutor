@@ -1,0 +1,17 @@
+{
+  "htmlSHA": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "scope": "independent final frozen whole-course game/engagement DOM review; no browser or human learning claim",
+  "files": [
+    "correction-game-course-run-03-components-results.json",
+    "correction-game-course-run-03-closing-results.json",
+    "correction-game-course-run-03-native-results.json"
+  ],
+  "scenes": 48,
+  "assertions": 520,
+  "failed": 0,
+  "errors": 0,
+  "C": 0,
+  "I": 0,
+  "M": 0,
+  "decision": "approve within game/engagement scope"
+}

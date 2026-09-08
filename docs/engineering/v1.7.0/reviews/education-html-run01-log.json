@@ -1,0 +1,500 @@
+{
+  "artifact": "ial-s2-ch6-sampling-studio-original",
+  "revision": "1.7.0-run01-1",
+  "method": "Independent jsdom operations; controlled time/random where noted; no learner outcome claims",
+  "observations": [
+    {
+      "name": "cold-start",
+      "input": {
+        "activityId": "sampling-lab"
+      },
+      "observation": {
+        "visible": [
+          "sampling-lab"
+        ],
+        "resultsHidden": true,
+        "allFullExplanationsClosed": true,
+        "chartCount": 0
+      }
+    },
+    {
+      "name": "incorrect-prediction-freeze",
+      "input": {
+        "activityId": "sampling-lab",
+        "prediction": "equal",
+        "attemptedOverwrite": "centre"
+      },
+      "observation": {
+        "original": "equal",
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断不同。先在“定位一个有序样本”中比较能得到3和1的路径，再数同值路径。",
+        "table": "111/9尚未模拟222/9尚未模拟331/3尚未模拟422/9尚未模拟511/9尚未模拟"
+      }
+    },
+    {
+      "name": "one-sample-one-statistic",
+      "input": {
+        "activityId": "sampling-lab",
+        "selectedPath": 2,
+        "controlledRandom": 0.9
+      },
+      "observation": {
+        "manualTrace": "枚举定位（非随机）：(1 + 5) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+        "B": 1,
+        "last": "最近一份随机样本：C=5，C=5；均值=5 分钟；这一份为相应频数加1。",
+        "counts": {
+          "10": 1
+        }
+      }
+    },
+    {
+      "name": "correct-prediction-and-history",
+      "input": {
+        "activityId": "sampling-lab",
+        "n": 1,
+        "prediction": "equal"
+      },
+      "observation": {
+        "history": [
+          {
+            "prediction": "equal",
+            "n": 2
+          }
+        ],
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/3。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。"
+      }
+    },
+    {
+      "name": "export-import-reload",
+      "input": {
+        "activityId": "sampling-lab"
+      },
+      "observation": {
+        "imported": {
+          "version": 1,
+          "phase": "revealed",
+          "parameters": {
+            "n": 2,
+            "replacement": true
+          },
+          "predictionDraft": "equal",
+          "prediction": "equal",
+          "predictionAt": 1788739200000,
+          "predictionHadReference": false,
+          "revealedAt": 1788739200000,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [],
+          "simulation": {
+            "B": 1,
+            "counts": {
+              "10": 1
+            },
+            "last": {
+              "sample": [
+                2,
+                2
+              ],
+              "sum": 10
+            }
+          },
+          "selectedPath": 2
+        },
+        "reloaded": {
+          "version": 1,
+          "phase": "revealed",
+          "parameters": {
+            "n": 2,
+            "replacement": true
+          },
+          "predictionDraft": "equal",
+          "prediction": "equal",
+          "predictionAt": 1788739200000,
+          "predictionHadReference": false,
+          "revealedAt": 1788739200000,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [],
+          "simulation": {
+            "B": 1,
+            "counts": {
+              "10": 1
+            },
+            "last": {
+              "sample": [
+                2,
+                2
+              ],
+              "sum": 10
+            }
+          },
+          "selectedPath": 2
+        }
+      }
+    },
+    {
+      "name": "reference-before-import",
+      "input": {
+        "activityId": "sampling-lab",
+        "action": "open complete explanation"
+      },
+      "observation": {
+        "widget": true,
+        "runtimeExposure": {
+          "sessionId": "session-1788739200000-so5bf9h4xw",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788739200000,
+          "inferred": false
+        },
+        "open": true
+      }
+    },
+    {
+      "name": "older-import-after-reference",
+      "input": {
+        "activityId": "sampling-lab",
+        "action": "import own earlier no-reference envelope, then freeze centre"
+      },
+      "observation": {
+        "widget": false,
+        "predictionHadReference": false,
+        "runtimeExposure": {
+          "sessionId": "session-1788739200000-so5bf9h4xw",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788739200000,
+          "inferred": false
+        },
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。",
+        "referenceText": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+        "solutionStillOpen": true
+      }
+    },
+    {
+      "name": "completion-incorrect",
+      "input": {
+        "activityId": "mean-completion",
+        "answer": "1/9",
+        "hint": false,
+        "skip": false
+      },
+      "observation": {
+        "attempts": [
+          {
+            "id": "mean-completion:1788739200000:1",
+            "answer": "1/9",
+            "correct": false,
+            "source": "objective",
+            "assisted": false,
+            "time": 1788739200000,
+            "sessionId": "session-1788739200000-vvcwfv8zh5t"
+          }
+        ],
+        "recommendations": [
+          {
+            "from": "mean-completion",
+            "on": "incorrect",
+            "to": "mean-worked",
+            "label": "重看不同顺序怎样合并",
+            "targetTitle": "从四条路径到一张分布表"
+          }
+        ],
+        "arrived": [
+          "mean-worked"
+        ],
+        "feedback": "就地自测补全一次归组概率三张不同卡片写着1、3、4分钟。每次均匀抽一张，放回后独立再抽，n=2。已知9个有序样本等可能，每条概率1/9。请补上P(X̄=3.5)。输入精确分数或误差不超过0.000001的小数，不写单位。填写数值，可使用小数或简单分数提交作答本次作答需要修正参考与解析29X̄=3.5要求两次之和7，符合(3,4)与(4,3)，两条互斥路径合并得到2/9。若结果不同，核对是否同时保留两个顺序。重新作答本题复习：2026年9月7日本次核对需要修正，可以先完成：重看不同顺序怎样合并 → 从四条路径到一张分布表学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n显式提交与反馈；课程题面原创本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "name": "completion-assisted",
+      "input": {
+        "activityId": "mean-completion",
+        "answer": "2/9",
+        "hint": true,
+        "skip": false
+      },
+      "observation": {
+        "attempts": [
+          {
+            "id": "mean-completion:1788739200000:1",
+            "answer": "2/9",
+            "correct": true,
+            "source": "objective",
+            "assisted": true,
+            "time": 1788739200000,
+            "sessionId": "session-1788739200000-rxovvi7temm"
+          }
+        ],
+        "recommendations": [
+          {
+            "from": "mean-completion",
+            "on": "assisted",
+            "to": "mean-independent",
+            "label": "换数据独立算事件概率",
+            "targetTitle": "独立新题：达到门槛的概率"
+          }
+        ],
+        "arrived": [
+          "mean-independent"
+        ],
+        "feedback": "就地自测补全一次归组概率三张不同卡片写着1、3、4分钟。每次均匀抽一张，放回后独立再抽，n=2。已知9个有序样本等可能，每条概率1/9。请补上P(X̄=3.5)。输入精确分数或误差不超过0.000001的小数，不写单位。填写数值，可使用小数或简单分数提交作答参考辅助后核对通过本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。先把均值3.5换成两次观测之和7，再列出两个顺序。参考与解析29X̄=3.5要求两次之和7，符合(3,4)与(4,3)，两条互斥路径合并得到2/9。若结果不同，核对是否同时保留两个顺序。重新作答本题复习：2026年9月7日已使用提示或参考，建议再试一项：换数据独立算事件概率 → 独立新题：达到门槛的概率学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n显式提交与反馈；课程题面原创数值或选项核对通过。"
+      }
+    },
+    {
+      "name": "completion-correct",
+      "input": {
+        "activityId": "mean-completion",
+        "answer": "2/9",
+        "hint": false,
+        "skip": false
+      },
+      "observation": {
+        "attempts": [
+          {
+            "id": "mean-completion:1788739200000:1",
+            "answer": "2/9",
+            "correct": true,
+            "source": "objective",
+            "assisted": false,
+            "time": 1788739200000,
+            "sessionId": "session-1788739200000-1t89yxy4gx6"
+          }
+        ],
+        "recommendations": [
+          {
+            "from": "mean-completion",
+            "on": "correct",
+            "to": "mean-independent",
+            "label": "独立组织一个门槛事件",
+            "targetTitle": "独立新题：达到门槛的概率"
+          }
+        ],
+        "arrived": [
+          "mean-independent"
+        ],
+        "feedback": "就地自测补全一次归组概率三张不同卡片写着1、3、4分钟。每次均匀抽一张，放回后独立再抽，n=2。已知9个有序样本等可能，每条概率1/9。请补上P(X̄=3.5)。输入精确分数或误差不超过0.000001的小数，不写单位。填写数值，可使用小数或简单分数提交作答独立作答核对通过参考与解析29X̄=3.5要求两次之和7，符合(3,4)与(4,3)，两条互斥路径合并得到2/9。若结果不同，核对是否同时保留两个顺序。重新作答本题复习：2026年9月7日本次独立核对通过，可以继续挑战：独立组织一个门槛事件 → 独立新题：达到门槛的概率学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n显式提交与反馈；课程题面原创数值或选项核对通过。"
+      }
+    },
+    {
+      "name": "completion-skipped",
+      "input": {
+        "activityId": "mean-completion",
+        "answer": null,
+        "hint": false,
+        "skip": true
+      },
+      "observation": {
+        "attempts": [],
+        "recommendations": [
+          {
+            "from": "mean-completion",
+            "on": "skipped",
+            "to": "mean-worked",
+            "label": "先看四条路径的例题",
+            "targetTitle": "从四条路径到一张分布表"
+          }
+        ],
+        "arrived": [
+          "mean-worked"
+        ],
+        "feedback": "就地自测补全一次归组概率三张不同卡片写着1、3、4分钟。每次均匀抽一张，放回后独立再抽，n=2。已知9个有序样本等可能，每条概率1/9。请补上P(X̄=3.5)。输入精确分数或误差不超过0.000001的小数，不写单位。填写数值，可使用小数或简单分数提交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答已暂时跳过；需要铺垫时可以先做：先看四条路径的例题 → 从四条路径到一张分布表学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n显式提交与反馈；课程题面原创已跳过，没有计入答错。"
+      }
+    },
+    {
+      "name": "worked-completion-independent-transfer",
+      "input": {
+        "activities": [
+          "mean-worked",
+          "mean-completion",
+          "mean-independent",
+          "max-distribution",
+          "mechanism-transfer",
+          "repeated-values"
+        ]
+      },
+      "observation": {
+        "workedAttempts": [],
+        "attempts": {
+          "mean-completion": [
+            {
+              "id": "mean-completion:1788739200000:1",
+              "answer": "2/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-uo0ein6fw0q"
+            }
+          ],
+          "mean-independent": [
+            {
+              "id": "mean-independent:1788739200000:1",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-uo0ein6fw0q"
+            }
+          ],
+          "max-distribution": [
+            {
+              "id": "max-distribution:1788739200000:1",
+              "answer": "T=1:1/9; T=3:1/3; T=7:5/9. Nine ordered pairs each have probability 1/9; group by maximum, or subtract cumulative probabilities; total=1.",
+              "correct": true,
+              "source": "self",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-uo0ein6fw0q",
+              "selfRating": "meets-rubric",
+              "assessedAt": 1788739200000
+            }
+          ],
+          "mechanism-transfer": [
+            {
+              "id": "mechanism-transfer:1788739200000:1",
+              "answer": "2/3",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-uo0ein6fw0q"
+            }
+          ],
+          "repeated-values": [
+            {
+              "id": "repeated-values:1788739200000:1",
+              "answer": "3/8",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-uo0ein6fw0q"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ending-independent-and-self",
+      "input": {
+        "activityId": "evidence-close"
+      },
+      "observation": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布从四条路径到一张分布表：参与或查阅，尚无作答证据；补全一次归组概率：有独立客观核对通过记录；独立新题：达到门槛的概率：有独立客观核对通过记录；提交一张完整的最大值分布：有自评记录（非自动判断）。条件改变后重新计算改为无放回，重新算：有独立客观核对通过记录；相同数值、不同个体：有独立客观核对通过记录。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "review": "提前练习：补全一次归组概率",
+        "note": "实际复习时间：2026/09/07 20:00。尚未到期；提前练习不会推进复习间隔。"
+      }
+    },
+    {
+      "name": "ending-direct",
+      "input": {
+        "activityId": "evidence-close"
+      },
+      "observation": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "review": "建立回访入口：三张核心概念卡"
+      }
+    },
+    {
+      "name": "ending-reveal-only",
+      "input": {
+        "activityId": "sampling-lab",
+        "action": "click 不预测，直接观察 then navigate evidence-close"
+      },
+      "observation": {
+        "labState": {
+          "version": 1,
+          "phase": "revealed",
+          "parameters": {
+            "n": 2,
+            "replacement": true
+          },
+          "predictionDraft": "",
+          "prediction": null,
+          "predictionAt": null,
+          "predictionHadReference": false,
+          "revealedAt": 1788739200000,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [],
+          "simulation": {
+            "B": 0,
+            "counts": {},
+            "last": null
+          },
+          "selectedPath": 0
+        },
+        "story": "你已经在实验中把一份样本映射为一个均值，再把同值的路径合并。最近一轮选择了直接观察，没有预测记录。返回实验可查看对应条件与证据。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布两个均值，谁更常见？：参与或查阅，尚无作答证据。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+      }
+    },
+    {
+      "name": "ending-assisted-and-self",
+      "input": {
+        "activityId": "evidence-close"
+      },
+      "observation": {
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件换成极差，再检验一次：有自评记录（非自动判断）。构建统计量的抽样分布独立新题：达到门槛的概率：有辅助尝试（1次）。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "attempt": [
+          {
+            "id": "mean-independent:1788739200000:1",
+            "answer": "5/9",
+            "correct": true,
+            "source": "objective",
+            "assisted": true,
+            "time": 1788739200000,
+            "sessionId": "session-1788739200000-v96c37qedgg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "linked-flashcards",
+      "input": {
+        "activityId": "return-recall",
+        "action": "open linked full explanation before first flip"
+      },
+      "observation": {
+        "attempt": {
+          "id": "return-recall:1788739200000:1",
+          "answer": "自评：翻面前已回忆",
+          "correct": true,
+          "source": "self",
+          "assisted": true,
+          "time": 1788739200000,
+          "sessionId": "session-1788739200000-ufcz6h656ei",
+          "cardIndex": 0
+        },
+        "exposure": {
+          "sessionId": "session-1788739200000-ufcz6h656ei",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788739200000,
+          "inferred": false
+        }
+      }
+    },
+    {
+      "name": "real-ending-due-return",
+      "input": {
+        "activityId": "evidence-close",
+        "controlledTime": 1788825600001
+      },
+      "observation": {
+        "label": "到期回忆：三张核心概念卡 · 1",
+        "arrived": [
+          "return-recall"
+        ],
+        "referenceOpen": false,
+        "cardRevealed": false,
+        "history": 1
+      }
+    }
+  ]
+}

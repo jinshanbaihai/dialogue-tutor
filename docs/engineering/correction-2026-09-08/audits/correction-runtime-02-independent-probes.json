@@ -1,0 +1,217 @@
+{
+  "runtimeHash": "b16a6f702fbf8217b60ccba6a9782c011a92e017726416b01c2597e24c02fa45",
+  "method": "Independent fixture executes actual candidate JS inline; native summary click; native file change with delayed File.text shim; Blob bytes read with FileReader; no author test helper imported.",
+  "probes": [
+    {
+      "name": "registration snapshot and context clones",
+      "pass": true,
+      "evidence": {
+        "seen": [
+          "first",
+          "later-snapshot"
+        ]
+      }
+    },
+    {
+      "name": "new registration applies only next transfer",
+      "pass": true,
+      "evidence": [
+        "next-round"
+      ]
+    },
+    {
+      "name": "file waits without early guards",
+      "pass": true
+    },
+    {
+      "name": "file completion captures later-opened shared source",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "alpha",
+          "source": "file",
+          "candidate": true,
+          "currentContacts": []
+        },
+        {
+          "id": "beta",
+          "source": "file",
+          "candidate": true,
+          "currentContacts": [
+            {
+              "condition": "condition-alpha",
+              "source": "shared",
+              "observedAt": 1900000000000
+            }
+          ]
+        },
+        {
+          "id": "alpha",
+          "source": "file",
+          "export": true
+        },
+        {
+          "id": "beta",
+          "source": "file",
+          "export": true
+        },
+        {
+          "id": "alpha",
+          "source": "api",
+          "candidate": true,
+          "currentContacts": [
+            {
+              "condition": "condition-alpha",
+              "source": "shared",
+              "observedAt": 1900000000000
+            },
+            {
+              "condition": "condition-alpha",
+              "source": "solo",
+              "observedAt": 1900000000000
+            }
+          ]
+        },
+        {
+          "id": "beta",
+          "source": "api",
+          "candidate": true,
+          "currentContacts": [
+            {
+              "condition": "condition-alpha",
+              "source": "shared",
+              "observedAt": 1900000000000
+            },
+            {
+              "condition": "condition-alpha",
+              "source": "solo",
+              "observedAt": 1900000000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hidden open details are not captured by fixture collector",
+      "pass": true
+    },
+    {
+      "name": "native export bytes respect shared and exclusive coverage",
+      "pass": true,
+      "evidence": {
+        "alpha": [
+          {
+            "condition": "condition-alpha",
+            "source": "shared",
+            "observedAt": 1900000000000
+          },
+          {
+            "condition": "condition-alpha",
+            "source": "solo",
+            "observedAt": 1900000000000
+          }
+        ],
+        "beta": [
+          {
+            "condition": "condition-beta",
+            "source": "shared",
+            "observedAt": 1900000000000
+          }
+        ]
+      }
+    },
+    {
+      "name": "restore opens previously seen details without new capture writes",
+      "pass": true,
+      "evidence": {
+        "writes": {
+          "alpha": 2,
+          "beta": 1
+        },
+        "shared": true,
+        "solo": true
+      }
+    },
+    {
+      "name": "restore preserves frozen submission and no exploration participation",
+      "pass": true
+    },
+    {
+      "name": "fresh runtime page immediately loads persisted union",
+      "pass": true
+    },
+    {
+      "name": "candidate rejection retains trusted drafts and captures both components",
+      "pass": true
+    },
+    {
+      "name": "rejected import contact persists to a new page",
+      "pass": true
+    },
+    {
+      "name": "bad-envelope captures without candidate",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "alpha",
+          "source": "api",
+          "candidate": false,
+          "currentContacts": []
+        },
+        {
+          "id": "beta",
+          "source": "api",
+          "candidate": false,
+          "currentContacts": [
+            {
+              "condition": "condition-alpha",
+              "source": "shared",
+              "observedAt": 1900000000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rejected-read captures without candidate",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "alpha",
+          "source": "file",
+          "candidate": false,
+          "currentContacts": []
+        },
+        {
+          "id": "beta",
+          "source": "file",
+          "candidate": false,
+          "currentContacts": [
+            {
+              "condition": "condition-alpha",
+              "source": "shared",
+              "observedAt": 1900000000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cancelled native export has no Blob but saves every collector",
+      "pass": true
+    },
+    {
+      "name": "storage failure does not lose export capture",
+      "pass": true
+    },
+    {
+      "name": "legacy without hooks uses API and file download",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "passed": 16,
+    "failed": 0
+  }
+}

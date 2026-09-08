@@ -1,0 +1,414 @@
+{
+  "artifact": "ial-s2-ch6-sampling-studio-original",
+  "revision": "1.7.0-run01-1",
+  "method": "Fresh jsdom instances; exact independent Fraction enumeration read from separate Python output; controlled timestamps; no browser rendering or learner outcome claim",
+  "observations": [
+    {
+      "name": "all-live-distributions-lab-1-replacement",
+      "input": {
+        "activityId": "sampling-lab",
+        "n": 1,
+        "replacement": true
+      },
+      "observation": {
+        "rows": [
+          [
+            "1",
+            "1",
+            "1/3"
+          ],
+          [
+            "3",
+            "1",
+            "1/3"
+          ],
+          [
+            "5",
+            "1",
+            "1/3"
+          ]
+        ],
+        "orderedPaths": 3,
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/3。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。"
+      }
+    },
+    {
+      "name": "all-live-distributions-lab-2-replacement",
+      "input": {
+        "activityId": "sampling-lab",
+        "n": 2,
+        "replacement": true
+      },
+      "observation": {
+        "rows": [
+          [
+            "1",
+            "1",
+            "1/9"
+          ],
+          [
+            "2",
+            "2",
+            "2/9"
+          ],
+          [
+            "3",
+            "3",
+            "1/3"
+          ],
+          [
+            "4",
+            "2",
+            "2/9"
+          ],
+          [
+            "5",
+            "1",
+            "1/9"
+          ]
+        ],
+        "orderedPaths": 9,
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。"
+      }
+    },
+    {
+      "name": "all-live-distributions-lab-3-replacement",
+      "input": {
+        "activityId": "sampling-lab",
+        "n": 3,
+        "replacement": true
+      },
+      "observation": {
+        "rows": [
+          [
+            "1",
+            "1",
+            "1/27"
+          ],
+          [
+            "5/3",
+            "3",
+            "1/9"
+          ],
+          [
+            "7/3",
+            "6",
+            "2/9"
+          ],
+          [
+            "3",
+            "7",
+            "7/27"
+          ],
+          [
+            "11/3",
+            "6",
+            "2/9"
+          ],
+          [
+            "13/3",
+            "3",
+            "1/9"
+          ],
+          [
+            "5",
+            "1",
+            "1/27"
+          ]
+        ],
+        "orderedPaths": 27,
+        "comparison": "枚举得到 P(均值=3)=7/27，P(均值=1)=1/27。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。"
+      }
+    },
+    {
+      "name": "all-live-distributions-lab-1-no-replacement",
+      "input": {
+        "activityId": "sampling-lab",
+        "n": 1,
+        "replacement": false
+      },
+      "observation": {
+        "rows": [
+          [
+            "1",
+            "1",
+            "1/3"
+          ],
+          [
+            "3",
+            "1",
+            "1/3"
+          ],
+          [
+            "5",
+            "1",
+            "1/3"
+          ]
+        ],
+        "orderedPaths": 3,
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/3。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。"
+      }
+    },
+    {
+      "name": "all-live-distributions-lab-2-no-replacement",
+      "input": {
+        "activityId": "sampling-lab",
+        "n": 2,
+        "replacement": false
+      },
+      "observation": {
+        "rows": [
+          [
+            "2",
+            "2",
+            "1/3"
+          ],
+          [
+            "3",
+            "2",
+            "1/3"
+          ],
+          [
+            "4",
+            "2",
+            "1/3"
+          ]
+        ],
+        "orderedPaths": 6,
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=0。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。"
+      }
+    },
+    {
+      "name": "all-live-distributions-lab-3-no-replacement",
+      "input": {
+        "activityId": "sampling-lab",
+        "n": 3,
+        "replacement": false
+      },
+      "observation": {
+        "rows": [
+          [
+            "3",
+            "6",
+            "1"
+          ]
+        ],
+        "orderedPaths": 6,
+        "comparison": "枚举得到 P(均值=3)=1，P(均值=1)=0。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。"
+      }
+    },
+    {
+      "name": "repeat-known-conditions-after-observation",
+      "input": {
+        "activityId": "sampling-lab",
+        "sequence": [
+          "direct observation",
+          "new round without changing n=2/replacement",
+          "centre",
+          "freeze",
+          "reveal"
+        ]
+      },
+      "observation": {
+        "current": {
+          "version": 1,
+          "phase": "revealed",
+          "parameters": {
+            "n": 2,
+            "replacement": true
+          },
+          "predictionDraft": "centre",
+          "prediction": "centre",
+          "predictionAt": 1788739200000,
+          "predictionHadReference": false,
+          "revealedAt": 1788739200000,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [
+            {
+              "version": 1,
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "replacement": true
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "revealedAt": 1788739200000,
+              "referenceViewed": false,
+              "referenceAt": null,
+              "supportViewed": false,
+              "simulation": {
+                "B": 0,
+                "counts": {},
+                "last": null
+              },
+              "selectedPath": 0
+            }
+          ],
+          "simulation": {
+            "B": 0,
+            "counts": {},
+            "last": null
+          },
+          "selectedPath": 0
+        },
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。",
+        "referenceText": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。"
+      }
+    },
+    {
+      "name": "review-ordinary",
+      "input": {
+        "activityId": "mean-independent",
+        "entry": "data-close-independent",
+        "controlledTime": 1788739201000
+      },
+      "observation": {
+        "label": "提前练习：独立新题：达到门槛的概率",
+        "before": {
+          "status": "submitted",
+          "draft": "5/9",
+          "answerRevealed": true,
+          "attempts": 1
+        },
+        "originalReview": {
+          "intervalIndex": 0,
+          "dueAt": 1788825600000,
+          "lastReviewedAt": 1788739200000,
+          "lastSessionId": "session-1788739200000-un1lw0gogl",
+          "evidenceSource": "objective"
+        },
+        "after": {
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788825601000,
+            "lastReviewedAt": 1788739201000,
+            "lastSessionId": "session-1788739201000-9iqn2weqdek",
+            "evidenceSource": "objective"
+          },
+          "attempts": [
+            {
+              "id": "mean-independent:1788739200000:1",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-un1lw0gogl"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "review-early",
+      "input": {
+        "activityId": "mean-independent",
+        "entry": "data-close-review",
+        "controlledTime": 1788739201000
+      },
+      "observation": {
+        "label": "提前练习：独立新题：达到门槛的概率",
+        "before": {
+          "status": "idle",
+          "draft": "",
+          "answerRevealed": false,
+          "attempts": 1
+        },
+        "originalReview": {
+          "intervalIndex": 0,
+          "dueAt": 1788825600000,
+          "lastReviewedAt": 1788739200000,
+          "lastSessionId": "session-1788739200000-un1lw0gogl",
+          "evidenceSource": "objective"
+        },
+        "after": {
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788825601000,
+            "lastReviewedAt": 1788739201000,
+            "lastSessionId": "session-1788739201000-qgmswjx1yf",
+            "evidenceSource": "objective"
+          },
+          "attempts": [
+            {
+              "id": "mean-independent:1788739200000:1",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-un1lw0gogl"
+            },
+            {
+              "id": "mean-independent:1788739201000:2",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1788739201000,
+              "sessionId": "session-1788739201000-qgmswjx1yf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "review-late-seven-days",
+      "input": {
+        "activityId": "mean-independent",
+        "entry": "data-close-review",
+        "controlledTime": 1789344000001
+      },
+      "observation": {
+        "label": "到期回忆：独立新题：达到门槛的概率",
+        "before": {
+          "status": "idle",
+          "draft": "",
+          "answerRevealed": false,
+          "attempts": 1
+        },
+        "originalReview": {
+          "intervalIndex": 0,
+          "dueAt": 1788825600000,
+          "lastReviewedAt": 1788739200000,
+          "lastSessionId": "session-1788739200000-un1lw0gogl",
+          "evidenceSource": "objective"
+        },
+        "after": {
+          "review": {
+            "intervalIndex": 1,
+            "dueAt": 1789603200001,
+            "lastReviewedAt": 1789344000001,
+            "lastSessionId": "session-1789344000001-6eqogx459tm",
+            "evidenceSource": "objective"
+          },
+          "attempts": [
+            {
+              "id": "mean-independent:1788739200000:1",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788739200000,
+              "sessionId": "session-1788739200000-un1lw0gogl"
+            },
+            {
+              "id": "mean-independent:1789344000001:2",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1789344000001,
+              "sessionId": "session-1789344000001-6eqogx459tm"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

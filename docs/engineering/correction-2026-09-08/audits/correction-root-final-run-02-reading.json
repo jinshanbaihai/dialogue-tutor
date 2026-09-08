@@ -1,0 +1,19 @@
+{
+  "htmlSHA256": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+  "jsonSHA256": "42627f4a3df54ccddfcfef28abf3a873a3a1807b955f7fd9315d3613a4f5dc90",
+  "deliveryManifestSHA256": "3bd8e42e61e8387ff4632abecf90366f3e3b9ded06f83d0e12a019252e8ecae2",
+  "manifestFilesVerified": 116,
+  "hashErrors": [],
+  "rootReading": {
+    "all10Sections": true,
+    "all10ActivityDescriptors": true,
+    "courseJSAll152Lines": true,
+    "note": "Read final static content before freeze announcement; actual hashes now match freeze. Runtime inline script is read via course.js plus independently checked exact-data and media manifest, not base64 text as semantic reading."
+  },
+  "mathematics": "All written definitions, conditional probability transformations, means, maximum, path weights, preimage sums and normalisation read. Six conditions/49 records also independently verified against hardcoded rational oracle. No new numerical or logical defect found in this scope.",
+  "preFreezeFinding": "Return anchor lost on scroll. Confirmed by author, fixed before formal freeze into dedicated nav; author actual6 navigation checks bound to final hash. Root inspected changed line and nav.",
+  "limits": [
+    "No root browser layout or human learning measurement",
+    "Five independent final reviewer verdicts pending"
+  ]
+}

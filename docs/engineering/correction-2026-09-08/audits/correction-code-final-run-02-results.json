@@ -1,0 +1,1653 @@
+{
+  "method": "Independent script executes unmodified final HTML in jsdom. Native summary default actions; File.text delay and Blob/FileReader fixtures; explicit controllable Image callback and viewport rectangles. No author helper or scorer imported. No browser layout/image-decode claim.",
+  "hashes": {
+    "lesson.html": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+    "lesson.json": "42627f4a3df54ccddfcfef28abf3a873a3a1807b955f7fd9315d3613a4f5dc90",
+    "course.js": "641cc807d10fe304f002efa20abb83aa4422b6460ec2fc7863ba612ee133c9ff",
+    "delivery-manifest.json": "3bd8e42e61e8387ff4632abecf90366f3e3b9ded06f83d0e12a019252e8ecae2",
+    "exact-data.json": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa"
+  },
+  "checks": [
+    {
+      "id": "no-typing/baseline-and-incomplete/initial",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "initial/all-10-mounts",
+      "pass": true,
+      "evidence": {
+        "expected": 10,
+        "mounted": 10
+      }
+    },
+    {
+      "id": "initial/unique-ids",
+      "pass": true
+    },
+    {
+      "id": "initial/no-feedback-no-mapped-answer",
+      "pass": true
+    },
+    {
+      "id": "initial/inline-json",
+      "pass": true
+    },
+    {
+      "id": "data/entire-file-hash-and-embedded",
+      "pass": true,
+      "evidence": {
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa"
+      }
+    },
+    {
+      "id": "data/embedded-template-exact",
+      "pass": true
+    },
+    {
+      "id": "media/static-dom-bytes",
+      "pass": true,
+      "evidence": [
+        {
+          "frame": "example-wr-overview-bars",
+          "hash": "1a217f4e5b2a3e19af7813ffc1eed78e4caf2238ab5e1a80f10eeda2329c0e18"
+        },
+        {
+          "frame": "task-wr-overview-bars",
+          "hash": "f77eaad1637cb6e77476b4564f9b6360d71b25e43fee9d6451b6615b202a1438"
+        },
+        {
+          "frame": "task-wo-overview-bars",
+          "hash": "4c63edb81fe13223bc05848aba234e358750266a8ff0e8e3626cfc707cb29acd"
+        },
+        {
+          "frame": "challenge-wr-overview-bars",
+          "hash": "27d31884e0e705aa0cee28343e1eacf90eda6506c2dc46b2c38a7c86cedd89f7"
+        }
+      ]
+    },
+    {
+      "id": "media/all-files-match",
+      "pass": true,
+      "evidence": {
+        "frames": 51
+      }
+    },
+    {
+      "id": "media/all-line-targets-exist",
+      "pass": true
+    },
+    {
+      "id": "construction/reject-blank-before-freeze",
+      "pass": false,
+      "evidence": {
+        "state": {
+          "stateVersion": 1,
+          "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+          "componentId": "build-sample",
+          "conditionKey": "task-wr-mean-v1",
+          "rounds": {
+            "task-wr-mean-v1": {
+              "draft": {
+                "paths": [],
+                "mapping": {},
+                "weight": null,
+                "distribution": {}
+              },
+              "activeId": "task-wr-mean-v1-1788851241637-1",
+              "skipped": false
+            },
+            "task-wo-mean-v1": {
+              "draft": {
+                "paths": [],
+                "mapping": {},
+                "weight": null,
+                "distribution": {}
+              },
+              "activeId": null,
+              "skipped": false
+            }
+          },
+          "contacts": {
+            "task-wr-mean-v1": {
+              "construction-feedback-task-wr-mean-v1": 1788851241647
+            },
+            "task-wo-mean-v1": {}
+          },
+          "visibleSolutionIds": [],
+          "submissions": [
+            {
+              "id": "task-wr-mean-v1-1788851241637-1",
+              "conditionKey": "task-wr-mean-v1",
+              "at": 1788851241637,
+              "draft": {
+                "paths": [],
+                "mapping": {},
+                "weight": null,
+                "distribution": {}
+              },
+              "check": {
+                "missing": [
+                  "DD",
+                  "DE",
+                  "DF",
+                  "ED",
+                  "EE",
+                  "EF",
+                  "FD",
+                  "FE",
+                  "FF"
+                ],
+                "extra": [],
+                "matched": [],
+                "mapping": [],
+                "weight": true,
+                "distribution": [
+                  "2",
+                  "5",
+                  "8"
+                ],
+                "correct": false
+              },
+              "assistance": []
+            }
+          ]
+        },
+        "feedback": "本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：无；缺少路径：DD、DE、DF、ED、EE、EF、FD、FE、FF；多选路径：无。DD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导DE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导DF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导ED：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导FD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,8；当前路径权重：19。 查看此路径的逐行推导每条身份路径是两次独立均匀抽取，故权重为1/3 × 1/3 = 1/9；输出mean没有因此等可能。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DD、DE、ED、EE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 8的原像为FF；当前每条允许原像路径的权重为1/9，互斥相加后的概率为1/9。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。重新计算第二抽的条件权重",
+        "disabled": true
+      }
+    },
+    {
+      "id": "construction/blank-double-click-no-second",
+      "pass": true
+    },
+    {
+      "id": "construction/own-selected-mapping-only",
+      "pass": true
+    },
+    {
+      "id": "construction/reject-missing-map-weight-distribution",
+      "pass": false,
+      "evidence": {
+        "draft": {
+          "paths": [
+            "DD"
+          ],
+          "mapping": {},
+          "weight": null,
+          "distribution": {}
+        },
+        "submissions": 2,
+        "feedback": "本次冻结核对：下面逐项说明本次草稿的差异。提交前已打开或呈现本条件参考；这是有辅助核对。匹配路径：DD；缺少路径：DE、DF、ED、EE、EF、FD、FE、FF；多选路径：无。DE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导DF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导ED：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导FD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,8；当前路径权重：19。 查看此路径的逐行推导DD：你的mean映射需按两个观测重新代入。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导每条身份路径是两次独立均匀抽取，故权重为1/3 × 1/3 = 1/9；输出mean没有因此等可能。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DD、DE、ED、EE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 8的原像为FF；当前每条允许原像路径的权重为1/9，互斥相加后的概率为1/9。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。构造尚未呈现的无放回新数据上次冻结提交与逐项反馈（保留原答卷）当时所选路径：空集；当时权重选择：未选择。本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：无；缺少路径：DD、DE、DF、ED、EE、EF、FD、FE、FF；多选路径：无。DD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导DE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导DF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导ED：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导FD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,8；当前路径权重：19。 查看此路径的逐行推导每条身份路径是两次独立均匀抽取，故权重为1/3 × 1/3 = 1/9；输出mean没有因此等可能。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DD、DE、ED、EE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 8的原像为FF；当前每条允许原像路径的权重为1/9，互斥相加后的概率为1/9。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。"
+      }
+    },
+    {
+      "id": "no-typing/baseline-and-incomplete/partial-frozen",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "no-uncaught/baseline-and-incomplete",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "construction/no-answer-until-unified",
+      "pass": true
+    },
+    {
+      "id": "construction/full-wr-correct-freeze",
+      "pass": true,
+      "evidence": {
+        "id": "task-wr-mean-v1-1788851247228-1",
+        "conditionKey": "task-wr-mean-v1",
+        "at": 1788851247228,
+        "draft": {
+          "paths": [
+            "DD",
+            "DE",
+            "DF",
+            "ED",
+            "EE",
+            "EF",
+            "FD",
+            "FE",
+            "FF"
+          ],
+          "mapping": {
+            "DD": "2",
+            "DE": "2",
+            "DF": "5",
+            "ED": "2",
+            "EE": "2",
+            "EF": "5",
+            "FD": "5",
+            "FE": "5",
+            "FF": "8"
+          },
+          "weight": "independent",
+          "distribution": {
+            "2": "4/9",
+            "5": "4/9",
+            "8": "1/9"
+          }
+        },
+        "check": {
+          "missing": [],
+          "extra": [],
+          "matched": [
+            "DD",
+            "DE",
+            "DF",
+            "ED",
+            "EE",
+            "EF",
+            "FD",
+            "FE",
+            "FF"
+          ],
+          "mapping": [],
+          "weight": false,
+          "distribution": [],
+          "correct": true
+        },
+        "assistance": []
+      }
+    },
+    {
+      "id": "construction/locked-controls-preserve",
+      "pass": true
+    },
+    {
+      "id": "construction/condition-new-blank",
+      "pass": true
+    },
+    {
+      "id": "construction/concrete-missing-extra",
+      "pass": true,
+      "evidence": {
+        "missing": [
+          "FE"
+        ],
+        "extra": [
+          "DD"
+        ],
+        "matched": [
+          "DE",
+          "DF",
+          "ED",
+          "EF",
+          "FD"
+        ],
+        "mapping": [],
+        "weight": false,
+        "distribution": [],
+        "correct": false
+      }
+    },
+    {
+      "id": "construction/exact-feedback-targets",
+      "pass": true
+    },
+    {
+      "id": "construction/retry-correct-assisted",
+      "pass": true
+    },
+    {
+      "id": "construction/per-condition-lock-restored",
+      "pass": true
+    },
+    {
+      "id": "restore/old-union-all-history",
+      "pass": true
+    },
+    {
+      "id": "no-typing/construction-two-conditions/old-import",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "no-uncaught/construction-two-conditions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "restore/reopen-all-history",
+      "pass": true
+    },
+    {
+      "id": "restore/no-fabricated-counts",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "main-map": {
+            "count": 0,
+            "attempts": 0
+          },
+          "build-sample": {
+            "count": 0,
+            "attempts": 0
+          },
+          "survey-check": {
+            "count": 0,
+            "attempts": 0
+          },
+          "stat-check": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q1a-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q1b-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q2a-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q2b-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q4-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "recall-core": {
+            "count": 0,
+            "attempts": 0
+          }
+        },
+        "after": {
+          "main-map": {
+            "count": 0,
+            "attempts": 0
+          },
+          "build-sample": {
+            "count": 0,
+            "attempts": 0
+          },
+          "survey-check": {
+            "count": 0,
+            "attempts": 0
+          },
+          "stat-check": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q1a-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q1b-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q2a-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q2b-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "q4-answer": {
+            "count": 0,
+            "attempts": 0
+          },
+          "recall-core": {
+            "count": 0,
+            "attempts": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "no-uncaught/reopen-history",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "boundary/summary-submit-prediction",
+      "pass": true
+    },
+    {
+      "id": "boundary/summary-submit-construction",
+      "pass": true
+    },
+    {
+      "id": "boundary/import-collects-both-conditions",
+      "pass": true
+    },
+    {
+      "id": "boundary/component-reference-isolation",
+      "pass": true
+    },
+    {
+      "id": "boundary/first-answer-not-retrochanged",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/same-queue-summary",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "boundary/revealed-scope-restored",
+      "pass": true,
+      "evidence": [
+        [
+          "main-reference",
+          true
+        ],
+        [
+          "q3a-solution",
+          true
+        ],
+        [
+          "shared-task-solutions",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "boundary/reopen-no-actions",
+      "pass": true
+    },
+    {
+      "id": "boundary/reopen-union",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/reopen-same-queue",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "boundary/file-completion-captures-open",
+      "pass": true
+    },
+    {
+      "id": "boundary/native-export-byte-snapshot",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/native-file-boundaries",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "boundary/file-reopen-scope-and-count",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/reopen-file-boundaries",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "reject/identity",
+      "pass": true,
+      "evidence": {
+        "error": "本课记录未接收：组件身份、版本或数学数据不匹配"
+      }
+    },
+    {
+      "id": "reject/version",
+      "pass": true,
+      "evidence": {
+        "error": "本课记录未接收：组件身份、版本或数学数据不匹配"
+      }
+    },
+    {
+      "id": "reject/hash",
+      "pass": true,
+      "evidence": {
+        "error": "本课记录未接收：组件身份、版本或数学数据不匹配"
+      }
+    },
+    {
+      "id": "reject/condition",
+      "pass": true,
+      "evidence": {
+        "error": "本课记录未接收：条件不明"
+      }
+    },
+    {
+      "id": "reject/draft-candidate",
+      "pass": true,
+      "evidence": {
+        "error": "本课记录未接收：路径候选不明"
+      }
+    },
+    {
+      "id": "reject/unknown-field",
+      "pass": true,
+      "evidence": {
+        "error": "本课记录未接收：组件字段不明"
+      }
+    },
+    {
+      "id": "reject/local-contact-both-components-retained",
+      "pass": true
+    },
+    {
+      "id": "reject/bad-envelope-retains-contact",
+      "pass": true,
+      "evidence": "记录格式或版本不匹配 / Invalid progress format"
+    },
+    {
+      "id": "reject/native-file-identity",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/reject-invalid-components",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "reject/reopen-trusted-contacts",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/reopen-rejected-contact",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "coverage/one-target-is-insufficient",
+      "pass": true
+    },
+    {
+      "id": "coverage/both-targets-presented",
+      "pass": true
+    },
+    {
+      "id": "coverage/no-cross-condition-targets",
+      "pass": true
+    },
+    {
+      "id": "prediction/two-frozen-conditions",
+      "pass": true
+    },
+    {
+      "id": "prediction/condition-lock-restored",
+      "pass": true
+    },
+    {
+      "id": "coverage/hidden-open-not-reference",
+      "pass": true
+    },
+    {
+      "id": "prediction/old-first-not-retrochanged",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/viewport-and-condition-freeze",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "media/allowed/main-wr-mean-v1",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AA/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AA/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AA/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AB/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AB/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AB/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AC/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AC/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/AC/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BA/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BA/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BA/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BB/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BB/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BB/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BC/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BC/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/BC/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CA/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CA/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CA/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CB/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CB/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CB/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CC/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CC/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wr/CC/bars",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-media-requests/main-wr-mean-v1",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "media/allowed/main-wo-mean-v1",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/AB/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/AB/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/AB/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/AC/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/AC/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/AC/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/BA/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/BA/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/BA/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/BC/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/BC/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/BC/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/CA/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/CA/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/CA/bars",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/CB/paths",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/CB/mapping",
+      "pass": true
+    },
+    {
+      "id": "media/bytes-and-commit/main-wo/CB/bars",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-media-requests/main-wo-mean-v1",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "media/every-requested-or-static-frame-is-in-manifest",
+      "pass": true,
+      "evidence": {
+        "count": 49,
+        "manifest": 51,
+        "missing": [
+          "main-wr-overview-paths",
+          "main-wo-overview-paths"
+        ]
+      }
+    },
+    {
+      "id": "no-uncaught/all-media-requests",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "media/failure-hides-old-matches-current",
+      "pass": true
+    },
+    {
+      "id": "media/stale-success-and-failure-ignored",
+      "pass": true
+    },
+    {
+      "id": "media/restored-request-awaits-own-callback",
+      "pass": true
+    },
+    {
+      "id": "media/restored-request-commit",
+      "pass": true
+    },
+    {
+      "id": "navigation/six-real-inspect-buttons",
+      "pass": true,
+      "evidence": [
+        {
+          "back": "pause-weight",
+          "condition": "main-wr-mean-v1",
+          "path": "AB",
+          "stage": "mapping"
+        },
+        {
+          "back": "pause-weight",
+          "condition": "main-wr-mean-v1",
+          "path": "BA",
+          "stage": "mapping"
+        },
+        {
+          "back": "pause-preimage",
+          "condition": "main-wr-mean-v1",
+          "path": "AC",
+          "stage": "bars"
+        },
+        {
+          "back": "pause-preimage",
+          "condition": "main-wr-mean-v1",
+          "path": "BB",
+          "stage": "bars"
+        },
+        {
+          "back": "pause-mechanism",
+          "condition": "main-wr-mean-v1",
+          "path": "AB",
+          "stage": "bars"
+        },
+        {
+          "back": "pause-mechanism",
+          "condition": "main-wo-mean-v1",
+          "path": "AB",
+          "stage": "bars"
+        }
+      ]
+    },
+    {
+      "id": "navigation/return-survives-scroll-and-load/pause-weight",
+      "pass": true
+    },
+    {
+      "id": "navigation/return-focus/pause-weight",
+      "pass": true,
+      "evidence": {
+        "focused": "pause-weight"
+      }
+    },
+    {
+      "id": "navigation/return-survives-scroll-and-load/pause-weight",
+      "pass": true
+    },
+    {
+      "id": "navigation/return-focus/pause-weight",
+      "pass": true,
+      "evidence": {
+        "focused": "pause-weight"
+      }
+    },
+    {
+      "id": "navigation/return-survives-scroll-and-load/pause-preimage",
+      "pass": true
+    },
+    {
+      "id": "navigation/return-focus/pause-preimage",
+      "pass": true,
+      "evidence": {
+        "focused": "pause-preimage"
+      }
+    },
+    {
+      "id": "navigation/return-survives-scroll-and-load/pause-preimage",
+      "pass": true
+    },
+    {
+      "id": "navigation/return-focus/pause-preimage",
+      "pass": true,
+      "evidence": {
+        "focused": "pause-preimage"
+      }
+    },
+    {
+      "id": "navigation/return-survives-scroll-and-load/pause-mechanism",
+      "pass": true
+    },
+    {
+      "id": "navigation/return-focus/pause-mechanism",
+      "pass": true,
+      "evidence": {
+        "focused": "pause-mechanism"
+      }
+    },
+    {
+      "id": "navigation/return-survives-scroll-and-load/pause-mechanism",
+      "pass": true
+    },
+    {
+      "id": "navigation/return-focus/pause-mechanism",
+      "pass": true,
+      "evidence": {
+        "focused": "pause-mechanism"
+      }
+    },
+    {
+      "id": "no-typing/media-races-and-navigation/late-load-return",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "no-uncaught/media-races-and-navigation",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "quiz/survey-check",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/survey-check",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "quiz/stat-check",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/stat-check",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "quiz/q1a-answer",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/q1a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "quiz/q1b-answer",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/q1b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "quiz/q2a-answer",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/q2a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "quiz/q2b-answer",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/q2b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "quiz/q4-answer",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/q4-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "recall/self-labelled",
+      "pass": true
+    },
+    {
+      "id": "no-typing/all-native-learning-controls/all-solutions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "navigation/no-dead-fragments",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "controls/native-named-buttons",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/all-native-learning-controls",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "storage/continue-and-export",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/storage-blocked",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "baseline-and-incomplete",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "construction-two-conditions",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "reopen-history",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "same-queue-summary",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "reopen-same-queue",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "native-file-boundaries",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "reopen-file-boundaries",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "reject-invalid-components",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "reopen-rejected-contact",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "viewport-and-condition-freeze",
+      "errors": [],
+      "requested": []
+    },
+    {
+      "name": "all-media-requests",
+      "errors": [],
+      "requested": [
+        {
+          "frameId": "main-wr-AA-paths",
+          "hash": "a12ebc356bbd04020ed1901e4cbf1298e93a83314fdbe5120dfdc73d6a33d4c4"
+        },
+        {
+          "frameId": "main-wr-AA-paths",
+          "hash": "a12ebc356bbd04020ed1901e4cbf1298e93a83314fdbe5120dfdc73d6a33d4c4"
+        },
+        {
+          "frameId": "main-wr-AA-mapping",
+          "hash": "8e76bc321e7f244297f37755086285848f00cd79bce8f246c6695fe7ab4a6892"
+        },
+        {
+          "frameId": "main-wr-AA-bars",
+          "hash": "9b57f229452d91afadf9755f3c6ce2c693339e34c9767195d6b6cd682953a3ea"
+        },
+        {
+          "frameId": "main-wr-AB-paths",
+          "hash": "8f3bb15682f47bd711c34d877aa3d7c5fdae45322bb0c03c83b472e4f0ab4afe"
+        },
+        {
+          "frameId": "main-wr-AB-paths",
+          "hash": "8f3bb15682f47bd711c34d877aa3d7c5fdae45322bb0c03c83b472e4f0ab4afe"
+        },
+        {
+          "frameId": "main-wr-AB-mapping",
+          "hash": "e9576ab5eecc30f73f5f056cf671922a2e755732ffa3176b5387a64483723bf6"
+        },
+        {
+          "frameId": "main-wr-AB-bars",
+          "hash": "10f574d7bdf319c6e4a33897a5453f2ad79c456fb31d1e4740ed4f8c00ddb550"
+        },
+        {
+          "frameId": "main-wr-AC-paths",
+          "hash": "59964feb007400ab809e5804855204e037a7bfaac2fd88b444f3984c89b449d9"
+        },
+        {
+          "frameId": "main-wr-AC-paths",
+          "hash": "59964feb007400ab809e5804855204e037a7bfaac2fd88b444f3984c89b449d9"
+        },
+        {
+          "frameId": "main-wr-AC-mapping",
+          "hash": "8c5b8800d2400bc252272cee841e186dabaf017d3d67a407ee133f758b020e8b"
+        },
+        {
+          "frameId": "main-wr-AC-bars",
+          "hash": "dab9900dcff3d0768d0a62faa71c0f603432f019d79ecf3a4c0fac256ba3b1f6"
+        },
+        {
+          "frameId": "main-wr-BA-paths",
+          "hash": "96c05f354d46aeb9df4a102f2d4666ccfe9d7e2936567bb8352f9df98b3f0d18"
+        },
+        {
+          "frameId": "main-wr-BA-paths",
+          "hash": "96c05f354d46aeb9df4a102f2d4666ccfe9d7e2936567bb8352f9df98b3f0d18"
+        },
+        {
+          "frameId": "main-wr-BA-mapping",
+          "hash": "c765a25b802cf564535befa2d6462b09d0e6b90a41430840625fdf4650573d4b"
+        },
+        {
+          "frameId": "main-wr-BA-bars",
+          "hash": "bc76d330a3e777e9561b935305f38f0694b5880ff1a61799daefa255a2317300"
+        },
+        {
+          "frameId": "main-wr-BB-paths",
+          "hash": "4ad50ff6b696e2a615281ec4874809215c1a074d157650e4423fbb9c2c36f2bf"
+        },
+        {
+          "frameId": "main-wr-BB-paths",
+          "hash": "4ad50ff6b696e2a615281ec4874809215c1a074d157650e4423fbb9c2c36f2bf"
+        },
+        {
+          "frameId": "main-wr-BB-mapping",
+          "hash": "93b6944832eccc619da96f1f7eb33cf09dbb0507953d11ed56e6d1fea40ae439"
+        },
+        {
+          "frameId": "main-wr-BB-bars",
+          "hash": "37c1200f910e28e438c1e0d95160baa4db30be2c0dfeb3deaa026e37383ee0f4"
+        },
+        {
+          "frameId": "main-wr-BC-paths",
+          "hash": "fd1f1facfdf63d65fc60fdc404e8c72de335c4f296d54bf2e08facba343fe7a5"
+        },
+        {
+          "frameId": "main-wr-BC-paths",
+          "hash": "fd1f1facfdf63d65fc60fdc404e8c72de335c4f296d54bf2e08facba343fe7a5"
+        },
+        {
+          "frameId": "main-wr-BC-mapping",
+          "hash": "dbba239da8a75adc4c0d271b9146db66331369731f619a96736adf01dba2826b"
+        },
+        {
+          "frameId": "main-wr-BC-bars",
+          "hash": "3592285705a78faeb30ac2c8f33efb9c9969b98b48a744b2136e427c7f42a2a7"
+        },
+        {
+          "frameId": "main-wr-CA-paths",
+          "hash": "3796cda271c2abd8d7461b5d7c1c3f264136e363a657ee3248eb4ddb063570ca"
+        },
+        {
+          "frameId": "main-wr-CA-paths",
+          "hash": "3796cda271c2abd8d7461b5d7c1c3f264136e363a657ee3248eb4ddb063570ca"
+        },
+        {
+          "frameId": "main-wr-CA-mapping",
+          "hash": "77eaed02bd3b1a9d15e4d043af02446ab8d958d3a1f41b7dc1dbe79f5e1df56e"
+        },
+        {
+          "frameId": "main-wr-CA-bars",
+          "hash": "c6fd6833f497119fb8438f24fdb81d33b1bae48a7b86d86d91837739db29d393"
+        },
+        {
+          "frameId": "main-wr-CB-paths",
+          "hash": "5bd8c23c0fefca28c418ae6ee7716c0c278cdb86e4f112601cfd5a3a915bd7a7"
+        },
+        {
+          "frameId": "main-wr-CB-paths",
+          "hash": "5bd8c23c0fefca28c418ae6ee7716c0c278cdb86e4f112601cfd5a3a915bd7a7"
+        },
+        {
+          "frameId": "main-wr-CB-mapping",
+          "hash": "d92f09dc0836c94fdf50d55b8519b60428c73642b4374ade7ebcbaeb0c2f159c"
+        },
+        {
+          "frameId": "main-wr-CB-bars",
+          "hash": "8bb087e4cb8fa029e9782afa24c703caee8aaae627b7267737030055a2772d41"
+        },
+        {
+          "frameId": "main-wr-CC-paths",
+          "hash": "c3bf6dd47384574a01901930ab147bd92422a621df2054d1aacd4082f7160e3b"
+        },
+        {
+          "frameId": "main-wr-CC-paths",
+          "hash": "c3bf6dd47384574a01901930ab147bd92422a621df2054d1aacd4082f7160e3b"
+        },
+        {
+          "frameId": "main-wr-CC-mapping",
+          "hash": "75069b89f3b703e899c4233f514700c6c545ee942811020fbf73dfc76850f08e"
+        },
+        {
+          "frameId": "main-wr-CC-bars",
+          "hash": "2d68416e1cdaa866acc9876d7229fd8baf019f79f772ce3b4546712949e77e43"
+        },
+        {
+          "frameId": "main-wo-AB-paths",
+          "hash": "c323a6e1e4b8fdf78bf29efb29d80355f80f92df0b2d3772458e8baa93fac8e7"
+        },
+        {
+          "frameId": "main-wo-AB-paths",
+          "hash": "c323a6e1e4b8fdf78bf29efb29d80355f80f92df0b2d3772458e8baa93fac8e7"
+        },
+        {
+          "frameId": "main-wo-AB-mapping",
+          "hash": "7a726358b9e486fe76cb34eafd00f0b841d3829807b5719ef9ecf802966ea07d"
+        },
+        {
+          "frameId": "main-wo-AB-bars",
+          "hash": "8131b12b137d4e9892e3d0899a5107b8773925c8f8c198a2b2ee17f22ba0aed4"
+        },
+        {
+          "frameId": "main-wo-AC-paths",
+          "hash": "e91c0c635791dbd402647866f9c4458ec29aa505a6201c0eca75fba658cb4728"
+        },
+        {
+          "frameId": "main-wo-AC-paths",
+          "hash": "e91c0c635791dbd402647866f9c4458ec29aa505a6201c0eca75fba658cb4728"
+        },
+        {
+          "frameId": "main-wo-AC-mapping",
+          "hash": "fa6abc1004a78166e2fd05998d5788ac577b8c646c7b463a20980211c7255502"
+        },
+        {
+          "frameId": "main-wo-AC-bars",
+          "hash": "a0df77fd8ba6bfc8144ae21b11702fb08e12939e9e8bd2cead34ae9bc6d08a00"
+        },
+        {
+          "frameId": "main-wo-BA-paths",
+          "hash": "b58d3601a53cd562649af3b373e5243e84f1a67ff6e80272b909e05af7b950ca"
+        },
+        {
+          "frameId": "main-wo-BA-paths",
+          "hash": "b58d3601a53cd562649af3b373e5243e84f1a67ff6e80272b909e05af7b950ca"
+        },
+        {
+          "frameId": "main-wo-BA-mapping",
+          "hash": "b21c2be92b697c32423917703d865950ee053f2e3d2b4e85e8362ee0e8ff8293"
+        },
+        {
+          "frameId": "main-wo-BA-bars",
+          "hash": "ee97edd923afd7727f22d2ae9984a0f9bf1174de23e9631f06d070225892f857"
+        },
+        {
+          "frameId": "main-wo-BC-paths",
+          "hash": "8c76f5689b65e52cb1141ea3318b212ade759799d31fe3bf9201cedcf29082e1"
+        },
+        {
+          "frameId": "main-wo-BC-paths",
+          "hash": "8c76f5689b65e52cb1141ea3318b212ade759799d31fe3bf9201cedcf29082e1"
+        },
+        {
+          "frameId": "main-wo-BC-mapping",
+          "hash": "f18959d67b47930a5a6e1151debfbccd1524cd8f357e3e54debc61c29680cd03"
+        },
+        {
+          "frameId": "main-wo-BC-bars",
+          "hash": "bb5c5f7085e0330d8a466f5b40dd5fedd79bb300cb3a3dd63f6057cbdd2e34a2"
+        },
+        {
+          "frameId": "main-wo-CA-paths",
+          "hash": "0e94293c93d931c648d96c49ad3623c67462b81c2601c0fc2486b24fd1f01133"
+        },
+        {
+          "frameId": "main-wo-CA-paths",
+          "hash": "0e94293c93d931c648d96c49ad3623c67462b81c2601c0fc2486b24fd1f01133"
+        },
+        {
+          "frameId": "main-wo-CA-mapping",
+          "hash": "e858d1ee515240ec3bb3f911f30af2368dab6eecc760f1b14803f70dad268315"
+        },
+        {
+          "frameId": "main-wo-CA-bars",
+          "hash": "be89b4e89d85ab2006716d293cdb8a94953ca6e08759ddce2e4f0d585d5c734b"
+        },
+        {
+          "frameId": "main-wo-CB-paths",
+          "hash": "f16ffa95b9e53b04a5dd1382bd8ee86b90c5fc22c35a68d44e4794b02e0ba3d9"
+        },
+        {
+          "frameId": "main-wo-CB-paths",
+          "hash": "f16ffa95b9e53b04a5dd1382bd8ee86b90c5fc22c35a68d44e4794b02e0ba3d9"
+        },
+        {
+          "frameId": "main-wo-CB-mapping",
+          "hash": "b4776cdbfe3218d26355051f7bd3bfe2453619cca62ca05d9ecb47c9838a6e77"
+        },
+        {
+          "frameId": "main-wo-CB-bars",
+          "hash": "4ea38617cbfeb380dd5b82822d9397d0fd621691a07b6c83ed9f4f252f88bae9"
+        }
+      ]
+    },
+    {
+      "name": "media-races-and-navigation",
+      "errors": [],
+      "requested": [
+        {
+          "frameId": "main-wr-AA-paths",
+          "hash": "a12ebc356bbd04020ed1901e4cbf1298e93a83314fdbe5120dfdc73d6a33d4c4"
+        },
+        {
+          "frameId": "main-wr-AB-paths",
+          "hash": "8f3bb15682f47bd711c34d877aa3d7c5fdae45322bb0c03c83b472e4f0ab4afe"
+        },
+        {
+          "frameId": "main-wr-AB-paths",
+          "hash": "8f3bb15682f47bd711c34d877aa3d7c5fdae45322bb0c03c83b472e4f0ab4afe"
+        },
+        {
+          "frameId": "main-wr-AC-paths",
+          "hash": "59964feb007400ab809e5804855204e037a7bfaac2fd88b444f3984c89b449d9"
+        },
+        {
+          "frameId": "main-wr-BA-paths",
+          "hash": "96c05f354d46aeb9df4a102f2d4666ccfe9d7e2936567bb8352f9df98b3f0d18"
+        },
+        {
+          "frameId": "main-wr-AC-paths",
+          "hash": "59964feb007400ab809e5804855204e037a7bfaac2fd88b444f3984c89b449d9"
+        },
+        {
+          "frameId": "main-wr-AB-mapping",
+          "hash": "e9576ab5eecc30f73f5f056cf671922a2e755732ffa3176b5387a64483723bf6"
+        },
+        {
+          "frameId": "main-wr-AB-mapping",
+          "hash": "e9576ab5eecc30f73f5f056cf671922a2e755732ffa3176b5387a64483723bf6"
+        },
+        {
+          "frameId": "main-wr-AC-bars",
+          "hash": "dab9900dcff3d0768d0a62faa71c0f603432f019d79ecf3a4c0fac256ba3b1f6"
+        },
+        {
+          "frameId": "main-wr-AC-bars",
+          "hash": "dab9900dcff3d0768d0a62faa71c0f603432f019d79ecf3a4c0fac256ba3b1f6"
+        },
+        {
+          "frameId": "main-wr-AB-bars",
+          "hash": "10f574d7bdf319c6e4a33897a5453f2ad79c456fb31d1e4740ed4f8c00ddb550"
+        },
+        {
+          "frameId": "main-wr-AB-bars",
+          "hash": "10f574d7bdf319c6e4a33897a5453f2ad79c456fb31d1e4740ed4f8c00ddb550"
+        }
+      ],
+      "lastScroll": "pause-mechanism"
+    },
+    {
+      "name": "all-native-learning-controls",
+      "errors": [],
+      "requested": [],
+      "lastScroll": "main-reference"
+    },
+    {
+      "name": "storage-blocked",
+      "errors": [],
+      "requested": []
+    }
+  ],
+  "mediaRequests": [
+    {
+      "frameId": "main-wr-AA-paths",
+      "hash": "a12ebc356bbd04020ed1901e4cbf1298e93a83314fdbe5120dfdc73d6a33d4c4"
+    },
+    {
+      "frameId": "main-wr-AA-paths",
+      "hash": "a12ebc356bbd04020ed1901e4cbf1298e93a83314fdbe5120dfdc73d6a33d4c4"
+    },
+    {
+      "frameId": "main-wr-AA-mapping",
+      "hash": "8e76bc321e7f244297f37755086285848f00cd79bce8f246c6695fe7ab4a6892"
+    },
+    {
+      "frameId": "main-wr-AA-bars",
+      "hash": "9b57f229452d91afadf9755f3c6ce2c693339e34c9767195d6b6cd682953a3ea"
+    },
+    {
+      "frameId": "main-wr-AB-paths",
+      "hash": "8f3bb15682f47bd711c34d877aa3d7c5fdae45322bb0c03c83b472e4f0ab4afe"
+    },
+    {
+      "frameId": "main-wr-AB-paths",
+      "hash": "8f3bb15682f47bd711c34d877aa3d7c5fdae45322bb0c03c83b472e4f0ab4afe"
+    },
+    {
+      "frameId": "main-wr-AB-mapping",
+      "hash": "e9576ab5eecc30f73f5f056cf671922a2e755732ffa3176b5387a64483723bf6"
+    },
+    {
+      "frameId": "main-wr-AB-bars",
+      "hash": "10f574d7bdf319c6e4a33897a5453f2ad79c456fb31d1e4740ed4f8c00ddb550"
+    },
+    {
+      "frameId": "main-wr-AC-paths",
+      "hash": "59964feb007400ab809e5804855204e037a7bfaac2fd88b444f3984c89b449d9"
+    },
+    {
+      "frameId": "main-wr-AC-paths",
+      "hash": "59964feb007400ab809e5804855204e037a7bfaac2fd88b444f3984c89b449d9"
+    },
+    {
+      "frameId": "main-wr-AC-mapping",
+      "hash": "8c5b8800d2400bc252272cee841e186dabaf017d3d67a407ee133f758b020e8b"
+    },
+    {
+      "frameId": "main-wr-AC-bars",
+      "hash": "dab9900dcff3d0768d0a62faa71c0f603432f019d79ecf3a4c0fac256ba3b1f6"
+    },
+    {
+      "frameId": "main-wr-BA-paths",
+      "hash": "96c05f354d46aeb9df4a102f2d4666ccfe9d7e2936567bb8352f9df98b3f0d18"
+    },
+    {
+      "frameId": "main-wr-BA-paths",
+      "hash": "96c05f354d46aeb9df4a102f2d4666ccfe9d7e2936567bb8352f9df98b3f0d18"
+    },
+    {
+      "frameId": "main-wr-BA-mapping",
+      "hash": "c765a25b802cf564535befa2d6462b09d0e6b90a41430840625fdf4650573d4b"
+    },
+    {
+      "frameId": "main-wr-BA-bars",
+      "hash": "bc76d330a3e777e9561b935305f38f0694b5880ff1a61799daefa255a2317300"
+    },
+    {
+      "frameId": "main-wr-BB-paths",
+      "hash": "4ad50ff6b696e2a615281ec4874809215c1a074d157650e4423fbb9c2c36f2bf"
+    },
+    {
+      "frameId": "main-wr-BB-paths",
+      "hash": "4ad50ff6b696e2a615281ec4874809215c1a074d157650e4423fbb9c2c36f2bf"
+    },
+    {
+      "frameId": "main-wr-BB-mapping",
+      "hash": "93b6944832eccc619da96f1f7eb33cf09dbb0507953d11ed56e6d1fea40ae439"
+    },
+    {
+      "frameId": "main-wr-BB-bars",
+      "hash": "37c1200f910e28e438c1e0d95160baa4db30be2c0dfeb3deaa026e37383ee0f4"
+    },
+    {
+      "frameId": "main-wr-BC-paths",
+      "hash": "fd1f1facfdf63d65fc60fdc404e8c72de335c4f296d54bf2e08facba343fe7a5"
+    },
+    {
+      "frameId": "main-wr-BC-paths",
+      "hash": "fd1f1facfdf63d65fc60fdc404e8c72de335c4f296d54bf2e08facba343fe7a5"
+    },
+    {
+      "frameId": "main-wr-BC-mapping",
+      "hash": "dbba239da8a75adc4c0d271b9146db66331369731f619a96736adf01dba2826b"
+    },
+    {
+      "frameId": "main-wr-BC-bars",
+      "hash": "3592285705a78faeb30ac2c8f33efb9c9969b98b48a744b2136e427c7f42a2a7"
+    },
+    {
+      "frameId": "main-wr-CA-paths",
+      "hash": "3796cda271c2abd8d7461b5d7c1c3f264136e363a657ee3248eb4ddb063570ca"
+    },
+    {
+      "frameId": "main-wr-CA-paths",
+      "hash": "3796cda271c2abd8d7461b5d7c1c3f264136e363a657ee3248eb4ddb063570ca"
+    },
+    {
+      "frameId": "main-wr-CA-mapping",
+      "hash": "77eaed02bd3b1a9d15e4d043af02446ab8d958d3a1f41b7dc1dbe79f5e1df56e"
+    },
+    {
+      "frameId": "main-wr-CA-bars",
+      "hash": "c6fd6833f497119fb8438f24fdb81d33b1bae48a7b86d86d91837739db29d393"
+    },
+    {
+      "frameId": "main-wr-CB-paths",
+      "hash": "5bd8c23c0fefca28c418ae6ee7716c0c278cdb86e4f112601cfd5a3a915bd7a7"
+    },
+    {
+      "frameId": "main-wr-CB-paths",
+      "hash": "5bd8c23c0fefca28c418ae6ee7716c0c278cdb86e4f112601cfd5a3a915bd7a7"
+    },
+    {
+      "frameId": "main-wr-CB-mapping",
+      "hash": "d92f09dc0836c94fdf50d55b8519b60428c73642b4374ade7ebcbaeb0c2f159c"
+    },
+    {
+      "frameId": "main-wr-CB-bars",
+      "hash": "8bb087e4cb8fa029e9782afa24c703caee8aaae627b7267737030055a2772d41"
+    },
+    {
+      "frameId": "main-wr-CC-paths",
+      "hash": "c3bf6dd47384574a01901930ab147bd92422a621df2054d1aacd4082f7160e3b"
+    },
+    {
+      "frameId": "main-wr-CC-paths",
+      "hash": "c3bf6dd47384574a01901930ab147bd92422a621df2054d1aacd4082f7160e3b"
+    },
+    {
+      "frameId": "main-wr-CC-mapping",
+      "hash": "75069b89f3b703e899c4233f514700c6c545ee942811020fbf73dfc76850f08e"
+    },
+    {
+      "frameId": "main-wr-CC-bars",
+      "hash": "2d68416e1cdaa866acc9876d7229fd8baf019f79f772ce3b4546712949e77e43"
+    },
+    {
+      "frameId": "main-wo-AB-paths",
+      "hash": "c323a6e1e4b8fdf78bf29efb29d80355f80f92df0b2d3772458e8baa93fac8e7"
+    },
+    {
+      "frameId": "main-wo-AB-paths",
+      "hash": "c323a6e1e4b8fdf78bf29efb29d80355f80f92df0b2d3772458e8baa93fac8e7"
+    },
+    {
+      "frameId": "main-wo-AB-mapping",
+      "hash": "7a726358b9e486fe76cb34eafd00f0b841d3829807b5719ef9ecf802966ea07d"
+    },
+    {
+      "frameId": "main-wo-AB-bars",
+      "hash": "8131b12b137d4e9892e3d0899a5107b8773925c8f8c198a2b2ee17f22ba0aed4"
+    },
+    {
+      "frameId": "main-wo-AC-paths",
+      "hash": "e91c0c635791dbd402647866f9c4458ec29aa505a6201c0eca75fba658cb4728"
+    },
+    {
+      "frameId": "main-wo-AC-paths",
+      "hash": "e91c0c635791dbd402647866f9c4458ec29aa505a6201c0eca75fba658cb4728"
+    },
+    {
+      "frameId": "main-wo-AC-mapping",
+      "hash": "fa6abc1004a78166e2fd05998d5788ac577b8c646c7b463a20980211c7255502"
+    },
+    {
+      "frameId": "main-wo-AC-bars",
+      "hash": "a0df77fd8ba6bfc8144ae21b11702fb08e12939e9e8bd2cead34ae9bc6d08a00"
+    },
+    {
+      "frameId": "main-wo-BA-paths",
+      "hash": "b58d3601a53cd562649af3b373e5243e84f1a67ff6e80272b909e05af7b950ca"
+    },
+    {
+      "frameId": "main-wo-BA-paths",
+      "hash": "b58d3601a53cd562649af3b373e5243e84f1a67ff6e80272b909e05af7b950ca"
+    },
+    {
+      "frameId": "main-wo-BA-mapping",
+      "hash": "b21c2be92b697c32423917703d865950ee053f2e3d2b4e85e8362ee0e8ff8293"
+    },
+    {
+      "frameId": "main-wo-BA-bars",
+      "hash": "ee97edd923afd7727f22d2ae9984a0f9bf1174de23e9631f06d070225892f857"
+    },
+    {
+      "frameId": "main-wo-BC-paths",
+      "hash": "8c76f5689b65e52cb1141ea3318b212ade759799d31fe3bf9201cedcf29082e1"
+    },
+    {
+      "frameId": "main-wo-BC-paths",
+      "hash": "8c76f5689b65e52cb1141ea3318b212ade759799d31fe3bf9201cedcf29082e1"
+    },
+    {
+      "frameId": "main-wo-BC-mapping",
+      "hash": "f18959d67b47930a5a6e1151debfbccd1524cd8f357e3e54debc61c29680cd03"
+    },
+    {
+      "frameId": "main-wo-BC-bars",
+      "hash": "bb5c5f7085e0330d8a466f5b40dd5fedd79bb300cb3a3dd63f6057cbdd2e34a2"
+    },
+    {
+      "frameId": "main-wo-CA-paths",
+      "hash": "0e94293c93d931c648d96c49ad3623c67462b81c2601c0fc2486b24fd1f01133"
+    },
+    {
+      "frameId": "main-wo-CA-paths",
+      "hash": "0e94293c93d931c648d96c49ad3623c67462b81c2601c0fc2486b24fd1f01133"
+    },
+    {
+      "frameId": "main-wo-CA-mapping",
+      "hash": "e858d1ee515240ec3bb3f911f30af2368dab6eecc760f1b14803f70dad268315"
+    },
+    {
+      "frameId": "main-wo-CA-bars",
+      "hash": "be89b4e89d85ab2006716d293cdb8a94953ca6e08759ddce2e4f0d585d5c734b"
+    },
+    {
+      "frameId": "main-wo-CB-paths",
+      "hash": "f16ffa95b9e53b04a5dd1382bd8ee86b90c5fc22c35a68d44e4794b02e0ba3d9"
+    },
+    {
+      "frameId": "main-wo-CB-paths",
+      "hash": "f16ffa95b9e53b04a5dd1382bd8ee86b90c5fc22c35a68d44e4794b02e0ba3d9"
+    },
+    {
+      "frameId": "main-wo-CB-mapping",
+      "hash": "b4776cdbfe3218d26355051f7bd3bfe2453619cca62ca05d9ecb47c9838a6e77"
+    },
+    {
+      "frameId": "main-wo-CB-bars",
+      "hash": "4ea38617cbfeb380dd5b82822d9397d0fd621691a07b6c83ed9f4f252f88bae9"
+    }
+  ],
+  "summary": {
+    "checks": 156,
+    "passed": 154,
+    "failed": [
+      "construction/reject-blank-before-freeze",
+      "construction/reject-missing-map-weight-distribution"
+    ],
+    "scenarios": 14
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "cases_sha256": "471dd4224ac8f865339d0930f6c66a772de00b01f4d9e52bff23ae63e11f3575",
+  "checks": [
+    {
+      "condition": "main-wr-mean-v1",
+      "paths": 9,
+      "groups": 5,
+      "status": "PASS"
+    },
+    {
+      "condition": "main-wo-mean-v1",
+      "paths": 6,
+      "groups": 3,
+      "status": "PASS"
+    },
+    {
+      "condition": "task-wr-mean-v1",
+      "paths": 9,
+      "groups": 3,
+      "status": "PASS"
+    },
+    {
+      "condition": "task-wo-mean-v1",
+      "paths": 6,
+      "groups": 2,
+      "status": "PASS"
+    },
+    {
+      "condition": "example-wr-maximum-v1",
+      "paths": 4,
+      "groups": 2,
+      "status": "PASS"
+    },
+    {
+      "condition": "challenge-wr-maximum-v1",
+      "paths": 9,
+      "groups": 3,
+      "status": "PASS"
+    }
+  ],
+  "scope": "Independent expected path/values/factors/weights/mapping/pmf compared with authored data. Final DOM MathML compared separately."
+}

@@ -1,0 +1,28 @@
+START all-real-written-proof-requests
+START two-targets-and-first-freeze
+START async-edit-and-restore-proof
+START reopen-written-pending
+START restore-offscreen-vs-visible-proof
+START file-read-and-native-export-proof
+{
+  "checks": 208,
+  "passed": 193,
+  "failed": [
+    "proof/declared-source-ids/mean-wor-AB-path-focus",
+    "proof/declared-source-ids/mean-wor-AC-path-focus",
+    "proof/declared-source-ids/mean-wor-BA-path-focus",
+    "proof/declared-source-ids/mean-wor-BC-path-focus",
+    "proof/declared-source-ids/mean-wor-CA-path-focus",
+    "proof/declared-source-ids/mean-wor-CB-path-focus",
+    "proof/declared-source-ids/mean-wr-AA-path-focus",
+    "proof/declared-source-ids/mean-wr-AB-path-focus",
+    "proof/declared-source-ids/mean-wr-AC-path-focus",
+    "proof/declared-source-ids/mean-wr-BA-path-focus",
+    "proof/declared-source-ids/mean-wr-BB-path-focus",
+    "proof/declared-source-ids/mean-wr-BC-path-focus",
+    "proof/declared-source-ids/mean-wr-CA-path-focus",
+    "proof/declared-source-ids/mean-wr-CB-path-focus",
+    "proof/declared-source-ids/mean-wr-CC-path-focus"
+  ],
+  "scenarios": 6
+}

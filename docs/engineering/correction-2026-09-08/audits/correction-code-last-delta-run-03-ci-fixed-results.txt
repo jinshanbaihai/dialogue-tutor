@@ -1,0 +1,10 @@
+✔ finite construction separates incomplete, complete wrong, and repair return (3645.426279ms)
+✔ prediction stays pending without presentation and source feedback names the formula (2887.44489ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6922.346721

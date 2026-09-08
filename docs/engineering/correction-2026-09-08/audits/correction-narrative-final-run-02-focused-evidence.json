@@ -1,0 +1,233 @@
+{
+  "hashes": {
+    "html": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+    "json": "42627f4a3df54ccddfcfef28abf3a873a3a1807b955f7fd9315d3613a4f5dc90",
+    "manifest": "3bd8e42e61e8387ff4632abecf90366f3e3b9ded06f83d0e12a019252e8ecae2"
+  },
+  "limits": "Final HTML executed in independent jsdom; manual Image load/error and element rect fixtures, no browser pixels/decoding/human learning.",
+  "scenarios": [
+    {
+      "label": "assisted-incorrect",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wr-mean-v1-1788850895294-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850895071,
+            "frame-main-wr-AA-bars": 1788850895324
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850895272
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850895294-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850895294,
+            "choice": "equal",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "assisted-incorrect-next",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wr-mean-v1-1788850895294-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850895071,
+            "frame-main-wr-AA-bars": 1788850895324
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850895272
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850895294-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850895294,
+            "choice": "equal",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": ""
+    },
+    {
+      "label": "unassisted-incorrect-repair",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果不一致；请用两种输出的原像修正。检查每种输出的原像新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "检查每种输出的原像",
+          "spec": {
+            "label": "检查每种输出的原像",
+            "action": "repair",
+            "kind": "equal",
+            "conditionKey": "main-wr-mean-v1",
+            "targetId": "repair-equal"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wr-mean-v1-1788850902464-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-bars": 1788850902486
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850902464-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850902464,
+            "choice": "equal",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "输出值为什么不等可能？mean 1来自AA。 P(T=1)=19mean 5来自AC、BB、CA。 P(T=5)=13随机均匀首先作用于每阶段可选身份；统计量会把多条路径归入一个值。应先找原像，再加权。",
+      "focus": "repair-panel"
+    }
+  ],
+  "errors": [],
+  "repairHTML": "<div id=\"repair-panel\" tabindex=\"-1\"><h3 id=\"repair-equal\">输出值为什么不等可能？</h3><p>mean 1来自AA。 <math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" mathcolor=\"#0F7074\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" mathcolor=\"#0F7074\"><mn>1</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math></p><p>mean 5来自AC、BB、CA。 <math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" mathcolor=\"#0F7074\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" mathcolor=\"#0F7074\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math></p><p>随机均匀首先作用于每阶段可选身份；统计量会把多条路径归入一个值。应先找原像，再加权。</p></div>"
+}

@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "s2-ch6-workshop-cards-run03",
+  "revision": "run03-v2",
+  "presentation": "studio",
+  "title": "抽样与抽样分布｜从调查名单到工时卡",
+  "language": "zh-CN",
+  "mode": "bgct",
+  "objectives": [
+    {
+      "id": "population-design",
+      "title": "在具体调查中区分总体、样本、单位与抽样框，并评价普查和抽样调查",
+      "kind": "design"
+    },
+    {
+      "id": "statistic-concept",
+      "title": "按是否依赖未知总体参数判定统计量，并解释其随机性",
+      "kind": "concept"
+    },
+    {
+      "id": "sampling-distribution",
+      "title": "按固定抽样机制枚举样本、构造统计量的抽样分布并求概率",
+      "kind": "procedure"
+    }
+  ],
+  "activities": [
+    {
+      "id": "survey-plan",
+      "objectiveId": "population-design",
+      "type": "quiz",
+      "title": "先决定调查谁",
+      "prompt": "维修站本月收到120个替换灯罩，每个可单独识别。登记册漏掉一箱12个灯罩，只列出108个编号。现在从登记册的108个编号中等概率、不放回抽出24个，对相应灯罩做破坏性抗压测试。研究目标是这120个灯罩的抗压表现。先备：总体是研究对象全体；样本是实际抽取的部分；抽样单位是一次选取的对象；抽样框是用于抽样的清单。请写出①population、②sample、③sampling unit、④sampling frame，指出登记册的具体问题；⑤在破坏性测试且预算有限的条件下，选择普查 census 还是抽样调查 sample survey，写一个取舍。",
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "公共题卡，原创题目"
+      },
+      "format": "open",
+      "modelAnswer": "总体是本月全部120个替换灯罩；样本是实际抽中的24个灯罩；抽样单位是一个灯罩；抽样框是含108个编号的登记册。漏掉的12个仍属于总体，却没有被抽中的机会，存在覆盖遗漏。应先补全抽样框再随机抽取。在破坏性测试且预算有限时可选抽样调查，减少被毁的灯罩、时间和费用；代价是存在抽样变异，样本不能保证完全反映总体。普查测试全部120个，无抽样误差但损毁全部、成本高，仍可能有测量或记录错误。",
+      "rubric": [
+        "总体120个、样本24个、单位一个灯罩、抽样框108个编号登记册四项对应准确。",
+        "指出遗漏12个仍在总体中，补全抽样框才能覆盖目标总体。",
+        "结合破坏性与预算给选择和代价；不说普查消除所有错误。"
+      ],
+      "hint": "先分别圈出“要对其作结论的全部对象”“实际测量的对象”“一次选中的对象”“用于选取的清单”。",
+      "explanation": "逐项核对对象，再用破坏性与预算约束评价方法。",
+      "solutionId": "dt-explanation-survey"
+    },
+    {
+      "id": "statistic-check",
+      "objectiveId": "statistic-concept",
+      "type": "quiz",
+      "title": "哪个量不依赖未知参数？",
+      "prompt": "从某批灯罩的抗压力总体随机抽取两个测量值 X₁、X₂，单位为牛顿。总体均值 μ 未知。统计量 statistic 必须只由样本和已知常数计算。以下哪个量是统计量？",
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "公共题卡，原创题目"
+      },
+      "format": "choice",
+      "choices": [
+        {
+          "id": "sample",
+          "text": "(X₁+X₂)/2",
+          "feedback": "这个式子只需要样本和已知常数2。你选择了符合定义的表达式。"
+        },
+        {
+          "id": "ratio",
+          "text": "(X₁+X₂)/(2μ)",
+          "feedback": "分母还需要未知μ。先把X₁、X₂代入，你仍无法得到唯一数值；核对统计量的“仅由样本和已知常数”条件。"
+        },
+        {
+          "id": "parameter",
+          "text": "μ",
+          "feedback": "μ描述整个总体，本题没有给出；它不是从这个样本直接算出的统计量。先辨认总体参数与样本函数。"
+        },
+        {
+          "id": "center",
+          "text": "X₁−μ",
+          "feedback": "即使X₁已知，未知μ仍阻止计算。减去已知数5可算，减去本题未知μ不可直接算。"
+        }
+      ],
+      "answer": "sample",
+      "hint": "假设两次测量为10和14；哪一式能在不知道μ时算出数值？",
+      "explanation": "(X₁+X₂)/2可从样本直接计算；其余选项依赖本题未知的总体均值μ。",
+      "solutionId": "dt-explanation-statistic"
+    },
+    {
+      "id": "sample-lab",
+      "objectiveId": "sampling-distribution",
+      "type": "interactive",
+      "title": "均值越过门槛，会更常见吗？",
+      "prompt": "先固定条件，再预测概率关系；揭示后跟踪有序样本怎样合并成均值分布。",
+      "source": {
+        "repository": "DialogueTutor",
+        "path": "references/teaching-design.md",
+        "case": "Run-03 原创情境、任务编排与表现分支"
+      },
+      "bodyHtml": "<style>\n.r3-lab .r3-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem}\n.r3-lab select{font:inherit;min-height:44px;width:100%;padding:.5rem;border:1px solid var(--dt-control-line);border-radius:.35rem;background:var(--dt-surface);color:var(--dt-ink)}\n.r3-lab label{display:block;font-size:1rem}\n.r3-lab fieldset{padding:1rem;border:1px solid var(--dt-control-line);margin:1rem 0}\n.r3-lab fieldset label{padding:.35rem 0}\n.r3-lab .r3-cards{display:flex;gap:.65rem;flex-wrap:wrap;margin:.65rem 0 1rem}\n.r3-lab .r3-card{border:2px solid var(--dt-parameter-a);background:var(--dt-action-soft);padding:.7rem 1.3rem;border-radius:.4rem;color:var(--dt-ink)}\n.r3-lab .r3-callout{border-left:4px solid var(--dt-parameter-b);background:var(--dt-surface2);padding:.8rem 1rem;margin:1rem 0}\n.r3-lab table{width:100%;border-collapse:collapse;font-size:1rem}\n.r3-lab th,.r3-lab td{border-bottom:1px solid var(--dt-line);padding:.5rem;text-align:left}\n.r3-lab .r3-bar-row{display:grid;grid-template-columns:4.3rem minmax(60px,1fr) 4.3rem;gap:.5rem;align-items:center;margin:.6rem 0;font-size:1rem}\n.r3-lab .r3-track{height:26px;border:1px solid var(--dt-control-line);background:var(--dt-surface2)}\n.r3-lab .r3-bar{height:100%;min-width:1px;background:var(--dt-plot-function);border:1px solid var(--dt-plot-function)}\n.r3-lab .r3-path{font-size:1.05rem;padding:.75rem;border:1px solid var(--dt-control-line);background:var(--dt-surface2);margin:.8rem 0}\n.r3-lab .r3-history{font-size:1rem}\n.r3-lab [hidden]{display:none!important}\n@media(max-width:480px){.r3-lab .r3-controls{grid-template-columns:1fr}.r3-lab .r3-card{padding:.5rem 1rem}.r3-lab .r3-bar-row{grid-template-columns:3.4rem minmax(45px,1fr) 3.8rem}}\n</style>\n<div class=\"r3-lab\" id=\"r3-lab-root\">\n  <p>三张不同工序卡分别写着工时（分钟）。每次都从当时可抽的卡中等概率抽一张。样本均值 <math><mover><mi>X</mi><mo>¯</mo></mover></math> 是抽到的工时总和除以张数。</p>\n  <div class=\"r3-cards\" aria-label=\"总体中三张卡的值：2、4、8分钟\"><span class=\"r3-card\">2 分钟</span><span class=\"r3-card\">4 分钟</span><span class=\"r3-card\">8 分钟</span></div>\n  <div class=\"r3-controls\">\n    <label for=\"r3-n\">一次样本量 n<select id=\"r3-n\"><option value=\"1\">1 张</option><option value=\"2\" selected>2 张</option></select></label>\n    <label for=\"r3-mechanism\">抽样机制<select id=\"r3-mechanism\"><option value=\"with\">有放回 with replacement</option><option value=\"without\">无放回 without replacement</option></select></label>\n    <label for=\"r3-threshold\">关注事件：均值至少<select id=\"r3-threshold\"><option value=\"5\">5 分钟</option><option value=\"6\">6 分钟</option><option value=\"8\">8 分钟</option></select></label>\n  </div>\n  <p id=\"r3-condition\"></p>\n  <p>问题：在当前条件下，“样本均值达到门槛”的概率，与“单抽一张卡达到同一门槛”的概率相比怎样？单卡记作 X。</p>\n  <fieldset id=\"r3-prediction\"><legend>先留下判断，再查看全部可能样本</legend>\n    <label><input type=\"radio\" name=\"r3-prediction\" value=\"less\"> 样本均值事件的概率更小</label>\n    <label><input type=\"radio\" name=\"r3-prediction\" value=\"equal\"> 两个概率相等</label>\n    <label><input type=\"radio\" name=\"r3-prediction\" value=\"greater\"> 样本均值事件的概率更大</label>\n  </fieldset>\n  <div class=\"dt-row\">\n    <button type=\"button\" class=\"dt-button dt-button-primary\" id=\"r3-freeze\">保存预测</button>\n    <button type=\"button\" class=\"dt-button dt-button-primary\" id=\"r3-reveal\" hidden>揭示精确枚举</button>\n    <button type=\"button\" class=\"dt-button dt-button-quiet\" id=\"r3-direct\">不作预测，直接观察</button>\n    <button type=\"button\" class=\"dt-button dt-button-quiet\" id=\"r3-new\">同条件开始新一轮</button>\n  </div>\n  <p id=\"r3-status\" role=\"status\" aria-live=\"polite\"></p>\n  <p id=\"r3-contact\"></p>\n  <div id=\"r3-results\" hidden>\n    <p class=\"r3-callout\" id=\"r3-comparison\"></p>\n    <p id=\"r3-prediction-response\"></p>\n    <label for=\"r3-path-select\">选择一条有序样本路径，检查它产生哪个均值<select id=\"r3-path-select\"></select></label>\n    <div class=\"r3-path\" id=\"r3-path-view\"></div>\n    <h4>每种均值从哪些路径得到？</h4>\n    <div id=\"r3-path-table\"></div>\n    <h4>均值的理论抽样分布</h4>\n    <p>每行的横条长度表示概率；满宽表示概率 1。左侧为均值（分钟），右侧为精确概率。这里采用穷举，不是随机模拟频率。</p>\n    <div id=\"r3-distribution\" role=\"group\" aria-label=\"均值的理论抽样分布：横轴概率，纵向列出均值（分钟）\"></div>\n    <p id=\"r3-total\"></p>\n    <div class=\"dt-row\"><button type=\"button\" class=\"dt-button\" id=\"r3-switch\">改为无放回再验证</button><button type=\"button\" class=\"dt-button\" id=\"r3-completion\">试做另一组卡的概率补全</button></div>\n  </div>\n  <details><summary>本实验的历史轮次与原判断</summary><div id=\"r3-history\" class=\"r3-history\"></div></details>\n  <p class=\"dt-small\">预测和查看路径属于探索记录。要检验能否独立构造分布，请提交后面的新题。全解可随时查阅。</p>\n</div>\n",
+      "script": "(function () {\n  'use strict';\n  const activityId = 'sample-lab';\n  const solutionId = 'dt-explanation-lab';\n  const population = [2, 4, 8];\n  let local = null, root = null, serial = 0;\n  const clone = value => JSON.parse(JSON.stringify(value));\n  const gcd = (a, b) => b ? gcd(b, a % b) : a;\n  const fraction = (a, b) => { const g = gcd(a, b); return `${a / g}/${b / g}`; };\n  function identity(p) {\n    return JSON.stringify({ population, statistic: 'arithmetic-mean', ordered: true, equalCardChoice: true, n: p.n, mechanism: p.mechanism, event: 'mean>=threshold', threshold: p.threshold });\n  }\n  function enumerate(p) {\n    const paths = [];\n    population.forEach((a, i) => {\n      if (p.n === 1) paths.push({ values: [a], mean: a });\n      else population.forEach((b, j) => { if (p.mechanism === 'with' || i !== j) paths.push({ values: [a, b], mean: (a + b) / 2 }); });\n    });\n    const groups = [];\n    [...new Set(paths.map(x => x.mean))].sort((a, b) => a - b).forEach(value => {\n      const members = paths.filter(x => x.mean === value);\n      groups.push({ value, count: members.length, paths: members.map(x => x.values) });\n    });\n    const eventCount = paths.filter(x => x.mean >= p.threshold).length;\n    const singleCount = population.filter(x => x >= p.threshold).length;\n    const difference = eventCount * population.length - singleCount * paths.length;\n    return { paths, groups, eventCount, singleCount, total: paths.length, relation: difference < 0 ? 'less' : difference > 0 ? 'greater' : 'equal' };\n  }\n  function condition(p) { return `总体为 2、4、8 分钟；n=${p.n}；${p.mechanism === 'with' ? '有放回' : '无放回'}；事件为样本均值≥${p.threshold} 分钟`; }\n  const relationText = relation => ({ less: '小于', equal: '等于', greater: '大于' }[relation]);\n  function comparisonText(p) {\n    const r = enumerate(p);\n    return `当前${condition(p)}。P(样本均值≥${p.threshold})=${fraction(r.eventCount, r.total)}，${relationText(r.relation)}单卡概率 P(X≥${p.threshold})=${fraction(r.singleCount, 3)}。`;\n  }\n  function predictionText(s) {\n    if (!s.prediction) return '本轮未提交预测；这里记录的是直接查看结果，没有推断你的原想法。';\n    const r = enumerate(s.parameters);\n    const contact = s.predictionHadReference ? '提交前已查看覆盖本实验全部条件的全解' : s.predictionHadResult ? '提交前已见同条件结果' : '提交前尚无本实验参考或同条件结果接触记录';\n    return `原预测：${relationText(s.prediction)}；${s.prediction === r.relation ? '与本轮精确枚举一致' : `与本轮结果不一致，枚举给出“${relationText(r.relation)}”`}。${contact}。这是一条未评分的探索判断。`;\n  }\n  window.R3Sampling = Object.freeze({ enumerate, identity, condition, fraction, comparisonText, predictionText });\n  function empty(p) {\n    return { version: 1, roundId: null, phase: 'draft', parameters: p || { n: 2, mechanism: 'with', threshold: 5 }, predictionDraft: '', prediction: null, predictionAt: null, predictionHadReference: false, predictionHadResult: false, revealedAt: null, revealHadReference: false, selectedPath: null, pathSelections: [], history: [], resultContacts: [], referenceViewed: false, lastAction: null };\n  }\n  function normalize(value) {\n    const base = empty();\n    if (!value || value.version !== 1) return base;\n    const p = value.parameters || {};\n    const s = Object.assign(base, clone(value));\n    s.parameters = { n: p.n === 1 ? 1 : 2, mechanism: p.mechanism === 'without' ? 'without' : 'with', threshold: [5, 6, 8].includes(p.threshold) ? p.threshold : 5 };\n    s.history = Array.isArray(s.history) ? s.history : [];\n    s.resultContacts = Array.isArray(s.resultContacts) ? s.resultContacts : [];\n    s.pathSelections = Array.isArray(s.pathSelections) ? s.pathSelections : [];\n    if (!['draft', 'frozen', 'revealed'].includes(s.phase)) s.phase = 'draft';\n    return s;\n  }\n  function runtimeState() { return window.DialogueTutor.instance.getState().activities[activityId]; }\n  function hasReference() {\n    const panel = document.getElementById(solutionId), saved = runtimeState();\n    return Boolean((local && local.referenceViewed) || (saved.exposure && saved.exposure.reference) || (panel && panel.open));\n  }\n  function sameResultContact(s) { return s.resultContacts.some(x => x.identity === identity(s.parameters)); }\n  function snapshot(s) {\n    return { roundId: s.roundId, parameters: clone(s.parameters), phase: s.phase, prediction: s.prediction, predictionAt: s.predictionAt, predictionHadReference: s.predictionHadReference, predictionHadResult: s.predictionHadResult, revealedAt: s.revealedAt, revealHadReference: Boolean(s.revealHadReference), selectedPath: s.selectedPath, pathSelections: clone(s.pathSelections) };\n  }\n  function mergeHistory(records) {\n    const byId = new Map();\n    records.filter(x => x && x.roundId && (x.predictionAt || x.revealedAt)).forEach(x => {\n      const old = byId.get(x.roundId);\n      if (!old) { byId.set(x.roundId, clone(x)); return; }\n      // The frozen prediction fields always come from the original submission.\n      const prediction = old.predictionAt ? old : x;\n      const revealed = old.revealedAt ? old : x;\n      const merged = Object.assign({}, old, clone(x));\n      ['prediction', 'predictionAt', 'predictionHadReference', 'predictionHadResult'].forEach(k => { merged[k] = prediction[k]; });\n      merged.revealedAt = revealed.revealedAt || null;\n      merged.revealHadReference = Boolean(revealed.revealHadReference);\n      merged.phase = merged.revealedAt ? 'revealed' : merged.predictionAt ? 'frozen' : 'draft';\n      const selections = [...(old.pathSelections || []), ...(x.pathSelections || [])];\n      merged.pathSelections = [...new Map(selections.map(y => [y.eventId, y])).values()];\n      byId.set(x.roundId, merged);\n    });\n    return [...byId.values()].sort((a, b) => (a.predictionAt || a.revealedAt) - (b.predictionAt || b.revealedAt));\n  }\n  function mergeContacts(records) {\n    const map = new Map();\n    records.filter(x => x && typeof x.identity === 'string' && Number.isFinite(x.at)).forEach(x => {\n      const old = map.get(x.identity);\n      if (!old || x.at < old.at) map.set(x.identity, clone(x));\n    });\n    return [...map.values()];\n  }\n  function persistRestore() {\n    local.referenceViewed = hasReference();\n    window.DialogueTutor.instance.restoreExploration(activityId, clone(local));\n  }\n  function restore(value) {\n    const old = local, incoming = normalize(value);\n    const records = [...incoming.history];\n    if (old) records.push(...old.history, snapshot(old));\n    incoming.history = mergeHistory(records);\n    incoming.resultContacts = mergeContacts([...incoming.resultContacts, ...(old ? old.resultContacts : [])]);\n    incoming.referenceViewed = Boolean(incoming.referenceViewed || (old && old.referenceViewed));\n    // An imported draft can be resumed, but it cannot overwrite a submission\n    // that already occurred in this page under the same round identity.\n    if (!incoming.predictionAt && !incoming.revealedAt && incoming.history.some(x => x.roundId === incoming.roundId)) incoming.roundId = null;\n    // If the imported round already has a frozen prediction, keep that original\n    // snapshot; later reference contact is stored separately from it.\n    local = incoming;\n    persistRestore();\n    render();\n  }\n  function act(kind) {\n    if (!local.roundId) local.roundId = `round-${Date.now()}-${++serial}`;\n    local.referenceViewed = hasReference();\n    local.lastAction = { type: kind, at: Date.now() };\n    document.dispatchEvent(new CustomEvent('dt:exploration', { detail: { activityId, state: clone(local) } }));\n    render();\n  }\n  function newRound(p, kind) {\n    const old = local;\n    local = empty(clone(p));\n    local.history = mergeHistory([...old.history, snapshot(old)]);\n    local.resultContacts = clone(old.resultContacts);\n    local.referenceViewed = old.referenceViewed;\n    act(kind);\n  }\n  function reveal() {\n    if (local.phase === 'revealed') return;\n    local.revealHadReference = hasReference();\n    local.revealedAt = Date.now();\n    local.phase = 'revealed';\n    local.resultContacts = mergeContacts([...local.resultContacts, { identity: identity(local.parameters), at: local.revealedAt, source: 'exact-enumeration-reveal' }]);\n    act('reveal-exact-enumeration');\n  }\n  const $ = selector => root.querySelector(selector);\n  function node(tag, text) { const el = document.createElement(tag); if (text !== undefined) el.textContent = text; return el; }\n  function render() {\n    if (!root || !local) return;\n    $('#r3-n').value = String(local.parameters.n);\n    $('#r3-mechanism').value = local.parameters.mechanism;\n    $('#r3-threshold').value = String(local.parameters.threshold);\n    $('#r3-condition').textContent = condition(local.parameters) + '。改变任一条件会保存旧轮次并开始新判断。';\n    root.querySelectorAll('input[name=\"r3-prediction\"]').forEach(radio => { radio.checked = radio.value === (local.prediction || local.predictionDraft); radio.disabled = local.phase !== 'draft'; });\n    $('#r3-freeze').hidden = local.phase !== 'draft';\n    $('#r3-freeze').disabled = !local.predictionDraft;\n    $('#r3-direct').hidden = local.phase !== 'draft';\n    $('#r3-reveal').hidden = local.phase !== 'frozen';\n    $('#r3-results').hidden = local.phase !== 'revealed';\n    $('#r3-status').textContent = local.phase === 'draft' ? '本轮结果尚未揭示。先选择，再保存预测；也可以直接观察。' : local.phase === 'frozen' ? `预测已保存并锁定：“${relationText(local.prediction)}”。现在可以揭示枚举，原判断不会被后续结果改写。` : '已揭示本轮全部可能样本。下面的路径与分布对应同一组条件。';\n    const contact = [];\n    if (local.referenceViewed) contact.push('目前已查看本实验全解（覆盖全部允许条件）');\n    if (sameResultContact(local)) contact.push('目前已有同条件结果接触记录');\n    $('#r3-contact').textContent = contact.length ? contact.join('；') + '。新的预测会保留相应接触身份。' : '目前没有本实验全解或同条件结果接触记录。';\n    if (local.phase === 'revealed') renderResults();\n    const hist = $('#r3-history'); hist.replaceChildren();\n    const history = mergeHistory([...local.history, snapshot(local)]);\n    if (!history.length) hist.append(node('p', '尚无已提交预测或已揭示的轮次。'));\n    history.forEach((round, i) => {\n      const p = node('p');\n      p.textContent = `轮次 ${i + 1}：${condition(round.parameters)}。${round.prediction ? `原预测为“${relationText(round.prediction)}”，提交时间 ${new Date(round.predictionAt).toISOString()}；提交前全解接触：${round.predictionHadReference ? '有' : '无'}，同条件结果接触：${round.predictionHadResult ? '有' : '无'}` : '未提交预测'}。${round.revealedAt ? '已查看结果' : '尚未揭示结果'}。`;\n      hist.append(p);\n    });\n  }\n  function renderResults() {\n    const p = local.parameters, result = enumerate(p);\n    let reason = '';\n    if (result.relation === 'equal') reason = p.n === 1 ? 'n=1 时样本均值就是单张卡值，所以两事件相同。' : '两个事件虽不是同一组样本，但合并后的概率恰好相同；相等不代表所有统计量都与总体同分布。';\n    else reason = '检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。';\n    $('#r3-comparison').textContent = comparisonText(p) + reason;\n    $('#r3-prediction-response').textContent = predictionText(local);\n    const select = $('#r3-path-select'); select.replaceChildren();\n    result.paths.forEach((path, i) => { const option = node('option', `路径 ${i + 1}：(${path.values.join(', ')})`); option.value = String(i); select.append(option); });\n    const index = Number.isInteger(local.selectedPath) && result.paths[local.selectedPath] ? local.selectedPath : 0;\n    select.value = String(index);\n    const path = result.paths[index];\n    $('#r3-path-view').textContent = `${local.selectedPath === null ? '默认展示路径（未记为你主动选择）：' : '当前选择路径：'}(${path.values.join(', ')}) → 均值=(${path.values.join('+')})/${p.n}=${path.mean} 分钟；这条有序路径的概率=${fraction(1, result.total)}。`;\n    const table = node('table');\n    table.append(node('caption', `全部 ${result.total} 条有序样本路径，每条等概率；相同均值合并。`));\n    const head = node('tr'); ['均值（分钟）', '产生它的样本路径', '路径数／总数'].forEach(text => { const th = node('th', text); th.scope = 'col'; head.append(th); });\n    const thead = node('thead'); thead.append(head); table.append(thead);\n    const tbody = node('tbody');\n    result.groups.forEach(group => { const tr = node('tr'); tr.append(node('td', group.value), node('td', group.paths.map(path => `(${path.join(', ')})`).join('、')), node('td', `${group.count}/${result.total} = ${fraction(group.count, result.total)}`)); tbody.append(tr); });\n    table.append(tbody); $('#r3-path-table').replaceChildren(table);\n    const distribution = $('#r3-distribution'); distribution.replaceChildren();\n    result.groups.forEach(group => {\n      const row = node('div'); row.className = 'r3-bar-row';\n      const label = node('span', `${group.value} 分`), track = node('div'), bar = node('div'), prob = node('span', fraction(group.count, result.total));\n      track.className = 'r3-track'; bar.className = 'r3-bar'; bar.style.width = `${100 * group.count / result.total}%`;\n      track.setAttribute('aria-hidden', 'true'); track.append(bar); row.append(label, track, prob); distribution.append(row);\n    });\n    $('#r3-total').textContent = `总概率=(${result.groups.map(g => g.count).join('+')})/${result.total}=1。${p.n === 2 ? p.mechanism === 'with' ? '每次放回且重新等概率抽取，两次独立；每条有序路径的概率为(1/3)×(1/3)=1/9。' : '第二次在剩余2张中等概率抽取，与第一次不独立；每条允许路径的概率为(1/3)×(1/2)=1/6。' : '只抽1张，每条路径概率为1/3；此时放回机制不影响结果。'}`;\n    $('#r3-switch').textContent = p.mechanism === 'with' ? '改为无放回再验证' : '改为有放回再验证';\n  }\n  function bind() {\n    if (root) return;\n    root = document.getElementById('r3-lab-root');\n    if (!root) return;\n    root.querySelectorAll('input[name=\"r3-prediction\"]').forEach(radio => radio.addEventListener('change', () => { if (local.phase === 'draft') { local.predictionDraft = radio.value; act('prediction-draft'); } }));\n    ['#r3-n', '#r3-mechanism', '#r3-threshold'].forEach(selector => $(selector).addEventListener('change', () => newRound({ n: Number($('#r3-n').value), mechanism: $('#r3-mechanism').value, threshold: Number($('#r3-threshold').value) }, 'change-conditions')));\n    $('#r3-freeze').addEventListener('click', () => {\n      if (local.phase !== 'draft' || !local.predictionDraft) return;\n      local.prediction = local.predictionDraft;\n      local.predictionAt = Date.now();\n      local.predictionHadReference = hasReference();\n      local.predictionHadResult = sameResultContact(local);\n      local.phase = 'frozen';\n      act('submit-ungraded-prediction');\n    });\n    $('#r3-direct').addEventListener('click', reveal);\n    $('#r3-reveal').addEventListener('click', reveal);\n    $('#r3-new').addEventListener('click', () => newRound(local.parameters, 'start-new-round'));\n    $('#r3-switch').addEventListener('click', () => newRound(Object.assign({}, local.parameters, { mechanism: local.parameters.mechanism === 'with' ? 'without' : 'with' }), 'change-mechanism'));\n    $('#r3-path-select').addEventListener('change', () => {\n      if (local.phase !== 'revealed') return;\n      local.selectedPath = Number($('#r3-path-select').value);\n      local.pathSelections.push({ eventId: `path-${Date.now()}-${++serial}`, index: local.selectedPath, values: enumerate(local.parameters).paths[local.selectedPath].values, at: Date.now() });\n      act('select-enumerated-path');\n    });\n    $('#r3-completion').addEventListener('click', () => window.DialogueTutor.instance.navigate('distribution-completion'));\n    document.getElementById(solutionId).addEventListener('toggle', () => { if (local && document.getElementById(solutionId).open) { persistRestore(); render(); } });\n  }\n  ['dt:activity-mounted', 'dt:restore'].forEach(name => document.addEventListener(name, event => {\n    if (!event.detail || event.detail.activityId !== activityId) return;\n    bind(); restore(event.detail.state);\n  }));\n  document.addEventListener('dt:navigate', event => {\n    if (root && event.detail && event.detail.activityId === activityId) { persistRestore(); render(); }\n  });\n})();\n",
+      "solutionId": "dt-explanation-lab"
+    },
+    {
+      "id": "worked-distribution",
+      "objectiveId": "sampling-distribution",
+      "type": "steps",
+      "title": "完整例题：从四条路径到分布",
+      "prompt": "两张卡1、7分钟，等概率有放回抽2次。跟随完整例题确定样本均值的抽样分布。若方法熟悉，可直接进入下一题。",
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "path": "deeptutor/agents/visualize/agents/code_generator_agent.py",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "公共步进显示，原创完整例题"
+      },
+      "steps": [
+        {
+          "title": "先定基本结果与概率",
+          "bodyHtml": "<p>两张不同工时卡为1、7分钟，等概率有放回抽2次。记录顺序，得到(1,1)、(1,7)、(7,1)、(7,7)。因为每次都是1/2且独立，每条路径概率为1/4。</p>"
+        },
+        {
+          "title": "把样本变成一个统计量",
+          "bodyHtml": "<p>统计量是样本均值。将每条路径代入<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></math>，分别得到1、4、4、7分钟。两个不同路径都给出均值4。</p>"
+        },
+        {
+          "title": "合并路径概率并检查",
+          "bodyHtml": "<table><thead><tr><th scope=\"col\">均值 x（分钟）</th><th scope=\"col\">1</th><th scope=\"col\">4</th><th scope=\"col\">7</th></tr></thead><tbody><tr><td>P(均值=x)</td><td>1/4</td><td>1/2</td><td>1/4</td></tr></tbody></table><p>互斥路径(1,7)与(7,1)的概率相加，得P(均值=4)=1/4+1/4=1/2。概率非负且总和为1，完整分布成立。一次样本若为(1,7)，只给一个观测均值4；不是整个分布。</p>"
+        }
+      ],
+      "solutionId": "dt-explanation-worked"
+    },
+    {
+      "id": "distribution-completion",
+      "objectiveId": "sampling-distribution",
+      "type": "quiz",
+      "title": "补全：哪些路径给均值3？",
+      "prompt": "三张不同卡标有0、3、6分钟，每次等概率抽取，放回后再抽一次，两次独立。统计量为两张卡的样本均值。已列出9条等可能有序路径，且每条概率为1/9。请补上关键一步：P(样本均值=3)=？输入精确分数或小数。",
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "公共题卡，原创题目"
+      },
+      "format": "numeric",
+      "answer": "1/3",
+      "tolerance": 1e-06,
+      "explanation": "均值=3要求两数和为6，满足条件的有序样本为(0,6)、(3,3)、(6,0)。互斥概率相加，得3×1/9=1/3。若结果不符，先把每个候选样本的两数相加，保留顺序不同的两条路径。",
+      "hint": "均值等于3相当于两张卡的值之和等于6。列出满足条件的有序对，再乘每条路径概率。",
+      "remediation": "返回完整例题，检查两个不同顺序如何合并到同一均值。",
+      "solutionId": "dt-explanation-completion"
+    },
+    {
+      "id": "distribution-independent",
+      "objectiveId": "sampling-distribution",
+      "type": "quiz",
+      "title": "独立构造：改用最大值",
+      "prompt": "独立新题：三张不同卡为1、4、9分钟，等概率有放回抽2次，两次独立。现在统计量改为较大值 M=max(X₁,X₂)。请写出M的完整抽样分布（所有取值和精确概率），说明基本样本为何等可能，以及怎样合并；最后说明一次抽到(1,9)得到的M，与整个抽样分布有什么区别。",
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "公共题卡，原创题目"
+      },
+      "format": "open",
+      "modelAnswer": "9条有序基本样本各有概率1/9。M=1仅由(1,1)产生，概率1/9；M=4由(1,4)、(4,1)、(4,4)产生，概率3/9=1/3；M=9由(1,9)、(4,9)、(9,1)、(9,4)、(9,9)产生，概率5/9。总概率(1+3+5)/9=1。一次样本(1,9)给出单个观测值M=9；完整抽样分布说明全部可能的M及概率。",
+      "rubric": [
+        "写出M=1、4、9，概率依次为1/9、1/3、5/9。",
+        "说明放回且独立，9条有序路径等概率，合并路径或累计后相减的依据正确。",
+        "区分M=9的一次观测与全部取值及概率，并检验概率和为1。"
+      ],
+      "hint": "把9条有序样本都写出；每对只保留较大值，再数每种结果出现几次。",
+      "explanation": "这里统计量变成最大值，必须重新把样本映射成M；原答保存后由你按要点评价。",
+      "solutionId": "dt-explanation-independent"
+    },
+    {
+      "id": "distribution-probability",
+      "objectiveId": "sampling-distribution",
+      "type": "quiz",
+      "title": "独立求极差概率",
+      "prompt": "独立计算：三张不同卡为2、5、10分钟，等概率有放回抽2次，两次独立。统计量改为极差 R=max(X₁,X₂)−min(X₁,X₂)。求P(R≥5)。请自行组织样本空间，输入精确分数或小数。",
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "公共题卡，原创题目"
+      },
+      "format": "numeric",
+      "answer": "4/9",
+      "tolerance": 1e-06,
+      "explanation": "9条等可能有序样本中，(2,10)、(10,2)给R=8，(5,10)、(10,5)给R=5。因此P(R≥5)=4/9。其余样本极差为0或3。数值不符时先检查“≥”包含等于5，并保留每对的两个顺序；页面不知道你的具体错误原因。",
+      "hint": "逐对求较大值减较小值，再筛选极差至少5的有序路径；同一张值抽两次，极差是0。",
+      "remediation": "在完整例题重新检查“有序路径等可能→按统计量合并”这一步，然后返回核对极差。",
+      "solutionId": "dt-explanation-probability"
+    },
+    {
+      "id": "without-replacement",
+      "objectiveId": "statistic-concept",
+      "type": "quiz",
+      "title": "迁移：无放回时重新构造",
+      "prompt": "改变条件：三张不同工时卡为3、6、12分钟。第一次从3张中等概率抽1张，不放回；第二次从剩下2张中等概率抽1张。以两张卡的样本均值为统计量。请写完整抽样分布，说明每条有序样本的概率和两次为何不独立；说明即使未知总体均值μ，样本均值是否仍为统计量。最后区分：抽取前的随机变量，与已抽到(3,12)后记录的一个均值。",
+      "source": {
+        "repository": "HKUDS/DeepTutor",
+        "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+        "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+        "case": "公共题卡，原创题目"
+      },
+      "format": "open",
+      "modelAnswer": "6条允许的有序样本各有概率(1/3)×(1/2)=1/6。(3,6)、(6,3)给均值4.5；(3,12)、(12,3)给7.5；(6,12)、(12,6)给9，因此概率均为2/6=1/3。概率总和为1。第二次的选择依赖第一次：例如已抽到3后，再抽3的概率为0，所以不独立。样本均值只由两个样本值与已知常数2计算，不依赖未知μ，因此仍是统计量。抽取前样本未定，均值可取4.5、7.5、9，是随机变量；抽到(3,12)后记录的7.5分钟是这个统计量的一次观测值，不是整个分布。",
+      "rubric": [
+        "允许6条有序路径且每条1/6；没有(3,3)、(6,6)、(12,12)。",
+        "均值4.5、7.5、9，各概率1/3，并核对总和1。",
+        "用具体条件概率说明不独立；样本均值不依赖未知μ，所以仍是统计量。",
+        "抽取前均值随随机样本变化；抽到(3,12)后的7.5分钟是一次观测值。"
+      ],
+      "hint": "第一次3种选择，第二次只剩2种。先列允许的有序样本，再计算均值。",
+      "explanation": "此题同时改变抽样机制并要求说明统计量定义，开放原答与自评分开保存。",
+      "solutionId": "dt-explanation-without"
+    },
+    {
+      "id": "evidence-close",
+      "objectiveId": "sampling-distribution",
+      "type": "interactive",
+      "title": "带着真实证据收束",
+      "prompt": "回看本轮实验的条件与自己实际提交的答案，选择一个改变条件的挑战或一个回顾入口。",
+      "source": {
+        "repository": "DialogueTutor",
+        "path": "references/teaching-design.md",
+        "case": "Run-03 原创情境、任务编排与表现分支"
+      },
+      "bodyHtml": "<div id=\"r3-close-root\">\n  <p id=\"r3-close-loop\" role=\"status\"></p>\n  <ul id=\"r3-evidence-list\"></ul>\n  <p id=\"r3-open-evidence\"></p>\n  <div class=\"dt-row\">\n    <button type=\"button\" class=\"dt-button\" id=\"r3-return-lab\">返回工时卡实验</button>\n    <button type=\"button\" class=\"dt-button dt-button-primary\" id=\"r3-challenge\">挑战：无放回时重新构造分布</button>\n    <button type=\"button\" class=\"dt-button\" id=\"r3-review\">回访：独立求极差概率</button>\n  </div>\n  <p id=\"r3-review-status\"></p>\n  <p>下次先回答：“基本样本为什么等可能？怎样把它们合并成统计量的概率？”再核对自己的过程。页面保存的是本次作答与接触记录，学习的长期保持仍需以后的实际回忆检验。</p>\n</div>\n",
+      "script": "(function () {\n  'use strict';\n  const id = 'evidence-close', reviewId = 'distribution-probability';\n  let root = null, lesson = null;\n  const $ = selector => root.querySelector(selector);\n  function reviewTarget(state) {\n    const saved = state.activities[reviewId];\n    const item = window.DialogueTutor.getReviews(lesson, state, Date.now()).find(x => x.activityId === reviewId);\n    const pending = saved.status === 'idle' && Boolean(saved.draft.trim()) || saved.status === 'submitted' && saved.attempts.some(x => x.id === saved.submittedAttemptId && x.correct === null);\n    return { saved, item, pending };\n  }\n  function render() {\n    if (!root) return;\n    const state = window.DialogueTutor.instance.getState(), lab = state.activities['sample-lab'].exploration;\n    const p = lab.parameters || { n: 2, mechanism: 'with', threshold: 5 };\n    let loop;\n    if (lab.phase === 'revealed' && lab.revealedAt) {\n      loop = `开场的概率比较，在本轮已有可查证据：${window.R3Sampling.comparisonText(p)}${window.R3Sampling.predictionText(lab)}`;\n      if (lab.revealHadReference) loop += ' 本次揭示结果前已查看实验全解。';\n      else if (lab.referenceViewed) loop += ' 目前已查看实验全解；这不倒改原预测的提交条件。';\n      if (lab.pathSelections && lab.pathSelections.length) loop += ` 本轮记录了 ${lab.pathSelections.length} 次主动选择路径查看。`;\n      else loop += ' 本轮没有主动选择路径的记录；展示过的默认路径不算你亲自计算。';\n      loop += ' 可在“无放回”新题中自行组织样本空间。';\n    } else loop = `${window.R3Sampling.condition(p)}。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。`;\n    $('#r3-close-loop').textContent = loop;\n    const list = $('#r3-evidence-list'); list.replaceChildren();\n    ['statistic-check', 'distribution-completion', 'distribution-probability'].forEach(activityId => {\n      const def = lesson.activities.find(x => x.id === activityId), saved = state.activities[activityId], last = saved.attempts[saved.attempts.length - 1];\n      const li = document.createElement('li');\n      let text = saved.status === 'skipped' ? '已跳过，未记作错误' : '尚无已提交作答';\n      if (last) text = last.correct === true ? last.assisted ? '最新数值或选项核对正确，提交前有提示／参考接触' : '最新数值或选项独立客观核对正确' : '最新作答与参考不符，仍可核对具体依据';\n      li.textContent = `${def.title}：${text}。`; list.append(li);\n    });\n    const statements = ['survey-plan', 'distribution-independent', 'without-replacement'].map(activityId => {\n      const def = lesson.activities.find(x => x.id === activityId), saved = state.activities[activityId], last = saved.attempts[saved.attempts.length - 1];\n      if (!last) return `${def.title}：${saved.status === 'skipped' ? '已跳过' : '尚无原答'}`;\n      return `${def.title}：原答已保存，${last.correct === null ? '等待自评' : last.correct ? '自评达到要点' : '自评仍需练习'}${last.assisted ? '（辅助后提交）' : ''}`;\n    });\n    $('#r3-open-evidence').textContent = statements.join('；') + '。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。';\n    const target = reviewTarget(state);\n    const date = target.item ? new Date(target.item.review.dueAt).toLocaleString('zh-CN') : '';\n    $('#r3-review').textContent = target.pending ? '继续未完成：独立求极差概率' : target.item ? target.item.due ? '到期回顾：独立求极差概率' : '提前练习：独立求极差概率' : '初次作答：独立求极差概率';\n    $('#r3-review-status').textContent = target.pending ? '已有未完成作答，将保留当前内容。' : target.item ? `记录安排的回顾时间：${date}。${target.item.due ? '当前已到期。' : '当前未到期，提前练习不会推进间隔。'}` : '这道题还没有复习记录；先完成一次真实作答，再按记录回来。';\n  }\n  function bind() {\n    if (root) return;\n    root = document.getElementById('r3-close-root');\n    if (!root) return;\n    lesson = JSON.parse(document.getElementById('dt-lesson').textContent);\n    $('#r3-return-lab').addEventListener('click', () => window.DialogueTutor.instance.navigate('sample-lab'));\n    $('#r3-challenge').addEventListener('click', () => window.DialogueTutor.instance.navigate('without-replacement'));\n    $('#r3-review').addEventListener('click', () => {\n      const target = reviewTarget(window.DialogueTutor.instance.getState());\n      if (target.item) window.DialogueTutor.instance.navigate(target.item.activityId, target.item);\n      else window.DialogueTutor.instance.navigate(reviewId);\n    });\n  }\n  ['dt:activity-mounted', 'dt:restore', 'dt:navigate'].forEach(name => document.addEventListener(name, event => { if (event.detail && event.detail.activityId === id) { bind(); render(); } }));\n  document.addEventListener('dt:exploration', () => { if (root && window.DialogueTutor.instance.getState().currentActivity === id) render(); });\n})();\n"
+    }
+  ],
+  "sections": [
+    {
+      "id": "survey",
+      "title": "调查从对象开始",
+      "lead": "你要决定测试哪些灯罩；先让总体、名单和实际样本各归其位。",
+      "bodyHtml": "<p>先明确“要对谁作结论”，再选资料来源。总体是本月全部120个替换灯罩；样本是实际抽中的24个灯罩；抽样单位是一个灯罩；抽样框是含108个编号的登记册。漏掉的12个仍属于总体，却没有被抽中的机会，存在覆盖遗漏。应先补全抽样框再随机抽取。在破坏性测试且预算有限时可选抽样调查，减少被毁的灯罩、时间和费用；代价是存在抽样变异，样本不能保证完全反映总体。普查测试全部120个，无抽样误差但损毁全部、成本高，仍可能有测量或记录错误。</p><table><thead><tr><th scope=\"col\">术语</th><th scope=\"col\">本题对象</th></tr></thead><tbody><tr><td>总体 population</td><td>120个灯罩</td></tr><tr><td>样本 sample</td><td>实际抽中的24个灯罩</td></tr><tr><td>抽样单位 sampling unit</td><td>一个灯罩</td></tr><tr><td>抽样框 sampling frame</td><td>列出108个编号的登记册</td></tr></tbody></table><p>抽样框是一份用于选取的清单，不是总体的同义词。清单完整时，才可能让目标总体中的每个单位被抽到。本题的随机选择只能解决108个编号之间的选择问题，不能补回根本不在名单上的12个。</p><p>简单随机样本（simple random sample）要求固定样本量下，每一组可能样本有相同机会。若每次从剩余编号中等概率抽取，直至取满24个，得到登记册范围内的简单随机样本。不要把“方便找到的24个”当作随机样本。普查（census）调查全体，抽样调查（sample survey）只调查其中一部分。</p><table><thead><tr><th scope=\"col\">做法</th><th scope=\"col\">可能的优点</th><th scope=\"col\">代价与限制</th></tr></thead><tbody><tr><td>普查</td><td>覆盖全体，无抽样变异；适合对象少、无损且成本可接受的核对</td><td>时间与成本高；本题会破坏全部产品；仍可能测错、漏记</td></tr><tr><td>抽样调查</td><td>较快、较省；破坏性试验损耗少</td><td>存在抽样变异；抽样框和选择机制也可能带来偏差</td></tr></tbody></table><p>评价依据来自本题约束，没有一种方法在所有任务中都最好。以上是自拟核对要点，不是官方评分细则。</p>",
+      "activityIds": [
+        "survey-plan"
+      ],
+      "explanationTitle": "查看本任务的完整讲解与参考"
+    },
+    {
+      "id": "statistic",
+      "title": "用样本计算一个量",
+      "lead": "样本测完以后，哪些量能直接算出来？",
+      "bodyHtml": "<p>统计量（statistic）是样本观测值与已知常数的函数，不含未知总体参数（population parameter）。用途是把一组样本压缩为可比较的数值。</p><p>样本均值可直接从两次测量算出：<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></math>。例如样本为10 N与14 N，均值为12 N，不需要知道μ。抽样前，样本未定，样本均值也是随机变量；抽样后，12 N是它的一次观测值。</p><p>μ描述整个总体，本题未知。X₁−μ、(X₁+X₂)/(2μ)及μ本身都不能仅用本题样本求出，因而不满足这里的统计量定义。若演示中把另一个小总体的所有值列出来，不会改变本题“μ未知”的条件。</p><p>完整答案：选择(X₁+X₂)/2。需要检查的是计算是否依赖未知参数，不是表达式看上去有没有随机字母。</p>",
+      "activityIds": [
+        "statistic-check"
+      ],
+      "explanationTitle": "查看本任务的完整讲解与参考"
+    },
+    {
+      "id": "lab",
+      "title": "把抽样方案固定下来",
+      "lead": "同一张卡的值与两张卡的均值，会有怎样的概率关系？先留下自己的判断。",
+      "bodyHtml": "<p>本全解覆盖实验中全部可选条件：总体值2、4、8分钟，样本量1或2，有放回或无放回，门槛5、6或8分钟。查看后，新的实验预测会标记全解接触。</p><p>抽样分布（sampling distribution）描述在一个固定抽样方案下，统计量的所有可能取值及各自的概率。一次样本只有一个均值；反复实施同一方案，才会看到均值的变化。理论抽样分布不需要实际反复抽很多次，可以枚举或推导得到。</p><p>有放回抽2次：每次3种选择，两次独立，9条有序路径各有概率1/9。先把每条路径代入<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></math>，再合并相同均值。“路径等可能”不表示“不同均值等可能”。</p><table><thead><tr><th scope=\"col\">均值（分钟）</th><th scope=\"col\">有序路径</th><th scope=\"col\">理论概率</th></tr></thead><tbody><tr><td>2</td><td>(2,2)</td><td>1/9</td></tr><tr><td>3</td><td>(2,4)、(4,2)</td><td>2/9</td></tr><tr><td>4</td><td>(4,4)</td><td>1/9</td></tr><tr><td>5</td><td>(2,8)、(8,2)</td><td>2/9</td></tr><tr><td>6</td><td>(4,8)、(8,4)</td><td>2/9</td></tr><tr><td>8</td><td>(8,8)</td><td>1/9</td></tr></tbody></table><p>默认门槛5下，达到门槛的路径数为2+2+1=5，因此P(均值≥5)=5/9；单卡只有8达到门槛，P(X≥5)=1/3，所以前者更大。条件改变后重新计数，不能沿用5/9。</p><p>无放回抽2次：第一次3种，第二次剩2种，6条有序路径各有概率1/6，两次不独立。均值3、5、6分别来自两条路径，概率均为1/3。此时没有(2,2)、(4,4)、(8,8)。样本量1时均值就是单张值，机制没有影响。</p><table><caption>全部实验条件的核对表</caption><thead><tr><th scope=\"col\">n</th><th scope=\"col\">机制</th><th scope=\"col\">P(均值≥5)</th><th scope=\"col\">P(均值≥6)</th><th scope=\"col\">P(均值≥8)</th></tr></thead><tbody><tr><td>1</td><td>有放回</td><td>1/3</td><td>1/3</td><td>1/3</td></tr><tr><td>1</td><td>无放回</td><td>1/3</td><td>1/3</td><td>1/3</td></tr><tr><td>2</td><td>有放回</td><td>5/9</td><td>1/3</td><td>1/9</td></tr><tr><td>2</td><td>无放回</td><td>2/3</td><td>1/3</td><td>0</td></tr></tbody></table><p>三个门槛对应的单卡概率均为1/3。比较表内数值可以出现更小、相等或更大；这种关系由总体、统计量、样本量、机制和事件共同决定。</p><p>枚举是理论计算；随机模拟得到的是有限次的相对频率，可能偏离理论值。本实验不用随机模拟，不把手选路径当作随机抽样次数。</p>",
+      "activityIds": [
+        "sample-lab"
+      ],
+      "explanationTitle": "查看实验原理、全部条件概率表与完整答案"
+    },
+    {
+      "id": "worked",
+      "title": "把方法完整走一遍",
+      "lead": "若你还不熟悉枚举，先用两张卡看清“路径→统计量→概率”。",
+      "bodyHtml": "<p>任务：两张卡1、7分钟，等概率有放回抽2次，求样本均值的完整抽样分布。</p><h3>先定基本结果与概率</h3><p>两张不同工时卡为1、7分钟，等概率有放回抽2次。记录顺序，得到(1,1)、(1,7)、(7,1)、(7,7)。因为每次都是1/2且独立，每条路径概率为1/4。</p><h3>把样本变成一个统计量</h3><p>统计量是样本均值。将每条路径代入<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></math>，分别得到1、4、4、7分钟。两个不同路径都给出均值4。</p><h3>合并路径概率并检查</h3><table><thead><tr><th scope=\"col\">均值 x（分钟）</th><th scope=\"col\">1</th><th scope=\"col\">4</th><th scope=\"col\">7</th></tr></thead><tbody><tr><td>P(均值=x)</td><td>1/4</td><td>1/2</td><td>1/4</td></tr></tbody></table><p>互斥路径(1,7)与(7,1)的概率相加，得P(均值=4)=1/4+1/4=1/2。概率非负且总和为1，完整分布成立。一次样本若为(1,7)，只给一个观测均值4；不是整个分布。</p><p>接着用另一组卡补全概率，再独立改变统计量。这里的步进只是看完整例题，不接收独立答案。</p>",
+      "activityIds": [
+        "worked-distribution"
+      ],
+      "explanationTitle": "查看本任务的完整讲解与参考"
+    },
+    {
+      "id": "completion",
+      "title": "把关键一步交给你",
+      "lead": "另一组卡保留相同机制：现在由你找出该合并的路径。",
+      "bodyHtml": "<p>三张不同卡标有0、3、6分钟，每次等概率抽取，放回后再抽一次，两次独立。统计量为两张卡的样本均值。已列出9条等可能有序路径，且每条概率为1/9。请补上关键一步：P(样本均值=3)=？输入精确分数或小数。</p><p>均值=3要求两数和为6，满足条件的有序样本为(0,6)、(3,3)、(6,0)。互斥概率相加，得3×1/9=1/3。若结果不符，先把每个候选样本的两数相加，保留顺序不同的两条路径。</p><table><caption>格内为均值（分钟），每格概率1/9</caption><thead><tr><th scope=\"col\">第一张＼第二张</th><th scope=\"col\">0</th><th scope=\"col\">3</th><th scope=\"col\">6</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>1.5</td><td>3</td></tr><tr><td>3</td><td>1.5</td><td>3</td><td>4.5</td></tr><tr><td>6</td><td>3</td><td>4.5</td><td>6</td></tr></tbody></table><p>完整分布的均值取值为0、1.5、3、4.5、6，概率依次为1/9、2/9、3/9、2/9、1/9，总和为1。</p>",
+      "activityIds": [
+        "distribution-completion"
+      ],
+      "explanationTitle": "查看本任务的完整讲解与参考"
+    },
+    {
+      "id": "independent",
+      "title": "自行构造完整分布",
+      "lead": "保留放回条件，改用最大值；需要重新决定怎样归组。",
+      "bodyHtml": "<p>独立新题：三张不同卡为1、4、9分钟，等概率有放回抽2次，两次独立。现在统计量改为较大值 M=max(X₁,X₂)。请写出M的完整抽样分布（所有取值和精确概率），说明基本样本为何等可能，以及怎样合并；最后说明一次抽到(1,9)得到的M，与整个抽样分布有什么区别。</p><p>9条有序基本样本各有概率1/9。M=1仅由(1,1)产生，概率1/9；M=4由(1,4)、(4,1)、(4,4)产生，概率3/9=1/3；M=9由(1,9)、(4,9)、(9,1)、(9,4)、(9,9)产生，概率5/9。总概率(1+3+5)/9=1。一次样本(1,9)给出单个观测值M=9；完整抽样分布说明全部可能的M及概率。</p><table><thead><tr><th scope=\"col\">M（分钟）</th><th scope=\"col\">1</th><th scope=\"col\">4</th><th scope=\"col\">9</th></tr></thead><tbody><tr><td>P(M=m)</td><td>1/9</td><td>1/3</td><td>5/9</td></tr></tbody></table><p>也可先累计：M≤4要求两张都来自{1,4}，概率(2/3)²=4/9；再减去M=1的1/9，得M=4的3/9。统计量改变后必须重新映射每条样本，不能照搬均值分布。评价要点为自拟。</p>",
+      "activityIds": [
+        "distribution-independent"
+      ],
+      "explanationTitle": "查看本任务的完整讲解与参考"
+    },
+    {
+      "id": "probability",
+      "title": "留下独立数值证据",
+      "lead": "再换一组卡与统计量，检验你能否把枚举用于一个概率问题。",
+      "bodyHtml": "<p>独立计算：三张不同卡为2、5、10分钟，等概率有放回抽2次，两次独立。统计量改为极差 R=max(X₁,X₂)−min(X₁,X₂)。求P(R≥5)。请自行组织样本空间，输入精确分数或小数。</p><p>9条等可能有序样本中，(2,10)、(10,2)给R=8，(5,10)、(10,5)给R=5。因此P(R≥5)=4/9。其余样本极差为0或3。数值不符时先检查“≥”包含等于5，并保留每对的两个顺序；页面不知道你的具体错误原因。</p><table><thead><tr><th scope=\"col\">R（分钟）</th><th scope=\"col\">0</th><th scope=\"col\">3</th><th scope=\"col\">5</th><th scope=\"col\">8</th></tr></thead><tbody><tr><td>有序路径数</td><td>3</td><td>2</td><td>2</td><td>2</td></tr><tr><td>理论概率</td><td>1/3</td><td>2/9</td><td>2/9</td><td>2/9</td></tr></tbody></table><p>R只由样本计算，是统计量。完整分布各项非负，总和为1。此次数值核对只能确认概率结果；完整推导仍应能用样本路径解释。</p>",
+      "activityIds": [
+        "distribution-probability"
+      ],
+      "explanationTitle": "查看本任务的完整讲解与参考"
+    },
+    {
+      "id": "without",
+      "title": "改变机制再应用",
+      "lead": "这次不放回，哪些样本不再可能？用新题把依据写出来。",
+      "bodyHtml": "<p>改变条件：三张不同工时卡为3、6、12分钟。第一次从3张中等概率抽1张，不放回；第二次从剩下2张中等概率抽1张。以两张卡的样本均值为统计量。请写完整抽样分布，说明每条有序样本的概率和两次为何不独立；说明即使未知总体均值μ，样本均值是否仍为统计量。最后区分：抽取前的随机变量，与已抽到(3,12)后记录的一个均值。</p><p>6条允许的有序样本各有概率(1/3)×(1/2)=1/6。(3,6)、(6,3)给均值4.5；(3,12)、(12,3)给7.5；(6,12)、(12,6)给9，因此概率均为2/6=1/3。概率总和为1。第二次的选择依赖第一次：例如已抽到3后，再抽3的概率为0，所以不独立。样本均值只由两个样本值与已知常数2计算，不依赖未知μ，因此仍是统计量。抽取前样本未定，均值可取4.5、7.5、9，是随机变量；抽到(3,12)后记录的7.5分钟是这个统计量的一次观测值，不是整个分布。</p><table><thead><tr><th scope=\"col\">样本均值（分钟）</th><th scope=\"col\">4.5</th><th scope=\"col\">7.5</th><th scope=\"col\">9</th></tr></thead><tbody><tr><td>概率</td><td>1/3</td><td>1/3</td><td>1/3</td></tr></tbody></table><p>也可采用3组无序样本{3,6}、{3,12}、{6,12}，本题每组恰由2条有序路径合并，故各组等概率1/3。不能在未说明机制时假定所有无序样本都等可能。有放回时，(3,3)与{3,6}包含的有序路径数不同。</p>",
+      "activityIds": [
+        "without-replacement"
+      ],
+      "explanationTitle": "查看本任务的完整讲解与参考"
+    },
+    {
+      "id": "close",
+      "title": "哪些关系已经留下证据？",
+      "lead": "看到结果、提交计算和自评解释，是不同的记录。",
+      "bodyHtml": "<p>本章的三个核心问题：调查对象与抽样机制是什么；统计量是否只用样本和已知常数；固定抽样方案下，统计量如何取不同值及相应概率。</p><p>收束依据本页面实际记录，不把探索参与变成正确性、不把自评改成客观分数，也不把当场重试称作延迟保持。回顾入口采用公共运行时的真实日期与重试流程。</p><p>范围依据：Pearson S2 Student Book官方样章目录的第六章6.1–6.3，以及S2规范4.1–4.2；本课题目与核对要点均为原创。第七章假设检验不在本课范围。</p><p><a href=\"https://www.pearson.com/content/dam/one-dot-com/one-dot-com/international-schools/pdfs/secondary-curriculum/international-a-levels/mathematics/International-A-Level-Mathematics-Statistics-2-Student-Book-sample.pdf\">Pearson官方样章目录</a>；<a href=\"https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/international-a-level-maths-spec.pdf\">Pearson IAL规范</a>。依据本轮提供的2026-09-07范围核对，未取得教材本章全文。</p>",
+      "activityIds": [
+        "evidence-close"
+      ],
+      "explanationTitle": "查看章节依据与记录含义"
+    }
+  ],
+  "pathways": [
+    {
+      "on": "incorrect",
+      "to": "survey-plan",
+      "label": "依据对象表重新核对调查方案",
+      "from": "survey-plan"
+    },
+    {
+      "on": "assisted",
+      "to": "statistic-check",
+      "label": "继续判断样本能算出的量",
+      "from": "survey-plan"
+    },
+    {
+      "on": "skipped",
+      "to": "worked-distribution",
+      "label": "先从两张卡的完整例题开始",
+      "from": "survey-plan"
+    },
+    {
+      "on": "incorrect",
+      "to": "worked-distribution",
+      "label": "看清一个样本怎样产生一个统计量",
+      "from": "statistic-check"
+    },
+    {
+      "on": "assisted",
+      "to": "distribution-completion",
+      "label": "在另一组卡中练习样本计算",
+      "from": "statistic-check"
+    },
+    {
+      "on": "correct",
+      "to": "sample-lab",
+      "label": "预测并验证均值的抽样分布",
+      "from": "statistic-check"
+    },
+    {
+      "on": "skipped",
+      "to": "worked-distribution",
+      "label": "先看完整例题中的样本均值",
+      "from": "statistic-check"
+    },
+    {
+      "on": "assisted",
+      "to": "distribution-completion",
+      "label": "把实验中的归组方法用于新题",
+      "from": "sample-lab"
+    },
+    {
+      "on": "skipped",
+      "to": "worked-distribution",
+      "label": "先看两张卡的完整例题",
+      "from": "sample-lab"
+    },
+    {
+      "on": "skipped",
+      "to": "distribution-completion",
+      "label": "直接尝试概率补全",
+      "from": "worked-distribution"
+    },
+    {
+      "on": "incorrect",
+      "to": "worked-distribution",
+      "label": "回到例题核对互斥路径的合并",
+      "from": "distribution-completion"
+    },
+    {
+      "on": "assisted",
+      "to": "distribution-independent",
+      "label": "在未给完整表的新题中独立组织",
+      "from": "distribution-completion"
+    },
+    {
+      "on": "correct",
+      "to": "distribution-probability",
+      "label": "改用极差求一个新概率",
+      "from": "distribution-completion"
+    },
+    {
+      "on": "skipped",
+      "to": "worked-distribution",
+      "label": "先查看一遍完整方法",
+      "from": "distribution-completion"
+    },
+    {
+      "on": "incorrect",
+      "to": "worked-distribution",
+      "label": "返回样本到统计量的完整映射",
+      "from": "distribution-independent"
+    },
+    {
+      "on": "assisted",
+      "to": "distribution-probability",
+      "label": "再用极差留下数值作答",
+      "from": "distribution-independent"
+    },
+    {
+      "on": "skipped",
+      "to": "distribution-completion",
+      "label": "先补全一项关键概率",
+      "from": "distribution-independent"
+    },
+    {
+      "on": "incorrect",
+      "to": "worked-distribution",
+      "label": "用完整例题检查有序样本与合并",
+      "from": "distribution-probability"
+    },
+    {
+      "on": "assisted",
+      "to": "without-replacement",
+      "label": "换成无放回条件写出依据",
+      "from": "distribution-probability"
+    },
+    {
+      "on": "correct",
+      "to": "evidence-close",
+      "label": "检查已有证据并安排回顾",
+      "from": "distribution-probability"
+    },
+    {
+      "on": "skipped",
+      "to": "distribution-completion",
+      "label": "先完成路径合并的关键一步",
+      "from": "distribution-probability"
+    },
+    {
+      "on": "incorrect",
+      "to": "worked-distribution",
+      "label": "对照完整例题中有放回的依据",
+      "from": "without-replacement"
+    },
+    {
+      "on": "assisted",
+      "to": "evidence-close",
+      "label": "区分已有的辅助与独立证据",
+      "from": "without-replacement"
+    },
+    {
+      "on": "skipped",
+      "to": "sample-lab",
+      "label": "先在实验中切换抽样机制",
+      "from": "without-replacement"
+    }
+  ]
+}

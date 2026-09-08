@@ -1,0 +1,1202 @@
+{
+  "htmlSHA": "dcf48266c5a6c9676673073a6381adeef18d8326bd8eba64e747ccd7b04b68fc",
+  "scope": "independent bounded closing draft DOM review; no Image load stub, no browser layout or whole-course claim",
+  "scenes": [
+    {
+      "name": "empty-partial-observed-no-answer",
+      "assertions": [
+        {
+          "name": "fresh closing withholds comparison",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。当前尚未提交判断。当前条件尚未记录参考接触。核看均值4的原像与概率自由回看当前条件完整推导"
+        },
+        {
+          "name": "first actual target is mean WR group4",
+          "pass": true,
+          "actual": "mean-wr-group-4"
+        },
+        {
+          "name": "one target still withholds comparison",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已核看均值4；尚需核看均值6，此处暂不作两概率的比较结论。当前尚未提交判断。当前条件已有参考接触，继续作答会保留辅助标识。核看均值6的原像与概率自由回看当前条件完整推导"
+        },
+        {
+          "name": "second actual target is mean WR group6",
+          "pass": true,
+          "actual": "mean-wr-group-6"
+        },
+        {
+          "name": "observation gives exact WR facts without own answer",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你已观察结果，但尚未提交自己的判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "observing creates no submission",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [],
+            "contacts": {
+              "mean-wr-group-4": {
+                "sourceId": "mean-wr-group-4",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  4
+                ],
+                "at": 1800000000000
+              },
+              "mean-wr-group-6": {
+                "sourceId": "mean-wr-group-6",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  6
+                ],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "next actually switches to WOR",
+          "pass": true
+        },
+        {
+          "name": "new unseen condition does not inherit comparison",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。当前尚未提交判断。当前条件尚未记录参考接触。核看均值4的原像与概率自由回看当前条件完整推导"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wr-independent-wrong",
+      "assertions": [
+        {
+          "name": "prediction alone does not reveal facts",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。你的原判断是“小于”，已保存，待核对。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。核看均值4的原像与概率自由回看当前条件完整推导"
+        },
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。重查这次比较开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。重查这次比较开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。重查这次比较开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": false
+        },
+        {
+          "name": "wrong closing leads into current repair",
+          "pass": true,
+          "actual": "有放回 · 两抽独立 · 答卷 mean-lab-wr-1800000000000-1你选了“小于”。下面重新计算两边，再核对比较方向。展开并定位本条件全部必要原行重查判断：分别列出均值4与6的原像，把每条路径的概率相加，然后比较。返回有放回 · 两抽独立当前草稿（保留答卷）重开有放回 · 两抽独立答卷"
+        },
+        {
+          "name": "repair actually locates same-condition complete source",
+          "pass": true,
+          "actual": "mean-wr-complete"
+        },
+        {
+          "name": "source returns actual owner/condition",
+          "pass": true
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wr-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "lt"
+                },
+                "judge": {
+                  "correct": false,
+                  "differences": [
+                    "comparison"
+                  ]
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wr-group-4": {
+                "sourceId": "mean-wr-group-4",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  4
+                ],
+                "at": 1800000000000
+              },
+              "mean-wr-group-6": {
+                "sourceId": "mean-wr-group-6",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wr-feedback-contact": {
+                "sourceId": "mean-wr-feedback-contact",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              },
+              "mean-wr-complete": {
+                "sourceId": "mean-wr-complete",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wr-independent-correct",
+      "assertions": [
+        {
+          "name": "prediction alone does not reveal facts",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。你的原判断是“大于”，已保存，待核对。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。核看均值4的原像与概率自由回看当前条件完整推导"
+        },
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“大于”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始无放回 · 逐次均匀作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“大于”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始无放回 · 逐次均匀作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“大于”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始无放回 · 逐次均匀作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": false
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wr-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "gt"
+                },
+                "judge": {
+                  "correct": true,
+                  "differences": []
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wr-group-4": {
+                "sourceId": "mean-wr-group-4",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  4
+                ],
+                "at": 1800000000000
+              },
+              "mean-wr-group-6": {
+                "sourceId": "mean-wr-group-6",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wr-feedback-contact": {
+                "sourceId": "mean-wr-feedback-contact",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wr-assisted-wrong",
+      "assertions": [
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前已接触参考，保留辅助身份。重查这次比较开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前已接触参考，保留辅助身份。重查这次比较开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前已接触参考，保留辅助身份。重查这次比较开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": true
+        },
+        {
+          "name": "wrong closing leads into current repair",
+          "pass": true,
+          "actual": "有放回 · 两抽独立 · 答卷 mean-lab-wr-1800000000000-1你选了“小于”。下面重新计算两边，再核对比较方向。展开并定位本条件全部必要原行重查判断：分别列出均值4与6的原像，把每条路径的概率相加，然后比较。返回有放回 · 两抽独立当前草稿（保留答卷）重开有放回 · 两抽独立答卷"
+        },
+        {
+          "name": "repair actually locates same-condition complete source",
+          "pass": true,
+          "actual": "mean-wr-complete"
+        },
+        {
+          "name": "source returns actual owner/condition",
+          "pass": true
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wr-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "lt"
+                },
+                "judge": {
+                  "correct": false,
+                  "differences": [
+                    "comparison"
+                  ]
+                },
+                "assisted": true,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wr-reference": {
+                "sourceId": "mean-wr-reference",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "reference",
+                "targets": [
+                  4,
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wr-feedback-contact": {
+                "sourceId": "mean-wr-feedback-contact",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              },
+              "mean-wr-complete": {
+                "sourceId": "mean-wr-complete",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [
+              "mean-wr-reference"
+            ],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wr-assisted-correct",
+      "assertions": [
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“大于”；与已呈现结果一致。这份答卷提交前已接触参考，保留辅助身份。回看本条件完整原行开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“大于”；与已呈现结果一致。这份答卷提交前已接触参考，保留辅助身份。回看本条件完整原行开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“大于”；与已呈现结果一致。这份答卷提交前已接触参考，保留辅助身份。回看本条件完整原行开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": true
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wr-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "gt"
+                },
+                "judge": {
+                  "correct": true,
+                  "differences": []
+                },
+                "assisted": true,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wr-reference": {
+                "sourceId": "mean-wr-reference",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "reference",
+                "targets": [
+                  4,
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wr-feedback-contact": {
+                "sourceId": "mean-wr-feedback-contact",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [
+              "mean-wr-reference"
+            ],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wor-independent-wrong",
+      "assertions": [
+        {
+          "name": "prediction alone does not reveal facts",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。你的原判断是“小于”，已保存，待核对。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。核看均值4的原像与概率自由回看当前条件完整推导"
+        },
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。重查这次比较开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。重查这次比较开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。重查这次比较开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": false
+        },
+        {
+          "name": "wrong closing leads into current repair",
+          "pass": true,
+          "actual": "无放回 · 逐次均匀 · 答卷 mean-lab-wor-1800000000000-1你选了“小于”。下面重新计算两边，再核对比较方向。展开并定位本条件全部必要原行重查判断：分别列出均值4与6的原像，把每条路径的概率相加，然后比较。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+        },
+        {
+          "name": "repair actually locates same-condition complete source",
+          "pass": true,
+          "actual": "mean-wor-complete"
+        },
+        {
+          "name": "source returns actual owner/condition",
+          "pass": true
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wor-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "lt"
+                },
+                "judge": {
+                  "correct": false,
+                  "differences": [
+                    "comparison"
+                  ]
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wor-group-4": {
+                "sourceId": "mean-wor-group-4",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  4
+                ],
+                "at": 1800000000000
+              },
+              "mean-wor-group-6": {
+                "sourceId": "mean-wor-group-6",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wor-feedback-contact": {
+                "sourceId": "mean-wor-feedback-contact",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              },
+              "mean-wor-complete": {
+                "sourceId": "mean-wor-complete",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wor-independent-correct",
+      "assertions": [
+        {
+          "name": "prediction alone does not reveal facts",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。均值4与6的概率尚未核看，此处暂不作比较结论。你的原判断是“相等”，已保存，待核对。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。核看均值4的原像与概率自由回看当前条件完整推导"
+        },
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“相等”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始有放回 · 两抽独立作答开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“相等”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始有放回 · 两抽独立作答开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“相等”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始有放回 · 两抽独立作答开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": false
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wor-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "eq"
+                },
+                "judge": {
+                  "correct": true,
+                  "differences": []
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wor-group-4": {
+                "sourceId": "mean-wor-group-4",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  4
+                ],
+                "at": 1800000000000
+              },
+              "mean-wor-group-6": {
+                "sourceId": "mean-wor-group-6",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wor-feedback-contact": {
+                "sourceId": "mean-wor-feedback-contact",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wor-assisted-wrong",
+      "assertions": [
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前已接触参考，保留辅助身份。重查这次比较开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前已接触参考，保留辅助身份。重查这次比较开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“小于”；与已呈现结果有差异。这份答卷提交前已接触参考，保留辅助身份。重查这次比较开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": true
+        },
+        {
+          "name": "wrong closing leads into current repair",
+          "pass": true,
+          "actual": "无放回 · 逐次均匀 · 答卷 mean-lab-wor-1800000000000-1你选了“小于”。下面重新计算两边，再核对比较方向。展开并定位本条件全部必要原行重查判断：分别列出均值4与6的原像，把每条路径的概率相加，然后比较。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+        },
+        {
+          "name": "repair actually locates same-condition complete source",
+          "pass": true,
+          "actual": "mean-wor-complete"
+        },
+        {
+          "name": "source returns actual owner/condition",
+          "pass": true
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wor-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "lt"
+                },
+                "judge": {
+                  "correct": false,
+                  "differences": [
+                    "comparison"
+                  ]
+                },
+                "assisted": true,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wor-reference": {
+                "sourceId": "mean-wor-reference",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "reference",
+                "targets": [
+                  4,
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wor-feedback-contact": {
+                "sourceId": "mean-wor-feedback-contact",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              },
+              "mean-wor-complete": {
+                "sourceId": "mean-wor-complete",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [
+              "mean-wor-reference"
+            ],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-wor-assisted-correct",
+      "assertions": [
+        {
+          "name": "exact presented probabilities match mechanism",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“相等”；与已呈现结果一致。这份答卷提交前已接触参考，保留辅助身份。回看本条件完整原行开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "feedback names match or discrepancy",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“相等”；与已呈现结果一致。这份答卷提交前已接触参考，保留辅助身份。回看本条件完整原行开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "frozen assisted identity stated",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“相等”；与已呈现结果一致。这份答卷提交前已接触参考，保留辅助身份。回看本条件完整原行开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "first answer remains unchanged",
+          "pass": true
+        },
+        {
+          "name": "restart distinguishes new draft and retained history",
+          "pass": true,
+          "actual": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。当前是重新打开的新草稿，尚未提交；历史判断不代替新判断。当前条件已有参考接触，继续作答会保留辅助标识。继续带参考作答开始均值比较 · 有放回 · 两抽独立自由回看当前条件完整推导"
+        },
+        {
+          "name": "restart has no new answer",
+          "pass": true,
+          "actual": {
+            "key": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [
+              {
+                "id": "mean-lab-wor-1800000000000-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "eq"
+                },
+                "judge": {
+                  "correct": true,
+                  "differences": []
+                },
+                "assisted": true,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "mean-wor-reference": {
+                "sourceId": "mean-wor-reference",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "reference",
+                "targets": [
+                  4,
+                  6
+                ],
+                "at": 1800000000000
+              },
+              "mean-wor-feedback-contact": {
+                "sourceId": "mean-wor-feedback-contact",
+                "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1800000000000
+              }
+            },
+            "openSources": [
+              "mean-wor-reference"
+            ],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-next-unseen-max",
+      "assertions": [
+        {
+          "name": "next label matches destination evidence",
+          "pass": true,
+          "actual": "开始maximum构造 · 有放回 · 两抽独立"
+        },
+        {
+          "name": "closing actually reaches intended activity",
+          "pass": true,
+          "actual": "max-board"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-next-seen-max",
+      "assertions": [
+        {
+          "name": "next label matches destination evidence",
+          "pass": true,
+          "actual": "带参考继续maximum构造 · 有放回 · 两抽独立"
+        },
+        {
+          "name": "closing actually reaches intended activity",
+          "pass": true,
+          "actual": "max-board"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-next-all-max-done",
+      "assertions": [
+        {
+          "name": "next label matches destination evidence",
+          "pass": true,
+          "actual": "继续Q4(a)"
+        },
+        {
+          "name": "closing actually reaches intended activity",
+          "pass": true,
+          "actual": "q4a"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-next-q4-done",
+      "assertions": [
+        {
+          "name": "next label matches destination evidence",
+          "pass": true,
+          "actual": "回看Q4(a)"
+        },
+        {
+          "name": "closing actually reaches intended activity",
+          "pass": true,
+          "actual": "q4a"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "closing-native-card-priority-immediate-refresh",
+      "assertions": [
+        {
+          "name": "initial exact card1",
+          "pass": true,
+          "actual": "开始卡1的初次回忆"
+        }
+      ],
+      "error": "TypeError: Cannot read properties of undefined (reading 'revealed')\n    at /workspace/scratch/b4c4b2db70f4/reviews/correction-game-closing-draft-run-03-probe.cjs:52:183\n    at scene (/workspace/scratch/b4c4b2db70f4/reviews/correction-game-closing-draft-run-03-probe.cjs:15:129)\n    at async /workspace/scratch/b4c4b2db70f4/reviews/correction-game-closing-draft-run-03-probe.cjs:51:1"
+    },
+    {
+      "name": "closing-due-real-item-priority",
+      "assertions": [
+        {
+          "name": "both cards have distinct saved review items",
+          "pass": true,
+          "actual": [
+            {
+              "activityId": "recall-core",
+              "cardIndex": 0,
+              "title": "两张定义回忆卡 · 1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1800086400000,
+                "lastReviewedAt": 1800000000000,
+                "lastSessionId": "session-1800000000000-4k1lztr0k7b",
+                "evidenceSource": "self"
+              },
+              "due": false
+            },
+            {
+              "activityId": "recall-core",
+              "cardIndex": 1,
+              "title": "两张定义回忆卡 · 2",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1800086400000,
+                "lastReviewedAt": 1800000000000,
+                "lastSessionId": "session-1800000000000-4k1lztr0k7b",
+                "evidenceSource": "self"
+              },
+              "due": false
+            }
+          ]
+        },
+        {
+          "name": "both rated offers early review",
+          "pass": true,
+          "actual": "提前复习卡1"
+        },
+        {
+          "name": "native return refreshes actual due label without scroll event",
+          "pass": true,
+          "actual": "到期复习卡1"
+        },
+        {
+          "name": "due priority targets real earliest card0 front",
+          "pass": true,
+          "actual": {
+            "index": 0,
+            "cards": {
+              "0": {
+                "revealed": false,
+                "hintUsed": false,
+                "rating": null,
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1800086400000,
+                  "lastReviewedAt": 1800000000000,
+                  "lastSessionId": "session-1800000000000-4k1lztr0k7b",
+                  "evidenceSource": "self"
+                },
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1800000000000-4k1lztr0k7b",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": true,
+                "recallSessionId": null
+              },
+              "1": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": "recalled",
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1800086400000,
+                  "lastReviewedAt": 1800000000000,
+                  "lastSessionId": "session-1800000000000-4k1lztr0k7b",
+                  "evidenceSource": "self"
+                },
+                "attemptId": "recall-core:1800000000000:2",
+                "exposure": {
+                  "sessionId": "session-1800000000000-4k1lztr0k7b",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1800000000000-4k1lztr0k7b"
+              }
+            }
+          }
+        },
+        {
+          "name": "opening due review does not add rating/history",
+          "pass": true,
+          "actual": [
+            {
+              "activityId": "recall-core",
+              "cardIndex": 0,
+              "title": "两张定义回忆卡 · 1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1800086400000,
+                "lastReviewedAt": 1800000000000,
+                "lastSessionId": "session-1800000000000-4k1lztr0k7b",
+                "evidenceSource": "self"
+              },
+              "due": true
+            },
+            {
+              "activityId": "recall-core",
+              "cardIndex": 1,
+              "title": "两张定义回忆卡 · 2",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1800086400000,
+                "lastReviewedAt": 1800000000000,
+                "lastSessionId": "session-1800000000000-4k1lztr0k7b",
+                "evidenceSource": "self"
+              },
+              "due": true
+            }
+          ]
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 100,
+  "failed": [
+    {
+      "scene": "closing-wr-independent-wrong",
+      "name": "first answer remains unchanged",
+      "pass": false
+    },
+    {
+      "scene": "closing-wr-independent-correct",
+      "name": "first answer remains unchanged",
+      "pass": false
+    },
+    {
+      "scene": "closing-wor-independent-wrong",
+      "name": "first answer remains unchanged",
+      "pass": false
+    },
+    {
+      "scene": "closing-wor-independent-correct",
+      "name": "first answer remains unchanged",
+      "pass": false
+    }
+  ],
+  "errors": [
+    {
+      "scene": "closing-native-card-priority-immediate-refresh",
+      "error": "TypeError: Cannot read properties of undefined (reading 'revealed')\n    at /workspace/scratch/b4c4b2db70f4/reviews/correction-game-closing-draft-run-03-probe.cjs:52:183\n    at scene (/workspace/scratch/b4c4b2db70f4/reviews/correction-game-closing-draft-run-03-probe.cjs:15:129)\n    at async /workspace/scratch/b4c4b2db70f4/reviews/correction-game-closing-draft-run-03-probe.cjs:51:1"
+    }
+  ]
+}

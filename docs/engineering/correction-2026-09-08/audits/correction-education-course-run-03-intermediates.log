@@ -1,0 +1,148 @@
+PASS mean WR first judgment remains pending
+PASS ending actual first source covers one target
+PASS ending actual second source closes WR comparison
+PASS ending actual task changes to WOR
+PASS WOR equality genuinely closes after its own sources
+PASS I2 weight mean-wr-AA
+PASS I2 weight mean-wr-AB
+PASS I2 weight mean-wr-AC
+PASS I2 weight mean-wr-BA
+PASS I2 weight mean-wr-BB
+PASS I2 weight mean-wr-BC
+PASS I2 weight mean-wr-CA
+PASS I2 weight mean-wr-CB
+PASS I2 weight mean-wr-CC
+PASS I2 singleton has no artificial addition mean-wr-group-2
+PASS I2 already simplest has no fake reduction mean-wr-group-2
+PASS I2 actual numerator addition mean-wr-group-4
+PASS I2 already simplest has no fake reduction mean-wr-group-4
+PASS I2 actual numerator addition mean-wr-group-6
+PASS I2 specific common factor mean-wr-group-6
+PASS I2 actual numerator addition mean-wr-group-8
+PASS I2 already simplest has no fake reduction mean-wr-group-8
+PASS I2 singleton has no artificial addition mean-wr-group-10
+PASS I2 already simplest has no fake reduction mean-wr-group-10
+PASS I2 weight mean-wr-AA-ref
+PASS I2 weight mean-wr-AB-ref
+PASS I2 weight mean-wr-AC-ref
+PASS I2 weight mean-wr-BA-ref
+PASS I2 weight mean-wr-BB-ref
+PASS I2 weight mean-wr-BC-ref
+PASS I2 weight mean-wr-CA-ref
+PASS I2 weight mean-wr-CB-ref
+PASS I2 weight mean-wr-CC-ref
+PASS I2 singleton has no artificial addition mean-wr-group-2-ref-ref
+PASS I2 already simplest has no fake reduction mean-wr-group-2-ref-ref
+PASS I2 actual numerator addition mean-wr-group-4-ref-ref
+PASS I2 already simplest has no fake reduction mean-wr-group-4-ref-ref
+PASS I2 actual numerator addition mean-wr-group-6-ref-ref
+PASS I2 specific common factor mean-wr-group-6-ref-ref
+PASS I2 actual numerator addition mean-wr-group-8-ref-ref
+PASS I2 already simplest has no fake reduction mean-wr-group-8-ref-ref
+PASS I2 singleton has no artificial addition mean-wr-group-10-ref-ref
+PASS I2 already simplest has no fake reduction mean-wr-group-10-ref-ref
+PASS I2 weight mean-wor-AB
+PASS I2 weight mean-wor-AC
+PASS I2 weight mean-wor-BA
+PASS I2 weight mean-wor-BC
+PASS I2 weight mean-wor-CA
+PASS I2 weight mean-wor-CB
+PASS I2 actual numerator addition mean-wor-group-4
+PASS I2 specific common factor mean-wor-group-4
+PASS I2 actual numerator addition mean-wor-group-6
+PASS I2 specific common factor mean-wor-group-6
+PASS I2 actual numerator addition mean-wor-group-8
+PASS I2 specific common factor mean-wor-group-8
+PASS I2 weight mean-wor-AB-ref
+PASS I2 weight mean-wor-AC-ref
+PASS I2 weight mean-wor-BA-ref
+PASS I2 weight mean-wor-BC-ref
+PASS I2 weight mean-wor-CA-ref
+PASS I2 weight mean-wor-CB-ref
+PASS I2 actual numerator addition mean-wor-group-4-ref-ref
+PASS I2 specific common factor mean-wor-group-4-ref-ref
+PASS I2 actual numerator addition mean-wor-group-6-ref-ref
+PASS I2 specific common factor mean-wor-group-6-ref-ref
+PASS I2 actual numerator addition mean-wor-group-8-ref-ref
+PASS I2 specific common factor mean-wor-group-8-ref-ref
+PASS I2 weight max-wr-RR
+PASS I2 weight max-wr-RS
+PASS I2 weight max-wr-RT
+PASS I2 weight max-wr-SR
+PASS I2 weight max-wr-SS
+PASS I2 weight max-wr-ST
+PASS I2 weight max-wr-TR
+PASS I2 weight max-wr-TS
+PASS I2 weight max-wr-TT
+PASS I2 actual numerator addition max-wr-group-1
+PASS I2 already simplest has no fake reduction max-wr-group-1
+PASS I2 actual numerator addition max-wr-group-5
+PASS I2 already simplest has no fake reduction max-wr-group-5
+PASS I2 weight max-wr-RR-ref
+PASS I2 weight max-wr-RS-ref
+PASS I2 weight max-wr-RT-ref
+PASS I2 weight max-wr-SR-ref
+PASS I2 weight max-wr-SS-ref
+PASS I2 weight max-wr-ST-ref
+PASS I2 weight max-wr-TR-ref
+PASS I2 weight max-wr-TS-ref
+PASS I2 weight max-wr-TT-ref
+PASS I2 actual numerator addition max-wr-group-1-ref-ref
+PASS I2 already simplest has no fake reduction max-wr-group-1-ref-ref
+PASS I2 actual numerator addition max-wr-group-5-ref-ref
+PASS I2 already simplest has no fake reduction max-wr-group-5-ref-ref
+PASS I2 weight max-wor-RS
+PASS I2 weight max-wor-RT
+PASS I2 weight max-wor-SR
+PASS I2 weight max-wor-ST
+PASS I2 weight max-wor-TR
+PASS I2 weight max-wor-TS
+PASS I2 actual numerator addition max-wor-group-1
+PASS I2 specific common factor max-wor-group-1
+PASS I2 actual numerator addition max-wor-group-5
+PASS I2 specific common factor max-wor-group-5
+PASS I2 weight max-wor-RS-ref
+PASS I2 weight max-wor-RT-ref
+PASS I2 weight max-wor-SR-ref
+PASS I2 weight max-wor-ST-ref
+PASS I2 weight max-wor-TR-ref
+PASS I2 weight max-wor-TS-ref
+PASS I2 actual numerator addition max-wor-group-1-ref-ref
+PASS I2 specific common factor max-wor-group-1-ref-ref
+PASS I2 actual numerator addition max-wor-group-5-ref-ref
+PASS I2 specific common factor max-wor-group-5-ref-ref
+PASS I2 weight range-wr-DD
+PASS I2 weight range-wr-DE
+PASS I2 weight range-wr-DF
+PASS I2 weight range-wr-ED
+PASS I2 weight range-wr-EE
+PASS I2 weight range-wr-EF
+PASS I2 weight range-wr-FD
+PASS I2 weight range-wr-FE
+PASS I2 weight range-wr-FF
+PASS I2 actual numerator addition range-wr-group-0
+PASS I2 specific common factor range-wr-group-0
+PASS I2 actual numerator addition range-wr-group-3
+PASS I2 already simplest has no fake reduction range-wr-group-3
+PASS I2 actual numerator addition range-wr-group-6
+PASS I2 already simplest has no fake reduction range-wr-group-6
+PASS I2 actual numerator addition range-wr-group-9
+PASS I2 already simplest has no fake reduction range-wr-group-9
+PASS I2 weight shelf-wor-JK
+PASS I2 weight shelf-wor-JL
+PASS I2 weight shelf-wor-KJ
+PASS I2 weight shelf-wor-KL
+PASS I2 weight shelf-wor-LJ
+PASS I2 weight shelf-wor-LK
+PASS I2 actual numerator addition shelf-wor-group-7
+PASS I2 specific common factor shelf-wor-group-7
+PASS I2 actual numerator addition shelf-wor-group-7over2
+PASS I2 specific common factor shelf-wor-group-7over2
+PASS I2 actual numerator addition shelf-wor-group-11over2
+PASS I2 specific common factor shelf-wor-group-11over2
+PASS I2 comparison full scaling and inequality 
+PASS I2 WOR equal has no unnecessary scaling 
+PASS I2 comparison full scaling and inequality -ref
+PASS I2 WOR equal has no unnecessary scaling -ref
+PASS no uncaught jsdom errors
+{"total":147,"failed":0,"html":"bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3"}

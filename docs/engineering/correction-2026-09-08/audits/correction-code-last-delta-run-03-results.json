@@ -1,0 +1,609 @@
+{
+  "htmlHash": "15cd0a2d867084ded7aebc05908a99ebc4b3d78c063d5758e7905482f6549f20",
+  "scope": "Pre-freeze full-lesson draft; actual inline JS in jsdom. Explicit geometry/Image/time fixtures; no real browser rendering or image-decode claim.",
+  "checks": [
+    {
+      "name": "frozen-html",
+      "pass": true
+    },
+    {
+      "name": "metadata/fifteen-fixed",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "mean-wor-AB-path-focus",
+          "proofLineIds": [
+            "mean-wor-AB-path"
+          ]
+        },
+        {
+          "id": "mean-wor-AC-path-focus",
+          "proofLineIds": [
+            "mean-wor-AC-path"
+          ]
+        },
+        {
+          "id": "mean-wor-BA-path-focus",
+          "proofLineIds": [
+            "mean-wor-BA-path"
+          ]
+        },
+        {
+          "id": "mean-wor-BC-path-focus",
+          "proofLineIds": [
+            "mean-wor-BC-path"
+          ]
+        },
+        {
+          "id": "mean-wor-CA-path-focus",
+          "proofLineIds": [
+            "mean-wor-CA-path"
+          ]
+        },
+        {
+          "id": "mean-wor-CB-path-focus",
+          "proofLineIds": [
+            "mean-wor-CB-path"
+          ]
+        },
+        {
+          "id": "mean-wr-AA-path-focus",
+          "proofLineIds": [
+            "mean-wr-AA-path"
+          ]
+        },
+        {
+          "id": "mean-wr-AB-path-focus",
+          "proofLineIds": [
+            "mean-wr-AB-path"
+          ]
+        },
+        {
+          "id": "mean-wr-AC-path-focus",
+          "proofLineIds": [
+            "mean-wr-AC-path"
+          ]
+        },
+        {
+          "id": "mean-wr-BA-path-focus",
+          "proofLineIds": [
+            "mean-wr-BA-path"
+          ]
+        },
+        {
+          "id": "mean-wr-BB-path-focus",
+          "proofLineIds": [
+            "mean-wr-BB-path"
+          ]
+        },
+        {
+          "id": "mean-wr-BC-path-focus",
+          "proofLineIds": [
+            "mean-wr-BC-path"
+          ]
+        },
+        {
+          "id": "mean-wr-CA-path-focus",
+          "proofLineIds": [
+            "mean-wr-CA-path"
+          ]
+        },
+        {
+          "id": "mean-wr-CB-path-focus",
+          "proofLineIds": [
+            "mean-wr-CB-path"
+          ]
+        },
+        {
+          "id": "mean-wr-CC-path-focus",
+          "proofLineIds": [
+            "mean-wr-CC-path"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "native/twenty",
+      "pass": true
+    },
+    {
+      "name": "native/repair/frame-opening",
+      "pass": true,
+      "evidence": {
+        "source": "pop-act3",
+        "scroll": "pop-act3",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/frame-opening",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/frame-opening",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/frame-opening",
+      "pass": true
+    },
+    {
+      "name": "native/repair/e1a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e1a",
+        "scroll": "solution-e1a",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/e1a",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/e1a",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/e1a",
+      "pass": true
+    },
+    {
+      "name": "native/repair/e1b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e1b",
+        "scroll": "solution-e1b",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/e1b",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/e1b",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/e1b",
+      "pass": true
+    },
+    {
+      "name": "native/repair/stat-opening",
+      "pass": true,
+      "evidence": {
+        "source": "stat-act3",
+        "scroll": "stat-act3",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/stat-opening",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/stat-opening",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/stat-opening",
+      "pass": true
+    },
+    {
+      "name": "native/repair/e2a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e2a",
+        "scroll": "solution-e2a",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/e2a",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/e2a",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/e2a",
+      "pass": true
+    },
+    {
+      "name": "native/repair/e2b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e2b",
+        "scroll": "solution-e2b",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/e2b",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/e2b",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/e2b",
+      "pass": true
+    },
+    {
+      "name": "native/repair/path-choice",
+      "pass": true,
+      "evidence": {
+        "source": "mean-first-AB-1",
+        "scroll": "mean-first-AB-1",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/path-choice",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/path-choice",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/path-choice",
+      "pass": true
+    },
+    {
+      "name": "native/repair/weight-wr",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wr-AB-path",
+        "scroll": "mean-wr-AB-path",
+        "focus": "mean-wr-AB-path",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/weight-wr",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/weight-wr",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/weight-wr",
+      "pass": true
+    },
+    {
+      "name": "native/repair/group-wr",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wr-group-4",
+        "scroll": "mean-wr-group-4",
+        "focus": "mean-wr-group-4",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/group-wr",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/group-wr",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/group-wr",
+      "pass": true
+    },
+    {
+      "name": "native/repair/weight-wor",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wor-AB-path",
+        "scroll": "mean-wor-AB-path",
+        "focus": "mean-wor-AB-path",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/weight-wor",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/weight-wor",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/weight-wor",
+      "pass": true
+    },
+    {
+      "name": "native/repair/group-wor",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wor-group-4",
+        "scroll": "mean-wor-group-4",
+        "focus": "mean-wor-group-4",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/group-wor",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/group-wor",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/group-wor",
+      "pass": true
+    },
+    {
+      "name": "native/repair/e3a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e3a",
+        "scroll": "solution-e3a",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/e3a",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/e3a",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/e3a",
+      "pass": true
+    },
+    {
+      "name": "native/repair/e3b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e3b",
+        "scroll": "solution-e3b",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/e3b",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/e3b",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/e3b",
+      "pass": true
+    },
+    {
+      "name": "native/repair/q1a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q1a",
+        "scroll": "solution-q1a",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/q1a",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/q1a",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/q1a",
+      "pass": true
+    },
+    {
+      "name": "native/repair/q1b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q1b",
+        "scroll": "solution-q1b",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/q1b",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/q1b",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/q1b",
+      "pass": true
+    },
+    {
+      "name": "native/repair/q2a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q2a",
+        "scroll": "solution-q2a",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/q2a",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/q2a",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/q2a",
+      "pass": true
+    },
+    {
+      "name": "native/repair/q2b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q2b",
+        "scroll": "solution-q2b",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/q2b",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/q2b",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/q2b",
+      "pass": true
+    },
+    {
+      "name": "native/repair/q3c",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q3c",
+        "scroll": "solution-q3c",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/q3c",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/q3c",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/q3c",
+      "pass": true
+    },
+    {
+      "name": "native/repair/q4a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q4a",
+        "scroll": "solution-q4a",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/q4a",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/q4a",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/q4a",
+      "pass": true
+    },
+    {
+      "name": "native/repair/q4b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q4b",
+        "scroll": "solution-q4b",
+        "focus": "",
+        "assisted": false
+      }
+    },
+    {
+      "name": "native/return-present/q4b",
+      "pass": true
+    },
+    {
+      "name": "native/return-preserves/q4b",
+      "pass": true
+    },
+    {
+      "name": "native/current-correct-hides-repair/q4b",
+      "pass": true
+    },
+    {
+      "name": "stat/formula-not-order",
+      "pass": true,
+      "evidence": "(3+7+11)/3仅由样本求得；(3+7+11)/3−μ仍需要未知总体均值μ。"
+    },
+    {
+      "name": "no-errors/metadata-and-twenty-native-repairs",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "closing/initial-pending",
+      "pass": true
+    },
+    {
+      "name": "closing/saved-unpresented",
+      "pass": true
+    },
+    {
+      "name": "closing/first-target-route",
+      "pass": true
+    },
+    {
+      "name": "closing/second-target-actual-result",
+      "pass": true
+    },
+    {
+      "name": "closing/wrong-to-original-repair",
+      "pass": true
+    },
+    {
+      "name": "closing/return-keeps-history",
+      "pass": true
+    },
+    {
+      "name": "closing/condition-current-equality",
+      "pass": true
+    },
+    {
+      "name": "no-errors/closing-actual-routes",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "metadata-and-twenty-native-repairs",
+      "errors": []
+    },
+    {
+      "name": "closing-actual-routes",
+      "errors": []
+    },
+    {
+      "name": "end-recall-latest-state-and-real-item",
+      "errors": []
+    }
+  ],
+  "harnessError": "TypeError: Cannot read properties of undefined (reading 'revealed')\n    at /workspace/scratch/b4c4b2db70f4/reviews/correction-code-last-delta-run-03-probes.cjs:14:310",
+  "metadataCorrection": "Scope label corrected after execution; check outcomes unchanged."
+}

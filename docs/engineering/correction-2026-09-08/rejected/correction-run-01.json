@@ -1,0 +1,332 @@
+{
+  "status": "rejected complete course; audit archive, not approved deliverable",
+  "archive": "correction-run-01.tar.xz",
+  "files": 314,
+  "bytes": 8568260,
+  "sha256": "51fba2306a492618f4b87f3abd8756acfa369c2995d0ebb50db55dc76ab6a553",
+  "htmlSha256": "98b5e20e7ba17f01ae691f67b91050a493d3efad702020349acad50eea6e4392",
+  "jsonSha256": "92a8258b95e6a735d80261eccaf23a91cd4335a3647edd2282fd7fda4cc75259",
+  "omittedDuplicateOrReproducibleAssets": [
+    {
+      "path": "author-visual-check/main-nr-distribution-326.png",
+      "sha256": "5ff4d07e33a1e90fd9320030c1005e547a84cb61763da411a69d7a465f3e7366",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "author-visual-check/main-nr-overview-326.png",
+      "sha256": "3300789e541c45d516596a0d13155df4a44ae66a5025ee9ad05a667acc25f53d",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "author-visual-check/main-wr-AB-grouping-326.png",
+      "sha256": "1b2eefcf2b5aa902d062184143703c76f6236bcde5e8470de4086b1b6203758f",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "author-visual-check/main-wr-AB-mapping-326.png",
+      "sha256": "17a09cdfede892bb224ebe13f797c14e303baf7b8fb8092020c776da7592a150",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "author-visual-check/main-wr-AB-paths-326.png",
+      "sha256": "c3621b5882113297ff3e6f963352b525b6f8f43236827b80b22a2b95481d43ab",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "author-visual-check/notes.md",
+      "sha256": "c755d705b282a1cfa0506470010abffbdc8caae6b1ba269b7da5358b20705890",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "author-visual-check/repair-weight-distribution-326.png",
+      "sha256": "95ed6b1f7f9548978faa9ccb3cb304ffdcc1bfa0bed7e496c8c8880f4fcfb346",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "author-visual-check/six-actual-frames-at-326.png",
+      "sha256": "d600d9c0feeb6ed8cd49a8171349d442cbe4d87a8c526c349c7ba910480888e4",
+      "reason": "Reproducible audit derivative"
+    },
+    {
+      "path": "media/fonts/NotoSansCJKsc-Regular.otf",
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "reason": "Public font: exact hash, source URL and OFL retained"
+    },
+    {
+      "path": "media/frames/construct-distribution.png",
+      "sha256": "73ccb3130b2d0586d4d76313ae03c709c7ab7c51a1b97f352dc04648878d73b6",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/duplicates-distribution.png",
+      "sha256": "5ab9bdeb69c5ca7dbd581e6b34bb86630e3febe2844e7c1d8b405278c4782067",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/example-max-distribution.png",
+      "sha256": "48da9be750d2c0c3341a2f66edb16953efc9b02eb94f3b011f9623c23652b7c9",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-AB-grouping.png",
+      "sha256": "ea96ee23186a5f599f46875b794058e544fe0a56efe0674e8fad2ad504fbad15",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-AB-mapping.png",
+      "sha256": "474f94519caed3bbb20d4f758f5010ab200a0bfefbed4c2fcb7ac631ff69eaaf",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-AB-paths.png",
+      "sha256": "8858f23482328e3b94b7af1bf73680bc04b80fbf10226312db82fe04eaaf8c5a",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-AC-grouping.png",
+      "sha256": "efda679bb6b83836cfb7232284727800f5b61d7de39b1d8f4ad2342b54159b21",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-AC-mapping.png",
+      "sha256": "d404106ffc4889ceae9994a9c98fbd55bd66980496305cb8c87bcc514972481b",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-AC-paths.png",
+      "sha256": "8ad63563fe53d659c43927dbad32f8ff8681c7879f0a551665a73eceb209e522",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-BA-grouping.png",
+      "sha256": "6b7714b69a8cb0f42ab2937092255593667225bcfd931852ec73b3a41362e361",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-BA-mapping.png",
+      "sha256": "e28e7473bbd792ca831b8b6bedf4b0659ca75db0d6eb5b2d7ecf4f5500ac2097",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-BA-paths.png",
+      "sha256": "cd43768bba0836defaf9db9136d6eeb2b2bd77c15e421bec275fed8c8452a348",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-BC-grouping.png",
+      "sha256": "9df29862d52418fcdaf463a8a33aa30c5f70162dd42a2db5eca5ac43945958f0",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-BC-mapping.png",
+      "sha256": "a2d706328fa132797cb0e9d35e52726091aa47e245f6215f48e5833f60e4cfbb",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-BC-paths.png",
+      "sha256": "acbdbdde7c6d8d50a6fa0ea828e1435858705576d1bd995f79da375c0d299371",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-CA-grouping.png",
+      "sha256": "315a8dbdc041e9530733a5d95621b0c03a0a062e9a6cd31f4a5c3dcb94d189ef",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-CA-mapping.png",
+      "sha256": "2e3ecdf111da184c52ee4e0846b688e09017ec93b4cae414c7eb7ff6e4264a0a",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-CA-paths.png",
+      "sha256": "8b5dd44d4cf764bed1ae3976e4fb0be90cd66300ea0d0aa989e2ba6c098fb41f",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-CB-grouping.png",
+      "sha256": "348661ae6c7e6066cf387f31d50467cfcfc32f4b58c925c2625e59b542a657df",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-CB-mapping.png",
+      "sha256": "ef09bd4baf9cb81b12d0713166871016929058dbeefc1db720419dfa9f258c2c",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-CB-paths.png",
+      "sha256": "658df43dc0411ae5b56cdfd7234012384e95240b5408242763b243936b143e9f",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-distribution.png",
+      "sha256": "944dfe80c21a6a4e46f9fa1f8851548c3c42ad76011829e77276f30c7bf989be",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-nr-overview.png",
+      "sha256": "88cdd7876c57423eeda400325f5aa299667cf21aabd84936322033d4bbb6efeb",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AA-grouping.png",
+      "sha256": "69d12d63a3d86c93c5c855b6fc80fd9033e1465a9a27bb43ef779d3a079514be",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AA-mapping.png",
+      "sha256": "b6fc94bd391bc9308271563f04a30d9c5a140cd2c37738d938f0796ded7a9a76",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AA-paths.png",
+      "sha256": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AB-grouping.png",
+      "sha256": "797aca223a6464616598fb685e5d77547fd176381bf1fcc174fd5baa9ea5c3cc",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AB-mapping.png",
+      "sha256": "896fbf8d6b2ec691445c13e3d30a3ac81962a658bec4b9e0937ef99955325e5f",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AB-paths.png",
+      "sha256": "f156c12ab9d868d726cad637475c093828b07ae9d93d11a786264c617b49f747",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AC-grouping.png",
+      "sha256": "99dc0fb3faa04aa471c23ac733b7edc12b2623ecbade393e4a74e988713f383e",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AC-mapping.png",
+      "sha256": "def525bb799ea18326b397257ff07ccb10e99fbef5b38f76728cfb75cf933d12",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-AC-paths.png",
+      "sha256": "87ab7ea2607ac17658d620bf1896390bd3286b053b36a1aa67be79d11501cf77",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BA-grouping.png",
+      "sha256": "3957e002f231887ad85d06d13ad42077c0f016625a314c03eda37f587f638cd2",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BA-mapping.png",
+      "sha256": "d73bed06180c02ab6eb9ed8fa604fb6e8ec8d1f36c4fbf07743bb6fde016bb1e",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BA-paths.png",
+      "sha256": "d7be2197e3c55feb5f98efc8079ae70f69cf1d6d72deb90a0c50759279d42ca5",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BB-grouping.png",
+      "sha256": "ca82e5d6d7bb7c263483f402527694b2316954ed6a7ed67a04c55c83111fa955",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BB-mapping.png",
+      "sha256": "fddc6f8226c0b67a5027088453aa08ea6aa4c65ac1465704a36d1e560896019a",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BB-paths.png",
+      "sha256": "a3302d4b5d91320f4be44233a543ebfa72e03e5ac57479a2513cdf6b6dd3d08b",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BC-grouping.png",
+      "sha256": "2e08b7a87b17822c582b4e00bcb8722180fb6769f17a2e4ef3150227d66eff15",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BC-mapping.png",
+      "sha256": "8165545f05c720b9040641eb4503c26d3150442a3d6c1034c5df59e823d4a37b",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-BC-paths.png",
+      "sha256": "113b1dd80f056f90afcb6e288a7b71139650b5154fe00f101761507206ee6dc1",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CA-grouping.png",
+      "sha256": "1413fc7b5b37729aa5e1df77b12d89c3ae3185c55cc982053337e2acfea15807",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CA-mapping.png",
+      "sha256": "b14a0edf0387584ed51fd2960867d2aaa3f7487f86099d3c92776353fca2f5a0",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CA-paths.png",
+      "sha256": "2dc6c8495ef990877c2dc8daa136f19d110d65d974d6540a88596da5e845f391",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CB-grouping.png",
+      "sha256": "97152586a507dce8d978e0e97c6eb1724f05e6a6ddd6b8ef87043a7ef4291eb8",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CB-mapping.png",
+      "sha256": "940a835c4631e532d75333c2315bcd2e8c244bf6deb2f41ed0dcf43be62febb6",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CB-paths.png",
+      "sha256": "6f392c6f94c9fb9e2b59a149d82172fa4df39a603b7cb20a28f7c05dfd22c25f",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CC-grouping.png",
+      "sha256": "7439b84efc221cc6b912837abb5e011cdf8e78c7ea41edc49d15cd2c62a42ca2",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CC-mapping.png",
+      "sha256": "d0a11e8cbb293a7a5536fdd54ab9b686d9d6b0e371abeb73e6be7653b8c21a47",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-CC-paths.png",
+      "sha256": "93c56123ac1186ece3be498b09fe616c13192dba2e10474f93856f03f3dde1c9",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-distribution.png",
+      "sha256": "6101536b264b4f1100f0299425ba05dae2f2dad90ea86eb4b917835724883dc1",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/main-wr-overview.png",
+      "sha256": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/repair-equal-distribution.png",
+      "sha256": "40e5967cf27c215970078c7129524fe964172ff7949d539c948fe36e6a32ef1b",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/repair-reverse-distribution.png",
+      "sha256": "85b8daea2546952d881788871d0d10268811520c8b0664e2548ea644442f9967",
+      "reason": "PNG is embedded in preserved final HTML"
+    },
+    {
+      "path": "media/frames/repair-weight-distribution.png",
+      "sha256": "baeb26eb1ebc122c53d3bab7043734532bd8752cb9e55f61d9b94386a7b053fe",
+      "reason": "PNG is embedded in preserved final HTML"
+    }
+  ],
+  "restore": "55 final PNGs are all inline data URLs in lesson.html. Decode each unique PNG and map SHA256 to manim-manifest filenames. Public font URL/hash and OFL remain in records. First rejected image batch PNGs remain included."
+}

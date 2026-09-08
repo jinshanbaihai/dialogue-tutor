@@ -1,0 +1,2942 @@
+{
+  "scope": "Independent frozen full-course actual native DOM click/submit/repair/return/retry/flash/review and DOM math verification. Rectangles and scroll collection are fixtures; no real browser, image decode, or learner-effect claim.",
+  "htmlSHA256": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "results": [
+    {
+      "id": "exact frozen HTML",
+      "pass": true,
+      "evidence": 10972737
+    },
+    {
+      "id": "no text entry quiz or custom main answer",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "frame-opening",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "e1a",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "e1b",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "stat-opening",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "e2a",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "e2b",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "path-choice",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "weight-wr",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "group-wr",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "weight-wor",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "group-wor",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "e3a",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "e3b",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "q1a",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "q1b",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "q2a",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "q2b",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "q3c",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "q4a",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "q4b",
+          "type": "quiz",
+          "format": "choice"
+        },
+        {
+          "id": "mean-lab",
+          "type": "interactive"
+        },
+        {
+          "id": "max-board",
+          "type": "interactive"
+        },
+        {
+          "id": "recall-core",
+          "type": "flashcards"
+        }
+      ]
+    },
+    {
+      "id": "independent answer matches frame-opening",
+      "pass": true,
+      "evidence": {
+        "text": "今天在借阅台被问到的人",
+        "key": "a"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked frame-opening",
+      "pass": true,
+      "evidence": {
+        "answer": "b",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source frame-opening",
+      "pass": true,
+      "evidence": {
+        "source": "pop-act3",
+        "open": true,
+        "lastScroll": "pop-act3",
+        "text": "3. 从调查目标依次确定总体、单位、名单与样本这里的“单位”表示每次能够被选取的对象。先读研究目标，再决定单位；如果目标是每位读者的阅读时间，同一人借书三次仍然只是一位读者。术语定义与本例对象总体 population调查目标涉及的全部单位。例：该图书馆所有当前注册读者；“全部”与“当前注册”共同划出边界。抽样单位 sampling unit能够被一次选取的个体或对象。若研究读者，一位注册读者就是一个单位；每次借书记录则是另一种单位。抽样框 sampling frame用于实际抽取样本的单位名单或编号系统。例：当前注册读者名册；它是调查使用的清单，是否完整需要检查。样本 sample从总体选出并研究的一部分单位。例：从名册随机抽出的40位读者；样本量n=40。普查 census尝试调查目标总"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt frame-opening",
+      "pass": true,
+      "evidence": {
+        "attempt": "frame-opening:1788855533420:1",
+        "id": "frame-opening:1788855533420:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance frame-opening",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "frame-opening:1788855534154:2",
+          "answer": "a",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855534154,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches e1a",
+      "pass": true,
+      "evidence": {
+        "text": "抽样调查；测试最多4盏",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked e1a",
+      "pass": true,
+      "evidence": {
+        "answer": "c",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source e1a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e1a",
+        "open": true,
+        "lastScroll": "solution-e1a",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件A workshop has 12 prototype lamps. To measure a lamp’s lifetime, it must be operated until it fails. The workshop wants to retain at least 8 lamps. State whether a census or a sample survey is suitable, and give a reason.一家工坊有12盏原型灯。测量一盏灯的寿命需要持续点亮直到损坏。工坊希望至少保留8盏灯。说明适合普查还是抽样调查，并给出理由。原创练习，附本题评价要点。“until it fails”给出破坏性测试；“retain at"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt e1a",
+      "pass": true,
+      "evidence": {
+        "attempt": "e1a:1788855534723:1",
+        "id": "e1a:1788855534723:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance e1a",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "e1a:1788855535414:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855535414,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches e1b",
+      "pass": true,
+      "evidence": {
+        "text": "总体12盏；单位1盏；框为完整编号名单",
+        "key": "c"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked e1b",
+      "pass": true,
+      "evidence": {
+        "answer": "a",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source e1b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e1b",
+        "open": true,
+        "lastScroll": "solution-e1b",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件For the workshop in E1(a), four lamps are selected without replacement from the complete list of 12 unique lamp identifiers. State the population, a sampling unit and the sampling frame. Describe how an equal-chance selection can be carried out.对E1(a)的工坊，从12个唯一灯具编号的完整名单中无放回选取4盏灯。说明总体、一个抽样单位和抽样框，并描述等机会选取的方法。原创练习，附本题评价要点。“complete"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt e1b",
+      "pass": true,
+      "evidence": {
+        "attempt": "e1b:1788855535962:1",
+        "id": "e1b:1788855535962:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance e1b",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "e1b:1788855536587:2",
+          "answer": "c",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855536587,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches stat-opening",
+      "pass": true,
+      "evidence": {
+        "text": "(3+7+11)/3",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked stat-opening",
+      "pass": true,
+      "evidence": {
+        "answer": "a",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source stat-opening",
+      "pass": true,
+      "evidence": {
+        "source": "stat-act3",
+        "open": true,
+        "lastScroll": "stat-act3",
+        "text": "3. 用only逐项核查所需输入A statistic is a quantity calculated only from sample observations, without unknown parameters.统计量是仅由样本观测计算得到、不含未知参数的量。样本还未抽出时，其值由随机样本决定，可能随样本变化；常数统计量可以看作取值固定的随机变量。样本已经给定时，按相同规则得到一个具体数值。定义中的词在计算中检查什么quantity，量有确定输出，例如平均值、最大值或第一项观测。calculated，计算得到有明确规则；允许直接取某个观测，也允许组合多个观测。only，仅给定样本与已知常数后，输入已经足够。observations，观测值样本实际记录的数据，例如3、7、11。sam"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt stat-opening",
+      "pass": true,
+      "evidence": {
+        "attempt": "stat-opening:1788855537199:1",
+        "id": "stat-opening:1788855537199:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance stat-opening",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "stat-opening:1788855537894:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855537894,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches e2a",
+      "pass": true,
+      "evidence": {
+        "text": "前两项是，第三项否",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked e2a",
+      "pass": true,
+      "evidence": {
+        "answer": "c",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source e2a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e2a",
+        "open": true,
+        "lastScroll": "solution-e2a",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件A random sample of three temperatures is denoted by X1, X2, X3. The population mean μ is unknown. Determine which of 2X1+X3, (X1+X2+X3)/3 and X1+μ are statistics, giving a reason for each.一个容量为3的随机温度样本记为X1、X2、X3。总体均值μ未知。判别2X1+X3、(X1+X2+X3)/3、X1+μ中哪些是统计量，并分别给出理由。原创练习，附本题评价要点。“unknown”限定μ当前不可用；“each”要求三个式子逐一判断。② 题干给出的解题方法对每个表达式列出需"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt e2a",
+      "pass": true,
+      "evidence": {
+        "attempt": "e2a:1788855538384:1",
+        "id": "e2a:1788855538384:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance e2a",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "e2a:1788855539088:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855539088,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches e2b",
+      "pass": true,
+      "evidence": {
+        "text": "17和7；抽样前随机，样本给定后数值确定",
+        "key": "c"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked e2b",
+      "pass": true,
+      "evidence": {
+        "answer": "a",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source e2b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e2b",
+        "open": true,
+        "lastScroll": "solution-e2b",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件The observed temperatures in E2(a), in sample order, are 3, 7 and 11. Calculate the observed values of 2X1+X3 and the sample mean. Explain the difference between the rule before sampling and its value for this sample.E2(a)按样本次序取得的温度为3、7、11。计算2X1+X3和样本均值的观测值，并解释抽样前的规则与本样本所得数值的区别。原创练习，附本题评价要点。“in sample order”把3绑定第一项，11绑定第三项；两种计算都"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt e2b",
+      "pass": true,
+      "evidence": {
+        "attempt": "e2b:1788855539624:1",
+        "id": "e2b:1788855539624:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance e2b",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "e2b:1788855540361:2",
+          "answer": "c",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855540361,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches path-choice",
+      "pass": true,
+      "evidence": {
+        "text": "都是4，但身份路径不同",
+        "key": "a"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked path-choice",
+      "pass": true,
+      "evidence": {
+        "answer": "b",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source path-choice",
+      "pass": true,
+      "evidence": {
+        "source": "mean-first-AB-1",
+        "open": true,
+        "lastScroll": "mean-first-AB-1",
+        "text": "X̄=X₁+X₂2两项样本均值等于样本和除以样本量2。返回路径与输出分别记录什么当前作答"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt path-choice",
+      "pass": true,
+      "evidence": {
+        "attempt": "path-choice:1788855540960:1",
+        "id": "path-choice:1788855540960:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance path-choice",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "path-choice:1788855541766:2",
+          "answer": "a",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855541766,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches weight-wr",
+      "pass": true,
+      "evidence": {
+        "text": "1/3",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked weight-wr",
+      "pass": true,
+      "evidence": {
+        "answer": "c",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source weight-wr",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wr-AB-path",
+        "open": true,
+        "lastScroll": "mean-wr-AB-path",
+        "text": "身份A → 身份BX₁+X₂2样本均值的定义；分母2是本组样本量。2+62按路径次序代入第一、第二个观测值，分母仍为样本量2。82先计算分子加法：2+6=8。4分子除以2，得到这条路径的样本均值。P(A₁)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(B₂ | A₁)=13放回并独立，第二抽仍在三个身份中均匀选。P(AB)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。1×13×3分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。13×3先计算分子：1×1=1；分母乘积保留。P(AB)=19再计算分母：3×3=9。返回核对第二抽的条件当前作答"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt weight-wr",
+      "pass": true,
+      "evidence": {
+        "attempt": "weight-wr:1788855542381:1",
+        "id": "weight-wr:1788855542381:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance weight-wr",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "weight-wr:1788855543055:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855543055,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches group-wr",
+      "pass": true,
+      "evidence": {
+        "text": "相加",
+        "key": "c"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked group-wr",
+      "pass": true,
+      "evidence": {
+        "answer": "a",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source group-wr",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wr-group-4",
+        "open": true,
+        "lastScroll": "mean-wr-group-4",
+        "text": "输出 4 的全部原像原像即产生这一输出的路径：AB, BA。这些路径对应不同抽样结果，互不重叠。P(mean=4)=P(AB)+P(BA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=4)=19+19将每条路径已经算出的权重分别代入。P(mean=4)=1+19各项同分母，保留分母，把分子逐项相加。P(mean=4)=29各项分母相同，分母保留，分子相加：1+1=2。返回同一个均值怎样合并当前作答"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt group-wr",
+      "pass": true,
+      "evidence": {
+        "attempt": "group-wr:1788855543555:1",
+        "id": "group-wr:1788855543555:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance group-wr",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "group-wr:1788855544278:2",
+          "answer": "c",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855544278,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches weight-wor",
+      "pass": true,
+      "evidence": {
+        "text": "1/2",
+        "key": "a"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked weight-wor",
+      "pass": true,
+      "evidence": {
+        "answer": "b",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source weight-wor",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wor-AB-path",
+        "open": true,
+        "lastScroll": "mean-wor-AB-path",
+        "text": "身份A → 身份BX₁+X₂2样本均值的定义；分母2是本组样本量。2+62按路径次序代入第一、第二个观测值，分母仍为样本量2。82先计算分子加法：2+6=8。4分子除以2，得到这条路径的样本均值。P(A₁)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(B₂ | A₁)=12第一抽单位已经移走，第二抽在余下两个身份中均匀选。P(AB)=13×12乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。1×13×2分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。13×2先计算分子：1×1=1；分母乘积保留。P(AB)=16再计算分母：3×2=6。返回核对第二抽的条件当前作答"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt weight-wor",
+      "pass": true,
+      "evidence": {
+        "attempt": "weight-wor:1788855544767:1",
+        "id": "weight-wor:1788855544767:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance weight-wor",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "weight-wor:1788855545508:2",
+          "answer": "a",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855545508,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches group-wor",
+      "pass": true,
+      "evidence": {
+        "text": "相加",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked group-wor",
+      "pass": true,
+      "evidence": {
+        "answer": "c",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source group-wor",
+      "pass": true,
+      "evidence": {
+        "source": "mean-wor-group-4",
+        "open": true,
+        "lastScroll": "mean-wor-group-4",
+        "text": "输出 4 的全部原像原像即产生这一输出的路径：AB, BA。这些路径对应不同抽样结果，互不重叠。P(mean=4)=P(AB)+P(BA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=4)=16+16将每条路径已经算出的权重分别代入。P(mean=4)=1+16各项同分母，保留分母，把分子逐项相加。P(mean=4)=26各项分母相同，分母保留，分子相加：1+1=2。P(mean=4)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(mean=4)=16÷2计算分子：2÷2=1。P(mean=4)=13计算分母：6÷2=3。返回同一个均值怎样合并当前作答"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt group-wor",
+      "pass": true,
+      "evidence": {
+        "attempt": "group-wor:1788855546059:1",
+        "id": "group-wor:1788855546059:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance group-wor",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "group-wor:1788855546764:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855546764,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches e3a",
+      "pass": true,
+      "evidence": {
+        "text": "0,3,6,9对应1/3,2/9,2/9,2/9",
+        "key": "c"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked e3a",
+      "pass": true,
+      "evidence": {
+        "answer": "a",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source e3a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e3a",
+        "open": true,
+        "lastScroll": "solution-e3a",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件Three labelled delivery routes D, E and F have recorded delays of 0, 3 and 9 minutes. Two route labels are selected independently, with replacement, each label being equally likely on each draw. Let R be the range of the two recorded delays. Find the sampling distribution of R.三条有编号的投递路线D、E、F记录的延误分别为0、3、9分钟。独立、有放回抽取两个路线编号，每次三个编号"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt e3a",
+      "pass": true,
+      "evidence": {
+        "attempt": "e3a:1788855547307:1",
+        "id": "e3a:1788855547307:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance e3a",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "e3a:1788855548066:2",
+          "answer": "c",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855548066,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches e3b",
+      "pass": true,
+      "evidence": {
+        "text": "4/9",
+        "key": "a"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked e3b",
+      "pass": true,
+      "evidence": {
+        "answer": "b",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source e3b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-e3b",
+        "open": true,
+        "lastScroll": "solution-e3b",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件For the sampling scheme in E3(a), find P(R ≥ 6).在E3(a)的抽样方案下，求P(R≥6)。原创练习，附本题评价要点。“≥6”包含6也包含9；R=0或3不在事件里。② 题干给出的解题方法从已建立分布选出符合条件的输出，再把它们的概率相加。重新列路径也可，但已有分布直接给出这两个互斥事件。③ 回到已经建立的原理第3幕相同输出归并后的分布读法④ 公式与适用条件离散随机变量不同输出互斥，所以P(R≥6)=P(R=6)+P(R=9)。⑤ 每一步运算及其依据P(R≥6)=P(R=6)+P(R=9)从支持集0、3、6、9选出满足≥6的输出6、9。29+29代入E3(a)分布中两项概率。2+29同分母相加，保留9并合并分"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt e3b",
+      "pass": true,
+      "evidence": {
+        "attempt": "e3b:1788855548631:1",
+        "id": "e3b:1788855548631:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance e3b",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "e3b:1788855549349:2",
+          "answer": "a",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855549349,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches q1a",
+      "pass": true,
+      "evidence": {
+        "text": "600人；1名患者；240人名单；抽出的30人",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked q1a",
+      "pass": true,
+      "evidence": {
+        "answer": "c",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source q1a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q1a",
+        "open": true,
+        "lastScroll": "solution-q1a",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件A hospital wants to study the waiting experiences of all 600 patients registered for its clinic this month. It uses a list of 240 patients who booked appointments online and selects 30 different names from that list. Identify the population, a sampling unit, the sampling frame and the sample.一家医院希望研究本月在该门诊登记的全部600名患者的等候体验。医院使用一份"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt q1a",
+      "pass": true,
+      "evidence": {
+        "attempt": "q1a:1788855549843:1",
+        "id": "q1a:1788855549843:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance q1a",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "q1a:1788855550527:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855550527,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches q1b",
+      "pass": true,
+      "evidence": {
+        "text": "符合30人访问资源；非网上预约者无法入选",
+        "key": "c"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked q1b",
+      "pass": true,
+      "evidence": {
+        "answer": "a",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source q1b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q1b",
+        "open": true,
+        "lastScroll": "solution-q1b",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件For Q1(a), the hospital has time to interview only 30 patients. Give one reason to use a sample survey rather than a census. Explain one limitation of using the online-booking list to represent all 600 registered patients.在Q1(a)中，医院只有访问30名患者的时间。给出采用抽样调查而非普查的一条理由，并解释使用网上预约名单代表全部600名登记患者的一项局限。原创练习，附本题评价要点。“only30”给出访问资源；“all600”仍是"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt q1b",
+      "pass": true,
+      "evidence": {
+        "attempt": "q1b:1788855551287:1",
+        "id": "q1b:1788855551287:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance q1b",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "q1b:1788855551972:2",
+          "answer": "c",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855551972,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches q2a",
+      "pass": true,
+      "evidence": {
+        "text": "前两项是，第三项否",
+        "key": "a"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked q2a",
+      "pass": true,
+      "evidence": {
+        "answer": "b",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source q2a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q2a",
+        "open": true,
+        "lastScroll": "solution-q2a",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件A sample of four battery test readings is X1, X2, X3, X4. The calibration constant c = 2 is known, and the population mean μ is unknown. Determine which of X1+c, X4 and (X1+X2+X3+X4)/4−μ are statistics. Give a reason for each.四个电池测试读数组成样本X1、X2、X3、X4。校准常数c=2已知，总体均值μ未知。判别X1+c、X4、(X1+X2+X3+X4)/4−μ中哪些是统计量，并分别说明理由。原创练习，附本题评价要点。题面明确区分"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt q2a",
+      "pass": true,
+      "evidence": {
+        "attempt": "q2a:1788855552475:1",
+        "id": "q2a:1788855552475:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance q2a",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "q2a:1788855553243:2",
+          "answer": "a",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855553243,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches q2b",
+      "pass": true,
+      "evidence": {
+        "text": "10；规则固定，抽样输入在事前随机",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked q2b",
+      "pass": true,
+      "evidence": {
+        "answer": "c",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source q2b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q2b",
+        "open": true,
+        "lastScroll": "solution-q2b",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件The readings in Q2(a), in sample order, are 4, 8, 12 and 16. Let H = (X1+X4)/2. Calculate the observed value of H. Explain why H is a random variable before sampling but has a fixed value for this observed sample.Q2(a)按样本次序取得读数4、8、12、16。令H=(X1+X4)/2。计算H的观测值，并解释H为何在抽样前是随机变量、在这个观测样本给出后具有确定值。原创练习，附本题评价要点。H的规则只用第一与第四项。“in sample ord"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt q2b",
+      "pass": true,
+      "evidence": {
+        "attempt": "q2b:1788855553816:1",
+        "id": "q2b:1788855553816:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance q2b",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "q2b:1788855554488:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855554488,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches q3c",
+      "pass": true,
+      "evidence": {
+        "text": "有放回更大：4/9>1/3",
+        "key": "c"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked q3c",
+      "pass": true,
+      "evidence": {
+        "answer": "a",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source q3c",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q3c",
+        "open": true,
+        "lastScroll": "solution-q3c",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件Using the two sampling distributions in Q3(a) and Q3(b), compare the probabilities that M = 1. Explain the difference in terms of the allowed identity paths.使用Q3(a)与Q3(b)的两份抽样分布，比较M=1的概率，并用允许的身份路径解释差别。原创练习，附本题评价要点。比较同一个事件M=1，目标统计量与数值保持一致，只有抽样机制变化。② 题干给出的解题方法使用已求出的两项概率，再解释哪些路径被删除以及每条剩余路径的权重如何改变。只比较路径条数忽略权重还不完整。③ 回到已经建立的原理第3幕条件变化同"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt q3c",
+      "pass": true,
+      "evidence": {
+        "attempt": "q3c:1788855554950:1",
+        "id": "q3c:1788855554950:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance q3c",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "q3c:1788855555500:2",
+          "answer": "c",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855555500,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches q4a",
+      "pass": true,
+      "evidence": {
+        "text": "1/3，路径KL和LK",
+        "key": "a"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked q4a",
+      "pass": true,
+      "evidence": {
+        "answer": "b",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source q4a",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q4a",
+        "open": true,
+        "lastScroll": "solution-q4a",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件Three shelves J, K and L have recorded loads of 2, 5 and 9 kg. Two shelf labels are selected successively without replacement; at each draw every remaining label is equally likely. Let Y be the mean of the two recorded loads. Find P(Y ≥ 7).三个货架J、K、L的记录载荷分别为2、5、9kg。依次无放回抽取两个货架编号；每次剩余编号等可能。令Y为两个载荷观测的均值。求P(Y≥7)。原创练习，附本题评价要点。无放回排除相同"
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt q4a",
+      "pass": true,
+      "evidence": {
+        "attempt": "q4a:1788855556007:1",
+        "id": "q4a:1788855556007:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance q4a",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "q4a:1788855556863:2",
+          "answer": "a",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855556863,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "independent answer matches q4b",
+      "pass": true,
+      "evidence": {
+        "text": "1/9",
+        "key": "b"
+      }
+    },
+    {
+      "id": "wrong answer honestly marked q4b",
+      "pass": true,
+      "evidence": {
+        "answer": "c",
+        "correct": false,
+        "assisted": false
+      }
+    },
+    {
+      "id": "wrong repair opens real source q4b",
+      "pass": true,
+      "evidence": {
+        "source": "solution-q4b",
+        "open": true,
+        "lastScroll": "solution-q4b",
+        "text": "展开本小问完整讲解① 逐句读出题干的条件Using the shelves in Q4(a), two groups are selected. Each group consists of two labels drawn successively without replacement with equal chances among remaining labels. The two groups are selected independently; all units are returned before the second group is drawn. Find the probability that both group means are at least 7 kg."
+      }
+    },
+    {
+      "id": "source return keeps submitted attempt q4b",
+      "pass": true,
+      "evidence": {
+        "attempt": "q4b:1788855557399:1",
+        "id": "q4b:1788855557399:1"
+      }
+    },
+    {
+      "id": "repair retry correct retains assistance q4b",
+      "pass": true,
+      "evidence": {
+        "attempt": {
+          "id": "q4b:1788855558036:2",
+          "answer": "b",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788855558036,
+          "sessionId": "session-1788855531829-pqugz1o4da"
+        }
+      }
+    },
+    {
+      "id": "ending starts actual first card",
+      "pass": true,
+      "evidence": {
+        "index": 0,
+        "cards": {}
+      }
+    },
+    {
+      "id": "first flash uses explicit self-report",
+      "pass": true,
+      "evidence": {
+        "id": "recall-core",
+        "objectiveId": "stat",
+        "type": "flashcards",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [
+          {
+            "id": "recall-core:1788855559035:1",
+            "answer": "自评：翻面前已回忆",
+            "correct": true,
+            "source": "self",
+            "assisted": false,
+            "time": 1788855559035,
+            "sessionId": "session-1788855531829-pqugz1o4da",
+            "cardIndex": 0
+          }
+        ],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": true,
+        "lastInteractionAt": 1788855559035,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {
+            "0": {
+              "revealed": true,
+              "hintUsed": false,
+              "rating": "recalled",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788941959035,
+                "lastReviewedAt": 1788855559035,
+                "lastSessionId": "session-1788855531829-pqugz1o4da",
+                "evidenceSource": "self"
+              },
+              "attemptId": "recall-core:1788855559035:1",
+              "exposure": {
+                "sessionId": "session-1788855531829-pqugz1o4da",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788855558954,
+                "inferred": false
+              },
+              "recallAssisted": false,
+              "recallSessionId": "session-1788855531829-pqugz1o4da"
+            }
+          }
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      }
+    },
+    {
+      "id": "ending next card is actual unreviewed card",
+      "pass": true,
+      "evidence": {
+        "index": 1,
+        "cards": {
+          "0": {
+            "revealed": true,
+            "hintUsed": false,
+            "rating": "recalled",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788941959035,
+              "lastReviewedAt": 1788855559035,
+              "lastSessionId": "session-1788855531829-pqugz1o4da",
+              "evidenceSource": "self"
+            },
+            "attemptId": "recall-core:1788855559035:1",
+            "exposure": {
+              "sessionId": "session-1788855531829-pqugz1o4da",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788855558954,
+              "inferred": false
+            },
+            "recallAssisted": false,
+            "recallSessionId": "session-1788855531829-pqugz1o4da"
+          },
+          "1": {
+            "revealed": false,
+            "hintUsed": false,
+            "rating": null,
+            "review": null,
+            "attemptId": null,
+            "exposure": null,
+            "recallAssisted": false,
+            "recallSessionId": null
+          }
+        }
+      }
+    },
+    {
+      "id": "ending resumes unassessed recall unchanged",
+      "pass": true,
+      "evidence": {
+        "before": "{\"index\":1,\"cards\":{\"0\":{\"revealed\":true,\"hintUsed\":false,\"rating\":\"recalled\",\"review\":{\"intervalIndex\":0,\"dueAt\":1788941959035,\"lastReviewedAt\":1788855559035,\"lastSessionId\":\"session-1788855531829-pqugz1o4da\",\"evidenceSource\":\"self\"},\"attemptId\":\"recall-core:1788855559035:1\",\"exposure\":{\"sessionId\":\"session-1788855531829-pqugz1o4da\",\"hint\":false,\"reference\":true,\"observedAt\":1788855558954,\"inferred\":false},\"recallAssisted\":false,\"recallSessionId\":\"session-1788855531829-pqugz1o4da\"},\"1\":{\"revealed\":true,\"hintUsed\":false,\"rating\":null,\"review\":null,\"attemptId\":null,\"exposure\":{\"sessionId\":\"session-1788855531829-pqugz1o4da\",\"hint\":false,\"reference\":true,\"observedAt\":1788855559698,\"inferred\":false},\"recallAssisted\":false,\"recallSessionId\":\"session-1788855531829-pqugz1o4da\"}}}",
+        "after": {
+          "index": 1,
+          "cards": {
+            "0": {
+              "revealed": true,
+              "hintUsed": false,
+              "rating": "recalled",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788941959035,
+                "lastReviewedAt": 1788855559035,
+                "lastSessionId": "session-1788855531829-pqugz1o4da",
+                "evidenceSource": "self"
+              },
+              "attemptId": "recall-core:1788855559035:1",
+              "exposure": {
+                "sessionId": "session-1788855531829-pqugz1o4da",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788855558954,
+                "inferred": false
+              },
+              "recallAssisted": false,
+              "recallSessionId": "session-1788855531829-pqugz1o4da"
+            },
+            "1": {
+              "revealed": true,
+              "hintUsed": false,
+              "rating": null,
+              "review": null,
+              "attemptId": null,
+              "exposure": {
+                "sessionId": "session-1788855531829-pqugz1o4da",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788855559698,
+                "inferred": false
+              },
+              "recallAssisted": false,
+              "recallSessionId": "session-1788855531829-pqugz1o4da"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "second flash independently needs practice",
+      "pass": true,
+      "evidence": {
+        "index": 1,
+        "cards": {
+          "0": {
+            "revealed": true,
+            "hintUsed": false,
+            "rating": "recalled",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788941959035,
+              "lastReviewedAt": 1788855559035,
+              "lastSessionId": "session-1788855531829-pqugz1o4da",
+              "evidenceSource": "self"
+            },
+            "attemptId": "recall-core:1788855559035:1",
+            "exposure": {
+              "sessionId": "session-1788855531829-pqugz1o4da",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788855558954,
+              "inferred": false
+            },
+            "recallAssisted": false,
+            "recallSessionId": "session-1788855531829-pqugz1o4da"
+          },
+          "1": {
+            "revealed": true,
+            "hintUsed": false,
+            "rating": "again",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788941960056,
+              "lastReviewedAt": 1788855560056,
+              "lastSessionId": "session-1788855531829-pqugz1o4da",
+              "evidenceSource": "self"
+            },
+            "attemptId": "recall-core:1788855560056:2",
+            "exposure": {
+              "sessionId": "session-1788855531829-pqugz1o4da",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788855559698,
+              "inferred": false
+            },
+            "recallAssisted": false,
+            "recallSessionId": "session-1788855531829-pqugz1o4da"
+          }
+        }
+      }
+    },
+    {
+      "id": "browse first retains prior rating",
+      "pass": true,
+      "evidence": {
+        "index": 0,
+        "cards": {
+          "0": {
+            "revealed": true,
+            "hintUsed": false,
+            "rating": "recalled",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788941959035,
+              "lastReviewedAt": 1788855559035,
+              "lastSessionId": "session-1788855531829-pqugz1o4da",
+              "evidenceSource": "self"
+            },
+            "attemptId": "recall-core:1788855559035:1",
+            "exposure": {
+              "sessionId": "session-1788855531829-pqugz1o4da",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788855560377,
+              "inferred": false
+            },
+            "recallAssisted": false,
+            "recallSessionId": "session-1788855531829-pqugz1o4da"
+          },
+          "1": {
+            "revealed": true,
+            "hintUsed": false,
+            "rating": "again",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788941960056,
+              "lastReviewedAt": 1788855560056,
+              "lastSessionId": "session-1788855531829-pqugz1o4da",
+              "evidenceSource": "self"
+            },
+            "attemptId": "recall-core:1788855560056:2",
+            "exposure": {
+              "sessionId": "session-1788855531829-pqugz1o4da",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788855559698,
+              "inferred": false
+            },
+            "recallAssisted": false,
+            "recallSessionId": "session-1788855531829-pqugz1o4da"
+          }
+        }
+      }
+    },
+    {
+      "id": "actual early review restarts only first card",
+      "pass": true,
+      "evidence": {
+        "index": 0,
+        "cards": {
+          "0": {
+            "revealed": false,
+            "hintUsed": false,
+            "rating": null,
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788941959035,
+              "lastReviewedAt": 1788855559035,
+              "lastSessionId": "session-1788855531829-pqugz1o4da",
+              "evidenceSource": "self"
+            },
+            "attemptId": null,
+            "exposure": {
+              "sessionId": "session-1788855531829-pqugz1o4da",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788855560377,
+              "inferred": false
+            },
+            "recallAssisted": true,
+            "recallSessionId": null
+          },
+          "1": {
+            "revealed": true,
+            "hintUsed": false,
+            "rating": "again",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788941960056,
+              "lastReviewedAt": 1788855560056,
+              "lastSessionId": "session-1788855531829-pqugz1o4da",
+              "evidenceSource": "self"
+            },
+            "attemptId": "recall-core:1788855560056:2",
+            "exposure": {
+              "sessionId": "session-1788855531829-pqugz1o4da",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788855559698,
+              "inferred": false
+            },
+            "recallAssisted": false,
+            "recallSessionId": "session-1788855531829-pqugz1o4da"
+          }
+        }
+      }
+    },
+    {
+      "id": "prerequisites retain conditional nonzero and separate independence",
+      "pass": true,
+      "evidence": "路径概率里的符号和两条法则从哪里来一次随机试验的全部可能结果组成样本空间Ω。事件E是其中符合某条件的一组结果；P(E)表示这个事件发生的概率。例如E可以是“第一抽为身份A”，F可以是“第二抽为身份B”。这里E、F是事件名，A、B、C仍是单位身份。E∩F表示两件事都发生，E∪F表示至少一件发生。写P(AB)时，AB是“先A后B”这个完整路径事件；A₁和B₂分别简称第一抽为A、第二抽为B。有限样本空间中，如果每个基本结果等可能，事件概率等于符合条件的结果数除以全部结果数。用N表示全部结果数，用n(E)表示E中结果数；N为正。P(E)=n(E)N等可能是使用“个数之比”的前提；不能把不等可能的统计量输出直接等分概率。P(F | E)=P(E∩F)P(E)竖线读作“给定”。已知E发生后，只在E内比较F发生的部分；这个定义要求P(E)>0。P(E)×P(F | E)=P(E)×P(E∩F)P(E)等式两边同乘P(E)，保持等式成立。P(E)×P(F | E)=P(E∩F)右侧分子分母的P(E)相消；因为P(E)>0，除法与约去这一因子都有意义。P(E∩F)=P(E)×P(F | E)交换等号两边，得到路径使用的乘法法则：第一件事概率乘已知第一件事后的第二件事概率。P(F | E)=P(F)若两事件独立，知道E发生不改变F的概率；在P(E)>0时用这个相等关系表达。P(E∩F)=P(E)×P(F)把独立条件代入刚得到的乘法法则。放回只恢复可抽身份；两抽独立是本题另外明确给出的条件。加法用于不同的情况：若E与F不能同时发生，二者互斥，E∩F为空集。数E∪F中的结果时，E中的每个结果和F中的每个结果各数一次，没有重叠。下列计数推导继续使用等可能的N个基本结果；概率的一般互斥加法也遵循同一个不重复计量原则。n(E∪F)=n(E)+n(F)互斥保证计数没有重复；若有重叠，这一计数等式不能直接使用。P(E∪F)=n(E)+n(F)N把并事件的结果数代入等可能计数公式，分母仍是N。P(E∪F)=n(E)N+n(F)N同分母分数的分子和拆成两个分数之和。P(E∪F)=P(E)+P(F)两个个数比各是对应事件的概率。多条互斥路径可逐次使用同一加法。现在回到身份路径：A→B需要“第一抽A”与“第二抽B”都发生，用乘法；AB与BA是两个不能同时发生的完整结果，合并它们时用加法。无放回仍可用一般乘法法则，但第二抽应使用给定第一抽后的条件概率。"
+    },
+    {
+      "id": "seven complete duties pop",
+      "pass": true,
+      "evidence": [
+        "pop-act1",
+        "pop-act2",
+        "pop-act3",
+        "pop-act4",
+        "pop-act5",
+        "pop-act6",
+        "pop-act7"
+      ]
+    },
+    {
+      "id": "seven complete duties stat",
+      "pass": true,
+      "evidence": [
+        "stat-act1",
+        "stat-act2",
+        "stat-act3",
+        "stat-act4",
+        "stat-act5",
+        "stat-act6",
+        "stat-act7"
+      ]
+    },
+    {
+      "id": "seven complete duties dist",
+      "pass": true,
+      "evidence": [
+        "dist-act1",
+        "dist-act2",
+        "dist-act3",
+        "dist-act4",
+        "dist-act5",
+        "dist-act6",
+        "dist-act7"
+      ]
+    },
+    {
+      "id": "six actual explanation duties e1a",
+      "pass": true,
+      "evidence": {
+        "id": "e1a",
+        "length": 654,
+        "math": 3
+      }
+    },
+    {
+      "id": "six actual explanation duties e1b",
+      "pass": true,
+      "evidence": {
+        "id": "e1b",
+        "length": 845,
+        "math": 5
+      }
+    },
+    {
+      "id": "six actual explanation duties e2a",
+      "pass": true,
+      "evidence": {
+        "id": "e2a",
+        "length": 696,
+        "math": 3
+      }
+    },
+    {
+      "id": "six actual explanation duties e2b",
+      "pass": true,
+      "evidence": {
+        "id": "e2b",
+        "length": 719,
+        "math": 8
+      }
+    },
+    {
+      "id": "six actual explanation duties e3a",
+      "pass": true,
+      "evidence": {
+        "id": "e3a",
+        "length": 4263,
+        "math": 112
+      }
+    },
+    {
+      "id": "six actual explanation duties e3b",
+      "pass": true,
+      "evidence": {
+        "id": "e3b",
+        "length": 437,
+        "math": 4
+      }
+    },
+    {
+      "id": "six actual explanation duties q1a",
+      "pass": true,
+      "evidence": {
+        "id": "q1a",
+        "length": 816,
+        "math": 4
+      }
+    },
+    {
+      "id": "six actual explanation duties q1b",
+      "pass": true,
+      "evidence": {
+        "id": "q1b",
+        "length": 814,
+        "math": 4
+      }
+    },
+    {
+      "id": "six actual explanation duties q2a",
+      "pass": true,
+      "evidence": {
+        "id": "q2a",
+        "length": 705,
+        "math": 3
+      }
+    },
+    {
+      "id": "six actual explanation duties q2b",
+      "pass": true,
+      "evidence": {
+        "id": "q2b",
+        "length": 686,
+        "math": 4
+      }
+    },
+    {
+      "id": "six actual explanation duties q3a",
+      "pass": true,
+      "evidence": {
+        "id": "q3a",
+        "length": 3899,
+        "math": 105
+      }
+    },
+    {
+      "id": "six actual explanation duties q3b",
+      "pass": true,
+      "evidence": {
+        "id": "q3b",
+        "length": 3436,
+        "math": 81
+      }
+    },
+    {
+      "id": "six actual explanation duties q3c",
+      "pass": true,
+      "evidence": {
+        "id": "q3c",
+        "length": 650,
+        "math": 5
+      }
+    },
+    {
+      "id": "six actual explanation duties q4a",
+      "pass": true,
+      "evidence": {
+        "id": "q4a",
+        "length": 3766,
+        "math": 92
+      }
+    },
+    {
+      "id": "six actual explanation duties q4b",
+      "pass": true,
+      "evidence": {
+        "id": "q4b",
+        "length": 850,
+        "math": 5
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-AA",
+      "pass": true,
+      "evidence": {
+        "path": "AA",
+        "expectedValue": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-AB",
+      "pass": true,
+      "evidence": {
+        "path": "AB",
+        "expectedValue": 4,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-AC",
+      "pass": true,
+      "evidence": {
+        "path": "AC",
+        "expectedValue": 6,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-BA",
+      "pass": true,
+      "evidence": {
+        "path": "BA",
+        "expectedValue": 4,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-BB",
+      "pass": true,
+      "evidence": {
+        "path": "BB",
+        "expectedValue": 6,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-BC",
+      "pass": true,
+      "evidence": {
+        "path": "BC",
+        "expectedValue": 8,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-CA",
+      "pass": true,
+      "evidence": {
+        "path": "CA",
+        "expectedValue": 6,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-CB",
+      "pass": true,
+      "evidence": {
+        "path": "CB",
+        "expectedValue": 8,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wr-CC",
+      "pass": true,
+      "evidence": {
+        "path": "CC",
+        "expectedValue": 10,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent exact distribution mean/wr",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          [
+            2,
+            0.1111111111111111
+          ],
+          [
+            4,
+            0.2222222222222222
+          ],
+          [
+            6,
+            0.3333333333333333
+          ],
+          [
+            8,
+            0.2222222222222222
+          ],
+          [
+            10,
+            0.1111111111111111
+          ]
+        ],
+        "expected": [
+          [
+            2,
+            0.1111111111111111
+          ],
+          [
+            4,
+            0.2222222222222222
+          ],
+          [
+            6,
+            0.3333333333333333
+          ],
+          [
+            8,
+            0.2222222222222222
+          ],
+          [
+            10,
+            0.1111111111111111
+          ]
+        ],
+        "grouped": {
+          "2": [
+            "AA"
+          ],
+          "4": [
+            "AB",
+            "BA"
+          ],
+          "6": [
+            "AC",
+            "BB",
+            "CA"
+          ],
+          "8": [
+            "BC",
+            "CB"
+          ],
+          "10": [
+            "CC"
+          ]
+        }
+      }
+    },
+    {
+      "id": "actual probability total one mean/wr",
+      "pass": true,
+      "evidence": {
+        "total": 1
+      }
+    },
+    {
+      "id": "excluded identity mean-wor-AA",
+      "pass": true,
+      "evidence": {
+        "path": "AA"
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wor-AB",
+      "pass": true,
+      "evidence": {
+        "path": "AB",
+        "expectedValue": 4,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wor-AC",
+      "pass": true,
+      "evidence": {
+        "path": "AC",
+        "expectedValue": 6,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wor-BA",
+      "pass": true,
+      "evidence": {
+        "path": "BA",
+        "expectedValue": 4,
+        "den": 6
+      }
+    },
+    {
+      "id": "excluded identity mean-wor-BB",
+      "pass": true,
+      "evidence": {
+        "path": "BB"
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wor-BC",
+      "pass": true,
+      "evidence": {
+        "path": "BC",
+        "expectedValue": 8,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wor-CA",
+      "pass": true,
+      "evidence": {
+        "path": "CA",
+        "expectedValue": 6,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight mean-wor-CB",
+      "pass": true,
+      "evidence": {
+        "path": "CB",
+        "expectedValue": 8,
+        "den": 6
+      }
+    },
+    {
+      "id": "excluded identity mean-wor-CC",
+      "pass": true,
+      "evidence": {
+        "path": "CC"
+      }
+    },
+    {
+      "id": "independent exact distribution mean/wor",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          [
+            4,
+            0.3333333333333333
+          ],
+          [
+            6,
+            0.3333333333333333
+          ],
+          [
+            8,
+            0.3333333333333333
+          ]
+        ],
+        "expected": [
+          [
+            4,
+            0.3333333333333333
+          ],
+          [
+            6,
+            0.3333333333333333
+          ],
+          [
+            8,
+            0.3333333333333333
+          ]
+        ],
+        "grouped": {
+          "4": [
+            "AB",
+            "BA"
+          ],
+          "6": [
+            "AC",
+            "CA"
+          ],
+          "8": [
+            "BC",
+            "CB"
+          ]
+        }
+      }
+    },
+    {
+      "id": "actual probability total one mean/wor",
+      "pass": true,
+      "evidence": {
+        "total": 1
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-RR",
+      "pass": true,
+      "evidence": {
+        "path": "RR",
+        "expectedValue": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-RS",
+      "pass": true,
+      "evidence": {
+        "path": "RS",
+        "expectedValue": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-RT",
+      "pass": true,
+      "evidence": {
+        "path": "RT",
+        "expectedValue": 5,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-SR",
+      "pass": true,
+      "evidence": {
+        "path": "SR",
+        "expectedValue": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-SS",
+      "pass": true,
+      "evidence": {
+        "path": "SS",
+        "expectedValue": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-ST",
+      "pass": true,
+      "evidence": {
+        "path": "ST",
+        "expectedValue": 5,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-TR",
+      "pass": true,
+      "evidence": {
+        "path": "TR",
+        "expectedValue": 5,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-TS",
+      "pass": true,
+      "evidence": {
+        "path": "TS",
+        "expectedValue": 5,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight max-wr-TT",
+      "pass": true,
+      "evidence": {
+        "path": "TT",
+        "expectedValue": 5,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent exact distribution max/wr",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          [
+            1,
+            0.4444444444444444
+          ],
+          [
+            5,
+            0.5555555555555556
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            0.4444444444444444
+          ],
+          [
+            5,
+            0.5555555555555556
+          ]
+        ],
+        "grouped": {
+          "1": [
+            "RR",
+            "RS",
+            "SR",
+            "SS"
+          ],
+          "5": [
+            "RT",
+            "ST",
+            "TR",
+            "TS",
+            "TT"
+          ]
+        }
+      }
+    },
+    {
+      "id": "actual probability total one max/wr",
+      "pass": true,
+      "evidence": {
+        "total": 1
+      }
+    },
+    {
+      "id": "excluded identity max-wor-RR",
+      "pass": true,
+      "evidence": {
+        "path": "RR"
+      }
+    },
+    {
+      "id": "independent path value and weight max-wor-RS",
+      "pass": true,
+      "evidence": {
+        "path": "RS",
+        "expectedValue": 1,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight max-wor-RT",
+      "pass": true,
+      "evidence": {
+        "path": "RT",
+        "expectedValue": 5,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight max-wor-SR",
+      "pass": true,
+      "evidence": {
+        "path": "SR",
+        "expectedValue": 1,
+        "den": 6
+      }
+    },
+    {
+      "id": "excluded identity max-wor-SS",
+      "pass": true,
+      "evidence": {
+        "path": "SS"
+      }
+    },
+    {
+      "id": "independent path value and weight max-wor-ST",
+      "pass": true,
+      "evidence": {
+        "path": "ST",
+        "expectedValue": 5,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight max-wor-TR",
+      "pass": true,
+      "evidence": {
+        "path": "TR",
+        "expectedValue": 5,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight max-wor-TS",
+      "pass": true,
+      "evidence": {
+        "path": "TS",
+        "expectedValue": 5,
+        "den": 6
+      }
+    },
+    {
+      "id": "excluded identity max-wor-TT",
+      "pass": true,
+      "evidence": {
+        "path": "TT"
+      }
+    },
+    {
+      "id": "independent exact distribution max/wor",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          [
+            1,
+            0.3333333333333333
+          ],
+          [
+            5,
+            0.6666666666666666
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            0.3333333333333333
+          ],
+          [
+            5,
+            0.6666666666666666
+          ]
+        ],
+        "grouped": {
+          "1": [
+            "RS",
+            "SR"
+          ],
+          "5": [
+            "RT",
+            "ST",
+            "TR",
+            "TS"
+          ]
+        }
+      }
+    },
+    {
+      "id": "actual probability total one max/wor",
+      "pass": true,
+      "evidence": {
+        "total": 1
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-DD",
+      "pass": true,
+      "evidence": {
+        "path": "DD",
+        "expectedValue": 0,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-DE",
+      "pass": true,
+      "evidence": {
+        "path": "DE",
+        "expectedValue": 3,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-DF",
+      "pass": true,
+      "evidence": {
+        "path": "DF",
+        "expectedValue": 9,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-ED",
+      "pass": true,
+      "evidence": {
+        "path": "ED",
+        "expectedValue": 3,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-EE",
+      "pass": true,
+      "evidence": {
+        "path": "EE",
+        "expectedValue": 0,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-EF",
+      "pass": true,
+      "evidence": {
+        "path": "EF",
+        "expectedValue": 6,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-FD",
+      "pass": true,
+      "evidence": {
+        "path": "FD",
+        "expectedValue": 9,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-FE",
+      "pass": true,
+      "evidence": {
+        "path": "FE",
+        "expectedValue": 6,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent path value and weight range-wr-FF",
+      "pass": true,
+      "evidence": {
+        "path": "FF",
+        "expectedValue": 0,
+        "den": 9
+      }
+    },
+    {
+      "id": "independent exact distribution range/wr",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          [
+            0,
+            0.3333333333333333
+          ],
+          [
+            3,
+            0.2222222222222222
+          ],
+          [
+            6,
+            0.2222222222222222
+          ],
+          [
+            9,
+            0.2222222222222222
+          ]
+        ],
+        "expected": [
+          [
+            0,
+            0.3333333333333333
+          ],
+          [
+            3,
+            0.2222222222222222
+          ],
+          [
+            6,
+            0.2222222222222222
+          ],
+          [
+            9,
+            0.2222222222222222
+          ]
+        ],
+        "grouped": {
+          "0": [
+            "DD",
+            "EE",
+            "FF"
+          ],
+          "3": [
+            "DE",
+            "ED"
+          ],
+          "6": [
+            "EF",
+            "FE"
+          ],
+          "9": [
+            "DF",
+            "FD"
+          ]
+        }
+      }
+    },
+    {
+      "id": "actual probability total one range/wr",
+      "pass": true,
+      "evidence": {
+        "total": 1
+      }
+    },
+    {
+      "id": "excluded identity shelf-wor-JJ",
+      "pass": true,
+      "evidence": {
+        "path": "JJ"
+      }
+    },
+    {
+      "id": "independent path value and weight shelf-wor-JK",
+      "pass": true,
+      "evidence": {
+        "path": "JK",
+        "expectedValue": 3.5,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight shelf-wor-JL",
+      "pass": true,
+      "evidence": {
+        "path": "JL",
+        "expectedValue": 5.5,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight shelf-wor-KJ",
+      "pass": true,
+      "evidence": {
+        "path": "KJ",
+        "expectedValue": 3.5,
+        "den": 6
+      }
+    },
+    {
+      "id": "excluded identity shelf-wor-KK",
+      "pass": true,
+      "evidence": {
+        "path": "KK"
+      }
+    },
+    {
+      "id": "independent path value and weight shelf-wor-KL",
+      "pass": true,
+      "evidence": {
+        "path": "KL",
+        "expectedValue": 7,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight shelf-wor-LJ",
+      "pass": true,
+      "evidence": {
+        "path": "LJ",
+        "expectedValue": 5.5,
+        "den": 6
+      }
+    },
+    {
+      "id": "independent path value and weight shelf-wor-LK",
+      "pass": true,
+      "evidence": {
+        "path": "LK",
+        "expectedValue": 7,
+        "den": 6
+      }
+    },
+    {
+      "id": "excluded identity shelf-wor-LL",
+      "pass": true,
+      "evidence": {
+        "path": "LL"
+      }
+    },
+    {
+      "id": "independent exact distribution shelf/wor",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          [
+            3.5,
+            0.3333333333333333
+          ],
+          [
+            5.5,
+            0.3333333333333333
+          ],
+          [
+            7,
+            0.3333333333333333
+          ]
+        ],
+        "expected": [
+          [
+            3.5,
+            0.3333333333333333
+          ],
+          [
+            5.5,
+            0.3333333333333333
+          ],
+          [
+            7,
+            0.3333333333333333
+          ]
+        ],
+        "grouped": {
+          "7": [
+            "KL",
+            "LK"
+          ],
+          "3.5": [
+            "JK",
+            "KJ"
+          ],
+          "5.5": [
+            "JL",
+            "LJ"
+          ]
+        }
+      }
+    },
+    {
+      "id": "actual probability total one shelf/wor",
+      "pass": true,
+      "evidence": {
+        "total": 1
+      }
+    },
+    {
+      "id": "candidate enumeration coverage",
+      "pass": true,
+      "evidence": {
+        "candidate": 54,
+        "valid": 45,
+        "excluded": 9
+      }
+    },
+    {
+      "id": "no uncaught jsdom exceptions",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "mathEvidence": [
+    {
+      "id": "mean-wr-AA-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">2</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-AA-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-AB-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">4</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-AB-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-AC-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">6</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-AC-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-BA-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">4</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-BA-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-BB-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">6</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-BB-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-BC-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">8</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-BC-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-CA-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">6</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-CA-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-CB-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">8</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-CB-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-CC-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">10</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wr-CC-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "mean-wr-mass",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>9</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>=</mo><mn>1</mn></mrow></math>",
+      "reason": "分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。"
+    },
+    {
+      "id": "mean-wor-AB-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">4</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wor-AB-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "mean-wor-AC-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">6</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wor-AC-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(AC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "mean-wor-BA-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">4</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wor-BA-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "mean-wor-BC-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">8</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wor-BC-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(BC)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "mean-wor-CA-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">6</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wor-CA-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CA)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "mean-wor-CB-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">8</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "mean-wor-CB-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(CB)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "mean-wor-mass",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mn>1</mn></mrow></math>",
+      "reason": "分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。"
+    },
+    {
+      "id": "max-wr-RR-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">1</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-RR-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-RS-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">1</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-RS-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-RT-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-RT-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-SR-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">1</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-SR-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-SS-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">1</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-SS-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-ST-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-ST-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ST)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-TR-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-TR-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-TS-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-TS-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-TT-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wr-TT-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "max-wr-mass",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>9</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>=</mo><mn>1</mn></mrow></math>",
+      "reason": "分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。"
+    },
+    {
+      "id": "max-wor-RS-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">1</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wor-RS-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "max-wor-RT-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wor-RT-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(RT)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "max-wor-SR-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">1</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wor-SR-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(SR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "max-wor-ST-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wor-ST-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ST)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "max-wor-TR-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wor-TR-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TR)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "max-wor-TS-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">5</mn></mrow></math>",
+      "reason": "取比较得到的较大值。"
+    },
+    {
+      "id": "max-wor-TS-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(TS)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "max-wor-mass",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mn>1</mn></mrow></math>",
+      "reason": "分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。"
+    },
+    {
+      "id": "range-wr-DD-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">0</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-DD-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(DD)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-DE-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">3</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-DE-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(DE)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-DF-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">9</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-DF-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(DF)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-ED-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">3</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-ED-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(ED)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-EE-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">0</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-EE-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(EE)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-EF-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">6</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-EF-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(EF)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-FD-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">9</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-FD-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(FD)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-FE-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">6</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-FE-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(FE)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-FF-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">0</mn></mrow></math>",
+      "reason": "完成减法得到极差。"
+    },
+    {
+      "id": "range-wr-FF-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(FF)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×3=9。"
+    },
+    {
+      "id": "range-wr-mass",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>9</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>=</mo><mn>1</mn></mrow></math>",
+      "reason": "分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。"
+    },
+    {
+      "id": "shelf-wor-JK-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" mathcolor=\"#0F7074\"><mfrac><mrow><mn>7</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "shelf-wor-JK-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(JK)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "shelf-wor-JL-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" mathcolor=\"#0F7074\"><mfrac><mrow><mn>11</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "shelf-wor-JL-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(JL)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "shelf-wor-KJ-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" mathcolor=\"#0F7074\"><mfrac><mrow><mn>7</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "shelf-wor-KJ-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(KJ)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "shelf-wor-KL-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">7</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "shelf-wor-KL-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(KL)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "shelf-wor-LJ-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" mathcolor=\"#0F7074\"><mfrac><mrow><mn>11</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "shelf-wor-LJ-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(LJ)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "shelf-wor-LK-map",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn data-role=\"stat\" mathcolor=\"#0F7074\">7</mn></mrow></math>",
+      "reason": "分子除以2，得到这条路径的样本均值。"
+    },
+    {
+      "id": "shelf-wor-LK-weight",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(LK)</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+      "reason": "再计算分母：3×2=6。"
+    },
+    {
+      "id": "shelf-wor-mass",
+      "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mn>1</mn></mrow></math>",
+      "reason": "分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。"
+    }
+  ],
+  "errors": []
+}

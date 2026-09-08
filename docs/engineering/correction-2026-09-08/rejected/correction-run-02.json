@@ -1,0 +1,8 @@
+{
+  "archive": "correction-run-02.tar.xz",
+  "files": 117,
+  "bytes": 9156160,
+  "sha256": "90e0e0d43ef37cdde7568ee7c43b9e56f3fe26f1baf0b62ddc847c5cd931e725",
+  "htmlSha256": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+  "status": "rejected by all five independent final reviewers; frozen inputs preserved"
+}

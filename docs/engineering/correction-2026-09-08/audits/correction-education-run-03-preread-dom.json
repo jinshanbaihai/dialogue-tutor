@@ -1,0 +1,74 @@
+{
+  "scope": "Targeted prefreeze content exit only: jsdom parsed/executed compiled HTML; fixed offscreen geometry, no browser/layout or final-course operation claim.",
+  "htmlSHA256": "15cd0a2d867084ded7aebc05908a99ebc4b3d78c063d5758e7905482f6549f20",
+  "checks": {
+    "approvedHash": true,
+    "insideDuty3": true,
+    "afterMeanAB": true,
+    "beforeMeanLab": true,
+    "beforePathProbability": true,
+    "elevenActualMath": true,
+    "constantWording": true,
+    "noJsdomErrors": true
+  },
+  "primerText": "路径概率里的符号和两条法则从哪里来一次随机试验的全部可能结果组成样本空间Ω。事件E是其中符合某条件的一组结果；P(E)表示这个事件发生的概率。例如E可以是“第一抽为身份A”，F可以是“第二抽为身份B”。这里E、F是事件名，A、B、C仍是单位身份。E∩F表示两件事都发生，E∪F表示至少一件发生。写P(AB)时，AB是“先A后B”这个完整路径事件；A₁和B₂分别简称第一抽为A、第二抽为B。有限样本空间中，如果每个基本结果等可能，事件概率等于符合条件的结果数除以全部结果数。用N表示全部结果数，用n(E)表示E中结果数；N为正。P(E)=n(E)N等可能是使用“个数之比”的前提；不能把不等可能的统计量输出直接等分概率。P(F | E)=P(E∩F)P(E)竖线读作“给定”。已知E发生后，只在E内比较F发生的部分；这个定义要求P(E)>0。P(E)×P(F | E)=P(E)×P(E∩F)P(E)等式两边同乘P(E)，保持等式成立。P(E)×P(F | E)=P(E∩F)右侧分子分母的P(E)相消；因为P(E)>0，除法与约去这一因子都有意义。P(E∩F)=P(E)×P(F | E)交换等号两边，得到路径使用的乘法法则：第一件事概率乘已知第一件事后的第二件事概率。P(F | E)=P(F)若两事件独立，知道E发生不改变F的概率；在P(E)>0时用这个相等关系表达。P(E∩F)=P(E)×P(F)把独立条件代入刚得到的乘法法则。放回只恢复可抽身份；两抽独立是本题另外明确给出的条件。加法用于不同的情况：若E与F不能同时发生，二者互斥，E∩F为空集。数E∪F中的结果时，E中的每个结果和F中的每个结果各数一次，没有重叠。下列计数推导继续使用等可能的N个基本结果；概率的一般互斥加法也遵循同一个不重复计量原则。n(E∪F)=n(E)+n(F)互斥保证计数没有重复；若有重叠，这一计数等式不能直接使用。P(E∪F)=n(E)+n(F)N把并事件的结果数代入等可能计数公式，分母仍是N。P(E∪F)=n(E)N+n(F)N同分母分数的分子和拆成两个分数之和。P(E∪F)=P(E)+P(F)两个个数比各是对应事件的概率。多条互斥路径可逐次使用同一加法。现在回到身份路径：A→B需要“第一抽A”与“第二抽B”都发生，用乘法；AB与BA是两个不能同时发生的完整结果，合并它们时用加法。无放回仍可用一般乘法法则，但第二抽应使用给定第一抽后的条件概率。",
+  "rows": [
+    {
+      "id": "probability-count",
+      "html": "<div class=\"r3-line\" id=\"probability-count\" data-line-id=\"probability-count\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E)</mtext><mo>=</mo><mfrac><mrow><mtext>n(E)</mtext></mrow><mrow><mi>N</mi></mrow></mfrac></mrow></math></div><p class=\"r3-reason\">等可能是使用“个数之比”的前提；不能把不等可能的统计量输出直接等分概率。</p></div>",
+      "text": "P(E)=n(E)N等可能是使用“个数之比”的前提；不能把不等可能的统计量输出直接等分概率。"
+    },
+    {
+      "id": "probability-conditional",
+      "html": "<div class=\"r3-line\" id=\"probability-conditional\" data-line-id=\"probability-conditional\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(F | E)</mtext><mo>=</mo><mfrac><mrow><mtext>P(E∩F)</mtext></mrow><mrow><mtext>P(E)</mtext></mrow></mfrac></mrow></math></div><p class=\"r3-reason\">竖线读作“给定”。已知E发生后，只在E内比较F发生的部分；这个定义要求P(E)&gt;0。</p></div>",
+      "text": "P(F | E)=P(E∩F)P(E)竖线读作“给定”。已知E发生后，只在E内比较F发生的部分；这个定义要求P(E)>0。"
+    },
+    {
+      "id": "probability-multiply",
+      "html": "<div class=\"r3-line\" id=\"probability-multiply\" data-line-id=\"probability-multiply\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E)</mtext><mo>×</mo><mtext>P(F | E)</mtext><mo>=</mo><mtext>P(E)</mtext><mo>×</mo><mfrac><mrow><mtext>P(E∩F)</mtext></mrow><mrow><mtext>P(E)</mtext></mrow></mfrac></mrow></math></div><p class=\"r3-reason\">等式两边同乘P(E)，保持等式成立。</p></div>",
+      "text": "P(E)×P(F | E)=P(E)×P(E∩F)P(E)等式两边同乘P(E)，保持等式成立。"
+    },
+    {
+      "id": "probability-cancel",
+      "html": "<div class=\"r3-line\" id=\"probability-cancel\" data-line-id=\"probability-cancel\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E)</mtext><mo>×</mo><mtext>P(F | E)</mtext><mo>=</mo><mtext>P(E∩F)</mtext></mrow></math></div><p class=\"r3-reason\">右侧分子分母的P(E)相消；因为P(E)&gt;0，除法与约去这一因子都有意义。</p></div>",
+      "text": "P(E)×P(F | E)=P(E∩F)右侧分子分母的P(E)相消；因为P(E)>0，除法与约去这一因子都有意义。"
+    },
+    {
+      "id": "probability-product",
+      "html": "<div class=\"r3-line\" id=\"probability-product\" data-line-id=\"probability-product\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E∩F)</mtext><mo>=</mo><mtext>P(E)</mtext><mo>×</mo><mtext>P(F | E)</mtext></mrow></math></div><p class=\"r3-reason\">交换等号两边，得到路径使用的乘法法则：第一件事概率乘已知第一件事后的第二件事概率。</p></div>",
+      "text": "P(E∩F)=P(E)×P(F | E)交换等号两边，得到路径使用的乘法法则：第一件事概率乘已知第一件事后的第二件事概率。"
+    },
+    {
+      "id": "probability-independence",
+      "html": "<div class=\"r3-line\" id=\"probability-independence\" data-line-id=\"probability-independence\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(F | E)</mtext><mo>=</mo><mtext>P(F)</mtext></mrow></math></div><p class=\"r3-reason\">若两事件独立，知道E发生不改变F的概率；在P(E)&gt;0时用这个相等关系表达。</p></div>",
+      "text": "P(F | E)=P(F)若两事件独立，知道E发生不改变F的概率；在P(E)>0时用这个相等关系表达。"
+    },
+    {
+      "id": "probability-independent-product",
+      "html": "<div class=\"r3-line\" id=\"probability-independent-product\" data-line-id=\"probability-independent-product\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E∩F)</mtext><mo>=</mo><mtext>P(E)</mtext><mo>×</mo><mtext>P(F)</mtext></mrow></math></div><p class=\"r3-reason\">把独立条件代入刚得到的乘法法则。放回只恢复可抽身份；两抽独立是本题另外明确给出的条件。</p></div>",
+      "text": "P(E∩F)=P(E)×P(F)把独立条件代入刚得到的乘法法则。放回只恢复可抽身份；两抽独立是本题另外明确给出的条件。"
+    },
+    {
+      "id": "probability-disjoint-count",
+      "html": "<div class=\"r3-line\" id=\"probability-disjoint-count\" data-line-id=\"probability-disjoint-count\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>n(E∪F)</mtext><mo>=</mo><mtext>n(E)</mtext><mo>+</mo><mtext>n(F)</mtext></mrow></math></div><p class=\"r3-reason\">互斥保证计数没有重复；若有重叠，这一计数等式不能直接使用。</p></div>",
+      "text": "n(E∪F)=n(E)+n(F)互斥保证计数没有重复；若有重叠，这一计数等式不能直接使用。"
+    },
+    {
+      "id": "probability-disjoint-ratio",
+      "html": "<div class=\"r3-line\" id=\"probability-disjoint-ratio\" data-line-id=\"probability-disjoint-ratio\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E∪F)</mtext><mo>=</mo><mfrac><mrow><mtext>n(E)</mtext><mo>+</mo><mtext>n(F)</mtext></mrow><mrow><mi>N</mi></mrow></mfrac></mrow></math></div><p class=\"r3-reason\">把并事件的结果数代入等可能计数公式，分母仍是N。</p></div>",
+      "text": "P(E∪F)=n(E)+n(F)N把并事件的结果数代入等可能计数公式，分母仍是N。"
+    },
+    {
+      "id": "probability-disjoint-split",
+      "html": "<div class=\"r3-line\" id=\"probability-disjoint-split\" data-line-id=\"probability-disjoint-split\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E∪F)</mtext><mo>=</mo><mfrac><mrow><mtext>n(E)</mtext></mrow><mrow><mi>N</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mtext>n(F)</mtext></mrow><mrow><mi>N</mi></mrow></mfrac></mrow></math></div><p class=\"r3-reason\">同分母分数的分子和拆成两个分数之和。</p></div>",
+      "text": "P(E∪F)=n(E)N+n(F)N同分母分数的分子和拆成两个分数之和。"
+    },
+    {
+      "id": "probability-disjoint-sum",
+      "html": "<div class=\"r3-line\" id=\"probability-disjoint-sum\" data-line-id=\"probability-disjoint-sum\"><div class=\"r3-equation\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>P(E∪F)</mtext><mo>=</mo><mtext>P(E)</mtext><mo>+</mo><mtext>P(F)</mtext></mrow></math></div><p class=\"r3-reason\">两个个数比各是对应事件的概率。多条互斥路径可逐次使用同一加法。</p></div>",
+      "text": "P(E∪F)=P(E)+P(F)两个个数比各是对应事件的概率。多条互斥路径可逐次使用同一加法。"
+    }
+  ],
+  "statText": "3. 用only逐项核查所需输入A statistic is a quantity calculated only from sample observations, without unknown parameters.统计量是仅由样本观测计算得到、不含未知参数的量。样本还未抽出时，其值由随机样本决定，可能随样本变化；常数统计量可以看作取值固定的随机变量。样本已经给定时，按相同规则得到一个具体数值。定义中的词在计算中检查什么quantity，量有确定输出，例如平均值、最大值或第一项观测。calculated，计算得到有明确规则；允许直接取某个观测，也允许组合多个观测。only，仅给定样本与已知常数后，输入已经足够。observations，观测值样本实际记录的数据，例如3、7、11。sample，样本本次抽出的单位提供这些观测；总体未知参数没有因抽样自动变成已知。令X₁、X₂、X₃依次表示三次观测，x₁、x₂、x₃表示取得样本后的数值。μ读作mu，表示未知总体均值；n是已知样本量。以下规则先检查所需输入，再计算。S=X₁+X₂+X₃定义样本和S；三项都来自样本。S=3+7+11代入三项观测3、7、11。S=10+11先计算3+7=10。S=21再计算10+11=21。X₁也满足定义，因为第一项观测已经来自样本；统计量允许只使用部分观测。X₁+2中的2是已知常数，样本给定后可以算出；X₁+μ在μ未知时仍缺一个输入。给定的n可以出现在样本均值分母，n的存在不构成未知参数。返回只用样本能否计算当前作答",
+  "errors": []
+}

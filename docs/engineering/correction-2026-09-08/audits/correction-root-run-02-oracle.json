@@ -1,0 +1,512 @@
+{
+  "scope": "Independent mathematical expectations from written blueprint. Does not validate any HTML or author dataset yet. Example L/M identities are oracle labels; compare observed values if author uses other IDs.",
+  "cases": [
+    {
+      "conditionKey": "main-wr-mean-v1",
+      "replacement": true,
+      "statistic": "mean",
+      "paths": [
+        {
+          "path": "AA",
+          "x1": "1",
+          "x2": "1",
+          "statistic": "1",
+          "weight": "1/9"
+        },
+        {
+          "path": "AB",
+          "x1": "1",
+          "x2": "5",
+          "statistic": "3",
+          "weight": "1/9"
+        },
+        {
+          "path": "AC",
+          "x1": "1",
+          "x2": "9",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "BA",
+          "x1": "5",
+          "x2": "1",
+          "statistic": "3",
+          "weight": "1/9"
+        },
+        {
+          "path": "BB",
+          "x1": "5",
+          "x2": "5",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "BC",
+          "x1": "5",
+          "x2": "9",
+          "statistic": "7",
+          "weight": "1/9"
+        },
+        {
+          "path": "CA",
+          "x1": "9",
+          "x2": "1",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "CB",
+          "x1": "9",
+          "x2": "5",
+          "statistic": "7",
+          "weight": "1/9"
+        },
+        {
+          "path": "CC",
+          "x1": "9",
+          "x2": "9",
+          "statistic": "9",
+          "weight": "1/9"
+        }
+      ],
+      "distribution": [
+        {
+          "value": "1",
+          "paths": [
+            "AA"
+          ],
+          "probability": "1/9"
+        },
+        {
+          "value": "3",
+          "paths": [
+            "AB",
+            "BA"
+          ],
+          "probability": "2/9"
+        },
+        {
+          "value": "5",
+          "paths": [
+            "AC",
+            "BB",
+            "CA"
+          ],
+          "probability": "1/3"
+        },
+        {
+          "value": "7",
+          "paths": [
+            "BC",
+            "CB"
+          ],
+          "probability": "2/9"
+        },
+        {
+          "value": "9",
+          "paths": [
+            "CC"
+          ],
+          "probability": "1/9"
+        }
+      ]
+    },
+    {
+      "conditionKey": "main-wo-mean-v1",
+      "replacement": false,
+      "statistic": "mean",
+      "paths": [
+        {
+          "path": "AB",
+          "x1": "1",
+          "x2": "5",
+          "statistic": "3",
+          "weight": "1/6"
+        },
+        {
+          "path": "AC",
+          "x1": "1",
+          "x2": "9",
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "path": "BA",
+          "x1": "5",
+          "x2": "1",
+          "statistic": "3",
+          "weight": "1/6"
+        },
+        {
+          "path": "BC",
+          "x1": "5",
+          "x2": "9",
+          "statistic": "7",
+          "weight": "1/6"
+        },
+        {
+          "path": "CA",
+          "x1": "9",
+          "x2": "1",
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "path": "CB",
+          "x1": "9",
+          "x2": "5",
+          "statistic": "7",
+          "weight": "1/6"
+        }
+      ],
+      "distribution": [
+        {
+          "value": "3",
+          "paths": [
+            "AB",
+            "BA"
+          ],
+          "probability": "1/3"
+        },
+        {
+          "value": "5",
+          "paths": [
+            "AC",
+            "CA"
+          ],
+          "probability": "1/3"
+        },
+        {
+          "value": "7",
+          "paths": [
+            "BC",
+            "CB"
+          ],
+          "probability": "1/3"
+        }
+      ]
+    },
+    {
+      "conditionKey": "task-wr-mean-v1",
+      "replacement": true,
+      "statistic": "mean",
+      "paths": [
+        {
+          "path": "DD",
+          "x1": "2",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/9"
+        },
+        {
+          "path": "DE",
+          "x1": "2",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/9"
+        },
+        {
+          "path": "DF",
+          "x1": "2",
+          "x2": "8",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "ED",
+          "x1": "2",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/9"
+        },
+        {
+          "path": "EE",
+          "x1": "2",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/9"
+        },
+        {
+          "path": "EF",
+          "x1": "2",
+          "x2": "8",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "FD",
+          "x1": "8",
+          "x2": "2",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "FE",
+          "x1": "8",
+          "x2": "2",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "FF",
+          "x1": "8",
+          "x2": "8",
+          "statistic": "8",
+          "weight": "1/9"
+        }
+      ],
+      "distribution": [
+        {
+          "value": "2",
+          "paths": [
+            "DD",
+            "DE",
+            "ED",
+            "EE"
+          ],
+          "probability": "4/9"
+        },
+        {
+          "value": "5",
+          "paths": [
+            "DF",
+            "EF",
+            "FD",
+            "FE"
+          ],
+          "probability": "4/9"
+        },
+        {
+          "value": "8",
+          "paths": [
+            "FF"
+          ],
+          "probability": "1/9"
+        }
+      ]
+    },
+    {
+      "conditionKey": "task-wo-mean-v1",
+      "replacement": false,
+      "statistic": "mean",
+      "paths": [
+        {
+          "path": "DE",
+          "x1": "2",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/6"
+        },
+        {
+          "path": "DF",
+          "x1": "2",
+          "x2": "8",
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "path": "ED",
+          "x1": "2",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/6"
+        },
+        {
+          "path": "EF",
+          "x1": "2",
+          "x2": "8",
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "path": "FD",
+          "x1": "8",
+          "x2": "2",
+          "statistic": "5",
+          "weight": "1/6"
+        },
+        {
+          "path": "FE",
+          "x1": "8",
+          "x2": "2",
+          "statistic": "5",
+          "weight": "1/6"
+        }
+      ],
+      "distribution": [
+        {
+          "value": "2",
+          "paths": [
+            "DE",
+            "ED"
+          ],
+          "probability": "1/3"
+        },
+        {
+          "value": "5",
+          "paths": [
+            "DF",
+            "EF",
+            "FD",
+            "FE"
+          ],
+          "probability": "2/3"
+        }
+      ]
+    },
+    {
+      "conditionKey": "example-maximum",
+      "replacement": true,
+      "statistic": "maximum",
+      "paths": [
+        {
+          "path": "LL",
+          "x1": "0",
+          "x2": "0",
+          "statistic": "0",
+          "weight": "1/4"
+        },
+        {
+          "path": "LM",
+          "x1": "0",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/4"
+        },
+        {
+          "path": "ML",
+          "x1": "2",
+          "x2": "0",
+          "statistic": "2",
+          "weight": "1/4"
+        },
+        {
+          "path": "MM",
+          "x1": "2",
+          "x2": "2",
+          "statistic": "2",
+          "weight": "1/4"
+        }
+      ],
+      "distribution": [
+        {
+          "value": "0",
+          "paths": [
+            "LL"
+          ],
+          "probability": "1/4"
+        },
+        {
+          "value": "2",
+          "paths": [
+            "LM",
+            "ML",
+            "MM"
+          ],
+          "probability": "3/4"
+        }
+      ]
+    },
+    {
+      "conditionKey": "q4-maximum",
+      "replacement": true,
+      "statistic": "maximum",
+      "paths": [
+        {
+          "path": "GG",
+          "x1": "1",
+          "x2": "1",
+          "statistic": "1",
+          "weight": "1/9"
+        },
+        {
+          "path": "GH",
+          "x1": "1",
+          "x2": "5",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "GJ",
+          "x1": "1",
+          "x2": "9",
+          "statistic": "9",
+          "weight": "1/9"
+        },
+        {
+          "path": "HG",
+          "x1": "5",
+          "x2": "1",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "HH",
+          "x1": "5",
+          "x2": "5",
+          "statistic": "5",
+          "weight": "1/9"
+        },
+        {
+          "path": "HJ",
+          "x1": "5",
+          "x2": "9",
+          "statistic": "9",
+          "weight": "1/9"
+        },
+        {
+          "path": "JG",
+          "x1": "9",
+          "x2": "1",
+          "statistic": "9",
+          "weight": "1/9"
+        },
+        {
+          "path": "JH",
+          "x1": "9",
+          "x2": "5",
+          "statistic": "9",
+          "weight": "1/9"
+        },
+        {
+          "path": "JJ",
+          "x1": "9",
+          "x2": "9",
+          "statistic": "9",
+          "weight": "1/9"
+        }
+      ],
+      "distribution": [
+        {
+          "value": "1",
+          "paths": [
+            "GG"
+          ],
+          "probability": "1/9"
+        },
+        {
+          "value": "5",
+          "paths": [
+            "GH",
+            "HG",
+            "HH"
+          ],
+          "probability": "1/3"
+        },
+        {
+          "value": "9",
+          "paths": [
+            "GJ",
+            "HJ",
+            "JG",
+            "JH",
+            "JJ"
+          ],
+          "probability": "5/9"
+        }
+      ]
+    }
+  ],
+  "pathCount": 43
+}

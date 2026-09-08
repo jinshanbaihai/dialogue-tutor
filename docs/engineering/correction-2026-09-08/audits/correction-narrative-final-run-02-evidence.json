@@ -1,0 +1,2083 @@
+{
+  "hashes": {
+    "html": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+    "json": "42627f4a3df54ccddfcfef28abf3a873a3a1807b955f7fd9315d3613a4f5dc90",
+    "manifest": "3bd8e42e61e8387ff4632abecf90366f3e3b9ded06f83d0e12a019252e8ecae2"
+  },
+  "limits": "Final HTML executed in independent jsdom; manual Image load/error and element rect fixtures, no browser pixels/decoding/human learning.",
+  "scenarios": [
+    {
+      "label": "wr-unseen",
+      "ending": "回到开场 · 有放回、独立均匀本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wr-observe",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-bars": 1788850849945
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wr-correct",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果一致；这只支持本次判断。按D/E不同身份构造有放回分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "按D/E不同身份构造有放回分布",
+          "spec": {
+            "label": "按D/E不同身份构造有放回分布",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850855805-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-bars": 1788850855835
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850855805-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850855805,
+            "choice": "more",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wr-assisted-correct",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850861965-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850861713,
+            "frame-main-wr-AA-bars": 1788850861992
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850861932
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850861965-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850861965,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wr-assisted-correct-next",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850861965-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850861713,
+            "frame-main-wr-AA-bars": 1788850861992
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850861932
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850861965-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850861965,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": ""
+    },
+    {
+      "label": "wr-incorrect",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果不一致；请用两种输出的原像修正。检查每种输出的原像新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "检查每种输出的原像",
+          "spec": {
+            "label": "检查每种输出的原像",
+            "action": "repair",
+            "kind": "equal",
+            "conditionKey": "main-wr-mean-v1",
+            "targetId": "repair-equal"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wr-mean-v1-1788850874165-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-bars": 1788850874185
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850874165-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850874165,
+            "choice": "equal",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wr-incorrect-next",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果不一致；请用两种输出的原像修正。检查每种输出的原像新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "检查每种输出的原像",
+          "spec": {
+            "label": "检查每种输出的原像",
+            "action": "repair",
+            "kind": "equal",
+            "conditionKey": "main-wr-mean-v1",
+            "targetId": "repair-equal"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wr-mean-v1-1788850874165-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-bars": 1788850874185
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850874165-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850874165,
+            "choice": "equal",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "输出值为什么不等可能？mean 1来自AA。 P(T=1)=19mean 5来自AC、BB、CA。 P(T=5)=13随机均匀首先作用于每阶段可选身份；统计量会把多条路径归入一个值。应先找原像，再加权。",
+      "focus": "repair-panel"
+    },
+    {
+      "label": "wr-skip",
+      "ending": "回到开场 · 有放回、独立均匀你在当前条件选择了跳过预测；尚无原判断时不作正确评价。本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": true,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wr-skip-next",
+      "ending": "回到开场 · 有放回、独立均匀你在当前条件选择了跳过预测；尚无原判断时不作正确评价。P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": true,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-wr-bar-1": 1788850881290,
+            "main-wr-bar-5": 1788850881758
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "e3a-work"
+    },
+    {
+      "label": "wo-unseen",
+      "ending": "回到开场 · 无放回、剩余均匀本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wo-observe",
+      "ending": "回到开场 · 无放回、剩余均匀P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+52T=3目标输出：3，其概率为13",
+      "next": [
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "bars",
+            "requested": "main-wo-AB-bars",
+            "displayed": "main-wo-AB-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {
+            "frame-main-wo-AB-bars": 1788850893677
+          }
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wo-correct",
+      "ending": "回到开场 · 无放回、剩余均匀P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果一致；这只支持本次判断。按D/E不同身份构造有放回分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+52T=3目标输出：3，其概率为13",
+      "next": [
+        {
+          "text": "按D/E不同身份构造有放回分布",
+          "spec": {
+            "label": "按D/E不同身份构造有放回分布",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wo-mean-v1-1788850899411-1",
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "bars",
+            "requested": "main-wo-AB-bars",
+            "displayed": "main-wo-AB-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {
+            "frame-main-wo-AB-bars": 1788850899426
+          }
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wo-mean-v1-1788850899411-1",
+            "conditionKey": "main-wo-mean-v1",
+            "at": 1788850899411,
+            "choice": "more",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wo-assisted-correct",
+      "ending": "回到开场 · 无放回、剩余均匀P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+52T=3目标输出：3，其概率为13",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wo-mean-v1-1788850904644-1",
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "bars",
+            "requested": "main-wo-AB-bars",
+            "displayed": "main-wo-AB-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850904523
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850904628,
+            "frame-main-wo-AB-bars": 1788850904662
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wo-mean-v1-1788850904644-1",
+            "conditionKey": "main-wo-mean-v1",
+            "at": 1788850904644,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wo"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wo-assisted-correct-next",
+      "ending": "回到开场 · 无放回、剩余均匀P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+52T=3目标输出：3，其概率为13",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wo-mean-v1-1788850904644-1",
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "bars",
+            "requested": "main-wo-AB-bars",
+            "displayed": "main-wo-AB-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850904523
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850904628,
+            "frame-main-wo-AB-bars": 1788850904662
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wo-mean-v1-1788850904644-1",
+            "conditionKey": "main-wo-mean-v1",
+            "at": 1788850904644,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wo"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": ""
+    },
+    {
+      "label": "wo-incorrect",
+      "ending": "回到开场 · 无放回、剩余均匀P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果不一致；请用两种输出的原像修正。检查每种输出的原像新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+52T=3目标输出：3，其概率为13",
+      "next": [
+        {
+          "text": "检查每种输出的原像",
+          "spec": {
+            "label": "检查每种输出的原像",
+            "action": "repair",
+            "kind": "equal",
+            "conditionKey": "main-wo-mean-v1",
+            "targetId": "repair-equal"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wo-mean-v1-1788850909985-1",
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "bars",
+            "requested": "main-wo-AB-bars",
+            "displayed": "main-wo-AB-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {
+            "frame-main-wo-AB-bars": 1788850910000
+          }
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wo-mean-v1-1788850909985-1",
+            "conditionKey": "main-wo-mean-v1",
+            "at": 1788850909985,
+            "choice": "equal",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wo-incorrect-next",
+      "ending": "回到开场 · 无放回、剩余均匀P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果不一致；请用两种输出的原像修正。检查每种输出的原像新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+52T=3目标输出：3，其概率为13",
+      "next": [
+        {
+          "text": "检查每种输出的原像",
+          "spec": {
+            "label": "检查每种输出的原像",
+            "action": "repair",
+            "kind": "equal",
+            "conditionKey": "main-wo-mean-v1",
+            "targetId": "repair-equal"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wo-mean-v1-1788850909985-1",
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "bars",
+            "requested": "main-wo-AB-bars",
+            "displayed": "main-wo-AB-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {
+            "frame-main-wo-AB-bars": 1788850910000
+          }
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wo-mean-v1-1788850909985-1",
+            "conditionKey": "main-wo-mean-v1",
+            "at": 1788850909985,
+            "choice": "equal",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "输出值为什么不等可能？mean 1来自没有允许路径。 P(T=1)=0mean 5来自AC、CA。 P(T=5)=13随机均匀首先作用于每阶段可选身份；统计量会把多条路径归入一个值。应先找原像，再加权。",
+      "focus": "repair-panel"
+    },
+    {
+      "label": "wo-skip",
+      "ending": "回到开场 · 无放回、剩余均匀你在当前条件选择了跳过预测；尚无原判断时不作正确评价。本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": true,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "wo-skip-next",
+      "ending": "回到开场 · 无放回、剩余均匀你在当前条件选择了跳过预测；尚无原判断时不作正确评价。P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": true,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {},
+          "main-wo-mean-v1": {
+            "main-wo-bar-1": 1788850915200,
+            "main-wo-bar-5": 1788850915514
+          }
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "e3a-work"
+    },
+    {
+      "label": "switch-WR-prediction-to-unseen-WO",
+      "ending": "回到开场 · 无放回、剩余均匀本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850920692-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-bars": 1788850920718
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850920692-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850920692,
+            "choice": "more",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "switch-WR-prediction-to-seen-WO",
+      "ending": "回到开场 · 无放回、剩余均匀P(T=1)=0P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+52T=3目标输出：3，其概率为13",
+      "next": [
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850920692-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "bars",
+            "requested": "main-wo-AB-bars",
+            "displayed": "main-wo-AB-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-bars": 1788850920718
+          },
+          "main-wo-mean-v1": {
+            "frame-main-wo-AB-bars": 1788850921768
+          }
+        },
+        "visibleSolutionIds": [],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850920692-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850920692,
+            "choice": "more",
+            "assistance": []
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "assisted-incorrect",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wr-mean-v1-1788850927103-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850926895,
+            "frame-main-wr-AA-bars": 1788850927127
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850927082
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850927103-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850927103,
+            "choice": "equal",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "assisted-incorrect-next",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        },
+        {
+          "text": "构造尚未呈现的有放回新数据",
+          "spec": {
+            "label": "构造尚未呈现的有放回新数据",
+            "action": "task",
+            "conditionKey": "task-wr-mean-v1"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "equal",
+            "activeId": "main-wr-mean-v1-1788850927103-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850926895,
+            "frame-main-wr-AA-bars": 1788850927127
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850927082
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850927103-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850927103,
+            "choice": "equal",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": ""
+    },
+    {
+      "label": "stage-paths",
+      "ending": "回到开场 · 有放回、独立均匀本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求检查AA是否是本机制的允许路径；下一步把两个观测放入mean。阅读当前路径代入行当前请求图已加载。",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "paths",
+            "requested": "main-wr-AA-paths",
+            "displayed": "main-wr-AA-paths",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-paths": 1788850931311
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "stage-mapping",
+      "ending": "回到开场 · 有放回、独立均匀本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求计算AA的mean；下一步找出相同输出的其他路径。阅读当前路径代入行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "mapping",
+            "requested": "main-wr-AA-mapping",
+            "displayed": "main-wr-AA-mapping",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-paths": 1788850931311,
+            "frame-main-wr-AA-mapping": 1788850931689
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "stage-bars",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-paths": 1788850931311,
+            "frame-main-wr-AA-mapping": 1788850931689,
+            "frame-main-wr-AA-bars": 1788850931988
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "WO-AB-failed",
+      "ending": "回到开场 · 无放回、剩余均匀本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求检查AB是否是本机制的允许路径；下一步把两个观测放入mean。阅读当前路径代入行当前图加载失败；下面链接保留当前条件的书面推导。重试当前图",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wo-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": "AB",
+            "stageId": "paths",
+            "requested": "main-wo-AB-paths",
+            "displayed": null,
+            "mediaStatus": "failed",
+            "pathSelections": [
+              "AB"
+            ]
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "frame-main-wr-AA-paths": 1788850931311,
+            "frame-main-wr-AA-mapping": 1788850931689,
+            "frame-main-wr-AA-bars": 1788850931988
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "one-target-presented",
+      "ending": "回到开场 · 有放回、独立均匀本条件尚未提交预测，也尚未记录两项概率都已呈现。可以先作判断，或直接看完整结果。查看本条件完整分布新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-wr-bar-1": 1788850937429
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "both-targets-presented",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "尚未请求图。可先选择一条路径，也可直接查看当前完整分布。",
+      "next": [
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        },
+        {
+          "text": "先读maximum的完整例题",
+          "spec": {
+            "label": "先读maximum的完整例题",
+            "action": "line",
+            "line": "e3a-work"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-wr-bar-1": 1788850937429,
+            "main-wr-bar-5": 1788850938567
+          },
+          "main-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [],
+        "submissions": []
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "assisted-all-task-references-Q4-next",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。检查maximum：没有J且至少一个H新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "检查maximum：没有J且至少一个H",
+          "spec": {
+            "label": "检查maximum：没有J且至少一个H",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        },
+        {
+          "text": "检查maximum：没有J且至少一个H",
+          "spec": {
+            "label": "检查maximum：没有J且至少一个H",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850943764-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850943637,
+            "frame-main-wr-AA-bars": 1788850943782
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850943751
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850943764-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850943764,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "Q4-new-target-arrival",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。检查maximum：没有J且至少一个H新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "检查maximum：没有J且至少一个H",
+          "spec": {
+            "label": "检查maximum：没有J且至少一个H",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        },
+        {
+          "text": "检查maximum：没有J且至少一个H",
+          "spec": {
+            "label": "检查maximum：没有J且至少一个H",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850943764-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850943637,
+            "frame-main-wr-AA-bars": 1788850943782
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850943751
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850943764-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850943764,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": ""
+    },
+    {
+      "label": "Q4-completed-followup",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。回看maximum原像核对新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "检查maximum：没有J且至少一个H",
+          "spec": {
+            "label": "检查maximum：没有J且至少一个H",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        },
+        {
+          "text": "回看maximum原像核对",
+          "spec": {
+            "label": "回看maximum原像核对",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850943764-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850943637,
+            "frame-main-wr-AA-bars": 1788850943782
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850943751
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850943764-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850943764,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": "lesson-ending"
+    },
+    {
+      "label": "Q4-completed-target-arrival",
+      "ending": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。回看maximum原像核对新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡",
+      "media": "当前请求展示本条件全部输出的概率；下一步按原像核查总质量。阅读当前条件的概率归并行当前请求图已加载。T=X1+X22T=1+12T=1目标输出：1，其概率为19",
+      "next": [
+        {
+          "text": "检查maximum：没有J且至少一个H",
+          "spec": {
+            "label": "检查maximum：没有J且至少一个H",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        },
+        {
+          "text": "回看maximum原像核对",
+          "spec": {
+            "label": "回看maximum原像核对",
+            "action": "quiz",
+            "activityId": "q4-answer"
+          }
+        }
+      ],
+      "state": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "main-map",
+        "conditionKey": "main-wr-mean-v1",
+        "rounds": {
+          "main-wr-mean-v1": {
+            "predictionDraft": "more",
+            "activeId": "main-wr-mean-v1-1788850943764-1",
+            "skipped": false,
+            "pathId": "AA",
+            "stageId": "bars",
+            "requested": "main-wr-AA-bars",
+            "displayed": "main-wr-AA-bars",
+            "mediaStatus": "shown",
+            "pathSelections": []
+          },
+          "main-wo-mean-v1": {
+            "predictionDraft": null,
+            "activeId": null,
+            "skipped": false,
+            "pathId": null,
+            "stageId": "paths",
+            "requested": null,
+            "displayed": null,
+            "mediaStatus": "idle",
+            "pathSelections": []
+          }
+        },
+        "contacts": {
+          "main-wr-mean-v1": {
+            "main-reference-wr": 1788850943637,
+            "frame-main-wr-AA-bars": 1788850943782
+          },
+          "main-wo-mean-v1": {
+            "main-reference-wo": 1788850943751
+          }
+        },
+        "visibleSolutionIds": [
+          "main-reference"
+        ],
+        "submissions": [
+          {
+            "id": "main-wr-mean-v1-1788850943764-1",
+            "conditionKey": "main-wr-mean-v1",
+            "at": 1788850943764,
+            "choice": "more",
+            "assistance": [
+              "main-reference-wr"
+            ]
+          }
+        ]
+      },
+      "repair": "",
+      "focus": ""
+    }
+  ],
+  "errors": [],
+  "readCoverage": {
+    "sections": [
+      {
+        "id": "opening",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "survey",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "statistic",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "distribution",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "practice-survey",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "practice-statistic",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "practice-construct",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "practice-maximum",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "lesson-ending",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      },
+      {
+        "id": "sources",
+        "bodyMatches": true,
+        "textMatches": true,
+        "textHashConvention": "hash covers extracted body; saved txt also has section title and final newline"
+      }
+    ],
+    "sectionCount": 10,
+    "activities": [
+      "main-map",
+      "build-sample",
+      "survey-check",
+      "stat-check",
+      "q1a-answer",
+      "q1b-answer",
+      "q2a-answer",
+      "q2b-answer",
+      "q4-answer",
+      "recall-core"
+    ],
+    "dynamicCourseJS": "641cc807d10fe304f002efa20abb83aa4422b6460ec2fc7863ba612ee133c9ff",
+    "dynamicTemplateMatchesExecutedScript": true
+  }
+}

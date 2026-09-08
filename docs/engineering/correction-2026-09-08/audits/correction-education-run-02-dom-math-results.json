@@ -1,0 +1,1842 @@
+{
+  "checks": [
+    {
+      "id": "main-wr-AA-sub",
+      "expected": "1",
+      "actual": "1",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AA-result",
+      "expected": "1",
+      "actual": "1",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AA-sum",
+      "expected": "1",
+      "actual": "1",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AA-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AA-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AA-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AA-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AB-sub",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AB-result",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AB-sum",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AB-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AB-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AB-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AB-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AC-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AC-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AC-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AC-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AC-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AC-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-AC-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BA-sub",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BA-result",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BA-sum",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BA-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BA-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BA-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BA-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BB-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BB-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BB-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BB-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BB-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BB-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BB-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BC-sub",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BC-result",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BC-sum",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BC-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BC-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BC-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-BC-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CA-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CA-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CA-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CA-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CA-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CA-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CA-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CB-sub",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CB-result",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CB-sum",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CB-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CB-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CB-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CB-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CC-sub",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CC-result",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CC-sum",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CC-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CC-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CC-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-CC-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-bar-1",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-bar-3",
+      "expected": "2/9",
+      "actual": "2/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-bar-5",
+      "expected": "1/3",
+      "actual": "1/3",
+      "pass": true
+    },
+    {
+      "id": "main-wr-bar-7",
+      "expected": "2/9",
+      "actual": "2/9",
+      "pass": true
+    },
+    {
+      "id": "main-wr-bar-9",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AB-sub",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AB-result",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AB-sum",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AB-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AB-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AB-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AB-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AC-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AC-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AC-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AC-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AC-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AC-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-AC-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BA-sub",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BA-result",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BA-sum",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BA-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BA-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BA-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BA-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BC-sub",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BC-result",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BC-sum",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BC-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BC-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BC-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-BC-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CA-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CA-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CA-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CA-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CA-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CA-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CA-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CB-sub",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CB-result",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CB-sum",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CB-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CB-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CB-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-CB-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "main-wo-bar-3",
+      "expected": "1/3",
+      "actual": "1/3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-bar-5",
+      "expected": "1/3",
+      "actual": "1/3",
+      "pass": true
+    },
+    {
+      "id": "main-wo-bar-7",
+      "expected": "1/3",
+      "actual": "1/3",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DD-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DD-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DD-sum",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DD-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DD-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DD-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DD-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DE-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DE-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DE-sum",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DE-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DE-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DE-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DE-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DF-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DF-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DF-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DF-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DF-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DF-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-DF-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-ED-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-ED-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-ED-sum",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-ED-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-ED-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-ED-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-ED-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EE-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EE-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EE-sum",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EE-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EE-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EE-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EE-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EF-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EF-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EF-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EF-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EF-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EF-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-EF-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FD-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FD-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FD-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FD-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FD-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FD-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FD-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FE-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FE-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FE-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FE-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FE-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FE-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FE-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FF-sub",
+      "expected": "8",
+      "actual": "8",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FF-result",
+      "expected": "8",
+      "actual": "8",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FF-sum",
+      "expected": "8",
+      "actual": "8",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FF-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FF-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FF-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-FF-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-bar-2",
+      "expected": "4/9",
+      "actual": "4/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-bar-5",
+      "expected": "4/9",
+      "actual": "4/9",
+      "pass": true
+    },
+    {
+      "id": "task-wr-bar-8",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DE-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DE-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DE-sum",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DE-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DE-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DE-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DE-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DF-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DF-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DF-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DF-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DF-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DF-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-DF-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-ED-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wo-ED-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wo-ED-sum",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "task-wo-ED-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-ED-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-ED-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-ED-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-EF-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-EF-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-EF-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-EF-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-EF-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-EF-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-EF-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FD-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FD-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FD-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FD-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FD-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FD-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FD-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FE-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FE-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FE-sum",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FE-weight-sub",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FE-weight-product",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FE-weight-numerator",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-FE-weight",
+      "expected": "1/6",
+      "actual": "1/6",
+      "pass": true
+    },
+    {
+      "id": "task-wo-bar-2",
+      "expected": "1/3",
+      "actual": "1/3",
+      "pass": true
+    },
+    {
+      "id": "task-wo-bar-5",
+      "expected": "2/3",
+      "actual": "2/3",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KK-sub",
+      "expected": "0",
+      "actual": "0",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KK-result",
+      "expected": "0",
+      "actual": "0",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KK-weight-sub",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KK-weight-product",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KK-weight-numerator",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KK-weight",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KL-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KL-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KL-weight-sub",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KL-weight-product",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KL-weight-numerator",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-KL-weight",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LK-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LK-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LK-weight-sub",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LK-weight-product",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LK-weight-numerator",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LK-weight",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LL-sub",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LL-result",
+      "expected": "2",
+      "actual": "2",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LL-weight-sub",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LL-weight-product",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LL-weight-numerator",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-LL-weight",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-bar-0",
+      "expected": "1/4",
+      "actual": "1/4",
+      "pass": true
+    },
+    {
+      "id": "example-wr-bar-2",
+      "expected": "3/4",
+      "actual": "3/4",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GG-sub",
+      "expected": "1",
+      "actual": "1",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GG-result",
+      "expected": "1",
+      "actual": "1",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GG-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GG-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GG-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GG-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GH-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GH-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GH-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GH-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GH-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GH-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GJ-sub",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GJ-result",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GJ-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GJ-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GJ-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-GJ-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HG-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HG-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HG-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HG-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HG-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HG-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HH-sub",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HH-result",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HH-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HH-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HH-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HH-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HJ-sub",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HJ-result",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HJ-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HJ-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HJ-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-HJ-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JG-sub",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JG-result",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JG-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JG-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JG-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JG-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JH-sub",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JH-result",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JH-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JH-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JH-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JH-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JJ-sub",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JJ-result",
+      "expected": "9",
+      "actual": "9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JJ-weight-sub",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JJ-weight-product",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JJ-weight-numerator",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-JJ-weight",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-bar-1",
+      "expected": "1/9",
+      "actual": "1/9",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-bar-5",
+      "expected": "1/3",
+      "actual": "1/3",
+      "pass": true
+    },
+    {
+      "id": "challenge-wr-bar-9",
+      "expected": "5/9",
+      "actual": "5/9",
+      "pass": true
+    }
+  ],
+  "count": 306,
+  "failures": []
+}

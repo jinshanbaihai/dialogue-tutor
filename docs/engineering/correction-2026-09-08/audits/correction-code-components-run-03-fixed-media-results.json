@@ -1,0 +1,108 @@
+{
+  "htmlHash": "bb42f74c700b6ec21705e23e86fd7401028d2b0fac054e3be0570ea48b3b5ec2",
+  "scope": "Frozen component trial actual inline JS. Explicit viewport/Image/manifest fixtures; no final course or real PNG claims.",
+  "checks": [
+    {
+      "name": "media/actual-four",
+      "pass": true
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wor-overview",
+      "pass": true,
+      "evidence": {
+        "sha": "d6925206255969a5d4aae10346452b68f15f65eaef35645943c999379f730c0d",
+        "manifest": "d6925206255969a5d4aae10346452b68f15f65eaef35645943c999379f730c0d",
+        "lineIds": [
+          "mean-wor-paths"
+        ]
+      }
+    },
+    {
+      "name": "media/actual-commit-and-targets/mean-wor-overview",
+      "pass": true
+    },
+    {
+      "name": "media/actual-fallback-target/mean-wor-overview",
+      "pass": true
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wr-AC-bar-focus",
+      "pass": true,
+      "evidence": {
+        "sha": "d68fff0d386db8b53f2aaed50cd493e108e575ba605ead5b44a34dde0545a3e9",
+        "manifest": "d68fff0d386db8b53f2aaed50cd493e108e575ba605ead5b44a34dde0545a3e9",
+        "lineIds": [
+          "mean-wr-group-6"
+        ]
+      }
+    },
+    {
+      "name": "media/actual-commit-and-targets/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/actual-fallback-target/mean-wr-AC-bar-focus",
+      "pass": true
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wr-AC-path-focus",
+      "pass": true,
+      "evidence": {
+        "sha": "38347cee534cb6ab3cf832dbea6cbd560da4a4b5aa7032464754fca7981fd0ee",
+        "manifest": "38347cee534cb6ab3cf832dbea6cbd560da4a4b5aa7032464754fca7981fd0ee",
+        "lineIds": [
+          "mean-wr-AC-map",
+          "mean-wr-AC-weight"
+        ]
+      }
+    },
+    {
+      "name": "media/actual-commit-and-targets/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "media/actual-fallback-target/mean-wr-AC-path-focus",
+      "pass": true
+    },
+    {
+      "name": "media/actual-request-bytes/mean-wr-overview",
+      "pass": true,
+      "evidence": {
+        "sha": "7ef49d90f62bce6e49293bd56c30d75363ce549b9cc399ca6bde6540008d9c84",
+        "manifest": "7ef49d90f62bce6e49293bd56c30d75363ce549b9cc399ca6bde6540008d9c84",
+        "lineIds": [
+          "mean-wr-paths"
+        ]
+      }
+    },
+    {
+      "name": "media/actual-commit-and-targets/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "media/actual-fallback-target/mean-wr-overview",
+      "pass": true
+    },
+    {
+      "name": "media/one-target-not-two",
+      "pass": true
+    },
+    {
+      "name": "no-errors/four-actual-manim-frame-requests",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "four-actual-manim-frame-requests",
+      "errors": []
+    }
+  ],
+  "summary": {
+    "checks": 15,
+    "passed": 15,
+    "failed": [],
+    "scenarios": 1
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "htmlSHA": "15cd0a2d867084ded7aebc05908a99ebc4b3d78c063d5758e7905482f6549f20",
+  "scope": "independent bounded closing draft DOM review; no Image load stub, no browser layout or whole-course claim",
+  "scenes": [
+    {
+      "name": "closing-native-card-priority-immediate-refresh",
+      "assertions": [
+        {
+          "name": "initial exact card1",
+          "pass": true,
+          "actual": "开始卡1的初次回忆"
+        },
+        {
+          "name": "initial reaches card index0 front",
+          "pass": true,
+          "actual": {
+            "index": 0,
+            "cards": {}
+          }
+        },
+        {
+          "name": "native flip immediately changes closing to unfinished card1",
+          "pass": false,
+          "actual": "开始卡1的初次回忆"
+        },
+        {
+          "name": "rated first card has real review item",
+          "pass": true,
+          "actual": {
+            "activityId": "recall-core",
+            "cardIndex": 0,
+            "title": "两张定义回忆卡 · 1",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1800086400000,
+              "lastReviewedAt": 1800000000000,
+              "lastSessionId": "session-1800000000000-mg45zhkwcln",
+              "evidenceSource": "self"
+            },
+            "due": false
+          }
+        },
+        {
+          "name": "initial card2 priority after real first rating",
+          "pass": false,
+          "actual": "开始卡1的初次回忆"
+        },
+        {
+          "name": "unfinished card2 priority",
+          "pass": false,
+          "actual": "开始卡2的初次回忆"
+        },
+        {
+          "name": "continue preserves card2 back without rating",
+          "pass": true,
+          "actual": {
+            "index": 1,
+            "cards": {
+              "0": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": "recalled",
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1800086400000,
+                  "lastReviewedAt": 1800000000000,
+                  "lastSessionId": "session-1800000000000-mg45zhkwcln",
+                  "evidenceSource": "self"
+                },
+                "attemptId": "recall-core:1800000000000:1",
+                "exposure": {
+                  "sessionId": "session-1800000000000-mg45zhkwcln",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1800000000000-mg45zhkwcln"
+              },
+              "1": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": null,
+                "review": null,
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1800000000000-mg45zhkwcln",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1800000000000-mg45zhkwcln"
+              }
+            }
+          }
+        },
+        {
+          "name": "explicit early review uses actual card0 item front",
+          "pass": true,
+          "actual": {
+            "index": 0,
+            "cards": {
+              "0": {
+                "revealed": false,
+                "hintUsed": false,
+                "rating": null,
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1800086400000,
+                  "lastReviewedAt": 1800000000000,
+                  "lastSessionId": "session-1800000000000-mg45zhkwcln",
+                  "evidenceSource": "self"
+                },
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1800000000000-mg45zhkwcln",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": true,
+                "recallSessionId": null
+              },
+              "1": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": null,
+                "review": null,
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1800000000000-mg45zhkwcln",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1800000000000,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1800000000000-mg45zhkwcln"
+              }
+            }
+          }
+        },
+        {
+          "name": "early reopen preserves card2 and previous review",
+          "pass": true,
+          "actual": [
+            {
+              "activityId": "recall-core",
+              "cardIndex": 0,
+              "title": "两张定义回忆卡 · 1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1800086400000,
+                "lastReviewedAt": 1800000000000,
+                "lastSessionId": "session-1800000000000-mg45zhkwcln",
+                "evidenceSource": "self"
+              },
+              "due": false
+            }
+          ]
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 10,
+  "failed": [
+    {
+      "scene": "closing-native-card-priority-immediate-refresh",
+      "name": "native flip immediately changes closing to unfinished card1",
+      "pass": false,
+      "actual": "开始卡1的初次回忆"
+    },
+    {
+      "scene": "closing-native-card-priority-immediate-refresh",
+      "name": "initial card2 priority after real first rating",
+      "pass": false,
+      "actual": "开始卡1的初次回忆"
+    },
+    {
+      "scene": "closing-native-card-priority-immediate-refresh",
+      "name": "unfinished card2 priority",
+      "pass": false,
+      "actual": "开始卡2的初次回忆"
+    }
+  ],
+  "errors": []
+}

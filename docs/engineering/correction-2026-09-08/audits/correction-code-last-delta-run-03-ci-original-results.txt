@@ -1,0 +1,29 @@
+✖ finite construction separates incomplete, complete wrong, and repair return (3262.321584ms)
+✔ prediction stays pending without presentation and source feedback names the formula (2332.210072ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5980.389994
+
+✖ failing tests:
+
+test at reviews/correction-code-last-delta-run-03-ci-execution.cjs:19:1
+✖ finite construction separates incomplete, complete wrong, and repair return (3262.321584ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  23 !== 0
+  
+      at TestContext.<anonymous> (/workspace/scratch/b4c4b2db70f4/reviews/correction-code-last-delta-run-03-ci-execution.cjs:33:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 23,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

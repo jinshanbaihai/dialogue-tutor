@@ -1,0 +1,103 @@
+{
+  "verdict": "PASS",
+  "scope": "Narrative teaching, feedback and continuation review of frozen complete HTML, not browser pixels or learning outcomes",
+  "htmlSHA256": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "passedScenarios": 20,
+  "scenarios": [
+    {
+      "name": "unsubmitted-unseen",
+      "status": "PASS"
+    },
+    {
+      "name": "observation-without-prediction",
+      "status": "PASS"
+    },
+    {
+      "name": "pending-partial-both-and-condition-switch",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wr-eq-unassisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wr-eq-assisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wr-lt-unassisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wr-lt-assisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wor-gt-unassisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wor-gt-assisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wor-lt-unassisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-wor-lt-assisted",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-correct-assisted-wr",
+      "status": "PASS"
+    },
+    {
+      "name": "mean-correct-assisted-wor",
+      "status": "PASS"
+    },
+    {
+      "name": "constructor-wrong-wr-false",
+      "status": "PASS"
+    },
+    {
+      "name": "constructor-wrong-wr-true",
+      "status": "PASS"
+    },
+    {
+      "name": "constructor-wrong-wor-false",
+      "status": "PASS"
+    },
+    {
+      "name": "constructor-wrong-wor-true",
+      "status": "PASS"
+    },
+    {
+      "name": "failed-current-frame-preserves-current-written-proof",
+      "status": "PASS"
+    },
+    {
+      "name": "unsubmitted-free-navigation-document-mode",
+      "status": "PASS"
+    },
+    {
+      "name": "constructor-complete-and-q4-no-scroll-return",
+      "status": "PASS"
+    }
+  ],
+  "evidenceFiles": [
+    "correction-narrative-final-run-03-evidence.json",
+    "correction-narrative-final-run-03-focused-evidence.json"
+  ],
+  "initialHarnessCorrections": [
+    "Used nonexistent currentActivityId; corrected to actual runtime currentActivity and reran Q4 scenario.",
+    "Initial skip-button expectation exceeded approved document contract. Final contract states only imported skipped compatibility, with free navigation as real local path. Replaced expectation with actual unsubmitted navigation and full-solution controls; did not inject status."
+  ],
+  "jsdomErrors": [],
+  "frozenHashesAfterExecution": {
+    "lesson.html": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+    "lesson.json": "33b41f47356499201bdcfb3a4dd6044f7fae17fd43bcc95f570af73afde8cceb",
+    "components.js": "9c116351afac4b77ab310460f699177b13935acdaa5a762678018010cbaa90a5"
+  },
+  "reviewScriptSHA256": "494cd80cef28e05553b058ab313e07cb40fb6d9f15e67cbc85c8c09f3c4fc1c0"
+}

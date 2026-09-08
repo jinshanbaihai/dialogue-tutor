@@ -1,0 +1,625 @@
+{
+  "results": [
+    {
+      "id": "I1 immediate old import/export keeps contact and open-source",
+      "pass": true,
+      "evidence": {
+        "round": {
+          "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "active": null,
+          "history": [],
+          "contacts": {
+            "max-wr-reference": {
+              "sourceId": "max-wr-reference",
+              "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+              "kind": "reference",
+              "targets": [
+                1,
+                5
+              ],
+              "at": 1788853543480
+            }
+          },
+          "openSources": [
+            "max-wr-reference"
+          ],
+          "targets": [
+            1,
+            5
+          ],
+          "requested": null,
+          "displayed": null
+        },
+        "open": true
+      }
+    },
+    {
+      "id": "I1 actual new-window details restored open",
+      "pass": true,
+      "evidence": {
+        "open": true,
+        "round": {
+          "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "active": null,
+          "history": [],
+          "contacts": {
+            "max-wr-reference": {
+              "sourceId": "max-wr-reference",
+              "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+              "kind": "reference",
+              "targets": [
+                1,
+                5
+              ],
+              "at": 1788853543480
+            }
+          },
+          "openSources": [
+            "max-wr-reference"
+          ],
+          "targets": [
+            1,
+            5
+          ],
+          "requested": null,
+          "displayed": null
+        }
+      }
+    },
+    {
+      "id": "I1 complete answer assisted and no spurious historical attempts",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "max-board-wr-1788853544400-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "judge": {
+            "correct": true,
+            "differences": []
+          },
+          "assisted": true,
+          "presented": true,
+          "at": 1788853544401
+        }
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 singleton has no artificial addition mean-wr-group-2",
+      "pass": true,
+      "evidence": {
+        "singleton": 1
+      }
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-2",
+      "pass": true,
+      "evidence": {
+        "n": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-4",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-4",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-6",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1",
+          "9"
+        ],
+        [
+          "3",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wr-group-6",
+      "pass": true,
+      "evidence": [
+        [
+          "3÷3",
+          "9÷3"
+        ],
+        [
+          "1",
+          "9÷3"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-8",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-8",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 singleton has no artificial addition mean-wr-group-10",
+      "pass": true,
+      "evidence": {
+        "singleton": 1
+      }
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-10",
+      "pass": true,
+      "evidence": {
+        "n": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 weight mean-wr-AA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 singleton has no artificial addition mean-wr-group-2-ref",
+      "pass": true,
+      "evidence": {
+        "singleton": 1
+      }
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-2-ref",
+      "pass": true,
+      "evidence": {
+        "n": 1,
+        "den": 9
+      }
+    }
+  ],
+  "errors": [],
+  "error": "Error: Missing mean-wr-group-4-combine-ref\n    at math (/workspace/scratch/b4c4b2db70f4/reviews/correction-education-component-run-03-recheck.cjs:10:62)\n    at pair (/workspace/scratch/b4c4b2db70f4/reviews/correction-education-component-run-03-recheck.cjs:11:27)\n    at /workspace/scratch/b4c4b2db70f4/reviews/correction-education-component-run-03-recheck.cjs:21:108"
+}

@@ -1,0 +1,448 @@
+{
+  "htmlSHA": "3c08d4ba081019c85af71fc4694d58838e680f8ae3df27a81564c04f8e3b77dd",
+  "scope": "independent component DOM review; no Image load stub, no browser layout claim",
+  "scenes": [
+    {
+      "name": "same-condition-completed-max-retry",
+      "assertions": [
+        {
+          "name": "first correct unassisted",
+          "pass": true,
+          "actual": {
+            "id": "max-board-wr-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "wr",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1800000000000
+          }
+        },
+        {
+          "name": "same answer after correct feedback is assisted",
+          "pass": false,
+          "actual": {
+            "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "wr",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "active": "max-board-wr-1800000000000-2",
+            "history": [
+              {
+                "id": "max-board-wr-1800000000000-1",
+                "owner": "max-board",
+                "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+                "draft": {
+                  "pathAnswered": true,
+                  "paths": [
+                    "RR",
+                    "RS",
+                    "RT",
+                    "SR",
+                    "SS",
+                    "ST",
+                    "TR",
+                    "TS",
+                    "TT"
+                  ],
+                  "mappings": {
+                    "RR": "1",
+                    "RS": "1",
+                    "RT": "5",
+                    "SR": "1",
+                    "SS": "1",
+                    "ST": "5",
+                    "TR": "5",
+                    "TS": "5",
+                    "TT": "5"
+                  },
+                  "weightReason": "wr",
+                  "distribution": {
+                    "1": "4/9",
+                    "5": "5/9"
+                  }
+                },
+                "judge": {
+                  "correct": true,
+                  "differences": []
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              },
+              {
+                "id": "max-board-wr-1800000000000-2",
+                "owner": "max-board",
+                "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+                "draft": {
+                  "pathAnswered": true,
+                  "paths": [
+                    "RR",
+                    "RS",
+                    "RT",
+                    "SR",
+                    "SS",
+                    "ST",
+                    "TR",
+                    "TS",
+                    "TT"
+                  ],
+                  "mappings": {
+                    "RR": "1",
+                    "RS": "1",
+                    "RT": "5",
+                    "SR": "1",
+                    "SS": "1",
+                    "ST": "5",
+                    "TR": "5",
+                    "TS": "5",
+                    "TT": "5"
+                  },
+                  "weightReason": "wr",
+                  "distribution": {
+                    "1": "4/9",
+                    "5": "5/9"
+                  }
+                },
+                "judge": {
+                  "correct": true,
+                  "differences": []
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {},
+            "targets": [],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "first immutable",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "native-reference-new-window",
+      "assertions": [
+        {
+          "name": "actual reference contact persists",
+          "pass": true,
+          "actual": {
+            "key": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1/3",
+                "5": "2/3"
+              }
+            },
+            "active": "max-board-wor-1800000000000-1",
+            "history": [
+              {
+                "id": "max-board-wor-1800000000000-1",
+                "owner": "max-board",
+                "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+                "draft": {
+                  "pathAnswered": true,
+                  "paths": [
+                    "RS",
+                    "RT",
+                    "SR",
+                    "ST",
+                    "TR",
+                    "TS"
+                  ],
+                  "mappings": {
+                    "RS": "1",
+                    "RT": "5",
+                    "SR": "1",
+                    "ST": "5",
+                    "TR": "5",
+                    "TS": "5"
+                  },
+                  "weightReason": "half",
+                  "distribution": {
+                    "1": "1/3",
+                    "5": "2/3"
+                  }
+                },
+                "judge": {
+                  "correct": false,
+                  "differences": [
+                    "weight"
+                  ]
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1800000000000
+              }
+            ],
+            "contacts": {
+              "max-wor-reference": {
+                "sourceId": "max-wor-reference",
+                "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+                "kind": "reference",
+                "targets": [
+                  1,
+                  5
+                ],
+                "at": 1800000000000
+              }
+            },
+            "targets": [
+              1,
+              5
+            ],
+            "requested": null,
+            "displayed": null
+          }
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "assisted-correct-exhausted-alternate",
+      "assertions": [
+        {
+          "name": "unseen maximum remains reachable as optional next",
+          "pass": false,
+          "actual": "本次核对正确。作答前已接触参考，保留辅助标识。你选了相等；两边都是1/3。回看本条件完整原行自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 8,
+  "failed": [
+    {
+      "scene": "same-condition-completed-max-retry",
+      "name": "same answer after correct feedback is assisted",
+      "pass": false,
+      "actual": {
+        "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RR",
+            "RS",
+            "RT",
+            "SR",
+            "SS",
+            "ST",
+            "TR",
+            "TS",
+            "TT"
+          ],
+          "mappings": {
+            "RR": "1",
+            "RS": "1",
+            "RT": "5",
+            "SR": "1",
+            "SS": "1",
+            "ST": "5",
+            "TR": "5",
+            "TS": "5",
+            "TT": "5"
+          },
+          "weightReason": "wr",
+          "distribution": {
+            "1": "4/9",
+            "5": "5/9"
+          }
+        },
+        "active": "max-board-wr-1800000000000-2",
+        "history": [
+          {
+            "id": "max-board-wr-1800000000000-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "wr",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1800000000000
+          },
+          {
+            "id": "max-board-wr-1800000000000-2",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "wr",
+              "distribution": {
+                "1": "4/9",
+                "5": "5/9"
+              }
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1800000000000
+          }
+        ],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "scene": "assisted-correct-exhausted-alternate",
+      "name": "unseen maximum remains reachable as optional next",
+      "pass": false,
+      "actual": "本次核对正确。作答前已接触参考，保留辅助标识。你选了相等；两边都是1/3。回看本条件完整原行自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,13 @@
+{
+  "status": "FROZEN",
+  "frozenAtUtc": "2026-09-08T03:36:34.136017+00:00",
+  "lessonRevision": "run03-v2",
+  "htmlSha256": "d9624b533e838edf4b06b974f15c07b0bb3bf653f36e4ea3b5e663c5adfe7c2c",
+  "lessonJsonSha256": "ab478d575b7c3147c2ed1c997ec81ed28d44db54657aeb36374cfa2348502b91",
+  "authorFilesFrozen": true,
+  "validation": "validation.md",
+  "domRecord": "records/dom-check.json",
+  "mathematicsRecord": "records/math-check.json",
+  "visualApproval": "Not performed; outer review pending",
+  "nextAction": "Independent expert review; no further author edits unless explicitly requested."
+}

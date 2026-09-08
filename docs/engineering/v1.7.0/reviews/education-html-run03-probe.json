@@ -1,0 +1,2335 @@
+{
+  "kind": "Independent education probes of actual run-03 HTML with jsdom; no browser rendering or learner outcome data",
+  "sha256": "d9624b533e838edf4b06b974f15c07b0bb3bf653f36e4ea3b5e663c5adfe7c2c",
+  "cases": [
+    {
+      "name": "full explanation → older import → immediate export and actual storage refresh (open and closed panel)",
+      "observations": [
+        {
+          "input": {
+            "closeBeforeImport": false,
+            "action": "read reference, import unmodified older state, export without another interaction"
+          },
+          "observation": {
+            "reference": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": true,
+              "lastAction": null
+            },
+            "learning": {
+              "attempts": [],
+              "explorationCount": 0,
+              "participated": false,
+              "lastInteractionAt": null,
+              "review": null,
+              "exposure": {
+                "sessionId": "session-1788868800000-t2zqb70akl",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800000,
+                "inferred": false
+              }
+            },
+            "panelOpen": true,
+            "immediateExportMatchesRuntime": true
+          }
+        },
+        {
+          "input": {
+            "action": "new document from actual localStorage, then freeze greater and reveal"
+          },
+          "observation": {
+            "lab": {
+              "version": 1,
+              "roundId": "round-1788868800001-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788868800002,
+              "predictionHadReference": true,
+              "predictionHadResult": false,
+              "revealedAt": 1788868800003,
+              "revealHadReference": true,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800003,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "reveal-exact-enumeration",
+                "at": 1788868800003
+              }
+            },
+            "response": "原预测：大于；与本轮精确枚举一致。提交前已查看覆盖本实验全部条件的全解。这是一条未评分的探索判断。",
+            "close": {
+              "loop": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。原预测：大于；与本轮精确枚举一致。提交前已查看覆盖本实验全部条件的全解。这是一条未评分的探索判断。 本次揭示结果前已查看实验全解。 本轮没有主动选择路径的记录；展示过的默认路径不算你亲自计算。 可在“无放回”新题中自行组织样本空间。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            }
+          }
+        },
+        {
+          "input": {
+            "closeBeforeImport": true,
+            "action": "read reference, import unmodified older state, export without another interaction"
+          },
+          "observation": {
+            "reference": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": true,
+              "lastAction": null
+            },
+            "learning": {
+              "attempts": [],
+              "explorationCount": 0,
+              "participated": false,
+              "lastInteractionAt": null,
+              "review": null,
+              "exposure": {
+                "sessionId": "session-1788868800000-04l5vuyufmjt",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800000,
+                "inferred": false
+              }
+            },
+            "panelOpen": false,
+            "immediateExportMatchesRuntime": true
+          }
+        },
+        {
+          "input": {
+            "action": "new document from actual localStorage, then freeze greater and reveal"
+          },
+          "observation": {
+            "lab": {
+              "version": 1,
+              "roundId": "round-1788868800001-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788868800002,
+              "predictionHadReference": true,
+              "predictionHadResult": false,
+              "revealedAt": 1788868800003,
+              "revealHadReference": true,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800003,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "reveal-exact-enumeration",
+                "at": 1788868800003
+              }
+            },
+            "response": "原预测：大于；与本轮精确枚举一致。提交前已查看覆盖本实验全部条件的全解。这是一条未评分的探索判断。",
+            "close": {
+              "loop": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。原预测：大于；与本轮精确枚举一致。提交前已查看覆盖本实验全部条件的全解。这是一条未评分的探索判断。 本次揭示结果前已查看实验全解。 本轮没有主动选择路径的记录；展示过的默认路径不算你亲自计算。 可在“无放回”新题中自行组织样本空间。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "synchronous reference contact and frozen prediction chronology",
+      "observations": [
+        {
+          "input": {
+            "action": "open full solution then freeze with no await for toggle"
+          },
+          "observation": {
+            "version": 1,
+            "roundId": "round-1788868800001-1",
+            "phase": "frozen",
+            "parameters": {
+              "n": 2,
+              "mechanism": "with",
+              "threshold": 5
+            },
+            "predictionDraft": "greater",
+            "prediction": "greater",
+            "predictionAt": 1788868800002,
+            "predictionHadReference": true,
+            "predictionHadResult": false,
+            "revealedAt": null,
+            "revealHadReference": false,
+            "selectedPath": null,
+            "pathSelections": [],
+            "history": [],
+            "resultContacts": [],
+            "referenceViewed": true,
+            "lastAction": {
+              "type": "submit-ungraded-prediction",
+              "at": 1788868800002
+            }
+          }
+        },
+        {
+          "input": {
+            "action": "freeze less → read reference → reveal → same-condition new greater prediction"
+          },
+          "observation": {
+            "original": {
+              "version": 1,
+              "roundId": "round-1788868800001-1",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "less",
+              "prediction": "less",
+              "predictionAt": 1788868800002,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788868800002
+              }
+            },
+            "history": [
+              {
+                "roundId": "round-1788868800001-1",
+                "parameters": {
+                  "n": 2,
+                  "mechanism": "with",
+                  "threshold": 5
+                },
+                "phase": "revealed",
+                "prediction": "less",
+                "predictionAt": 1788868800002,
+                "predictionHadReference": false,
+                "predictionHadResult": false,
+                "revealedAt": 1788868800003,
+                "revealHadReference": true,
+                "selectedPath": null,
+                "pathSelections": []
+              }
+            ],
+            "current": {
+              "version": 1,
+              "roundId": "round-1788868800004-2",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788868800006,
+              "predictionHadReference": true,
+              "predictionHadResult": true,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [
+                {
+                  "roundId": "round-1788868800001-1",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": "less",
+                  "predictionAt": 1788868800002,
+                  "predictionHadReference": false,
+                  "predictionHadResult": false,
+                  "revealedAt": 1788868800003,
+                  "revealHadReference": true,
+                  "selectedPath": null,
+                  "pathSelections": []
+                }
+              ],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800003,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788868800006
+              }
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "result and submitted history → old import → immediate storage refresh, identity isolation",
+      "observations": [
+        {
+          "input": {
+            "action": "unassisted less prediction → reveal → original blank import → immediate export"
+          },
+          "observation": {
+            "old": {
+              "attempts": [],
+              "explorationCount": 0,
+              "participated": false,
+              "lastInteractionAt": null,
+              "review": null
+            },
+            "after": {
+              "attempts": [],
+              "explorationCount": 0,
+              "participated": false,
+              "lastInteractionAt": null,
+              "review": null,
+              "exposure": null
+            },
+            "exploration": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [
+                {
+                  "roundId": "round-1788868800001-1",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": "less",
+                  "predictionAt": 1788868800002,
+                  "predictionHadReference": false,
+                  "predictionHadResult": false,
+                  "revealedAt": 1788868800003,
+                  "revealHadReference": false,
+                  "selectedPath": null,
+                  "pathSelections": []
+                }
+              ],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800003,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": null
+            }
+          }
+        },
+        {
+          "input": {
+            "action": "refresh, same-condition prediction; then new without-replacement mechanism prediction"
+          },
+          "observation": {
+            "sameCondition": {
+              "version": 1,
+              "roundId": "round-1788868800001-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788868800002,
+              "predictionHadReference": false,
+              "predictionHadResult": true,
+              "revealedAt": 1788868800003,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [
+                {
+                  "roundId": "round-1788868800001-1",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": "less",
+                  "predictionAt": 1788868800002,
+                  "predictionHadReference": false,
+                  "predictionHadResult": false,
+                  "revealedAt": 1788868800003,
+                  "revealHadReference": false,
+                  "selectedPath": null,
+                  "pathSelections": []
+                }
+              ],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800003,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "reveal-exact-enumeration",
+                "at": 1788868800003
+              }
+            },
+            "newCondition": {
+              "version": 1,
+              "roundId": "round-1788868800004-2",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "without",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788868800006,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [
+                {
+                  "roundId": "round-1788868800001-1",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": "less",
+                  "predictionAt": 1788868800002,
+                  "predictionHadReference": false,
+                  "predictionHadResult": false,
+                  "revealedAt": 1788868800003,
+                  "revealHadReference": false,
+                  "selectedPath": null,
+                  "pathSelections": []
+                }
+              ],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800003,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788868800006
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "action": "return to previously revealed with-replacement conditions"
+          },
+          "observation": {
+            "version": 1,
+            "roundId": "round-1788868800008-3",
+            "phase": "frozen",
+            "parameters": {
+              "n": 2,
+              "mechanism": "with",
+              "threshold": 5
+            },
+            "predictionDraft": "greater",
+            "prediction": "greater",
+            "predictionAt": 1788868800010,
+            "predictionHadReference": false,
+            "predictionHadResult": true,
+            "revealedAt": null,
+            "revealHadReference": false,
+            "selectedPath": null,
+            "pathSelections": [],
+            "history": [
+              {
+                "roundId": "round-1788868800001-1",
+                "parameters": {
+                  "n": 2,
+                  "mechanism": "with",
+                  "threshold": 5
+                },
+                "phase": "revealed",
+                "prediction": "less",
+                "predictionAt": 1788868800002,
+                "predictionHadReference": false,
+                "predictionHadResult": false,
+                "revealedAt": 1788868800003,
+                "revealHadReference": false,
+                "selectedPath": null,
+                "pathSelections": []
+              },
+              {
+                "roundId": "round-1788868800004-2",
+                "parameters": {
+                  "n": 2,
+                  "mechanism": "without",
+                  "threshold": 5
+                },
+                "phase": "revealed",
+                "prediction": "greater",
+                "predictionAt": 1788868800006,
+                "predictionHadReference": false,
+                "predictionHadResult": false,
+                "revealedAt": 1788868800007,
+                "revealHadReference": false,
+                "selectedPath": null,
+                "pathSelections": []
+              }
+            ],
+            "resultContacts": [
+              {
+                "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                "at": 1788868800003,
+                "source": "exact-enumeration-reveal"
+              },
+              {
+                "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"without\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                "at": 1788868800007,
+                "source": "exact-enumeration-reveal"
+              }
+            ],
+            "referenceViewed": false,
+            "lastAction": {
+              "type": "submit-ungraded-prediction",
+              "at": 1788868800010
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "all 12 actual tables, paths and bar widths versus independent exact oracle",
+      "observations": [
+        {
+          "input": {
+            "n": 1,
+            "mechanism": "with",
+            "threshold": 5
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2)",
+                "1/3 = 1/3"
+              ],
+              [
+                "4",
+                "(4)",
+                "1/3 = 1/3"
+              ],
+              [
+                "8",
+                "(8)",
+                "1/3 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=1；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=1/3，等于单卡概率 P(X≥5)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "path": "默认展示路径（未记为你主动选择）：(2) → 均值=(2)/1=2 分钟；这条有序路径的概率=1/3。"
+          }
+        },
+        {
+          "input": {
+            "n": 1,
+            "mechanism": "with",
+            "threshold": 6
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2)",
+                "1/3 = 1/3"
+              ],
+              [
+                "4",
+                "(4)",
+                "1/3 = 1/3"
+              ],
+              [
+                "8",
+                "(8)",
+                "1/3 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=1；有放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "path": "默认展示路径（未记为你主动选择）：(2) → 均值=(2)/1=2 分钟；这条有序路径的概率=1/3。"
+          }
+        },
+        {
+          "input": {
+            "n": 1,
+            "mechanism": "with",
+            "threshold": 8
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2)",
+                "1/3 = 1/3"
+              ],
+              [
+                "4",
+                "(4)",
+                "1/3 = 1/3"
+              ],
+              [
+                "8",
+                "(8)",
+                "1/3 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=1；有放回；事件为样本均值≥8 分钟。P(样本均值≥8)=1/3，等于单卡概率 P(X≥8)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "path": "默认展示路径（未记为你主动选择）：(2) → 均值=(2)/1=2 分钟；这条有序路径的概率=1/3。"
+          }
+        },
+        {
+          "input": {
+            "n": 1,
+            "mechanism": "without",
+            "threshold": 5
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2)",
+                "1/3 = 1/3"
+              ],
+              [
+                "4",
+                "(4)",
+                "1/3 = 1/3"
+              ],
+              [
+                "8",
+                "(8)",
+                "1/3 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=1；无放回；事件为样本均值≥5 分钟。P(样本均值≥5)=1/3，等于单卡概率 P(X≥5)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "path": "默认展示路径（未记为你主动选择）：(2) → 均值=(2)/1=2 分钟；这条有序路径的概率=1/3。"
+          }
+        },
+        {
+          "input": {
+            "n": 1,
+            "mechanism": "without",
+            "threshold": 6
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2)",
+                "1/3 = 1/3"
+              ],
+              [
+                "4",
+                "(4)",
+                "1/3 = 1/3"
+              ],
+              [
+                "8",
+                "(8)",
+                "1/3 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=1；无放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "path": "默认展示路径（未记为你主动选择）：(2) → 均值=(2)/1=2 分钟；这条有序路径的概率=1/3。"
+          }
+        },
+        {
+          "input": {
+            "n": 1,
+            "mechanism": "without",
+            "threshold": 8
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2)",
+                "1/3 = 1/3"
+              ],
+              [
+                "4",
+                "(4)",
+                "1/3 = 1/3"
+              ],
+              [
+                "8",
+                "(8)",
+                "1/3 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=1；无放回；事件为样本均值≥8 分钟。P(样本均值≥8)=1/3，等于单卡概率 P(X≥8)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "path": "默认展示路径（未记为你主动选择）：(2) → 均值=(2)/1=2 分钟；这条有序路径的概率=1/3。"
+          }
+        },
+        {
+          "input": {
+            "n": 2,
+            "mechanism": "with",
+            "threshold": 5
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2, 2)",
+                "1/9 = 1/9"
+              ],
+              [
+                "3",
+                "(2, 4)、(4, 2)",
+                "2/9 = 2/9"
+              ],
+              [
+                "4",
+                "(4, 4)",
+                "1/9 = 1/9"
+              ],
+              [
+                "5",
+                "(2, 8)、(8, 2)",
+                "2/9 = 2/9"
+              ],
+              [
+                "6",
+                "(4, 8)、(8, 4)",
+                "2/9 = 2/9"
+              ],
+              [
+                "8",
+                "(8, 8)",
+                "1/9 = 1/9"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              },
+              {
+                "label": "3 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              },
+              {
+                "label": "5 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "6 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(1+2+1+2+2+1)/9=1。每次放回且重新等概率抽取，两次独立；每条有序路径的概率为(1/3)×(1/3)=1/9。",
+            "path": "默认展示路径（未记为你主动选择）：(2, 2) → 均值=(2+2)/2=2 分钟；这条有序路径的概率=1/9。"
+          }
+        },
+        {
+          "input": {
+            "n": 2,
+            "mechanism": "with",
+            "threshold": 6
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2, 2)",
+                "1/9 = 1/9"
+              ],
+              [
+                "3",
+                "(2, 4)、(4, 2)",
+                "2/9 = 2/9"
+              ],
+              [
+                "4",
+                "(4, 4)",
+                "1/9 = 1/9"
+              ],
+              [
+                "5",
+                "(2, 8)、(8, 2)",
+                "2/9 = 2/9"
+              ],
+              [
+                "6",
+                "(4, 8)、(8, 4)",
+                "2/9 = 2/9"
+              ],
+              [
+                "8",
+                "(8, 8)",
+                "1/9 = 1/9"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              },
+              {
+                "label": "3 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              },
+              {
+                "label": "5 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "6 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。两个事件虽不是同一组样本，但合并后的概率恰好相同；相等不代表所有统计量都与总体同分布。",
+            "total": "总概率=(1+2+1+2+2+1)/9=1。每次放回且重新等概率抽取，两次独立；每条有序路径的概率为(1/3)×(1/3)=1/9。",
+            "path": "默认展示路径（未记为你主动选择）：(2, 2) → 均值=(2+2)/2=2 分钟；这条有序路径的概率=1/9。"
+          }
+        },
+        {
+          "input": {
+            "n": 2,
+            "mechanism": "with",
+            "threshold": 8
+          },
+          "observation": {
+            "rows": [
+              [
+                "2",
+                "(2, 2)",
+                "1/9 = 1/9"
+              ],
+              [
+                "3",
+                "(2, 4)、(4, 2)",
+                "2/9 = 2/9"
+              ],
+              [
+                "4",
+                "(4, 4)",
+                "1/9 = 1/9"
+              ],
+              [
+                "5",
+                "(2, 8)、(8, 2)",
+                "2/9 = 2/9"
+              ],
+              [
+                "6",
+                "(4, 8)、(8, 4)",
+                "2/9 = 2/9"
+              ],
+              [
+                "8",
+                "(8, 8)",
+                "1/9 = 1/9"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "2 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              },
+              {
+                "label": "3 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "4 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              },
+              {
+                "label": "5 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "6 分",
+                "probability": "2/9",
+                "width": "22.22222222222222%"
+              },
+              {
+                "label": "8 分",
+                "probability": "1/9",
+                "width": "11.11111111111111%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥8 分钟。P(样本均值≥8)=1/9，小于单卡概率 P(X≥8)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(1+2+1+2+2+1)/9=1。每次放回且重新等概率抽取，两次独立；每条有序路径的概率为(1/3)×(1/3)=1/9。",
+            "path": "默认展示路径（未记为你主动选择）：(2, 2) → 均值=(2+2)/2=2 分钟；这条有序路径的概率=1/9。"
+          }
+        },
+        {
+          "input": {
+            "n": 2,
+            "mechanism": "without",
+            "threshold": 5
+          },
+          "observation": {
+            "rows": [
+              [
+                "3",
+                "(2, 4)、(4, 2)",
+                "2/6 = 1/3"
+              ],
+              [
+                "5",
+                "(2, 8)、(8, 2)",
+                "2/6 = 1/3"
+              ],
+              [
+                "6",
+                "(4, 8)、(8, 4)",
+                "2/6 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "3 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "5 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "6 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=2；无放回；事件为样本均值≥5 分钟。P(样本均值≥5)=2/3，大于单卡概率 P(X≥5)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(2+2+2)/6=1。第二次在剩余2张中等概率抽取，与第一次不独立；每条允许路径的概率为(1/3)×(1/2)=1/6。",
+            "path": "默认展示路径（未记为你主动选择）：(2, 4) → 均值=(2+4)/2=3 分钟；这条有序路径的概率=1/6。"
+          }
+        },
+        {
+          "input": {
+            "n": 2,
+            "mechanism": "without",
+            "threshold": 6
+          },
+          "observation": {
+            "rows": [
+              [
+                "3",
+                "(2, 4)、(4, 2)",
+                "2/6 = 1/3"
+              ],
+              [
+                "5",
+                "(2, 8)、(8, 2)",
+                "2/6 = 1/3"
+              ],
+              [
+                "6",
+                "(4, 8)、(8, 4)",
+                "2/6 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "3 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "5 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "6 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=2；无放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。两个事件虽不是同一组样本，但合并后的概率恰好相同；相等不代表所有统计量都与总体同分布。",
+            "total": "总概率=(2+2+2)/6=1。第二次在剩余2张中等概率抽取，与第一次不独立；每条允许路径的概率为(1/3)×(1/2)=1/6。",
+            "path": "默认展示路径（未记为你主动选择）：(2, 4) → 均值=(2+4)/2=3 分钟；这条有序路径的概率=1/6。"
+          }
+        },
+        {
+          "input": {
+            "n": 2,
+            "mechanism": "without",
+            "threshold": 8
+          },
+          "observation": {
+            "rows": [
+              [
+                "3",
+                "(2, 4)、(4, 2)",
+                "2/6 = 1/3"
+              ],
+              [
+                "5",
+                "(2, 8)、(8, 2)",
+                "2/6 = 1/3"
+              ],
+              [
+                "6",
+                "(4, 8)、(8, 4)",
+                "2/6 = 1/3"
+              ]
+            ],
+            "bars": [
+              {
+                "label": "3 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "5 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              },
+              {
+                "label": "6 分",
+                "probability": "1/3",
+                "width": "33.333333333333336%"
+              }
+            ],
+            "comparison": "当前总体为 2、4、8 分钟；n=2；无放回；事件为样本均值≥8 分钟。P(样本均值≥8)=0/1，小于单卡概率 P(X≥8)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(2+2+2)/6=1。第二次在剩余2张中等概率抽取，与第一次不独立；每条允许路径的概率为(1/3)×(1/2)=1/6。",
+            "path": "默认展示路径（未记为你主动选择）：(2, 4) → 均值=(2+4)/2=3 分钟；这条有序路径的概率=1/6。"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "summary states: no work, only reference, only reveal, manual path, only assisted and self assessment, actual independent answers",
+      "observations": [
+        {
+          "input": {
+            "kind": "none"
+          },
+          "observation": {
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            },
+            "lab": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": null
+            },
+            "numeric": [],
+            "open": []
+          }
+        },
+        {
+          "input": {
+            "kind": "reference-only"
+          },
+          "observation": {
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            },
+            "lab": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": true,
+              "lastAction": null
+            },
+            "numeric": [],
+            "open": []
+          }
+        },
+        {
+          "input": {
+            "kind": "reveal-only"
+          },
+          "observation": {
+            "summary": {
+              "loop": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。本轮未提交预测；这里记录的是直接查看结果，没有推断你的原想法。 本轮没有主动选择路径的记录；展示过的默认路径不算你亲自计算。 可在“无放回”新题中自行组织样本空间。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            },
+            "lab": {
+              "version": 1,
+              "roundId": "round-1788868800001-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": 1788868800001,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800001,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "reveal-exact-enumeration",
+                "at": 1788868800001
+              }
+            },
+            "numeric": [],
+            "open": []
+          }
+        },
+        {
+          "input": {
+            "kind": "manual-path"
+          },
+          "observation": {
+            "summary": {
+              "loop": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。本轮未提交预测；这里记录的是直接查看结果，没有推断你的原想法。 本轮记录了 1 次主动选择路径查看。 可在“无放回”新题中自行组织样本空间。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            },
+            "lab": {
+              "version": 1,
+              "roundId": "round-1788868800001-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": 1788868800001,
+              "revealHadReference": false,
+              "selectedPath": 2,
+              "pathSelections": [
+                {
+                  "eventId": "path-1788868800002-2",
+                  "index": 2,
+                  "values": [
+                    2,
+                    8
+                  ],
+                  "at": 1788868800002
+                }
+              ],
+              "history": [],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800001,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "select-enumerated-path",
+                "at": 1788868800002
+              }
+            },
+            "numeric": [],
+            "open": []
+          }
+        },
+        {
+          "input": {
+            "kind": "reference-and-reveal"
+          },
+          "observation": {
+            "summary": {
+              "loop": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。本轮未提交预测；这里记录的是直接查看结果，没有推断你的原想法。 本次揭示结果前已查看实验全解。 本轮没有主动选择路径的记录；展示过的默认路径不算你亲自计算。 可在“无放回”新题中自行组织样本空间。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            },
+            "lab": {
+              "version": 1,
+              "roundId": "round-1788868800001-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": 1788868800001,
+              "revealHadReference": true,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788868800001,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "reveal-exact-enumeration",
+                "at": 1788868800001
+              }
+            },
+            "numeric": [],
+            "open": []
+          }
+        },
+        {
+          "input": {
+            "kind": "assisted-and-self"
+          },
+          "observation": {
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：最新数值或选项核对正确，提交前有提示／参考接触。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：原答已保存，自评达到要点；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "提前练习：独立求极差概率",
+              "schedule": "记录安排的回顾时间：2026/9/9 08:00:00。当前未到期，提前练习不会推进间隔。"
+            },
+            "lab": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": null
+            },
+            "numeric": [
+              {
+                "id": "distribution-probability:1788868800002:1",
+                "answer": "4/9",
+                "correct": true,
+                "source": "objective",
+                "assisted": true,
+                "time": 1788868800002,
+                "sessionId": "session-1788868800000-bfacuo8kuig"
+              }
+            ],
+            "open": [
+              {
+                "id": "distribution-independent:1788868800004:1",
+                "answer": "M=1,4,9；概率1/9,1/3,5/9；9条有序样本各1/9，按最大值合并。M=9是本次观测。",
+                "correct": true,
+                "source": "self",
+                "assisted": false,
+                "time": 1788868800004,
+                "sessionId": "session-1788868800000-bfacuo8kuig",
+                "selfRating": "meets-rubric",
+                "assessedAt": 1788868800005
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "kind": "independent"
+          },
+          "observation": {
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：最新数值或选项独立客观核对正确。独立求极差概率：最新数值或选项独立客观核对正确。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "提前练习：独立求极差概率",
+              "schedule": "记录安排的回顾时间：2026/9/9 08:00:00。当前未到期，提前练习不会推进间隔。"
+            },
+            "lab": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "revealHadReference": false,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": null
+            },
+            "numeric": [
+              {
+                "id": "distribution-probability:1788868800004:1",
+                "answer": "4/9",
+                "correct": true,
+                "source": "objective",
+                "assisted": false,
+                "time": 1788868800004,
+                "sessionId": "session-1788868800000-k8ys8ect1sh"
+              }
+            ],
+            "open": []
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "actual completion pathways: wrong, hint, independent correct, skipped; links clicked",
+      "observations": [
+        {
+          "input": {
+            "kind": "wrong",
+            "answer": "1/9"
+          },
+          "observation": {
+            "priorPrompt": "就地自测补全：哪些路径给均值3？三张不同卡标有0、3、6分钟，每次等概率抽取，放回后再抽一次，两次独立。统计量为两张卡的样本均值。已列出9条等可能有序路径，且每条概率为1/9。请补上关键一步：P(样本均值=3)=？输入精确分数或小数。填写数值，可使用小数或简单分数提交作答暂时跳过查看提示（记录辅助）直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n公共题卡，原创题目",
+            "visibleTables": 0,
+            "record": {
+              "id": "distribution-completion",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "1/9",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-sxk0y0ii2a",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800002,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-completion:1788868800002:1",
+                  "answer": "1/9",
+                  "correct": false,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788868800002,
+                  "sessionId": "session-1788868800000-sxk0y0ii2a"
+                }
+              ],
+              "submittedAttemptId": "distribution-completion:1788868800002:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200002,
+                "lastReviewedAt": 1788868800002,
+                "lastSessionId": "session-1788868800000-sxk0y0ii2a",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800002,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "recommendation": {
+              "on": "incorrect",
+              "to": "worked-distribution",
+              "label": "回到例题核对互斥路径的合并",
+              "from": "distribution-completion",
+              "targetTitle": "完整例题：从四条路径到分布"
+            },
+            "actualTarget": "worked-distribution"
+          }
+        },
+        {
+          "input": {
+            "kind": "assisted",
+            "answer": "1/3"
+          },
+          "observation": {
+            "priorPrompt": "就地自测补全：哪些路径给均值3？三张不同卡标有0、3、6分钟，每次等概率抽取，放回后再抽一次，两次独立。统计量为两张卡的样本均值。已列出9条等可能有序路径，且每条概率为1/9。请补上关键一步：P(样本均值=3)=？输入精确分数或小数。填写数值，可使用小数或简单分数提交作答暂时跳过查看提示（记录辅助）直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n公共题卡，原创题目",
+            "visibleTables": 0,
+            "record": {
+              "id": "distribution-completion",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "1/3",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": true,
+              "exposure": {
+                "sessionId": "session-1788868800000-0ndbtb7g8slm",
+                "hint": true,
+                "reference": true,
+                "observedAt": 1788868800003,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-completion:1788868800003:1",
+                  "answer": "1/3",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": true,
+                  "time": 1788868800003,
+                  "sessionId": "session-1788868800000-0ndbtb7g8slm"
+                }
+              ],
+              "submittedAttemptId": "distribution-completion:1788868800003:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200003,
+                "lastReviewedAt": 1788868800003,
+                "lastSessionId": "session-1788868800000-0ndbtb7g8slm",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800003,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "recommendation": {
+              "on": "assisted",
+              "to": "distribution-independent",
+              "label": "在未给完整表的新题中独立组织",
+              "from": "distribution-completion",
+              "targetTitle": "独立构造：改用最大值"
+            },
+            "actualTarget": "distribution-independent"
+          }
+        },
+        {
+          "input": {
+            "kind": "independent",
+            "answer": "1/3"
+          },
+          "observation": {
+            "priorPrompt": "就地自测补全：哪些路径给均值3？三张不同卡标有0、3、6分钟，每次等概率抽取，放回后再抽一次，两次独立。统计量为两张卡的样本均值。已列出9条等可能有序路径，且每条概率为1/9。请补上关键一步：P(样本均值=3)=？输入精确分数或小数。填写数值，可使用小数或简单分数提交作答暂时跳过查看提示（记录辅助）直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n公共题卡，原创题目",
+            "visibleTables": 0,
+            "record": {
+              "id": "distribution-completion",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "1/3",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-h50pmfdfe9",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800002,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-completion:1788868800002:1",
+                  "answer": "1/3",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788868800002,
+                  "sessionId": "session-1788868800000-h50pmfdfe9"
+                }
+              ],
+              "submittedAttemptId": "distribution-completion:1788868800002:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200002,
+                "lastReviewedAt": 1788868800002,
+                "lastSessionId": "session-1788868800000-h50pmfdfe9",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800002,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "recommendation": {
+              "on": "correct",
+              "to": "distribution-probability",
+              "label": "改用极差求一个新概率",
+              "from": "distribution-completion",
+              "targetTitle": "独立求极差概率"
+            },
+            "actualTarget": "distribution-probability"
+          }
+        },
+        {
+          "input": {
+            "kind": "skipped",
+            "answer": null
+          },
+          "observation": {
+            "priorPrompt": "就地自测补全：哪些路径给均值3？三张不同卡标有0、3、6分钟，每次等概率抽取，放回后再抽一次，两次独立。统计量为两张卡的样本均值。已列出9条等可能有序路径，且每条概率为1/9。请补上关键一步：P(样本均值=3)=？输入精确分数或小数。填写数值，可使用小数或简单分数提交作答暂时跳过查看提示（记录辅助）直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202\n公共题卡，原创题目",
+            "visibleTables": 0,
+            "record": {
+              "id": "distribution-completion",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "",
+              "status": "skipped",
+              "answerRevealed": false,
+              "hintUsed": false,
+              "exposure": null,
+              "attempts": [],
+              "submittedAttemptId": null,
+              "review": null,
+              "participated": false,
+              "lastInteractionAt": 1788868800001,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "recommendation": {
+              "on": "skipped",
+              "to": "worked-distribution",
+              "label": "先查看一遍完整方法",
+              "from": "distribution-completion",
+              "targetTitle": "完整例题：从四条路径到分布"
+            },
+            "actualTarget": "worked-distribution"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "concept and design objectives accept actual reasons, preserve originals and keep self source",
+      "observations": [
+        {
+          "input": {
+            "activityId": "survey-plan",
+            "raw": "总体为本月120个灯罩，样本是抽中的24个灯罩，单位是一个灯罩，抽样框是108个编号的登记册。遗漏12个，需先补齐抽样框。选抽样调查，可少损坏产品并节省预算；代价是有抽样变异。普查没有抽样误差，也仍可能测量或记录错误。",
+            "action": "submit original explanation, then self-rate good"
+          },
+          "observation": {
+            "original": {
+              "id": "survey-plan:1788868800002:1",
+              "answer": "总体为本月120个灯罩，样本是抽中的24个灯罩，单位是一个灯罩，抽样框是108个编号的登记册。遗漏12个，需先补齐抽样框。选抽样调查，可少损坏产品并节省预算；代价是有抽样变异。普查没有抽样误差，也仍可能测量或记录错误。",
+              "correct": null,
+              "source": "self",
+              "assisted": false,
+              "time": 1788868800002,
+              "sessionId": "session-1788868800000-61i5a5zugbq"
+            },
+            "rated": {
+              "id": "survey-plan:1788868800002:1",
+              "answer": "总体为本月120个灯罩，样本是抽中的24个灯罩，单位是一个灯罩，抽样框是108个编号的登记册。遗漏12个，需先补齐抽样框。选抽样调查，可少损坏产品并节省预算；代价是有抽样变异。普查没有抽样误差，也仍可能测量或记录错误。",
+              "correct": true,
+              "source": "self",
+              "assisted": false,
+              "time": 1788868800002,
+              "sessionId": "session-1788868800000-61i5a5zugbq",
+              "selfRating": "meets-rubric",
+              "assessedAt": 1788868800003
+            },
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：原答已保存，自评达到要点；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            }
+          }
+        },
+        {
+          "input": {
+            "activityId": "without-replacement",
+            "raw": "允许的有序样本为(3,6),(3,12),(6,3),(6,12),(12,3),(12,6)，各概率1/6。均值4.5、7.5、9各有两条路径，所以各为1/3，和为1。抽到3后第二次为3的概率0而原来边际为1/3，故不独立。均值只需样本和已知常数2，不需未知μ，所以是统计量。抽之前均值是随机变量，抽到(3,12)后7.5是一次观测值。",
+            "action": "submit original explanation, then self-rate good"
+          },
+          "observation": {
+            "original": {
+              "id": "without-replacement:1788868800005:1",
+              "answer": "允许的有序样本为(3,6),(3,12),(6,3),(6,12),(12,3),(12,6)，各概率1/6。均值4.5、7.5、9各有两条路径，所以各为1/3，和为1。抽到3后第二次为3的概率0而原来边际为1/3，故不独立。均值只需样本和已知常数2，不需未知μ，所以是统计量。抽之前均值是随机变量，抽到(3,12)后7.5是一次观测值。",
+              "correct": null,
+              "source": "self",
+              "assisted": false,
+              "time": 1788868800005,
+              "sessionId": "session-1788868800000-61i5a5zugbq"
+            },
+            "rated": {
+              "id": "without-replacement:1788868800005:1",
+              "answer": "允许的有序样本为(3,6),(3,12),(6,3),(6,12),(12,3),(12,6)，各概率1/6。均值4.5、7.5、9各有两条路径，所以各为1/3，和为1。抽到3后第二次为3的概率0而原来边际为1/3，故不独立。均值只需样本和已知常数2，不需未知μ，所以是统计量。抽之前均值是随机变量，抽到(3,12)后7.5是一次观测值。",
+              "correct": true,
+              "source": "self",
+              "assisted": false,
+              "time": 1788868800005,
+              "sessionId": "session-1788868800000-61i5a5zugbq",
+              "selfRating": "meets-rubric",
+              "assessedAt": 1788868800006
+            },
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：尚无已提交作答。",
+              "open": "先决定调查谁：原答已保存，自评达到要点；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：原答已保存，自评达到要点。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "初次作答：独立求极差概率",
+              "schedule": "这道题还没有复习记录；先完成一次真实作答，再按记录回来。"
+            }
+          }
+        },
+        {
+          "input": {
+            "activityId": "without-replacement",
+            "action": "after completed self assessment, click the closing challenge button"
+          },
+          "observation": {
+            "label": "挑战：无放回时重新构造分布",
+            "actualTarget": "without-replacement",
+            "before": {
+              "id": "without-replacement",
+              "objectiveId": "statistic-concept",
+              "type": "quiz",
+              "draft": "允许的有序样本为(3,6),(3,12),(6,3),(6,12),(12,3),(12,6)，各概率1/6。均值4.5、7.5、9各有两条路径，所以各为1/3，和为1。抽到3后第二次为3的概率0而原来边际为1/3，故不独立。均值只需样本和已知常数2，不需未知μ，所以是统计量。抽之前均值是随机变量，抽到(3,12)后7.5是一次观测值。",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-61i5a5zugbq",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800005,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "without-replacement:1788868800005:1",
+                  "answer": "允许的有序样本为(3,6),(3,12),(6,3),(6,12),(12,3),(12,6)，各概率1/6。均值4.5、7.5、9各有两条路径，所以各为1/3，和为1。抽到3后第二次为3的概率0而原来边际为1/3，故不独立。均值只需样本和已知常数2，不需未知μ，所以是统计量。抽之前均值是随机变量，抽到(3,12)后7.5是一次观测值。",
+                  "correct": true,
+                  "source": "self",
+                  "assisted": false,
+                  "time": 1788868800005,
+                  "sessionId": "session-1788868800000-61i5a5zugbq",
+                  "selfRating": "meets-rubric",
+                  "assessedAt": 1788868800006
+                }
+              ],
+              "submittedAttemptId": "without-replacement:1788868800005:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200006,
+                "lastReviewedAt": 1788868800006,
+                "lastSessionId": "session-1788868800000-61i5a5zugbq",
+                "evidenceSource": "self"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800006,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "after": {
+              "id": "without-replacement",
+              "objectiveId": "statistic-concept",
+              "type": "quiz",
+              "draft": "允许的有序样本为(3,6),(3,12),(6,3),(6,12),(12,3),(12,6)，各概率1/6。均值4.5、7.5、9各有两条路径，所以各为1/3，和为1。抽到3后第二次为3的概率0而原来边际为1/3，故不独立。均值只需样本和已知常数2，不需未知μ，所以是统计量。抽之前均值是随机变量，抽到(3,12)后7.5是一次观测值。",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-61i5a5zugbq",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800005,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "without-replacement:1788868800005:1",
+                  "answer": "允许的有序样本为(3,6),(3,12),(6,3),(6,12),(12,3),(12,6)，各概率1/6。均值4.5、7.5、9各有两条路径，所以各为1/3，和为1。抽到3后第二次为3的概率0而原来边际为1/3，故不独立。均值只需样本和已知常数2，不需未知μ，所以是统计量。抽之前均值是随机变量，抽到(3,12)后7.5是一次观测值。",
+                  "correct": true,
+                  "source": "self",
+                  "assisted": false,
+                  "time": 1788868800005,
+                  "sessionId": "session-1788868800000-61i5a5zugbq",
+                  "selfRating": "meets-rubric",
+                  "assessedAt": 1788868800006
+                }
+              ],
+              "submittedAttemptId": "without-replacement:1788868800005:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200006,
+                "lastReviewedAt": 1788868800006,
+                "lastSessionId": "session-1788868800000-61i5a5zugbq",
+                "evidenceSource": "self"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800006,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            }
+          }
+        },
+        {
+          "input": {
+            "activityId": "statistic-check",
+            "answer": "sample",
+            "action": "submit fresh correct choice then actual recommendation button"
+          },
+          "observation": {
+            "correct": {
+              "id": "statistic-check:1788868800009:1",
+              "answer": "sample",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788868800009,
+              "sessionId": "session-1788868800000-61i5a5zugbq"
+            },
+            "recommendation": {
+              "on": "correct",
+              "to": "sample-lab",
+              "label": "预测并验证均值的抽样分布",
+              "from": "statistic-check",
+              "targetTitle": "均值越过门槛，会更常见吗？"
+            },
+            "actualTarget": "sample-lab"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "real review entry: first task, pending draft, normal browse, early practice, due practice in new document",
+      "observations": [
+        {
+          "input": {
+            "action": "first → pending 4/ → complete 4/9 → normal browse → actual early review → repeat 4/9"
+          },
+          "observation": {
+            "first": {
+              "id": "distribution-probability",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "4/9",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-h852ath18jt",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800005,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-probability:1788868800005:1",
+                  "answer": "4/9",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788868800005,
+                  "sessionId": "session-1788868800000-h852ath18jt"
+                }
+              ],
+              "submittedAttemptId": "distribution-probability:1788868800005:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200005,
+                "lastReviewedAt": 1788868800005,
+                "lastSessionId": "session-1788868800000-h852ath18jt",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800005,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "entry": {
+              "id": "distribution-probability",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "",
+              "status": "idle",
+              "answerRevealed": false,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-h852ath18jt",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800005,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-probability:1788868800005:1",
+                  "answer": "4/9",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788868800005,
+                  "sessionId": "session-1788868800000-h852ath18jt"
+                }
+              ],
+              "submittedAttemptId": null,
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200005,
+                "lastReviewedAt": 1788868800005,
+                "lastSessionId": "session-1788868800000-h852ath18jt",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800006,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "early": {
+              "id": "distribution-probability",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "4/9",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-h852ath18jt",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800008,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-probability:1788868800005:1",
+                  "answer": "4/9",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788868800005,
+                  "sessionId": "session-1788868800000-h852ath18jt"
+                },
+                {
+                  "id": "distribution-probability:1788868800008:2",
+                  "answer": "4/9",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": true,
+                  "time": 1788868800008,
+                  "sessionId": "session-1788868800000-h852ath18jt"
+                }
+              ],
+              "submittedAttemptId": "distribution-probability:1788868800008:2",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200008,
+                "lastReviewedAt": 1788868800008,
+                "lastSessionId": "session-1788868800000-h852ath18jt",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788868800008,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：最新数值或选项独立客观核对正确。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "提前练习：独立求极差概率",
+              "schedule": "记录安排的回顾时间：2026/9/9 08:00:00。当前未到期，提前练习不会推进间隔。"
+            }
+          }
+        },
+        {
+          "input": {
+            "action": "new document with controlled 7-day clock → real due review button → 4/9 → challenge button"
+          },
+          "observation": {
+            "entry": {
+              "id": "distribution-probability",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "",
+              "status": "idle",
+              "answerRevealed": false,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788868800000-h852ath18jt",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788868800005,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-probability:1788868800005:1",
+                  "answer": "4/9",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788868800005,
+                  "sessionId": "session-1788868800000-h852ath18jt"
+                }
+              ],
+              "submittedAttemptId": null,
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788955200005,
+                "lastReviewedAt": 1788868800005,
+                "lastSessionId": "session-1788868800000-h852ath18jt",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1789473600001,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "after": {
+              "id": "distribution-probability",
+              "objectiveId": "sampling-distribution",
+              "type": "quiz",
+              "draft": "4/9",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1789473600000-nr6bvh4et8j",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1789473600003,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "distribution-probability:1788868800005:1",
+                  "answer": "4/9",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788868800005,
+                  "sessionId": "session-1788868800000-h852ath18jt"
+                },
+                {
+                  "id": "distribution-probability:1789473600003:2",
+                  "answer": "4/9",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1789473600003,
+                  "sessionId": "session-1789473600000-nr6bvh4et8j"
+                }
+              ],
+              "submittedAttemptId": "distribution-probability:1789473600003:2",
+              "review": {
+                "intervalIndex": 1,
+                "dueAt": 1789732800003,
+                "lastReviewedAt": 1789473600003,
+                "lastSessionId": "session-1789473600000-nr6bvh4et8j",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1789473600003,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            },
+            "summary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：最新数值或选项独立客观核对正确。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "到期回顾：独立求极差概率",
+              "schedule": "记录安排的回顾时间：2026/9/9 08:00:00。当前已到期。"
+            },
+            "challengeTarget": "without-replacement",
+            "challengeSummary": {
+              "loop": "总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。当前轮尚未揭示结果，不能据进入收束判断实验已完成。用“返回工时卡实验”继续验证，再尝试无放回新题。",
+              "objective": "哪个量不依赖未知参数？：尚无已提交作答。补全：哪些路径给均值3？：尚无已提交作答。独立求极差概率：最新数值或选项独立客观核对正确。",
+              "open": "先决定调查谁：尚无原答；独立构造：改用最大值：尚无原答；迁移：无放回时重新构造：尚无原答。开放题的自评不等于客观独立通过；数值核对也不能单独证明完整推导。",
+              "review": "提前练习：独立求极差概率",
+              "schedule": "记录安排的回顾时间：2026/9/18 08:00:00。当前未到期，提前练习不会推进间隔。"
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

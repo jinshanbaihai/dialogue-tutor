@@ -1,0 +1,246 @@
+{
+  "scope": "Independent native DOM events against final frozen HTML. Explicit Image callbacks are branch fixtures only, not image decoding. Default jsdom zero rectangles cannot prove actual viewport exposure.",
+  "hashes": {
+    "lesson.html": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+    "lesson.json": "42627f4a3df54ccddfcfef28abf3a873a3a1807b955f7fd9315d3613a4f5dc90",
+    "delivery-manifest.json": "3bd8e42e61e8387ff4632abecf90366f3e3b9ded06f83d0e12a019252e8ecae2"
+  },
+  "scenes": [
+    {
+      "id": "G11 repair links and main repair completion",
+      "checks": [
+        {
+          "name": "main repair has complete-row or next-task link",
+          "pass": false
+        },
+        {
+          "name": "actual feedback target task-wo-DE-sub",
+          "pass": true
+        },
+        {
+          "name": "actual feedback target task-wo-DD-sub",
+          "pass": true
+        },
+        {
+          "name": "fresh reopen preserves frozen wrong answer",
+          "pass": true
+        },
+        {
+          "name": "fresh reopen retains source contacts",
+          "pass": true
+        }
+      ],
+      "evidence": {
+        "mainRepair": "输出值为什么不等可能？mean 1来自AA。 P(T=1)=19mean 5来自AC、BB、CA。 P(T=5)=13随机均匀首先作用于每阶段可选身份；统计量会把多条路径归入一个值。应先找原像，再加权。",
+        "mainControls": [],
+        "targets": [
+          {
+            "id": "task-wo-DE-sub",
+            "exists": true,
+            "focused": "task-wo-DE-sub"
+          },
+          {
+            "id": "task-wo-DD-sub",
+            "exists": true,
+            "focused": "task-wo-DD-sub"
+          }
+        ],
+        "reopened": {
+          "stateVersion": 1,
+          "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+          "componentId": "build-sample",
+          "conditionKey": "task-wo-mean-v1",
+          "rounds": {
+            "task-wr-mean-v1": {
+              "draft": {
+                "paths": [],
+                "mapping": {},
+                "weight": null,
+                "distribution": {}
+              },
+              "activeId": null,
+              "skipped": false
+            },
+            "task-wo-mean-v1": {
+              "draft": {
+                "paths": [
+                  "DD",
+                  "DF",
+                  "ED",
+                  "EF",
+                  "FD",
+                  "FE"
+                ],
+                "mapping": {
+                  "DD": "2",
+                  "DF": "5",
+                  "ED": "2",
+                  "EF": "5",
+                  "FD": "5",
+                  "FE": "5"
+                },
+                "weight": "remaining",
+                "distribution": {
+                  "2": "1/3",
+                  "5": "2/3",
+                  "8": "0"
+                }
+              },
+              "activeId": "task-wo-mean-v1-1788850942001-3",
+              "skipped": false
+            }
+          },
+          "contacts": {
+            "task-wr-mean-v1": {},
+            "task-wo-mean-v1": {
+              "construction-feedback-task-wo-mean-v1": 1788850942009,
+              "q3b-solution-wo": 1788850943170
+            }
+          },
+          "visibleSolutionIds": [
+            "q3b-solution"
+          ],
+          "submissions": [
+            {
+              "id": "task-wo-mean-v1-1788850942001-3",
+              "conditionKey": "task-wo-mean-v1",
+              "at": 1788850942001,
+              "draft": {
+                "paths": [
+                  "DD",
+                  "DF",
+                  "ED",
+                  "EF",
+                  "FD",
+                  "FE"
+                ],
+                "mapping": {
+                  "DD": "2",
+                  "DF": "5",
+                  "ED": "2",
+                  "EF": "5",
+                  "FD": "5",
+                  "FE": "5"
+                },
+                "weight": "remaining",
+                "distribution": {
+                  "2": "1/3",
+                  "5": "2/3",
+                  "8": "0"
+                }
+              },
+              "check": {
+                "missing": [
+                  "DE"
+                ],
+                "extra": [
+                  "DD"
+                ],
+                "matched": [
+                  "DF",
+                  "ED",
+                  "EF",
+                  "FD",
+                  "FE"
+                ],
+                "mapping": [],
+                "weight": false,
+                "distribution": [],
+                "correct": false
+              },
+              "assistance": []
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "id": "G12 viewport branch honesty and condition prediction return",
+      "checks": [
+        {
+          "name": "visible probability fixture is assistance, never cleared",
+          "pass": true
+        },
+        {
+          "name": "WR frozen original restored",
+          "pass": true
+        },
+        {
+          "name": "WO distinct frozen original restored",
+          "pass": true
+        }
+      ],
+      "evidence": {
+        "prediction": {
+          "id": "main-wr-mean-v1-1788850955227-1",
+          "conditionKey": "main-wr-mean-v1",
+          "at": 1788850955227,
+          "choice": "more",
+          "assistance": [
+            "main-wr-bar-1",
+            "main-wr-bar-5"
+          ]
+        },
+        "final": {
+          "stateVersion": 1,
+          "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+          "componentId": "main-map",
+          "conditionKey": "main-wo-mean-v1",
+          "rounds": {
+            "main-wr-mean-v1": {
+              "predictionDraft": "more",
+              "activeId": "main-wr-mean-v1-1788850955227-1",
+              "skipped": false,
+              "pathId": null,
+              "stageId": "paths",
+              "requested": null,
+              "displayed": null,
+              "mediaStatus": "idle",
+              "pathSelections": []
+            },
+            "main-wo-mean-v1": {
+              "predictionDraft": "less",
+              "activeId": "main-wo-mean-v1-1788850955880-2",
+              "skipped": false,
+              "pathId": null,
+              "stageId": "paths",
+              "requested": null,
+              "displayed": null,
+              "mediaStatus": "idle",
+              "pathSelections": []
+            }
+          },
+          "contacts": {
+            "main-wr-mean-v1": {
+              "main-wr-bar-1": 1788850954143,
+              "main-wr-bar-5": 1788850954471
+            },
+            "main-wo-mean-v1": {}
+          },
+          "visibleSolutionIds": [],
+          "submissions": [
+            {
+              "id": "main-wr-mean-v1-1788850955227-1",
+              "conditionKey": "main-wr-mean-v1",
+              "at": 1788850955227,
+              "choice": "more",
+              "assistance": [
+                "main-wr-bar-1",
+                "main-wr-bar-5"
+              ]
+            },
+            {
+              "id": "main-wo-mean-v1-1788850955880-2",
+              "conditionKey": "main-wo-mean-v1",
+              "at": 1788850955880,
+              "choice": "less",
+              "assistance": []
+            }
+          ]
+        }
+      },
+      "errors": []
+    }
+  ]
+}

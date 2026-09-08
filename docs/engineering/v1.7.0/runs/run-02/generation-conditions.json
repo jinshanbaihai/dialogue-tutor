@@ -1,0 +1,28 @@
+{
+  "status": "generation-aborted-contract-gap",
+  "recorded_at_utc": "2026-09-08T03:15:36.721902+00:00",
+  "skill_version": "1.7.0",
+  "skill_hash_timing": "中止点，对本轮已读取文件核算；本代理未修改技能文件。",
+  "skill_file_sha256": {
+    "SKILL.md": "61af8371b3cf41be3ca9cbf179a045b3a56de9ab24328d4f9721d73a3fbc0052",
+    "references/teaching-design.md": "1cf2d22da4db2cbd2ed979840d2505b02af015750f35f188fb914143db6b5c40",
+    "references/interactive-html.md": "3121adeef97f11b85eeddff53eb8c44f65ec7d3696e37fe07cc305b4bee34785",
+    "references/visual-design.md": "ff6c2cdc10e6e09d3e45bc3bd1d2b65cfd43024ae0dfd7445e7e9df108d34652",
+    "references/engagement-and-narrative.md": "38b27dfb2994df6534d970acbc9ab25edcbbac2c86b693576e2a7ac7eadd8ce1",
+    "references/modes-and-explanations.md": "d8251c0f0357798bbc338130bc544ebfcd10b8bb2e10a79e04150f184c5e8f64",
+    "references/统计术语中英对照.md": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+    "references/考纲与考试局.md": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+    "references/deeptutor-provenance.md": "353abdabb033d2848d8511feaa66366365e7383eb7514f4462b3397967af5dcf",
+    "scripts/build_lesson.py": "b98d444160ac3656a9e3a842410eedc0153b7cd7b9839d96df366261516b04a0",
+    "assets/interactive/lesson-runtime.js": "49b17f35fc35fda0e0ba432743313031b71fcc33f8c4b787ccccf2115c5563bb",
+    "assets/interactive/lesson-runtime.css": "4a933a8981688d8d04d780528988edd6f3b6073c7456f0f816f9d00b11672d3b"
+  },
+  "scope_sha256": "9bb5187c2adc91afef038b7ea8c89367b29b29d490025ead1b6bbe7e4c52b82d",
+  "exact_underlying_model": "未提供",
+  "model_revision": "未提供",
+  "temperature": "未提供",
+  "seed": "未提供",
+  "lesson_generation": "未执行author.py；lesson.json和lesson.html尚未生成。",
+  "scope": "官方范围仅来自指定official-scope.md；未读其他generation目录、成品、测试课程或技能examples。",
+  "checked": "contract-repro.cjs在jsdom中执行公共runtime；没有课程数学验证、课程DOM验证或视觉验收。"
+}

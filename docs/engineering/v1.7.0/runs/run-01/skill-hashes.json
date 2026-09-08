@@ -1,0 +1,17 @@
+{
+  "SKILL.md": "212bc64529fb8f7e67d4c5f171ac0c182034257009606d9b0ce011dd7f5409ac",
+  "references/deeptutor-provenance.md": "353abdabb033d2848d8511feaa66366365e7383eb7514f4462b3397967af5dcf",
+  "references/engagement-and-narrative.md": "b1e437c840f74e42be7c67f9232f39215704a52cc5fb6b095251d53ee5d4ffe5",
+  "references/expert-review.md": "a1b6645a8d8aabfb21ade3a6d96c0ac0129545afb73ed046f6546cce9cbd37be",
+  "references/interactive-html.md": "c637d2a16c4c81d0eb072d13ae762b0b1cd92b831e4a62bc10b810f92ebc62e1",
+  "references/learning-evidence.md": "1dab2930fba770135c0b787e37233d13a3c5f2809e752d6124269a40a4c8bdd2",
+  "references/modes-and-explanations.md": "d8251c0f0357798bbc338130bc544ebfcd10b8bb2e10a79e04150f184c5e8f64",
+  "references/teaching-design.md": "1cf2d22da4db2cbd2ed979840d2505b02af015750f35f188fb914143db6b5c40",
+  "references/visual-design.md": "65a186f6b58284b978e093f2a13681e111f58a141ccf10f98696534fb2afbd56",
+  "references/\u6570\u5b66\u7684\u51b2\u7a81\u8bfb\u6cd5.md": "f5a4922de390ce6a4be7240852aa58da7e6a4bbcb2ab554b886ff77ec0425de7",
+  "references/\u7edf\u8ba1\u672f\u8bed\u4e2d\u82f1\u5bf9\u7167.md": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+  "references/\u8003\u7eb2\u4e0e\u8003\u8bd5\u5c40.md": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+  "scripts/build_lesson.py": "b98d444160ac3656a9e3a842410eedc0153b7cd7b9839d96df366261516b04a0",
+  "assets/interactive/lesson-runtime.css": "4a933a8981688d8d04d780528988edd6f3b6073c7456f0f816f9d00b11672d3b",
+  "assets/interactive/lesson-runtime.js": "49b17f35fc35fda0e0ba432743313031b71fcc33f8c4b787ccccf2115c5563bb"
+}

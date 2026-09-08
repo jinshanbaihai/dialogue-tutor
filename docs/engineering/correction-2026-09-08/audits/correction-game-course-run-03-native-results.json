@@ -1,0 +1,1431 @@
+{
+  "htmlSHA": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "scope": "independent frozen complete-course component DOM review; no Image load stub, no browser layout claim",
+  "scenes": [
+    {
+      "name": "twenty-finite-questions-wrong-source-return-retry",
+      "assertions": [
+        {
+          "name": "frame-opening finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "frame-opening native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "frame-opening explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "frame-opening wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测谁有机会被记录这份记录能够直接覆盖哪一组？选择一个答案，然后提交今天在借阅台被问到的人全部注册读者全市居民提交作答本次作答需要修正参考与解析今天在借阅台被问到的人记录直接覆盖实际询问的人；若目标是全部注册读者，还需检查其他读者的入选机会。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "frame-opening repair locates actual necessary source",
+          "pass": true,
+          "actual": "pop-act3"
+        },
+        {
+          "name": "frame-opening source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 912,
+            "tail": "样时未列入名册属于抽样框遗漏，两者发生在不同环节。为什么还要比较普查与抽样调查？普查能够避免仅由抽取部分单位造成的抽样变动，并可取得每个单位的记录；联系和处理大量单位也要花时间、费用。抽样调查能够减少工作量，也适用于破坏性检测；用样本代替总体时，结论还受到样本变动和选取方式影响。普查也可能出现记录错误、遗漏和非响应，调查每个人的目标本身不保证数据正确。情形选择与具体理由只需清点一间教室12把椅子普查工作量小，而且每把椅子的状态都能记录。检测灯泡直到烧毁抽样调查保留未测试产品；普查会消耗所有产品。期限只够访问50人而总体很大抽样可在期限内完成；应说明框、抽法和回复情况。返回谁有机会被记录当前作答"
+          }
+        },
+        {
+          "name": "frame-opening exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "frame-opening return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "frame-opening retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "frame-opening:1800000000000:1",
+              "answer": "b",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "frame-opening:1800000000000:2",
+              "answer": "a",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "frame-opening first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "e1a finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "e1a native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "e1a explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "e1a wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测E1(a) 破坏性测试选择调查方式先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交普查；保留8盏同时测试12盏抽样调查；测试最多4盏普查；12盏全部测试提交作答本次作答需要修正参考与解析抽样调查；测试最多4盏采用抽样调查，测试最多4盏；测试全部12盏会把产品全部消耗。评价要点：调查方式、破坏性测试的后果，以及与保留8盏的条件相连。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "e1a repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-e1a"
+        },
+        {
+          "name": "e1a source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 654,
+            "tail": "st8”限制最多损坏4盏。要求方式及理由，答案包含两部分。② 题干给出的解题方法先把检测代价与保留数量对应。普查会测试12盏，与至少保留8盏的目标不相容。③ 回到已经建立的原理population第3幕普查与破坏性调查④ 公式与适用条件令k为测试的灯数；每次测试损坏一盏，余下12−k盏。⑤ 每一步运算及其依据12−k≥8把“至少保留8盏”写成不等式。−k≥−4两边同减12。k≤4两边同乘−1，不等号反向。⑥ 答案与本题评价要点采用抽样调查，测试最多4盏；测试全部12盏会把产品全部消耗。评价要点：调查方式、破坏性测试的后果，以及与保留8盏的条件相连。返回E1(a) 破坏性测试选择调查方式当前作答"
+          }
+        },
+        {
+          "name": "e1a exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "e1a return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "e1a retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "e1a:1800000000000:1",
+              "answer": "c",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "e1a:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "e1a first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "e1b finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "e1b native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "e1b explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "e1b wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测E1(b) 用名单实施无放回抽取先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交总体4盏；单位编号名单；框为工坊总体12盏；抽4次且每次放回总体12盏；单位1盏；框为完整编号名单提交作答本次作答需要修正参考与解析总体12盏；单位1盏；框为完整编号名单总体12盏；单位1盏；框为完整编号名单。等机会抽签4次且不放回，给出实际方法即完成本问。评价要点分别落在三个术语和可执行抽法。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "e1b repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-e1b"
+        },
+        {
+          "name": "e1b source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 845,
+            "tail": "；每次充分混合，选中签纸不放回。⑤ 每一步运算及其依据总体：工坊的全部12盏原型灯目标研究这些灯的寿命。抽样单位：一盏原型灯一次抽签选取一个编号对应的灯。抽样框：12个唯一灯具编号的完整名单抽签编号来自这份列表。做12张相同签纸，分别写上12个编号；混合后抽一张并留在外面每张签纸只对应一个单位；相同签纸和充分混合支持等机会抽取。继续混合剩余签纸，每次抽一张，直到得到4个编号抽出的签纸不放回，四个编号互异。⑥ 答案与本题评价要点总体12盏；单位1盏；框为完整编号名单。等机会抽签4次且不放回，给出实际方法即完成本问。评价要点分别落在三个术语和可执行抽法。返回E1(b) 用名单实施无放回抽取当前作答"
+          }
+        },
+        {
+          "name": "e1b exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "e1b return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "e1b retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "e1b:1800000000000:1",
+              "answer": "a",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "e1b:1800000000000:2",
+              "answer": "c",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "e1b first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "stat-opening finite pre-authored alternatives",
+          "pass": true,
+          "actual": 2
+        },
+        {
+          "name": "stat-opening native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "stat-opening explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "stat-opening wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测只用样本能否计算μ表示未知总体均值，哪一项只需要样本3、7、11？选择一个答案，然后提交(3+7+11)/3−μ(3+7+11)/3提交作答本次作答需要修正参考与解析(3+7+11)/3(3+7+11)/3仅由样本求得；(3+7+11)/3−μ仍需要未知总体均值μ。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "stat-opening repair locates actual necessary source",
+          "pass": true,
+          "actual": "stat-act3"
+        },
+        {
+          "name": "stat-opening source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 659,
+            "tail": "出的单位提供这些观测；总体未知参数没有因抽样自动变成已知。令X₁、X₂、X₃依次表示三次观测，x₁、x₂、x₃表示取得样本后的数值。μ读作mu，表示未知总体均值；n是已知样本量。以下规则先检查所需输入，再计算。S=X₁+X₂+X₃定义样本和S；三项都来自样本。S=3+7+11代入三项观测3、7、11。S=10+11先计算3+7=10。S=21再计算10+11=21。X₁也满足定义，因为第一项观测已经来自样本；统计量允许只使用部分观测。X₁+2中的2是已知常数，样本给定后可以算出；X₁+μ在μ未知时仍缺一个输入。给定的n可以出现在样本均值分母，n的存在不构成未知参数。返回只用样本能否计算当前作答"
+          }
+        },
+        {
+          "name": "stat-opening exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "stat-opening return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "stat-opening retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "stat-opening:1800000000000:1",
+              "answer": "a",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "stat-opening:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "stat-opening first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "e2a finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "e2a native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "e2a explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "e2a wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测E2(a) 判别三个规则是否为统计量先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交三项都是前两项是，第三项否只有第二项是提交作答本次作答需要修正参考与解析前两项是，第三项否前两项是统计量，第三项在μ未知时不满足定义。评价要点：每项结论与“仅由样本/不含未知参数”的理由相接。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "e2a repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-e2a"
+        },
+        {
+          "name": "e2a source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 696,
+            "tail": "的原理statistic第3幕only的输入检查④ 公式与适用条件判准：给出样本后能够用观测和已知常数完成计算，式中不含未知参数。⑤ 每一步运算及其依据2X₁+X₃：需要X₁、X₃与已知数2这些输入由样本和已知常数给出，所以它是统计量；没有使用X₂仍符合定义。(X₁+X₂+X₃)/3：需要三个观测与已知样本量3全部输入可得，所以样本均值是统计量。X₁+μ：还需要未知总体均值μ样本给定后μ仍未知，因此此表达式不满足统计量定义。⑥ 答案与本题评价要点前两项是统计量，第三项在μ未知时不满足定义。评价要点：每项结论与“仅由样本/不含未知参数”的理由相接。返回E2(a) 判别三个规则是否为统计量当前作答"
+          }
+        },
+        {
+          "name": "e2a exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "e2a return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "e2a retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "e2a:1800000000000:1",
+              "answer": "c",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "e2a:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "e2a first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "e2b finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "e2b native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "e2b explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "e2b wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测E2(b) 按同一规则计算一次实现值先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交17和21；两个都是均值25和7；可任意调换次序17和7；抽样前随机，样本给定后数值确定提交作答本次作答需要修正参考与解析17和7；抽样前随机，样本给定后数值确定本样本得到17与7。抽样前规则固定而输入随机；抽样后样本已给定，规则得到这两个具体实现值。评价要点包括有次序的代入、两项计算和随机变量/实现值的区分。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "e2b repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-e2b"
+        },
+        {
+          "name": "e2b source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 719,
+            "tail": "tic第3幕规则与实现值④ 公式与适用条件第一个规则为2X₁+X₃；均值为样本和除以已知样本量3。⑤ 每一步运算及其依据2X₁+X₃题目指定的第一个规则。2×3+11按第一项3、第三项11代入。6+11计算乘法2×3=6。17计算加法6+11=17。3+7+113均值规则代入全部三个观测。10+113先计算分子3+7=10。213再计算分子10+11=21。7最后21÷3=7。⑥ 答案与本题评价要点本样本得到17与7。抽样前规则固定而输入随机；抽样后样本已给定，规则得到这两个具体实现值。评价要点包括有次序的代入、两项计算和随机变量/实现值的区分。返回E2(b) 按同一规则计算一次实现值当前作答"
+          }
+        },
+        {
+          "name": "e2b exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "e2b return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "e2b retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "e2b:1800000000000:1",
+              "answer": "a",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "e2b:1800000000000:2",
+              "answer": "c",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "e2b first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "path-choice finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "path-choice native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "path-choice explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "path-choice wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测路径与输出分别记录什么A→B和B→A是两个有序路径。它们的样本均值怎样比较？选择一个答案，然后提交都是4，但身份路径不同均值分别为2与6同一均值只能来自一条路径提交作答本次作答需要修正参考与解析都是4，但身份路径不同两条路径的和均为8，除以2均为4；它们仍是互不重叠的抽样结果。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "path-choice repair locates actual necessary source",
+          "pass": true,
+          "actual": "mean-first-AB-1"
+        },
+        {
+          "name": "path-choice source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 44,
+            "tail": "X̄=X₁+X₂2两项样本均值等于样本和除以样本量2。返回路径与输出分别记录什么当前作答"
+          }
+        },
+        {
+          "name": "AB necessary definition and three calculation rows remain adjacent and reachable",
+          "pass": true
+        },
+        {
+          "name": "path-choice exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "path-choice return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "path-choice retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "path-choice:1800000000000:1",
+              "answer": "b",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "path-choice:1800000000000:2",
+              "answer": "a",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "path-choice first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "weight-wr finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "weight-wr native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "weight-wr explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "weight-wr wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测核对第二抽的条件在有放回且两抽独立条件下，已知第一抽为A，第二抽为B的概率是多少？选择一个答案，然后提交1/91/31/2提交作答本次作答需要修正参考与解析1/3放回仍有三个身份；无放回余下两个身份。这里问第二抽的条件概率，还没有乘第一抽概率。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "weight-wr repair locates actual necessary source",
+          "pass": true,
+          "actual": "mean-wr-AB-path"
+        },
+        {
+          "name": "weight-wr source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 292,
+            "tail": "身份A → 身份BX₁+X₂2样本均值的定义；分母2是本组样本量。2+62按路径次序代入第一、第二个观测值，分母仍为样本量2。82先计算分子加法：2+6=8。4分子除以2，得到这条路径的样本均值。P(A₁)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(B₂ | A₁)=13放回并独立，第二抽仍在三个身份中均匀选。P(AB)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。1×13×3分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。13×3先计算分子：1×1=1；分母乘积保留。P(AB)=19再计算分母：3×3=9。返回核对第二抽的条件当前作答"
+          }
+        },
+        {
+          "name": "weight-wr exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "weight-wr return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "weight-wr retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "weight-wr:1800000000000:1",
+              "answer": "c",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "weight-wr:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "weight-wr first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "group-wr finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "group-wr native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "group-wr explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "group-wr wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测同一个均值怎样合并计算P(X̄=4)时，AB与BA是互斥路径，应对它们的概率做哪一步？选择一个答案，然后提交相乘只取较大者相加提交作答本次作答需要修正参考与解析相加AB与BA不能在同一次有序抽样中同时发生，目标事件由二者组成，使用互斥加法。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "group-wr repair locates actual necessary source",
+          "pass": true,
+          "actual": "mean-wr-group-4"
+        },
+        {
+          "name": "group-wr source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 210,
+            "tail": "输出 4 的全部原像原像即产生这一输出的路径：AB, BA。这些路径对应不同抽样结果，互不重叠。P(mean=4)=P(AB)+P(BA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=4)=19+19将每条路径已经算出的权重分别代入。P(mean=4)=1+19各项同分母，保留分母，把分子逐项相加。P(mean=4)=29各项分母相同，分母保留，分子相加：1+1=2。返回同一个均值怎样合并当前作答"
+          }
+        },
+        {
+          "name": "group-wr exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "group-wr return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "group-wr retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "group-wr:1800000000000:1",
+              "answer": "a",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "group-wr:1800000000000:2",
+              "answer": "c",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "group-wr first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "weight-wor finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "weight-wor native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "weight-wor explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "weight-wor wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测核对第二抽的条件在无放回且逐次均匀条件下，已知第一抽为A，第二抽为B的概率是多少？选择一个答案，然后提交1/21/91/3提交作答本次作答需要修正参考与解析1/2放回仍有三个身份；无放回余下两个身份。这里问第二抽的条件概率，还没有乘第一抽概率。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "weight-wor repair locates actual necessary source",
+          "pass": true,
+          "actual": "mean-wor-AB-path"
+        },
+        {
+          "name": "weight-wor source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 297,
+            "tail": "身份A → 身份BX₁+X₂2样本均值的定义；分母2是本组样本量。2+62按路径次序代入第一、第二个观测值，分母仍为样本量2。82先计算分子加法：2+6=8。4分子除以2，得到这条路径的样本均值。P(A₁)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(B₂ | A₁)=12第一抽单位已经移走，第二抽在余下两个身份中均匀选。P(AB)=13×12乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。1×13×2分数相乘，把两个分子相乘放在分子、两个分母相乘放在分母。13×2先计算分子：1×1=1；分母乘积保留。P(AB)=16再计算分母：3×2=6。返回核对第二抽的条件当前作答"
+          }
+        },
+        {
+          "name": "weight-wor exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "weight-wor return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "weight-wor retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "weight-wor:1800000000000:1",
+              "answer": "b",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "weight-wor:1800000000000:2",
+              "answer": "a",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "weight-wor first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "group-wor finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "group-wor native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "group-wor explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "group-wor wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测同一个均值怎样合并计算P(X̄=4)时，AB与BA是互斥路径，应对它们的概率做哪一步？选择一个答案，然后提交只取较大者相加相乘提交作答本次作答需要修正参考与解析相加AB与BA不能在同一次有序抽样中同时发生，目标事件由二者组成，使用互斥加法。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "group-wor repair locates actual necessary source",
+          "pass": true,
+          "actual": "mean-wor-group-4"
+        },
+        {
+          "name": "group-wor source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 296,
+            "tail": "输出 4 的全部原像原像即产生这一输出的路径：AB, BA。这些路径对应不同抽样结果，互不重叠。P(mean=4)=P(AB)+P(BA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=4)=16+16将每条路径已经算出的权重分别代入。P(mean=4)=1+16各项同分母，保留分母，把分子逐项相加。P(mean=4)=26各项分母相同，分母保留，分子相加：1+1=2。P(mean=4)=2÷26÷2分子与分母同除以公因子2，分数的值保持相同。P(mean=4)=16÷2计算分子：2÷2=1。P(mean=4)=13计算分母：6÷2=3。返回同一个均值怎样合并当前作答"
+          }
+        },
+        {
+          "name": "group-wor exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "group-wor return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "group-wor retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "group-wor:1800000000000:1",
+              "answer": "c",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "group-wor:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "group-wor first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "e3a finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "e3a native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "e3a explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "e3a wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测E3(a) 换成range构造分布先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交0,3,9各1/30,3,6,9各1/40,3,6,9对应1/3,2/9,2/9,2/9提交作答本次作答需要修正参考与解析0,3,6,9对应1/3,2/9,2/9,2/9R取0、3、6、9；对应概率1/3、2/9、2/9、2/9。评价要点：9条有序路径、各路径极差及权重、同输出归并、概率非负且和为1。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "e3a repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-e3a"
+        },
+        {
+          "name": "e3a source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 4263,
+            "tail": "概率01332962992913+29+29+29=39+29+29+29取分母最小公倍数9，各分数分子分母同乘相同整数。39+29+29+29=3+2+2+29同分母相加，保留分母，把各分子放到同一分数的分子中。3+2+2+29=99完成分子加法：3+2+2+2=9。99=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。有放回；完整抽样分布；横轴为极差数值，纵轴为概率⑥ 答案与本题评价要点R取0、3、6、9；对应概率1/3、2/9、2/9、2/9。评价要点：9条有序路径、各路径极差及权重、同输出归并、概率非负且和为1。返回E3(a) 换成range构造分布当前作答"
+          }
+        },
+        {
+          "name": "e3a exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "e3a return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "e3a retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "e3a:1800000000000:1",
+              "answer": "a",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "e3a:1800000000000:2",
+              "answer": "c",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "e3a first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "e3b finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "e3b native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "e3b explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "e3b wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测E3(b) 把统计量事件交回分布先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交4/92/92/3提交作答本次作答需要修正参考与解析4/9所求概率为4/9。评价要点：边界6包含在事件里，选出6和9，并完成互斥概率求和。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "e3b repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-e3b"
+        },
+        {
+          "name": "e3b source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 437,
+            "tail": "已建立分布选出符合条件的输出，再把它们的概率相加。重新列路径也可，但已有分布直接给出这两个互斥事件。③ 回到已经建立的原理第3幕相同输出归并后的分布读法④ 公式与适用条件离散随机变量不同输出互斥，所以P(R≥6)=P(R=6)+P(R=9)。⑤ 每一步运算及其依据P(R≥6)=P(R=6)+P(R=9)从支持集0、3、6、9选出满足≥6的输出6、9。29+29代入E3(a)分布中两项概率。2+29同分母相加，保留9并合并分子。49计算分子2+2=4。⑥ 答案与本题评价要点所求概率为4/9。评价要点：边界6包含在事件里，选出6和9，并完成互斥概率求和。返回E3(b) 把统计量事件交回分布当前作答"
+          }
+        },
+        {
+          "name": "e3b exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "e3b return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "e3b retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "e3b:1800000000000:1",
+              "answer": "b",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "e3b:1800000000000:2",
+              "answer": "a",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "e3b first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "q1a finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "q1a native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "q1a explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "q1a wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测Q1(a) 医院的目标患者与预约名单先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交600人；1次预约；30人名单；240人600人；1名患者；240人名单；抽出的30人240人；1名患者；600人名单；抽出的30人提交作答本次作答需要修正参考与解析600人；1名患者；240人名单；抽出的30人总体600名登记患者；单位1名患者；框为240名网上预约名单；样本为选中的30人。评价要点是四个术语分别绑定正确对象。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "q1a repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-q1a"
+        },
+        {
+          "name": "q1a source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 816,
+            "tail": "题目明确的600人目标缩小。③ 回到已经建立的原理population第3幕四对象定义④ 公式与适用条件这些是集合与单位的定义，本问没有概率计算。⑤ 每一步运算及其依据总体：本月门诊登记的全部600名患者研究目标明确涉及全部600名患者。抽样单位：其中一名患者名单每一个不同姓名对应一次可选单位。抽样框：240名网上预约患者的名单调查实际从这份列表抽取。样本：抽出的30名患者他们是选取过程的结果；样本量为30。⑥ 答案与本题评价要点总体600名登记患者；单位1名患者；框为240名网上预约名单；样本为选中的30人。评价要点是四个术语分别绑定正确对象。返回Q1(a) 医院的目标患者与预约名单当前作答"
+          }
+        },
+        {
+          "name": "q1a exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "q1a return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "q1a retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "q1a:1800000000000:1",
+              "answer": "c",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "q1a:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "q1a first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "q1b finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "q1b native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "q1b explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "q1b wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测Q1(b) 调查方式与抽样框的局限先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交抽样保证每个人体验相同600人太少，所以应普查240人符合30人访问资源；非网上预约者无法入选提交作答本次作答需要修正参考与解析符合30人访问资源；非网上预约者无法入选抽样调查可在可用时间内完成。名单遗漏非网上预约患者，他们入选机会为0；若两组等候体验不同，样本结论可能偏离总体。评价要点：具体资源理由、遗漏对象及结论受影响的条件。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "q1b repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-q1b"
+        },
+        {
+          "name": "q1b source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 814,
+            "tail": " 每一步运算及其依据访问30人所需工作量符合题设时间限制普查需要尝试访问600人；当前资源只够30人。使用网上预约名单只能抽到这240人每个被选姓名都来自这份名单。其余登记患者不在名单中，不能被这次抽取选中抽样框遗漏总体中的一部分单位。若这部分患者的等候体验与网上预约者不同，样本对总体体验的反映会受影响从遗漏到结论局限的条件链完整给出；题目没有告诉两组体验必定不同。⑥ 答案与本题评价要点抽样调查可在可用时间内完成。名单遗漏非网上预约患者，他们入选机会为0；若两组等候体验不同，样本结论可能偏离总体。评价要点：具体资源理由、遗漏对象及结论受影响的条件。返回Q1(b) 调查方式与抽样框的局限当前作答"
+          }
+        },
+        {
+          "name": "q1b exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "q1b return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "q1b retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "q1b:1800000000000:1",
+              "answer": "a",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "q1b:1800000000000:2",
+              "answer": "c",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "q1b first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "q2a finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "q2a native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "q2a explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "q2a wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测Q2(a) 已知校准常数与未知总体均值先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交前两项是，第三项否只有X₄是含字母的都不是提交作答本次作答需要修正参考与解析前两项是，第三项否前两项是统计量，第三项在μ未知时不满足定义。评价要点：已知常数允许使用、单项观测允许使用、未知参数造成缺口。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "q2a repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-q2a"
+        },
+        {
+          "name": "q2a source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 705,
+            "tail": "“有字母就是未知参数”的规则会同时误删X₄和已知c。③ 回到已经建立的原理statistic第3幕only与已知常数④ 公式与适用条件统计量只依赖样本观测与已知常数，没有未知参数。⑤ 每一步运算及其依据X₁+c：需要样本第一项与已知c=2这两项均可获得，因此满足定义。X₄：直接返回样本第四项定义允许只用部分观测，因此满足定义。样本均值−μ：仍需要未知μ样本虽能算出样本均值，却没有给出未知总体均值，因此该式不满足定义。⑥ 答案与本题评价要点前两项是统计量，第三项在μ未知时不满足定义。评价要点：已知常数允许使用、单项观测允许使用、未知参数造成缺口。返回Q2(a) 已知校准常数与未知总体均值当前作答"
+          }
+        },
+        {
+          "name": "q2a exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "q2a return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "q2a retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "q2a:1800000000000:1",
+              "answer": "b",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "q2a:1800000000000:2",
+              "answer": "a",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "q2a first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "q2b finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "q2b native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "q2b explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "q2b wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测Q2(b) 计算电池统计量的实现值先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交20；分母不影响统计量10；规则固定，抽样输入在事前随机10；H在抽样前也永远等于10提交作答本次作答需要修正参考与解析10；规则固定，抽样输入在事前随机本次H=10。抽样前X₁与X₄取决于随机抽到的样本，H随之变化；样本给出后，代入同一规则得到固定数10。评价要点：指定项代入、计算与抽样前后解释。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "q2b repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-q2b"
+        },
+        {
+          "name": "q2b source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 686,
+            "tail": "读数全部平均也恰好得到10，但那并没有执行题目给定的H规则，所以过程仍应写清楚。③ 回到已经建立的原理statistic第3幕随机规则与实现值④ 公式与适用条件H=(X₁+X₄)/2；分母2是该规则的已知常数。⑤ 每一步运算及其依据H=X₁+X₄2题目定义H只组合第一项与第四项。H=4+162第一项4、第四项16代入。H=202先计算分子4+16=20。H=10再计算20÷2=10。⑥ 答案与本题评价要点本次H=10。抽样前X₁与X₄取决于随机抽到的样本，H随之变化；样本给出后，代入同一规则得到固定数10。评价要点：指定项代入、计算与抽样前后解释。返回Q2(b) 计算电池统计量的实现值当前作答"
+          }
+        },
+        {
+          "name": "q2b exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "q2b return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "q2b retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "q2b:1800000000000:1",
+              "answer": "c",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "q2b:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "q2b first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "q3c finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "q3c native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "q3c explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "q3c wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测Q3(c) 比较maximum等于1的概率先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交无放回更大：1/3>4/9相等：两种机制都有值1有放回更大：4/9>1/3提交作答本次作答需要修正参考与解析有放回更大：4/9>1/3有放回概率更大。评价要点：4/9与1/3的准确比较，以及RR、SS排除和路径权重改变两件事。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "q3c repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-q3c"
+        },
+        {
+          "name": "q3c source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 650,
+            "tail": "时改变路径资格和权重④ 公式与适用条件有放回P(M=1)=4/9；无放回P(M=1)=1/3。⑤ 每一步运算及其依据13=1×33×3将无放回概率三分之一通分到分母9。33×3计算分子1×3=3。39计算分母3×3=9。4>3两项概率同分母9，比较分子。49>39同除以正数9保持比较方向。有放回事件由RR、RS、SR、SS组成，每条1/9；无放回只保留RS、SR，每条改为1/6。两条1/6合成1/3，小于四条1/9合成的4/9。⑥ 答案与本题评价要点有放回概率更大。评价要点：4/9与1/3的准确比较，以及RR、SS排除和路径权重改变两件事。返回Q3(c) 比较maximum等于1的概率当前作答"
+          }
+        },
+        {
+          "name": "q3c exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "q3c return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "q3c retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "q3c:1800000000000:1",
+              "answer": "a",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "q3c:1800000000000:2",
+              "answer": "c",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "q3c first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "q4a finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "q4a native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "q4a explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "q4a wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测Q4(a) 用无放回分布计算均值门槛事件先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交1/3，路径KL和LK2/3，路径含L就全部算入0，因为事件不包含7提交作答本次作答需要修正参考与解析1/3，路径KL和LK所求概率为1/3，符合事件的身份路径为KL与LK。评价要点：无放回资格、均值计算、包括边界7、事件概率。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "q4a repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-q4a"
+        },
+        {
+          "name": "q4a source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 3766,
+            "tail": "分子中。1+1+13=33完成分子加法：1+1+1=3。33=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。无放回；完整抽样分布；横轴为均值数值，纵轴为概率；事件均值≥7只包含输出7，实心柱表示该事件；下方三项之和检查全分布总概率，事件概率只取输出7的柱。P(Y≥7)=P(Y=7)分布只取7/2、11/2、7，其中只有7满足门槛。P(Y=7)=13从KL、LK归并所得的输出7一行读取概率。⑥ 答案与本题评价要点所求概率为1/3，符合事件的身份路径为KL与LK。评价要点：无放回资格、均值计算、包括边界7、事件概率。返回Q4(a) 用无放回分布计算均值门槛事件当前作答"
+          }
+        },
+        {
+          "name": "q4a exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "q4a return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "q4a retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "q4a:1800000000000:1",
+              "answer": "b",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "q4a:1800000000000:2",
+              "answer": "a",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "q4a first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "q4b finite pre-authored alternatives",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "name": "q4b native skip creates no wrong attempt",
+          "pass": true,
+          "actual": "交作答本题已暂时跳过，没有计入答错。直接查看参考重新作答学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202已跳过，没有计入答错。"
+        },
+        {
+          "name": "q4b explicit return from skip unlocks choices",
+          "pass": true
+        },
+        {
+          "name": "q4b wrong answer gets timely correction and reference explanation",
+          "pass": true,
+          "actual": "就地自测Q4(b) 区分组内无放回与组间独立先心中完成这小问，再选择与自己的结论一致的一项。选择一个答案，然后提交1/31/92/3提交作答本次作答需要修正参考与解析1/9两组都满足门槛的概率为1/9。评价要点：组内仍无放回、组间独立来自明确题设、两事件同时成立使用乘法。重新作答本题复习：2027年1月16日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx\n42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。"
+        },
+        {
+          "name": "q4b repair locates actual necessary source",
+          "pass": true,
+          "actual": "solution-q4b"
+        },
+        {
+          "name": "q4b source retains actual explanation or formula",
+          "pass": true,
+          "actual": {
+            "length": 850,
+            "tail": "立条件。③ 回到已经建立的原理第3幕概率乘法法则与Q4(a)的单组事件概率④ 公式与适用条件令A为第一组均值≥7，B为第二组均值≥7。题设独立，所以P(A∩B)=P(A)P(B)。⑤ 每一步运算及其依据P(A∩B)=P(A)P(B)两组独立，交事件概率等于边际概率乘积。13×13每组都按Q4(a)机制抽取，单组事件概率均为1/3。1×13×3分数乘法将分子乘积和分母乘积分开。13×3计算分子1×1=1。19计算分母3×3=9。⑥ 答案与本题评价要点两组都满足门槛的概率为1/9。评价要点：组内仍无放回、组间独立来自明确题设、两事件同时成立使用乘法。返回Q4(b) 区分组内无放回与组间独立当前作答"
+          }
+        },
+        {
+          "name": "q4b exact return inside source",
+          "pass": true
+        },
+        {
+          "name": "q4b return preserves frozen wrong answer and actual destination",
+          "pass": true
+        },
+        {
+          "name": "q4b retry succeeds with reference-assisted identity",
+          "pass": true,
+          "actual": [
+            {
+              "id": "q4b:1800000000000:1",
+              "answer": "c",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            },
+            {
+              "id": "q4b:1800000000000:2",
+              "answer": "b",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1800000000000,
+              "sessionId": "session-1800000000000-e0ux8ldl6he"
+            }
+          ]
+        },
+        {
+          "name": "q4b first answer remains unchanged after successful repair",
+          "pass": true
+        },
+        {
+          "name": "pause and actual new window preserve native attempted work",
+          "pass": true
+        },
+        {
+          "name": "reopen causes no page errors",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    },
+    {
+      "name": "five-checkpoints-live-inside-derivation-and-choice-only",
+      "assertions": [
+        {
+          "name": "path distinction after AB result, before exploration",
+          "pass": true
+        },
+        {
+          "name": "wr probability check occurs between AB and BA path derivations",
+          "pass": true
+        },
+        {
+          "name": "wr grouping check occurs between output4 and output6",
+          "pass": true
+        },
+        {
+          "name": "wor probability check occurs between AB and BA path derivations",
+          "pass": true
+        },
+        {
+          "name": "wor grouping check occurs between output4 and output6",
+          "pass": true
+        },
+        {
+          "name": "complete course main answers require no typing",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "name": "actual closing and recall controls occur after worked exercises",
+          "pass": true
+        },
+        {
+          "name": "no uncaught page error",
+          "pass": true,
+          "actual": []
+        }
+      ]
+    }
+  ],
+  "totalAssertions": 212,
+  "failed": [],
+  "errors": []
+}

@@ -1,0 +1,886 @@
+{
+  "kind": "scripted DOM evaluator on actual assembled lesson.html; no browser rendering or learner-effect claim",
+  "scenarios": [
+    {
+      "name": "initialization adds no learner activity",
+      "events": [
+        {
+          "action": "open fresh lesson",
+          "input": null,
+          "output": {
+            "metrics": {
+              "explorationCount": 0,
+              "attempts": 0,
+              "participated": false,
+              "lastInteractionAt": null
+            },
+            "lab": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": null
+            },
+            "hiddenResults": true
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "prediction freezes before reveal; correct, wrong and equal narratives",
+      "events": [
+        {
+          "action": "freeze then reveal",
+          "input": {
+            "prediction": "greater",
+            "threshold": "5"
+          },
+          "output": {
+            "frozen": {
+              "version": 1,
+              "roundId": "round-1788838293756-1",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788838293761,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788838293761
+              }
+            },
+            "output": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "response": "原预测：大于；与本轮精确枚举一致。提交前尚无本实验参考或同条件结果接触记录。这是一条未评分的探索判断。",
+            "metrics": {
+              "explorationCount": 3,
+              "attempts": 0,
+              "participated": true,
+              "lastInteractionAt": 1788838293767
+            }
+          }
+        },
+        {
+          "action": "freeze then reveal",
+          "input": {
+            "prediction": "less",
+            "threshold": "5"
+          },
+          "output": {
+            "frozen": {
+              "version": 1,
+              "roundId": "round-1788838293861-1",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "less",
+              "prediction": "less",
+              "predictionAt": 1788838293867,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788838293867
+              }
+            },
+            "output": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "response": "原预测：小于；与本轮结果不一致，枚举给出“大于”。提交前尚无本实验参考或同条件结果接触记录。这是一条未评分的探索判断。",
+            "metrics": {
+              "explorationCount": 3,
+              "attempts": 0,
+              "participated": true,
+              "lastInteractionAt": 1788838293880
+            }
+          }
+        },
+        {
+          "action": "freeze then reveal",
+          "input": {
+            "prediction": "equal",
+            "threshold": "6"
+          },
+          "output": {
+            "frozen": {
+              "version": 1,
+              "roundId": "round-1788838293972-1",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 6
+              },
+              "predictionDraft": "equal",
+              "prediction": "equal",
+              "predictionAt": 1788838293979,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788838293979
+              }
+            },
+            "output": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。两个事件虽不是同一组样本，但合并后的概率恰好相同；相等不代表所有统计量都与总体同分布。",
+            "response": "原预测：等于；与本轮精确枚举一致。提交前尚无本实验参考或同条件结果接触记录。这是一条未评分的探索判断。",
+            "metrics": {
+              "explorationCount": 4,
+              "attempts": 0,
+              "participated": true,
+              "lastInteractionAt": 1788838293983
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "all 12 model conditions match independent exact oracle",
+      "events": [
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 1,
+            "mechanism": "with",
+            "threshold": 5
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=1；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=1/3，等于单卡概率 P(X≥5)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "distribution": "全部 3 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2)1/3 = 1/34(4)1/3 = 1/38(8)1/3 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 1,
+            "mechanism": "with",
+            "threshold": 6
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=1；有放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "distribution": "全部 3 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2)1/3 = 1/34(4)1/3 = 1/38(8)1/3 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 1,
+            "mechanism": "with",
+            "threshold": 8
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=1；有放回；事件为样本均值≥8 分钟。P(样本均值≥8)=1/3，等于单卡概率 P(X≥8)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "distribution": "全部 3 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2)1/3 = 1/34(4)1/3 = 1/38(8)1/3 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 1,
+            "mechanism": "without",
+            "threshold": 5
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=1；无放回；事件为样本均值≥5 分钟。P(样本均值≥5)=1/3，等于单卡概率 P(X≥5)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "distribution": "全部 3 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2)1/3 = 1/34(4)1/3 = 1/38(8)1/3 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 1,
+            "mechanism": "without",
+            "threshold": 6
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=1；无放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "distribution": "全部 3 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2)1/3 = 1/34(4)1/3 = 1/38(8)1/3 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 1,
+            "mechanism": "without",
+            "threshold": 8
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=1；无放回；事件为样本均值≥8 分钟。P(样本均值≥8)=1/3，等于单卡概率 P(X≥8)=1/3。n=1 时样本均值就是单张卡值，所以两事件相同。",
+            "total": "总概率=(1+1+1)/3=1。只抽1张，每条路径概率为1/3；此时放回机制不影响结果。",
+            "distribution": "全部 3 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2)1/3 = 1/34(4)1/3 = 1/38(8)1/3 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 2,
+            "mechanism": "with",
+            "threshold": 5
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(1+2+1+2+2+1)/9=1。每次放回且重新等概率抽取，两次独立；每条有序路径的概率为(1/3)×(1/3)=1/9。",
+            "distribution": "全部 9 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2, 2)1/9 = 1/93(2, 4)、(4, 2)2/9 = 2/94(4, 4)1/9 = 1/95(2, 8)、(8, 2)2/9 = 2/96(4, 8)、(8, 4)2/9 = 2/98(8, 8)1/9 = 1/9"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 2,
+            "mechanism": "with",
+            "threshold": 6
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。两个事件虽不是同一组样本，但合并后的概率恰好相同；相等不代表所有统计量都与总体同分布。",
+            "total": "总概率=(1+2+1+2+2+1)/9=1。每次放回且重新等概率抽取，两次独立；每条有序路径的概率为(1/3)×(1/3)=1/9。",
+            "distribution": "全部 9 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2, 2)1/9 = 1/93(2, 4)、(4, 2)2/9 = 2/94(4, 4)1/9 = 1/95(2, 8)、(8, 2)2/9 = 2/96(4, 8)、(8, 4)2/9 = 2/98(8, 8)1/9 = 1/9"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 2,
+            "mechanism": "with",
+            "threshold": 8
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥8 分钟。P(样本均值≥8)=1/9，小于单卡概率 P(X≥8)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(1+2+1+2+2+1)/9=1。每次放回且重新等概率抽取，两次独立；每条有序路径的概率为(1/3)×(1/3)=1/9。",
+            "distribution": "全部 9 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数2(2, 2)1/9 = 1/93(2, 4)、(4, 2)2/9 = 2/94(4, 4)1/9 = 1/95(2, 8)、(8, 2)2/9 = 2/96(4, 8)、(8, 4)2/9 = 2/98(8, 8)1/9 = 1/9"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 2,
+            "mechanism": "without",
+            "threshold": 5
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=2；无放回；事件为样本均值≥5 分钟。P(样本均值≥5)=2/3，大于单卡概率 P(X≥5)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(2+2+2)/6=1。第二次在剩余2张中等概率抽取，与第一次不独立；每条允许路径的概率为(1/3)×(1/2)=1/6。",
+            "distribution": "全部 6 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数3(2, 4)、(4, 2)2/6 = 1/35(2, 8)、(8, 2)2/6 = 1/36(4, 8)、(8, 4)2/6 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 2,
+            "mechanism": "without",
+            "threshold": 6
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=2；无放回；事件为样本均值≥6 分钟。P(样本均值≥6)=1/3，等于单卡概率 P(X≥6)=1/3。两个事件虽不是同一组样本，但合并后的概率恰好相同；相等不代表所有统计量都与总体同分布。",
+            "total": "总概率=(2+2+2)/6=1。第二次在剩余2张中等概率抽取，与第一次不独立；每条允许路径的概率为(1/3)×(1/2)=1/6。",
+            "distribution": "全部 6 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数3(2, 4)、(4, 2)2/6 = 1/35(2, 8)、(8, 2)2/6 = 1/36(4, 8)、(8, 4)2/6 = 1/3"
+          }
+        },
+        {
+          "action": "change conditions and directly reveal",
+          "input": {
+            "n": 2,
+            "mechanism": "without",
+            "threshold": 8
+          },
+          "output": {
+            "comparison": "当前总体为 2、4、8 分钟；n=2；无放回；事件为样本均值≥8 分钟。P(样本均值≥8)=0/1，小于单卡概率 P(X≥8)=1/3。检查下表达到门槛的均值行，把这些行的概率相加，再与单卡中达到门槛的卡数除以3比较。",
+            "total": "总概率=(2+2+2)/6=1。第二次在剩余2张中等概率抽取，与第一次不独立；每条允许路径的概率为(1/3)×(1/2)=1/6。",
+            "distribution": "全部 6 条有序样本路径，每条等概率；相同均值合并。均值（分钟）产生它的样本路径路径数／总数3(2, 4)、(4, 2)2/6 = 1/35(2, 8)、(8, 2)2/6 = 1/36(4, 8)、(8, 4)2/6 = 1/3"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "direct reveal is not personal calculation; same condition contact persists",
+      "events": [
+        {
+          "action": "direct reveal then close",
+          "input": null,
+          "output": {
+            "text": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。本轮未提交预测；这里记录的是直接查看结果，没有推断你的原想法。 本轮没有主动选择路径的记录；展示过的默认路径不算你亲自计算。 可在“无放回”新题中自行组织样本空间。",
+            "lab": {
+              "version": 1,
+              "roundId": "round-1788838294408-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": 1788838294408,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788838294408,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "reveal-exact-enumeration",
+                "at": 1788838294408
+              }
+            }
+          }
+        },
+        {
+          "action": "same condition then new threshold then path selection",
+          "input": {
+            "same": "5",
+            "changed": "8",
+            "path": 2
+          },
+          "output": {
+            "state": {
+              "version": 1,
+              "roundId": "round-1788838294439-3",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 8
+              },
+              "predictionDraft": "less",
+              "prediction": "less",
+              "predictionAt": 1788838294446,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": 1788838294450,
+              "selectedPath": 2,
+              "pathSelections": [
+                {
+                  "eventId": "path-1788838294456-4",
+                  "index": 2,
+                  "values": [
+                    2,
+                    8
+                  ],
+                  "at": 1788838294456
+                }
+              ],
+              "history": [
+                {
+                  "roundId": "round-1788838294408-1",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": null,
+                  "predictionAt": null,
+                  "predictionHadReference": false,
+                  "predictionHadResult": false,
+                  "revealedAt": 1788838294408,
+                  "selectedPath": null,
+                  "pathSelections": []
+                },
+                {
+                  "roundId": "round-1788838294419-2",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": "greater",
+                  "predictionAt": 1788838294428,
+                  "predictionHadReference": false,
+                  "predictionHadResult": true,
+                  "revealedAt": 1788838294432,
+                  "selectedPath": null,
+                  "pathSelections": []
+                }
+              ],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788838294408,
+                  "source": "exact-enumeration-reveal"
+                },
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":8}",
+                  "at": 1788838294450,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "select-enumerated-path",
+                "at": 1788838294456
+              }
+            },
+            "close": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥8 分钟。P(样本均值≥8)=1/9，小于单卡概率 P(X≥8)=1/3。原预测：小于；与本轮精确枚举一致。提交前尚无本实验参考或同条件结果接触记录。这是一条未评分的探索判断。 本轮记录了 1 次主动选择路径查看。 可在“无放回”新题中自行组织样本空间。"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "full explanation synchronous contact; after-prediction exposure never rewrites snapshot",
+      "events": [
+        {
+          "action": "freeze, then read reference, then new prediction",
+          "input": null,
+          "output": {
+            "first": {
+              "version": 1,
+              "roundId": "round-1788838294527-1",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788838294531,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": false,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788838294531
+              }
+            },
+            "latest": {
+              "version": 1,
+              "roundId": "round-1788838294542-2",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788838294549,
+              "predictionHadReference": true,
+              "predictionHadResult": true,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [
+                {
+                  "roundId": "round-1788838294527-1",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": "greater",
+                  "predictionAt": 1788838294531,
+                  "predictionHadReference": false,
+                  "predictionHadResult": false,
+                  "revealedAt": 1788838294537,
+                  "selectedPath": null,
+                  "pathSelections": []
+                }
+              ],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788838294537,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788838294549
+              }
+            }
+          }
+        },
+        {
+          "action": "open full explanation and immediately freeze before toggle delivery",
+          "input": null,
+          "output": {
+            "latest": {
+              "version": 1,
+              "roundId": "round-1788838294614-1",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788838294617,
+              "predictionHadReference": true,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788838294617
+              }
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reference then direct observation uses honest tense",
+      "events": [
+        {
+          "action": "read reference then directly reveal then close",
+          "input": null,
+          "output": {
+            "close": "开场的概率比较，在本轮已有可查证据：当前总体为 2、4、8 分钟；n=2；有放回；事件为样本均值≥5 分钟。P(样本均值≥5)=5/9，大于单卡概率 P(X≥5)=1/3。本轮未提交预测；这里记录的是直接查看结果，没有推断你的原想法。 本轮没有主动选择路径的记录；展示过的默认路径不算你亲自计算。 可在“无放回”新题中自行组织样本空间。",
+            "lab": {
+              "version": 1,
+              "roundId": "round-1788838294689-1",
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": 1788838294689,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788838294689,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "reveal-exact-enumeration",
+                "at": 1788838294689
+              }
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "old import keeps page reference; immediate export and refresh preserve merge without participation",
+      "events": [
+        {
+          "action": "read full solution, import earlier snapshot, export immediately",
+          "input": {
+            "oldMetrics": {
+              "id": "sample-lab",
+              "objectiveId": "sampling-distribution",
+              "type": "interactive",
+              "draft": "",
+              "status": "idle",
+              "answerRevealed": false,
+              "hintUsed": false,
+              "exposure": null,
+              "attempts": [],
+              "submittedAttemptId": null,
+              "review": null,
+              "participated": false,
+              "lastInteractionAt": null,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {
+                "version": 1,
+                "roundId": null,
+                "phase": "draft",
+                "parameters": {
+                  "n": 2,
+                  "mechanism": "with",
+                  "threshold": 5
+                },
+                "predictionDraft": "",
+                "prediction": null,
+                "predictionAt": null,
+                "predictionHadReference": false,
+                "predictionHadResult": false,
+                "revealedAt": null,
+                "selectedPath": null,
+                "pathSelections": [],
+                "history": [],
+                "resultContacts": [],
+                "referenceViewed": false,
+                "lastAction": null
+              },
+              "explorationCount": 0
+            },
+            "before": {
+              "explorationCount": 0,
+              "attempts": 0,
+              "participated": true,
+              "lastInteractionAt": 1788838294759
+            }
+          },
+          "output": {
+            "after": {
+              "explorationCount": 0,
+              "attempts": 0,
+              "participated": false,
+              "lastInteractionAt": null
+            },
+            "merged": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": true,
+              "lastAction": null
+            }
+          }
+        },
+        {
+          "action": "reload from actual immediate export then submit new prediction",
+          "input": null,
+          "output": {
+            "metrics": {
+              "explorationCount": 2,
+              "attempts": 0,
+              "participated": true,
+              "lastInteractionAt": 1788838294833
+            },
+            "prediction": {
+              "version": 1,
+              "roundId": "round-1788838294829-1",
+              "phase": "frozen",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "greater",
+              "prediction": "greater",
+              "predictionAt": 1788838294833,
+              "predictionHadReference": true,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [],
+              "resultContacts": [],
+              "referenceViewed": true,
+              "lastAction": {
+                "type": "submit-ungraded-prediction",
+                "at": 1788838294833
+              }
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "old import keeps result identities and frozen history without new observation",
+      "events": [
+        {
+          "action": "predict and reveal, import older blank, export immediately",
+          "input": null,
+          "output": {
+            "metrics": {
+              "explorationCount": 0,
+              "attempts": 0,
+              "participated": false,
+              "lastInteractionAt": null
+            },
+            "merged": {
+              "version": 1,
+              "roundId": null,
+              "phase": "draft",
+              "parameters": {
+                "n": 2,
+                "mechanism": "with",
+                "threshold": 5
+              },
+              "predictionDraft": "",
+              "prediction": null,
+              "predictionAt": null,
+              "predictionHadReference": false,
+              "predictionHadResult": false,
+              "revealedAt": null,
+              "selectedPath": null,
+              "pathSelections": [],
+              "history": [
+                {
+                  "roundId": "round-1788838294904-1",
+                  "parameters": {
+                    "n": 2,
+                    "mechanism": "with",
+                    "threshold": 5
+                  },
+                  "phase": "revealed",
+                  "prediction": "less",
+                  "predictionAt": 1788838294907,
+                  "predictionHadReference": false,
+                  "predictionHadResult": false,
+                  "revealedAt": 1788838294910,
+                  "selectedPath": null,
+                  "pathSelections": []
+                }
+              ],
+              "resultContacts": [
+                {
+                  "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                  "at": 1788838294910,
+                  "source": "exact-enumeration-reveal"
+                }
+              ],
+              "referenceViewed": false,
+              "lastAction": null
+            }
+          }
+        },
+        {
+          "action": "reload actual merged export and predict same condition",
+          "input": null,
+          "output": {
+            "version": 1,
+            "roundId": "round-1788838294981-1",
+            "phase": "frozen",
+            "parameters": {
+              "n": 2,
+              "mechanism": "with",
+              "threshold": 5
+            },
+            "predictionDraft": "greater",
+            "prediction": "greater",
+            "predictionAt": 1788838294984,
+            "predictionHadReference": false,
+            "predictionHadResult": true,
+            "revealedAt": null,
+            "selectedPath": null,
+            "pathSelections": [],
+            "history": [
+              {
+                "roundId": "round-1788838294904-1",
+                "parameters": {
+                  "n": 2,
+                  "mechanism": "with",
+                  "threshold": 5
+                },
+                "phase": "revealed",
+                "prediction": "less",
+                "predictionAt": 1788838294907,
+                "predictionHadReference": false,
+                "predictionHadResult": false,
+                "revealedAt": 1788838294910,
+                "selectedPath": null,
+                "pathSelections": []
+              }
+            ],
+            "resultContacts": [
+              {
+                "identity": "{\"population\":[2,4,8],\"statistic\":\"arithmetic-mean\",\"ordered\":true,\"equalCardChoice\":true,\"n\":2,\"mechanism\":\"with\",\"event\":\"mean>=threshold\",\"threshold\":5}",
+                "at": 1788838294910,
+                "source": "exact-enumeration-reveal"
+              }
+            ],
+            "referenceViewed": false,
+            "lastAction": {
+              "type": "submit-ungraded-prediction",
+              "at": 1788838294984
+            }
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "objective errors, hint, assisted retry, skip and distinct pathways",
+      "events": [],
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n\nundefined !== 0\n\n    at equal (/workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:10:48)\n    at /workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:102:77\n    at async scenario (/workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:31:105)\n    at async /workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:97:2"
+    }
+  ],
+  "status": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n\nundefined !== 0\n\n    at equal (/workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:10:48)\n    at /workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:102:77\n    at async scenario (/workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:31:105)\n    at async /workspace/scratch/b4c4b2db70f4/generation/run-03/checks/check_dom.cjs:97:2"
+}

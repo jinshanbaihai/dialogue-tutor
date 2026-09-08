@@ -1,0 +1,12 @@
+✔ S2 exact distributions, displayed probabilities and comparison agree for all 12 conditions (475.905117ms)
+✔ S2 older imports persist reference and result contacts without inventing actions or changing frozen predictions (368.899638ms)
+✔ S2 actual recommendation buttons distinguish wrong, assisted, independent and skipped responses (411.376032ms)
+✔ S2 closing review preserves a draft, opens a real due session and keeps early practice distinct (252.479233ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1832.667769

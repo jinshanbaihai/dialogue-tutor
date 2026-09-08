@@ -1,0 +1,20 @@
+{
+  "skillCommit": "1c852a9397538d4185eb471ec2351b0dd1da0c82",
+  "pythonBuilderRegression": {
+    "command": "python -m unittest discover -s tests -p 'test_*.py'",
+    "tests": 20,
+    "pass": 20,
+    "exitCode": 0
+  },
+  "rootDataOracle": "correction-root-run-02-data-check.json",
+  "rootPrimarySourceCheck": "correction-root-run-02-source-check.md",
+  "courseStatus": "author generation in progress; no final HTML approval",
+  "nodeRegression": {
+    "command": "node --test tests/*.test.cjs",
+    "pass": 89,
+    "fail": 0,
+    "log": "correction-run-02-root-node-regression.txt",
+    "logSHA256": "e3941d4ff40ba52f04ac9777ec3f4f5e9ce268aa55d2c3cd9417de2fa9ca54b2",
+    "scope": "Generic runtime and existing regression fixtures; not final run-02 course approval."
+  }
+}

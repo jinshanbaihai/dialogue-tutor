@@ -1,0 +1,1297 @@
+{
+  "scope": "Independent component trial native DOM operation, not final lesson. Geometry/scroll fixtures only; no PNG/browser claims.",
+  "htmlSHA256": "3c08d4ba081019c85af71fc4694d58838e680f8ae3df27a81564c04f8e3b77dd",
+  "results": [
+    {
+      "id": "default offscreen does not mark targets",
+      "pass": true,
+      "evidence": {
+        "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+        "draft": {
+          "choice": null
+        },
+        "active": null,
+        "history": [],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "prediction remains pending before result",
+      "pass": true,
+      "evidence": "判断已保存，待核对。先核看两个目标的概率。继续核看均值4自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+    },
+    {
+      "id": "one visible target remains pending",
+      "pass": true,
+      "evidence": {
+        "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+        "draft": {
+          "choice": "eq"
+        },
+        "active": "mean-lab-wr-1788852804956-1",
+        "history": [
+          {
+            "id": "mean-lab-wr-1788852804956-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "eq"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": false,
+            "presented": false,
+            "at": 1788852804956
+          }
+        ],
+        "contacts": {
+          "mean-wr-group-4": {
+            "sourceId": "mean-wr-group-4",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "kind": "static",
+            "targets": [
+              4
+            ],
+            "at": 1788852805008
+          }
+        },
+        "targets": [
+          4
+        ],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "both visible targets show wrong and recommend repair",
+      "pass": true,
+      "evidence": "本次核对有差异。作答前未记录参考接触。你选了相等；1/3大于2/9。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+    },
+    {
+      "id": "WR source does not contaminate WOR",
+      "pass": true,
+      "evidence": {
+        "key": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+        "draft": {
+          "choice": null
+        },
+        "active": null,
+        "history": [],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "mean repair opens complete derivation",
+      "pass": true,
+      "evidence": {
+        "active": "mean-wr-complete",
+        "math": 101,
+        "text": "有放回，独立两抽：全部路径到分布每个身份首先有相同的机会被选中。放回后仍有三个身份，第二抽独立于第一抽。身份A → 身份AX₁+X₂2样本均值的定义；分母2是本组样本量。2+22按路径次序代入第一、第二个观测值，分母仍为样本量2。42先计算分子加法：2+2=4。2分子除以2，得到这条路径的样本均值。P(第1抽身份A)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份A | 第1抽身份A)=13放回并独立，第二抽仍在三个身份中均匀选。P(AA)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(AA)=19分子1×1=1；分母3×3=9。身份A → 身份BX₁+X₂2样本均值的定义；分母2是本组样本量。2+62按路径次序代入第一、第二个观测值，分母仍为样本量2。82先计算分子加法：2+6=8。4分子除以2，得到这条路径的样本均值。P(第1抽身份A)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份B | 第1抽身份A)=13放回并独立，第二抽仍在三个身份中均匀选。P(AB)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(AB)=19分子1×1=1；分母3×3=9。身份A → 身份CX₁+X₂2样本均值的定义；分母2是本组样本量。2+102按路径次序代入第一、第二个观测值，分母仍为样本量2。122先计算分子加法：2+10=12。6分子除以2，得到这条路径的样本均值。P(第1抽身份A)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份C | 第1抽身份A)=13放回并独立，第二抽仍在三个身份中均匀选。P(AC)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(AC)=19分子1×1=1；分母3×3=9。身份B → 身份AX₁+X₂2样本均值的定义；分母2是本组样本量。6+22按路径次序代入第一、第二个观测值，分母仍为样本量2。82先计算分子加法：6+2=8。4分子除以2，得到这条路径的样本均值。P(第1抽身份B)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份A | 第1抽身份B)=13放回并独立，第二抽仍在三个身份中均匀选。P(BA)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(BA)=19分子1×1=1；分母3×3=9。身份B → 身份BX₁+X₂2样本均值的定义；分母2是本组样本量。6+62按路径次序代入第一、第二个观测值，分母仍为样本量2。122先计算分子加法：6+6=12。6分子除以2，得到这条路径的样本均值。P(第1抽身份B)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份B | 第1抽身份B)=13放回并独立，第二抽仍在三个身份中均匀选。P(BB)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(BB)=19分子1×1=1；分母3×3=9。身份B → 身份CX₁+X₂2样本均值的定义；分母2是本组样本量。6+102按路径次序代入第一、第二个观测值，分母仍为样本量2。162先计算分子加法：6+10=16。8分子除以2，得到这条路径的样本均值。P(第1抽身份B)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份C | 第1抽身份B)=13放回并独立，第二抽仍在三个身份中均匀选。P(BC)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(BC)=19分子1×1=1；分母3×3=9。身份C → 身份AX₁+X₂2样本均值的定义；分母2是本组样本量。10+22按路径次序代入第一、第二个观测值，分母仍为样本量2。122先计算分子加法：10+2=12。6分子除以2，得到这条路径的样本均值。P(第1抽身份C)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份A | 第1抽身份C)=13放回并独立，第二抽仍在三个身份中均匀选。P(CA)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(CA)=19分子1×1=1；分母3×3=9。身份C → 身份BX₁+X₂2样本均值的定义；分母2是本组样本量。10+62按路径次序代入第一、第二个观测值，分母仍为样本量2。162先计算分子加法：10+6=16。8分子除以2，得到这条路径的样本均值。P(第1抽身份C)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份B | 第1抽身份C)=13放回并独立，第二抽仍在三个身份中均匀选。P(CB)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(CB)=19分子1×1=1；分母3×3=9。身份C → 身份CX₁+X₂2样本均值的定义；分母2是本组样本量。10+102按路径次序代入第一、第二个观测值，分母仍为样本量2。202先计算分子加法：10+10=20。10分子除以2，得到这条路径的样本均值。P(第1抽身份C)=13三个身份均匀选择，第一抽指定身份的概率为三分之一。P(第2抽身份C | 第1抽身份C)=13放回并独立，第二抽仍在三个身份中均匀选。P(CC)=13×13乘法法则：第一抽概率乘给定第一抽后的第二抽条件概率。P(CC)=19分子1×1=1；分母3×3=9。全部有效路径为 AA, AB, AC, BA, BB, BC, CA, CB, CC。逐行列出第一身份，再列该条件允许的第二身份，故没有漏掉有效路径。输出 2 的全部原像原像即产生这一输出的路径：AA。这些路径对应不同抽样结果，互不重叠。P(mean=2)=P(AA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=2)=19将每条路径已经算出的权重分别代入。输出 4 的全部原像原像即产生这一输出的路径：AB, BA。这些路径对应不同抽样结果，互不重叠。P(mean=4)=P(AB)+P(BA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=4)=19+19将每条路径已经算出的权重分别代入。P(mean=4)=29各项分母相同，分母保留，分子相加：1+1=2。输出 6 的全部原像原像即产生这一输出的路径：AC, BB, CA。这些路径对应不同抽样结果，互不重叠。P(mean=6)=P(AC)+P(BB)+P(CA)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=6)=19+19+19将每条路径已经算出的权重分别代入。P(mean=6)=39各项分母相同，分母保留，分子相加：1+1+1=3。P(mean=6)=13分子与分母除以共同因子；若已互质则保留该分数。输出 8 的全部原像原像即产生这一输出的路径：BC, CB。这些路径对应不同抽样结果，互不重叠。P(mean=8)=P(BC)+P(CB)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=8)=19+19将每条路径已经算出的权重分别代入。P(mean=8)=29各项分母相同，分母保留，分子相加：1+1=2。输出 10 的全部原像原像即产生这一输出的路径：CC。这些路径对应不同抽样结果，互不重叠。P(mean=10)=P(CC)目标事件恰好是列出的互斥路径之并，所以概率逐项相加。P(mean=10)=19将每条路径已经算出的权重分别代入。mean概率219429613829101919+29+13+29+19=19+29+39+29+19取分母最小公倍数9，各分数分子分母同乘相同整数。19+29+39+29+19=1+2+3+2+19同分母相加，保留分母，把各分子放到同一分数的分子中。1+2+3+2+19=99完成分子加法：1+2+3+2+1=9。99=1分子与分母相同且非零，相除得到1；各项非负，全体可能输出的概率和通过核查。13>29有放回时1/3=3/9而3>2；无放回时两个分数相同。返回本条件当前作答（保留草稿）"
+      }
+    },
+    {
+      "id": "repair own return keeps original submission",
+      "pass": true,
+      "evidence": {
+        "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+        "draft": {
+          "choice": "eq"
+        },
+        "active": "mean-lab-wr-1788852804956-1",
+        "history": [
+          {
+            "id": "mean-lab-wr-1788852804956-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "eq"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1788852804956
+          }
+        ],
+        "contacts": {
+          "mean-wr-group-4": {
+            "sourceId": "mean-wr-group-4",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "kind": "static",
+            "targets": [
+              4
+            ],
+            "at": 1788852805008
+          },
+          "mean-wr-group-6": {
+            "sourceId": "mean-wr-group-6",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "kind": "static",
+            "targets": [
+              6
+            ],
+            "at": 1788852805096
+          }
+        },
+        "targets": [
+          4,
+          6
+        ],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "repair restart resets only draft keeps old assistance history",
+      "pass": true,
+      "evidence": {
+        "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+        "draft": {
+          "choice": null
+        },
+        "active": null,
+        "history": [
+          {
+            "id": "mean-lab-wr-1788852804956-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "eq"
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "comparison"
+              ]
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1788852804956
+          }
+        ],
+        "contacts": {
+          "mean-wr-group-4": {
+            "sourceId": "mean-wr-group-4",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "kind": "static",
+            "targets": [
+              4
+            ],
+            "at": 1788852805008
+          },
+          "mean-wr-group-6": {
+            "sourceId": "mean-wr-group-6",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "kind": "static",
+            "targets": [
+              6
+            ],
+            "at": 1788852805096
+          }
+        },
+        "targets": [
+          4,
+          6
+        ],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "assisted wrong still wrong and repair preferred",
+      "pass": true,
+      "evidence": "本次核对有差异。作答前已接触参考，保留辅助标识。你选了相等；1/3大于2/9。重查这次比较自由查看本条件全解重开本条件答卷本条件已保存 2 份答卷；重开保留历史与参考接触。"
+    },
+    {
+      "id": "incomplete all not frozen/revealed",
+      "pass": true,
+      "evidence": {
+        "state": {
+          "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS"
+            ],
+            "mappings": {},
+            "weightReason": null,
+            "distribution": {
+              "1": null,
+              "5": null
+            }
+          },
+          "active": null,
+          "history": [],
+          "contacts": {},
+          "targets": [],
+          "requested": null,
+          "displayed": null
+        },
+        "text": "待填：路径RS的maximum、路径概率依据、输出1的概率、输出5的概率。已有选择保留。",
+        "feedback": "尚未提交。做一次判断自由查看本条件全解本条件已保存 0 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "incomplete mapping not frozen/revealed",
+      "pass": true,
+      "evidence": {
+        "state": {
+          "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS"
+            ],
+            "mappings": {},
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "active": null,
+          "history": [],
+          "contacts": {},
+          "targets": [],
+          "requested": null,
+          "displayed": null
+        },
+        "text": "待填：路径RS的maximum。已有选择保留。",
+        "feedback": "尚未提交。做一次判断自由查看本条件全解本条件已保存 0 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "incomplete weight not frozen/revealed",
+      "pass": true,
+      "evidence": {
+        "state": {
+          "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS"
+            ],
+            "mappings": {
+              "RS": "1"
+            },
+            "weightReason": null,
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "active": null,
+          "history": [],
+          "contacts": {},
+          "targets": [],
+          "requested": null,
+          "displayed": null
+        },
+        "text": "待填：路径概率依据。已有选择保留。",
+        "feedback": "尚未提交。做一次判断自由查看本条件全解本条件已保存 0 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "incomplete p5 not frozen/revealed",
+      "pass": true,
+      "evidence": {
+        "state": {
+          "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS"
+            ],
+            "mappings": {
+              "RS": "1"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": null
+            }
+          },
+          "active": null,
+          "history": [],
+          "contacts": {},
+          "targets": [],
+          "requested": null,
+          "displayed": null
+        },
+        "text": "待填：输出5的概率。已有选择保留。",
+        "feedback": "尚未提交。做一次判断自由查看本条件全解本条件已保存 0 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "explicit empty full wrong is submitted",
+      "pass": true,
+      "evidence": {
+        "id": "max-board-wr-1788852808280-1",
+        "owner": "max-board",
+        "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [],
+          "mappings": {},
+          "weightReason": "wr",
+          "distribution": {
+            "1": "0",
+            "5": "0"
+          }
+        },
+        "judge": {
+          "correct": false,
+          "differences": [
+            "missing:RR",
+            "missing:RS",
+            "missing:RT",
+            "missing:SR",
+            "missing:SS",
+            "missing:ST",
+            "missing:TR",
+            "missing:TS",
+            "missing:TT",
+            "distribution:1",
+            "distribution:5"
+          ]
+        },
+        "assisted": false,
+        "presented": true,
+        "at": 1788852808280
+      }
+    },
+    {
+      "id": "cancel final path explicitly empty with prior instruction",
+      "pass": true,
+      "evidence": {
+        "pathAnswered": true,
+        "paths": [],
+        "mappings": {},
+        "weightReason": null,
+        "distribution": {
+          "1": null,
+          "5": null
+        }
+      }
+    },
+    {
+      "id": "undo path restores unanswered",
+      "pass": true,
+      "evidence": {
+        "pathAnswered": false,
+        "paths": null,
+        "mappings": {},
+        "weightReason": null,
+        "distribution": {
+          "1": null,
+          "5": null
+        }
+      }
+    },
+    {
+      "id": "max wr assisted=false correct=false",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wr-1788852809513-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "half",
+            "distribution": {
+              "1": "1",
+              "5": "1"
+            }
+          },
+          "judge": {
+            "correct": false,
+            "differences": [
+              "weight",
+              "distribution:1",
+              "distribution:5"
+            ]
+          },
+          "assisted": false,
+          "presented": true,
+          "at": 1788852809513
+        },
+        "feedback": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "wrong recommendation wr/false",
+      "pass": true,
+      "evidence": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+    },
+    {
+      "id": "wrong repair full math wr/false",
+      "pass": true,
+      "evidence": {
+        "active": "max-wr-complete",
+        "math": 85,
+        "text": "有放回 · 两抽独立 · 答卷 max-board-wr-1788852809513-1按你实际提交的字段逐项重查：路径概率依据选择为每条二分之一；输出1的概率选择为1；输出5的概率选择为1。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回有放回 · 两抽独立当前草稿（保留答卷）重开有放回 · 两抽独立答卷"
+      }
+    },
+    {
+      "id": "wrong repair return condition wr/false",
+      "pass": true,
+      "evidence": {
+        "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RR",
+            "RS",
+            "RT",
+            "SR",
+            "SS",
+            "ST",
+            "TR",
+            "TS",
+            "TT"
+          ],
+          "mappings": {
+            "RR": "1",
+            "RS": "1",
+            "RT": "5",
+            "SR": "1",
+            "SS": "1",
+            "ST": "5",
+            "TR": "5",
+            "TS": "5",
+            "TT": "5"
+          },
+          "weightReason": "half",
+          "distribution": {
+            "1": "1",
+            "5": "1"
+          }
+        },
+        "active": "max-board-wr-1788852809513-1",
+        "history": [
+          {
+            "id": "max-board-wr-1788852809513-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1",
+                "5": "1"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight",
+                "distribution:1",
+                "distribution:5"
+              ]
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1788852809513
+          }
+        ],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "max wr assisted=false correct=true",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wr-1788852810636-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "judge": {
+            "correct": true,
+            "differences": []
+          },
+          "assisted": false,
+          "presented": true,
+          "at": 1788852810636
+        },
+        "feedback": "本次核对正确。作答前未记录参考接触。开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "max wr assisted=true correct=false",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wr-1788852811431-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "half",
+            "distribution": {
+              "1": "1",
+              "5": "1"
+            }
+          },
+          "judge": {
+            "correct": false,
+            "differences": [
+              "weight",
+              "distribution:1",
+              "distribution:5"
+            ]
+          },
+          "assisted": true,
+          "presented": true,
+          "at": 1788852811431
+        },
+        "feedback": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "wrong recommendation wr/true",
+      "pass": true,
+      "evidence": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+    },
+    {
+      "id": "wrong repair full math wr/true",
+      "pass": true,
+      "evidence": {
+        "active": "max-wr-complete",
+        "math": 85,
+        "text": "有放回 · 两抽独立 · 答卷 max-board-wr-1788852811431-1按你实际提交的字段逐项重查：路径概率依据选择为每条二分之一；输出1的概率选择为1；输出5的概率选择为1。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回有放回 · 两抽独立当前草稿（保留答卷）重开有放回 · 两抽独立答卷"
+      }
+    },
+    {
+      "id": "wrong repair return condition wr/true",
+      "pass": true,
+      "evidence": {
+        "key": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RR",
+            "RS",
+            "RT",
+            "SR",
+            "SS",
+            "ST",
+            "TR",
+            "TS",
+            "TT"
+          ],
+          "mappings": {
+            "RR": "1",
+            "RS": "1",
+            "RT": "5",
+            "SR": "1",
+            "SS": "1",
+            "ST": "5",
+            "TR": "5",
+            "TS": "5",
+            "TT": "5"
+          },
+          "weightReason": "half",
+          "distribution": {
+            "1": "1",
+            "5": "1"
+          }
+        },
+        "active": "max-board-wr-1788852811431-1",
+        "history": [
+          {
+            "id": "max-board-wr-1788852811431-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RR",
+                "RS",
+                "RT",
+                "SR",
+                "SS",
+                "ST",
+                "TR",
+                "TS",
+                "TT"
+              ],
+              "mappings": {
+                "RR": "1",
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "SS": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5",
+                "TT": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1",
+                "5": "1"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight",
+                "distribution:1",
+                "distribution:5"
+              ]
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1788852811431
+          }
+        ],
+        "contacts": {
+          "max-wr-reference": {
+            "sourceId": "max-wr-reference",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "kind": "reference",
+            "targets": [
+              1,
+              5
+            ],
+            "at": 1788852811422
+          }
+        },
+        "targets": [
+          1,
+          5
+        ],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "max wr assisted=true correct=true",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wr-1788852812416-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RR",
+              "RS",
+              "RT",
+              "SR",
+              "SS",
+              "ST",
+              "TR",
+              "TS",
+              "TT"
+            ],
+            "mappings": {
+              "RR": "1",
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "SS": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5",
+              "TT": "5"
+            },
+            "weightReason": "wr",
+            "distribution": {
+              "1": "4/9",
+              "5": "5/9"
+            }
+          },
+          "judge": {
+            "correct": true,
+            "differences": []
+          },
+          "assisted": true,
+          "presented": true,
+          "at": 1788852812416
+        },
+        "feedback": "本次核对正确。作答前已接触参考，保留辅助标识。回看本条件完整原行开始无放回 · 逐次均匀作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "max wor assisted=false correct=false",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wor-1788852813184-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS",
+              "RT",
+              "SR",
+              "ST",
+              "TR",
+              "TS"
+            ],
+            "mappings": {
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5"
+            },
+            "weightReason": "half",
+            "distribution": {
+              "1": "1",
+              "5": "1"
+            }
+          },
+          "judge": {
+            "correct": false,
+            "differences": [
+              "weight",
+              "distribution:1",
+              "distribution:5"
+            ]
+          },
+          "assisted": false,
+          "presented": true,
+          "at": 1788852813184
+        },
+        "feedback": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "wrong recommendation wor/false",
+      "pass": true,
+      "evidence": "本次核对有差异。作答前未记录参考接触。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+    },
+    {
+      "id": "wrong repair full math wor/false",
+      "pass": true,
+      "evidence": {
+        "active": "max-wor-complete",
+        "math": 63,
+        "text": "无放回 · 逐次均匀 · 答卷 max-board-wor-1788852813184-1按你实际提交的字段逐项重查：路径概率依据选择为每条二分之一；输出1的概率选择为1；输出5的概率选择为1。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+      }
+    },
+    {
+      "id": "wrong repair return condition wor/false",
+      "pass": true,
+      "evidence": {
+        "key": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RS",
+            "RT",
+            "SR",
+            "ST",
+            "TR",
+            "TS"
+          ],
+          "mappings": {
+            "RS": "1",
+            "RT": "5",
+            "SR": "1",
+            "ST": "5",
+            "TR": "5",
+            "TS": "5"
+          },
+          "weightReason": "half",
+          "distribution": {
+            "1": "1",
+            "5": "1"
+          }
+        },
+        "active": "max-board-wor-1788852813184-1",
+        "history": [
+          {
+            "id": "max-board-wor-1788852813184-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1",
+                "5": "1"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight",
+                "distribution:1",
+                "distribution:5"
+              ]
+            },
+            "assisted": false,
+            "presented": true,
+            "at": 1788852813184
+          }
+        ],
+        "contacts": {},
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "max wor assisted=false correct=true",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wor-1788852814183-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS",
+              "RT",
+              "SR",
+              "ST",
+              "TR",
+              "TS"
+            ],
+            "mappings": {
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5"
+            },
+            "weightReason": "wor",
+            "distribution": {
+              "1": "1/3",
+              "5": "2/3"
+            }
+          },
+          "judge": {
+            "correct": true,
+            "differences": []
+          },
+          "assisted": false,
+          "presented": true,
+          "at": 1788852814184
+        },
+        "feedback": "本次核对正确。作答前未记录参考接触。开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "max wor assisted=true correct=false",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wor-1788852815081-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS",
+              "RT",
+              "SR",
+              "ST",
+              "TR",
+              "TS"
+            ],
+            "mappings": {
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5"
+            },
+            "weightReason": "half",
+            "distribution": {
+              "1": "1",
+              "5": "1"
+            }
+          },
+          "judge": {
+            "correct": false,
+            "differences": [
+              "weight",
+              "distribution:1",
+              "distribution:5"
+            ]
+          },
+          "assisted": true,
+          "presented": true,
+          "at": 1788852815081
+        },
+        "feedback": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "wrong recommendation wor/true",
+      "pass": true,
+      "evidence": "本次核对有差异。作答前已接触参考，保留辅助标识。重查这次构造自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+    },
+    {
+      "id": "wrong repair full math wor/true",
+      "pass": true,
+      "evidence": {
+        "active": "max-wor-complete",
+        "math": 63,
+        "text": "无放回 · 逐次均匀 · 答卷 max-board-wor-1788852815081-1按你实际提交的字段逐项重查：路径概率依据选择为每条二分之一；输出1的概率选择为1；输出5的概率选择为1。展开并定位本条件全部必要原行重查判断：先核路径资格，再核maximum映射、第二抽概率，最后把相同输出的互斥路径相加。返回无放回 · 逐次均匀当前草稿（保留答卷）重开无放回 · 逐次均匀答卷"
+      }
+    },
+    {
+      "id": "wrong repair return condition wor/true",
+      "pass": true,
+      "evidence": {
+        "key": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RS",
+            "RT",
+            "SR",
+            "ST",
+            "TR",
+            "TS"
+          ],
+          "mappings": {
+            "RS": "1",
+            "RT": "5",
+            "SR": "1",
+            "ST": "5",
+            "TR": "5",
+            "TS": "5"
+          },
+          "weightReason": "half",
+          "distribution": {
+            "1": "1",
+            "5": "1"
+          }
+        },
+        "active": "max-board-wor-1788852815081-1",
+        "history": [
+          {
+            "id": "max-board-wor-1788852815081-1",
+            "owner": "max-board",
+            "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "draft": {
+              "pathAnswered": true,
+              "paths": [
+                "RS",
+                "RT",
+                "SR",
+                "ST",
+                "TR",
+                "TS"
+              ],
+              "mappings": {
+                "RS": "1",
+                "RT": "5",
+                "SR": "1",
+                "ST": "5",
+                "TR": "5",
+                "TS": "5"
+              },
+              "weightReason": "half",
+              "distribution": {
+                "1": "1",
+                "5": "1"
+              }
+            },
+            "judge": {
+              "correct": false,
+              "differences": [
+                "weight",
+                "distribution:1",
+                "distribution:5"
+              ]
+            },
+            "assisted": true,
+            "presented": true,
+            "at": 1788852815081
+          }
+        ],
+        "contacts": {
+          "max-wor-reference": {
+            "sourceId": "max-wor-reference",
+            "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "kind": "reference",
+            "targets": [
+              1,
+              5
+            ],
+            "at": 1788852815081
+          }
+        },
+        "targets": [
+          1,
+          5
+        ],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "max wor assisted=true correct=true",
+      "pass": true,
+      "evidence": {
+        "history": {
+          "id": "max-board-wor-1788852815962-1",
+          "owner": "max-board",
+          "conditionKey": "max-v1-wor-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "draft": {
+            "pathAnswered": true,
+            "paths": [
+              "RS",
+              "RT",
+              "SR",
+              "ST",
+              "TR",
+              "TS"
+            ],
+            "mappings": {
+              "RS": "1",
+              "RT": "5",
+              "SR": "1",
+              "ST": "5",
+              "TR": "5",
+              "TS": "5"
+            },
+            "weightReason": "wor",
+            "distribution": {
+              "1": "1/3",
+              "5": "2/3"
+            }
+          },
+          "judge": {
+            "correct": true,
+            "differences": []
+          },
+          "assisted": true,
+          "presented": true,
+          "at": 1788852815962
+        },
+        "feedback": "本次核对正确。作答前已接触参考，保留辅助标识。回看本条件完整原行开始有放回 · 两抽独立作答自由查看本条件全解重开本条件答卷本条件已保存 1 份答卷；重开保留历史与参考接触。"
+      }
+    },
+    {
+      "id": "native summary immediate old import export retains contact",
+      "pass": true,
+      "evidence": {
+        "max-wr-reference": {
+          "sourceId": "max-wr-reference",
+          "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+          "kind": "reference",
+          "targets": [
+            1,
+            5
+          ],
+          "at": 1788852816706
+        }
+      }
+    },
+    {
+      "id": "new window restores actual reference visibility",
+      "pass": false,
+      "evidence": {
+        "open": false,
+        "contacts": {
+          "max-wr-reference": {
+            "sourceId": "max-wr-reference",
+            "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+            "kind": "reference",
+            "targets": [
+              1,
+              5
+            ],
+            "at": 1788852816706
+          }
+        }
+      }
+    },
+    {
+      "id": "new window frozen answer retains assistance",
+      "pass": true,
+      "evidence": {
+        "id": "max-board-wr-1788852817173-1",
+        "owner": "max-board",
+        "conditionKey": "max-v1-wr-n2-maximum-outputs1v5-data95f8b0e67f26",
+        "draft": {
+          "pathAnswered": true,
+          "paths": [
+            "RR",
+            "RS",
+            "RT",
+            "SR",
+            "SS",
+            "ST",
+            "TR",
+            "TS",
+            "TT"
+          ],
+          "mappings": {
+            "RR": "1",
+            "RS": "1",
+            "RT": "5",
+            "SR": "1",
+            "SS": "1",
+            "ST": "5",
+            "TR": "5",
+            "TS": "5",
+            "TT": "5"
+          },
+          "weightReason": "wr",
+          "distribution": {
+            "1": "4/9",
+            "5": "5/9"
+          }
+        },
+        "judge": {
+          "correct": true,
+          "differences": []
+        },
+        "assisted": true,
+        "presented": true,
+        "at": 1788852817173
+      }
+    },
+    {
+      "id": "no uncaught jsdom exception",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

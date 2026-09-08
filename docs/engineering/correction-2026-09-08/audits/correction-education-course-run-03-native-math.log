@@ -1,0 +1,197 @@
+PASS exact frozen HTML
+PASS no text entry quiz or custom main answer
+PASS independent answer matches frame-opening
+PASS wrong answer honestly marked frame-opening
+PASS wrong repair opens real source frame-opening
+PASS source return keeps submitted attempt frame-opening
+PASS repair retry correct retains assistance frame-opening
+PASS independent answer matches e1a
+PASS wrong answer honestly marked e1a
+PASS wrong repair opens real source e1a
+PASS source return keeps submitted attempt e1a
+PASS repair retry correct retains assistance e1a
+PASS independent answer matches e1b
+PASS wrong answer honestly marked e1b
+PASS wrong repair opens real source e1b
+PASS source return keeps submitted attempt e1b
+PASS repair retry correct retains assistance e1b
+PASS independent answer matches stat-opening
+PASS wrong answer honestly marked stat-opening
+PASS wrong repair opens real source stat-opening
+PASS source return keeps submitted attempt stat-opening
+PASS repair retry correct retains assistance stat-opening
+PASS independent answer matches e2a
+PASS wrong answer honestly marked e2a
+PASS wrong repair opens real source e2a
+PASS source return keeps submitted attempt e2a
+PASS repair retry correct retains assistance e2a
+PASS independent answer matches e2b
+PASS wrong answer honestly marked e2b
+PASS wrong repair opens real source e2b
+PASS source return keeps submitted attempt e2b
+PASS repair retry correct retains assistance e2b
+PASS independent answer matches path-choice
+PASS wrong answer honestly marked path-choice
+PASS wrong repair opens real source path-choice
+PASS source return keeps submitted attempt path-choice
+PASS repair retry correct retains assistance path-choice
+PASS independent answer matches weight-wr
+PASS wrong answer honestly marked weight-wr
+PASS wrong repair opens real source weight-wr
+PASS source return keeps submitted attempt weight-wr
+PASS repair retry correct retains assistance weight-wr
+PASS independent answer matches group-wr
+PASS wrong answer honestly marked group-wr
+PASS wrong repair opens real source group-wr
+PASS source return keeps submitted attempt group-wr
+PASS repair retry correct retains assistance group-wr
+PASS independent answer matches weight-wor
+PASS wrong answer honestly marked weight-wor
+PASS wrong repair opens real source weight-wor
+PASS source return keeps submitted attempt weight-wor
+PASS repair retry correct retains assistance weight-wor
+PASS independent answer matches group-wor
+PASS wrong answer honestly marked group-wor
+PASS wrong repair opens real source group-wor
+PASS source return keeps submitted attempt group-wor
+PASS repair retry correct retains assistance group-wor
+PASS independent answer matches e3a
+PASS wrong answer honestly marked e3a
+PASS wrong repair opens real source e3a
+PASS source return keeps submitted attempt e3a
+PASS repair retry correct retains assistance e3a
+PASS independent answer matches e3b
+PASS wrong answer honestly marked e3b
+PASS wrong repair opens real source e3b
+PASS source return keeps submitted attempt e3b
+PASS repair retry correct retains assistance e3b
+PASS independent answer matches q1a
+PASS wrong answer honestly marked q1a
+PASS wrong repair opens real source q1a
+PASS source return keeps submitted attempt q1a
+PASS repair retry correct retains assistance q1a
+PASS independent answer matches q1b
+PASS wrong answer honestly marked q1b
+PASS wrong repair opens real source q1b
+PASS source return keeps submitted attempt q1b
+PASS repair retry correct retains assistance q1b
+PASS independent answer matches q2a
+PASS wrong answer honestly marked q2a
+PASS wrong repair opens real source q2a
+PASS source return keeps submitted attempt q2a
+PASS repair retry correct retains assistance q2a
+PASS independent answer matches q2b
+PASS wrong answer honestly marked q2b
+PASS wrong repair opens real source q2b
+PASS source return keeps submitted attempt q2b
+PASS repair retry correct retains assistance q2b
+PASS independent answer matches q3c
+PASS wrong answer honestly marked q3c
+PASS wrong repair opens real source q3c
+PASS source return keeps submitted attempt q3c
+PASS repair retry correct retains assistance q3c
+PASS independent answer matches q4a
+PASS wrong answer honestly marked q4a
+PASS wrong repair opens real source q4a
+PASS source return keeps submitted attempt q4a
+PASS repair retry correct retains assistance q4a
+PASS independent answer matches q4b
+PASS wrong answer honestly marked q4b
+PASS wrong repair opens real source q4b
+PASS source return keeps submitted attempt q4b
+PASS repair retry correct retains assistance q4b
+PASS ending starts actual first card
+PASS first flash uses explicit self-report
+PASS ending next card is actual unreviewed card
+PASS ending resumes unassessed recall unchanged
+PASS second flash independently needs practice
+PASS browse first retains prior rating
+PASS actual early review restarts only first card
+PASS prerequisites retain conditional nonzero and separate independence
+PASS seven complete duties pop
+PASS seven complete duties stat
+PASS seven complete duties dist
+PASS six actual explanation duties e1a
+PASS six actual explanation duties e1b
+PASS six actual explanation duties e2a
+PASS six actual explanation duties e2b
+PASS six actual explanation duties e3a
+PASS six actual explanation duties e3b
+PASS six actual explanation duties q1a
+PASS six actual explanation duties q1b
+PASS six actual explanation duties q2a
+PASS six actual explanation duties q2b
+PASS six actual explanation duties q3a
+PASS six actual explanation duties q3b
+PASS six actual explanation duties q3c
+PASS six actual explanation duties q4a
+PASS six actual explanation duties q4b
+PASS independent path value and weight mean-wr-AA
+PASS independent path value and weight mean-wr-AB
+PASS independent path value and weight mean-wr-AC
+PASS independent path value and weight mean-wr-BA
+PASS independent path value and weight mean-wr-BB
+PASS independent path value and weight mean-wr-BC
+PASS independent path value and weight mean-wr-CA
+PASS independent path value and weight mean-wr-CB
+PASS independent path value and weight mean-wr-CC
+PASS independent exact distribution mean/wr
+PASS actual probability total one mean/wr
+PASS excluded identity mean-wor-AA
+PASS independent path value and weight mean-wor-AB
+PASS independent path value and weight mean-wor-AC
+PASS independent path value and weight mean-wor-BA
+PASS excluded identity mean-wor-BB
+PASS independent path value and weight mean-wor-BC
+PASS independent path value and weight mean-wor-CA
+PASS independent path value and weight mean-wor-CB
+PASS excluded identity mean-wor-CC
+PASS independent exact distribution mean/wor
+PASS actual probability total one mean/wor
+PASS independent path value and weight max-wr-RR
+PASS independent path value and weight max-wr-RS
+PASS independent path value and weight max-wr-RT
+PASS independent path value and weight max-wr-SR
+PASS independent path value and weight max-wr-SS
+PASS independent path value and weight max-wr-ST
+PASS independent path value and weight max-wr-TR
+PASS independent path value and weight max-wr-TS
+PASS independent path value and weight max-wr-TT
+PASS independent exact distribution max/wr
+PASS actual probability total one max/wr
+PASS excluded identity max-wor-RR
+PASS independent path value and weight max-wor-RS
+PASS independent path value and weight max-wor-RT
+PASS independent path value and weight max-wor-SR
+PASS excluded identity max-wor-SS
+PASS independent path value and weight max-wor-ST
+PASS independent path value and weight max-wor-TR
+PASS independent path value and weight max-wor-TS
+PASS excluded identity max-wor-TT
+PASS independent exact distribution max/wor
+PASS actual probability total one max/wor
+PASS independent path value and weight range-wr-DD
+PASS independent path value and weight range-wr-DE
+PASS independent path value and weight range-wr-DF
+PASS independent path value and weight range-wr-ED
+PASS independent path value and weight range-wr-EE
+PASS independent path value and weight range-wr-EF
+PASS independent path value and weight range-wr-FD
+PASS independent path value and weight range-wr-FE
+PASS independent path value and weight range-wr-FF
+PASS independent exact distribution range/wr
+PASS actual probability total one range/wr
+PASS excluded identity shelf-wor-JJ
+PASS independent path value and weight shelf-wor-JK
+PASS independent path value and weight shelf-wor-JL
+PASS independent path value and weight shelf-wor-KJ
+PASS excluded identity shelf-wor-KK
+PASS independent path value and weight shelf-wor-KL
+PASS independent path value and weight shelf-wor-LJ
+PASS independent path value and weight shelf-wor-LK
+PASS excluded identity shelf-wor-LL
+PASS independent exact distribution shelf/wor
+PASS actual probability total one shelf/wor
+PASS candidate enumeration coverage
+PASS no uncaught jsdom exceptions
+{"total":196,"failed":0}

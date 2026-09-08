@@ -1,0 +1,89 @@
+{
+  "commit": "e6c02d94d1bf1958702cead5c61dcc166f5415e2",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "bytes": 162264,
+      "sha256": "3a4b7b2f1ea2ccf786931191a94cf45d32a5e625a9557583038f2275b4cd3f83",
+      "same": true
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1067,
+      "sha256": "c8132f22baf6130cfe8b9ee45c0e2660f8970eab4ec021497470eeb5e6e7047c",
+      "same": true
+    },
+    {
+      "path": "examples/s2-source.html",
+      "bytes": 77012,
+      "sha256": "8a8ed25250bbb775e12bc8139261ffa8f564099cc42e3a5bdd324b533fd84c7d",
+      "same": true
+    },
+    {
+      "path": "examples/s2-interactive.json",
+      "bytes": 42126,
+      "sha256": "6bd84cf02e5631e49ee27208c702b6cde44a3d4069a0e5e28d6c6d3487f0f9b5",
+      "same": true
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 302,
+      "sha256": "aebd8d5cf23319dfc23660b89cf0bec9d120bb3234fb5464efde7d51825c1b79",
+      "same": true
+    },
+    {
+      "path": "references/考纲与考试局.md",
+      "bytes": 9451,
+      "sha256": "8c7aa306380f2938652a1d724072cdda863696f07a363acf6b0df48bd18b5c47",
+      "same": true
+    },
+    {
+      "path": "references/数学的冲突读法.md",
+      "bytes": 9598,
+      "sha256": "b3476521c431911fe7df1b8f848eeec325d437341a6a8faa924f064e3eb95d7e",
+      "same": true
+    },
+    {
+      "path": "references/learning-evidence.md",
+      "bytes": 10419,
+      "sha256": "2bde7890ef84c39feed48ae2394a3e77336c396ec9f1de14bb3eb5027dd34ea0",
+      "same": true
+    },
+    {
+      "path": "references/interactive-html.md",
+      "bytes": 19732,
+      "sha256": "6373683da508983830f21c70334695d16432c39b05ae125642d49e0805284b6e",
+      "same": true
+    },
+    {
+      "path": "references/deeptutor-provenance.md",
+      "bytes": 18066,
+      "sha256": "353abdabb033d2848d8511feaa66366365e7383eb7514f4462b3397967af5dcf",
+      "same": true
+    },
+    {
+      "path": "references/统计术语中英对照.md",
+      "bytes": 1647,
+      "sha256": "fa7bcec2d1b8f816a4de010a1bca1c5e6e79ff181a6229040103c85c8edc1ec8",
+      "same": true
+    },
+    {
+      "path": "scripts/build_lesson.py",
+      "bytes": 26023,
+      "sha256": "ac93011d3526dcbfa80635e1c6342d713420f58334f6517c741989570a57e57a",
+      "same": true
+    },
+    {
+      "path": "assets/interactive/lesson-runtime.js",
+      "bytes": 80441,
+      "sha256": "daf395352fde0fab9def0b3a36f0caa7ab8c23157ec9975caf56d3b79f04acd2",
+      "same": true
+    },
+    {
+      "path": "assets/interactive/lesson-runtime.css",
+      "bytes": 13734,
+      "sha256": "2e496ce47e59a2a6ba3c4f540ec159d2cde5f345f0594b0882445b0d4478d6c7",
+      "same": true
+    }
+  ]
+}

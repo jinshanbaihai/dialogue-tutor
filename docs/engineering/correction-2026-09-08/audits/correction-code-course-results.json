@@ -1,0 +1,2261 @@
+{
+  "htmlHash": "98b5e20e7ba17f01ae691f67b91050a493d3efad702020349acad50eea6e4392",
+  "scope": "actual final inline JS; no Image stub, no synthetic load/error/seek; src setter observes then calls original",
+  "checks": [
+    {
+      "id": "P02/load-and-media/initial",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P01/all-mounts",
+      "pass": true,
+      "evidence": {
+        "expected": 28,
+        "mounted": 28
+      }
+    },
+    {
+      "id": "P01/id-unique",
+      "pass": true,
+      "evidence": {
+        "count": 671
+      }
+    },
+    {
+      "id": "P01/panel-closed",
+      "pass": true
+    },
+    {
+      "id": "P01/inline-json-identical",
+      "pass": true
+    },
+    {
+      "id": "P09/static-images-match",
+      "pass": false,
+      "evidence": [
+        "main-wr-overview",
+        "main-wr-distribution",
+        null,
+        "example-max-distribution",
+        "main-nr-overview",
+        "main-nr-distribution",
+        "construct-distribution",
+        "duplicates-distribution",
+        "repair-equal-distribution",
+        "repair-reverse-distribution",
+        "repair-weight-distribution"
+      ]
+    },
+    {
+      "id": "P09/55-files-and-lines",
+      "pass": true,
+      "evidence": {
+        "frames": 55,
+        "issues": []
+      }
+    },
+    {
+      "id": "P09/data-source-hashes",
+      "pass": true
+    },
+    {
+      "id": "P01/errors/load-and-media",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P04/allowed/main-wr",
+      "pass": true
+    },
+    {
+      "id": "P09/request/main-wr/AA/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+        "bytes": 123557,
+        "frameId": "main-wr-AA-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AA/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "b6fc94bd391bc9308271563f04a30d9c5a140cd2c37738d938f0796ded7a9a76",
+        "bytes": 102966,
+        "frameId": "main-wr-AA-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AA/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "69d12d63a3d86c93c5c855b6fc80fd9033e1465a9a27bb43ef779d3a079514be",
+        "bytes": 103136,
+        "frameId": "main-wr-AA-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AB/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "f156c12ab9d868d726cad637475c093828b07ae9d93d11a786264c617b49f747",
+        "bytes": 123506,
+        "frameId": "main-wr-AB-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AB/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "896fbf8d6b2ec691445c13e3d30a3ac81962a658bec4b9e0937ef99955325e5f",
+        "bytes": 103072,
+        "frameId": "main-wr-AB-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AB/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "797aca223a6464616598fb685e5d77547fd176381bf1fcc174fd5baa9ea5c3cc",
+        "bytes": 105593,
+        "frameId": "main-wr-AB-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AC/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "87ab7ea2607ac17658d620bf1896390bd3286b053b36a1aa67be79d11501cf77",
+        "bytes": 123439,
+        "frameId": "main-wr-AC-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AC/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "def525bb799ea18326b397257ff07ccb10e99fbef5b38f76728cfb75cf933d12",
+        "bytes": 104530,
+        "frameId": "main-wr-AC-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/AC/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "99dc0fb3faa04aa471c23ac733b7edc12b2623ecbade393e4a74e988713f383e",
+        "bytes": 108566,
+        "frameId": "main-wr-AC-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BA/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "d7be2197e3c55feb5f98efc8079ae70f69cf1d6d72deb90a0c50759279d42ca5",
+        "bytes": 123553,
+        "frameId": "main-wr-BA-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BA/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "d73bed06180c02ab6eb9ed8fa604fb6e8ec8d1f36c4fbf07743bb6fde016bb1e",
+        "bytes": 103123,
+        "frameId": "main-wr-BA-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BA/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "3957e002f231887ad85d06d13ad42077c0f016625a314c03eda37f587f638cd2",
+        "bytes": 105609,
+        "frameId": "main-wr-BA-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BB/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "a3302d4b5d91320f4be44233a543ebfa72e03e5ac57479a2513cdf6b6dd3d08b",
+        "bytes": 123502,
+        "frameId": "main-wr-BB-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BB/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "fddc6f8226c0b67a5027088453aa08ea6aa4c65ac1465704a36d1e560896019a",
+        "bytes": 100301,
+        "frameId": "main-wr-BB-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BB/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "ca82e5d6d7bb7c263483f402527694b2316954ed6a7ed67a04c55c83111fa955",
+        "bytes": 108013,
+        "frameId": "main-wr-BB-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BC/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "113b1dd80f056f90afcb6e288a7b71139650b5154fe00f101761507206ee6dc1",
+        "bytes": 123435,
+        "frameId": "main-wr-BC-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BC/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "8165545f05c720b9040641eb4503c26d3150442a3d6c1034c5df59e823d4a37b",
+        "bytes": 103853,
+        "frameId": "main-wr-BC-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/BC/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "2e08b7a87b17822c582b4e00bcb8722180fb6769f17a2e4ef3150227d66eff15",
+        "bytes": 105226,
+        "frameId": "main-wr-BC-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CA/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "2dc6c8495ef990877c2dc8daa136f19d110d65d974d6540a88596da5e845f391",
+        "bytes": 123618,
+        "frameId": "main-wr-CA-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CA/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "b14a0edf0387584ed51fd2960867d2aaa3f7487f86099d3c92776353fca2f5a0",
+        "bytes": 104576,
+        "frameId": "main-wr-CA-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CA/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "1413fc7b5b37729aa5e1df77b12d89c3ae3185c55cc982053337e2acfea15807",
+        "bytes": 108552,
+        "frameId": "main-wr-CA-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CB/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "6f392c6f94c9fb9e2b59a149d82172fa4df39a603b7cb20a28f7c05dfd22c25f",
+        "bytes": 123561,
+        "frameId": "main-wr-CB-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CB/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "940a835c4631e532d75333c2315bcd2e8c244bf6deb2f41ed0dcf43be62febb6",
+        "bytes": 103891,
+        "frameId": "main-wr-CB-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CB/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "97152586a507dce8d978e0e97c6eb1724f05e6a6ddd6b8ef87043a7ef4291eb8",
+        "bytes": 105213,
+        "frameId": "main-wr-CB-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CC/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "93c56123ac1186ece3be498b09fe616c13192dba2e10474f93856f03f3dde1c9",
+        "bytes": 123490,
+        "frameId": "main-wr-CC-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CC/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "d0a11e8cbb293a7a5536fdd54ab9b686d9d6b0e371abeb73e6be7653b8c21a47",
+        "bytes": 106429,
+        "frameId": "main-wr-CC-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-wr/CC/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "7439b84efc221cc6b912837abb5e011cdf8e78c7ea41edc49d15cd2c62a42ca2",
+        "bytes": 102739,
+        "frameId": "main-wr-CC-grouping"
+      }
+    },
+    {
+      "id": "P02/all-frame-requests/main-wr",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P04/allowed/main-nr",
+      "pass": true
+    },
+    {
+      "id": "P09/request/main-nr/AB/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "8858f23482328e3b94b7af1bf73680bc04b80fbf10226312db82fe04eaaf8c5a",
+        "bytes": 143391,
+        "frameId": "main-nr-AB-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/AB/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "474f94519caed3bbb20d4f758f5010ab200a0bfefbed4c2fcb7ac631ff69eaaf",
+        "bytes": 104065,
+        "frameId": "main-nr-AB-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/AB/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "ea96ee23186a5f599f46875b794058e544fe0a56efe0674e8fad2ad504fbad15",
+        "bytes": 102207,
+        "frameId": "main-nr-AB-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/AC/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "8ad63563fe53d659c43927dbad32f8ff8681c7879f0a551665a73eceb209e522",
+        "bytes": 143311,
+        "frameId": "main-nr-AC-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/AC/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "d404106ffc4889ceae9994a9c98fbd55bd66980496305cb8c87bcc514972481b",
+        "bytes": 105525,
+        "frameId": "main-nr-AC-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/AC/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "efda679bb6b83836cfb7232284727800f5b61d7de39b1d8f4ad2342b54159b21",
+        "bytes": 102940,
+        "frameId": "main-nr-AC-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/BA/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "cd43768bba0836defaf9db9136d6eeb2b2bd77c15e421bec275fed8c8452a348",
+        "bytes": 143168,
+        "frameId": "main-nr-BA-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/BA/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "e28e7473bbd792ca831b8b6bedf4b0659ca75db0d6eb5b2d7ecf4f5500ac2097",
+        "bytes": 104114,
+        "frameId": "main-nr-BA-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/BA/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "6b7714b69a8cb0f42ab2937092255593667225bcfd931852ec73b3a41362e361",
+        "bytes": 102221,
+        "frameId": "main-nr-BA-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/BC/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "acbdbdde7c6d8d50a6fa0ea828e1435858705576d1bd995f79da375c0d299371",
+        "bytes": 143063,
+        "frameId": "main-nr-BC-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/BC/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "a2d706328fa132797cb0e9d35e52726091aa47e245f6215f48e5833f60e4cfbb",
+        "bytes": 104841,
+        "frameId": "main-nr-BC-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/BC/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "9df29862d52418fcdaf463a8a33aa30c5f70162dd42a2db5eca5ac43945958f0",
+        "bytes": 101850,
+        "frameId": "main-nr-BC-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/CA/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "8b5dd44d4cf764bed1ae3976e4fb0be90cd66300ea0d0aa989e2ba6c098fb41f",
+        "bytes": 143433,
+        "frameId": "main-nr-CA-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/CA/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "2e3ecdf111da184c52ee4e0846b688e09017ec93b4cae414c7eb7ff6e4264a0a",
+        "bytes": 105570,
+        "frameId": "main-nr-CA-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/CA/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "315a8dbdc041e9530733a5d95621b0c03a0a062e9a6cd31f4a5c3dcb94d189ef",
+        "bytes": 102926,
+        "frameId": "main-nr-CA-grouping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/CB/paths",
+      "pass": true,
+      "evidence": {
+        "hash": "658df43dc0411ae5b56cdfd7234012384e95240b5408242763b243936b143e9f",
+        "bytes": 143406,
+        "frameId": "main-nr-CB-paths"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/CB/mapping",
+      "pass": true,
+      "evidence": {
+        "hash": "ef09bd4baf9cb81b12d0713166871016929058dbeefc1db720419dfa9f258c2c",
+        "bytes": 104882,
+        "frameId": "main-nr-CB-mapping"
+      }
+    },
+    {
+      "id": "P09/request/main-nr/CB/grouping",
+      "pass": true,
+      "evidence": {
+        "hash": "348661ae6c7e6066cf387f31d50467cfcfc32f4b58c925c2625e59b542a657df",
+        "bytes": 101837,
+        "frameId": "main-nr-CB-grouping"
+      }
+    },
+    {
+      "id": "P02/all-frame-requests/main-nr",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P09/request-count",
+      "pass": true,
+      "evidence": {
+        "uniqueFrames": 47
+      }
+    },
+    {
+      "id": "P04/construct-isolated",
+      "pass": true
+    },
+    {
+      "id": "P04/no-excluded-selected",
+      "pass": true
+    },
+    {
+      "id": "P10/no-fake-load",
+      "pass": true,
+      "evidence": {
+        "status": "正在载入当前条件对应的真实 Manim 画面…",
+        "environmentLimitation": true
+      }
+    },
+    {
+      "id": "P01/errors/all-frame-requests",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P03/incomplete-no-record",
+      "pass": true,
+      "evidence": {
+        "status": "还没有完成四组：路径至少选一条，六行均值都要选择，概率依据与完整分布各选一项。暂未核对，也未生成提交记录。"
+      }
+    },
+    {
+      "id": "P03/no-early-checks",
+      "pass": true
+    },
+    {
+      "id": "P02/construction-and-import/filled",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P03/single-freeze",
+      "pass": true,
+      "evidence": {
+        "id": "construction:1788845725375:0",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "2",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": false,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": false,
+          "feedback": false,
+          "referenceCoverage": [],
+          "revealedThrough": 0
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": true,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845725375
+      }
+    },
+    {
+      "id": "P05/retry-assisted-and-first-unchanged",
+      "pass": true
+    },
+    {
+      "id": "P06/union-and-submissions",
+      "pass": true,
+      "evidence": {
+        "contact": {
+          "hint": false,
+          "reference": true,
+          "feedback": true,
+          "referenceCoverage": [
+            "construction-four-feedback",
+            "q3-d-solution"
+          ],
+          "revealedThrough": 3
+        },
+        "submissions": 2,
+        "selection": {
+          "paths": [
+            "AB"
+          ],
+          "mapping": {
+            "AB": "",
+            "AC": "",
+            "BA": "",
+            "BC": "",
+            "CA": "",
+            "CB": ""
+          },
+          "probabilityReason": "",
+          "distribution": ""
+        }
+      }
+    },
+    {
+      "id": "P06/immediate-export",
+      "pass": true
+    },
+    {
+      "id": "P02/construction-and-import/imported",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P01/errors/construction-and-import",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P06/reopen-preserves-union",
+      "pass": true,
+      "evidence": {
+        "reopened": {
+          "hint": false,
+          "reference": true,
+          "feedback": true,
+          "referenceCoverage": [
+            "construction-four-feedback",
+            "q3-d-solution"
+          ],
+          "revealedThrough": 3
+        },
+        "submissions": 2
+      }
+    },
+    {
+      "id": "P06/restore-no-new-actions",
+      "pass": true
+    },
+    {
+      "id": "P02/reopen-merged/restored",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P01/errors/reopen-merged",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P05/preimage-synchronous-reference",
+      "pass": false,
+      "evidence": {
+        "solutionOpen": true,
+        "submission": {
+          "id": "preimage:1788845731993:0",
+          "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+          "answers": {
+            "paths": [
+              "AC",
+              "BB",
+              "CA"
+            ]
+          },
+          "assistedAtSubmit": false,
+          "assistanceSnapshot": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "componentChecks": {
+            "paths": true
+          },
+          "evidence": "component-check-only"
+        }
+      }
+    },
+    {
+      "id": "P05/preimage-first-not-retrochanged",
+      "pass": true
+    },
+    {
+      "id": "P05/construction-synchronous-reference",
+      "pass": true,
+      "evidence": {
+        "hint": false,
+        "reference": true,
+        "feedback": false,
+        "referenceCoverage": [
+          "q3-a-solution"
+        ],
+        "revealedThrough": 0
+      }
+    },
+    {
+      "id": "P01/errors/reference-same-task",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P06/immediate-reference-import-union",
+      "pass": false,
+      "evidence": {
+        "solutionOpen": true,
+        "exportedContact": {
+          "hint": false,
+          "reference": false,
+          "feedback": false,
+          "referenceCoverage": [],
+          "revealedThrough": 0
+        }
+      }
+    },
+    {
+      "id": "P01/errors/reference-immediate-import",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P06/immediate-reopen-reference-preserved",
+      "pass": false,
+      "evidence": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      }
+    },
+    {
+      "id": "P01/errors/reopen-immediate-reference",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P01/errors/normal-reference-and-validation",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P07/reference-contact-restored",
+      "pass": true
+    },
+    {
+      "id": "P07/revealed-detail-restored",
+      "pass": false,
+      "evidence": {
+        "storedRevealedThrough": 3,
+        "open": false
+      }
+    },
+    {
+      "id": "P07/reject-or-reset-foreign-component-state",
+      "pass": false,
+      "evidence": {
+        "rejected": false,
+        "loadedSelection": {
+          "paths": [
+            "AA"
+          ],
+          "mapping": {
+            "AB": "999"
+          },
+          "probabilityReason": "invalid",
+          "distribution": "invalid"
+        },
+        "loadedDataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb"
+      }
+    },
+    {
+      "id": "P01/errors/normal-reference-reopen",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P12/flash-self/population-recall",
+      "pass": true
+    },
+    {
+      "id": "P02/quiz/ex-pop-a-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/ex-pop-a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/ex-pop-b-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/ex-pop-b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/ex-pop-c-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/ex-pop-c-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/statistic-known",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/statistic-known",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/ex-stat-a-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/ex-stat-a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/ex-stat-b-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/ex-stat-b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P12/flash-self/distribution-recall",
+      "pass": true
+    },
+    {
+      "id": "P02/quiz/main-reverse",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/main-reverse",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/main-equal",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/main-equal",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/ex-max-a-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/ex-max-a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/ex-max-b-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/ex-max-b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/main-weight",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/main-weight",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q1-a-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q1-a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q1-b-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q1-b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q1-c-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q1-c-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q2-a-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q2-a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q2-b-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q2-b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q2-c-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q2-c-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q4-a-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q4-a-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/q4-b-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/q4-b-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/repair-equal-q-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/repair-equal-q-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/repair-reverse-q-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/repair-reverse-q-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P02/quiz/repair-weight-q-answer",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/repair-weight-q-answer",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P12/flash-self/final-recall",
+      "pass": true
+    },
+    {
+      "id": "P02/all-main-branches-and-links/all-open",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P11/all-local-links",
+      "pass": true,
+      "evidence": {
+        "links": 501,
+        "dead": [],
+        "hiddenTargets": []
+      }
+    },
+    {
+      "id": "P11/report-buttons-no-dead-target",
+      "pass": true
+    },
+    {
+      "id": "P11/buttons-named",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P11/native-focus",
+      "pass": true
+    },
+    {
+      "id": "P12/no-common-construction-attempts",
+      "pass": true
+    },
+    {
+      "id": "P01/errors/all-main-branches-and-links",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P08/continue-and-export",
+      "pass": true
+    },
+    {
+      "id": "P02/storage-unavailable/failure-path",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "P01/errors/storage-unavailable",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "load-and-media",
+      "actions": [],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "all-frame-requests",
+      "actions": [
+        "#sampling-explorer [data-condition=\"main-wr\"]",
+        "#sampling-explorer [data-path=\"AA\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"AB\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"AC\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"BA\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"BB\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"BC\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"CA\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"CB\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"CC\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-condition=\"main-nr\"]",
+        "#sampling-explorer [data-path=\"AB\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"AC\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"BA\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"BC\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"CA\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-path=\"CB\"]",
+        "#sampling-explorer [data-stage=\"paths\"]",
+        "#sampling-explorer [data-stage=\"mapping\"]",
+        "#sampling-explorer [data-stage=\"grouping\"]",
+        "#sampling-explorer [data-condition=\"main-wr\"]",
+        "#sampling-explorer [data-path=\"AA\"]",
+        "#sampling-explorer [data-condition=\"main-nr\"]"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+          "bytes": 123557,
+          "frameId": "main-wr-AA-paths"
+        },
+        {
+          "hash": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+          "bytes": 123557,
+          "frameId": "main-wr-AA-paths"
+        },
+        {
+          "hash": "b6fc94bd391bc9308271563f04a30d9c5a140cd2c37738d938f0796ded7a9a76",
+          "bytes": 102966,
+          "frameId": "main-wr-AA-mapping"
+        },
+        {
+          "hash": "69d12d63a3d86c93c5c855b6fc80fd9033e1465a9a27bb43ef779d3a079514be",
+          "bytes": 103136,
+          "frameId": "main-wr-AA-grouping"
+        },
+        {
+          "hash": "797aca223a6464616598fb685e5d77547fd176381bf1fcc174fd5baa9ea5c3cc",
+          "bytes": 105593,
+          "frameId": "main-wr-AB-grouping"
+        },
+        {
+          "hash": "f156c12ab9d868d726cad637475c093828b07ae9d93d11a786264c617b49f747",
+          "bytes": 123506,
+          "frameId": "main-wr-AB-paths"
+        },
+        {
+          "hash": "896fbf8d6b2ec691445c13e3d30a3ac81962a658bec4b9e0937ef99955325e5f",
+          "bytes": 103072,
+          "frameId": "main-wr-AB-mapping"
+        },
+        {
+          "hash": "797aca223a6464616598fb685e5d77547fd176381bf1fcc174fd5baa9ea5c3cc",
+          "bytes": 105593,
+          "frameId": "main-wr-AB-grouping"
+        },
+        {
+          "hash": "99dc0fb3faa04aa471c23ac733b7edc12b2623ecbade393e4a74e988713f383e",
+          "bytes": 108566,
+          "frameId": "main-wr-AC-grouping"
+        },
+        {
+          "hash": "87ab7ea2607ac17658d620bf1896390bd3286b053b36a1aa67be79d11501cf77",
+          "bytes": 123439,
+          "frameId": "main-wr-AC-paths"
+        },
+        {
+          "hash": "def525bb799ea18326b397257ff07ccb10e99fbef5b38f76728cfb75cf933d12",
+          "bytes": 104530,
+          "frameId": "main-wr-AC-mapping"
+        },
+        {
+          "hash": "99dc0fb3faa04aa471c23ac733b7edc12b2623ecbade393e4a74e988713f383e",
+          "bytes": 108566,
+          "frameId": "main-wr-AC-grouping"
+        },
+        {
+          "hash": "3957e002f231887ad85d06d13ad42077c0f016625a314c03eda37f587f638cd2",
+          "bytes": 105609,
+          "frameId": "main-wr-BA-grouping"
+        },
+        {
+          "hash": "d7be2197e3c55feb5f98efc8079ae70f69cf1d6d72deb90a0c50759279d42ca5",
+          "bytes": 123553,
+          "frameId": "main-wr-BA-paths"
+        },
+        {
+          "hash": "d73bed06180c02ab6eb9ed8fa604fb6e8ec8d1f36c4fbf07743bb6fde016bb1e",
+          "bytes": 103123,
+          "frameId": "main-wr-BA-mapping"
+        },
+        {
+          "hash": "3957e002f231887ad85d06d13ad42077c0f016625a314c03eda37f587f638cd2",
+          "bytes": 105609,
+          "frameId": "main-wr-BA-grouping"
+        },
+        {
+          "hash": "ca82e5d6d7bb7c263483f402527694b2316954ed6a7ed67a04c55c83111fa955",
+          "bytes": 108013,
+          "frameId": "main-wr-BB-grouping"
+        },
+        {
+          "hash": "a3302d4b5d91320f4be44233a543ebfa72e03e5ac57479a2513cdf6b6dd3d08b",
+          "bytes": 123502,
+          "frameId": "main-wr-BB-paths"
+        },
+        {
+          "hash": "fddc6f8226c0b67a5027088453aa08ea6aa4c65ac1465704a36d1e560896019a",
+          "bytes": 100301,
+          "frameId": "main-wr-BB-mapping"
+        },
+        {
+          "hash": "ca82e5d6d7bb7c263483f402527694b2316954ed6a7ed67a04c55c83111fa955",
+          "bytes": 108013,
+          "frameId": "main-wr-BB-grouping"
+        },
+        {
+          "hash": "2e08b7a87b17822c582b4e00bcb8722180fb6769f17a2e4ef3150227d66eff15",
+          "bytes": 105226,
+          "frameId": "main-wr-BC-grouping"
+        },
+        {
+          "hash": "113b1dd80f056f90afcb6e288a7b71139650b5154fe00f101761507206ee6dc1",
+          "bytes": 123435,
+          "frameId": "main-wr-BC-paths"
+        },
+        {
+          "hash": "8165545f05c720b9040641eb4503c26d3150442a3d6c1034c5df59e823d4a37b",
+          "bytes": 103853,
+          "frameId": "main-wr-BC-mapping"
+        },
+        {
+          "hash": "2e08b7a87b17822c582b4e00bcb8722180fb6769f17a2e4ef3150227d66eff15",
+          "bytes": 105226,
+          "frameId": "main-wr-BC-grouping"
+        },
+        {
+          "hash": "1413fc7b5b37729aa5e1df77b12d89c3ae3185c55cc982053337e2acfea15807",
+          "bytes": 108552,
+          "frameId": "main-wr-CA-grouping"
+        },
+        {
+          "hash": "2dc6c8495ef990877c2dc8daa136f19d110d65d974d6540a88596da5e845f391",
+          "bytes": 123618,
+          "frameId": "main-wr-CA-paths"
+        },
+        {
+          "hash": "b14a0edf0387584ed51fd2960867d2aaa3f7487f86099d3c92776353fca2f5a0",
+          "bytes": 104576,
+          "frameId": "main-wr-CA-mapping"
+        },
+        {
+          "hash": "1413fc7b5b37729aa5e1df77b12d89c3ae3185c55cc982053337e2acfea15807",
+          "bytes": 108552,
+          "frameId": "main-wr-CA-grouping"
+        },
+        {
+          "hash": "97152586a507dce8d978e0e97c6eb1724f05e6a6ddd6b8ef87043a7ef4291eb8",
+          "bytes": 105213,
+          "frameId": "main-wr-CB-grouping"
+        },
+        {
+          "hash": "6f392c6f94c9fb9e2b59a149d82172fa4df39a603b7cb20a28f7c05dfd22c25f",
+          "bytes": 123561,
+          "frameId": "main-wr-CB-paths"
+        },
+        {
+          "hash": "940a835c4631e532d75333c2315bcd2e8c244bf6deb2f41ed0dcf43be62febb6",
+          "bytes": 103891,
+          "frameId": "main-wr-CB-mapping"
+        },
+        {
+          "hash": "97152586a507dce8d978e0e97c6eb1724f05e6a6ddd6b8ef87043a7ef4291eb8",
+          "bytes": 105213,
+          "frameId": "main-wr-CB-grouping"
+        },
+        {
+          "hash": "7439b84efc221cc6b912837abb5e011cdf8e78c7ea41edc49d15cd2c62a42ca2",
+          "bytes": 102739,
+          "frameId": "main-wr-CC-grouping"
+        },
+        {
+          "hash": "93c56123ac1186ece3be498b09fe616c13192dba2e10474f93856f03f3dde1c9",
+          "bytes": 123490,
+          "frameId": "main-wr-CC-paths"
+        },
+        {
+          "hash": "d0a11e8cbb293a7a5536fdd54ab9b686d9d6b0e371abeb73e6be7653b8c21a47",
+          "bytes": 106429,
+          "frameId": "main-wr-CC-mapping"
+        },
+        {
+          "hash": "7439b84efc221cc6b912837abb5e011cdf8e78c7ea41edc49d15cd2c62a42ca2",
+          "bytes": 102739,
+          "frameId": "main-wr-CC-grouping"
+        },
+        {
+          "hash": "88cdd7876c57423eeda400325f5aa299667cf21aabd84936322033d4bbb6efeb",
+          "bytes": 142055,
+          "frameId": "main-nr-overview"
+        },
+        {
+          "hash": "8858f23482328e3b94b7af1bf73680bc04b80fbf10226312db82fe04eaaf8c5a",
+          "bytes": 143391,
+          "frameId": "main-nr-AB-paths"
+        },
+        {
+          "hash": "8858f23482328e3b94b7af1bf73680bc04b80fbf10226312db82fe04eaaf8c5a",
+          "bytes": 143391,
+          "frameId": "main-nr-AB-paths"
+        },
+        {
+          "hash": "474f94519caed3bbb20d4f758f5010ab200a0bfefbed4c2fcb7ac631ff69eaaf",
+          "bytes": 104065,
+          "frameId": "main-nr-AB-mapping"
+        },
+        {
+          "hash": "ea96ee23186a5f599f46875b794058e544fe0a56efe0674e8fad2ad504fbad15",
+          "bytes": 102207,
+          "frameId": "main-nr-AB-grouping"
+        },
+        {
+          "hash": "efda679bb6b83836cfb7232284727800f5b61d7de39b1d8f4ad2342b54159b21",
+          "bytes": 102940,
+          "frameId": "main-nr-AC-grouping"
+        },
+        {
+          "hash": "8ad63563fe53d659c43927dbad32f8ff8681c7879f0a551665a73eceb209e522",
+          "bytes": 143311,
+          "frameId": "main-nr-AC-paths"
+        },
+        {
+          "hash": "d404106ffc4889ceae9994a9c98fbd55bd66980496305cb8c87bcc514972481b",
+          "bytes": 105525,
+          "frameId": "main-nr-AC-mapping"
+        },
+        {
+          "hash": "efda679bb6b83836cfb7232284727800f5b61d7de39b1d8f4ad2342b54159b21",
+          "bytes": 102940,
+          "frameId": "main-nr-AC-grouping"
+        },
+        {
+          "hash": "6b7714b69a8cb0f42ab2937092255593667225bcfd931852ec73b3a41362e361",
+          "bytes": 102221,
+          "frameId": "main-nr-BA-grouping"
+        },
+        {
+          "hash": "cd43768bba0836defaf9db9136d6eeb2b2bd77c15e421bec275fed8c8452a348",
+          "bytes": 143168,
+          "frameId": "main-nr-BA-paths"
+        },
+        {
+          "hash": "e28e7473bbd792ca831b8b6bedf4b0659ca75db0d6eb5b2d7ecf4f5500ac2097",
+          "bytes": 104114,
+          "frameId": "main-nr-BA-mapping"
+        },
+        {
+          "hash": "6b7714b69a8cb0f42ab2937092255593667225bcfd931852ec73b3a41362e361",
+          "bytes": 102221,
+          "frameId": "main-nr-BA-grouping"
+        },
+        {
+          "hash": "9df29862d52418fcdaf463a8a33aa30c5f70162dd42a2db5eca5ac43945958f0",
+          "bytes": 101850,
+          "frameId": "main-nr-BC-grouping"
+        },
+        {
+          "hash": "acbdbdde7c6d8d50a6fa0ea828e1435858705576d1bd995f79da375c0d299371",
+          "bytes": 143063,
+          "frameId": "main-nr-BC-paths"
+        },
+        {
+          "hash": "a2d706328fa132797cb0e9d35e52726091aa47e245f6215f48e5833f60e4cfbb",
+          "bytes": 104841,
+          "frameId": "main-nr-BC-mapping"
+        },
+        {
+          "hash": "9df29862d52418fcdaf463a8a33aa30c5f70162dd42a2db5eca5ac43945958f0",
+          "bytes": 101850,
+          "frameId": "main-nr-BC-grouping"
+        },
+        {
+          "hash": "315a8dbdc041e9530733a5d95621b0c03a0a062e9a6cd31f4a5c3dcb94d189ef",
+          "bytes": 102926,
+          "frameId": "main-nr-CA-grouping"
+        },
+        {
+          "hash": "8b5dd44d4cf764bed1ae3976e4fb0be90cd66300ea0d0aa989e2ba6c098fb41f",
+          "bytes": 143433,
+          "frameId": "main-nr-CA-paths"
+        },
+        {
+          "hash": "2e3ecdf111da184c52ee4e0846b688e09017ec93b4cae414c7eb7ff6e4264a0a",
+          "bytes": 105570,
+          "frameId": "main-nr-CA-mapping"
+        },
+        {
+          "hash": "315a8dbdc041e9530733a5d95621b0c03a0a062e9a6cd31f4a5c3dcb94d189ef",
+          "bytes": 102926,
+          "frameId": "main-nr-CA-grouping"
+        },
+        {
+          "hash": "348661ae6c7e6066cf387f31d50467cfcfc32f4b58c925c2625e59b542a657df",
+          "bytes": 101837,
+          "frameId": "main-nr-CB-grouping"
+        },
+        {
+          "hash": "658df43dc0411ae5b56cdfd7234012384e95240b5408242763b243936b143e9f",
+          "bytes": 143406,
+          "frameId": "main-nr-CB-paths"
+        },
+        {
+          "hash": "ef09bd4baf9cb81b12d0713166871016929058dbeefc1db720419dfa9f258c2c",
+          "bytes": 104882,
+          "frameId": "main-nr-CB-mapping"
+        },
+        {
+          "hash": "348661ae6c7e6066cf387f31d50467cfcfc32f4b58c925c2625e59b542a657df",
+          "bytes": 101837,
+          "frameId": "main-nr-CB-grouping"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+          "bytes": 123557,
+          "frameId": "main-wr-AA-paths"
+        },
+        {
+          "hash": "88cdd7876c57423eeda400325f5aa299667cf21aabd84936322033d4bbb6efeb",
+          "bytes": 142055,
+          "frameId": "main-nr-overview"
+        }
+      ]
+    },
+    {
+      "name": "construction-and-import",
+      "actions": [
+        "[data-construct-submit]",
+        "[name=\"construct-path\"][value=\"AB\"]",
+        "[name=\"construct-path\"][value=\"AC\"]",
+        "[name=\"construct-path\"][value=\"BA\"]",
+        "[name=\"construct-path\"][value=\"BC\"]",
+        "[name=\"construct-path\"][value=\"CA\"]",
+        "[name=\"construct-path\"][value=\"CB\"]",
+        "[name=\"construct-map\"][data-map-path=\"AB\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"AC\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"BA\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"BC\"] = 7",
+        "[name=\"construct-map\"][data-map-path=\"CA\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"CB\"] = 7",
+        "[name=\"construct-reason\"][value=\"remaining\"]",
+        "[name=\"construct-distribution\"][value=\"thirds\"]",
+        "[data-construct-submit]",
+        "[data-construct-submit]",
+        "[data-construct-retry]",
+        "[name=\"construct-path\"][value=\"AB\"]",
+        "[name=\"construct-path\"][value=\"AC\"]",
+        "[name=\"construct-path\"][value=\"BA\"]",
+        "[name=\"construct-path\"][value=\"BC\"]",
+        "[name=\"construct-path\"][value=\"CA\"]",
+        "[name=\"construct-path\"][value=\"CB\"]",
+        "[name=\"construct-map\"][data-map-path=\"AB\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"AC\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"BA\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"BC\"] = 7",
+        "[name=\"construct-map\"][data-map-path=\"CA\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"CB\"] = 7",
+        "[name=\"construct-reason\"][value=\"old\"]",
+        "[name=\"construct-distribution\"][value=\"thirds\"]",
+        "[data-construct-submit]"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "reopen-merged",
+      "actions": [],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "reference-same-task",
+      "actions": [
+        "[name=\"preimage-path\"][value=\"AC\"]",
+        "[name=\"preimage-path\"][value=\"BB\"]",
+        "[name=\"preimage-path\"][value=\"CA\"]",
+        "#main-wr-distribution-solution>summary",
+        "[data-preimage-submit]",
+        "[name=\"construct-path\"][value=\"AB\"]",
+        "[name=\"construct-path\"][value=\"AC\"]",
+        "[name=\"construct-path\"][value=\"BA\"]",
+        "[name=\"construct-path\"][value=\"BC\"]",
+        "[name=\"construct-path\"][value=\"CA\"]",
+        "[name=\"construct-path\"][value=\"CB\"]",
+        "[name=\"construct-map\"][data-map-path=\"AB\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"AC\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"BA\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"BC\"] = 7",
+        "[name=\"construct-map\"][data-map-path=\"CA\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"CB\"] = 7",
+        "[name=\"construct-reason\"][value=\"remaining\"]",
+        "[name=\"construct-distribution\"][value=\"thirds\"]",
+        "#q3-a-solution>summary",
+        "[data-construct-submit]"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "reference-immediate-import",
+      "actions": [
+        "#q3-d-solution>summary"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "reopen-immediate-reference",
+      "actions": [
+        "[name=\"construct-path\"][value=\"AB\"]",
+        "[name=\"construct-path\"][value=\"AC\"]",
+        "[name=\"construct-path\"][value=\"BA\"]",
+        "[name=\"construct-path\"][value=\"BC\"]",
+        "[name=\"construct-path\"][value=\"CA\"]",
+        "[name=\"construct-path\"][value=\"CB\"]",
+        "[name=\"construct-map\"][data-map-path=\"AB\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"AC\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"BA\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"BC\"] = 7",
+        "[name=\"construct-map\"][data-map-path=\"CA\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"CB\"] = 7",
+        "[name=\"construct-reason\"][value=\"remaining\"]",
+        "[name=\"construct-distribution\"][value=\"thirds\"]",
+        "[data-construct-submit]"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "normal-reference-and-validation",
+      "actions": [
+        "#q3-a-solution>summary"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "normal-reference-reopen",
+      "actions": [],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "all-main-branches-and-links",
+      "actions": [
+        "[data-dt-activity=\"population-recall\"] [data-dt-control=\"flash-flip\"]",
+        "[data-dt-activity=\"population-recall\"] [data-dt-control=\"flash-good\"]",
+        "[data-dt-activity=\"ex-pop-a-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"ex-pop-a-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"ex-pop-b-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"ex-pop-b-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"ex-pop-c-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"ex-pop-c-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"statistic-known\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"statistic-known\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"ex-stat-a-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"ex-stat-a-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"ex-stat-b-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"ex-stat-b-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"distribution-recall\"] [data-dt-control=\"flash-flip\"]",
+        "[data-dt-activity=\"distribution-recall\"] [data-dt-control=\"flash-good\"]",
+        "[data-dt-activity=\"main-reverse\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"main-reverse\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"main-equal\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"main-equal\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"ex-max-a-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"ex-max-a-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"ex-max-b-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"ex-max-b-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"main-weight\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"main-weight\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q1-a-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q1-a-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q1-b-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q1-b-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q1-c-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q1-c-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q2-a-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q2-a-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q2-b-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q2-b-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q2-c-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q2-c-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q4-a-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q4-a-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"q4-b-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"q4-b-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"repair-equal-q-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"repair-equal-q-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"repair-reverse-q-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"repair-reverse-q-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"repair-weight-q-answer\"] input[type=\"radio\"]",
+        "[data-dt-activity=\"repair-weight-q-answer\"] [data-dt-control=\"submit\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-flip\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-good\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-next\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-flip\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-good\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-next\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-flip\"]",
+        "[data-dt-activity=\"final-recall\"] [data-dt-control=\"flash-good\"]",
+        "[data-construct-hint]",
+        "[data-construct-skip]",
+        "[data-open-all]",
+        "[data-report-refresh]",
+        "[data-report-next]",
+        "[data-report-construction]",
+        "[data-report-memory]"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    },
+    {
+      "name": "storage-unavailable",
+      "actions": [
+        "[name=\"construct-path\"][value=\"AB\"]",
+        "[name=\"construct-path\"][value=\"AC\"]",
+        "[name=\"construct-path\"][value=\"BA\"]",
+        "[name=\"construct-path\"][value=\"BC\"]",
+        "[name=\"construct-path\"][value=\"CA\"]",
+        "[name=\"construct-path\"][value=\"CB\"]",
+        "[name=\"construct-map\"][data-map-path=\"AB\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"AC\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"BA\"] = 2",
+        "[name=\"construct-map\"][data-map-path=\"BC\"] = 7",
+        "[name=\"construct-map\"][data-map-path=\"CA\"] = 5",
+        "[name=\"construct-map\"][data-map-path=\"CB\"] = 7",
+        "[name=\"construct-reason\"][value=\"remaining\"]",
+        "[name=\"construct-distribution\"][value=\"thirds\"]",
+        "[data-construct-submit]",
+        "[data-construct-skip]",
+        "[data-open-all]"
+      ],
+      "errors": [],
+      "requested": [
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        },
+        {
+          "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+          "bytes": 122271,
+          "frameId": "main-wr-overview"
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+      "bytes": 122271,
+      "frameId": "main-wr-overview"
+    },
+    {
+      "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+      "bytes": 122271,
+      "frameId": "main-wr-overview"
+    },
+    {
+      "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+      "bytes": 122271,
+      "frameId": "main-wr-overview"
+    },
+    {
+      "hash": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+      "bytes": 123557,
+      "frameId": "main-wr-AA-paths"
+    },
+    {
+      "hash": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+      "bytes": 123557,
+      "frameId": "main-wr-AA-paths"
+    },
+    {
+      "hash": "b6fc94bd391bc9308271563f04a30d9c5a140cd2c37738d938f0796ded7a9a76",
+      "bytes": 102966,
+      "frameId": "main-wr-AA-mapping"
+    },
+    {
+      "hash": "69d12d63a3d86c93c5c855b6fc80fd9033e1465a9a27bb43ef779d3a079514be",
+      "bytes": 103136,
+      "frameId": "main-wr-AA-grouping"
+    },
+    {
+      "hash": "797aca223a6464616598fb685e5d77547fd176381bf1fcc174fd5baa9ea5c3cc",
+      "bytes": 105593,
+      "frameId": "main-wr-AB-grouping"
+    },
+    {
+      "hash": "f156c12ab9d868d726cad637475c093828b07ae9d93d11a786264c617b49f747",
+      "bytes": 123506,
+      "frameId": "main-wr-AB-paths"
+    },
+    {
+      "hash": "896fbf8d6b2ec691445c13e3d30a3ac81962a658bec4b9e0937ef99955325e5f",
+      "bytes": 103072,
+      "frameId": "main-wr-AB-mapping"
+    },
+    {
+      "hash": "797aca223a6464616598fb685e5d77547fd176381bf1fcc174fd5baa9ea5c3cc",
+      "bytes": 105593,
+      "frameId": "main-wr-AB-grouping"
+    },
+    {
+      "hash": "99dc0fb3faa04aa471c23ac733b7edc12b2623ecbade393e4a74e988713f383e",
+      "bytes": 108566,
+      "frameId": "main-wr-AC-grouping"
+    },
+    {
+      "hash": "87ab7ea2607ac17658d620bf1896390bd3286b053b36a1aa67be79d11501cf77",
+      "bytes": 123439,
+      "frameId": "main-wr-AC-paths"
+    },
+    {
+      "hash": "def525bb799ea18326b397257ff07ccb10e99fbef5b38f76728cfb75cf933d12",
+      "bytes": 104530,
+      "frameId": "main-wr-AC-mapping"
+    },
+    {
+      "hash": "99dc0fb3faa04aa471c23ac733b7edc12b2623ecbade393e4a74e988713f383e",
+      "bytes": 108566,
+      "frameId": "main-wr-AC-grouping"
+    },
+    {
+      "hash": "3957e002f231887ad85d06d13ad42077c0f016625a314c03eda37f587f638cd2",
+      "bytes": 105609,
+      "frameId": "main-wr-BA-grouping"
+    },
+    {
+      "hash": "d7be2197e3c55feb5f98efc8079ae70f69cf1d6d72deb90a0c50759279d42ca5",
+      "bytes": 123553,
+      "frameId": "main-wr-BA-paths"
+    },
+    {
+      "hash": "d73bed06180c02ab6eb9ed8fa604fb6e8ec8d1f36c4fbf07743bb6fde016bb1e",
+      "bytes": 103123,
+      "frameId": "main-wr-BA-mapping"
+    },
+    {
+      "hash": "3957e002f231887ad85d06d13ad42077c0f016625a314c03eda37f587f638cd2",
+      "bytes": 105609,
+      "frameId": "main-wr-BA-grouping"
+    },
+    {
+      "hash": "ca82e5d6d7bb7c263483f402527694b2316954ed6a7ed67a04c55c83111fa955",
+      "bytes": 108013,
+      "frameId": "main-wr-BB-grouping"
+    },
+    {
+      "hash": "a3302d4b5d91320f4be44233a543ebfa72e03e5ac57479a2513cdf6b6dd3d08b",
+      "bytes": 123502,
+      "frameId": "main-wr-BB-paths"
+    },
+    {
+      "hash": "fddc6f8226c0b67a5027088453aa08ea6aa4c65ac1465704a36d1e560896019a",
+      "bytes": 100301,
+      "frameId": "main-wr-BB-mapping"
+    },
+    {
+      "hash": "ca82e5d6d7bb7c263483f402527694b2316954ed6a7ed67a04c55c83111fa955",
+      "bytes": 108013,
+      "frameId": "main-wr-BB-grouping"
+    },
+    {
+      "hash": "2e08b7a87b17822c582b4e00bcb8722180fb6769f17a2e4ef3150227d66eff15",
+      "bytes": 105226,
+      "frameId": "main-wr-BC-grouping"
+    },
+    {
+      "hash": "113b1dd80f056f90afcb6e288a7b71139650b5154fe00f101761507206ee6dc1",
+      "bytes": 123435,
+      "frameId": "main-wr-BC-paths"
+    },
+    {
+      "hash": "8165545f05c720b9040641eb4503c26d3150442a3d6c1034c5df59e823d4a37b",
+      "bytes": 103853,
+      "frameId": "main-wr-BC-mapping"
+    },
+    {
+      "hash": "2e08b7a87b17822c582b4e00bcb8722180fb6769f17a2e4ef3150227d66eff15",
+      "bytes": 105226,
+      "frameId": "main-wr-BC-grouping"
+    },
+    {
+      "hash": "1413fc7b5b37729aa5e1df77b12d89c3ae3185c55cc982053337e2acfea15807",
+      "bytes": 108552,
+      "frameId": "main-wr-CA-grouping"
+    },
+    {
+      "hash": "2dc6c8495ef990877c2dc8daa136f19d110d65d974d6540a88596da5e845f391",
+      "bytes": 123618,
+      "frameId": "main-wr-CA-paths"
+    },
+    {
+      "hash": "b14a0edf0387584ed51fd2960867d2aaa3f7487f86099d3c92776353fca2f5a0",
+      "bytes": 104576,
+      "frameId": "main-wr-CA-mapping"
+    },
+    {
+      "hash": "1413fc7b5b37729aa5e1df77b12d89c3ae3185c55cc982053337e2acfea15807",
+      "bytes": 108552,
+      "frameId": "main-wr-CA-grouping"
+    },
+    {
+      "hash": "97152586a507dce8d978e0e97c6eb1724f05e6a6ddd6b8ef87043a7ef4291eb8",
+      "bytes": 105213,
+      "frameId": "main-wr-CB-grouping"
+    },
+    {
+      "hash": "6f392c6f94c9fb9e2b59a149d82172fa4df39a603b7cb20a28f7c05dfd22c25f",
+      "bytes": 123561,
+      "frameId": "main-wr-CB-paths"
+    },
+    {
+      "hash": "940a835c4631e532d75333c2315bcd2e8c244bf6deb2f41ed0dcf43be62febb6",
+      "bytes": 103891,
+      "frameId": "main-wr-CB-mapping"
+    },
+    {
+      "hash": "97152586a507dce8d978e0e97c6eb1724f05e6a6ddd6b8ef87043a7ef4291eb8",
+      "bytes": 105213,
+      "frameId": "main-wr-CB-grouping"
+    },
+    {
+      "hash": "7439b84efc221cc6b912837abb5e011cdf8e78c7ea41edc49d15cd2c62a42ca2",
+      "bytes": 102739,
+      "frameId": "main-wr-CC-grouping"
+    },
+    {
+      "hash": "93c56123ac1186ece3be498b09fe616c13192dba2e10474f93856f03f3dde1c9",
+      "bytes": 123490,
+      "frameId": "main-wr-CC-paths"
+    },
+    {
+      "hash": "d0a11e8cbb293a7a5536fdd54ab9b686d9d6b0e371abeb73e6be7653b8c21a47",
+      "bytes": 106429,
+      "frameId": "main-wr-CC-mapping"
+    },
+    {
+      "hash": "7439b84efc221cc6b912837abb5e011cdf8e78c7ea41edc49d15cd2c62a42ca2",
+      "bytes": 102739,
+      "frameId": "main-wr-CC-grouping"
+    },
+    {
+      "hash": "88cdd7876c57423eeda400325f5aa299667cf21aabd84936322033d4bbb6efeb",
+      "bytes": 142055,
+      "frameId": "main-nr-overview"
+    },
+    {
+      "hash": "8858f23482328e3b94b7af1bf73680bc04b80fbf10226312db82fe04eaaf8c5a",
+      "bytes": 143391,
+      "frameId": "main-nr-AB-paths"
+    },
+    {
+      "hash": "8858f23482328e3b94b7af1bf73680bc04b80fbf10226312db82fe04eaaf8c5a",
+      "bytes": 143391,
+      "frameId": "main-nr-AB-paths"
+    },
+    {
+      "hash": "474f94519caed3bbb20d4f758f5010ab200a0bfefbed4c2fcb7ac631ff69eaaf",
+      "bytes": 104065,
+      "frameId": "main-nr-AB-mapping"
+    },
+    {
+      "hash": "ea96ee23186a5f599f46875b794058e544fe0a56efe0674e8fad2ad504fbad15",
+      "bytes": 102207,
+      "frameId": "main-nr-AB-grouping"
+    },
+    {
+      "hash": "efda679bb6b83836cfb7232284727800f5b61d7de39b1d8f4ad2342b54159b21",
+      "bytes": 102940,
+      "frameId": "main-nr-AC-grouping"
+    },
+    {
+      "hash": "8ad63563fe53d659c43927dbad32f8ff8681c7879f0a551665a73eceb209e522",
+      "bytes": 143311,
+      "frameId": "main-nr-AC-paths"
+    },
+    {
+      "hash": "d404106ffc4889ceae9994a9c98fbd55bd66980496305cb8c87bcc514972481b",
+      "bytes": 105525,
+      "frameId": "main-nr-AC-mapping"
+    },
+    {
+      "hash": "efda679bb6b83836cfb7232284727800f5b61d7de39b1d8f4ad2342b54159b21",
+      "bytes": 102940,
+      "frameId": "main-nr-AC-grouping"
+    },
+    {
+      "hash": "6b7714b69a8cb0f42ab2937092255593667225bcfd931852ec73b3a41362e361",
+      "bytes": 102221,
+      "frameId": "main-nr-BA-grouping"
+    },
+    {
+      "hash": "cd43768bba0836defaf9db9136d6eeb2b2bd77c15e421bec275fed8c8452a348",
+      "bytes": 143168,
+      "frameId": "main-nr-BA-paths"
+    },
+    {
+      "hash": "e28e7473bbd792ca831b8b6bedf4b0659ca75db0d6eb5b2d7ecf4f5500ac2097",
+      "bytes": 104114,
+      "frameId": "main-nr-BA-mapping"
+    },
+    {
+      "hash": "6b7714b69a8cb0f42ab2937092255593667225bcfd931852ec73b3a41362e361",
+      "bytes": 102221,
+      "frameId": "main-nr-BA-grouping"
+    },
+    {
+      "hash": "9df29862d52418fcdaf463a8a33aa30c5f70162dd42a2db5eca5ac43945958f0",
+      "bytes": 101850,
+      "frameId": "main-nr-BC-grouping"
+    },
+    {
+      "hash": "acbdbdde7c6d8d50a6fa0ea828e1435858705576d1bd995f79da375c0d299371",
+      "bytes": 143063,
+      "frameId": "main-nr-BC-paths"
+    },
+    {
+      "hash": "a2d706328fa132797cb0e9d35e52726091aa47e245f6215f48e5833f60e4cfbb",
+      "bytes": 104841,
+      "frameId": "main-nr-BC-mapping"
+    },
+    {
+      "hash": "9df29862d52418fcdaf463a8a33aa30c5f70162dd42a2db5eca5ac43945958f0",
+      "bytes": 101850,
+      "frameId": "main-nr-BC-grouping"
+    },
+    {
+      "hash": "315a8dbdc041e9530733a5d95621b0c03a0a062e9a6cd31f4a5c3dcb94d189ef",
+      "bytes": 102926,
+      "frameId": "main-nr-CA-grouping"
+    },
+    {
+      "hash": "8b5dd44d4cf764bed1ae3976e4fb0be90cd66300ea0d0aa989e2ba6c098fb41f",
+      "bytes": 143433,
+      "frameId": "main-nr-CA-paths"
+    },
+    {
+      "hash": "2e3ecdf111da184c52ee4e0846b688e09017ec93b4cae414c7eb7ff6e4264a0a",
+      "bytes": 105570,
+      "frameId": "main-nr-CA-mapping"
+    },
+    {
+      "hash": "315a8dbdc041e9530733a5d95621b0c03a0a062e9a6cd31f4a5c3dcb94d189ef",
+      "bytes": 102926,
+      "frameId": "main-nr-CA-grouping"
+    },
+    {
+      "hash": "348661ae6c7e6066cf387f31d50467cfcfc32f4b58c925c2625e59b542a657df",
+      "bytes": 101837,
+      "frameId": "main-nr-CB-grouping"
+    },
+    {
+      "hash": "658df43dc0411ae5b56cdfd7234012384e95240b5408242763b243936b143e9f",
+      "bytes": 143406,
+      "frameId": "main-nr-CB-paths"
+    },
+    {
+      "hash": "ef09bd4baf9cb81b12d0713166871016929058dbeefc1db720419dfa9f258c2c",
+      "bytes": 104882,
+      "frameId": "main-nr-CB-mapping"
+    },
+    {
+      "hash": "348661ae6c7e6066cf387f31d50467cfcfc32f4b58c925c2625e59b542a657df",
+      "bytes": 101837,
+      "frameId": "main-nr-CB-grouping"
+    },
+    {
+      "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+      "bytes": 122271,
+      "frameId": "main-wr-overview"
+    },
+    {
+      "hash": "5282f617a4bbd03a188f48ad1e5b0ed990db23ef9bd1bfefcd641f80f63bac9b",
+      "bytes": 123557,
+      "frameId": "main-wr-AA-paths"
+    },
+    {
+      "hash": "88cdd7876c57423eeda400325f5aa299667cf21aabd84936322033d4bbb6efeb",
+      "bytes": 142055,
+      "frameId": "main-nr-overview"
+    }
+  ],
+  "limitations": [
+    "jsdom does not complete image decoding/load here; explorer onload commit/display and image-load race NOT tested",
+    "No real browser layout, Tab traversal, media playback or mobile/learner evidence"
+  ],
+  "inlineScripts": [
+    {
+      "id": "dt-lesson",
+      "widget": null,
+      "type": "application/json",
+      "bytes": 10400434,
+      "sha256": "9891ccb3461d0421404af3249d6663e48e6da8218e4bade6f6e87fdd68291978"
+    },
+    {
+      "id": "dt-runtime",
+      "widget": null,
+      "type": "",
+      "bytes": 102358,
+      "sha256": "860b7671d276bc263e3f062ad669e761b2b45937c85bbf7e4f5a6a18b7d0ce60"
+    },
+    {
+      "id": "",
+      "widget": "preimage-four",
+      "type": "",
+      "bytes": 8359957,
+      "sha256": "067a8124d3147fee80f1ebfad041426a913e8652f20e989441fb17a36d0754b4"
+    },
+    {
+      "id": "",
+      "widget": "sampling-explorer",
+      "type": "",
+      "bytes": 77,
+      "sha256": "0e21983dc1bab26ea7b3192a5aa6ea58fb1fa8087b24aace7e7d468449d473bd"
+    },
+    {
+      "id": "",
+      "widget": "construction-four",
+      "type": "",
+      "bytes": 77,
+      "sha256": "0e21983dc1bab26ea7b3192a5aa6ea58fb1fa8087b24aace7e7d468449d473bd"
+    }
+  ],
+  "staticImages": [
+    {
+      "hash": "a9d7a439297c15c880174214d2371c0dd2fe81403199ba0fe8d3db7def5e929f",
+      "frameId": "main-wr-overview",
+      "alt": "主条件的 3×3 身份路径矩阵。蓝圆标第一次观测，紫方标第二次观测；每个格子是一条完整两抽路径。",
+      "hidden": false
+    },
+    {
+      "hash": "6101536b264b4f1100f0299425ba05dae2f2dad90ea86eb4b917835724883dc1",
+      "frameId": "main-wr-distribution",
+      "alt": "完整抽样分布：柱高是精确概率。中间均值 4 的三条来路对应九分之三，约分后为三分之一。",
+      "hidden": false
+    },
+    {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "frameId": null,
+      "alt": "当前选择的真实 Manim 画面",
+      "hidden": true
+    },
+    {
+      "hash": "48da9be750d2c0c3341a2f66edb16953efc9b02eb94f3b011f9623c23652b7c9",
+      "frameId": "example-max-distribution",
+      "alt": "最大值的完整抽样分布：1 小时一条来路，5 小时三条来路。",
+      "hidden": false
+    },
+    {
+      "hash": "88cdd7876c57423eeda400325f5aa299667cf21aabd84936322033d4bbb6efeb",
+      "frameId": "main-nr-overview",
+      "alt": "不放回后，只有同一身份的对角格消失；第二抽的权重也随剩余数量改变。",
+      "hidden": false
+    },
+    {
+      "hash": "944dfe80c21a6a4e46f9fa1f8851548c3c42ad76011829e77276f30c7bf989be",
+      "frameId": "main-nr-distribution",
+      "alt": "不放回主条件的完整分布：3、4、5 天各有两条来路，各占三分之一。",
+      "hidden": false
+    },
+    {
+      "hash": "73ccb3130b2d0586d4d76313ae03c709c7ab7c51a1b97f352dc04648878d73b6",
+      "frameId": "construct-distribution",
+      "alt": "Q3 新条件的完整分布，与本小问归组行属于同一参考块。",
+      "hidden": false
+    },
+    {
+      "hash": "5ab9bdeb69c5ca7dbd581e6b34bb86630e3febe2844e7c1d8b405278c4782067",
+      "frameId": "duplicates-distribution",
+      "alt": "Q4 的0均值来自AB、BA；3均值来自AC、CA、BC、CB。身份权重保留，重复数值按全部原像汇总。",
+      "hidden": false
+    },
+    {
+      "hash": "40e5967cf27c215970078c7129524fe964172ff7949d539c948fe36e6a32ef1b",
+      "frameId": "repair-equal-distribution",
+      "alt": "本分支新问题的完整抽样分布。精确柱高与同块的归组推导使用同一份有理数数据。",
+      "hidden": false
+    },
+    {
+      "hash": "85b8daea2546952d881788871d0d10268811520c8b0664e2548ea644442f9967",
+      "frameId": "repair-reverse-distribution",
+      "alt": "本分支新问题的完整抽样分布。精确柱高与同块的归组推导使用同一份有理数数据。",
+      "hidden": false
+    },
+    {
+      "hash": "baeb26eb1ebc122c53d3bab7043734532bd8752cb9e55f61d9b94386a7b053fe",
+      "frameId": "repair-weight-distribution",
+      "alt": "本分支新问题的完整抽样分布。精确柱高与同块的归组推导使用同一份有理数数据。",
+      "hidden": false
+    }
+  ],
+  "reportText": "当前记录：无辅助且正确的客观选择 19 次；闪卡自评 5 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。",
+  "storageStatus": "已跳过并展开完整参考；没有生成作答，也没有记为答错。",
+  "summary": {
+    "checks": 146,
+    "passed": 140,
+    "failed": [
+      "P09/static-images-match",
+      "P05/preimage-synchronous-reference",
+      "P06/immediate-reference-import-union",
+      "P06/immediate-reopen-reference-preserved",
+      "P07/revealed-detail-restored",
+      "P07/reject-or-reset-foreign-component-state"
+    ],
+    "scenarios": 11
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "candidateSnapshot": "correction-run-02-skill-candidate-hashes.json",
+  "hashVerification": [
+    {
+      "file": "SKILL.md",
+      "sha256": "e189f73e9415e6b29903cd6e946caea7ee9718a479b8ec021bcc0c6a130f63a5",
+      "matchesCandidate": true,
+      "lines": 2293
+    },
+    {
+      "file": "agents/openai.yaml",
+      "sha256": "06b14645228df86b8346f5b9cbe4ac957c5eb416f280a49240c26e72ff9ba07c",
+      "matchesCandidate": true,
+      "lines": 4
+    },
+    {
+      "file": "assets/interactive/lesson-runtime.css",
+      "sha256": "7d99b9a3216d08d0d976549c1a9484dd2a4df0538ced785f48b7b98ce60cbee3",
+      "matchesCandidate": true,
+      "lines": 442
+    },
+    {
+      "file": "assets/interactive/lesson-runtime.js",
+      "sha256": "b16a6f702fbf8217b60ccba6a9782c011a92e017726416b01c2597e24c02fa45",
+      "matchesCandidate": true,
+      "lines": 1426
+    },
+    {
+      "file": "examples/s2-interactive.json",
+      "sha256": "6bd84cf02e5631e49ee27208c702b6cde44a3d4069a0e5e28d6c6d3487f0f9b5",
+      "matchesCandidate": true,
+      "lines": 775
+    },
+    {
+      "file": "examples/s2-source.html",
+      "sha256": "7fa0e4118214a57a46c0ebce3248df87ab9bc51c1db0bb361b9917f48ed82e48",
+      "matchesCandidate": true,
+      "lines": 1490
+    },
+    {
+      "file": "references/deeptutor-provenance.md",
+      "sha256": "695e62cb74fdba9c0cc026a3d00a018247a844620c6bfabcbc7bb6b074ee1f23",
+      "matchesCandidate": true,
+      "lines": 150
+    },
+    {
+      "file": "references/engagement-and-narrative.md",
+      "sha256": "5cc41f6c99f3e02f91c6ec2d610d0be7f270302a77aa4c5aad1fd03528bb9cd2",
+      "matchesCandidate": true,
+      "lines": 115
+    },
+    {
+      "file": "references/expert-review.md",
+      "sha256": "940674723145616418ca77a92abec5ad93fdb4a8c996ef81d03cf596dba17d2f",
+      "matchesCandidate": true,
+      "lines": 43
+    },
+    {
+      "file": "references/generation-checks.md",
+      "sha256": "86661c5c58a6fb3f0b74d8080f31783b518d54b5427d81f64bbd31ac4d30a8e2",
+      "matchesCandidate": true,
+      "lines": 51
+    },
+    {
+      "file": "references/interactive-html.md",
+      "sha256": "79f7277d9a3d5ed8c858184bf3154c0f02eed3769f2ff6931bfe8d283a0e8f71",
+      "matchesCandidate": true,
+      "lines": 484
+    },
+    {
+      "file": "references/learning-evidence.md",
+      "sha256": "d6e77c4d91439580f16bdd577c7ecf1c83e56828e911193c2930299a82ec1a65",
+      "matchesCandidate": true,
+      "lines": 101
+    },
+    {
+      "file": "references/modes-and-explanations.md",
+      "sha256": "5fe1ffd1a0dfae205cdfd532108fb2b3a55ba43ee39ee91df4d0b50922d23fa3",
+      "matchesCandidate": true,
+      "lines": 26
+    },
+    {
+      "file": "references/teaching-design.md",
+      "sha256": "310b8893ca85dcaa4b066739989026feb5f079bb3312c88b69e0c0ac5d387ff9",
+      "matchesCandidate": true,
+      "lines": 61
+    },
+    {
+      "file": "references/visual-design.md",
+      "sha256": "95b4e7dd6d2457805da2b28ba0ec9eabe42b2a86d5ddd9fa4981fa6dc8a590cd",
+      "matchesCandidate": true,
+      "lines": 62
+    },
+    {
+      "file": "references/数学的冲突读法.md",
+      "sha256": "c6d7d865543b1308d74aec7819f779ea01e236f84728eb01ebe1d98cd51af984",
+      "matchesCandidate": true,
+      "lines": 123
+    },
+    {
+      "file": "references/统计术语中英对照.md",
+      "sha256": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+      "matchesCandidate": true,
+      "lines": 41
+    },
+    {
+      "file": "references/考纲与考试局.md",
+      "sha256": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+      "matchesCandidate": true,
+      "lines": 190
+    },
+    {
+      "file": "scripts/build_lesson.py",
+      "sha256": "74957acf9cbdd8b1d8a39b0d5ce77a94e9a8219ea140d799c2506808859e25d8",
+      "matchesCandidate": true,
+      "lines": 600
+    }
+  ],
+  "readCoverage": {
+    "references/generation-checks.md": "full continuous read",
+    "references/visual-design.md": "full continuous read",
+    "SKILL.md": "all candidate diff versus 2684 plus references route context",
+    "references/interactive-html.md": "all candidate diff and affected media/recovery contract context",
+    "references/expert-review.md": "all candidate diff",
+    "assets/interactive/lesson-runtime.js": "not reviewed; delegated to other reviewer; hash verification only"
+  },
+  "targetedAmendment": {
+    "hashChanges": [
+      {
+        "file": "references/interactive-html.md",
+        "oldSha256": "79f7277d9a3d5ed8c858184bf3154c0f02eed3769f2ff6931bfe8d283a0e8f71",
+        "newSha256": "8829005b923cab403f9aa98399d077f57a36b1c23bb55133ee920de453a7614b"
+      }
+    ],
+    "other18FilesUnchanged": true,
+    "readCoverage": "Read affected helper and condition-history clarification lines 240–272; confirm media requested/displayed contract and visual files unchanged in intent.",
+    "disposition": "Visual approval retained; no new C/I/M in scope."
+  }
+}

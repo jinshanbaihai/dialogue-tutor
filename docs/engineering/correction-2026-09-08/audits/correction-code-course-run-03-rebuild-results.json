@@ -1,0 +1,6 @@
+{
+  "original": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "rebuilt": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "byteEqual": true,
+  "command": "python repo/plugins/dialogue-tutor/skills/dialogue-tutor/scripts/build_lesson.py --lesson generation/correction-run-03/lesson.json --output reviews/correction-code-course-run-03-rebuilt.html"
+}

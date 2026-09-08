@@ -1,0 +1,143 @@
+diff --git a/plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md b/plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md
+index 6a04a40..7462e1e 100644
+--- a/plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md
++++ b/plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md
+@@ -54,6 +54,8 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
+ 
+ 先核算题目、条件、图形与答案，再检查首次作答、预测冻结、提示、揭示、重试、分支、复习、刷新恢复、导出导入和窄屏布局。正文与图示的实际字号和明暗配色分别检查；数学表达使用 MathML 或已有可工作的数学排版方案。
+ 
++自定义预测必须保留导入旧记录前已经发生的参考接触；结果与收束文案逐句对应实际数值、阶段和学习者事件。具体失败路径与生成配方见交互、参与与叙事参考，不能用揭示页面代替本人推理记录。
++
+ 当用户要求专家评审时，执行 [expert-review.md](references/expert-review.md)：专家先审核技能，再使用技能从空白生成课程；课程被退回时，先修订技能提示词，再重新生成并复审。记录产物、版本、具体意见及裁定，不能用“专家同意”代替证据。普通短回合不启动整套评审。
+ 
+ 最终自查：没有占位内容、没有冲突规则、范围明确、句子没有两种实质解释。检查发现的问题逐项修正。模型专家可审查设计、数学与交互；真实保持和迁移效果由实际学习记录检验。
+diff --git a/plugins/dialogue-tutor/skills/dialogue-tutor/references/engagement-and-narrative.md b/plugins/dialogue-tutor/skills/dialogue-tutor/references/engagement-and-narrative.md
+index 949e7db..5475bfd 100644
+--- a/plugins/dialogue-tutor/skills/dialogue-tutor/references/engagement-and-narrative.md
++++ b/plugins/dialogue-tutor/skills/dialogue-tutor/references/engagement-and-narrative.md
+@@ -31,6 +31,8 @@
+ 
+ 首屏标题、lead、图形初态、默认选项、按钮、可访问文字和伴读前行轨，均不提前给出本轮探索要验证的结果。学习者主动查阅全解仍然开放；组件如实显示已经获得参考，不假装仍是未接触答案的预测。
+ 
++首版实测中，先看全解再导入旧记录会抹掉组件的参考标识。自定义探索按 [interactive-html.md](interactive-html.md) 的参考接触配方合并运行时记录与当前全解状态；提交新预测时同步冻结辅助快照。初始化、恢复和普通导航不产生新的学习动作。
++
+ ## 挑战节奏与胜任反馈
+ 
+ 任务开始时提供能承担的选择；随后逐步增加需要协调的关系。完整示例、局部补全、独立新题与改变条件的挑战构成递进。只增加数字大小而没有增加当前目标的要求，不算新的难度设计。
+@@ -52,10 +54,26 @@
+ 
+ 开场只保留一个当前可回答的问题，结尾用实际证据回应这个问题。正确预测与相反预测收到不同、如实的回应；未提交预测的人不会看到“你原来以为”。叙事惊喜来自发现数学结构，不通过修改抽样机制、概率权重、未知参数或题目条件制造反转。
+ 
++结果文案由当前计算结果和真实阶段共同决定。首版在样本量改为 1、两个概率相等时仍提示“找出这个差异”，而先看全解再直接揭示仍称“首次观察”。比较反馈至少覆盖小于、等于、大于三个实际关系；相等时解释为什么相等。未揭示、已揭示、已接触参考分别显示对应时态；“首次”“再次”须有该动作的记录。不能只根据预测答案是否正确套用一段含固定关系的结语。
++
+ ## 收束与再次进入
+ 
+ 最后一项任务不只给“已到最后一项”。作者可以生成一项 `interactive` 收束活动，在 `dt:activity-mounted`、`dt:restore` 或 `dt:navigate` 到达该活动时，读取 `DialogueTutor.instance.getState()`，按活动标题显示本次真实证据与尚可验证的目标。自评、辅助和独立客观结果分别标明；仅凭进入结尾不称全章完成。
+ 
++首版只检查 `revealedAt` 就称学习者亲自把样本映射、合并路径；直接观察结果的人也收到这句话。收束逐条选择实际事件能够支持的动词：
++
++| 实际证据 | 可以写入收束的内容 |
++| --- | --- |
++| 只揭示或查看结果 | “已查看样本与统计量的对应”，不能说本人完成计算或合并 |
++| 学习者主动选择了一条路径 | “选择查看了这条路径”；默认选中项和导入参数不算主动选择 |
++| 运行随机抽样，保存次数与结果 | “运行了几次抽样”，仍不代表本人推导出分布 |
++| 实际提交了计算、归组或解释 | 描述提交内容及可核验结果；开放题自评仍标为自评 |
++| 没有相应事件 | 指明可做的下一项任务，不以展示内容代替本人经历 |
++
++作者先列“收束句→支撑字段→触发条件”的对应，再实现动态叙述。揭示时间、页面位置、默认参数不能代替作答证据；原预测与结果的关系必须保留正确、不一致、未预测和已获参考各自的口径。
++
++收束同时回答开场问题：用**当前轮条件→实际已显示的结果及关系→原判断身份→具名下一行动**连接。只把“你已经完成”改成“你看到了”，却不说明当前证据回答了什么，仍缺少呼应。尚未揭示者提供下一项可做的验证；已揭示者使用与本轮图表同一模型的结果，不能把默认条件的结论套到改变参数后的轮次。
++
+ 收束提供两项具名动作：一个改变条件的实际挑战，一个下次回忆的实际活动；目标 ID 确实存在。普通继续或浏览调用 `DialogueTutor.instance.navigate(activityId)`。回顾入口用 `DialogueTutor.getReviews(lesson,state,Date.now())` 取得该题的真实记录 `item`，调用 `DialogueTutor.instance.navigate(item.activityId,item)`，复用收起旧输入和答案的现有流程。只有到期记录标为到期；提前练习不能推进间隔。尚无复习记录时提供具名初次任务或继续未完成作答，不伪造 `item`、时间或分数。到期日期读取既有记录，不由叙事推进调度。
+ 
+ 回访先出现待提取问题，旧答案保持关闭；首次提交后才核对。若原题有未完成草稿或尚未自评的开放题，现有流程保留该工作，入口标为“继续未完成作答”，不称新的独立回忆。需要新的无提示尝试时按既有重试或到期复习流程进入，不把先前已揭示的结果包装成新证据。已有完成感来自具体能力与作品，不依靠积分重刷。
+@@ -65,3 +83,5 @@
+ 对一条核心路径分别留下预测一致、预测不一致、未预测/跳过和辅助修正记录，检查实际显示的证据、回应与可执行下一行动。改变条件后的挑战与前题确实不同，错误修复确实改变当前数学要求；场景不能只换名字。
+ 
+ 检查结尾与返回：收束没有凭空授予成就，回访入口确实存在并先呈现问题。专家记录活动 ID、输入、主要输出和裁定。真实学习者是否愿意回来仍由后续使用检验；模型专家的通过只覆盖已经操作和审查的设计。
++
++同时操作“仅揭示→结尾”“先全解→直接观察”“导入更早记录→提交新预测”和使比较量相等的参数。核查实际句子、辅助标识与记录一致，不用只走完整成功路径的结果代替这些检查。
+diff --git a/plugins/dialogue-tutor/skills/dialogue-tutor/references/expert-review.md b/plugins/dialogue-tutor/skills/dialogue-tutor/references/expert-review.md
+index fd1fb9a..8e90942 100644
+--- a/plugins/dialogue-tutor/skills/dialogue-tutor/references/expert-review.md
++++ b/plugins/dialogue-tutor/skills/dialogue-tutor/references/expert-review.md
+@@ -24,6 +24,15 @@
+ 5. 退回意见先转成技能中的具体修订，再重新生成。不能只修改输出 HTML 后报告技能已经通过。修改公共组件时同步说明技能生成契约如何变化。
+ 6. 保留每轮的技能版本、输入、可知模型标识、生成条件、产物摘要、测试结果和评审记录。只记录实际可获取的配置，不补造种子、温度或真实学习成绩。
+ 
++课程存在预测探索与动态收束时，实际检查增加以下已暴露风险；固定输入与输出写进记录：
++
++- 只揭示结果、没有模拟或作答便进入结尾，检查是否虚构学习者计算、归组或掌握。
++- 先导出未看参考的记录，再打开全解并导入旧记录，提交新预测；检查运行时、组件和显示的辅助口径，并检查打开全解后立即提交的时序。
++- 直接观察后以同条件开始新一轮，再判断须标明已见该结果；导入旧记录和刷新不擦除已发生的相关接触，改变条件不误标无关参考。
++- 改变参数使比较量相等，核对图、数值和叙述；首轮与重新开始都检查。
++- 先查看全解再直接观察，及揭示前后，检查“首次”“差异”“尚待揭示”等词是否符合实际阶段。
++- 图形说明所称的填色、轮廓与形状必须对应真实 SVG；视觉审核仍使用渲染后的截图。
++
+ 每份评审先列产物优点，再列 `Critical`、`Important`、`Minor`；意见包含具体位置、观察到的现象、影响及复查方法。主作者逐条复述并核对依据，采纳后说明改动；驳回时说明当前任务中不成立的原因。复审仅针对此前 Critical/Important 与对应改动，新增缺陷另行说明来源。
+ 
+ 通过需要无未解决 Critical/Important；Minor 逐条修正或记录裁定。专家通过只覆盖已经检查的技能与产物版本。流程进行到可交付状态；遇到外部访问或工具条件中断时保存具体剩余项目，不制造通过结论。
+diff --git a/plugins/dialogue-tutor/skills/dialogue-tutor/references/interactive-html.md b/plugins/dialogue-tutor/skills/dialogue-tutor/references/interactive-html.md
+index 9531e69..6f75027 100644
+--- a/plugins/dialogue-tutor/skills/dialogue-tutor/references/interactive-html.md
++++ b/plugins/dialogue-tutor/skills/dialogue-tutor/references/interactive-html.md
+@@ -183,13 +183,44 @@ document.dispatchEvent(new CustomEvent('dt:exploration', {
+ 
+ | 事件 | 使用方式 |
+ | --- | --- |
+-| `dt:activity-mounted` | 内容节点已经建立；此时查找本活动容器，绑定控件，并用 `detail.state` 恢复上次参数。空状态使用课程定义的初始值 |
+-| `dt:restore` | 学习记录已经导入；使用 `detail.state` 更新现有控件、图形和数值，不重复绑定事件处理器 |
++| `dt:activity-mounted` | `detail` 为 `{activityId,state}`，其中 `state` 只含该活动的 `exploration`。此时查找容器、绑定控件并恢复参数；空状态使用课程定义的初始值 |
++| `dt:restore` | 每个已挂载的 interactive 分别收到 `{activityId,state}`，`state` 同样只含该活动的 `exploration`。更新现有控件、图形和数值，不重复绑定事件处理器 |
+ | `dt:exploration` | 学习者改变参数后，由组件向 `document` 派发 `{activityId,state}`；`state` 是可序列化的普通对象 |
+ 
+ 恢复参数与计算图形共用同一条更新逻辑。恢复本身不制造新的参与动作；重置后同时更新控件、
+ 图形、数值和保存状态。脚本使用独立作用域，避免多个自定义活动重复声明同名变量。
+ 
++### 自定义预测中的参考接触
++
++首版探索只从 `dt:restore.detail.state` 恢复自己的 `referenceViewed`，导致“导出未看答案记录→查看全解→导入旧记录”抹掉辅助标识，尽管运行时仍保留该次参考接触。自定义字段不能覆盖运行时已经保留的事实。
++
++恢复时区分三类数据：参数与历史由 `exploration` 恢复；运行时辅助接触从 `DialogueTutor.instance.getState().activities[id].exposure` 读取；已提交预测的辅助快照保持提交时的值。`exposure.reference` 表示曾有参考接触，不自行宣称新的预测属于客观独立作答。
++
++对本页的新预测，冻结前同步检查关联全解当前是否展开，并合并运行时参考接触与组件已经观察到的接触。不能只等待异步 `toggle` 事件。可采用以下组件内函数；`id`、`solutionId`、`local` 使用本活动的实际变量：
++
++```javascript
++function hasReferenceContact() {
++  const saved = DialogueTutor.instance.getState().activities[id];
++  const panel = document.getElementById(solutionId);
++  return Boolean(local.referenceViewed ||
++    (saved.exposure && saved.exposure.reference) || (panel && panel.open));
++}
++function mergeReferenceAfterRestore() {
++  // 先恢复参数与历史再调用；恢复不新增操作记录。
++  local.referenceViewed = hasReferenceContact();
++}
++function freezeNewPredictionReference() {
++  // 仅由新预测的提交动作调用，不能在恢复或普通渲染时调用。
++  local.predictionHadReference = hasReferenceContact();
++}
++```
++
++组件有多个含答案入口时逐个关联并检查。界面分别描述“提交预测前是否看过参考”和“目前是否已查看参考”，避免提交后查阅倒改原预测，也避免导入旧参数抹掉本页已经发生的接触。
++
++实验结果本身也是接触来源。首版“直接观察→同条件新一轮”保存了历史，却没有在新判断中说明已见过相同结果。组件为已经揭示的结果保存题目与条件身份、揭示时间和来源；身份包括影响答案的总体、机制、参数及目标事件。恢复前保留本页已发生的结果接触，与导入记录合并，再判断新一轮的条件是否已见。参数、草稿可以回到旧状态，已经发生的接触不会随之撤销；刷新从已保存的接触记录恢复。该合并不新增模拟次数、作答或重新揭示事件。
++
++提交新预测时同时核对相关全解接触和该结果身份；同条件再判断明确标为已见结果后的检查。改变条件后，只有先前参考实际覆盖新条件时才连带标记。上面的函数示例适用于 `solutionId` 全解覆盖当前题目的情况；全解只覆盖部分条件时，作者需给出覆盖判断或拆分活动。结果接触与全解接触可分别显示，不把它们冒称提示按钮使用，也不倒改旧预测时点的快照。
++
+ ## 组装新页面
+ 
+ 从技能目录执行；输入和输出也可使用绝对路径：
+diff --git a/plugins/dialogue-tutor/skills/dialogue-tutor/references/visual-design.md b/plugins/dialogue-tutor/skills/dialogue-tutor/references/visual-design.md
+index e69834c..b8bdf02 100644
+--- a/plugins/dialogue-tutor/skills/dialogue-tutor/references/visual-design.md
++++ b/plugins/dialogue-tutor/skills/dialogue-tutor/references/visual-design.md
+@@ -36,6 +36,8 @@ SVG 的 `text` 显式使用 `fill: var(--dt-ink)` 或对应语义变量；坐标
+ 
+ 同一量在控件、公式、标注和图形中保持相同语义。正确与错误同时提供文字和符号信息；面积填充采用透明色时另配轮廓、纹理或清晰标名。不能只凭红绿或低对比透明区域传达答案。
+ 
++图例和文字分别核对实际 `fill`、`stroke` 与标记形状。首版把铜橙填充、墨色轮廓写成“铜橙色轮廓”；颜色描述须对应真正承担该作用的部分，例如“带墨色轮廓的铜橙色柱”。明暗主题改变色值时保持同一对象的语义，避免说明与 SVG 各写一套配色关系。
++
+ ## 页面构成配方
+ 
+ 首屏直接呈现当前任务。短标题、任务导航、必要场景与一项主要活动组成页面；收藏、笔记、复制上下文和技术来源进入“学习工具”。完整讲解通过具名入口展开，避免三层卡片继续压缩图形。

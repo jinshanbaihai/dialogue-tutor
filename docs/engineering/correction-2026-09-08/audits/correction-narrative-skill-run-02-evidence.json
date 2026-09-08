@@ -1,0 +1,304 @@
+{
+  "review": "narrative-skill-run-02",
+  "date": "2026-09-08",
+  "baseCommit": "2684c61d9651da4f3b117358e0e508900e09d827",
+  "scope": "targeted instruction review; no runtime execution or new HTML review",
+  "files": [
+    {
+      "file": "SKILL.md",
+      "sha256": "e189f73e9415e6b29903cd6e946caea7ee9718a479b8ec021bcc0c6a130f63a5",
+      "matchesSnapshot": true,
+      "lines": 2293
+    },
+    {
+      "file": "agents/openai.yaml",
+      "sha256": "06b14645228df86b8346f5b9cbe4ac957c5eb416f280a49240c26e72ff9ba07c",
+      "matchesSnapshot": true,
+      "lines": 4
+    },
+    {
+      "file": "assets/interactive/lesson-runtime.css",
+      "sha256": "7d99b9a3216d08d0d976549c1a9484dd2a4df0538ced785f48b7b98ce60cbee3",
+      "matchesSnapshot": true,
+      "lines": 442
+    },
+    {
+      "file": "assets/interactive/lesson-runtime.js",
+      "sha256": "b16a6f702fbf8217b60ccba6a9782c011a92e017726416b01c2597e24c02fa45",
+      "matchesSnapshot": true,
+      "lines": 1426
+    },
+    {
+      "file": "examples/s2-interactive.json",
+      "sha256": "6bd84cf02e5631e49ee27208c702b6cde44a3d4069a0e5e28d6c6d3487f0f9b5",
+      "matchesSnapshot": true,
+      "lines": 775
+    },
+    {
+      "file": "examples/s2-source.html",
+      "sha256": "7fa0e4118214a57a46c0ebce3248df87ab9bc51c1db0bb361b9917f48ed82e48",
+      "matchesSnapshot": true,
+      "lines": 1490
+    },
+    {
+      "file": "references/deeptutor-provenance.md",
+      "sha256": "695e62cb74fdba9c0cc026a3d00a018247a844620c6bfabcbc7bb6b074ee1f23",
+      "matchesSnapshot": true,
+      "lines": 150
+    },
+    {
+      "file": "references/engagement-and-narrative.md",
+      "sha256": "5cc41f6c99f3e02f91c6ec2d610d0be7f270302a77aa4c5aad1fd03528bb9cd2",
+      "matchesSnapshot": true,
+      "lines": 115
+    },
+    {
+      "file": "references/expert-review.md",
+      "sha256": "940674723145616418ca77a92abec5ad93fdb4a8c996ef81d03cf596dba17d2f",
+      "matchesSnapshot": true,
+      "lines": 43
+    },
+    {
+      "file": "references/generation-checks.md",
+      "sha256": "86661c5c58a6fb3f0b74d8080f31783b518d54b5427d81f64bbd31ac4d30a8e2",
+      "matchesSnapshot": true,
+      "lines": 51
+    },
+    {
+      "file": "references/interactive-html.md",
+      "sha256": "30fc6bf77c3d59f82724647cca78d20f547c000a95da37d712fa2f0e7a7717fc",
+      "matchesSnapshot": false,
+      "lines": 488
+    },
+    {
+      "file": "references/learning-evidence.md",
+      "sha256": "d6e77c4d91439580f16bdd577c7ecf1c83e56828e911193c2930299a82ec1a65",
+      "matchesSnapshot": true,
+      "lines": 101
+    },
+    {
+      "file": "references/modes-and-explanations.md",
+      "sha256": "5fe1ffd1a0dfae205cdfd532108fb2b3a55ba43ee39ee91df4d0b50922d23fa3",
+      "matchesSnapshot": true,
+      "lines": 26
+    },
+    {
+      "file": "references/teaching-design.md",
+      "sha256": "310b8893ca85dcaa4b066739989026feb5f079bb3312c88b69e0c0ac5d387ff9",
+      "matchesSnapshot": true,
+      "lines": 61
+    },
+    {
+      "file": "references/visual-design.md",
+      "sha256": "95b4e7dd6d2457805da2b28ba0ec9eabe42b2a86d5ddd9fa4981fa6dc8a590cd",
+      "matchesSnapshot": true,
+      "lines": 62
+    },
+    {
+      "file": "references/数学的冲突读法.md",
+      "sha256": "c6d7d865543b1308d74aec7819f779ea01e236f84728eb01ebe1d98cd51af984",
+      "matchesSnapshot": true,
+      "lines": 123
+    },
+    {
+      "file": "references/统计术语中英对照.md",
+      "sha256": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+      "matchesSnapshot": true,
+      "lines": 41
+    },
+    {
+      "file": "references/考纲与考试局.md",
+      "sha256": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+      "matchesSnapshot": true,
+      "lines": 190
+    },
+    {
+      "file": "scripts/build_lesson.py",
+      "sha256": "74957acf9cbdd8b1d8a39b0d5ce77a94e9a8219ea140d799c2506808859e25d8",
+      "matchesSnapshot": true,
+      "lines": 600
+    }
+  ],
+  "readCoverage": {
+    "SKILL.md": {
+      "continuousRanges": [
+        [
+          735,
+          790
+        ],
+        [
+          1420,
+          1538
+        ]
+      ],
+      "additionalCoverage": "full git diff against base, including generation-checks entry at line 79; prior approved full read not repeated"
+    },
+    "references/generation-checks.md": {
+      "continuousRanges": [
+        [
+          1,
+          51
+        ]
+      ]
+    },
+    "references/engagement-and-narrative.md": {
+      "continuousRanges": [
+        [
+          1,
+          115
+        ]
+      ]
+    },
+    "references/teaching-design.md": {
+      "continuousRanges": [
+        [
+          1,
+          61
+        ]
+      ]
+    },
+    "references/expert-review.md": {
+      "continuousRanges": [
+        [
+          1,
+          43
+        ]
+      ]
+    }
+  },
+  "verdict": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0,
+    "narrativeAllowsBlankGeneration": true,
+    "runtimeApprovalProvided": false,
+    "courseApprovalProvided": false
+  },
+  "hashMeasurements": {
+    "initial": "All 19 hashes independently matched the candidate snapshot in the first measurement.",
+    "savedEvidence": "The files array records the second measurement; interactive-html.md changed concurrently while the 18 other files still matched.",
+    "approvalScope": "Reviewed SKILL and four fully read references remain unchanged. Runtime/interactive interface changes are not signed by this reviewer."
+  },
+  "finalTargetedFollowup": {
+    "interactiveHtmlSha256": "8829005b923cab403f9aa98399d077f57a36b1c23bb55133ee920de453a7614b",
+    "readCoverage": "interactive-html.md full diff against 2684 plus continuous lines 238-276",
+    "files": [
+      {
+        "file": "SKILL.md",
+        "sha256": "e189f73e9415e6b29903cd6e946caea7ee9718a479b8ec021bcc0c6a130f63a5",
+        "lines": 2293,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "agents/openai.yaml",
+        "sha256": "06b14645228df86b8346f5b9cbe4ac957c5eb416f280a49240c26e72ff9ba07c",
+        "lines": 4,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "assets/interactive/lesson-runtime.css",
+        "sha256": "7d99b9a3216d08d0d976549c1a9484dd2a4df0538ced785f48b7b98ce60cbee3",
+        "lines": 442,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "assets/interactive/lesson-runtime.js",
+        "sha256": "b16a6f702fbf8217b60ccba6a9782c011a92e017726416b01c2597e24c02fa45",
+        "lines": 1426,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "examples/s2-interactive.json",
+        "sha256": "6bd84cf02e5631e49ee27208c702b6cde44a3d4069a0e5e28d6c6d3487f0f9b5",
+        "lines": 775,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "examples/s2-source.html",
+        "sha256": "7fa0e4118214a57a46c0ebce3248df87ab9bc51c1db0bb361b9917f48ed82e48",
+        "lines": 1490,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/deeptutor-provenance.md",
+        "sha256": "695e62cb74fdba9c0cc026a3d00a018247a844620c6bfabcbc7bb6b074ee1f23",
+        "lines": 150,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/engagement-and-narrative.md",
+        "sha256": "5cc41f6c99f3e02f91c6ec2d610d0be7f270302a77aa4c5aad1fd03528bb9cd2",
+        "lines": 115,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/expert-review.md",
+        "sha256": "940674723145616418ca77a92abec5ad93fdb4a8c996ef81d03cf596dba17d2f",
+        "lines": 43,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/generation-checks.md",
+        "sha256": "86661c5c58a6fb3f0b74d8080f31783b518d54b5427d81f64bbd31ac4d30a8e2",
+        "lines": 51,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/interactive-html.md",
+        "sha256": "8829005b923cab403f9aa98399d077f57a36b1c23bb55133ee920de453a7614b",
+        "lines": 487,
+        "unchangedFromSavedMeasurement": false
+      },
+      {
+        "file": "references/learning-evidence.md",
+        "sha256": "d6e77c4d91439580f16bdd577c7ecf1c83e56828e911193c2930299a82ec1a65",
+        "lines": 101,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/modes-and-explanations.md",
+        "sha256": "5fe1ffd1a0dfae205cdfd532108fb2b3a55ba43ee39ee91df4d0b50922d23fa3",
+        "lines": 26,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/teaching-design.md",
+        "sha256": "310b8893ca85dcaa4b066739989026feb5f079bb3312c88b69e0c0ac5d387ff9",
+        "lines": 61,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/visual-design.md",
+        "sha256": "95b4e7dd6d2457805da2b28ba0ec9eabe42b2a86d5ddd9fa4981fa6dc8a590cd",
+        "lines": 62,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/数学的冲突读法.md",
+        "sha256": "c6d7d865543b1308d74aec7819f779ea01e236f84728eb01ebe1d98cd51af984",
+        "lines": 123,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/统计术语中英对照.md",
+        "sha256": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+        "lines": 41,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "references/考纲与考试局.md",
+        "sha256": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+        "lines": 190,
+        "unchangedFromSavedMeasurement": true
+      },
+      {
+        "file": "scripts/build_lesson.py",
+        "sha256": "74957acf9cbdd8b1d8a39b0d5ce77a94e9a8219ea140d799c2506808859e25d8",
+        "lines": 600,
+        "unchangedFromSavedMeasurement": true
+      }
+    ],
+    "other18Unchanged": true,
+    "conclusion": "No adverse narrative impact. C0/I0/M0 maintained; instruction approval only, no runtime execution or course approval."
+  }
+}

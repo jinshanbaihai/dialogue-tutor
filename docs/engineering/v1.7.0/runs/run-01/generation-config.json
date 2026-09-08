@@ -1,0 +1,91 @@
+{
+  "generatedAtUTC": "2026-09-07T13:25:49.932253+00:00",
+  "generatorRole": "/root/lesson_generator",
+  "exactBackendModelIdentifier": null,
+  "modelConfigurationDisclosure": "Inherited parent configuration; exact model identifier, temperature, top_p and generation seed were not exposed to this executor. No model override or subagent was used.",
+  "temperature": null,
+  "topP": null,
+  "generationSeed": null,
+  "skillVersion": "DialogueTutor 1.7.0",
+  "skillCandidateCommitAsReportedByParent": "6191990",
+  "skillEntrySHA256": "212bc64529fb8f7e67d4c5f171ac0c182034257009606d9b0ce011dd7f5409ac",
+  "skillFilesActuallyRead": {
+    "SKILL.md": "212bc64529fb8f7e67d4c5f171ac0c182034257009606d9b0ce011dd7f5409ac",
+    "references/modes-and-explanations.md": "d8251c0f0357798bbc338130bc544ebfcd10b8bb2e10a79e04150f184c5e8f64",
+    "references/teaching-design.md": "1cf2d22da4db2cbd2ed979840d2505b02af015750f35f188fb914143db6b5c40",
+    "references/interactive-html.md": "c637d2a16c4c81d0eb072d13ae762b0b1cd92b831e4a62bc10b810f92ebc62e1",
+    "references/visual-design.md": "65a186f6b58284b978e093f2a13681e111f58a141ccf10f98696534fb2afbd56",
+    "references/engagement-and-narrative.md": "b1e437c840f74e42be7c67f9232f39215704a52cc5fb6b095251d53ee5d4ffe5",
+    "references/统计术语中英对照.md": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+    "references/考纲与考试局.md": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+    "references/expert-review.md": "a1b6645a8d8aabfb21ade3a6d96c0ac0129545afb73ed046f6546cce9cbd37be",
+    "references/deeptutor-provenance.md": "353abdabb033d2848d8511feaa66366365e7383eb7514f4462b3397967af5dcf",
+    "scripts/build_lesson.py": "b98d444160ac3656a9e3a842410eedc0153b7cd7b9839d96df366261516b04a0",
+    "assets/interactive/lesson-runtime.css": "4a933a8981688d8d04d780528988edd6f3b6073c7456f0f816f9d00b11672d3b",
+    "assets/interactive/lesson-runtime.js": "49b17f35fc35fda0e0ba432743313031b71fcc33f8c4b787ccccf2115c5563bb"
+  },
+  "taskScopeSource": "/workspace/scratch/b4c4b2db70f4/repo/docs/engineering/v1.7.0/official-scope.md",
+  "sourceVerificationDate": "2026-09-07",
+  "textbookChapterFullTextAvailable": false,
+  "officialSources": [
+    {
+      "url": "https://www.pearson.com/content/dam/one-dot-com/one-dot-com/international-schools/pdfs/secondary-curriculum/international-a-levels/mathematics/International-A-Level-Mathematics-Statistics-2-Student-Book-sample.pdf",
+      "use": "Chapter contents and sections 6.1–6.3; PDF pages 3 and 5"
+    },
+    {
+      "url": "https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/international-a-level-maths-spec.pdf",
+      "use": "Issue 3 Unit S2 4.1–4.2; printed page 59, PDF page 65"
+    }
+  ],
+  "generation": {
+    "mode": "bgct",
+    "presentation": "studio",
+    "language": "zh-CN",
+    "schemaVersion": 1,
+    "lessonId": "ial-s2-ch6-sampling-studio-original",
+    "revision": "1.7.0-run01-1",
+    "activities": 17,
+    "sections": 17,
+    "objectives": 6,
+    "pathways": 46,
+    "origin": "Original course, numerical examples, questions, narration and custom widgets; no base HTML or prior demo used.",
+    "builderCommand": "python3 scripts/build_lesson.py --lesson /workspace/scratch/b4c4b2db70f4/generation/run-01/lesson.json --output /workspace/scratch/b4c4b2db70f4/generation/run-01/lesson.html",
+    "builderWorkingDirectory": "/workspace/scratch/b4c4b2db70f4/repo/plugins/dialogue-tutor/skills/dialogue-tutor",
+    "pythonVersion": "3.12.13",
+    "ttsRequested": false,
+    "externalRuntimeDependencies": []
+  },
+  "simulation": {
+    "population": {
+      "A": 1,
+      "B": 3,
+      "C": 5
+    },
+    "unit": "minutes",
+    "allowedSampleSizes": [
+      1,
+      2,
+      3
+    ],
+    "mechanisms": [
+      "uniform independent draws with replacement",
+      "uniform draws among remaining labels without replacement"
+    ],
+    "defaultSampleSize": 2,
+    "defaultReplacement": true,
+    "randomSource": "Browser Math.random; no fixed seed configured",
+    "repetitionButtons": [
+      1,
+      20
+    ],
+    "manualEnumerationContributesToSimulation": false
+  },
+  "checks": {
+    "exactEnumerationCases": 12,
+    "domAssertions": 36,
+    "domErrors": 0,
+    "realBrowserVisualVerification": "NOT EXECUTED; preview infrastructure unavailable as reported by parent",
+    "expertReviewOfOutput": "NOT PERFORMED BY GENERATOR"
+  },
+  "writesConfinedTo": "/workspace/scratch/b4c4b2db70f4/generation/run-01"
+}

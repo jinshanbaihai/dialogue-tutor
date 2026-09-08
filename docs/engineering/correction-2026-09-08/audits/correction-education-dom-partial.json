@@ -1,0 +1,384 @@
+{
+  "results": [
+    {
+      "id": "E01 mounts/no typing",
+      "status": "PASS",
+      "evidence": {
+        "mounted": 28,
+        "editable": [
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "name": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "E11 all actual local links resolve",
+      "status": "PASS",
+      "evidence": {
+        "links": 498
+      }
+    },
+    {
+      "id": "E06 no cross-component answer supplied",
+      "status": "FAIL",
+      "evidence": {
+        "before_any_action_mapping_rows": [
+          "AB",
+          "AC",
+          "BA",
+          "BC",
+          "CA",
+          "CB"
+        ],
+        "expected_complete_path_set": [
+          "AB",
+          "AC",
+          "BA",
+          "BC",
+          "CA",
+          "CB"
+        ],
+        "visible_instruction": "第 1 组 · 勾选完整允许路径集合AAABACBABBBCCACBCC第 2 组 · 为每条允许路径选择均值（分钟）即使第一组暂时漏选，仍把六行分别完成；最后才统一核对。AB → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟AC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BA → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟CA →"
+      }
+    },
+    {
+      "id": "E06 incomplete no submit",
+      "status": "PASS",
+      "evidence": "还没有完成四组：路径至少选一条，六行均值都要选择，概率依据与完整分布各选一项。暂未核对，也未生成提交记录。"
+    },
+    {
+      "id": "E06 draft not graded",
+      "status": "PASS",
+      "evidence": "还没有完成四组：路径至少选一条，六行均值都要选择，概率依据与完整分布各选一项。暂未核对，也未生成提交记录。"
+    },
+    {
+      "id": "E06 unified immutable first submit",
+      "status": "PASS",
+      "evidence": {
+        "id": "construction:1788845836879:0",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "4",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": false,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": false,
+          "feedback": false,
+          "referenceCoverage": [],
+          "revealedThrough": 0
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": false,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845836879
+      }
+    },
+    {
+      "id": "E08 retry assisted first unchanged",
+      "status": "PASS",
+      "evidence": {
+        "id": "construction:1788845837453:1",
+        "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+        "answers": {
+          "paths": [
+            "AB",
+            "AC",
+            "BA",
+            "BC",
+            "CA",
+            "CB"
+          ],
+          "mapping": {
+            "AB": "2",
+            "AC": "5",
+            "BA": "2",
+            "BC": "7",
+            "CA": "5",
+            "CB": "7"
+          },
+          "probabilityReason": "remaining",
+          "distribution": "thirds"
+        },
+        "assistedAtSubmit": true,
+        "assistanceSnapshot": {
+          "hint": false,
+          "reference": true,
+          "feedback": true,
+          "referenceCoverage": [
+            "construction-four-feedback"
+          ],
+          "revealedThrough": 0
+        },
+        "componentChecks": {
+          "paths": true,
+          "mapping": true,
+          "probability": true,
+          "distribution": true
+        },
+        "evidence": "component-check-only",
+        "submittedAt": 1788845837453
+      }
+    },
+    {
+      "id": "E03-05 equal repair and new numeric question",
+      "status": "PASS",
+      "evidence": {
+        "feedback": "本次作答需要修正不同均值的来路数量并不相同；需要把 AB 和 BA 两条路径的概率相加。",
+        "branch": "equal",
+        "lines": [
+          "repair1-object",
+          "repair1-preimage",
+          "repair1-sum",
+          "repair1-sub",
+          "repair1-one",
+          "repair1-count",
+          "repair-equal-pathset",
+          "repair-equal-first",
+          "repair-equal-second",
+          "repair-equal-rule",
+          "repair-equal-factors",
+          "repair-equal-fraction",
+          "repair-equal-numerator",
+          "repair-equal-weight",
+          "repair-equal-AA-sub",
+          "repair-equal-AA-add",
+          "repair-equal-AA-div",
+          "repair-equal-AB-sub",
+          "repair-equal-AB-add",
+          "repair-equal-AB-div",
+          "repair-equal-AC-sub",
+          "repair-equal-AC-add",
+          "repair-equal-AC-div",
+          "repair-equal-BA-sub",
+          "repair-equal-BA-add",
+          "repair-equal-BA-div",
+          "repair-equal-BB-sub",
+          "repair-equal-BB-add",
+          "repair-equal-BB-div",
+          "repair-equal-BC-sub",
+          "repair-equal-BC-add",
+          "repair-equal-BC-div",
+          "repair-equal-CA-sub",
+          "repair-equal-CA-add",
+          "repair-equal-CA-div",
+          "repair-equal-CB-sub",
+          "repair-equal-CB-add",
+          "repair-equal-CB-div",
+          "repair-equal-CC-sub",
+          "repair-equal-CC-add",
+          "repair-equal-CC-div",
+          "repair-equal-group-0-paths",
+          "repair-equal-group-0-events",
+          "repair-equal-group-0-sub",
+          "repair-equal-group-0",
+          "repair-equal-group-1-paths",
+          "repair-equal-group-1-events",
+          "repair-equal-group-1-sub",
+          "repair-equal-group-1-common",
+          "repair-equal-group-1-count",
+          "repair-equal-group-1",
+          "repair-equal-group-2-paths",
+          "repair-equal-group-2-events",
+          "repair-equal-group-2-sub",
+          "repair-equal-group-2-common",
+          "repair-equal-group-2-count",
+          "repair-equal-group-2",
+          "repair-equal-group-3-paths",
+          "repair-equal-group-3-events",
+          "repair-equal-group-3-sub",
+          "repair-equal-group-3-common",
+          "repair-equal-group-3-count",
+          "repair-equal-group-3",
+          "repair-equal-group-4-paths",
+          "repair-equal-group-4-events",
+          "repair-equal-group-4-sub",
+          "repair-equal-group-4",
+          "repair-equal-total-sub",
+          "repair-equal-total-common",
+          "repair-equal-total-one",
+          "repair-equal-total-sum",
+          "repair-equal-total",
+          "repair-equal-q-event-support",
+          "repair-equal-q-event-sum",
+          "repair-equal-q-event-sub",
+          "repair-equal-q-event-common",
+          "repair-equal-q-event-joined",
+          "repair-equal-q-event-num",
+          "repair-equal-q-event-answer"
+        ],
+        "newAttempt": {
+          "id": "repair-equal-q-answer:1788845837711:1",
+          "answer": "third",
+          "correct": true,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788845837711,
+          "sessionId": "session-1788845834364-ad1p14i1yj4"
+        },
+        "recommendations": []
+      }
+    }
+  ],
+  "errors": [],
+  "error": "Error: missing [data-dt-activity=\"main-equal\"] [data-dt-control=\"reveal\"]\n    at el (/workspace/scratch/b4c4b2db70f4/reviews/correction-education-dom.cjs:6:55)\n    at click (/workspace/scratch/b4c4b2db70f4/reviews/correction-education-dom.cjs:6:103)\n    at /workspace/scratch/b4c4b2db70f4/reviews/correction-education-dom.cjs:21:2\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processTimers (node:internal/timers:568:9)"
+}

@@ -1,0 +1,5 @@
+START metadata-and-twenty-native-repairs
+START closing-actual-routes
+START end-recall-latest-state-and-real-item
+TypeError: Cannot read properties of undefined (reading 'revealed')
+    at /workspace/scratch/b4c4b2db70f4/reviews/correction-code-last-delta-run-03-probes.cjs:14:310

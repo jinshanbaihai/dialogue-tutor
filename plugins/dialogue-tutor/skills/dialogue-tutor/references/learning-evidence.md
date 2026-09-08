@@ -1,8 +1,18 @@
 # 交互 HTML 的学习证据与使用边界
 
-维护日期：2026-09-07。新增交互的来源限定为 DeepTutor，见[来源追溯](deeptutor-provenance.md)；本文只校准使用时机、反馈和判断，操作契约见[交互规格](interactive-html.md)。这些研究没有直接测试本次 HTML。
+维护日期：2026-09-07。1.6.0 的交互实现借鉴 DeepTutor，1.7.0 的编排与表现分支属于本项目设计；1.7.1 恢复完整教学骨架并限定免打字主路径与真实Manim，见[来源追溯](deeptutor-provenance.md)；本文只校准使用时机、反馈和判断，操作契约见[交互规格](interactive-html.md)。这些研究没有直接测试本次 HTML。
 
 “全文”表示核查原论文的方法与结果；“摘要”表示仅核查作者或出版社提供的摘要；元分析与单项实验分别标明。具体界面与调度参数属于工程选择，不能升级为研究结论。
+
+下方 E1–E8 与 A1–A9 的访问层级承接 1.6.0 台账；本轮保留其边界；A1 恢复原有用户详细度偏好并与效果证据分开，不声称重新完成了全部旧研究核查。新增 B1–B3 于 2026-09-07 定点读取作者原文，用于当前结构决策。
+
+## 1.7.0 结构决策的补充依据
+
+**B1 · Chi & Wylie（2014）。** [The ICAP Framework](https://education.asu.edu/sites/default/files/lcl/chiwylie2014icap_2.pdf)，DOI `10.1080/00461520.2014.965823`。原文 §1 的四类活动定义、§2 的研究比较及 §3 的例外。本文是理论框架与研究综合，非单次网页实验；interactive 指相互建设性的对话，不等于鼠标交互。设计据此区分操作、产生解释与独立推理，不能从点击量推断理解，不能把用户的“交互＞可视化＞文字”说成该论文证明的通用排序。
+
+**B2 · Renkl、Atkinson & Maier（2000）。** [From Studying Examples to Solving Problems: Fading Worked-Out Solution Steps Helps Learning](https://escholarship.org/uc/item/81b9j9hs)，[原文 PDF](https://escholarship.org/content/qt81b9j9hs/qt81b9j9hs_noSplash_ef3e30a960524adc5157ece2d6fa3130.pdf?t=reckzt)。方法与结果见 PDF 第3–5页。35名九年级学生的电学准实验在两天后测量，54名大学生的概率随机实验在学习后测量；相较例题—问题配对，渐隐支持近迁移，远迁移没有相应显著结果。新程序安排例题、真实补全、独立新题；本项目的任务数量和具体支持强度仍是工程选择，不保证远迁移或跨周保持。
+
+**B3 · Chance、Garfield & delMas（2000）。** [Developing Simulation Activities to Improve Students' Statistical Reasoning](https://files.eric.ed.gov/fulltext/ED474052.pdf)，阶段研究与局限见 PDF 第3–8页。大学统计课程的连续课堂改进：首阶段89份完整前后测，第二阶段141人，第三阶段55人；不同阶段结果并非持续改善，先备概念混淆仍存在。这些不是随机对照组之间的因果效应。设计借鉴预测与结果对照、一次样本到统计量的可追踪关系和先备支持；模拟画面本身不能证明学会，枚举理论概率与随机频率分开核查。
 
 ## 8 项核心一手研究
 
@@ -28,7 +38,7 @@
 
 **E6 · Chi、de Leeuw、Chiu & LaVancher（1994）。** [Eliciting Self-Explanations Improves Understanding](https://education.asu.edu/sites/g/files/litvpz656/files/lcl/chideleeuwchiulavancher_3.pdf)。DOI：`10.1207/s15516709cog1803_3`。
 
-24名八年级学生阅读循环系统，比较自我解释与重读；会话至少隔一周，后测可查资料。解释组理解更好，但样本小且用时更多。开放题保存原答和评价要点，合法异解不作字符串判错。
+24名八年级学生阅读循环系统，比较自我解释与重读；会话至少隔一周，后测可查资料。解释组理解更好，但样本小且用时更多。自我解释可心答后揭示自评；本研究不规定必须键入。新课主流程用免打字选择/翻卡，旧开放题兼容保存原答与评价要点，合法异解不作字符串判错。
 
 **E7 · Rittle-Johnson、Siegler & Alibali（2001）。** [Developing Conceptual Understanding and Procedural Skill in Mathematics: An Iterative Process](https://siegler.tc.columbia.edu/wp-content/uploads/2020/10/2001-Siegler-Alibali.pdf)。DOI：`10.1037/0022-0663.93.2.346`。
 
@@ -44,7 +54,7 @@ E1、E2、E3、E6、E7、E8核查原始全文；E4、E5核查原始摘要。研�
 
 **A1 · Adesope & Nesbit（2012）。** [Verbal Redundancy in Multimedia Learning Environments: A Meta-Analysis](https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842)。DOI：`10.1037/a0026147`。
 
-作者机构摘要；元分析。57项研究的结果受先备知识、节奏与图像调节，关键词文字也可能优于逐字重复。完整伴读和长度地板保留为用户偏好，不能写成科学效果阈值。
+作者机构摘要；元分析。57项研究的结果受先备知识、节奏与图像调节，关键词文字也可能优于逐字重复。完整伴读的逐行信息覆盖、两轨合计字符地板及1.2倍漏项提醒保留为用户偏好，不能写成科学效果阈值或替代逐行核对。
 
 **A2 · Wong、Leahy、Marcus & Sweller（2012）。** [Cognitive load theory, the transient information effect and e-learning](https://researchers.mq.edu.au/en/publications/cognitive-load-theory-the-transient-information-effect-and-e-lear/)。DOI：`10.1016/j.learninstruc.2012.05.004`。
 
@@ -87,3 +97,5 @@ E1、E2、E3、E6、E7、E8核查原始全文；E4、E5核查原始摘要。研�
 复习采用公开工程默认 **1、3、7、14、30天**：到期且无答前辅助的成功复习才推进；独立回顾距最近提示/参考接触至少24小时。同次会话重试不推进，错误、提示或预先揭示回到次日，查看和跳过不计错。自评到期后仍是自评。这些参数没有拟合个人遗忘曲线，也没有最优性证明。
 
 步骤按有意义的数学变换切分，允许回退；图、参数与解释对应，操作完成不自动判懂。伴读把题面和参考分轨并给主动继续入口，纯文本空行不冒充播放器暂停控制。
+
+1.7.1 的七幕、逐行讲透、全小问六项、免打字主路径及数学图真实Manim是明确用户要求；有限帧manifest、多组统一提交和单明亮主题是本项目实现选择。上述研究不授权把完整推导改为摘要或把前提全部折叠，也不证明模型角色有某种真实IQ、焦虑或学生代表性。源码/DOM/专家审读证据与真实学习效果分开。

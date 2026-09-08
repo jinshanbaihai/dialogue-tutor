@@ -1,0 +1,114 @@
+{
+  "method": "Independent script executes unmodified final HTML in jsdom. Native summary default actions; File.text delay and Blob/FileReader fixtures; explicit controllable Image callback and viewport rectangles. No author helper or scorer imported. No browser layout/image-decode claim.",
+  "hashes": {
+    "lesson.html": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+    "lesson.json": "42627f4a3df54ccddfcfef28abf3a873a3a1807b955f7fd9315d3613a4f5dc90",
+    "course.js": "641cc807d10fe304f002efa20abb83aa4422b6460ec2fc7863ba612ee133c9ff",
+    "delivery-manifest.json": "3bd8e42e61e8387ff4632abecf90366f3e3b9ded06f83d0e12a019252e8ecae2",
+    "exact-data.json": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa"
+  },
+  "checks": [
+    {
+      "id": "media/cross-condition-failure-current-fallback",
+      "pass": true,
+      "evidence": {
+        "round": {
+          "predictionDraft": null,
+          "activeId": null,
+          "skipped": false,
+          "pathId": "AB",
+          "stageId": "paths",
+          "requested": "main-wo-AB-paths",
+          "displayed": null,
+          "mediaStatus": "failed",
+          "pathSelections": [
+            "AB"
+          ]
+        },
+        "link": "#main-wo-AB-sub"
+      }
+    },
+    {
+      "id": "media/failed-retry-commits-condition",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/cross-condition-media",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "media/reopen-pending-no-learning",
+      "pass": true
+    },
+    {
+      "id": "media/reopen-own-callback-no-learning",
+      "pass": true
+    },
+    {
+      "id": "no-uncaught/media-storage-reopen",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "id": "import/conflicting-frozen-id-rejected",
+      "pass": true,
+      "evidence": "本课记录未接收：同一提交ID的冻结内容冲突"
+    },
+    {
+      "id": "import/legal-wrong-partial-preserved",
+      "pass": true
+    },
+    {
+      "id": "import/cross-condition-active-rejected",
+      "pass": true,
+      "evidence": "本课记录未接收：当前冻结提交属于其他条件"
+    },
+    {
+      "id": "no-uncaught/import-frozen-conflict-and-partial",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "cross-condition-media",
+      "errors": [],
+      "requested": [
+        {
+          "frameId": "main-wr-AA-paths",
+          "hash": "a12ebc356bbd04020ed1901e4cbf1298e93a83314fdbe5120dfdc73d6a33d4c4"
+        },
+        {
+          "frameId": "main-wo-AB-paths",
+          "hash": "c323a6e1e4b8fdf78bf29efb29d80355f80f92df0b2d3772458e8baa93fac8e7"
+        },
+        {
+          "frameId": "main-wo-AB-paths",
+          "hash": "c323a6e1e4b8fdf78bf29efb29d80355f80f92df0b2d3772458e8baa93fac8e7"
+        }
+      ]
+    },
+    {
+      "name": "media-storage-reopen",
+      "errors": [],
+      "requested": [
+        {
+          "frameId": "main-wo-AB-paths",
+          "hash": "c323a6e1e4b8fdf78bf29efb29d80355f80f92df0b2d3772458e8baa93fac8e7"
+        }
+      ]
+    },
+    {
+      "name": "import-frozen-conflict-and-partial",
+      "errors": [],
+      "requested": []
+    }
+  ],
+  "summary": {
+    "checks": 10,
+    "passed": 10,
+    "failed": [],
+    "scenarios": 3
+  }
+}

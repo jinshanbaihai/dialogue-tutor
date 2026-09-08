@@ -1,0 +1,1557 @@
+{
+  "scope": "Preliminary common-data verification only; not final visible lesson, teaching or frame approval. Inputs independently transcribed from author-provided mathematical contract.",
+  "dataSha256": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+  "results": [
+    {
+      "caseId": "main-wr",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 2
+          },
+          {
+            "id": "B",
+            "value": 4
+          },
+          {
+            "id": "C",
+            "value": 6
+          }
+        ],
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "mean"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "mean",
+        "path_count": 9,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "A"
+            ],
+            "values": [
+              "2/1",
+              "2/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "2/1"
+          },
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "2/1",
+              "4/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "A",
+              "C"
+            ],
+            "values": [
+              "2/1",
+              "6/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "4/1"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "4/1",
+              "2/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "B",
+              "B"
+            ],
+            "values": [
+              "4/1",
+              "4/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "4/1"
+          },
+          {
+            "ids": [
+              "B",
+              "C"
+            ],
+            "values": [
+              "4/1",
+              "6/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "C",
+              "A"
+            ],
+            "values": [
+              "6/1",
+              "2/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "4/1"
+          },
+          {
+            "ids": [
+              "C",
+              "B"
+            ],
+            "values": [
+              "6/1",
+              "4/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "C",
+              "C"
+            ],
+            "values": [
+              "6/1",
+              "6/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "6/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "2/1",
+            "probability": "1/9",
+            "path_ids": [
+              [
+                "A",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "3/1",
+            "probability": "2/9",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "4/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "B"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "5/1",
+            "probability": "2/9",
+            "path_ids": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ]
+          },
+          {
+            "value": "6/1",
+            "probability": "1/9",
+            "path_ids": [
+              [
+                "C",
+                "C"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    },
+    {
+      "caseId": "main-nr",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 2
+          },
+          {
+            "id": "B",
+            "value": 4
+          },
+          {
+            "id": "C",
+            "value": 6
+          }
+        ],
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean",
+        "path_count": 6,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "2/1",
+              "4/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "A",
+              "C"
+            ],
+            "values": [
+              "2/1",
+              "6/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "4/1"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "4/1",
+              "2/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "B",
+              "C"
+            ],
+            "values": [
+              "4/1",
+              "6/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "C",
+              "A"
+            ],
+            "values": [
+              "6/1",
+              "2/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "4/1"
+          },
+          {
+            "ids": [
+              "C",
+              "B"
+            ],
+            "values": [
+              "6/1",
+              "4/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "5/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "3/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "4/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "5/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    },
+    {
+      "caseId": "example-max",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 1
+          },
+          {
+            "id": "B",
+            "value": 5
+          }
+        ],
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "maximum"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "maximum",
+        "path_count": 4,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "A"
+            ],
+            "values": [
+              "1/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/2",
+              "1/2"
+            ],
+            "probability": "1/4",
+            "statistic_value": "1/1"
+          },
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "1/1",
+              "5/1"
+            ],
+            "conditional_factors": [
+              "1/2",
+              "1/2"
+            ],
+            "probability": "1/4",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "5/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/2",
+              "1/2"
+            ],
+            "probability": "1/4",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "B",
+              "B"
+            ],
+            "values": [
+              "5/1",
+              "5/1"
+            ],
+            "conditional_factors": [
+              "1/2",
+              "1/2"
+            ],
+            "probability": "1/4",
+            "statistic_value": "5/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "1/1",
+            "probability": "1/4",
+            "path_ids": [
+              [
+                "A",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "5/1",
+            "probability": "3/4",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ],
+              [
+                "B",
+                "B"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    },
+    {
+      "caseId": "construct",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 0
+          },
+          {
+            "id": "B",
+            "value": 4
+          },
+          {
+            "id": "C",
+            "value": 10
+          }
+        ],
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean",
+        "path_count": 6,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "0/1",
+              "4/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "2/1"
+          },
+          {
+            "ids": [
+              "A",
+              "C"
+            ],
+            "values": [
+              "0/1",
+              "10/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "4/1",
+              "0/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "2/1"
+          },
+          {
+            "ids": [
+              "B",
+              "C"
+            ],
+            "values": [
+              "4/1",
+              "10/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "7/1"
+          },
+          {
+            "ids": [
+              "C",
+              "A"
+            ],
+            "values": [
+              "10/1",
+              "0/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "C",
+              "B"
+            ],
+            "values": [
+              "10/1",
+              "4/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "7/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "2/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "5/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "7/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    },
+    {
+      "caseId": "duplicates",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 0
+          },
+          {
+            "id": "B",
+            "value": 0
+          },
+          {
+            "id": "C",
+            "value": 6
+          }
+        ],
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean",
+        "path_count": 6,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "0/1",
+              "0/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "0/1"
+          },
+          {
+            "ids": [
+              "A",
+              "C"
+            ],
+            "values": [
+              "0/1",
+              "6/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "0/1",
+              "0/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "0/1"
+          },
+          {
+            "ids": [
+              "B",
+              "C"
+            ],
+            "values": [
+              "0/1",
+              "6/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "C",
+              "A"
+            ],
+            "values": [
+              "6/1",
+              "0/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "C",
+              "B"
+            ],
+            "values": [
+              "6/1",
+              "0/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "3/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "0/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "3/1",
+            "probability": "2/3",
+            "path_ids": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "A"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    },
+    {
+      "caseId": "repair-equal",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 1
+          },
+          {
+            "id": "B",
+            "value": 5
+          },
+          {
+            "id": "C",
+            "value": 9
+          }
+        ],
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "mean"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "mean",
+        "path_count": 9,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "A"
+            ],
+            "values": [
+              "1/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "1/1"
+          },
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "1/1",
+              "5/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "A",
+              "C"
+            ],
+            "values": [
+              "1/1",
+              "9/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "5/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "B",
+              "B"
+            ],
+            "values": [
+              "5/1",
+              "5/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "B",
+              "C"
+            ],
+            "values": [
+              "5/1",
+              "9/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "7/1"
+          },
+          {
+            "ids": [
+              "C",
+              "A"
+            ],
+            "values": [
+              "9/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "C",
+              "B"
+            ],
+            "values": [
+              "9/1",
+              "5/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "7/1"
+          },
+          {
+            "ids": [
+              "C",
+              "C"
+            ],
+            "values": [
+              "9/1",
+              "9/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "9/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "1/1",
+            "probability": "1/9",
+            "path_ids": [
+              [
+                "A",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "3/1",
+            "probability": "2/9",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "5/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "B"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "7/1",
+            "probability": "2/9",
+            "path_ids": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ]
+          },
+          {
+            "value": "9/1",
+            "probability": "1/9",
+            "path_ids": [
+              [
+                "C",
+                "C"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    },
+    {
+      "caseId": "repair-reverse",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 1
+          },
+          {
+            "id": "B",
+            "value": 3
+          },
+          {
+            "id": "C",
+            "value": 7
+          }
+        ],
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "mean"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": true,
+        "statistic": "mean",
+        "path_count": 9,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "A"
+            ],
+            "values": [
+              "1/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "1/1"
+          },
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "1/1",
+              "3/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "2/1"
+          },
+          {
+            "ids": [
+              "A",
+              "C"
+            ],
+            "values": [
+              "1/1",
+              "7/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "4/1"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "3/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "2/1"
+          },
+          {
+            "ids": [
+              "B",
+              "B"
+            ],
+            "values": [
+              "3/1",
+              "3/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "3/1"
+          },
+          {
+            "ids": [
+              "B",
+              "C"
+            ],
+            "values": [
+              "3/1",
+              "7/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "C",
+              "A"
+            ],
+            "values": [
+              "7/1",
+              "1/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "4/1"
+          },
+          {
+            "ids": [
+              "C",
+              "B"
+            ],
+            "values": [
+              "7/1",
+              "3/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "5/1"
+          },
+          {
+            "ids": [
+              "C",
+              "C"
+            ],
+            "values": [
+              "7/1",
+              "7/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/3"
+            ],
+            "probability": "1/9",
+            "statistic_value": "7/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "1/1",
+            "probability": "1/9",
+            "path_ids": [
+              [
+                "A",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "2/1",
+            "probability": "2/9",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "3/1",
+            "probability": "1/9",
+            "path_ids": [
+              [
+                "B",
+                "B"
+              ]
+            ]
+          },
+          {
+            "value": "4/1",
+            "probability": "2/9",
+            "path_ids": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "5/1",
+            "probability": "2/9",
+            "path_ids": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ]
+          },
+          {
+            "value": "7/1",
+            "probability": "1/9",
+            "path_ids": [
+              [
+                "C",
+                "C"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    },
+    {
+      "caseId": "repair-weight",
+      "input": {
+        "units": [
+          {
+            "id": "A",
+            "value": 2
+          },
+          {
+            "id": "B",
+            "value": 5
+          },
+          {
+            "id": "C",
+            "value": 11
+          }
+        ],
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean"
+      },
+      "independentExpected": {
+        "model": "uniform_by_unit_identity",
+        "sample_size": 2,
+        "replacement": false,
+        "statistic": "mean",
+        "path_count": 6,
+        "paths": [
+          {
+            "ids": [
+              "A",
+              "B"
+            ],
+            "values": [
+              "2/1",
+              "5/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "7/2"
+          },
+          {
+            "ids": [
+              "A",
+              "C"
+            ],
+            "values": [
+              "2/1",
+              "11/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "13/2"
+          },
+          {
+            "ids": [
+              "B",
+              "A"
+            ],
+            "values": [
+              "5/1",
+              "2/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "7/2"
+          },
+          {
+            "ids": [
+              "B",
+              "C"
+            ],
+            "values": [
+              "5/1",
+              "11/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "8/1"
+          },
+          {
+            "ids": [
+              "C",
+              "A"
+            ],
+            "values": [
+              "11/1",
+              "2/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "13/2"
+          },
+          {
+            "ids": [
+              "C",
+              "B"
+            ],
+            "values": [
+              "11/1",
+              "5/1"
+            ],
+            "conditional_factors": [
+              "1/3",
+              "1/2"
+            ],
+            "probability": "1/6",
+            "statistic_value": "8/1"
+          }
+        ],
+        "distribution": [
+          {
+            "value": "7/2",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "13/2",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ]
+          },
+          {
+            "value": "8/1",
+            "probability": "1/3",
+            "path_ids": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ]
+          }
+        ],
+        "total_probability": "1/1"
+      },
+      "passed": true
+    }
+  ],
+  "checkedPathCount": 55
+}

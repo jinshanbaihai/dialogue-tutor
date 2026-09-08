@@ -1,0 +1,1532 @@
+{
+  "method": "Independent jsdom DOM-event review; no browser layout, PNG decoding, or human learning evidence. Image completion and scrollIntoView stubbed.",
+  "hashes": {
+    "html": "98b5e20e7ba17f01ae691f67b91050a493d3efad702020349acad50eea6e4392",
+    "json": "92a8258b95e6a735d80261eccaf23a91cd4335a3647edd2282fd7fda4cc75259"
+  },
+  "scenarios": [
+    {
+      "label": "fresh no prediction/no reveal",
+      "report": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+      "closing": "回顾与继续：让下一次也能从条件走到分布现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。回忆闪卡合上公式，在心里重建先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。先尝试回忆，再翻面核对。1 / 3回忆正面给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？点击或按回车翻面查看提示上一张下一张学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。"
+    },
+    {
+      "label": "wrong main-reverse",
+      "selected": "single",
+      "activityText": "就地自测相同输出保留几条输入在放回主条件下，T=3天的完整身份原像是哪一组？选择一个答案，然后提交只保留AB，BA的均值相同所以删去。AB与BA都保留，它们对应不同的抽取次序。提交作答本次作答需要修正记录顺序时BA仍是另一条允许输入。参考与解析AB与BA都保留，它们对应不同的抽取次序。AB和BA是两个不同的完整样本事件，它们都给均值3天。针对本题的预备补充解释可以打开 “相同均值删反向路径”分支，分别算两条输入，再回到完整原像这一行。分支末尾有新数据题。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。",
+      "links": [
+        {
+          "text": "“相同均值删反向路径”分支",
+          "href": "#branch-reverse"
+        }
+      ],
+      "attempts": [
+        {
+          "id": "main-reverse:1788845681667:1",
+          "answer": "single",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788845681667,
+          "sessionId": "session-1788845679702-2ldvkxijzm5"
+        }
+      ]
+    },
+    {
+      "label": "wrong main-equal",
+      "selected": "five",
+      "activityText": "就地自测概率跟着来路走放回、独立均匀抽取的主条件下，T=3 天的概率是多少？选择一个答案，然后提交五分之一：共有五个不同均值。九分之二：AB 与 BA 各贡献九分之一。提交作答本次作答需要修正不同均值的来路数量并不相同；需要把 AB 和 BA 两条路径的概率相加。参考与解析九分之二：AB 与 BA 各贡献九分之一。T=3 的来路是 AB 与 BA，路径概率相加得到九分之二。针对本题的预备补充解释先回到 “不同均值等可能”分支，那里逐行修复分母的来源，并提供一个新数据问题。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。",
+      "links": [
+        {
+          "text": "“不同均值等可能”分支",
+          "href": "#branch-equal"
+        }
+      ],
+      "attempts": [
+        {
+          "id": "main-equal:1788845681839:1",
+          "answer": "five",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788845681839,
+          "sessionId": "session-1788845679702-2ldvkxijzm5"
+        }
+      ]
+    },
+    {
+      "label": "wrong main-weight",
+      "selected": "old",
+      "activityText": "就地自测抽法改变后重新核对权重不放回且从剩余身份均匀抽取时，路径 AB 的概率是哪一个？选择一个答案，然后提交九分之一：沿用放回的权重。六分之一：三分之一乘二分之一。提交作答本次作答需要修正第一抽后剩两个身份，条件概率的分母需要重算。参考与解析六分之一：三分之一乘二分之一。允许路径共六条，各自为三分之一乘二分之一，即六分之一。针对本题的预备补充解释打开 “删除对角后仍用旧权重”分支，从条件概率逐行重算；末尾有新数据问题。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202本次作答与参考不符，请阅读反馈。",
+      "links": [
+        {
+          "text": "“删除对角后仍用旧权重”分支",
+          "href": "#branch-weight"
+        }
+      ],
+      "attempts": [
+        {
+          "id": "main-weight:1788845681974:1",
+          "answer": "old",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788845681974,
+          "sessionId": "session-1788845679702-2ldvkxijzm5"
+        }
+      ]
+    },
+    {
+      "label": "repair equal",
+      "text": "分支一 · 把不同均值直接当作等可能误路：主条件有五个不同均值，于是给每个均值五分之一。这里需要补的是“等可能的对象是什么”。题目等概率抽的是身份，完整两抽基本结果是九条身份路径。五个均值是这些路径的输出；题面没有另做一次“从五个均值均匀挑选”的试验。T=3的完整原像是AB、BA。AB给(2+4)/2，BA给(4+2)/2，两条都为3；其余七条的已算均值均不为3。·P(T=3)=P(AB)+P(BA)AB与BA是两个互斥的完整样本事件。·P(T=3)=19+19每条身份路径经独立均匀两抽得到九分之一。·P(T=3)=1+19同分母相加，保留分母9。·P(T=3)=29只计算1加1；这个分数已经最简。回到原证明：T=3 的归组行。下一题更换成 1、5、9 厘米，检查是否能重新找原像。原创题 · 题干：英文原题Three labelled units A, B and C have measurements 1, 5 and 9 cm respectively. Two units are drawn with replacement, with each draw independent and uniform among all three identities. The order is recorded. Let T be their sample mean. Find P(T=5). Show the allowed paths, path probabilities, mean mapping and the full sampling distribution used. (6)中文题面（我译的那一份）三个有标签的单位 A、B、C 的观测分别为 1、5、9 厘米。抽取两次，每次放回，重新独立且均匀抽取，记录顺序。T 为两次观测的均值。求 P(T=5)，展示所用的允许路径、路径概率、均值映射和完整抽样分布。(6)就地自测新题 · 把关系迁移一次按这道新条件，P(T=5) 是多少？选择一个答案，然后提交三分之一。五分之一。提交作答暂时跳过直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202直接阅读完整讲解① 题干给了这些条件题面重新给三项观测及抽法；recorded order 保留有序身份路径；T指定mean。② 条件把方法指出来先在新条件列全路径，再计算每条均值和概率。上一题的数值结果不自动适用。③ 接回已经建立的对象回接本分支的修复关系以及 main-wr-pathset、conditional-rule、mapping-definition。④ 这条规则接得上题目均值为两观测和除以2；路径概率按条件乘法；相同均值的互斥路径概率相加。⑤ 逐步计算，每步都有依据{AA, AB, AC, BA, BB, BC, CA, CB, CC}按本题抽法逐首抽身份排列所有允许第二抽；先保留身份，再读取数值。用 I1、I2 记两次抽到的身份。这里的 I1 读作“I 下标一”；身份 A 与数值 1 分别保存。·P(I1=A)=13第一抽在 3 个身份中均匀选择，每个身份分到总概率的 3 等份。·P(I2=B|I1=A)=13放回后仍有 3 个身份；题目另外规定重新独立且均匀抽取，所以给定首抽 A 后，B 的条件概率仍是原来那一份。·P(AB)=P(I1=A)×P(I2=B|I1=A)AB 表示先 A 后 B 的同一次两抽事件；使用本章已经解释的条件概率乘法法则。·P(AB)=13×13把两步概率分别代入，不把第二抽的分母沿用成未经检查的数。·P(AB)=1×13×3分数相乘：分子相乘，分母相乘。两个分母都是正整数。·P(AB)=13×3只计算分子的乘法：一乘一仍是一。·P(AB)=19只计算分母的乘法。每条允许路径都有同样的两步选择数，所以每条允许路径采用这个权重。路径 AA：先 A，后 A抽到的两个观测分别为 1、1厘米；身份顺序保留。·T=1+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=22只把分子中的两个观测相加；分母仍为两次观测。·T=1把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 AB：先 A，后 B抽到的两个观测分别为 1、5厘米；身份顺序保留。·T=1+52把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=62只把分子中的两个观测相加；分母仍为两次观测。·T=3把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 AC：先 A，后 C抽到的两个观测分别为 1、9厘米；身份顺序保留。·T=1+92把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=102只把分子中的两个观测相加；分母仍为两次观测。·T=5把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 BA：先 B，后 A抽到的两个观测分别为 5、1厘米；身份顺序保留。·T=5+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=62只把分子中的两个观测相加；分母仍为两次观测。·T=3把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 BB：先 B，后 B抽到的两个观测分别为 5、5厘米；身份顺序保留。·T=5+52把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=102只把分子中的两个观测相加；分母仍为两次观测。·T=5把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 BC：先 B，后 C抽到的两个观测分别为 5、9厘米；身份顺序保留。·T=5+92把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=142只把分子中的两个观测相加；分母仍为两次观测。·T=7把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 CA：先 C，后 A抽到的两个观测分别为 9、1厘米；身份顺序保留。·T=9+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=102只把分子中的两个观测相加；分母仍为两次观测。·T=5把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 CB：先 C，后 B抽到的两个观测分别为 9、5厘米；身份顺序保留。·T=9+52把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=142只把分子中的两个观测相加；分母仍为两次观测。·T=7把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 CC：先 C，后 C抽到的两个观测分别为 9、9厘米；身份顺序保留。·T=9+92把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=182只把分子中的两个观测相加；分母仍为两次观测。·T=9把总和除以非零的样本量 2。所得均值的单位仍是厘米。使 T=1 的完整路径集合：{AA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=1)=P(AA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=1)=19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=1)=19分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=3 的完整路径集合：{AB, BA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=3)=P(AB)+P(BA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=3)=19+19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=3)=1+19所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=3)=29计算分子中一的个数，得到本组允许身份路径的条数。·P(T=3)=29分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=5 的完整路径集合：{AC, BB, CA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=5)=P(AC)+P(BB)+P(CA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=5)=19+19+19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=5)=1+1+19所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=5)=39计算分子中一的个数，得到本组允许身份路径的条数。·P(T=5)=13分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=7 的完整路径集合：{BC, CB}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=7)=P(BC)+P(CB)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=7)=19+19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=7)=1+19所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=7)=29计算分子中一的个数，得到本组允许身份路径的条数。·P(T=7)=29分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=9 的完整路径集合：{CC}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=9)=P(CC)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=9)=19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=9)=19分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。统计量 t（厘米）全部原像路径概率 P(T=t)1AA193AB, BA295AC, BB, CA137BC, CB299CC19除此表列出的统计量取值外，概率为 0。每条允许路径已经出现一次，所以表的范围完整。·总概率=19+29+13+29+19把所有互斥的统计量取值概率相加，检查是否覆盖整个样本空间。·总概率=19+29+39+29+19通分到共同正分母 9；每个分子和分母同乘对应倍数，分数值不变。·总概率=1+2+3+2+19同分母分数相加，只合并分子。·总概率=99计算分子中的整数和。·总概率=1相同的非零整数相除为一。这个检查需要连同“每条路径恰好归组一次”一起成立，单独总和为一不能排除错分组。满足条件的取值：5；对应路径 AC, BB, CA。按题目的 = 逐个比较支持集中的精确值，边界取值是否包含由符号决定。·P(T=5)=P(T=5)不同统计量取值互斥，因此把满足条件的取值事件相加。·P(T=5)=13逐项代入本题已构造的分布。·P(T=5)=39统一写成身份路径的共同分母 9，为相加保留精确值。·P(T=5)=39合并同分母分数，分子保留加法。·P(T=5)=39只计算分子中的整数加法。·P(T=5)=13约去分子分母的共同正因子，得到精确概率；概率没有物理单位。本分支新问题的完整抽样分布。精确柱高与同块的归组推导使用同一份有理数数据。⑥ 答案与原创评价要点T等于5的概率为三分之一，由AC、BB、CA三条路径各九分之一相加得到。 允许路径、权重、完整映射、归组及目标事件是原创评价要点。",
+      "links": [
+        {
+          "text": "·",
+          "href": "#repair1-sum"
+        },
+        {
+          "text": "·",
+          "href": "#repair1-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair1-one"
+        },
+        {
+          "text": "·",
+          "href": "#repair1-count"
+        },
+        {
+          "text": "回到原证明：T=3 的归组行",
+          "href": "#main-wr-group-1"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-first"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-second"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-rule"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-factors"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-fraction"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-numerator"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-weight"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-AC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-BC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-CC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-0-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-0-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-0"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-1-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-1-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-1-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-1-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-1"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-2-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-2-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-2-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-2-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-2"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-3-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-3-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-3-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-3-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-3"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-4-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-4-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-group-4"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-total-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-total-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-total-one"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-total-sum"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-total"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-q-event-sum"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-q-event-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-q-event-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-q-event-joined"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-q-event-num"
+        },
+        {
+          "text": "·",
+          "href": "#repair-equal-q-event-answer"
+        }
+      ]
+    },
+    {
+      "label": "new item equal",
+      "text": "就地自测新题 · 把关系迁移一次按这道新条件，P(T=5) 是多少？选择一个答案，然后提交三分之一。五分之一。提交作答独立作答核对通过AC、BB、CA各贡献九分之一。参考与解析三分之一。T等于5的概率为三分之一，由AC、BB、CA三条路径各九分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。"
+    },
+    {
+      "label": "repair reverse",
+      "text": "分支二 · 平均数相同，就删掉反向路径误路：AB与BA平均数相同，于是只保留AB。先看抽样记录，再看统计量输出。AB记录“先A后B”；BA记录“先B后A”。记录顺序是题面固定条件，两次完整样本记录不同。·T(AB)=2+42代入AB对应的两次天数。·T(AB)=62只相加分子。·T(AB)=3再除以2。·T(BA)=4+22代入另一条允许路径BA的两次天数。·T(BA)=62只相加分子；加法交换次序不改变和。·T(BA)=3再除以2，输出同为3。两条输入不同，输出相同；归组保留两份路径概率。多对一映射合并输出标签，并未抹掉其中一个输入事件。·P(T=3)=19+19AB与BA互斥，把两条路径的权重相加。·P(T=3)=1+19同分母相加合并分子。·P(T=3)=29计算分子得到2。回到原证明：完整原像集合。下面把观测改为 1、3、7 克。原创题 · 题干：英文原题Three labelled units A, B and C have measurements 1, 3 and 7 grams respectively. Two units are drawn with replacement, with each draw independent and uniform among all three identities. The order is recorded. Let T be their sample mean. Find P(T=4). Show the allowed paths, path probabilities, mean mapping and the full sampling distribution used. (6)中文题面（我译的那一份）三个有标签的单位 A、B、C 的观测分别为 1、3、7 克。抽取两次，每次放回，重新独立且均匀抽取，记录顺序。T 为两次观测的均值。求 P(T=4)，展示所用的允许路径、路径概率、均值映射和完整抽样分布。(6)就地自测新题 · 把关系迁移一次按这道新条件，P(T=4) 是多少？选择一个答案，然后提交九分之二。九分之一。提交作答暂时跳过直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202直接阅读完整讲解① 题干给了这些条件题面重新给三项观测及抽法；recorded order 保留有序身份路径；T指定mean。② 条件把方法指出来先在新条件列全路径，再计算每条均值和概率。上一题的数值结果不自动适用。③ 接回已经建立的对象回接本分支的修复关系以及 main-wr-pathset、conditional-rule、mapping-definition。④ 这条规则接得上题目均值为两观测和除以2；路径概率按条件乘法；相同均值的互斥路径概率相加。⑤ 逐步计算，每步都有依据{AA, AB, AC, BA, BB, BC, CA, CB, CC}按本题抽法逐首抽身份排列所有允许第二抽；先保留身份，再读取数值。用 I1、I2 记两次抽到的身份。这里的 I1 读作“I 下标一”；身份 A 与数值 1 分别保存。·P(I1=A)=13第一抽在 3 个身份中均匀选择，每个身份分到总概率的 3 等份。·P(I2=B|I1=A)=13放回后仍有 3 个身份；题目另外规定重新独立且均匀抽取，所以给定首抽 A 后，B 的条件概率仍是原来那一份。·P(AB)=P(I1=A)×P(I2=B|I1=A)AB 表示先 A 后 B 的同一次两抽事件；使用本章已经解释的条件概率乘法法则。·P(AB)=13×13把两步概率分别代入，不把第二抽的分母沿用成未经检查的数。·P(AB)=1×13×3分数相乘：分子相乘，分母相乘。两个分母都是正整数。·P(AB)=13×3只计算分子的乘法：一乘一仍是一。·P(AB)=19只计算分母的乘法。每条允许路径都有同样的两步选择数，所以每条允许路径采用这个权重。路径 AA：先 A，后 A抽到的两个观测分别为 1、1克；身份顺序保留。·T=1+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=22只把分子中的两个观测相加；分母仍为两次观测。·T=1把总和除以非零的样本量 2。所得均值的单位仍是克。路径 AB：先 A，后 B抽到的两个观测分别为 1、3克；身份顺序保留。·T=1+32把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=42只把分子中的两个观测相加；分母仍为两次观测。·T=2把总和除以非零的样本量 2。所得均值的单位仍是克。路径 AC：先 A，后 C抽到的两个观测分别为 1、7克；身份顺序保留。·T=1+72把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=82只把分子中的两个观测相加；分母仍为两次观测。·T=4把总和除以非零的样本量 2。所得均值的单位仍是克。路径 BA：先 B，后 A抽到的两个观测分别为 3、1克；身份顺序保留。·T=3+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=42只把分子中的两个观测相加；分母仍为两次观测。·T=2把总和除以非零的样本量 2。所得均值的单位仍是克。路径 BB：先 B，后 B抽到的两个观测分别为 3、3克；身份顺序保留。·T=3+32把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=62只把分子中的两个观测相加；分母仍为两次观测。·T=3把总和除以非零的样本量 2。所得均值的单位仍是克。路径 BC：先 B，后 C抽到的两个观测分别为 3、7克；身份顺序保留。·T=3+72把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=102只把分子中的两个观测相加；分母仍为两次观测。·T=5把总和除以非零的样本量 2。所得均值的单位仍是克。路径 CA：先 C，后 A抽到的两个观测分别为 7、1克；身份顺序保留。·T=7+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=82只把分子中的两个观测相加；分母仍为两次观测。·T=4把总和除以非零的样本量 2。所得均值的单位仍是克。路径 CB：先 C，后 B抽到的两个观测分别为 7、3克；身份顺序保留。·T=7+32把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=102只把分子中的两个观测相加；分母仍为两次观测。·T=5把总和除以非零的样本量 2。所得均值的单位仍是克。路径 CC：先 C，后 C抽到的两个观测分别为 7、7克；身份顺序保留。·T=7+72把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=142只把分子中的两个观测相加；分母仍为两次观测。·T=7把总和除以非零的样本量 2。所得均值的单位仍是克。使 T=1 的完整路径集合：{AA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=1)=P(AA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=1)=19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=1)=19分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=2 的完整路径集合：{AB, BA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=2)=P(AB)+P(BA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=2)=19+19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=2)=1+19所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=2)=29计算分子中一的个数，得到本组允许身份路径的条数。·P(T=2)=29分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=3 的完整路径集合：{BB}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=3)=P(BB)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=3)=19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=3)=19分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=4 的完整路径集合：{AC, CA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=4)=P(AC)+P(CA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=4)=19+19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=4)=1+19所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=4)=29计算分子中一的个数，得到本组允许身份路径的条数。·P(T=4)=29分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=5 的完整路径集合：{BC, CB}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=5)=P(BC)+P(CB)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=5)=19+19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=5)=1+19所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=5)=29计算分子中一的个数，得到本组允许身份路径的条数。·P(T=5)=29分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=7 的完整路径集合：{CC}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=7)=P(CC)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=7)=19把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=7)=19分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。统计量 t（克）全部原像路径概率 P(T=t)1AA192AB, BA293BB194AC, CA295BC, CB297CC19除此表列出的统计量取值外，概率为 0。每条允许路径已经出现一次，所以表的范围完整。·总概率=19+29+19+29+29+19把所有互斥的统计量取值概率相加，检查是否覆盖整个样本空间。·总概率=19+29+19+29+29+19通分到共同正分母 9；每个分子和分母同乘对应倍数，分数值不变。·总概率=1+2+1+2+2+19同分母分数相加，只合并分子。·总概率=99计算分子中的整数和。·总概率=1相同的非零整数相除为一。这个检查需要连同“每条路径恰好归组一次”一起成立，单独总和为一不能排除错分组。满足条件的取值：4；对应路径 AC, CA。按题目的 = 逐个比较支持集中的精确值，边界取值是否包含由符号决定。·P(T=4)=P(T=4)不同统计量取值互斥，因此把满足条件的取值事件相加。·P(T=4)=29逐项代入本题已构造的分布。·P(T=4)=29统一写成身份路径的共同分母 9，为相加保留精确值。·P(T=4)=29合并同分母分数，分子保留加法。·P(T=4)=29只计算分子中的整数加法。·P(T=4)=29约去分子分母的共同正因子，得到精确概率；概率没有物理单位。本分支新问题的完整抽样分布。精确柱高与同块的归组推导使用同一份有理数数据。⑥ 答案与原创评价要点T等于4的概率为九分之二，由AC、CA两条互斥路径各九分之一相加得到。 允许路径、权重、完整映射、归组及目标事件是原创评价要点。",
+      "links": [
+        {
+          "text": "·",
+          "href": "#repair2-ab-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-ab-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-ab-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-ba-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-ba-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-ba-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-mass-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-mass-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair2-mass"
+        },
+        {
+          "text": "回到原证明：完整原像集合",
+          "href": "#main-wr-group-1-paths"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-first"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-second"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-rule"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-factors"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-fraction"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-numerator"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-weight"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-AC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-BC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-CC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-0-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-0-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-0"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-1-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-1-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-1-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-1-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-1"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-2-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-2-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-2"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-3-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-3-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-3-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-3-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-3"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-4-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-4-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-4-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-4-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-4"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-5-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-5-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-group-5"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-total-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-total-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-total-one"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-total-sum"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-total"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-q-event-sum"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-q-event-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-q-event-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-q-event-joined"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-q-event-num"
+        },
+        {
+          "text": "·",
+          "href": "#repair-reverse-q-event-answer"
+        }
+      ]
+    },
+    {
+      "label": "new item reverse",
+      "text": "就地自测新题 · 把关系迁移一次按这道新条件，P(T=4) 是多少？选择一个答案，然后提交九分之二。九分之一。提交作答独立作答核对通过AC与CA各给均值4。参考与解析九分之二。T等于4的概率为九分之二，由AC、CA两条互斥路径各九分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。"
+    },
+    {
+      "label": "repair weight",
+      "text": "分支三 · 删除对角路径，却保留放回权重误路：不放回时删除AA、BB、CC，剩六条仍各九分之一。删除路径后，实际第二抽过程也改变了。·P(首抽A)=13第一抽仍从三个身份均匀选择。首抽A后，剩余身份集合是{B,C}。A没有放回，因此后续样本空间仅含两个身份。·P(第二抽B|首抽A)=12B是剩余两个等可能身份之一。·P(AB)=P(首抽A)×P(第二抽B|首抽A)使用条件概率乘法；不需要假设两个抽次独立。·P(AB)=13×12把本次抽法的两层概率代入。·P(AB)=1×13×2分数相乘，分子分母分别相乘。·P(AB)=13×2先计算分子1乘1。·P(AB)=16再计算分母3乘2。·六条总概率=6×16六条允许路径各六分之一。·六条总概率=66整数6乘分数的分子1，分母保留6。·六条总概率=1非零数除以自身为1。回到原证明：第二抽条件概率。下一题继续不放回，改为 2、5、11 分钟。原创题 · 题干：英文原题Three labelled units A, B and C have measurements 2, 5 and 11 minutes respectively. Two units are drawn without replacement, first uniformly among three identities and then uniformly among the remaining two. The order is recorded. Let T be their sample mean. Find P(T=13/2). Show the allowed paths, path probabilities, mean mapping and the full sampling distribution used. (6)中文题面（我译的那一份）三个有标签的单位 A、B、C 的观测分别为 2、5、11 分钟。抽取两次，不放回，每次从剩余身份中均匀抽取，记录顺序。T 为两次观测的均值。求 P(T=13/2)，展示所用的允许路径、路径概率、均值映射和完整抽样分布。(6)就地自测新题 · 把关系迁移一次按这道新条件，P(T=13/2) 是多少？选择一个答案，然后提交三分之一。九分之二。提交作答暂时跳过直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202直接阅读完整讲解① 题干给了这些条件题面重新给三项观测及抽法；recorded order 保留有序身份路径；T指定mean。② 条件把方法指出来先在新条件列全路径，再计算每条均值和概率。上一题的数值结果不自动适用。③ 接回已经建立的对象回接本分支的修复关系以及 main-wr-pathset、conditional-rule、mapping-definition。④ 这条规则接得上题目均值为两观测和除以2；路径概率按条件乘法；相同均值的互斥路径概率相加。⑤ 逐步计算，每步都有依据{AB, AC, BA, BC, CA, CB}按本题抽法逐首抽身份排列所有允许第二抽；先保留身份，再读取数值。用 I1、I2 记两次抽到的身份。这里的 I1 读作“I 下标一”；身份 A 与数值 2 分别保存。·P(I1=A)=13第一抽在 3 个身份中均匀选择，每个身份分到总概率的 3 等份。·P(I2=B|I1=A)=12首抽 A 留在外面，剩余 2 个身份，B 在其中；从剩余身份均匀选择。·P(AB)=P(I1=A)×P(I2=B|I1=A)AB 表示先 A 后 B 的同一次两抽事件；使用本章已经解释的条件概率乘法法则。·P(AB)=13×12把两步概率分别代入，不把第二抽的分母沿用成未经检查的数。·P(AB)=1×13×2分数相乘：分子相乘，分母相乘。两个分母都是正整数。·P(AB)=13×2只计算分子的乘法：一乘一仍是一。·P(AB)=16只计算分母的乘法。每条允许路径都有同样的两步选择数，所以每条允许路径采用这个权重。·P(I2=A|I1=A)=0同一身份 A 已取走，剩余集合里没有 A。这里排除同一身份，两个不同单位仍然可能有相同数值。路径 AB：先 A，后 B抽到的两个观测分别为 2、5分钟；身份顺序保留。·T=2+52把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=72只把分子中的两个观测相加；分母仍为两次观测。·T=72把总和除以非零的样本量 2。所得均值的单位仍是分钟。路径 AC：先 A，后 C抽到的两个观测分别为 2、11分钟；身份顺序保留。·T=2+112把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=132只把分子中的两个观测相加；分母仍为两次观测。·T=132把总和除以非零的样本量 2。所得均值的单位仍是分钟。路径 BA：先 B，后 A抽到的两个观测分别为 5、2分钟；身份顺序保留。·T=5+22把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=72只把分子中的两个观测相加；分母仍为两次观测。·T=72把总和除以非零的样本量 2。所得均值的单位仍是分钟。路径 BC：先 B，后 C抽到的两个观测分别为 5、11分钟；身份顺序保留。·T=5+112把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=162只把分子中的两个观测相加；分母仍为两次观测。·T=8把总和除以非零的样本量 2。所得均值的单位仍是分钟。路径 CA：先 C，后 A抽到的两个观测分别为 11、2分钟；身份顺序保留。·T=11+22把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=132只把分子中的两个观测相加；分母仍为两次观测。·T=132把总和除以非零的样本量 2。所得均值的单位仍是分钟。路径 CB：先 C，后 B抽到的两个观测分别为 11、5分钟；身份顺序保留。·T=11+52把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=162只把分子中的两个观测相加；分母仍为两次观测。·T=8把总和除以非零的样本量 2。所得均值的单位仍是分钟。使 T=72 的完整路径集合：{AB, BA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=72)=P(AB)+P(BA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=72)=16+16把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=72)=1+16所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=72)=26计算分子中一的个数，得到本组允许身份路径的条数。·P(T=72)=13分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=132 的完整路径集合：{AC, CA}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=132)=P(AC)+P(CA)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=132)=16+16把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=132)=1+16所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=132)=26计算分子中一的个数，得到本组允许身份路径的条数。·P(T=132)=13分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。使 T=8 的完整路径集合：{BC, CB}。逐条检查本题的映射结果；同一路径进入且只进入一个取值组，身份不同的反向路径分别保留。·P(T=8)=P(BC)+P(CB)这些身份路径在同一次抽样中互斥，联合事件的概率等于各条路径概率相加。·P(T=8)=16+16把每条路径经过条件乘法得到的概率分别代入，仍保留每一项。·P(T=8)=1+16所有分母相同，合成一个分数时只把分子相加，分母保留。·P(T=8)=26计算分子中一的个数，得到本组允许身份路径的条数。·P(T=8)=13分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。统计量 t（分钟）全部原像路径概率 P(T=t)72AB, BA13132AC, CA138BC, CB13除此表列出的统计量取值外，概率为 0。每条允许路径已经出现一次，所以表的范围完整。·总概率=13+13+13把所有互斥的统计量取值概率相加，检查是否覆盖整个样本空间。·总概率=13+13+13通分到共同正分母 3；每个分子和分母同乘对应倍数，分数值不变。·总概率=1+1+13同分母分数相加，只合并分子。·总概率=33计算分子中的整数和。·总概率=1相同的非零整数相除为一。这个检查需要连同“每条路径恰好归组一次”一起成立，单独总和为一不能排除错分组。满足条件的取值：132；对应路径 AC, CA。按题目的 = 逐个比较支持集中的精确值，边界取值是否包含由符号决定。·P(T=132)=P(T=132)不同统计量取值互斥，因此把满足条件的取值事件相加。·P(T=132)=13逐项代入本题已构造的分布。·P(T=132)=26统一写成身份路径的共同分母 6，为相加保留精确值。·P(T=132)=26合并同分母分数，分子保留加法。·P(T=132)=26只计算分子中的整数加法。·P(T=132)=13约去分子分母的共同正因子，得到精确概率；概率没有物理单位。本分支新问题的完整抽样分布。精确柱高与同块的归组推导使用同一份有理数数据。⑥ 答案与原创评价要点T等于十三除以二的概率为三分之一，由AC、CA两条互斥路径各六分之一相加得到。 允许路径、权重、完整映射、归组及目标事件是原创评价要点。",
+      "links": [
+        {
+          "text": "·",
+          "href": "#repair3-first"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-second"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-rule"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-product"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-numerator"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-answer"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-total-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-total-fraction"
+        },
+        {
+          "text": "·",
+          "href": "#repair3-total"
+        },
+        {
+          "text": "回到原证明：第二抽条件概率",
+          "href": "#main-nr-second"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-first"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-second"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-rule"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-factors"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-fraction"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-numerator"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-weight"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-diagonal"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-AB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-AB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-AB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-AC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-AC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-AC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-BA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-BA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-BA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-BC-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-BC-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-BC-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-CA-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-CA-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-CA-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-CB-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-CB-add"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-CB-div"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-0-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-0-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-0-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-0-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-0"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-1-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-1-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-1-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-1-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-1"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-2-events"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-2-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-2-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-2-count"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-group-2"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-total-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-total-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-total-one"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-total-sum"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-total"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-q-event-sum"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-q-event-sub"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-q-event-common"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-q-event-joined"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-q-event-num"
+        },
+        {
+          "text": "·",
+          "href": "#repair-weight-q-event-answer"
+        }
+      ]
+    },
+    {
+      "label": "new item weight",
+      "text": "就地自测新题 · 把关系迁移一次按这道新条件，P(T=13/2) 是多少？选择一个答案，然后提交三分之一。九分之二。提交作答独立作答核对通过AC、CA各六分之一。参考与解析三分之一。T等于十三除以二的概率为三分之一，由AC、CA两条互斥路径各六分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。"
+    },
+    {
+      "label": "after three incorrect choices and three new correct checks",
+      "report": "当前记录：无辅助且正确的客观选择 3 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+      "closing": "回顾与继续：让下一次也能从条件走到分布现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。回忆闪卡合上公式，在心里重建先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。先尝试回忆，再翻面核对。1 / 3回忆正面给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？点击或按回车翻面查看提示上一张下一张学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202当前记录：无辅助且正确的客观选择 3 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。"
+    },
+    {
+      "label": "with replacement AC paths",
+      "formula": "选中的身份路径是 AC。第一次身份与第二次身份保留在不同形状中。",
+      "target": "下一步把这条允许路径送入同一个统计量规则。",
+      "caption": "AC：身份路径矩阵",
+      "state": {
+        "schemaVersion": 1,
+        "componentId": "sampling-explorer",
+        "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+        "contacts": {
+          "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 1
+          },
+          "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          }
+        },
+        "selection": {},
+        "submissions": [],
+        "locked": false,
+        "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+        "currentFrame": "main-wr-AC-paths",
+        "selectedPath": "AC",
+        "stage": "paths"
+      }
+    },
+    {
+      "label": "with replacement AC mapping",
+      "formula": "T=2+62代入当前路径的两次观测。T=82只把分子相加。T=4总和除以样本量2，单位天。",
+      "target": "下一步把这条允许路径送入同一个统计量规则。",
+      "caption": "AC：同一路径的均值代入、相加、相除",
+      "state": {
+        "schemaVersion": 1,
+        "componentId": "sampling-explorer",
+        "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+        "contacts": {
+          "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 2
+          },
+          "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          }
+        },
+        "selection": {},
+        "submissions": [],
+        "locked": false,
+        "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+        "currentFrame": "main-wr-AC-mapping",
+        "selectedPath": "AC",
+        "stage": "mapping"
+      }
+    },
+    {
+      "label": "with replacement AC grouping",
+      "formula": "T=2+62代入当前路径的两次观测。T=82只把分子相加。T=4总和除以样本量2，单位天。",
+      "target": "当前目标：T=4；完整原像 AC, BB, CA。此组概率：P(T=4)=13。对应柱子在图中使用青色突出。",
+      "caption": "AC：所有均值柱子，突出当前原像组",
+      "state": {
+        "schemaVersion": 1,
+        "componentId": "sampling-explorer",
+        "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+        "contacts": {
+          "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": true,
+            "feedback": false,
+            "referenceCoverage": [
+              "main-wr-distribution-solution"
+            ],
+            "revealedThrough": 3
+          },
+          "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          }
+        },
+        "selection": {},
+        "submissions": [],
+        "locked": false,
+        "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+        "currentFrame": "main-wr-AC-grouping",
+        "selectedPath": "AC",
+        "stage": "grouping"
+      }
+    },
+    {
+      "label": "with replacement grouping, mean 4",
+      "report": "当前记录：无辅助且正确的客观选择 3 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+      "closing": "回顾与继续：让下一次也能从条件走到分布现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。回忆闪卡合上公式，在心里重建先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。先尝试回忆，再翻面核对。1 / 3回忆正面给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？点击或按回车翻面查看提示上一张下一张学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202当前记录：无辅助且正确的客观选择 3 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。"
+    },
+    {
+      "label": "without replacement grouping, mean 4",
+      "report": "当前记录：无辅助且正确的客观选择 3 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+      "closing": "回顾与继续：让下一次也能从条件走到分布现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。回忆闪卡合上公式，在心里重建先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。先尝试回忆，再翻面核对。1 / 3回忆正面给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？点击或按回车翻面查看提示上一张下一张学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202当前记录：无辅助且正确的客观选择 3 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。",
+      "formula": "T=2+62代入当前路径的两次观测。T=82只把分子相加。T=4总和除以样本量2，单位天。",
+      "target": "当前目标：T=4；完整原像 AC, CA。此组概率：P(T=4)=13。对应柱子在图中使用青色突出。",
+      "caption": "AC：所有均值柱子，突出当前原像组",
+      "state": {
+        "schemaVersion": 1,
+        "componentId": "sampling-explorer",
+        "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+        "contacts": {
+          "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": true,
+            "feedback": false,
+            "referenceCoverage": [
+              "main-wr-distribution-solution"
+            ],
+            "revealedThrough": 3
+          },
+          "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": true,
+            "feedback": false,
+            "referenceCoverage": [
+              "main-nr-distribution-solution"
+            ],
+            "revealedThrough": 3
+          },
+          "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          }
+        },
+        "selection": {},
+        "submissions": [],
+        "locked": false,
+        "conditionKey": "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean",
+        "currentFrame": "main-nr-AC-grouping",
+        "selectedPath": "AC",
+        "stage": "grouping"
+      }
+    },
+    {
+      "label": "preimage omission",
+      "text": "让 T=4 天的路径有哪些？可以多选。先把完整的来路选出来，再统一核对。选择所有使均值为 4 天的身份路径AAABACBABBBCCACBCC核对这组来路重新选择这组选择已冻结。原像组件核对：本次选择需要修正。原始选择：AC。全部来路为 AC、BB、CA。它们的均值均为4；三条路径各自的代入、相加与相除保留在对应书面推导中。提交前未记录该条件参考；本次仍只核对原像组件。查看逐项归组证明",
+      "state": {
+        "schemaVersion": 1,
+        "componentId": "preimage-four",
+        "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+        "contacts": {
+          "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": true,
+            "feedback": true,
+            "referenceCoverage": [
+              "preimage-four-feedback"
+            ],
+            "revealedThrough": 0
+          },
+          "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          }
+        },
+        "selection": {
+          "paths": [
+            "AC"
+          ]
+        },
+        "submissions": [
+          {
+            "id": "preimage:1788845686494:0",
+            "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+            "answers": {
+              "paths": [
+                "AC"
+              ]
+            },
+            "assistedAtSubmit": false,
+            "assistanceSnapshot": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "componentChecks": {
+              "paths": false
+            },
+            "evidence": "component-check-only"
+          }
+        ],
+        "locked": true,
+        "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+        "currentFrame": null,
+        "selectedPath": null,
+        "stage": "paths"
+      }
+    },
+    {
+      "label": "preimage correction after feedback",
+      "text": "让 T=4 天的路径有哪些？可以多选。先把完整的来路选出来，再统一核对。选择所有使均值为 4 天的身份路径AAABACBABBBCCACBCC核对这组来路重新选择这组选择已冻结。原像组件核对：本次选择完整。原始选择：AC、BB、CA。全部来路为 AC、BB、CA。它们的均值均为4；三条路径各自的代入、相加与相除保留在对应书面推导中。提交前已经接触该条件参考。查看逐项归组证明",
+      "state": {
+        "schemaVersion": 1,
+        "componentId": "preimage-four",
+        "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+        "contacts": {
+          "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": true,
+            "feedback": true,
+            "referenceCoverage": [
+              "preimage-four-feedback"
+            ],
+            "revealedThrough": 0
+          },
+          "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          },
+          "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+            "hint": false,
+            "reference": false,
+            "feedback": false,
+            "referenceCoverage": [],
+            "revealedThrough": 0
+          }
+        },
+        "selection": {
+          "paths": [
+            "AC",
+            "BB",
+            "CA"
+          ]
+        },
+        "submissions": [
+          {
+            "id": "preimage:1788845686494:0",
+            "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+            "answers": {
+              "paths": [
+                "AC"
+              ]
+            },
+            "assistedAtSubmit": false,
+            "assistanceSnapshot": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "componentChecks": {
+              "paths": false
+            },
+            "evidence": "component-check-only"
+          },
+          {
+            "id": "preimage:1788845686701:1",
+            "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+            "answers": {
+              "paths": [
+                "AC",
+                "BB",
+                "CA"
+              ]
+            },
+            "assistedAtSubmit": true,
+            "assistanceSnapshot": {
+              "hint": false,
+              "reference": true,
+              "feedback": true,
+              "referenceCoverage": [
+                "preimage-four-feedback"
+              ],
+              "revealedThrough": 0
+            },
+            "componentChecks": {
+              "paths": true
+            },
+            "evidence": "component-check-only"
+          }
+        ],
+        "locked": true,
+        "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+        "currentFrame": null,
+        "selectedPath": null,
+        "stage": "paths"
+      }
+    },
+    {
+      "label": "preimage corrected",
+      "report": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+      "closing": "回顾与继续：让下一次也能从条件走到分布现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。回忆闪卡合上公式，在心里重建先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。先尝试回忆，再翻面核对。1 / 3回忆正面给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？点击或按回车翻面查看提示上一张下一张学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。"
+    },
+    {
+      "label": "direct full reference without answering",
+      "report": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+      "closing": "回顾与继续：让下一次也能从条件走到分布现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。回忆闪卡合上公式，在心里重建先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。先尝试回忆，再翻面核对。1 / 3回忆正面给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？点击或按回车翻面查看提示上一张下一张学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。"
+    },
+    {
+      "label": "skip full construction",
+      "report": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+      "closing": "回顾与继续：让下一次也能从条件走到分布现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。回忆闪卡合上公式，在心里重建先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。先尝试回忆，再翻面核对。1 / 3回忆正面给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？点击或按回车翻面查看提示上一张下一张学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。",
+      "constructText": "第 1 组 · 勾选完整允许路径集合AAABACBABBBCCACBCC第 2 组 · 为每条允许路径选择均值（分钟）即使第一组暂时漏选，仍把六行分别完成；最后才统一核对。AB → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟AC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BA → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟CA → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟CB → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟第 3 组 · 选择路径概率的依据第一抽三分之一，给定首抽后第二抽二分之一，因此每条允许路径六分之一。第一抽和第二抽都用三分之一，因此每条九分之一。因为最后有三个均值，所以每条身份路径三分之一。第 4 组 · 选择完整分布T 可取 2、5、7 分钟，各为三分之一；其余值概率0。T 可取 2、5、7 分钟，各为九分之二；其余值概率0。T 可取 0、4、10 分钟，各为三分之一；其余值概率0。提交四组并核对重新构造看一条路线提示跳过并读完整参考已跳过并展开完整参考；没有生成作答，也没有记为答错。按首抽身份分三行；每行只列剩余两种身份。把每一行均值算完，再按相同均值收集路径。概率的第二个分母由“剩余”决定。"
+    }
+  ],
+  "errors": []
+}

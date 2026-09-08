@@ -1,0 +1,2054 @@
+{
+  "scope": "Independent game-review real HTML DOM events; optional Image callback shim is conditional JS evidence only, never decoding/browser proof",
+  "hashes": {
+    "lesson.html": "98b5e20e7ba17f01ae691f67b91050a493d3efad702020349acad50eea6e4392",
+    "lesson.json": "92a8258b95e6a735d80261eccaf23a91cd4335a3647edd2282fd7fda4cc75259",
+    "manim-manifest.json": "329a4532bd8e807822327d8ed582ed0a69446853ad277febe4322e0325b7bf6c",
+    "delivery-manifest.json": "ad6390cf8d51f1de8c08ee47318f1fade5417c6ffc3a692e1b3017af653f8c81"
+  },
+  "scenarios": [
+    {
+      "id": "G01/G08 normal jsdom no image shim",
+      "imageCallbackShim": false,
+      "checks": [
+        {
+          "name": "runtime and all activities mounted",
+          "pass": true,
+          "details": 28
+        },
+        {
+          "name": "no authored main-flow typing nodes",
+          "pass": true,
+          "details": [
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "population-recall",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "ex-pop-a-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "ex-pop-b-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "ex-pop-c-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "statistic-known",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "ex-stat-a-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "ex-stat-b-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "distribution-recall",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "preimage-four",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "main-reverse",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "main-equal",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "sampling-explorer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "ex-max-a-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "ex-max-b-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "main-weight",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q1-a-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q1-b-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q1-c-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q2-a-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q2-b-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q2-c-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "construction-four",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q4-a-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "q4-b-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "repair-equal-q-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "repair-reverse-q-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "repair-weight-q-answer",
+              "optionalNote": true,
+              "visible": false
+            },
+            {
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "id": "",
+              "activity": "final-recall",
+              "optionalNote": true,
+              "visible": false
+            }
+          ]
+        },
+        {
+          "name": "main definitions and proof lines public",
+          "pass": true
+        },
+        {
+          "name": "navigation reachable population-recall",
+          "pass": true
+        },
+        {
+          "name": "navigation reachable preimage-four",
+          "pass": true
+        },
+        {
+          "name": "navigation reachable sampling-explorer",
+          "pass": true
+        },
+        {
+          "name": "navigation reachable main-weight",
+          "pass": true
+        },
+        {
+          "name": "navigation reachable construction-four",
+          "pass": true
+        },
+        {
+          "name": "navigation reachable final-recall",
+          "pass": true
+        },
+        {
+          "name": "skip opens all Q3 solutions",
+          "pass": true
+        },
+        {
+          "name": "skipped construction no submission",
+          "pass": true
+        },
+        {
+          "name": "full reading never correctness gated",
+          "pass": true
+        },
+        {
+          "name": "all 28 actual activities navigable without typing",
+          "pass": true
+        }
+      ],
+      "observations": {
+        "editable": [
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "population-recall",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "ex-pop-a-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "ex-pop-b-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "ex-pop-c-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "statistic-known",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "ex-stat-a-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "ex-stat-b-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "distribution-recall",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "preimage-four",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "main-reverse",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "main-equal",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "sampling-explorer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "ex-max-a-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "ex-max-b-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "main-weight",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q1-a-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q1-b-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q1-c-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q2-a-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q2-b-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q2-c-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "construction-four",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q4-a-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "q4-b-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "repair-equal-q-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "repair-reverse-q-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "repair-weight-q-answer",
+            "optionalNote": true,
+            "visible": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "type": "textarea",
+            "id": "",
+            "activity": "final-recall",
+            "optionalNote": true,
+            "visible": false
+          }
+        ],
+        "start": "一次均值算完，概率问题刚刚开始 三张借阅记录标签 A、B、C，分别写着 2、4、6 天。抽出一张，记录天数，再放回；第二次重新独立、均匀抽取。两次的平均天数会是多少？如果重复整个两抽程序，哪些平均数出现得多？ 先把手边的一次计算完成：抽到 A 后抽到 C。A 与 C 是记录的身份，2 与 6 是记录上的观测值。 · T = 2 + 6 2 两次观测的平均数取总和除以观测次数，这里先把两个天数代进去。 · T = 8 2 先相加：2 天加 6 天，合计 8 天；分母的 2 表示两次观测。 · T = 4 再除以 2，平均天数为 4 天。除数是非零的观测次数。 这次平均是 4 天，仍留下一个问题：4 天有多少条来路？这章会把一次样本、所有允许样本和统计量的分布接起来。题目均为原创，采用 Edexcel IAL S2 的术语与问法；完整书面推导随时可读，选择与翻卡穿插在关键关系旁。 总体与抽样 统计量 抽样分布 做题篇 回顾与继续 直接展开全部参考讲解 每个参考块也能单独打开。作答、跳过与直接阅读都能继续；读过同题参考后再作答，会保留借助参考的记录。",
+        "explorerNoDecode": {
+          "status": "正在载入当前条件对应的真实 Manim 画面…",
+          "hidden": true,
+          "formulaHidden": true
+        },
+        "fullClickCourse": [
+          {
+            "id": "population-recall",
+            "current": "population-recall",
+            "type": "flashcards",
+            "status": "idle"
+          },
+          {
+            "id": "ex-pop-a-answer",
+            "current": "ex-pop-a-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "ex-pop-b-answer",
+            "current": "ex-pop-b-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "ex-pop-c-answer",
+            "current": "ex-pop-c-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "statistic-known",
+            "current": "statistic-known",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "ex-stat-a-answer",
+            "current": "ex-stat-a-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "ex-stat-b-answer",
+            "current": "ex-stat-b-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "distribution-recall",
+            "current": "distribution-recall",
+            "type": "flashcards",
+            "status": "idle"
+          },
+          {
+            "id": "preimage-four",
+            "current": "preimage-four",
+            "type": "interactive",
+            "status": "idle"
+          },
+          {
+            "id": "main-reverse",
+            "current": "main-reverse",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "main-equal",
+            "current": "main-equal",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "sampling-explorer",
+            "current": "sampling-explorer",
+            "type": "interactive",
+            "status": "idle"
+          },
+          {
+            "id": "ex-max-a-answer",
+            "current": "ex-max-a-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "ex-max-b-answer",
+            "current": "ex-max-b-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "main-weight",
+            "current": "main-weight",
+            "type": "quiz",
+            "status": "skipped"
+          },
+          {
+            "id": "q1-a-answer",
+            "current": "q1-a-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "q1-b-answer",
+            "current": "q1-b-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "q1-c-answer",
+            "current": "q1-c-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "q2-a-answer",
+            "current": "q2-a-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "q2-b-answer",
+            "current": "q2-b-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "q2-c-answer",
+            "current": "q2-c-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "construction-four",
+            "current": "construction-four",
+            "type": "interactive",
+            "status": "idle"
+          },
+          {
+            "id": "q4-a-answer",
+            "current": "q4-a-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "q4-b-answer",
+            "current": "q4-b-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "repair-equal-q-answer",
+            "current": "repair-equal-q-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "repair-reverse-q-answer",
+            "current": "repair-reverse-q-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "repair-weight-q-answer",
+            "current": "repair-weight-q-answer",
+            "type": "quiz",
+            "status": "submitted"
+          },
+          {
+            "id": "final-recall",
+            "current": "final-recall",
+            "type": "flashcards",
+            "status": "idle"
+          }
+        ],
+        "referenceCount": 24,
+        "closedPanels": [
+          {
+            "open": false,
+            "title": "学习记录 · 参与 28/28 · 待复习 0"
+          }
+        ]
+      },
+      "errors": [],
+      "imageRequests": 0
+    },
+    {
+      "id": "G02/G05 actual frame request branch with explicit Image callback shim",
+      "imageCallbackShim": true,
+      "checks": [
+        {
+          "name": "selected path frame/formula AB",
+          "pass": true
+        },
+        {
+          "name": "selected path frame/formula BA",
+          "pass": true
+        },
+        {
+          "name": "selected path frame/formula AC",
+          "pass": true
+        },
+        {
+          "name": "different paths actually request different images",
+          "pass": true
+        },
+        {
+          "name": "grouping proof remains revealed on previous stage",
+          "pass": true
+        },
+        {
+          "name": "without replacement excludes identity diagonals",
+          "pass": true
+        },
+        {
+          "name": "condition changes actual frame",
+          "pass": true
+        }
+      ],
+      "observations": {
+        "frames": [
+          {
+            "path": "AB",
+            "frame": "main-wr-AB-mapping",
+            "formula": "T=2+42代入当前路径的两次观测。T=62只把分子相加。T=3总和除以样本量2，单位天。",
+            "target": "下一步把这条允许路径送入同一个统计量规则。",
+            "line": "#main-wr-AB-sub",
+            "srcHash": "b366b1f6b073ea66016ba06c257265ddd16b1ff267178c23a2c3d71a162dc088"
+          },
+          {
+            "path": "BA",
+            "frame": "main-wr-BA-mapping",
+            "formula": "T=4+22代入当前路径的两次观测。T=62只把分子相加。T=3总和除以样本量2，单位天。",
+            "target": "下一步把这条允许路径送入同一个统计量规则。",
+            "line": "#main-wr-BA-sub",
+            "srcHash": "13132f6e0819e1940110035b7faab1a21634b1be94106b8f5f63cda16fd1af36"
+          },
+          {
+            "path": "AC",
+            "frame": "main-wr-AC-mapping",
+            "formula": "T=2+62代入当前路径的两次观测。T=82只把分子相加。T=4总和除以样本量2，单位天。",
+            "target": "下一步把这条允许路径送入同一个统计量规则。",
+            "line": "#main-wr-AC-sub",
+            "srcHash": "c6dadd2d9411e0fe65a7faf581defaa2fbfdffe1d3195cbfe859e034a1206eca"
+          }
+        ],
+        "withoutReplacement": {
+          "frame": "main-nr-AB-grouping",
+          "formula": "T=2+42代入当前路径的两次观测。T=62只把分子相加。T=3总和除以样本量2，单位天。",
+          "target": "当前目标：T=3；完整原像 AB, BA。此组概率：P(T=3)=13。对应柱子在图中使用青色突出。",
+          "status": "不放回 · 剩余均匀；当前画面 AB / grouping。本条件已展示到第 3 阶段；回退不抹去接触记录。"
+        }
+      },
+      "errors": [],
+      "imageRequests": 13
+    },
+    {
+      "id": "G06/G09 frozen full construction",
+      "imageCallbackShim": false,
+      "checks": [
+        {
+          "name": "later mapping group does not expose first path-set answer",
+          "pass": false
+        },
+        {
+          "name": "partial does not score or reveal",
+          "pass": true
+        },
+        {
+          "name": "one frozen submit despite double click",
+          "pass": true
+        },
+        {
+          "name": "wrong components separately checked",
+          "pass": true
+        },
+        {
+          "name": "component never public objective proof",
+          "pass": true
+        },
+        {
+          "name": "retry old results hidden before new construction",
+          "pass": false
+        },
+        {
+          "name": "same condition retry remains assisted",
+          "pass": true
+        },
+        {
+          "name": "original submission assistance immutable",
+          "pass": true
+        },
+        {
+          "name": "ending provides a fresh challenge after completed construction",
+          "pass": false,
+          "details": {
+            "current": "construction-four",
+            "locked": true,
+            "submissions": 2
+          }
+        }
+      ],
+      "observations": {
+        "initialMappingRows": [
+          {
+            "path": "AB",
+            "visible": true
+          },
+          {
+            "path": "AC",
+            "visible": true
+          },
+          {
+            "path": "BA",
+            "visible": true
+          },
+          {
+            "path": "BC",
+            "visible": true
+          },
+          {
+            "path": "CA",
+            "visible": true
+          },
+          {
+            "path": "CB",
+            "visible": true
+          }
+        ],
+        "initialConstruct": "第 1 组 · 勾选完整允许路径集合 AA AB AC BA BB BC CA CB CC 第 2 组 · 为每条允许路径选择均值（分钟） 即使第一组暂时漏选，仍把六行分别完成；最后才统一核对。 AB → 请选择均值 0 分钟 2 分钟 4 分钟 5 分钟 7 分钟 10 分钟 AC → 请选择均值 0 分钟 2 分钟 4 分钟 5 分钟 7 分钟 10 分钟 BA → 请选择均值 0 分钟 2 分钟 4 分钟 5 分钟 7 分钟 10 分钟 BC → 请选择均值 0 分钟 2 分钟 4 分钟 5 分钟 7 分钟 10 分钟 CA → 请选择均值 0 分钟 2 分钟 4 分钟 5 分钟 7 分钟 10 分钟 CB → 请选择均值 0 分钟 2 分钟 4 分钟 5 分钟 7 分钟 10 分钟 第 3 组 · 选择路径概率的依据 第一抽三分之一，给定首抽后第二抽二分之一，因此每条允许路径六分之一。 第一抽和第二抽都用三分之一，因此每条九分之一。 因为最后有三个均值，所以每条身份路径三分之一。 第 4 组 · 选择完整分布 T 可取 2、5、7 分钟，各为三分之一；其余值概率0。 T 可取 2、5、7 分钟，各为九分之二；其余值概率0。 T 可取 0、4、10 分钟，各为三分之一；其余值概率0。 提交四组并核对 重新构造 看一条路线提示 跳过并读完整参考 尚未提交；四组完成后统一核对。",
+        "partial": {
+          "text": "还没有完成四组：路径至少选一条，六行均值都要选择，概率依据与完整分布各选一项。暂未核对，也未生成提交记录。",
+          "result": "",
+          "solutions": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "wrong": {
+          "own": {
+            "schemaVersion": 1,
+            "componentId": "construction-four",
+            "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+            "contacts": {
+              "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": true,
+                "feedback": true,
+                "referenceCoverage": [
+                  "construction-four-feedback"
+                ],
+                "revealedThrough": 0
+              },
+              "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              }
+            },
+            "selection": {
+              "paths": [
+                "AA",
+                "AB",
+                "AC",
+                "BA",
+                "BC",
+                "CA",
+                "CB"
+              ],
+              "mapping": {
+                "AB": "2",
+                "AC": "5",
+                "BA": "2",
+                "BC": "7",
+                "CA": "5",
+                "CB": "7"
+              },
+              "probabilityReason": "old",
+              "distribution": "ninths"
+            },
+            "submissions": [
+              {
+                "id": "construction:1788845840956:0",
+                "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+                "answers": {
+                  "paths": [
+                    "AA",
+                    "AB",
+                    "AC",
+                    "BA",
+                    "BC",
+                    "CA",
+                    "CB"
+                  ],
+                  "mapping": {
+                    "AB": "2",
+                    "AC": "5",
+                    "BA": "2",
+                    "BC": "7",
+                    "CA": "5",
+                    "CB": "7"
+                  },
+                  "probabilityReason": "old",
+                  "distribution": "ninths"
+                },
+                "assistedAtSubmit": false,
+                "assistanceSnapshot": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                },
+                "componentChecks": {
+                  "paths": false,
+                  "mapping": true,
+                  "probability": false,
+                  "distribution": false
+                },
+                "evidence": "component-check-only",
+                "submittedAt": 1788845840956
+              }
+            ],
+            "locked": true,
+            "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+            "currentFrame": null,
+            "selectedPath": null,
+            "stage": "paths"
+          },
+          "text": "构造选择核对 · 页面未记录提交前的本条件提示或参考这是一组组件选择的核对；不等同于已独立写出整份证明。允许路径集合：需要修正每条均值映射：本次选择吻合路径概率依据：需要修正完整抽样分布：需要修正本次原始选择（冻结）路径：AA、AB、AC、BA、BC、CA、CB映射：AB→2；AC→5；BA→2；BC→7；CA→5；CB→7概率选项：两抽均三分之一；分布选项：2、5、7各九分之二提交前接触：无参考块；提示 无。提交后展示答案只影响以后的提交。逐行路径 · 逐行均值 · 概率依据 · 完整分布"
+        },
+        "afterRetry": "构造选择核对 · 页面未记录提交前的本条件提示或参考这是一组组件选择的核对；不等同于已独立写出整份证明。允许路径集合：需要修正每条均值映射：本次选择吻合路径概率依据：需要修正完整抽样分布：需要修正本次原始选择（冻结）路径：AA、AB、AC、BA、BC、CA、CB映射：AB→2；AC→5；BA→2；BC→7；CA→5；CB→7概率选项：两抽均三分之一；分布选项：2、5、7各九分之二提交前接触：无参考块；提示 无。提交后展示答案只影响以后的提交。逐行路径 · 逐行均值 · 概率依据 · 完整分布",
+        "second": {
+          "id": "construction:1788845841338:1",
+          "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+          "answers": {
+            "paths": [
+              "AB",
+              "AC",
+              "BA",
+              "BC",
+              "CA",
+              "CB"
+            ],
+            "mapping": {
+              "AB": "2",
+              "AC": "5",
+              "BA": "2",
+              "BC": "7",
+              "CA": "5",
+              "CB": "7"
+            },
+            "probabilityReason": "remaining",
+            "distribution": "thirds"
+          },
+          "assistedAtSubmit": true,
+          "assistanceSnapshot": {
+            "hint": false,
+            "reference": true,
+            "feedback": true,
+            "referenceCoverage": [
+              "construction-four-feedback"
+            ],
+            "revealedThrough": 0
+          },
+          "componentChecks": {
+            "paths": true,
+            "mapping": true,
+            "probability": true,
+            "distribution": true
+          },
+          "evidence": "component-check-only",
+          "submittedAt": 1788845841338
+        }
+      },
+      "errors": [],
+      "imageRequests": 0
+    },
+    {
+      "id": "G07/G09 recommendations per outcome and new problem",
+      "imageCallbackShim": false,
+      "checks": [
+        {
+          "name": "specific next recommendation correct",
+          "pass": false
+        },
+        {
+          "name": "specific next recommendation assisted",
+          "pass": false
+        },
+        {
+          "name": "specific next recommendation skipped",
+          "pass": false
+        },
+        {
+          "name": "unrelated new Q4 still unexposed",
+          "pass": true
+        }
+      ],
+      "observations": {
+        "outcomes": [
+          {
+            "kind": "correct",
+            "id": "main-reverse",
+            "rec": [],
+            "visible": "就地自测 相同输出保留几条输入 在放回主条件下，T=3天的完整身份原像是哪一组？ 选择一个答案，然后提交 只保留AB，BA的均值相同所以删去。 AB与BA都保留，它们对应不同的抽取次序。 提交作答 独立作答核对通过 输出相同可以归组，两条输入的概率都保留。 参考与解析 AB与BA都保留，它们对应不同的抽取次序。 AB和BA是两个不同的完整样本事件，它们都给均值3天。 重新作答 本题复习：2026年9月9日 学习工具 数值或选项核对通过。",
+            "saved": {
+              "id": "main-reverse",
+              "objectiveId": "distribution",
+              "type": "quiz",
+              "draft": "both",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": false,
+              "exposure": {
+                "sessionId": "session-1788845843459-ttuvh9pavbq",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788845844470,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "main-reverse:1788845844470:1",
+                  "answer": "both",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": false,
+                  "time": 1788845844470,
+                  "sessionId": "session-1788845843459-ttuvh9pavbq"
+                }
+              ],
+              "submittedAttemptId": "main-reverse:1788845844470:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788932244470,
+                "lastReviewedAt": 1788845844470,
+                "lastSessionId": "session-1788845843459-ttuvh9pavbq",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788845844470,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            }
+          },
+          {
+            "kind": "assisted",
+            "id": "main-equal",
+            "rec": [],
+            "visible": "就地自测 概率跟着来路走 放回、独立均匀抽取的主条件下，T=3 天的概率是多少？ 选择一个答案，然后提交 五分之一：共有五个不同均值。 九分之二：AB 与 BA 各贡献九分之一。 提交作答 参考辅助后核对通过 本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。 两条路径互斥，每条权重是九分之一。 找出使两次总和等于 6 的全部有序身份路径。 参考与解析 九分之二：AB 与 BA 各贡献九分之一。 T=3 的来路是 AB 与 BA，路径概率相加得到九分之二。 重新作答 本题复习：2026年9月9日 学习工具 数值或选项核对通过。",
+            "saved": {
+              "id": "main-equal",
+              "objectiveId": "distribution",
+              "type": "quiz",
+              "draft": "two",
+              "status": "submitted",
+              "answerRevealed": true,
+              "hintUsed": true,
+              "exposure": {
+                "sessionId": "session-1788845843459-ttuvh9pavbq",
+                "hint": true,
+                "reference": true,
+                "observedAt": 1788845844643,
+                "inferred": false
+              },
+              "attempts": [
+                {
+                  "id": "main-equal:1788845844643:1",
+                  "answer": "two",
+                  "correct": true,
+                  "source": "objective",
+                  "assisted": true,
+                  "time": 1788845844643,
+                  "sessionId": "session-1788845843459-ttuvh9pavbq"
+                }
+              ],
+              "submittedAttemptId": "main-equal:1788845844643:1",
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788932244643,
+                "lastReviewedAt": 1788845844643,
+                "lastSessionId": "session-1788845843459-ttuvh9pavbq",
+                "evidenceSource": "objective"
+              },
+              "participated": true,
+              "lastInteractionAt": 1788845844643,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            }
+          },
+          {
+            "kind": "skipped",
+            "id": "main-weight",
+            "rec": [],
+            "visible": "就地自测 抽法改变后重新核对权重 不放回且从剩余身份均匀抽取时，路径 AB 的概率是哪一个？ 选择一个答案，然后提交 九分之一：沿用放回的权重。 六分之一：三分之一乘二分之一。 提交作答 本题已暂时跳过，没有计入答错。 直接查看参考 重新作答 学习工具 已跳过，没有计入答错。",
+            "saved": {
+              "id": "main-weight",
+              "objectiveId": "distribution",
+              "type": "quiz",
+              "draft": "",
+              "status": "skipped",
+              "answerRevealed": false,
+              "hintUsed": false,
+              "exposure": null,
+              "attempts": [],
+              "submittedAttemptId": null,
+              "review": null,
+              "participated": false,
+              "lastInteractionAt": 1788845844717,
+              "notes": "",
+              "bookmarked": false,
+              "flash": {
+                "index": 0,
+                "cards": {}
+              },
+              "stepIndex": 0,
+              "exploration": {},
+              "explorationCount": 0
+            }
+          }
+        ],
+        "newQ": "直接阅读完整讲解"
+      },
+      "errors": [],
+      "imageRequests": 0
+    },
+    {
+      "id": "G09/G11 whole-proof contact and old import",
+      "imageCallbackShim": false,
+      "checks": [
+        {
+          "name": "immediate global reference submission assisted",
+          "pass": true
+        },
+        {
+          "name": "old import retains completed submission",
+          "pass": true
+        },
+        {
+          "name": "old import retains relevant contact",
+          "pass": true
+        },
+        {
+          "name": "merged state immediately exported",
+          "pass": true
+        },
+        {
+          "name": "refresh adds no exploration actions",
+          "pass": true
+        },
+        {
+          "name": "refresh restores draft",
+          "pass": true
+        },
+        {
+          "name": "refresh keeps contact",
+          "pass": true
+        }
+      ],
+      "observations": {
+        "restored": {
+          "selection": {
+            "paths": [
+              "AB"
+            ],
+            "mapping": {
+              "AB": "2",
+              "AC": "",
+              "BA": "",
+              "BC": "",
+              "CA": "",
+              "CB": ""
+            },
+            "probabilityReason": "",
+            "distribution": ""
+          },
+          "locked": false,
+          "submissions": [
+            {
+              "id": "construction:1788845847769:0",
+              "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+              "answers": {
+                "paths": [
+                  "AB",
+                  "AC",
+                  "BA",
+                  "BC",
+                  "CA",
+                  "CB"
+                ],
+                "mapping": {
+                  "AB": "2",
+                  "AC": "5",
+                  "BA": "2",
+                  "BC": "7",
+                  "CA": "5",
+                  "CB": "7"
+                },
+                "probabilityReason": "remaining",
+                "distribution": "thirds"
+              },
+              "assistedAtSubmit": true,
+              "assistanceSnapshot": {
+                "hint": false,
+                "reference": true,
+                "feedback": false,
+                "referenceCoverage": [
+                  "all-reference",
+                  "q3-a-solution",
+                  "q3-b-solution",
+                  "q3-c-solution",
+                  "q3-d-solution"
+                ],
+                "revealedThrough": 3
+              },
+              "componentChecks": {
+                "paths": true,
+                "mapping": true,
+                "probability": true,
+                "distribution": true
+              },
+              "evidence": "component-check-only",
+              "submittedAt": 1788845847769
+            }
+          ],
+          "contacts": {
+            "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": true,
+              "feedback": true,
+              "referenceCoverage": [
+                "all-reference",
+                "q3-a-solution",
+                "q3-b-solution",
+                "q3-c-solution",
+                "q3-d-solution",
+                "construction-four-feedback"
+              ],
+              "revealedThrough": 3
+            },
+            "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            },
+            "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+              "hint": false,
+              "reference": false,
+              "feedback": false,
+              "referenceCoverage": [],
+              "revealedThrough": 0
+            }
+          }
+        },
+        "publicActivity": {
+          "id": "construction-four",
+          "objectiveId": "construction",
+          "type": "interactive",
+          "draft": "",
+          "status": "idle",
+          "answerRevealed": false,
+          "hintUsed": false,
+          "exposure": null,
+          "attempts": [],
+          "submittedAttemptId": null,
+          "review": null,
+          "participated": true,
+          "lastInteractionAt": 1788845848002,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {
+            "schemaVersion": 1,
+            "componentId": "construction-four",
+            "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+            "contacts": {
+              "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": true,
+                "feedback": true,
+                "referenceCoverage": [
+                  "all-reference",
+                  "q3-a-solution",
+                  "q3-b-solution",
+                  "q3-c-solution",
+                  "q3-d-solution",
+                  "construction-four-feedback"
+                ],
+                "revealedThrough": 3
+              },
+              "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              }
+            },
+            "selection": {
+              "paths": [
+                "AB"
+              ],
+              "mapping": {
+                "AB": "2",
+                "AC": "",
+                "BA": "",
+                "BC": "",
+                "CA": "",
+                "CB": ""
+              },
+              "probabilityReason": "",
+              "distribution": ""
+            },
+            "submissions": [
+              {
+                "id": "construction:1788845847769:0",
+                "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+                "answers": {
+                  "paths": [
+                    "AB",
+                    "AC",
+                    "BA",
+                    "BC",
+                    "CA",
+                    "CB"
+                  ],
+                  "mapping": {
+                    "AB": "2",
+                    "AC": "5",
+                    "BA": "2",
+                    "BC": "7",
+                    "CA": "5",
+                    "CB": "7"
+                  },
+                  "probabilityReason": "remaining",
+                  "distribution": "thirds"
+                },
+                "assistedAtSubmit": true,
+                "assistanceSnapshot": {
+                  "hint": false,
+                  "reference": true,
+                  "feedback": false,
+                  "referenceCoverage": [
+                    "all-reference",
+                    "q3-a-solution",
+                    "q3-b-solution",
+                    "q3-c-solution",
+                    "q3-d-solution"
+                  ],
+                  "revealedThrough": 3
+                },
+                "componentChecks": {
+                  "paths": true,
+                  "mapping": true,
+                  "probability": true,
+                  "distribution": true
+                },
+                "evidence": "component-check-only",
+                "submittedAt": 1788845847769
+              }
+            ],
+            "locked": false,
+            "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+            "currentFrame": null,
+            "selectedPath": null,
+            "stage": "paths"
+          },
+          "explorationCount": 6
+        },
+        "refresh": {
+          "own": {
+            "schemaVersion": 1,
+            "componentId": "construction-four",
+            "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+            "contacts": {
+              "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": true,
+                "feedback": true,
+                "referenceCoverage": [
+                  "all-reference",
+                  "q3-a-solution",
+                  "q3-b-solution",
+                  "q3-c-solution",
+                  "q3-d-solution",
+                  "construction-four-feedback"
+                ],
+                "revealedThrough": 3
+              },
+              "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              },
+              "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+                "hint": false,
+                "reference": false,
+                "feedback": false,
+                "referenceCoverage": [],
+                "revealedThrough": 0
+              }
+            },
+            "selection": {
+              "paths": [
+                "AB"
+              ],
+              "mapping": {
+                "AB": "2",
+                "AC": "",
+                "BA": "",
+                "BC": "",
+                "CA": "",
+                "CB": ""
+              },
+              "probabilityReason": "",
+              "distribution": ""
+            },
+            "submissions": [
+              {
+                "id": "construction:1788845847769:0",
+                "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+                "answers": {
+                  "paths": [
+                    "AB",
+                    "AC",
+                    "BA",
+                    "BC",
+                    "CA",
+                    "CB"
+                  ],
+                  "mapping": {
+                    "AB": "2",
+                    "AC": "5",
+                    "BA": "2",
+                    "BC": "7",
+                    "CA": "5",
+                    "CB": "7"
+                  },
+                  "probabilityReason": "remaining",
+                  "distribution": "thirds"
+                },
+                "assistedAtSubmit": true,
+                "assistanceSnapshot": {
+                  "hint": false,
+                  "reference": true,
+                  "feedback": false,
+                  "referenceCoverage": [
+                    "all-reference",
+                    "q3-a-solution",
+                    "q3-b-solution",
+                    "q3-c-solution",
+                    "q3-d-solution"
+                  ],
+                  "revealedThrough": 3
+                },
+                "componentChecks": {
+                  "paths": true,
+                  "mapping": true,
+                  "probability": true,
+                  "distribution": true
+                },
+                "evidence": "component-check-only",
+                "submittedAt": 1788845847769
+              }
+            ],
+            "locked": false,
+            "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+            "currentFrame": null,
+            "selectedPath": null,
+            "stage": "paths"
+          },
+          "public": {
+            "id": "construction-four",
+            "objectiveId": "construction",
+            "type": "interactive",
+            "draft": "",
+            "status": "idle",
+            "answerRevealed": false,
+            "hintUsed": false,
+            "exposure": null,
+            "attempts": [],
+            "submittedAttemptId": null,
+            "review": null,
+            "participated": true,
+            "lastInteractionAt": 1788845848002,
+            "notes": "",
+            "bookmarked": false,
+            "flash": {
+              "index": 0,
+              "cards": {}
+            },
+            "stepIndex": 0,
+            "exploration": {
+              "schemaVersion": 1,
+              "componentId": "construction-four",
+              "dataHash": "9ef3d790e4a6c5a4428bc0d00c4916371655be140e8e6d0e34ce798bf76aeccb",
+              "contacts": {
+                "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                },
+                "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                },
+                "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                },
+                "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+                  "hint": false,
+                  "reference": true,
+                  "feedback": true,
+                  "referenceCoverage": [
+                    "all-reference",
+                    "q3-a-solution",
+                    "q3-b-solution",
+                    "q3-c-solution",
+                    "q3-d-solution",
+                    "construction-four-feedback"
+                  ],
+                  "revealedThrough": 3
+                },
+                "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                },
+                "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                },
+                "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                },
+                "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+                  "hint": false,
+                  "reference": false,
+                  "feedback": false,
+                  "referenceCoverage": [],
+                  "revealedThrough": 0
+                }
+              },
+              "selection": {
+                "paths": [
+                  "AB"
+                ],
+                "mapping": {
+                  "AB": "2",
+                  "AC": "",
+                  "BA": "",
+                  "BC": "",
+                  "CA": "",
+                  "CB": ""
+                },
+                "probabilityReason": "",
+                "distribution": ""
+              },
+              "submissions": [
+                {
+                  "id": "construction:1788845847769:0",
+                  "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+                  "answers": {
+                    "paths": [
+                      "AB",
+                      "AC",
+                      "BA",
+                      "BC",
+                      "CA",
+                      "CB"
+                    ],
+                    "mapping": {
+                      "AB": "2",
+                      "AC": "5",
+                      "BA": "2",
+                      "BC": "7",
+                      "CA": "5",
+                      "CB": "7"
+                    },
+                    "probabilityReason": "remaining",
+                    "distribution": "thirds"
+                  },
+                  "assistedAtSubmit": true,
+                  "assistanceSnapshot": {
+                    "hint": false,
+                    "reference": true,
+                    "feedback": false,
+                    "referenceCoverage": [
+                      "all-reference",
+                      "q3-a-solution",
+                      "q3-b-solution",
+                      "q3-c-solution",
+                      "q3-d-solution"
+                    ],
+                    "revealedThrough": 3
+                  },
+                  "componentChecks": {
+                    "paths": true,
+                    "mapping": true,
+                    "probability": true,
+                    "distribution": true
+                  },
+                  "evidence": "component-check-only",
+                  "submittedAt": 1788845847769
+                }
+              ],
+              "locked": false,
+              "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+              "currentFrame": null,
+              "selectedPath": null,
+              "stage": "paths"
+            },
+            "explorationCount": 6
+          }
+        }
+      },
+      "errors": [],
+      "imageRequests": 0
+    },
+    {
+      "id": "G10/G12 flashcards and ending revisit",
+      "imageCallbackShim": false,
+      "checks": [
+        {
+          "name": "flashcard evidence self-report only",
+          "pass": true
+        },
+        {
+          "name": "named recall entry presents prompt before previous answer",
+          "pass": false
+        },
+        {
+          "name": "hint-assisted flashcard marked",
+          "pass": true
+        },
+        {
+          "name": "ending answers actual opening probability question",
+          "pass": false
+        },
+        {
+          "name": "due entry targets actual due card with previous answer closed",
+          "pass": false
+        }
+      ],
+      "observations": {
+        "initialReport": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。",
+        "afterFlashReport": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 1 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。",
+        "memoryReturn": {
+          "current": "final-recall",
+          "text": "回忆闪卡 合上公式，在心里重建 先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。 先尝试回忆，再翻面核对。 1 / 3 参考背面 先固定抽法和身份顺序；列全允许路径；用条件概率求路径权重；每条代入均值；按相同输出收集全部路径并累加概率；列全分布及其余值0，检查无遗漏重计和总概率1。 点击或按回车翻面 查看提示 上一张 下一张 自评记录：依据翻面之前的回忆作出选择。 自评：翻面前已回忆 自评：继续练习 已保存「翻面前已回忆」自评；这不是自动核对结果。 再次回忆本卡 本卡复习：2026年9月9日 学习工具 参考背面",
+          "card": {
+            "revealed": true,
+            "hintUsed": false,
+            "rating": "recalled",
+            "review": {
+              "intervalIndex": 0,
+              "dueAt": 1788932253994,
+              "lastReviewedAt": 1788845853994,
+              "lastSessionId": "session-1788845852893-2mjc2vlqc5x",
+              "evidenceSource": "self"
+            },
+            "attemptId": "final-recall:1788845853994:1",
+            "exposure": {
+              "sessionId": "session-1788845852893-2mjc2vlqc5x",
+              "hint": false,
+              "reference": true,
+              "observedAt": 1788845853962,
+              "inferred": false
+            },
+            "recallAssisted": false,
+            "recallSessionId": "session-1788845852893-2mjc2vlqc5x"
+          }
+        },
+        "ending": "回顾与继续：让下一次也能从条件走到分布 现在可以把这章接成一段可复述的过程：确定总体与单位，固定样本量和抽法，列出全部允许样本；对每条样本用同一统计量规则，再把相同输出的路径概率汇总。最后检查每条路径出现恰好一次、各概率非负、总质量为1。 回忆闪卡 合上公式，在心里重建 先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。 先尝试回忆，再翻面核对。 2 / 3 参考背面 第二抽在剩余身份中进行，条件概率分母改变；各条允许路径的概率要随实际过程重算。三身份两抽时，三分之一乘二分之一得到六分之一。 点击或按回车翻面 先写出首抽之后剩余哪些身份。 上一张 下一张 自评记录：依据翻面之前的回忆作出选择。 自评：翻面前已回忆 自评：继续练习 已保存「翻面前已回忆」自评；这不是自动核对结果。 本次回忆已接触提示或参考，保留辅助标识；同会话重复核对不会成为独立回忆。 再次回忆本卡 本卡复习：2026年9月9日 学习工具 参考背面 当前记录：无辅助且正确的客观选择 0 次；闪卡自评 2 次；带辅助的作答/自评 1 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。 刷新本次记录 继续未完成或到期项目 回到新题完整构造 回忆整套程序 选择题记录页面客观核对；闪卡记录翻面前的心答自评；图式控件记录探索；Q3记录四组构造选择的组件核对。它们各自提供不同证据，不汇成一个“已掌握全部证明”的百分比。学习面板可导出和导入同课程、同版本记录；本页只在浏览器本地保存。复习间隔使用公开的工程启发式，1、3、7、14、30天；这些固定间隔没有拟合个人遗忘曲线。 建议下一次先不看参考，重新写出一个允许路径集合，在心里完成每条均值的代入、相加和相除，再对照全解。遇到某一步断开，可以直接回到对应行；当前页面不要求通过测验才能继续阅读。",
+        "clockSimulation": {
+          "originalNow": 1788845854407,
+          "simulatedNow": 1788932254994,
+          "method": "Window Date.now environmental clock override; no learning state edited"
+        },
+        "next": {
+          "current": "final-recall",
+          "index": 1,
+          "revealed": true,
+          "text": "回忆闪卡 合上公式，在心里重建 先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。 先尝试回忆，再翻面核对。 2 / 3 参考背面 第二抽在剩余身份中进行，条件概率分母改变；各条允许路径的概率要随实际过程重算。三身份两抽时，三分之一乘二分之一得到六分之一。 点击或按回车翻面 先写出首抽之后剩余哪些身份。 上一张 下一张 自评记录：依据翻面之前的回忆作出选择。 自评：翻面前已回忆 自评：继续练习 已保存「翻面前已回忆」自评；这不是自动核对结果。 本次回忆已接触提示或参考，保留辅助标识；同会话重复核对不会成为独立回忆。 再次回忆本卡 本卡复习：2026年9月9日 学习工具 参考背面"
+        }
+      },
+      "errors": [],
+      "imageRequests": 0
+    },
+    {
+      "id": "G03/G04/G05 wrong-answer repair paths",
+      "imageCallbackShim": false,
+      "checks": [
+        {
+          "name": "specific wrong-branch link main-equal",
+          "pass": true
+        },
+        {
+          "name": "wrong selection preserved main-equal",
+          "pass": true,
+          "details": {
+            "id": "main-equal:1788846001765:1",
+            "answer": "five",
+            "correct": false,
+            "source": "objective",
+            "assisted": false,
+            "time": 1788846001765,
+            "sessionId": "session-1788846000518-bfbp3twb3h8"
+          }
+        },
+        {
+          "name": "repair has concrete proof lines main-equal",
+          "pass": true,
+          "details": 79
+        },
+        {
+          "name": "return-to-proof anchor exists main-equal",
+          "pass": true,
+          "details": "#main-wr-group-1"
+        },
+        {
+          "name": "new repair answer initially closed main-equal",
+          "pass": true
+        },
+        {
+          "name": "specific wrong-branch link main-reverse",
+          "pass": true
+        },
+        {
+          "name": "wrong selection preserved main-reverse",
+          "pass": true,
+          "details": {
+            "id": "main-reverse:1788846002107:1",
+            "answer": "single",
+            "correct": false,
+            "source": "objective",
+            "assisted": true,
+            "time": 1788846002107,
+            "sessionId": "session-1788846000518-bfbp3twb3h8"
+          }
+        },
+        {
+          "name": "repair has concrete proof lines main-reverse",
+          "pass": true,
+          "details": 88
+        },
+        {
+          "name": "return-to-proof anchor exists main-reverse",
+          "pass": true,
+          "details": "#main-wr-group-1-paths"
+        },
+        {
+          "name": "new repair answer initially closed main-reverse",
+          "pass": true
+        },
+        {
+          "name": "specific wrong-branch link main-weight",
+          "pass": true
+        },
+        {
+          "name": "wrong selection preserved main-weight",
+          "pass": true,
+          "details": {
+            "id": "main-weight:1788846002402:1",
+            "answer": "old",
+            "correct": false,
+            "source": "objective",
+            "assisted": false,
+            "time": 1788846002402,
+            "sessionId": "session-1788846000518-bfbp3twb3h8"
+          }
+        },
+        {
+          "name": "repair has concrete proof lines main-weight",
+          "pass": true,
+          "details": 68
+        },
+        {
+          "name": "return-to-proof anchor exists main-weight",
+          "pass": true,
+          "details": "#main-nr-second"
+        },
+        {
+          "name": "new repair answer initially closed main-weight",
+          "pass": true
+        },
+        {
+          "name": "preimage wrong submission retains selections",
+          "pass": true
+        },
+        {
+          "name": "preimage identifies exact missing path rather than only full key",
+          "pass": false
+        },
+        {
+          "name": "preimage identifies exact extra path and its actual target",
+          "pass": false
+        }
+      ],
+      "observations": {
+        "branches": [
+          {
+            "id": "main-equal",
+            "feedback": "就地自测 概率跟着来路走 放回、独立均匀抽取的主条件下，T=3 天的概率是多少？ 选择一个答案，然后提交 五分之一：共有五个不同均值。 九分之二：AB 与 BA 各贡献九分之一。 提交作答 本次作答需要修正 不同均值的来路数量并不相同；需要把 AB 和 BA 两条路径的概率相加。 参考与解析 九分之二：AB 与 BA 各贡献九分之一。 T=3 的来路是 AB 与 BA，路径概率相加得到九分之二。 针对本题的预备补充解释 重新作答 本题复习：2026年9月9日 学习工具 本次作答与参考不符，请阅读反馈。",
+            "branchText": "分支一 · 把不同均值直接当作等可能误路：主条件有五个不同均值，于是给每个均值五分之一。这里需要补的是“等可能的对象是什么”。题目等概率抽的是身份，完整两抽基本结果是九条身份路径。五个均值是这些路径的输出；题面没有另做一次“从五个均值均匀挑选”的试验。T=3的完整原像是AB、BA。AB给(2+4)/2，BA给(4+2)/2，两条都为3；其余七条的已算均值均不为3。·P(T=3)=P(AB)+P(BA)AB与BA是两个互斥的完整样本事件。·P(T=3)=19+19每条身份路径经独立均匀两抽得到九分之一。·P(T=3)=1+19同分母相加，保留分母9。·P(T=3)=29只计算1加1；这个分数已经最简。回到原证明：T=3 的归组行。下一题更换成 1、5、9 厘米，检查是否能重新找原像。原创题 · 题干：英文原题Three labelled units A, B and C have measurements 1, 5 and 9 cm respectively. Two units are drawn with replacement, with each draw independent and uniform among all three identities. The order is recorded. Let T be their sample mean. Find P(T=5). Show the allowed paths, path probabilities, mean mapping and the full sampling distribution used. (6)中文题面（我译的那一份）三个有标签的单位 A、B、C 的观测分别为 1、5、9 厘米。抽取两次，每次放回，重新独立且均匀抽取，记录顺序。T 为两次观测的均值。求 P(T=5)，展示所用的允许路径、路径概率、均值映射和完整抽样分布。(6)就地自测新题 · 把关系迁移一次按这道新条件，P(T=5) 是多少？选择一个答案，然后提交三分之一。五分之一。提交作答独立作答核对通过AC、BB、CA各贡献九分之一。参考与解析三分之一。T等于5的概率为三分之一，由AC、BB、CA三条路径各九分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。直接阅读完整讲解① 题干给了这些条件题面重新给三项观测及抽法；recorded order 保留有序身份路径；T指定mean。② 条件把方法指出来先在新条件列全路径，再计算每条均值和概率。上一题的数值结果不自动适用。③ 接回已经建立的对象回接本分支的修复关系以及 main-wr-pathset、conditional-rule、mapping-definition。④ 这条规则接得上题目均值为两观测和除以2；路径概率按条件乘法；相同均值的互斥路径概率相加。⑤ 逐步计算，每步都有依据{AA, AB, AC, BA, BB, BC, CA, CB, CC}按本题抽法逐首抽身份排列所有允许第二抽；先保留身份，再读取数值。用 I1、I2 记两次抽到的身份。这里的 I1 读作“I 下标一”；身份 A 与数值 1 分别保存。·P(I1=A)=13第一抽在 3 个身份中均匀选择，每个身份分到总概率的 3 等份。·P(I2=B|I1=A)=13放回后仍有 3 个身份；题目另外规定重新独立且均匀抽取，所以给定首抽 A 后，B 的条件概率仍是原来那一份。·P(AB)=P(I1=A)×P(I2=B|I1=A)AB 表示先 A 后 B 的同一次两抽事件；使用本章已经解释的条件概率乘法法则。·P(AB)=13×13把两步概率分别代入，不把第二抽的分母沿用成未经检查的数。·P(AB)=1×13×3分数相乘：分子相乘，分母相乘。两个分母都是正整数。·P(AB)=13×3只计算分子的乘法：一乘一仍是一。·P(AB)=19只计算分母的乘法。每条允许路径都有同样的两步选择数，所以每条允许路径采用这个权重。路径 AA：先 A，后 A抽到的两个观测分别为 1、1厘米；身份顺序保留。·T=1+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=22只把分子中的两个观测相加；分母仍为两次观测。·T=1把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 AB：先 A，后 B抽到的两个观测分别为 1、5厘米；身份顺序保留。·T=1+52把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=62只把分子中的两个观测相加；分母仍为两次观测。·T=3把总和除以非零的样本量 2。所得均值的单位仍是厘米。路径 AC：先 A，后 C抽到的两个观测分别为 1、9厘米；身份顺序保留。·T=1+92把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代",
+            "back": "#main-wr-group-1",
+            "newQuestion": "就地自测新题 · 把关系迁移一次按这道新条件，P(T=5) 是多少？选择一个答案，然后提交三分之一。五分之一。提交作答独立作答核对通过AC、BB、CA各贡献九分之一。参考与解析三分之一。T等于5的概率为三分之一，由AC、BB、CA三条路径各九分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。",
+            "recommendations": []
+          },
+          {
+            "id": "main-reverse",
+            "feedback": "就地自测 相同输出保留几条输入 在放回主条件下，T=3天的完整身份原像是哪一组？ 选择一个答案，然后提交 只保留AB，BA的均值相同所以删去。 AB与BA都保留，它们对应不同的抽取次序。 提交作答 本次作答需要修正 本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。 记录顺序时BA仍是另一条允许输入。 参考与解析 AB与BA都保留，它们对应不同的抽取次序。 AB和BA是两个不同的完整样本事件，它们都给均值3天。 针对本题的预备补充解释 重新作答 本题复习：2026年9月9日 学习工具 本次作答与参考不符，请阅读反馈。",
+            "branchText": "分支二 · 平均数相同，就删掉反向路径误路：AB与BA平均数相同，于是只保留AB。先看抽样记录，再看统计量输出。AB记录“先A后B”；BA记录“先B后A”。记录顺序是题面固定条件，两次完整样本记录不同。·T(AB)=2+42代入AB对应的两次天数。·T(AB)=62只相加分子。·T(AB)=3再除以2。·T(BA)=4+22代入另一条允许路径BA的两次天数。·T(BA)=62只相加分子；加法交换次序不改变和。·T(BA)=3再除以2，输出同为3。两条输入不同，输出相同；归组保留两份路径概率。多对一映射合并输出标签，并未抹掉其中一个输入事件。·P(T=3)=19+19AB与BA互斥，把两条路径的权重相加。·P(T=3)=1+19同分母相加合并分子。·P(T=3)=29计算分子得到2。回到原证明：完整原像集合。下面把观测改为 1、3、7 克。原创题 · 题干：英文原题Three labelled units A, B and C have measurements 1, 3 and 7 grams respectively. Two units are drawn with replacement, with each draw independent and uniform among all three identities. The order is recorded. Let T be their sample mean. Find P(T=4). Show the allowed paths, path probabilities, mean mapping and the full sampling distribution used. (6)中文题面（我译的那一份）三个有标签的单位 A、B、C 的观测分别为 1、3、7 克。抽取两次，每次放回，重新独立且均匀抽取，记录顺序。T 为两次观测的均值。求 P(T=4)，展示所用的允许路径、路径概率、均值映射和完整抽样分布。(6)就地自测新题 · 把关系迁移一次按这道新条件，P(T=4) 是多少？选择一个答案，然后提交九分之二。九分之一。提交作答独立作答核对通过AC与CA各给均值4。参考与解析九分之二。T等于4的概率为九分之二，由AC、CA两条互斥路径各九分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。直接阅读完整讲解① 题干给了这些条件题面重新给三项观测及抽法；recorded order 保留有序身份路径；T指定mean。② 条件把方法指出来先在新条件列全路径，再计算每条均值和概率。上一题的数值结果不自动适用。③ 接回已经建立的对象回接本分支的修复关系以及 main-wr-pathset、conditional-rule、mapping-definition。④ 这条规则接得上题目均值为两观测和除以2；路径概率按条件乘法；相同均值的互斥路径概率相加。⑤ 逐步计算，每步都有依据{AA, AB, AC, BA, BB, BC, CA, CB, CC}按本题抽法逐首抽身份排列所有允许第二抽；先保留身份，再读取数值。用 I1、I2 记两次抽到的身份。这里的 I1 读作“I 下标一”；身份 A 与数值 1 分别保存。·P(I1=A)=13第一抽在 3 个身份中均匀选择，每个身份分到总概率的 3 等份。·P(I2=B|I1=A)=13放回后仍有 3 个身份；题目另外规定重新独立且均匀抽取，所以给定首抽 A 后，B 的条件概率仍是原来那一份。·P(AB)=P(I1=A)×P(I2=B|I1=A)AB 表示先 A 后 B 的同一次两抽事件；使用本章已经解释的条件概率乘法法则。·P(AB)=13×13把两步概率分别代入，不把第二抽的分母沿用成未经检查的数。·P(AB)=1×13×3分数相乘：分子相乘，分母相乘。两个分母都是正整数。·P(AB)=13×3只计算分子的乘法：一乘一仍是一。·P(AB)=19只计算分母的乘法。每条允许路径都有同样的两步选择数，所以每条允许路径采用这个权重。路径 AA：先 A，后 A抽到的两个观测分别为 1、1克；身份顺序保留。·T=1+12把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=22只把分子中的两个观测相加；分母仍为两次观测。·T=1把总和除以非零的样本量 2。所得均值的单位仍是克。路径 AB：先 A，后 B抽到的两个观测分别为 1、3克；身份顺序保留。·T=1+32把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=42只把分子中的两个观测相加；分母仍为两次观测。·T=2把总和除以非零的样本量 2。所得均值的单位仍是克。路径 AC：先 A，后 C抽到的两个观测分别为 1、7克；身份顺序保留。·T=1+72把这条路径的第一次、第二次观",
+            "back": "#main-wr-group-1-paths",
+            "newQuestion": "就地自测新题 · 把关系迁移一次按这道新条件，P(T=4) 是多少？选择一个答案，然后提交九分之二。九分之一。提交作答独立作答核对通过AC与CA各给均值4。参考与解析九分之二。T等于4的概率为九分之二，由AC、CA两条互斥路径各九分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。",
+            "recommendations": []
+          },
+          {
+            "id": "main-weight",
+            "feedback": "就地自测 抽法改变后重新核对权重 不放回且从剩余身份均匀抽取时，路径 AB 的概率是哪一个？ 选择一个答案，然后提交 九分之一：沿用放回的权重。 六分之一：三分之一乘二分之一。 提交作答 本次作答需要修正 第一抽后剩两个身份，条件概率的分母需要重算。 参考与解析 六分之一：三分之一乘二分之一。 允许路径共六条，各自为三分之一乘二分之一，即六分之一。 针对本题的预备补充解释 重新作答 本题复习：2026年9月9日 学习工具 本次作答与参考不符，请阅读反馈。",
+            "branchText": "分支三 · 删除对角路径，却保留放回权重误路：不放回时删除AA、BB、CC，剩六条仍各九分之一。删除路径后，实际第二抽过程也改变了。·P(首抽A)=13第一抽仍从三个身份均匀选择。首抽A后，剩余身份集合是{B,C}。A没有放回，因此后续样本空间仅含两个身份。·P(第二抽B|首抽A)=12B是剩余两个等可能身份之一。·P(AB)=P(首抽A)×P(第二抽B|首抽A)使用条件概率乘法；不需要假设两个抽次独立。·P(AB)=13×12把本次抽法的两层概率代入。·P(AB)=1×13×2分数相乘，分子分母分别相乘。·P(AB)=13×2先计算分子1乘1。·P(AB)=16再计算分母3乘2。·六条总概率=6×16六条允许路径各六分之一。·六条总概率=66整数6乘分数的分子1，分母保留6。·六条总概率=1非零数除以自身为1。回到原证明：第二抽条件概率。下一题继续不放回，改为 2、5、11 分钟。原创题 · 题干：英文原题Three labelled units A, B and C have measurements 2, 5 and 11 minutes respectively. Two units are drawn without replacement, first uniformly among three identities and then uniformly among the remaining two. The order is recorded. Let T be their sample mean. Find P(T=13/2). Show the allowed paths, path probabilities, mean mapping and the full sampling distribution used. (6)中文题面（我译的那一份）三个有标签的单位 A、B、C 的观测分别为 2、5、11 分钟。抽取两次，不放回，每次从剩余身份中均匀抽取，记录顺序。T 为两次观测的均值。求 P(T=13/2)，展示所用的允许路径、路径概率、均值映射和完整抽样分布。(6)就地自测新题 · 把关系迁移一次按这道新条件，P(T=13/2) 是多少？选择一个答案，然后提交三分之一。九分之二。提交作答独立作答核对通过AC、CA各六分之一。参考与解析三分之一。T等于十三除以二的概率为三分之一，由AC、CA两条互斥路径各六分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。直接阅读完整讲解① 题干给了这些条件题面重新给三项观测及抽法；recorded order 保留有序身份路径；T指定mean。② 条件把方法指出来先在新条件列全路径，再计算每条均值和概率。上一题的数值结果不自动适用。③ 接回已经建立的对象回接本分支的修复关系以及 main-wr-pathset、conditional-rule、mapping-definition。④ 这条规则接得上题目均值为两观测和除以2；路径概率按条件乘法；相同均值的互斥路径概率相加。⑤ 逐步计算，每步都有依据{AB, AC, BA, BC, CA, CB}按本题抽法逐首抽身份排列所有允许第二抽；先保留身份，再读取数值。用 I1、I2 记两次抽到的身份。这里的 I1 读作“I 下标一”；身份 A 与数值 2 分别保存。·P(I1=A)=13第一抽在 3 个身份中均匀选择，每个身份分到总概率的 3 等份。·P(I2=B|I1=A)=12首抽 A 留在外面，剩余 2 个身份，B 在其中；从剩余身份均匀选择。·P(AB)=P(I1=A)×P(I2=B|I1=A)AB 表示先 A 后 B 的同一次两抽事件；使用本章已经解释的条件概率乘法法则。·P(AB)=13×12把两步概率分别代入，不把第二抽的分母沿用成未经检查的数。·P(AB)=1×13×2分数相乘：分子相乘，分母相乘。两个分母都是正整数。·P(AB)=13×2只计算分子的乘法：一乘一仍是一。·P(AB)=16只计算分母的乘法。每条允许路径都有同样的两步选择数，所以每条允许路径采用这个权重。·P(I2=A|I1=A)=0同一身份 A 已取走，剩余集合里没有 A。这里排除同一身份，两个不同单位仍然可能有相同数值。路径 AB：先 A，后 B抽到的两个观测分别为 2、5分钟；身份顺序保留。·T=2+52把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=72只把分子中的两个观测相加；分母仍为两次观测。·T=72把总和除以非零的样本量 2。所得均值的单位仍是分钟。路径 AC：先 A，后 C抽到的两个观测分别为 2、11分钟；身份顺序保留。·T=2+112把这条路径的第一次、第二次观测代入“观测总和除以观测次数”。这里只代入，暂不相加。·T=132只把分子中的两个观",
+            "back": "#main-nr-second",
+            "newQuestion": "就地自测新题 · 把关系迁移一次按这道新条件，P(T=13/2) 是多少？选择一个答案，然后提交三分之一。九分之二。提交作答独立作答核对通过AC、CA各六分之一。参考与解析三分之一。T等于十三除以二的概率为三分之一，由AC、CA两条互斥路径各六分之一相加得到。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · HKUDS/DeepTutorweb/app/(workspace)/books/components/blocks/QuizBlock.tsx 42fab3cf429a1fbf36b257ab8d116a3814964202数值或选项核对通过。",
+            "recommendations": []
+          }
+        ],
+        "preimage": "原像组件核对：本次选择需要修正。原始选择：AC、BB。全部来路为 AC、BB、CA。它们的均值均为4；三条路径各自的代入、相加与相除保留在对应书面推导中。提交前已经接触该条件参考。查看逐项归组证明",
+        "preimageExtra": "原像组件核对：本次选择需要修正。原始选择：AA、AC、BB、CA。全部来路为 AC、BB、CA。它们的均值均为4；三条路径各自的代入、相加与相除保留在对应书面推导中。提交前已经接触该条件参考。查看逐项归组证明"
+      },
+      "errors": [],
+      "imageRequests": 0
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+START closing-actual-routes
+START end-recall-latest-state-and-real-item
+{
+  "checks": 14,
+  "passed": 14,
+  "failed": [],
+  "scenarios": 2
+}

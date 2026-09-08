@@ -1,0 +1,2519 @@
+{
+  "htmlSHA256": "bcd536d3884afbcbfc328da8b467410286ef53a3e0661abb042a8d9ed1501de3",
+  "scope": "Own frozen full-course native mean WR/WOR judgments and ending source/task actions; actual DOM MathML intermediates from independently specified path/group counts. Includes both references and original mean/max plus original range/shelf. Offscreen rectangle fixture, no browser or learning-effect claim.",
+  "results": [
+    {
+      "id": "mean WR first judgment remains pending",
+      "pass": true,
+      "evidence": {
+        "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+        "draft": {
+          "choice": "gt"
+        },
+        "active": "mean-lab-wr-1788855651269-1",
+        "history": [
+          {
+            "id": "mean-lab-wr-1788855651269-1",
+            "owner": "mean-lab",
+            "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "gt"
+            },
+            "judge": {
+              "correct": true,
+              "differences": []
+            },
+            "assisted": false,
+            "presented": false,
+            "at": 1788855651269
+          }
+        ],
+        "contacts": {},
+        "openSources": [],
+        "targets": [],
+        "requested": null,
+        "displayed": null
+      }
+    },
+    {
+      "id": "ending actual first source covers one target",
+      "pass": true,
+      "evidence": {
+        "round": {
+          "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+          "draft": {
+            "choice": "gt"
+          },
+          "active": "mean-lab-wr-1788855651269-1",
+          "history": [
+            {
+              "id": "mean-lab-wr-1788855651269-1",
+              "owner": "mean-lab",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "draft": {
+                "choice": "gt"
+              },
+              "judge": {
+                "correct": true,
+                "differences": []
+              },
+              "assisted": false,
+              "presented": false,
+              "at": 1788855651269
+            }
+          ],
+          "contacts": {
+            "mean-wr-group-4": {
+              "sourceId": "mean-wr-group-4",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "locate",
+              "targets": [
+                4
+              ],
+              "at": 1788855651443
+            }
+          },
+          "openSources": [],
+          "targets": [
+            4
+          ],
+          "requested": null,
+          "displayed": null
+        },
+        "closing": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已核看均值4；尚需核看均值6，此处暂不作两概率的比较结论。你的原判断是“大于”，已保存，待核对。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。核看均值6的原像与概率自由回看当前条件完整推导"
+      }
+    },
+    {
+      "id": "ending actual second source closes WR comparison",
+      "pass": true,
+      "evidence": {
+        "round": {
+          "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+          "draft": {
+            "choice": "gt"
+          },
+          "active": "mean-lab-wr-1788855651269-1",
+          "history": [
+            {
+              "id": "mean-lab-wr-1788855651269-1",
+              "owner": "mean-lab",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "draft": {
+                "choice": "gt"
+              },
+              "judge": {
+                "correct": true,
+                "differences": []
+              },
+              "assisted": false,
+              "presented": true,
+              "at": 1788855651269
+            }
+          ],
+          "contacts": {
+            "mean-wr-group-4": {
+              "sourceId": "mean-wr-group-4",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "locate",
+              "targets": [
+                4
+              ],
+              "at": 1788855651443
+            },
+            "mean-wr-group-6": {
+              "sourceId": "mean-wr-group-6",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "locate",
+              "targets": [
+                6
+              ],
+              "at": 1788855651766
+            },
+            "mean-wr-feedback-contact": {
+              "sourceId": "mean-wr-feedback-contact",
+              "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "locate",
+              "targets": [],
+              "at": 1788855651828
+            }
+          },
+          "openSources": [],
+          "targets": [
+            4,
+            6
+          ],
+          "requested": null,
+          "displayed": null
+        },
+        "closing": "当前收束条件：有放回 · 两抽独立；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=2/9；前者大于后者。你提交的判断是“大于”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始无放回 · 逐次均匀作答开始均值比较 · 无放回 · 逐次均匀自由回看当前条件完整推导"
+      }
+    },
+    {
+      "id": "ending actual task changes to WOR",
+      "pass": true,
+      "evidence": {
+        "version": 1,
+        "owner": "mean-lab",
+        "condition": "wor",
+        "conditions": {
+          "wr": {
+            "key": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": "gt"
+            },
+            "active": "mean-lab-wr-1788855651269-1",
+            "history": [
+              {
+                "id": "mean-lab-wr-1788855651269-1",
+                "owner": "mean-lab",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "draft": {
+                  "choice": "gt"
+                },
+                "judge": {
+                  "correct": true,
+                  "differences": []
+                },
+                "assisted": false,
+                "presented": true,
+                "at": 1788855651269
+              }
+            ],
+            "contacts": {
+              "mean-wr-group-4": {
+                "sourceId": "mean-wr-group-4",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  4
+                ],
+                "at": 1788855651443
+              },
+              "mean-wr-group-6": {
+                "sourceId": "mean-wr-group-6",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [
+                  6
+                ],
+                "at": 1788855651766
+              },
+              "mean-wr-feedback-contact": {
+                "sourceId": "mean-wr-feedback-contact",
+                "conditionKey": "mean-v1-wr-n2-mean-target6v4-data95f8b0e67f26",
+                "kind": "locate",
+                "targets": [],
+                "at": 1788855651828
+              }
+            },
+            "openSources": [],
+            "targets": [
+              4,
+              6
+            ],
+            "requested": null,
+            "displayed": null
+          },
+          "wor": {
+            "key": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+            "draft": {
+              "choice": null
+            },
+            "active": null,
+            "history": [],
+            "contacts": {},
+            "openSources": [],
+            "targets": [],
+            "requested": null,
+            "displayed": null
+          }
+        }
+      }
+    },
+    {
+      "id": "WOR equality genuinely closes after its own sources",
+      "pass": true,
+      "evidence": {
+        "round": {
+          "key": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+          "draft": {
+            "choice": "eq"
+          },
+          "active": "mean-lab-wor-1788855652227-2",
+          "history": [
+            {
+              "id": "mean-lab-wor-1788855652227-2",
+              "owner": "mean-lab",
+              "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+              "draft": {
+                "choice": "eq"
+              },
+              "judge": {
+                "correct": true,
+                "differences": []
+              },
+              "assisted": false,
+              "presented": true,
+              "at": 1788855652227
+            }
+          ],
+          "contacts": {
+            "mean-wor-group-4": {
+              "sourceId": "mean-wor-group-4",
+              "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "locate",
+              "targets": [
+                4
+              ],
+              "at": 1788855652360
+            },
+            "mean-wor-group-6": {
+              "sourceId": "mean-wor-group-6",
+              "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "locate",
+              "targets": [
+                6
+              ],
+              "at": 1788855652550
+            },
+            "mean-wor-feedback-contact": {
+              "sourceId": "mean-wor-feedback-contact",
+              "conditionKey": "mean-v1-wor-n2-mean-target6v4-data95f8b0e67f26",
+              "kind": "locate",
+              "targets": [],
+              "at": 1788855652604
+            }
+          },
+          "openSources": [],
+          "targets": [
+            4,
+            6
+          ],
+          "requested": null,
+          "displayed": null
+        },
+        "closing": "当前收束条件：无放回 · 逐次均匀；总体A=2、B=6、C=10，样本量2，统计量为样本均值。已呈现的精确结果：P(均值=6)=1/3，P(均值=4)=1/3；二者相等。你提交的判断是“相等”；与已呈现结果一致。这份答卷提交前未记录参考接触；后续查看不会改写该首答身份。开始maximum构造开始maximum构造 · 有放回 · 两抽独立自由回看当前条件完整推导"
+      }
+    },
+    {
+      "id": "I2 weight mean-wr-AA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 singleton has no artificial addition mean-wr-group-2",
+      "pass": true,
+      "evidence": {
+        "singleton": 1
+      }
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-2",
+      "pass": true,
+      "evidence": {
+        "n": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-4",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-4",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-6",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1",
+          "9"
+        ],
+        [
+          "3",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wr-group-6",
+      "pass": true,
+      "evidence": [
+        [
+          "3÷3",
+          "9÷3"
+        ],
+        [
+          "1",
+          "9÷3"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-8",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-8",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 singleton has no artificial addition mean-wr-group-10",
+      "pass": true,
+      "evidence": {
+        "singleton": 1
+      }
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-10",
+      "pass": true,
+      "evidence": {
+        "n": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 weight mean-wr-AA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-AC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-BC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wr-CC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 singleton has no artificial addition mean-wr-group-2-ref-ref",
+      "pass": true,
+      "evidence": {
+        "singleton": 1
+      }
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-2-ref-ref",
+      "pass": true,
+      "evidence": {
+        "n": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-4-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-4-ref-ref",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-6-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1",
+          "9"
+        ],
+        [
+          "3",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wr-group-6-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "3÷3",
+          "9÷3"
+        ],
+        [
+          "1",
+          "9÷3"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wr-group-8-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-8-ref-ref",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 singleton has no artificial addition mean-wr-group-10-ref-ref",
+      "pass": true,
+      "evidence": {
+        "singleton": 1
+      }
+    },
+    {
+      "id": "I2 already simplest has no fake reduction mean-wr-group-10-ref-ref",
+      "pass": true,
+      "evidence": {
+        "n": 1,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 weight mean-wor-AB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-AC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-BA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-BC",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-CA",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-CB",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wor-group-4",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wor-group-4",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wor-group-6",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wor-group-6",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wor-group-8",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wor-group-8",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-AB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-AC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-BA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-BC-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-CA-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight mean-wor-CB-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wor-group-4-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wor-group-4-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wor-group-6-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wor-group-6-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition mean-wor-group-8-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor mean-wor-group-8-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-RR",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-RS",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-RT",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-SR",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-SS",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-ST",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-TR",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-TS",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-TT",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition max-wr-group-1",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1+1",
+          "9"
+        ],
+        [
+          "4",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction max-wr-group-1",
+      "pass": true,
+      "evidence": {
+        "n": 4,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition max-wr-group-5",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1+1+1",
+          "9"
+        ],
+        [
+          "5",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction max-wr-group-5",
+      "pass": true,
+      "evidence": {
+        "n": 5,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 weight max-wr-RR-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-RS-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-RT-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-SR-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-SS-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-ST-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-TR-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-TS-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wr-TT-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition max-wr-group-1-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1+1",
+          "9"
+        ],
+        [
+          "4",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction max-wr-group-1-ref-ref",
+      "pass": true,
+      "evidence": {
+        "n": 4,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition max-wr-group-5-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1+1+1",
+          "9"
+        ],
+        [
+          "5",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction max-wr-group-5-ref-ref",
+      "pass": true,
+      "evidence": {
+        "n": 5,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 weight max-wor-RS",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-RT",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-SR",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-ST",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-TR",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-TS",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition max-wor-group-1",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor max-wor-group-1",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition max-wor-group-5",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1+1",
+          "6"
+        ],
+        [
+          "4",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor max-wor-group-5",
+      "pass": true,
+      "evidence": [
+        [
+          "4÷2",
+          "6÷2"
+        ],
+        [
+          "2",
+          "6÷2"
+        ],
+        [
+          "2",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-RS-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-RT-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-SR-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-ST-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-TR-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight max-wor-TS-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition max-wor-group-1-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor max-wor-group-1-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition max-wor-group-5-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1+1",
+          "6"
+        ],
+        [
+          "4",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor max-wor-group-5-ref-ref",
+      "pass": true,
+      "evidence": [
+        [
+          "4÷2",
+          "6÷2"
+        ],
+        [
+          "2",
+          "6÷2"
+        ],
+        [
+          "2",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-DD",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-DE",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-DF",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-ED",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-EE",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-EF",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-FD",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-FE",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight range-wr-FF",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×3"
+        ],
+        [
+          "1",
+          "3×3"
+        ],
+        [
+          "1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition range-wr-group-0",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1+1",
+          "9"
+        ],
+        [
+          "3",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor range-wr-group-0",
+      "pass": true,
+      "evidence": [
+        [
+          "3÷3",
+          "9÷3"
+        ],
+        [
+          "1",
+          "9÷3"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition range-wr-group-3",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction range-wr-group-3",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition range-wr-group-6",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction range-wr-group-6",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 actual numerator addition range-wr-group-9",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "9"
+        ],
+        [
+          "2",
+          "9"
+        ]
+      ]
+    },
+    {
+      "id": "I2 already simplest has no fake reduction range-wr-group-9",
+      "pass": true,
+      "evidence": {
+        "n": 2,
+        "den": 9
+      }
+    },
+    {
+      "id": "I2 weight shelf-wor-JK",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight shelf-wor-JL",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight shelf-wor-KJ",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight shelf-wor-KL",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight shelf-wor-LJ",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 weight shelf-wor-LK",
+      "pass": true,
+      "evidence": [
+        [
+          "1×1",
+          "3×2"
+        ],
+        [
+          "1",
+          "3×2"
+        ],
+        [
+          "1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition shelf-wor-group-7",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor shelf-wor-group-7",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition shelf-wor-group-7over2",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor shelf-wor-group-7over2",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 actual numerator addition shelf-wor-group-11over2",
+      "pass": true,
+      "evidence": [
+        [
+          "1+1",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ]
+    },
+    {
+      "id": "I2 specific common factor shelf-wor-group-11over2",
+      "pass": true,
+      "evidence": [
+        [
+          "2÷2",
+          "6÷2"
+        ],
+        [
+          "1",
+          "6÷2"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "id": "I2 comparison full scaling and inequality ",
+      "pass": true,
+      "evidence": [
+        [
+          "1",
+          "3"
+        ],
+        [
+          "3",
+          "3×3"
+        ],
+        [
+          "3",
+          "9"
+        ],
+        "3>2",
+        "39>29"
+      ]
+    },
+    {
+      "id": "I2 WOR equal has no unnecessary scaling ",
+      "pass": true,
+      "evidence": "13=13"
+    },
+    {
+      "id": "I2 comparison full scaling and inequality -ref",
+      "pass": true,
+      "evidence": [
+        [
+          "1",
+          "3"
+        ],
+        [
+          "3",
+          "3×3"
+        ],
+        [
+          "3",
+          "9"
+        ],
+        "3>2",
+        "39>29"
+      ]
+    },
+    {
+      "id": "I2 WOR equal has no unnecessary scaling -ref",
+      "pass": true,
+      "evidence": "13=13"
+    },
+    {
+      "id": "no uncaught jsdom errors",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

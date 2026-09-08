@@ -1,0 +1,12 @@
+{
+  "file": "generation/correction-run-02/course.js",
+  "sha256": "9643eb7b8d76ed689c84d8d9fe8daf959acc8ff0c21a357252dc508402686d11",
+  "linesRead": "1–152 continuous",
+  "finding": "inspect-path appends return anchor to data-main-outcome, cleared by drawMainOutcome on scroll; sent author before formal freeze",
+  "scope": "Root full source reading; not a full-course verdict",
+  "preFreezeCorrection": {
+    "newJS_SHA256": "641cc807d10fe304f002efa20abb83aa4422b6460ec2fc7863ba612ee133c9ff",
+    "readLine": 134,
+    "change": "Return link now uses dedicated data-proof-return nav; drawMainOutcome does not clear that node. author.py line250 provides nav. Actual interaction recheck pending."
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "kind": "correct",
+    "errors": [],
+    "report": "当前记录：无辅助且正确的客观选择 1 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+    "attempt": {
+      "id": "main-equal:1788845886060:1",
+      "answer": "two",
+      "correct": true,
+      "source": "objective",
+      "assisted": false,
+      "time": 1788845886060,
+      "sessionId": "session-1788845884944-1jh2bw8n1wu"
+    },
+    "recommendations": []
+  },
+  {
+    "kind": "incorrect",
+    "errors": [],
+    "report": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+    "attempt": {
+      "id": "main-equal:1788845890904:1",
+      "answer": "five",
+      "correct": false,
+      "source": "objective",
+      "assisted": false,
+      "time": 1788845890904,
+      "sessionId": "session-1788845889526-1coe7kxnbda"
+    },
+    "recommendations": []
+  },
+  {
+    "kind": "skip",
+    "errors": [],
+    "report": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 0 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+    "attempt": null,
+    "recommendations": []
+  },
+  {
+    "kind": "reference",
+    "errors": [],
+    "report": "当前记录：无辅助且正确的客观选择 0 次；闪卡自评 0 次；带辅助的作答/自评 1 次；Q3完整构造组件核对 0 次。图式探索只记录浏览与选择，不计正确率。当前到期项目 0 项。刷新本次记录继续未完成或到期项目回到新题完整构造回忆整套程序",
+    "attempt": {
+      "id": "main-equal:1788845899442:1",
+      "answer": "two",
+      "correct": true,
+      "source": "objective",
+      "assisted": true,
+      "time": 1788845899442,
+      "sessionId": "session-1788845898091-jn2eeahlcq"
+    },
+    "recommendations": []
+  },
+  {
+    "kind": "storage-failure",
+    "errors": [],
+    "attempts": 1,
+    "exportHasAnswer": true,
+    "allReferencesOpen": true,
+    "status": []
+  }
+]

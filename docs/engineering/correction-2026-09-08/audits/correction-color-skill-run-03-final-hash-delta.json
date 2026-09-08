@@ -1,0 +1,30 @@
+{
+  "changed": [
+    "references/generation-checks.md"
+  ],
+  "unchangedFiles": 18,
+  "previousHash": "27f2e4473555e1951bb168df9499ae37aa53a9506ab13d033500b8c40ef391e1",
+  "finalHash": "724e7db76e739f80757771dcecfe225c870bc850b1756c43c4c8383b5cb2b781",
+  "allActualHashes": {
+    "SKILL.md": "e189f73e9415e6b29903cd6e946caea7ee9718a479b8ec021bcc0c6a130f63a5",
+    "agents/openai.yaml": "06b14645228df86b8346f5b9cbe4ac957c5eb416f280a49240c26e72ff9ba07c",
+    "assets/interactive/lesson-runtime.css": "7d99b9a3216d08d0d976549c1a9484dd2a4df0538ced785f48b7b98ce60cbee3",
+    "assets/interactive/lesson-runtime.js": "b16a6f702fbf8217b60ccba6a9782c011a92e017726416b01c2597e24c02fa45",
+    "examples/s2-interactive.json": "6bd84cf02e5631e49ee27208c702b6cde44a3d4069a0e5e28d6c6d3487f0f9b5",
+    "examples/s2-source.html": "7fa0e4118214a57a46c0ebce3248df87ab9bc51c1db0bb361b9917f48ed82e48",
+    "references/deeptutor-provenance.md": "695e62cb74fdba9c0cc026a3d00a018247a844620c6bfabcbc7bb6b074ee1f23",
+    "references/engagement-and-narrative.md": "91d826a3b98016e06b085dd0b068e7003783704080c67022e8a8c1b76d9e1a6b",
+    "references/expert-review.md": "940674723145616418ca77a92abec5ad93fdb4a8c996ef81d03cf596dba17d2f",
+    "references/generation-checks.md": "724e7db76e739f80757771dcecfe225c870bc850b1756c43c4c8383b5cb2b781",
+    "references/interactive-html.md": "c92a2e2b73c15c95c68f34448a47e82de1ed486d19259d3b5a039055bc91394e",
+    "references/learning-evidence.md": "d6e77c4d91439580f16bdd577c7ecf1c83e56828e911193c2930299a82ec1a65",
+    "references/modes-and-explanations.md": "5fe1ffd1a0dfae205cdfd532108fb2b3a55ba43ee39ee91df4d0b50922d23fa3",
+    "references/teaching-design.md": "310b8893ca85dcaa4b066739989026feb5f079bb3312c88b69e0c0ac5d387ff9",
+    "references/visual-design.md": "6ced8ed4fbf566abccc55c14cacb0c5fbe4e33afcbcacbcf3c706c8fd7eb0c9e",
+    "references/数学的冲突读法.md": "c6d7d865543b1308d74aec7819f779ea01e236f84728eb01ebe1d98cd51af984",
+    "references/统计术语中英对照.md": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff",
+    "references/考纲与考试局.md": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda",
+    "scripts/build_lesson.py": "74957acf9cbdd8b1d8a39b0d5ce77a94e9a8219ea140d799c2506808859e25d8"
+  },
+  "singlePhraseOnlyVerifiedByReverseReplacementHash": true
+}

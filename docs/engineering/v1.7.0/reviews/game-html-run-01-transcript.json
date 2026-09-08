@@ -1,0 +1,921 @@
+{
+  "reviewer": "game_design",
+  "artifact": "generation/run-01/lesson.html",
+  "sha256": "827ec6c6716f95094a37cbf74f5049d7707dc5716101defb0b90e3ef5ad20869",
+  "environment": "JSDOM; controlled Date.now; controlled Math.random for traceable draws; no browser layout assertion",
+  "cases": [
+    {
+      "name": "G1-consistent-prediction-and-visible-sample-consequence",
+      "status": "observed",
+      "input": [
+        "centre",
+        "freeze",
+        "reveal",
+        "select path 2 (A,C)",
+        "random 1",
+        "random 20",
+        "new probability task"
+      ],
+      "initial": {
+        "current": "sampling-lab",
+        "resultsHidden": true,
+        "chartCount": 0
+      },
+      "frozen": {
+        "version": 1,
+        "phase": "frozen",
+        "parameters": {
+          "n": 2,
+          "replacement": true
+        },
+        "predictionDraft": "centre",
+        "prediction": "centre",
+        "predictionAt": 1788782400000,
+        "predictionHadReference": false,
+        "revealedAt": null,
+        "referenceViewed": false,
+        "referenceAt": null,
+        "supportViewed": false,
+        "history": [],
+        "simulation": {
+          "B": 0,
+          "counts": {},
+          "last": null
+        },
+        "selectedPath": 0
+      },
+      "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。",
+      "selected": {
+        "trace": "枚举定位（非随机）：(1 + 5) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+        "B": 0,
+        "selectedPath": 2
+      },
+      "one": {
+        "last": "最近一份随机样本：C=5，B=3；均值=4 分钟；这一份为相应频数加1。",
+        "simulation": {
+          "B": 1,
+          "counts": {
+            "8": 1
+          },
+          "last": {
+            "sample": [
+              2,
+              1
+            ],
+            "sum": 8
+          }
+        }
+      },
+      "batch": {
+        "simulation": {
+          "B": 21,
+          "counts": {
+            "2": 7,
+            "8": 14
+          },
+          "last": {
+            "sample": [
+              0,
+              0
+            ],
+            "sum": 2
+          }
+        },
+        "table": "111/97/21 ≈ 0.333222/90/21 ≈ 0.000331/30/21 ≈ 0.000422/914/21 ≈ 0.667511/90/21 ≈ 0.000"
+      },
+      "next": "mean-completion"
+    },
+    {
+      "name": "G1-inconsistent-prediction-compare-paths-and-preserve-history",
+      "status": "observed",
+      "input": [
+        "equal",
+        "freeze",
+        "reveal",
+        "compare AA and BB",
+        "reset",
+        "without replacement",
+        "centre",
+        "freeze",
+        "reveal",
+        "reload",
+        "export/import"
+      ],
+      "mismatch": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断不同。先在“定位一个有序样本”中比较能得到3和1的路径，再数同值路径。",
+      "pathComparison": [
+        "枚举定位（非随机）：(1 + 1) ÷ 2 = 1 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+        "枚举定位（非随机）：(3 + 3) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。"
+      ],
+      "changed": {
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=0。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。",
+        "count": "当前共 6 个等可能的有序样本；每条路径的理论概率为 1/6。",
+        "state": {
+          "version": 1,
+          "phase": "revealed",
+          "parameters": {
+            "n": 2,
+            "replacement": false
+          },
+          "predictionDraft": "centre",
+          "prediction": "centre",
+          "predictionAt": 1788782400000,
+          "predictionHadReference": false,
+          "revealedAt": 1788782400000,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [
+            {
+              "version": 1,
+              "phase": "revealed",
+              "parameters": {
+                "n": 2,
+                "replacement": true
+              },
+              "predictionDraft": "equal",
+              "prediction": "equal",
+              "predictionAt": 1788782400000,
+              "predictionHadReference": false,
+              "revealedAt": 1788782400000,
+              "referenceViewed": false,
+              "referenceAt": null,
+              "supportViewed": false,
+              "simulation": {
+                "B": 0,
+                "counts": {},
+                "last": null
+              },
+              "selectedPath": 4
+            }
+          ],
+          "simulation": {
+            "B": 0,
+            "counts": {},
+            "last": null
+          },
+          "selectedPath": 0
+        }
+      },
+      "reloaded": {
+        "version": 1,
+        "phase": "revealed",
+        "parameters": {
+          "n": 2,
+          "replacement": false
+        },
+        "predictionDraft": "centre",
+        "prediction": "centre",
+        "predictionAt": 1788782400000,
+        "predictionHadReference": false,
+        "revealedAt": 1788782400000,
+        "referenceViewed": false,
+        "referenceAt": null,
+        "supportViewed": false,
+        "history": [
+          {
+            "version": 1,
+            "phase": "revealed",
+            "parameters": {
+              "n": 2,
+              "replacement": true
+            },
+            "predictionDraft": "equal",
+            "prediction": "equal",
+            "predictionAt": 1788782400000,
+            "predictionHadReference": false,
+            "revealedAt": 1788782400000,
+            "referenceViewed": false,
+            "referenceAt": null,
+            "supportViewed": false,
+            "simulation": {
+              "B": 0,
+              "counts": {},
+              "last": null
+            },
+            "selectedPath": 4
+          }
+        ],
+        "simulation": {
+          "B": 0,
+          "counts": {},
+          "last": null
+        },
+        "selectedPath": 0
+      }
+    },
+    {
+      "name": "G1-skip-prediction-and-closure-action-attribution",
+      "status": "observed",
+      "input": [
+        "click 不预测，直接观察 once",
+        "navigate to evidence-close"
+      ],
+      "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。这是本轮首次观察，尚无预测可比较。",
+      "lab": {
+        "version": 1,
+        "phase": "revealed",
+        "parameters": {
+          "n": 2,
+          "replacement": true
+        },
+        "predictionDraft": "",
+        "prediction": null,
+        "predictionAt": null,
+        "predictionHadReference": false,
+        "revealedAt": 1788782400000,
+        "referenceViewed": false,
+        "referenceAt": null,
+        "supportViewed": false,
+        "history": [],
+        "simulation": {
+          "B": 0,
+          "counts": {},
+          "last": null
+        },
+        "selectedPath": 0
+      },
+      "closing": {
+        "story": "你已经在实验中把一份样本映射为一个均值，再把同值的路径合并。最近一轮选择了直接观察，没有预测记录。返回实验可查看对应条件与证据。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布两个均值，谁更常见？：参与或查阅，尚无作答证据。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "建立回访入口：三张核心概念卡",
+        "reviewNote": "尚无复习记录。完成一次核对或闪卡自评后，按真实记录显示日期。"
+      },
+      "issue": "Closing attributes mapping and grouping to learner although only reveal was clicked."
+    },
+    {
+      "name": "G1-reference-assisted-prediction",
+      "status": "observed",
+      "input": [
+        "open full solution",
+        "centre",
+        "freeze",
+        "reveal"
+      ],
+      "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。提交该判断前已看过参考，本轮不作为未接触答案的预测。",
+      "state": {
+        "version": 1,
+        "phase": "revealed",
+        "parameters": {
+          "n": 2,
+          "replacement": true
+        },
+        "predictionDraft": "centre",
+        "prediction": "centre",
+        "predictionAt": 1788782400000,
+        "predictionHadReference": true,
+        "revealedAt": 1788782400000,
+        "referenceViewed": true,
+        "referenceAt": 1788782400000,
+        "supportViewed": false,
+        "history": [],
+        "simulation": {
+          "B": 0,
+          "counts": {},
+          "last": null
+        },
+        "selectedPath": 0
+      },
+      "runtimeExposure": {
+        "sessionId": "session-1788782400000-",
+        "hint": false,
+        "reference": true,
+        "observedAt": 1788782400000,
+        "inferred": false
+      }
+    },
+    {
+      "name": "G1-equal-result-when-n-is-one",
+      "status": "observed",
+      "input": [
+        "n=1",
+        "equal",
+        "freeze",
+        "reveal"
+      ],
+      "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/3。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。",
+      "issue": "Correct equality feedback still invites learner to explain “这个差异”."
+    },
+    {
+      "name": "G2-error-specific-repair-assisted-correction-fresh-problem",
+      "status": "observed",
+      "input": [
+        "mean-completion 1/9",
+        "recommended worked example",
+        "read mapping and merging stages",
+        "return and retry 2/9",
+        "recommended independent event"
+      ],
+      "wrong": {
+        "feedback": [
+          "本次作答需要修正",
+          "本次核对需要修正，可以先完成：重看不同顺序怎样合并 → 从四条路径到一张分布表"
+        ],
+        "state": {
+          "id": "mean-completion",
+          "objectiveId": "distribution",
+          "type": "quiz",
+          "draft": "1/9",
+          "status": "submitted",
+          "answerRevealed": true,
+          "hintUsed": false,
+          "exposure": {
+            "sessionId": "session-1788782400000-",
+            "hint": false,
+            "reference": true,
+            "observedAt": 1788782400000,
+            "inferred": false
+          },
+          "attempts": [
+            {
+              "id": "mean-completion:1788782400000:1",
+              "answer": "1/9",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788782400000,
+              "sessionId": "session-1788782400000-"
+            }
+          ],
+          "submittedAttemptId": "mean-completion:1788782400000:1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788868800000,
+            "lastReviewedAt": 1788782400000,
+            "lastSessionId": "session-1788782400000-",
+            "evidenceSource": "objective"
+          },
+          "participated": true,
+          "lastInteractionAt": 1788782400000,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "repairedRelation": "把每份样本变成一个均值样本均值 / 分钟UU: 2,22UV: 2,85VU: 8,25VV: 8,88UV和VU顺序不同，都是可能的基本结果，但映射到同一个均值5。",
+      "merged": "合并同值路径，检查分布X̄ / 分钟258P(X̄=x)1/41/21/4均值5由UV和VU产生，它们互斥，概率相加为1/4+1/4=1/2。总概率1/4+1/2+1/4=1。",
+      "corrected": {
+        "feedback": [
+          "参考辅助后核对通过本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。",
+          "已使用提示或参考，建议再试一项：换数据独立算事件概率 → 独立新题：达到门槛的概率"
+        ],
+        "attempt": {
+          "id": "mean-completion:1788782400000:2",
+          "answer": "2/9",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788782400000,
+          "sessionId": "session-1788782400000-"
+        }
+      },
+      "next": {
+        "id": "mean-independent",
+        "state": {
+          "id": "mean-independent",
+          "objectiveId": "distribution",
+          "type": "quiz",
+          "draft": "",
+          "status": "idle",
+          "answerRevealed": false,
+          "hintUsed": false,
+          "exposure": null,
+          "attempts": [],
+          "submittedAttemptId": null,
+          "review": null,
+          "participated": false,
+          "lastInteractionAt": null,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      }
+    },
+    {
+      "name": "G2-hint-correct-new-problem",
+      "status": "observed",
+      "input": [
+        "hint",
+        "2/9",
+        "assisted recommendation"
+      ],
+      "response": [
+        "参考辅助后核对通过本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。",
+        "已使用提示或参考，建议再试一项：换数据独立算事件概率 → 独立新题：达到门槛的概率"
+      ],
+      "next": "mean-independent",
+      "prompt": "三张不同卡片A、B、C分别写0、4、10分钟。每次均匀抽一张，放回后独立再抽，样本量n=2。自行组织方法，求P(X̄≥5)。输入精确分数或误差不超过0.000001的小数，不写单位；过程可记入本题笔记。",
+      "attempt": {
+        "id": "mean-completion:1788782400000:1",
+        "answer": "2/9",
+        "correct": true,
+        "source": "objective",
+        "assisted": true,
+        "time": 1788782400000,
+        "sessionId": "session-1788782400000-"
+      }
+    },
+    {
+      "name": "G2-independent-correct-condition-challenge-and-ending",
+      "status": "observed",
+      "input": [
+        "5/9 independently",
+        "without-replacement recommendation",
+        "2/3",
+        "repeated values recommendation",
+        "3/8",
+        "ending"
+      ],
+      "independent": {
+        "feedback": [
+          "独立作答核对通过",
+          "本次独立核对通过，可以继续挑战：改为无放回后重新计算 → 改为无放回，重新算"
+        ],
+        "attempt": {
+          "id": "mean-independent:1788782400000:1",
+          "answer": "5/9",
+          "correct": true,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788782400000,
+          "sessionId": "session-1788782400000-"
+        }
+      },
+      "mechanism": {
+        "id": "mechanism-transfer",
+        "prompt": "三个不同个体的数值为2、4、10。依次抽2个：第一次均匀抽取，抽后不放回（without replacement），第二次从剩余两个均匀抽取。令M为样本最大值。求P(M=10)。输入精确分数或误差不超过0.000001的小数。",
+        "feedback": [
+          "独立作答核对通过",
+          "本次独立核对通过，可以继续挑战：加入相同数值的不同个体 → 相同数值、不同个体"
+        ]
+      },
+      "next": "repeated-values",
+      "prompt": "四个不同个体A、B、C、D的数值分别为1、1、1、5。每次均匀抽一个个体，放回后独立再抽，n=2。令R为样本极差（range，最大值减最小值）。求P(R≠0)。输入精确分数或误差不超过0.000001的小数。",
+      "closing": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布独立新题：达到门槛的概率：有独立客观核对通过记录。条件改变后重新计算改为无放回，重新算：有独立客观核对通过记录；相同数值、不同个体：有独立客观核对通过记录。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "challenge": "返回已有作答：相同数值、不同个体",
+        "review": "提前练习：独立新题：达到门槛的概率",
+        "reviewNote": "实际复习时间：2026/09/08 08:00。尚未到期；提前练习不会推进复习间隔。"
+      }
+    },
+    {
+      "name": "G2-task-skip-support-and-free-navigation",
+      "status": "observed",
+      "input": [
+        "skip independent task",
+        "choose worked example",
+        "jump ending",
+        "return skipped task"
+      ],
+      "response": [
+        "本题已暂时跳过，没有计入答错。",
+        "已暂时跳过；需要铺垫时可以先做：从完整枚举开始 → 从四条路径到一张分布表"
+      ],
+      "next": "mean-worked",
+      "returned": {
+        "id": "mean-independent",
+        "objectiveId": "distribution",
+        "type": "quiz",
+        "draft": "",
+        "status": "skipped",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": null,
+        "attempts": [],
+        "submittedAttemptId": null,
+        "review": null,
+        "participated": false,
+        "lastInteractionAt": 1788782400000,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      }
+    },
+    {
+      "name": "G3-empty-ending-and-real-start-choices",
+      "status": "observed",
+      "input": [
+        "directly navigate ending with no work",
+        "recall entry",
+        "return ending",
+        "condition challenge"
+      ],
+      "closing": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "建立回访入口：三张核心概念卡",
+        "reviewNote": "尚无复习记录。完成一次核对或闪卡自评后，按真实记录显示日期。"
+      },
+      "recall": "return-recall",
+      "challenge": "repeated-values"
+    },
+    {
+      "name": "G3-assisted-and-self-only-ending",
+      "status": "observed",
+      "input": [
+        "hint + 2/9",
+        "open explanation",
+        "self report meets criteria",
+        "ending"
+      ],
+      "closing": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布补全一次归组概率：有辅助尝试（1次）。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取两份报告不同，是否一定有人错？：有自评记录（非自动判断）。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "提前练习：补全一次归组概率",
+        "reviewNote": "实际复习时间：2026/09/08 08:00。尚未到期；提前练习不会推进复习间隔。"
+      }
+    },
+    {
+      "name": "G3-actual-due-flashcard-return-and-next-interval",
+      "status": "observed",
+      "input": [
+        "first card self report",
+        "ending",
+        "reopen at +24h+1ms",
+        "click actual due review",
+        "self report"
+      ],
+      "before": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取三张核心概念卡：有自评记录（非自动判断）。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "提前练习：三张核心概念卡 · 1",
+        "reviewNote": "实际复习时间：2026/09/08 08:00。尚未到期；提前练习不会推进复习间隔。"
+      },
+      "firstCard": {
+        "revealed": true,
+        "hintUsed": false,
+        "rating": "recalled",
+        "review": {
+          "intervalIndex": 0,
+          "dueAt": 1788868800000,
+          "lastReviewedAt": 1788782400000,
+          "lastSessionId": "session-1788782400000-",
+          "evidenceSource": "self"
+        },
+        "attemptId": "return-recall:1788782400000:1",
+        "exposure": {
+          "sessionId": "session-1788782400000-",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788782400000,
+          "inferred": false
+        },
+        "recallAssisted": false,
+        "recallSessionId": "session-1788782400000-"
+      },
+      "closing": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取三张核心概念卡：有自评记录（非自动判断）。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "到期回忆：三张核心概念卡 · 1",
+        "reviewNote": "实际复习时间：2026/09/08 08:00。进入后先呈现问题，旧输入和答案收起，历史保留。"
+      },
+      "entering": {
+        "current": "return-recall",
+        "card": {
+          "revealed": false,
+          "hintUsed": false,
+          "rating": null,
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788868800000,
+            "lastReviewedAt": 1788782400000,
+            "lastSessionId": "session-1788782400000-",
+            "evidenceSource": "self"
+          },
+          "attemptId": null,
+          "exposure": {
+            "sessionId": "session-1788782400000-",
+            "hint": false,
+            "reference": true,
+            "observedAt": 1788782400000,
+            "inferred": false
+          },
+          "recallAssisted": false,
+          "recallSessionId": null
+        },
+        "solutionOpen": false
+      },
+      "afterCard": {
+        "revealed": true,
+        "hintUsed": false,
+        "rating": "recalled",
+        "review": {
+          "intervalIndex": 1,
+          "dueAt": 1789128000001,
+          "lastReviewedAt": 1788868800001,
+          "lastSessionId": "session-1788868800001-",
+          "evidenceSource": "self"
+        },
+        "attemptId": "return-recall:1788868800001:2",
+        "exposure": {
+          "sessionId": "session-1788868800001-",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788868800001,
+          "inferred": false
+        },
+        "recallAssisted": false,
+        "recallSessionId": "session-1788868800001-"
+      },
+      "lastAttempt": {
+        "id": "return-recall:1788868800001:2",
+        "answer": "自评：翻面前已回忆",
+        "correct": true,
+        "source": "self",
+        "assisted": false,
+        "time": 1788868800001,
+        "sessionId": "session-1788868800001-",
+        "cardIndex": 0
+      }
+    },
+    {
+      "name": "G3-early-review-does-not-advance",
+      "status": "observed",
+      "input": [
+        "5/9",
+        "ending",
+        "early review button",
+        "5/9 again"
+      ],
+      "closing": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布独立新题：达到门槛的概率：有独立客观核对通过记录。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "提前练习：独立新题：达到门槛的概率",
+        "reviewNote": "实际复习时间：2026/09/08 08:00。尚未到期；提前练习不会推进复习间隔。"
+      },
+      "entering": {
+        "id": "mean-independent",
+        "objectiveId": "distribution",
+        "type": "quiz",
+        "draft": "",
+        "status": "idle",
+        "answerRevealed": false,
+        "hintUsed": false,
+        "exposure": {
+          "sessionId": "session-1788782400000-",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788782400000,
+          "inferred": false
+        },
+        "attempts": [
+          {
+            "id": "mean-independent:1788782400000:1",
+            "answer": "5/9",
+            "correct": true,
+            "source": "objective",
+            "assisted": false,
+            "time": 1788782400000,
+            "sessionId": "session-1788782400000-"
+          }
+        ],
+        "submittedAttemptId": null,
+        "review": {
+          "intervalIndex": 0,
+          "dueAt": 1788868800000,
+          "lastReviewedAt": 1788782400000,
+          "lastSessionId": "session-1788782400000-",
+          "evidenceSource": "objective"
+        },
+        "participated": true,
+        "lastInteractionAt": 1788782400000,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      },
+      "after": {
+        "id": "mean-independent",
+        "objectiveId": "distribution",
+        "type": "quiz",
+        "draft": "5/9",
+        "status": "submitted",
+        "answerRevealed": true,
+        "hintUsed": false,
+        "exposure": {
+          "sessionId": "session-1788782400000-",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788782400000,
+          "inferred": false
+        },
+        "attempts": [
+          {
+            "id": "mean-independent:1788782400000:1",
+            "answer": "5/9",
+            "correct": true,
+            "source": "objective",
+            "assisted": false,
+            "time": 1788782400000,
+            "sessionId": "session-1788782400000-"
+          },
+          {
+            "id": "mean-independent:1788782400000:2",
+            "answer": "5/9",
+            "correct": true,
+            "source": "objective",
+            "assisted": true,
+            "time": 1788782400000,
+            "sessionId": "session-1788782400000-"
+          }
+        ],
+        "submittedAttemptId": "mean-independent:1788782400000:2",
+        "review": {
+          "intervalIndex": 0,
+          "dueAt": 1788868800000,
+          "lastReviewedAt": 1788782400000,
+          "lastSessionId": "session-1788782400000-",
+          "evidenceSource": "objective"
+        },
+        "participated": true,
+        "lastInteractionAt": 1788782400000,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      }
+    },
+    {
+      "name": "G3-unfinished-draft-and-pending-self-review",
+      "status": "observed",
+      "input": [
+        "first self-reviewed explanation",
+        "reopen at +24h+1ms",
+        "write new draft",
+        "ending",
+        "continue",
+        "submit without self-rating",
+        "ending",
+        "continue"
+      ],
+      "draftClosing": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取两份报告不同，是否一定有人错？：有自评记录（非自动判断）。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "继续未完成作答：两份报告不同，是否一定有人错？",
+        "reviewNote": "实际复习时间：2026/09/08 08:00。保留当前草稿或尚未自评的原答。"
+      },
+      "draftReturned": "我的下一次解释尚未写完",
+      "pendingClosing": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取两份报告不同，是否一定有人错？：有自评记录（非自动判断）。",
+        "challenge": "改变条件的挑战：相同数值、不同个体",
+        "review": "继续未完成作答：两份报告不同，是否一定有人错？",
+        "reviewNote": "实际复习时间：2026/09/08 08:00。保留当前草稿或尚未自评的原答。"
+      },
+      "pendingReturned": {
+        "id": "sampling-conclusion",
+        "objectiveId": "interpretation",
+        "type": "quiz",
+        "draft": "我的下一次解释尚未写完",
+        "status": "submitted",
+        "answerRevealed": true,
+        "hintUsed": false,
+        "exposure": {
+          "sessionId": "session-1788868800001-",
+          "hint": false,
+          "reference": true,
+          "observedAt": 1788868800001,
+          "inferred": false
+        },
+        "attempts": [
+          {
+            "id": "sampling-conclusion:1788782400000:1",
+            "answer": "随机样本不同，均值会变；固定总体、n、机制和统计量。",
+            "correct": true,
+            "source": "self",
+            "assisted": false,
+            "time": 1788782400000,
+            "sessionId": "session-1788782400000-",
+            "selfRating": "meets-rubric",
+            "assessedAt": 1788782400000
+          },
+          {
+            "id": "sampling-conclusion:1788868800001:2",
+            "answer": "我的下一次解释尚未写完",
+            "correct": null,
+            "source": "self",
+            "assisted": false,
+            "time": 1788868800001,
+            "sessionId": "session-1788868800001-"
+          }
+        ],
+        "submittedAttemptId": "sampling-conclusion:1788868800001:2",
+        "review": {
+          "intervalIndex": 0,
+          "dueAt": 1788868800000,
+          "lastReviewedAt": 1788782400000,
+          "lastSessionId": "session-1788782400000-",
+          "evidenceSource": "self"
+        },
+        "participated": true,
+        "lastInteractionAt": 1788868800001,
+        "notes": "",
+        "bookmarked": false,
+        "flash": {
+          "index": 0,
+          "cards": {}
+        },
+        "stepIndex": 0,
+        "exploration": {},
+        "explorationCount": 0
+      }
+    },
+    {
+      "name": "G3-import-while-at-ending-refreshes-summary-and-controls",
+      "status": "observed",
+      "input": [
+        "empty ending export",
+        "5/9 independent and ending export",
+        "import empty while staying at ending",
+        "import completed while staying at ending"
+      ],
+      "before": {
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "review": "建立回访入口：三张核心概念卡"
+      },
+      "withPass": {
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布独立新题：达到门槛的概率：有独立客观核对通过记录。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "review": "提前练习：独立新题：达到门槛的概率"
+      },
+      "afterEmpty": {
+        "current": "evidence-close",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "review": "建立回访入口：三张核心概念卡",
+        "attempts": 0
+      },
+      "afterCompleted": {
+        "current": "evidence-close",
+        "evidence": "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。构建统计量的抽样分布独立新题：达到门槛的概率：有独立客观核对通过记录。条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。",
+        "review": "提前练习：独立新题：达到门槛的概率",
+        "attempts": 1
+      },
+      "restoreEvents": [
+        {
+          "keys": [
+            "activityId",
+            "state"
+          ],
+          "activityId": "sampling-lab"
+        },
+        {
+          "keys": [
+            "activityId",
+            "state"
+          ],
+          "activityId": "evidence-close"
+        },
+        {
+          "keys": [
+            "activityId",
+            "state"
+          ],
+          "activityId": "sampling-lab"
+        },
+        {
+          "keys": [
+            "activityId",
+            "state"
+          ],
+          "activityId": "evidence-close"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

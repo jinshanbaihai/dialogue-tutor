@@ -1,0 +1,8 @@
+{
+  "archive": "correction-run-02-review-data.tar.xz",
+  "files": 272,
+  "bytes": 9871168,
+  "sha256": "c0f9639bb9eea8849630534b71213f2f014dac4e8f823d70122cd281ec0c376a",
+  "scope": "Complete nested run02 independent frame/colour/root reading evidence; top-level reports/probes stored in audits",
+  "includesActualPNG": true
+}

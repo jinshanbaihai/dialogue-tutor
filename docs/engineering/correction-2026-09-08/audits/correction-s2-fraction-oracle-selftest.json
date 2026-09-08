@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checks": 14,
+  "passed": [
+    "duplicate values retain nine identity paths",
+    "replacement multiplicities",
+    "no replacement permits equal observed values",
+    "n=1 distribution ignores replacement toggle",
+    "full census mean is degenerate",
+    "all equal values still distinct units",
+    "population reorder invariance",
+    "event boundary included exactly",
+    "rational translation covariance of mean",
+    "reject duplicate IDs",
+    "reject float values",
+    "reject impossible sample size",
+    "reject non-boolean replacement",
+    "reject silent enumeration truncation"
+  ],
+  "scope": "oracle self-tests only; no authored lesson evaluated"
+}

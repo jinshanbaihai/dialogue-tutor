@@ -1,0 +1,282 @@
+
+ACTIVITY population-recall flashcards 
+objectiveId: population
+title: 心中重建三个对象
+prompt: 先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+cards: [{"front": "population、sampling unit、sampling frame 各回答什么问题？", "back": "population：研究关心的全部单位及边界。sampling unit：一次被抽取的单位。sampling frame：实际据以抽取的名单或清单。三者都要落到题目情境。", "hint": "想一想：想研究谁、一次选谁、从哪份清单选择。"}]
+
+ACTIVITY ex-pop-a-answer quiz choice
+objectiveId: population
+title: 例题 a · 选择情境依据
+prompt: 按这道博物馆题的条件，选择成立的一项。
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "paintings", "text": "当天东展厅全部画作；其中一幅画作。", "feedback": "边界和抽取单位都落在画作。"}, {"id": "catalogue", "text": "整份目录；一页目录。", "feedback": "目录提供名单；研究对象由画作条件确定。"}]
+answer: paintings
+explanation: 完整依据在紧接的参考讲解中。
+solutionId: ex-pop-a-solution
+
+ACTIVITY ex-pop-b-answer quiz choice
+objectiveId: population
+title: 例题 b · 选择情境依据
+prompt: 按这道博物馆题的条件，选择成立的一项。
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "stale", "text": "目录存在已移走画作，抽取会选到总体以外的单位。", "feedback": "具体条目与总体边界不一致。"}, {"id": "random", "text": "只要随机抽目录就没有问题。", "feedback": "随机化不能把过期条目变成研究总体成员。"}]
+answer: stale
+explanation: 完整依据在紧接的参考讲解中。
+solutionId: ex-pop-b-solution
+
+ACTIVITY ex-pop-c-answer quiz choice
+objectiveId: population
+title: 例题 c · 选择情境依据
+prompt: 按这道博物馆题的条件，选择成立的一项。
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "scope", "text": "规模小且无损，检查全部可行；记录或测量仍会出错。", "feedback": "理由由规模与检测条件支持，局限落在非抽样误差。"}, {"id": "perfect", "text": "普查能保证每条记录都正确。", "feedback": "覆盖全部不保证每次测量或抄录正确。"}]
+answer: scope
+explanation: 完整依据在紧接的参考讲解中。
+solutionId: ex-pop-c-solution
+
+ACTIVITY statistic-known quiz choice
+objectiveId: statistic
+title: 把已知与未知分开
+prompt: 题目给 μ=5℃，样本均值已可计算。T=样本均值−μ 是否可由这份样本与已知常量计算？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "yes", "text": "可以，因为 μ 的数值已经给定。", "feedback": "检查的是资料是否可用。"}, {"id": "no", "text": "不可以，因为 μ 是希腊字母。", "feedback": "字母外形没有决定未知与否。"}]
+answer: yes
+explanation: 给定 μ=5 后，计算只需要样本及常量 5；若 μ 未知才会缺少输入。
+
+ACTIVITY ex-stat-a-answer quiz choice
+objectiveId: statistic
+title: 例题 a · 检查计算来源
+prompt: 哪一组“结果＋理由”完整？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "sample", "text": "U=5℃；只使用两次观测与已知样本量。", "feedback": "数值和来源条件一起满足。"}, {"id": "population", "text": "U=5℃；因为它等于未知总体均值。", "feedback": "样本值不能在这里确定未知总体均值。"}]
+answer: sample
+explanation: 样本平均为5℃，计算规则只用样本；不需要知道总体均值。
+solutionId: ex-stat-a-solution
+
+ACTIVITY ex-stat-b-answer quiz choice
+objectiveId: statistic
+title: 例题 b · 找到缺失的输入
+prompt: V=U−μ 在这道题的计算停在哪里？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "mu", "text": "U 能算，未知 μ 的数值不能从本样本取得。", "feedback": "断点是未知总体参数。"}, {"id": "future", "text": "抽样前 U 未知，所以 U 和 V 都不是统计量。", "feedback": "statistic 在抽样前可以是随机变量；规则可计算性才是定义条件。"}]
+answer: mu
+explanation: V 含题面明说未知的 μ；样本值相同，μ 若不同，V 会不同。
+solutionId: ex-stat-b-solution
+
+ACTIVITY distribution-recall flashcards 
+objectiveId: distribution
+title: 心中把定义接成程序
+prompt: 先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+cards: [{"front": "sampling distribution 要同时交代什么？", "back": "固定抽样过程和统计量规则；列出所有可能统计量值，并给出每个值的概率。概率来自使该值出现的全部允许样本。", "hint": "想一想：什么条件固定、什么量在变、给每个值配什么。"}]
+
+ACTIVITY preimage-four interactive 
+objectiveId: distribution
+title: 把 4 天的全部来路放在一起
+source: {"repository": "DialogueTutor", "path": "author/custom-preimage", "commit": "original-correction-01"}
+bodyHtml: 让 T=4 天的路径有哪些？可以多选。先把完整的来路选出来，再统一核对。
+选择所有使均值为 4 天的身份路径AAABACBABBBCCACBCC核对这组来路重新选择
+尚未提交。
+prompt: 按当前题面条件选择。完整推导与参考可随时直接阅读。
+
+ACTIVITY main-reverse quiz choice
+objectiveId: distribution
+title: 相同输出保留几条输入
+prompt: 在放回主条件下，T=3天的完整身份原像是哪一组？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "single", "text": "只保留AB，BA的均值相同所以删去。", "feedback": "记录顺序时BA仍是另一条允许输入。"}, {"id": "both", "text": "AB与BA都保留，它们对应不同的抽取次序。", "feedback": "输出相同可以归组，两条输入的概率都保留。"}]
+answer: both
+explanation: AB和BA是两个不同的完整样本事件，它们都给均值3天。
+solutionId: main-wr-distribution-solution
+remediation: {"bodyHtml": "<p>可以打开 <a href=\"#branch-reverse\">“相同均值删反向路径”分支</a>，分别算两条输入，再回到完整原像这一行。分支末尾有新数据题。</p>"}
+
+ACTIVITY main-equal quiz choice
+objectiveId: distribution
+title: 概率跟着来路走
+prompt: 放回、独立均匀抽取的主条件下，T=3 天的概率是多少？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "five", "text": "五分之一：共有五个不同均值。", "feedback": "不同均值的来路数量并不相同；需要把 AB 和 BA 两条路径的概率相加。"}, {"id": "two", "text": "九分之二：AB 与 BA 各贡献九分之一。", "feedback": "两条路径互斥，每条权重是九分之一。"}]
+answer: two
+explanation: T=3 的来路是 AB 与 BA，路径概率相加得到九分之二。
+solutionId: main-wr-distribution-solution
+hint: 找出使两次总和等于 6 的全部有序身份路径。
+remediation: {"bodyHtml": "<p>先回到 <a href=\"#branch-equal\">“不同均值等可能”分支</a>，那里逐行修复分母的来源，并提供一个新数据问题。</p>"}
+
+ACTIVITY sampling-explorer interactive 
+objectiveId: distribution
+title: 把同一条路径、均值与柱子连起来
+source: {"repository": "DialogueTutor", "path": "author/custom-manim-explorer", "commit": "original-correction-01"}
+bodyHtml: 同一行的图、公式和原像一起切换。先选择抽法，再选择身份路径，最后选择看路径、均值或归组。归组画面会展开当前条件的完整参考，并记录本条件已读参考。
+固定抽样条件
+放回 · 独立均匀不放回 · 剩余均匀
+身份路径：先选行身份，再看列身份
+AAABACBABBBCCACBCC
+看同一条路径的哪一步
+① 身份路径② 均值计算③ 归组与概率
+先选一条路径。
+回到对应书面推导行
+prompt: 按当前题面条件选择。完整推导与参考可随时直接阅读。
+
+ACTIVITY ex-max-a-answer quiz choice
+objectiveId: distribution
+title: 最大值例题 a · 保留完整样本
+prompt: 哪一组身份路径完整？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "four", "text": "AA、AB、BA、BB。", "feedback": "放回允许重复同一身份，顺序保留反向路径。"}, {"id": "three", "text": "AA、AB、BB。", "feedback": "BA 是另一条允许的有序路径。"}]
+answer: four
+explanation: 首抽两个选择，各接两个第二抽选择，共四条。
+solutionId: ex-max-a-solution
+
+ACTIVITY ex-max-b-answer quiz choice
+objectiveId: distribution
+title: 最大值例题 b · 合并相同输出
+prompt: M=5 小时有多少条来路？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "three", "text": "AB、BA、BB，共三条。", "feedback": "三条路径的最大值都为5。"}, {"id": "one", "text": "只有 BB。", "feedback": "只要一项为5，最大值就是5。"}]
+answer: three
+explanation: 每条路径四分之一，M=5 概率四分之三。
+solutionId: ex-max-b-solution
+
+ACTIVITY main-weight quiz choice
+objectiveId: distribution
+title: 抽法改变后重新核对权重
+prompt: 不放回且从剩余身份均匀抽取时，路径 AB 的概率是哪一个？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "old", "text": "九分之一：沿用放回的权重。", "feedback": "第一抽后剩两个身份，条件概率的分母需要重算。"}, {"id": "new", "text": "六分之一：三分之一乘二分之一。", "feedback": "第二抽给定首抽 A 后只剩B、C。"}]
+answer: new
+explanation: 允许路径共六条，各自为三分之一乘二分之一，即六分之一。
+solutionId: main-nr-distribution-solution
+remediation: {"bodyHtml": "<p>打开 <a href=\"#branch-weight\">“删除对角后仍用旧权重”分支</a>，从条件概率逐行重算；末尾有新数据问题。</p>"}
+
+ACTIVITY q1-a-answer quiz choice
+objectiveId: population
+title: Q1(a) · 根据题面判断
+prompt: 哪个对象由题面直接界定？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "transaction", "text": "该周末售票处全部已完成购票交易；其中一笔交易。", "feedback": "日期、地点、完成状态和单位均明确。"}, {"id": "person", "text": "所有到过剧院的人；其中一位。", "feedback": "题目研究每笔交易，来访者也可能没购票或购票多次。"}]
+answer: transaction
+explanation: 总体和抽样单位各 1 个原创评价点。
+solutionId: q1-a-solution
+
+ACTIVITY q1-b-answer quiz choice
+objectiveId: population
+title: Q1(b) · 根据题面判断
+prompt: 清单漏掉晚间交易会带来哪项直接后果？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "zero", "text": "晚 8 点后的交易没有从这份清单被抽中的机会。", "feedback": "这些总体成员不在抽取清单。"}, {"id": "fixed", "text": "抽得足够多就能把漏掉的交易抽到。", "feedback": "在不含它们的名单上增大样本也无法选到它们。"}]
+answer: zero
+explanation: 具体遗漏和入样后果各 1 个原创评价点。
+solutionId: q1-b-solution
+
+ACTIVITY q1-c-answer quiz choice
+objectiveId: population
+title: Q1(c) · 根据题面判断
+prompt: 哪个比较同时有题面依据和真实局限？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "cost", "text": "抽样省检查时间；不同样本带来的抽样变化仍需考虑。", "feedback": "成本来自每笔4分钟，局限来自只选一部分。"}, {"id": "damage", "text": "抽样能避免普查摧毁交易。", "feedback": "题面明确检查无破坏，不能用不存在的条件论证。"}]
+answer: cost
+explanation: 节省检查用时与考虑抽样变化各 1 个原创评价点。清单缺失是另一个问题，抽样或全查旧清单都需先修正。
+solutionId: q1-c-solution
+
+ACTIVITY q2-a-answer quiz choice
+objectiveId: statistic
+title: Q2(a) · 逐项检查输入
+prompt: U 的数值和计算来源是哪一组？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "six", "text": "6 秒；只用样本观测和已知样本量。", "feedback": "计算规则不需要总体均值。"}, {"id": "unknown", "text": "无法计算，因为总体均值未知。", "feedback": "样本均值的规则不使用总体均值。"}]
+answer: six
+explanation: U=6秒，且是statistic；计算方法、数值、计算来源各为原创评价点。
+solutionId: q2-a-solution
+
+ACTIVITY q2-b-answer quiz choice
+objectiveId: statistic
+title: Q2(b) · 逐项检查输入
+prompt: 未知 μ 出现在 V=U+μ 中，会造成什么？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "missing", "text": "同样的样本还缺 μ 的数值，因此不符合条件。", "feedback": "指出额外未知输入。"}, {"id": "automatic", "text": "U 是统计量，所以加上任何字母后仍是。", "feedback": "新的表达式需重新检查全部输入。"}]
+answer: missing
+explanation: 含未知总体参数，无法仅由样本确定；两点都要明确。
+solutionId: q2-b-solution
+
+ACTIVITY q2-c-answer quiz choice
+objectiveId: statistic
+title: Q2(c) · 逐项检查输入
+prompt: 条件改成 μ=7 秒后，哪个判断成立？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "given", "text": "可以；已知常量7与样本均值相加。", "feedback": "信息状态改变了计算所需的输入。"}, {"id": "letter", "text": "仍不可以；式子里只要有 μ 就不行。", "feedback": "已知与未知由题面决定。"}]
+answer: given
+explanation: 可计算为13秒；已知常量与样本足够，因而符合定义。数值用于说明，评价重点是条件变化及理由。
+solutionId: q2-c-solution
+
+ACTIVITY construction-four interactive 
+objectiveId: construction
+title: Q3 · 完整构造后一次提交
+source: {"repository": "DialogueTutor", "path": "author/custom-construction-four", "commit": "original-correction-01"}
+bodyHtml: 第 1 组 · 勾选完整允许路径集合
+AAABACBABBBCCACBCC
+第 2 组 · 为每条允许路径选择均值（分钟）
+即使第一组暂时漏选，仍把六行分别完成；最后才统一核对。
+AB → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟AC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BA → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟BC → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟CA → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟CB → 请选择均值0 分钟2 分钟4 分钟5 分钟7 分钟10 分钟第 3 组 · 选择路径概率的依据第一抽三分之一，给定首抽后第二抽二分之一，因此每条允许路径六分之一。第一抽和第二抽都用三分之一，因此每条九分之一。因为最后有三个均值，所以每条身份路径三分之一。第 4 组 · 选择完整分布T 可取 2、5、7 分钟，各为三分之一；其余值概率0。T 可取 2、5、7 分钟，各为九分之二；其余值概率0。T 可取 0、4、10 分钟，各为三分之一；其余值概率0。
+提交四组并核对重新构造看一条路线提示跳过并读完整参考
+尚未提交；需要完成四组。
+按首抽身份分三行；每行只列剩余两种身份。把每一行均值算完，再按相同均值收集路径。概率的第二个分母由“剩余”决定。
+prompt: 按当前题面条件选择。完整推导与参考可随时直接阅读。
+
+ACTIVITY q4-a-answer quiz choice
+objectiveId: distribution
+title: Q4(a) · 身份与数值分开
+prompt: 不放回时，AB 是允许路径吗？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "yes", "text": "允许；A 与 B 是不同身份，虽然都显示0。", "feedback": "身份决定是否已经取走。"}, {"id": "no", "text": "不允许；两个观测值都为0。", "feedback": "同值不会把两个不同单位合成一个身份。"}]
+answer: yes
+explanation: P(T=0)=1/3，P(T=3)=2/3，其余值0。完整路径、权重、逐条映射与合并质量构成原创评价要点。
+solutionId: q4-a-solution
+
+ACTIVITY q4-b-answer quiz choice
+objectiveId: distribution
+title: Q4(b) · 身份与数值分开
+prompt: “T≥3”在这道题保留哪些均值？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "three", "text": "只保留3；0不满足大于或等于3。", "feedback": "支持集只有0、3。"}, {"id": "none", "text": "没有；等于3不算。", "feedback": "≥明确包含边界等号。"}]
+answer: three
+explanation: P(T≥3)=2/3；A、B不同身份的两条允许路径给T=0。精确概率、边界筛选与身份解释是原创评价点。
+solutionId: q4-b-solution
+
+ACTIVITY repair-equal-q-answer quiz choice
+objectiveId: distribution
+title: 新题 · 把关系迁移一次
+prompt: 按这道新条件，P(T=5) 是多少？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "third", "text": "三分之一。", "feedback": "AC、BB、CA各贡献九分之一。"}, {"id": "fifth", "text": "五分之一。", "feedback": "五个均值没有相等的原像质量。"}]
+answer: third
+explanation: T等于5的概率为三分之一，由AC、BB、CA三条路径各九分之一相加得到。
+solutionId: repair-equal-q-solution
+
+ACTIVITY repair-reverse-q-answer quiz choice
+objectiveId: distribution
+title: 新题 · 把关系迁移一次
+prompt: 按这道新条件，P(T=4) 是多少？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "two", "text": "九分之二。", "feedback": "AC与CA各给均值4。"}, {"id": "one", "text": "九分之一。", "feedback": "反向路径CA仍然允许，不能删除。"}]
+answer: two
+explanation: T等于4的概率为九分之二，由AC、CA两条互斥路径各九分之一相加得到。
+solutionId: repair-reverse-q-solution
+
+ACTIVITY repair-weight-q-answer quiz choice
+objectiveId: distribution
+title: 新题 · 把关系迁移一次
+prompt: 按这道新条件，P(T=13/2) 是多少？
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+choices: [{"id": "third", "text": "三分之一。", "feedback": "AC、CA各六分之一。"}, {"id": "ninth", "text": "九分之二。", "feedback": "这是保留旧路径权重的结果，第二抽应使用二分之一。"}]
+answer: third
+explanation: T等于十三除以二的概率为三分之一，由AC、CA两条互斥路径各六分之一相加得到。
+solutionId: repair-weight-q-solution
+
+ACTIVITY final-recall flashcards 
+objectiveId: distribution
+title: 合上公式，在心里重建
+prompt: 先在心里回忆。翻面后按实际回忆出的要点自评；随时可以跳过。
+source: {"repository": "HKUDS/DeepTutor", "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx", "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202"}
+cards: [{"front": "给一个有限总体和样本量，构造样本均值的抽样分布要完成哪些步骤？", "back": "先固定抽法和身份顺序；列全允许路径；用条件概率求路径权重；每条代入均值；按相同输出收集全部路径并累加概率；列全分布及其余值0，检查无遗漏重计和总概率1。", "hint": "按“条件→样本→规则→概率”回忆。"}, {"front": "不放回时，为什么不能只删除对角格却保留旧概率？", "back": "第二抽在剩余身份中进行，条件概率分母改变；各条允许路径的概率要随实际过程重算。三身份两抽时，三分之一乘二分之一得到六分之一。", "hint": "先写出首抽之后剩余哪些身份。"}, {"front": "读过同题参考后做对，记录能说明什么？", "back": "能说明这次借助参考完成核对；不能直接证明已能独立生成完整过程。可以另做新条件构造，并在之后到期时回忆。", "hint": "把借助参考、客观核对、心答自评分开。"}]
