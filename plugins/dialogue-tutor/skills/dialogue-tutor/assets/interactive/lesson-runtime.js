@@ -564,6 +564,7 @@
     var state = createState(lesson, now());
     var key = storageKey(lesson), storage = null, storageMessage = "", panelMessage = "";
     var views = new Map(), definitions = new Map();
+    var transferGuards = { import: [], export: [] }, checkingTransfer = false, transferring = false;
     var sceneFor = new Map(), sceneNodes = new Map();
     var activityOrder = studio ? lesson.sections.reduce(function (ids, section) {
       section.activityIds.forEach(function (id) { sceneFor.set(id, section); });
@@ -634,6 +635,7 @@
       return { exploration: copy(snapshot), persisted: persisted };
     }
     function transition(activity, event, render, preservePosition) {
+      if (checkingTransfer) throw new Error("Learning actions are unavailable during transfer validation");
       state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
       if (!preservePosition) state.currentActivity = activity.id;
       save();
@@ -1043,6 +1045,83 @@
       });
     }
 
+    function registerTransferGuard(kind, handler) {
+      if (typeof handler !== "function") throw new Error("Transfer guard must be a function");
+      var registration = { handler: handler };
+      transferGuards[kind].push(registration);
+      return function () { transferGuards[kind] = transferGuards[kind].filter(function (item) { return item !== registration; }); };
+    }
+
+    function reportTransferError(kind, error) {
+      var reason = error && error.message ? error.message : String(error);
+      panelMessage = (kind === "import" ? t("导入未应用：", "Import not applied: ") : t("导出未完成：", "Export not completed: ")) + reason;
+      // Keep the explanation visible even when the study record was collapsed.
+      if (panel) panel.open = true;
+      renderPanel();
+    }
+
+    function runTransferGuards(kind, source, incoming, validationError) {
+      var rejected = null;
+      checkingTransfer = true;
+      try {
+        // Direct calls propagate exceptions, unlike DOM event dispatch. Run every
+        // registered collector even after rejection so shared reference contact survives.
+        transferGuards[kind].slice().forEach(function (registration) {
+          try {
+            var context = { currentState: copy(state), source: source };
+            if (kind === "import") {
+              context.incomingState = incoming === null ? null : copy(incoming);
+              context.validationError = validationError ? validationError.message : null;
+            }
+            var result = registration.handler(context);
+            if (result && typeof result.then === "function") {
+              // Observe rejection without treating a promise as synchronous approval.
+              Promise.resolve(result).catch(function () {});
+              throw new Error("Transfer guards must be synchronous");
+            }
+            if (result === false) throw new Error("Transfer cancelled by a component");
+            if (result !== undefined && result !== true) throw new Error("Transfer guards must return undefined, true or false");
+          } catch (error) { if (!rejected) rejected = error instanceof Error ? error : new Error(String(error)); }
+        });
+      } finally { checkingTransfer = false; }
+      if (validationError) throw validationError;
+      if (rejected) throw rejected;
+    }
+
+    function importState(value, source, readError) {
+      if (transferring) throw new Error("A progress transfer is already in progress");
+      transferring = true;
+      try {
+        var incoming = null, invalid = readError || null;
+        if (!invalid) {
+          try { incoming = validateImport(lesson, value); }
+          catch (error) { invalid = error; }
+        }
+        // Invalid envelopes still run collectors, with no candidate to validate.
+        runTransferGuards("import", source, incoming, invalid);
+        // Guards may silently preserve trusted current contact via restoreExploration.
+        // Use that current state only after all validation has finished.
+        state = prepareSession(lesson, incoming, now(), sessionId, state);
+        closeDueSolutions(); save();
+        lesson.activities.forEach(renderActivity);
+        notifyCustomRestore();
+        panelMessage = t("已导入相同课程版本的记录。", "Imported records for this lesson revision.");
+        renderPanel(); renderStudio();
+        return copy(state);
+      } catch (error) { reportTransferError("import", error); throw error; }
+      finally { transferring = false; }
+    }
+
+    function exportState(source) {
+      if (transferring) throw new Error("A progress transfer is already in progress");
+      transferring = true;
+      try {
+        runTransferGuards("export", source);
+        return exportEnvelope(lesson, state, now());
+      } catch (error) { reportTransferError("export", error); throw error; }
+      finally { transferring = false; }
+    }
+
     function createActivityView(activity, target) {
       target.classList.add("dt-activity");
       target.setAttribute("role", "group"); target.setAttribute("aria-label", activity.title);
@@ -1095,7 +1174,7 @@
       target.append(footer, status);
       var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, recommendations: recommendations, skip: skip, skipStatus: skipStatus, customMounted: false };
       views.set(activity.id, view);
-      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); renderStudio(); } });
+      target.addEventListener("focusin", function () { if (!checkingTransfer && state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); renderStudio(); } });
       renderActivity(activity);
       if (activity.solutionId) {
         var solution = doc.getElementById(activity.solutionId);
@@ -1191,6 +1270,7 @@
     }
 
     function navigate(activityId, reviewItem) {
+      if (checkingTransfer) throw new Error("Navigation is unavailable during transfer validation");
       var activity = definitions.get(activityId), view = views.get(activityId);
       if (!activity || !view) return false;
       if (reviewItem) {
@@ -1265,24 +1345,24 @@
       }
       var actions = el("div", "dt-row dt-transfer");
       actions.appendChild(button(t("导出学习记录", "Export progress"), function () {
-        var blob = new win.Blob([JSON.stringify(exportEnvelope(lesson, state, now()), null, 2)], { type: "application/json" });
-        var url = win.URL.createObjectURL(blob), link = el("a", "");
-        link.href = url; link.download = lesson.lessonId.replace(/[^a-zA-Z0-9_-]/g, "-") + "-progress.json"; doc.body.appendChild(link); link.click(); link.remove();
-        win.setTimeout(function () { win.URL.revokeObjectURL(url); }, 1000);
-        panelMessage = t("记录导出已发起。导入时需要相同课程与内容版本。", "Progress export started. Import requires the same lesson and content revision."); renderPanel();
+        try {
+          var blob = new win.Blob([JSON.stringify(exportState("file"), null, 2)], { type: "application/json" });
+          var url = win.URL.createObjectURL(blob), link = el("a", "");
+          link.href = url; link.download = lesson.lessonId.replace(/[^a-zA-Z0-9_-]/g, "-") + "-progress.json"; doc.body.appendChild(link); link.click(); link.remove();
+          win.setTimeout(function () { win.URL.revokeObjectURL(url); }, 1000);
+          panelMessage = t("记录导出已发起。导入时需要相同课程与内容版本。", "Progress export started. Import requires the same lesson and content revision."); renderPanel();
+        } catch (error) { reportTransferError("export", error); }
       }, "", "export"));
       var upload = el("input", "dt-sr"); upload.type = "file"; upload.accept = "application/json,.json"; upload.tabIndex = -1; upload.setAttribute("aria-label", t("选择学习记录 JSON 文件", "Choose a progress JSON file"));
       upload.addEventListener("change", async function () {
         if (!upload.files || !upload.files[0]) return;
+        var content, readError = null;
         try {
           if (upload.files[0].size > 5000000) throw new Error(t("记录文件超过 5 MB。", "Progress file exceeds 5 MB."));
-          state = prepareSession(lesson, validateImport(lesson, await upload.files[0].text()), now(), sessionId, state);
-          closeDueSolutions(); save();
-          lesson.activities.forEach(renderActivity);
-          notifyCustomRestore();
-          panelMessage = t("已导入相同课程版本的记录。", "Imported records for this lesson revision.");
-        } catch (error) { panelMessage = t("导入未应用：", "Import not applied: ") + error.message; }
-        renderPanel(); renderStudio();
+          content = await upload.files[0].text();
+        } catch (error) { readError = error; }
+        try { importState(content, "file", readError); }
+        catch (error) { reportTransferError("import", error); }
       });
       actions.appendChild(button(t("导入学习记录", "Import progress"), function () { upload.click(); }, "", "import")); actions.appendChild(upload); panelBody.appendChild(actions);
       if (state.currentActivity) panelBody.appendChild(button(t("返回上次活动", "Return to last activity"), function () { navigate(state.currentActivity); }, "dt-button-quiet", "resume"));
@@ -1320,13 +1400,15 @@
     return {
       storageKey: key,
       getState: function () { return copy(state); },
-      exportState: function () { return exportEnvelope(lesson, state, now()); },
+      exportState: function () { return exportState("api"); },
       restoreExploration: restoreExploration,
-      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); renderStudio(); return copy(state); },
+      beforeImport: function (handler) { return registerTransferGuard("import", handler); },
+      beforeExport: function (handler) { return registerTransferGuard("export", handler); },
+      importState: function (value) { return importState(value, "api"); },
       navigate: navigate,
       getRecommendations: function (activityId) { return getRecommendations(lesson, state, activityId || state.currentActivity); },
-      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); renderStudio(); },
-      destroy: function () { doc.removeEventListener("dt:exploration", explorationListener); }
+      refresh: function () { if (checkingTransfer) throw new Error("Rendering is unavailable during transfer validation"); lesson.activities.forEach(renderActivity); renderPanel(); renderStudio(); },
+      destroy: function () { doc.removeEventListener("dt:exploration", explorationListener); transferGuards = { import: [], export: [] }; }
     };
   }
 

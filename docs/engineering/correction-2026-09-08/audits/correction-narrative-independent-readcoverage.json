@@ -1,0 +1,12 @@
+{
+  "method": "Compare every static main paragraph, proof row, table cell, h3/h4 to the completely read lesson-readable text after whitespace normalization; derived from frozen HTML, scripts disabled.",
+  "elements": 1916,
+  "missing": [
+    {
+      "id": "",
+      "tag": "P",
+      "text": "DIALOGUETUTOR · 互动学习"
+    }
+  ],
+  "staticActivityMounts": 28
+}

@@ -1,0 +1,234 @@
+{
+  "proofRows": 561,
+  "adjacentIdenticalMathML": 36,
+  "duplicates": [
+    {
+      "before": "main-wr-group-0-sub",
+      "id": "main-wr-group-0",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>2</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "main-wr-group-1-count",
+      "id": "main-wr-group-1",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>3</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "main-wr-group-3-count",
+      "id": "main-wr-group-3",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>5</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "main-wr-group-4-sub",
+      "id": "main-wr-group-4",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>6</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "example-max-group-0-sub",
+      "id": "example-max-group-0",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>1</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "example-max-group-1-count",
+      "id": "example-max-group-1",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>5</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "example-max-total-sub",
+      "id": "example-max-total-common",
+      "formula": "<mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow>",
+      "reason": "通分到共同正分母 4；每个分子和分母同乘对应倍数，分数值不变。"
+    },
+    {
+      "before": "main-nr-total-sub",
+      "id": "main-nr-total-common",
+      "formula": "<mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow>",
+      "reason": "通分到共同正分母 3；每个分子和分母同乘对应倍数，分数值不变。"
+    },
+    {
+      "before": "construct-total-sub",
+      "id": "construct-total-common",
+      "formula": "<mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow>",
+      "reason": "通分到共同正分母 3；每个分子和分母同乘对应倍数，分数值不变。"
+    },
+    {
+      "before": "duplicates-total-sub",
+      "id": "duplicates-total-common",
+      "formula": "<mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow>",
+      "reason": "通分到共同正分母 3；每个分子和分母同乘对应倍数，分数值不变。"
+    },
+    {
+      "before": "q4-b-event-common",
+      "id": "q4-b-event-joined",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>≥</mo><mn>3</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow>",
+      "reason": "合并同分母分数，分子保留加法。"
+    },
+    {
+      "before": "q4-b-event-joined",
+      "id": "q4-b-event-num",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>≥</mo><mn>3</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow>",
+      "reason": "只计算分子中的整数加法。"
+    },
+    {
+      "before": "repair-equal-group-0-sub",
+      "id": "repair-equal-group-0",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>1</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-equal-group-1-count",
+      "id": "repair-equal-group-1",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>3</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-equal-group-3-count",
+      "id": "repair-equal-group-3",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>7</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-equal-group-4-sub",
+      "id": "repair-equal-group-4",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>9</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-equal-q-event-common",
+      "id": "repair-equal-q-event-joined",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>5</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "合并同分母分数，分子保留加法。"
+    },
+    {
+      "before": "repair-equal-q-event-joined",
+      "id": "repair-equal-q-event-num",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>5</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "只计算分子中的整数加法。"
+    },
+    {
+      "before": "repair-reverse-group-0-sub",
+      "id": "repair-reverse-group-0",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>1</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-reverse-group-1-count",
+      "id": "repair-reverse-group-1",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>2</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-reverse-group-2-sub",
+      "id": "repair-reverse-group-2",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>3</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-reverse-group-3-count",
+      "id": "repair-reverse-group-3",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>4</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-reverse-group-4-count",
+      "id": "repair-reverse-group-4",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>5</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-reverse-group-5-sub",
+      "id": "repair-reverse-group-5",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>7</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "before": "repair-reverse-total-sub",
+      "id": "repair-reverse-total-common",
+      "formula": "<mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "通分到共同正分母 9；每个分子和分母同乘对应倍数，分数值不变。"
+    },
+    {
+      "before": "repair-reverse-q-event-sub",
+      "id": "repair-reverse-q-event-common",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>4</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "统一写成身份路径的共同分母 9，为相加保留精确值。"
+    },
+    {
+      "before": "repair-reverse-q-event-common",
+      "id": "repair-reverse-q-event-joined",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>4</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "合并同分母分数，分子保留加法。"
+    },
+    {
+      "before": "repair-reverse-q-event-joined",
+      "id": "repair-reverse-q-event-num",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>4</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "只计算分子中的整数加法。"
+    },
+    {
+      "before": "repair-reverse-q-event-num",
+      "id": "repair-reverse-q-event-answer",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>4</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow>",
+      "reason": "约去分子分母的共同正因子，得到精确概率；概率没有物理单位。"
+    },
+    {
+      "before": "repair-weight-AB-add",
+      "id": "repair-weight-AB-div",
+      "formula": "<mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>7</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>",
+      "reason": "把总和除以非零的样本量 2。所得均值的单位仍是分钟。"
+    },
+    {
+      "before": "repair-weight-AC-add",
+      "id": "repair-weight-AC-div",
+      "formula": "<mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>13</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>",
+      "reason": "把总和除以非零的样本量 2。所得均值的单位仍是分钟。"
+    },
+    {
+      "before": "repair-weight-BA-add",
+      "id": "repair-weight-BA-div",
+      "formula": "<mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>7</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>",
+      "reason": "把总和除以非零的样本量 2。所得均值的单位仍是分钟。"
+    },
+    {
+      "before": "repair-weight-CA-add",
+      "id": "repair-weight-CA-div",
+      "formula": "<mrow><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>13</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>",
+      "reason": "把总和除以非零的样本量 2。所得均值的单位仍是分钟。"
+    },
+    {
+      "before": "repair-weight-total-sub",
+      "id": "repair-weight-total-common",
+      "formula": "<mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow>",
+      "reason": "通分到共同正分母 3；每个分子和分母同乘对应倍数，分数值不变。"
+    },
+    {
+      "before": "repair-weight-q-event-common",
+      "id": "repair-weight-q-event-joined",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>13</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow>",
+      "reason": "合并同分母分数，分子保留加法。"
+    },
+    {
+      "before": "repair-weight-q-event-joined",
+      "id": "repair-weight-q-event-num",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mfrac><mrow><mn>13</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow>",
+      "reason": "只计算分子中的整数加法。"
+    }
+  ],
+  "maximumMeanTemplate": [
+    {
+      "id": "example-max-group-0",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>1</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    },
+    {
+      "id": "example-max-group-1",
+      "formula": "<mrow><mi>P</mi><mo>(</mo><mi mathcolor=\"#0F7074\">T</mi><mo>=</mo><mn>5</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow>",
+      "reason": "分子分母约去共同正因子；若已最简则保留原值。这里汇总的是路径质量，均值取值本身没有被预设为等可能。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "heading": "① · 五个平均数，凭什么分同样多的概率",
+    "characters": 96,
+    "proofRows": 0
+  },
+  {
+    "heading": "② · 把反复抽样的想法写成可穷尽的对象",
+    "characters": 181,
+    "proofRows": 0
+  },
+  {
+    "heading": "③ · 从概率前提，走到完整抽样分布",
+    "characters": 4968,
+    "proofRows": 80
+  },
+  {
+    "heading": "④ · 换一个统计量，程序仍能工作",
+    "characters": 3023,
+    "proofRows": 37
+  },
+  {
+    "heading": "⑤ · 从路径看分布，再从分布找原像",
+    "characters": 2702,
+    "proofRows": 52
+  },
+  {
+    "heading": "⑥ · 哪些前提一变，就需要重建",
+    "characters": 229,
+    "proofRows": 0
+  },
+  {
+    "heading": "⑦ · 把对象接到做题篇",
+    "characters": 39,
+    "proofRows": 0
+  }
+]

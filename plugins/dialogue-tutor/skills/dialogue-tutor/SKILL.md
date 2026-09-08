@@ -76,6 +76,7 @@ description: 对话式学习教练，口语名简易对话。用于讲清一道�
    制图时读 [visual-design](references/visual-design.md)；设计继续动机与讲述时读 [engagement-and-narrative](references/engagement-and-narrative.md)。
    初次为这份课程选择活动时，读取 [references/deeptutor-provenance.md](references/deeptutor-provenance.md)；
    决定提取时机、评分、复习或伴读安排时，读取 [references/learning-evidence.md](references/learning-evidence.md)。
+   编写正文和组件之前，按 [references/generation-checks.md](references/generation-checks.md) 形成该课的生成与验收对应表：每项规则落到实际数据、控件及预期结果。表中缺项先补设计；不能等整课完成后只数行数、按钮或测试数量。
 2. **把活动安排在正文里。** 定义与适用条件讲清之后可用翻卡；概念辨析处用就地自测；
    参数变化决定结论的图形用有限精确状态探索；有先后依据的推导用图帧步进；每个原题小问保留免打字作答入口。
    定义提取优先心中回忆→翻面→自评，辨析优先 choice；方法、计算与证明使用选步骤/依据、路径集合或整份构造选择。新课主路径没有文本框、数值框或必填口述。可选笔记独立于学习进度；旧 numeric/open 仅保留兼容。
@@ -1457,6 +1458,7 @@ pathIds、barIds、object-id/role/label/token/精确值、资源与 hash；视�
 
 先立形式：**每一个等号单独占一行，每一行旁边写出这一行凭什么成立。**
 展开、求原函数、代上限、代下限、通分、约分，各算一行。
+这里指实际发生的运算。先确定上一式、本次操作、下一式和具体依据，再写这一行；不能固定生成“通分→合并→相加→约分”而不看表达式。只有一项事件概率时说明直接取该项；已同分母不伪称改变了分母；只有一项整数不声称计算了加法；已最简分数需要保留时写明精确表示或最简检查，不冒称再次约分。相邻式相同可用于必要核查，但必须说清核查对象。统计量名称与条件来自当前对象，maximum 的依据不能套用 mean 的文案。这样保留全部真正小步，同时避免用空操作凑行。
 
 然后是两条独立的检查，分开跑（这两条管的是推导的行与行之间；
 §1.8 那两个检验管的是一段讲解够不够深，两处别混）：

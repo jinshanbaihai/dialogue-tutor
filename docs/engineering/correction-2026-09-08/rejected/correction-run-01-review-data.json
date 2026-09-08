@@ -1,0 +1,280 @@
+{
+  "status": "evidence for rejected complete course, not approval",
+  "archive": "correction-run-01-review-data.tar.xz",
+  "sha256": "2e81799d7368bc0d9cd25d524504197a7b2e704feed39e864f84ef109be191ad",
+  "bytes": 110716,
+  "scope": "Nested probe scripts, outputs and root reading extractions. Derived PNG crops/contact sheets excluded; scripts and original inline PNGs allow recreation. Primary top-level reports and probes are in ../audits.",
+  "files": [
+    {
+      "path": "reviews/correction-root-course-read/00-start.txt",
+      "sha256": "284871898741fc52e45d737e64a7ef8fa9925f3c4a8d06a9abd8503f6c4ebb03"
+    },
+    {
+      "path": "reviews/correction-root-course-read/01-object-population.txt",
+      "sha256": "e76f0b2622eb8641d0a150f89f5c0b50e11c284f706bad77fdb2cf1f6cd4d77f"
+    },
+    {
+      "path": "reviews/correction-root-course-read/02-object-statistic.txt",
+      "sha256": "9585238810326603578d67cc5a5d57ae39a015dfc6f602be82a24db5621f4b07"
+    },
+    {
+      "path": "reviews/correction-root-course-read/03-object-distribution.txt",
+      "sha256": "5ceb2b9fc69ca57593286e4adac3bb58470a5fbc421735b69cad873bc2e4702a"
+    },
+    {
+      "path": "reviews/correction-root-course-read/04-practice-q1.txt",
+      "sha256": "df3e0118941589137bd583b76b0f6aa31a94d1285cffbf57c3de5064dcef1ebb"
+    },
+    {
+      "path": "reviews/correction-root-course-read/05-practice-q2.txt",
+      "sha256": "b29f389b1e22721cbebc13106ebdde59e9fe572d470476cd792f80991a25e17d"
+    },
+    {
+      "path": "reviews/correction-root-course-read/06-practice-q3.txt",
+      "sha256": "babf61d30eca870dce1a17923fdb250be5e64f57c21480f3137871130b198166"
+    },
+    {
+      "path": "reviews/correction-root-course-read/07-practice-q4.txt",
+      "sha256": "2cfb6a138d93a38894a3c120e79c23e85a59ec0d2de9fd6368162045d7004e9a"
+    },
+    {
+      "path": "reviews/correction-root-course-read/08-repair-branches.txt",
+      "sha256": "60141bf4de589e8fa1542848a4cac1b8ddea59abd0412e60133679057338b674"
+    },
+    {
+      "path": "reviews/correction-root-course-read/09-closing.txt",
+      "sha256": "d0a79f5348f64ad9456ed4e48796c6fe4cf202166bf27a0b9bcde64922030b53"
+    },
+    {
+      "path": "reviews/correction-root-course-read/10-sources.txt",
+      "sha256": "2320ebb93c8d3df10f4c68ebc713188f919087f74fc4f4ffad3e6f1c1dc0f7d4"
+    },
+    {
+      "path": "reviews/correction-root-course-read/activities.json",
+      "sha256": "cb9a43ae603f186912688a43b71155e97a4f3abf9faece20414201918e7b86ae"
+    },
+    {
+      "path": "reviews/correction-root-course-read/snapshot.json",
+      "sha256": "38d7e65f8ccec7ce289647245d984f232fd544055b639a75f73140db9df2ff74"
+    },
+    {
+      "path": "reviews/correction-root-final-read/00-start.txt",
+      "sha256": "5ac9e82b46bd5ba97c1c796769ecd03096386254086077d4c5ff2008a2a4eba5"
+    },
+    {
+      "path": "reviews/correction-root-final-read/01-object-population.txt",
+      "sha256": "b896c4114332a9d9bef81d997ae48e08c5b067a6774cd4c1fdcddfa84e2fa93b"
+    },
+    {
+      "path": "reviews/correction-root-final-read/02-object-statistic.txt",
+      "sha256": "9efc7b446ab495a327b52fc1c92e6153366e61af8e35b269cb43cd354f2a9a6c"
+    },
+    {
+      "path": "reviews/correction-root-final-read/03-object-distribution.txt",
+      "sha256": "ad6df45ac2c039b9573d1953728b3a524947fc261e1fd83936b9f9c4b6fe8bce"
+    },
+    {
+      "path": "reviews/correction-root-final-read/04-practice-q1.txt",
+      "sha256": "b84efa2841f862ad062ec1c6c381b540db5e7a03c551f291f9162cdb395d6dbb"
+    },
+    {
+      "path": "reviews/correction-root-final-read/05-practice-q2.txt",
+      "sha256": "090ee546392f7def55490d8005e3bffbf261b5360b9ffc6e9843a7f2d7145252"
+    },
+    {
+      "path": "reviews/correction-root-final-read/06-practice-q3.txt",
+      "sha256": "8bfca6c64e1225b0748b02d3a2a87d211f20cbd58102abefc303a062b359b485"
+    },
+    {
+      "path": "reviews/correction-root-final-read/07-practice-q4.txt",
+      "sha256": "620db546abfb297f13c73ba62efb8c7b637718215eac6f2baca9ae1594efc2cd"
+    },
+    {
+      "path": "reviews/correction-root-final-read/08-repair-branches.txt",
+      "sha256": "2adb14aa29d0a4e0755fb61dfd5430efa104efa1a5a3f26e345a514457412362"
+    },
+    {
+      "path": "reviews/correction-root-final-read/09-closing.txt",
+      "sha256": "4fe09a6646392e7b2363f77b4ac64b8f9da80d7409f72b17e29c9799c4bfd3e1"
+    },
+    {
+      "path": "reviews/correction-root-final-read/10-sources.txt",
+      "sha256": "b4eb1b6bd5bb11af50de62fed8a6b5049de1b5e5220607ecebe93412c9cba2a6"
+    },
+    {
+      "path": "reviews/correction-root-final-read/reading-diff.txt",
+      "sha256": "72cf016cb2cc4dd5e562427f130d33696e83d9d502b565b891bcb0d5842b17d0"
+    },
+    {
+      "path": "reviews/correction-root-final-read/snapshot.json",
+      "sha256": "ab07ec80ae5c6299c70a2135d14d9de37d76a55498aaf3c63105d10c5cce55da"
+    },
+    {
+      "path": "reviews/course-color-probes/FORMS.json",
+      "sha256": "a49d623db7a219af9f021b783b5bb658fc1909c186c8753c85adf9e795dbb3e2"
+    },
+    {
+      "path": "reviews/course-color-probes/FRAME_META.json",
+      "sha256": "661db159242cfe3e4e96b6cac10eaadfe960460a33455e056e73c19b6bacba2c"
+    },
+    {
+      "path": "reviews/course-color-probes/course-check-results.json",
+      "sha256": "522be85b40c4b25847db2607a0820000cf85d02f5837f523b47bac35eb360eae"
+    },
+    {
+      "path": "reviews/course-color-probes/course_check.cjs",
+      "sha256": "c3a096c0a10cef5f4ca3fcaea9045f72c254682da349898ea5d8e95c7dca59e4"
+    },
+    {
+      "path": "reviews/course-color-probes/embedded-image-hashes.json",
+      "sha256": "64b953b3584dfe837006d11029f450c0a1d4e23ddda54245003ab50bb7894df7"
+    },
+    {
+      "path": "reviews/course-color-probes/evidence-hashes.json",
+      "sha256": "7b70142a4187bd998bc171c7502ffc747d5ce9430b4bb277031de1b7988e9506"
+    },
+    {
+      "path": "reviews/course-color-probes/failure-link-results.json",
+      "sha256": "38c9bd413525aa938d3cb28076125f092d1cd8a6ee1f7561c798da6a932237e2"
+    },
+    {
+      "path": "reviews/course-color-probes/failure_link.cjs",
+      "sha256": "985dcb28005fb94d4ee8e8f5964617827464c6f8f88acac4171a3741c1deb592"
+    },
+    {
+      "path": "reviews/course-color-probes/independent-326-pixels.json",
+      "sha256": "8637392a01e117e82fd31d43fe532d9ba6474309f8bf4a408fecc66661d590fd"
+    },
+    {
+      "path": "reviews/course-color-probes/pixels326.py",
+      "sha256": "f24450c8f20fd61337c9dcfee86f90aee5ebd25cf8d10e642d63998a7f38eb04"
+    },
+    {
+      "path": "reviews/course-color-probes/role-color-inspection.json",
+      "sha256": "91475988b2e8a3d5f8694d484f9d899a2c5b37be3788a91b937658eb527b9322"
+    },
+    {
+      "path": "reviews/course-color-probes/script-1.js",
+      "sha256": "860b7671d276bc263e3f062ad669e761b2b45937c85bbf7e4f5a6a18b7d0ce60"
+    },
+    {
+      "path": "reviews/course-color-probes/script-3.js",
+      "sha256": "0e21983dc1bab26ea7b3192a5aa6ea58fb1fa8087b24aace7e7d468449d473bd"
+    },
+    {
+      "path": "reviews/course-color-probes/script-4.js",
+      "sha256": "0e21983dc1bab26ea7b3192a5aa6ea58fb1fa8087b24aace7e7d468449d473bd"
+    },
+    {
+      "path": "reviews/course-color-probes/style-0.css",
+      "sha256": "1d39a8f8381d6a1dc03a4736bc32d78fd546bfc4b53e04ff655d11715eaac5b4"
+    },
+    {
+      "path": "reviews/course-color-probes/style-1.css",
+      "sha256": "7d99b9a3216d08d0d976549c1a9484dd2a4df0538ced785f48b7b98ce60cbee3"
+    },
+    {
+      "path": "reviews/course-color-probes/style-2.css",
+      "sha256": "83417bc66447ecf3020cad7430a4b68882561056b215354f89da067e066a70a7"
+    },
+    {
+      "path": "reviews/course-color-probes/text.txt",
+      "sha256": "cc4e659e23bc1e9feaab531efed27c0d66724357ab4b625333021e04a1dccc43"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/clean-axis-probe.json",
+      "sha256": "a96879ebf9f0dea1546b3bba825ff04ec81a0112dbd6f49476caa0144cd47f2a"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/final_measurements.py",
+      "sha256": "7a79e75bad0b5d13db0310df9212a2bddd65554e9bcc59e47349ee2e64fc8a7e"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/frame-coverage.json",
+      "sha256": "16e7e5562ac92deb442a4e8829a1b503188197a0a332a35909bc52cddb20e3ae"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/glyph-components.json",
+      "sha256": "87562b9d76117b8309480b00e8a0af46a67a7c532db599f9c4624c4e6707c851"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/independent-math.json",
+      "sha256": "f63c623dfc9aade8467bde1e45068635e3eed7d5d9433019b31d0dd0a91020e6"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/input-hashes.json",
+      "sha256": "bcf3748b3ad543e2b551a4d9e27a9125da44b7b50d0b2cdae245ec2b41db76a0"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/line-sections.json",
+      "sha256": "4a8dc406a61a3dbe6cdaf37fc9323ecf7a54b18e93c279bdfef25e7fda2e836d"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/line_probe.py",
+      "sha256": "60afa3f98e6a953faf66230ec1c06f42ac658c9d7021945baa7db552fd0f7ac0"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/manifest-content-read.txt",
+      "sha256": "c00ceb8a55cb32899776a21007c84e63305da899f3c49c09e7d6f8f267091c62"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/other-line-sections.json",
+      "sha256": "f12993180906e4c4b3f05b4e920c69ff272b715455e9e58e308de4814d23a369"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/probe.py",
+      "sha256": "3b264cb8d2210acca5b15bb8183445cbf6e4fdbe4cd3bd2cdc56dc21aed3d4bf"
+    },
+    {
+      "path": "reviews/frame-probes-run-01/text-components.json",
+      "sha256": "f624d21adec814fb6ddd15701274f432824b4e335e54b119bfc4bc789b6c6df2"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/evidence-hashes.json",
+      "sha256": "d7f1aeb40d62b483d4919d2bd7bdae144cd2dcefbe26681b156600f56f065219"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/fraction-bodies-and-geometry.json",
+      "sha256": "bfd981e887343a9f610b84bfa76acb216cc06e5082de58871b2186e2dd4e1afc"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/frame-coverage.json",
+      "sha256": "dd832947e0d093b053f462c978937b19c6e7093420bc98aad154b75d5a2bdcdf"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/geometry_fractions.py",
+      "sha256": "c0682e06a62b54b6b11570a78b46b8d666816929d6899197367c5d30981d5213"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/glyph-components.json",
+      "sha256": "ae02b7c25438a38d3aba5086098fdbc44a24a948cb34afcc7647af2a73d66646"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/independent-math.json",
+      "sha256": "f63c623dfc9aade8467bde1e45068635e3eed7d5d9433019b31d0dd0a91020e6"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/independent-pixels.json",
+      "sha256": "1e75f0c0eddb30cabfdf47e5a83a146c40f74eef8f204daf7c0b51fe393c3578"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/independent_pixels.py",
+      "sha256": "37d132d1427a7a79ab340c2ccfde640395abbb1efd3f53b63c3bbf9948713f53"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/input-hashes.json",
+      "sha256": "b4b9ead752baf737fb4993744b7ecec1682aa35320adddc5b1f5a38b4054f84d"
+    },
+    {
+      "path": "reviews/frame-probes-run-01-recheck/probe.py",
+      "sha256": "e8b3363eea66eda5711218c55f8caa2eccfa3f29e4e9ce8cf3f1da823cc950ad"
+    }
+  ],
+  "omitted_reproducible": [
+    {
+      "path": "reviews/course-color-probes/script-2.js",
+      "sha256": "067a8124d3147fee80f1ebfad041426a913e8652f20e989441fb17a36d0754b4",
+      "reason": "Extracted script-2.js, including inline PNG data, already preserved in frozen lesson.html; extract script contents and identify the matching SHA."
+    }
+  ]
+}

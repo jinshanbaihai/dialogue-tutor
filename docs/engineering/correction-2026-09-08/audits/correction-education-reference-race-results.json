@@ -1,0 +1,134 @@
+[
+  {
+    "case": "native summary then preimage submit same JS task; no await",
+    "detailsOpen": true,
+    "submission": {
+      "id": "preimage:1788846001462:0",
+      "conditionKey": "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean",
+      "answers": {
+        "paths": [
+          "AC",
+          "BB",
+          "CA"
+        ]
+      },
+      "assistedAtSubmit": false,
+      "assistanceSnapshot": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "componentChecks": {
+        "paths": true
+      },
+      "evidence": "component-check-only"
+    }
+  },
+  {
+    "case": "native summary then old import then export same task",
+    "detailsOpen": true,
+    "contact": {
+      "main-wr:v1:A=2,B=4,C=6:n=2:independent-uniform-with-replacement:mean": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "main-nr:v1:A=2,B=4,C=6:n=2:uniform-without-replacement:mean": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "example-max:v1:A=1,B=5:n=2:independent-uniform-with-replacement:maximum": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "duplicates:v1:A=0,B=0,C=6:n=2:uniform-without-replacement:mean": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "repair-equal:v1:A=1,B=5,C=9:n=2:independent-uniform-with-replacement:mean": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "repair-reverse:v1:A=1,B=3,C=7:n=2:independent-uniform-with-replacement:mean": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "repair-weight:v1:A=2,B=5,C=11:n=2:uniform-without-replacement:mean": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      }
+    }
+  },
+  {
+    "case": "reload immediate exported stored envelope then Q3 submit",
+    "submission": {
+      "id": "construction:1788846008433:0",
+      "conditionKey": "construct:v1:A=0,B=4,C=10:n=2:uniform-without-replacement:mean",
+      "answers": {
+        "paths": [
+          "AB",
+          "AC",
+          "BA",
+          "BC",
+          "CA",
+          "CB"
+        ],
+        "mapping": {
+          "AB": "2",
+          "AC": "5",
+          "BA": "2",
+          "BC": "7",
+          "CA": "5",
+          "CB": "7"
+        },
+        "probabilityReason": "remaining",
+        "distribution": "thirds"
+      },
+      "assistedAtSubmit": false,
+      "assistanceSnapshot": {
+        "hint": false,
+        "reference": false,
+        "feedback": false,
+        "referenceCoverage": [],
+        "revealedThrough": 0
+      },
+      "componentChecks": {
+        "paths": true,
+        "mapping": true,
+        "probability": true,
+        "distribution": true
+      },
+      "evidence": "component-check-only",
+      "submittedAt": 1788846008433
+    }
+  }
+]

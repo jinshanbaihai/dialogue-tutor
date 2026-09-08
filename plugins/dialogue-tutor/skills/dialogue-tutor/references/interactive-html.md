@@ -209,20 +209,49 @@ const result = DialogueTutor.instance.restoreExploration(id, local);
 
 返回 `{exploration, persisted}`，前者是已接受快照的副本。存储不可用时 `persisted` 为 false：完整快照仍在当前页面内存和公共导出中，运行库显示保存失败提示；此时不能承诺刷新恢复。真实学习者改变参数、提交预测、揭示或模拟仍通过 `dt:exploration` 记录动作。恢复后的立即导出、多组件依次合并及重新打开，都检查已合并记录仍在且没有新增参与。
 
+### 真实导入前与导出前的同步边界
+
+`dt:restore`发生在通用状态替换和控件重绘之后，不能拿它当导入前采集入口。自定义组件需要在`dt:ready`注册一次以下同步回调；公开API与原生文件上传/下载都经过相同边界，文件上传在读取完成、即将应用记录时调用。
+
+- `instance.beforeImport(handler)`返回注销函数；handler收到深拷贝`{incomingState,currentState,source,validationError}`。source为`"api"`或`"file"`；incomingState是已通过通用envelope校验的候选state，通用校验/JSON/文件读取失败时为null并带错误字符串。通用失败仍运行采集器，之后仍拒绝导入。
+- `instance.beforeExport(handler)`同样返回注销函数；收到`{currentState,source}`，在取导出快照之前运行。无需入站候选。
+- 回调直接同步调用：undefined/true通过，false取消，throw显示其错误；其它返回值或Promise拒绝。所有已注册回调均运行，使一个组件拒绝后其它组件仍能保存真实接触。通用校验错误优先报告，其次首个回调错误。没有回调的旧课保持原有导入/导出能力。
+- 回调先采集当前真实可见参考并调用`restoreExploration`静默保存可信组件快照，再验证候选；不派发`dt:exploration`，不导航、刷新或执行学习动作，不递归导入/导出。传入context是副本，修改它不会修改候选。禁止异步回调，不能把异步工作算为获准事务。
+- 拒绝时不替换旧草稿、提交或场景；刚采集到的真实接触保留。导出失败不发出下载。成功导入后，组件在`dt:restore`把有效入站记录与可信接触/冻结提交合并并静默保存，再恢复具体已揭示DOM。初次读取localStorage不经过导入回调，`dt:activity-mounted`仍须验证组件版本和有限状态；无效快照不冒称已验证。
+
+配方中的函数由作者按本课coverage与状态实现，不是运行库自带评分器：
+
+```javascript
+document.addEventListener('dt:ready', () => {
+  const instance = DialogueTutor.instance;
+  instance.beforeImport(context => {
+    synchronizeTrustedExposure(); // 读实际DOM/已显示结果，按覆盖表并集，restoreExploration
+    if (context.validationError) return; // 已保存可信接触；runtime仍会拒绝坏envelope
+    validateIncomingComponents(context.incomingState); // 纯校验，不替换hash；不合法throw
+  });
+  instance.beforeExport(() => { synchronizeTrustedExposure(); });
+}, {once: true});
+```
+
+同一`synchronizeTrustedExposure()`还在每个自定义提交冻结前执行。coverage按`sourceId→componentId/conditionKey/kind/lineIds`分发，不能按当前焦点猜归属；判实际可见时检查祖先hidden/关闭details，未加载请求、隐藏JSON不算已见。首次时点按语义来源幂等保留；同步扫描不是新学习动作。真实toggle只补充尚未记录的来源，恢复前已写入的来源不再计数。
+
+必须实际测试两种导入入口及两种导出入口：原生summary即时提交；summary→旧导入→立即导出/存储→新窗口；summary→直接导出；坏记录拒绝仍保可信接触；合法半草稿/错选恢复；共享全解覆盖两组件而单题参考不污染另一题。不得只包装公开API或只测“全部展开”按钮来代替这些入口。
+
 ### 自定义预测中的参考接触
 
 首版探索只从 `dt:restore.detail.state` 恢复自己的 `referenceViewed`，导致“导出未看答案记录→查看全解→导入旧记录”抹掉辅助标识，尽管运行时仍保留该次参考接触。自定义字段不能覆盖运行时已经保留的事实。
 
 恢复时区分三类数据：参数与历史由 `exploration` 恢复；运行时辅助接触从 `DialogueTutor.instance.getState().activities[id].exposure` 读取；已提交预测的辅助快照保持提交时的值。`exposure.reference` 表示曾有参考接触，不自行宣称新的预测属于客观独立作答。
 
-对本页的新预测，冻结前同步检查关联全解当前是否展开，并合并运行时参考接触与组件已经观察到的接触。不能只等待异步 `toggle` 事件。可采用以下组件内函数；`id`、`solutionId`、`local` 使用本活动的实际变量：
+对本页的新预测，冻结前同步检查关联全解当前是否展开，并合并运行时参考接触与组件已经观察到的接触。不能只等待异步 `toggle` 事件。可采用以下组件内函数；`id`、`conditionKey`、`local` 使用本活动的实际变量：
 
 ```javascript
 function hasReferenceContact() {
-  const saved = DialogueTutor.instance.getState().activities[id];
-  const panel = document.getElementById(solutionId);
-  return Boolean(local.referenceViewed ||
-    (saved.exposure && saved.exposure.reference) || (panel && panel.open));
+  // 作者统一采集器：核答案源及所有祖先的实际显隐/closed details，按coverage分发。
+  // 这里不使用裸 panel.open：隐藏容器里的open详情尚未展示给学习者。
+  const visible = collectVisibleExposureFor(id, conditionKey);
+  const history = trustedExposureFor(id, conditionKey);
+  return Boolean(history.reference || visible.reference);
 }
 function mergeReferenceAfterRestore() {
   // 先恢复参数与历史再调用；恢复不新增操作记录。
@@ -236,9 +265,11 @@ function freezeNewPredictionReference() {
 
 组件有多个含答案入口时逐个关联并检查。界面分别描述“提交预测前是否看过参考”和“目前是否已查看参考”，避免提交后查阅倒改原预测，也避免导入旧参数抹掉本页已经发生的接触。
 
+`trustedExposureFor`按活动和条件读取已记录的真实接触；不能直接沿用未分条件的布尔标识。`collectVisibleExposureFor`是本课统一采集器的示意名称，作者须实际实现：按source覆盖当前condition，检查源及祖先的hidden、关闭details和有效display/visibility等显隐，不只读open属性。隐藏容器中的open详情不算已展示；真正显示后采集同一来源。曾经展示的可信历史不会因现在关闭/隐藏而撤销。公共activity级exposure仅在其确实覆盖当前条件时沿用，多条件组件必须用覆盖表，不能整题粗粒度污染另一个条件。
+
 实验结果本身也是接触来源。首版“直接观察→同条件新一轮”保存了历史，却没有在新判断中说明已见过相同结果。组件为已经揭示的结果保存题目与条件身份、揭示时间和来源；身份包括影响答案的总体、机制、参数及目标事件。恢复前保留本页已发生的结果接触，与导入记录合并，再判断新一轮的条件是否已见。参数、草稿可以回到旧状态，已经发生的接触不会随之撤销；刷新从已保存的接触记录恢复。该合并不新增模拟次数、作答或重新揭示事件。
 
-提交新预测时同时核对相关全解接触和该结果身份；同条件再判断明确标为已见结果后的检查。改变条件后，只有先前参考实际覆盖新条件时才连带标记。上面的函数示例适用于 `solutionId` 全解覆盖当前题目的情况；全解只覆盖部分条件时，作者需给出覆盖判断或拆分活动。结果接触与全解接触可分别显示，不把它们冒称提示按钮使用，也不倒改旧预测时点的快照。
+提交新预测时同时核对相关全解接触和该结果身份；同条件再判断明确标为已见结果后的检查。改变条件后，只有先前参考实际覆盖新条件时才连带标记。上面的函数通过活动和条件限定覆盖范围；全解只覆盖部分条件时，作者需给出覆盖判断或拆分活动。结果接触与全解接触可分别显示，不把它们冒称提示按钮使用，也不倒改旧预测时点的快照。
 
 ## 新课构造、精确帧与连续推导契约
 
@@ -253,6 +284,10 @@ currentFrameId 表示当前图，revealedThrough 表示已揭示链，两者分�
 ### 一份完整构造答卷
 
 本类有限抽样分布构造用一个 interactive 包含四组原生选择：完整路径集合、统计量映射、概率依据、分布。其他目标按其必要构造项设计，不能照搬路径分组。允许 radio、checkbox、select、button；点选立即有勾选/描边，但提交前不逐组判对。一个“提交完整构造”动作校验组和选项 ID，冻结整份选择及 assistanceAtSubmit，然后统一显示核对结果；双击不新增提交，修改需显式新尝试。
+
+组间也要保护首次判断。后组的行名、禁用状态、默认数量不能由标准正确集合生成来回答前组。选择一种明确方案：映射行严格来自用户勾选草稿（误选也保留，删选时保留/移除映射的行为明确）；或完整候选全部可答并有“不允许”选择。没有提交时不补齐漏项、不提示正确数量。完整度只检必要回答，正确性留到统一冻结后；遗漏的正确路径仍要判为缺项，不能只核已显示行。
+
+统一反馈计算精确 `missing/extra/matched`，逐项解释实际身份、数值和当前机制下的资格/权重，链接其推导行及归组行；机制不允许的路径先解释不允许，不给它套有效路径概率。只比较条数不够。重试后当前草稿与历史submission分区，旧结果称“上次核对/历史参考”，冻结答案与辅助快照不变。
 
 组件自身 submissions 保存条件、选择、时点、核对规则结果及辅助快照，界面称“新题构造选择核对”。不向公共 runtime 伪造 attempts、correct 或复习 item；公共面板仍按 interactive 记录探索。若将来需要统一评分，须完整扩展 Python/JS schema、评分器、导入与迁移后另行实现，当前不得声称已具备。
 
@@ -276,11 +311,19 @@ manifest 至少含 dataHash、sceneSourceHash、Manim Community 实际版本/渲
 
 快速连点使用请求序号或等效机制，旧图加载不能覆盖新选择；仅当前请求帧可用时提交图式可见状态。缺帧有诊断并保留同条件逐行文字，不沿用另一个条件旧图。减少动态使用同源静帧，暂停仍读得到全部依据。
 
+区分 `requested` 与 `displayed` 身份。先验证当前条件/路径/阶段，计算当前请求的推导链接、caption和精确表达；在开始加载前同步更新当前语义链接/说明并隐藏旧图式组。只有仍属于当前请求的成功回调可一次显示新图、公式和目标；失败保留当前请求对应的书面推导，不把旧caption/href当降级解释。旧成功、旧失败和恢复前遗留回调都不能改变新状态。路径概览可链接本条件完整路径集合，链接文字须与目的地一致。加载状态不等于教学阶段或作答证据。
+
+实际执行：同条件换路径失败、跨条件失败、C成功后旧B成功/失败、失败后重试、加载期间恢复。逐项核image/formula/target/href/caption/status与显隐；锚点存在不等于语义正确。人工load/error fixture可验实际JS分支，仍不认证真实图片解码或浏览器像素。
+
 Manim 源码及真实资源随交付保留；可将媒体嵌入单 HTML，或明确连目录交付。组装器仅内联 runtime/JSON 并不等于自动携带 PNG/MP4；从最终移动后的交付位置验证资源，记录最终产物 hash。
 
 ### 恢复与持久化
 
 推荐组件快照：stateVersion、dataHash、conditionKey、stageId、currentFrameId、revealedThrough、draft、submissions、contacts。只保存 ID/精确值，不保存 DOM、函数、图像字节或每一播放时刻；exploration 上限 100000 字符。挂载/导入时检查版本、数据 hash、合法条件、帧、路径、选择组和已揭示范围，拒绝无放回却含允许对角等不可能组合；缺字段明确初值或显式迁移，不静默清接触。
+
+先验证入站组件身份、版本、数据hash和各有限状态组合，再接受字段；禁止fresh后复制未知selection再覆盖成当前hash。合法半份草稿和错误但合法选项必须保留，完整性只在提交要求；候选/条件之外的值拒绝或明确迁移。requested与displayed可以在加载中不同，分别验证，不把合法中间态误判非法。相同submissionId不得覆盖本页冻结原件；冲突拒绝或保留原件并告知，接触并集不重算旧首答。
+
+`contacts`记录曾接触，具体`visibleSolutionIds/lineIds`记录已揭示范围，二者分开。恢复先提交可信并集和可见范围，再展开相应DOM、恢复帧；提示接触不自动展开全部答案。绘制不派发学习动作。异步toggle依来源语义键幂等，不能只用瞬时isRestoring布尔值，因为事件可能在布尔复位后才到达。共享全解依同一coverage表分发所有受覆盖组件，不能按当前焦点归属。
 
 恢复从导入草稿与本页已发生 contacts 求并集，保留本页/导入已冻结 submissions 并按提交 ID 去重，不重写首答快照；再同步 restoreExploration 保存，最后重绘。恢复不发 dt:exploration，不新增尝试、揭示时间或操作次数。真实点选、提交、揭示、切帧才发探索事件。保存失败可继续并导出本页内存，不保证刷新恢复。
 

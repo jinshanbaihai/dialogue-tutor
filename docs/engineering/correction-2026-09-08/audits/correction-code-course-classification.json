@@ -1,0 +1,20 @@
+{
+  "rawHarnessNote": "P09/static-images-match treated the hidden source-less explorer placeholder as image bytes; preserve the raw false assertion, exclude that placeholder from byte verification.",
+  "emptyHiddenPlaceholders": 1,
+  "staticImagesWithBytes": 10,
+  "actualStaticByteMismatches": [],
+  "uniqueActualRequestedFrames": 47,
+  "actualRequestByteMismatches": [],
+  "usedFrameUnion": 55,
+  "manifestFrames": 55,
+  "missingFrameIds": [],
+  "extraFrameIds": [],
+  "confirmedFailedAssertions": [
+    "P05/preimage-synchronous-reference",
+    "P06/immediate-reference-import-union",
+    "P06/immediate-reopen-reference-preserved",
+    "P07/revealed-detail-restored",
+    "P07/reject-or-reset-foreign-component-state"
+  ],
+  "mediaDisplayLimit": "No load callbacks were fabricated. Byte/request verification is not image decode/display verification."
+}

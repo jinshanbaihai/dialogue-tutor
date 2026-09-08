@@ -29,6 +29,10 @@ HTML 使用 runtime 的 --dt- 变量；Manim 使用同一 JSON 色表的确切�
 
 每个对象在共享数据中有 objectId、role、label、token、精确值、stageId；manifest 记录它出现在哪些 lineIds/帧。筹码用值和编号区分，不给九条路径九种颜色。选错后 X₁ 仍蓝、X₂ 仍紫、均值仍青，外侧显示文字/图标/边框；不能把全式染红或绿。非选中不是不可用，不给整项低 opacity。相邻对象用 surface 间隔/描边与形状区分。
 
+角色绑定覆盖变量的数值实例：第一观测的代入数值沿用 X₁ 色，第二观测沿用 X₂ 色，统计量结果沿用 T 色；不只给字母着色。由同一角色记录生成 Manim、静态 MathML、动态公式及同角色的选项/反馈。绑定的是出现位置与对象，不按数字字符串全局替换：两次观测同值仍有不同角色，样本量、概率分母和中间和可保留墨色。验收逐项核变量、代入项、结果与 frameId，至少覆盖顺序对调、同值不同身份及不同条件。
+
+表达记录用conditionKey/pathId/lineId/occurrenceId与operandPosition定位节点，分别保存objectId/role/精确值/token；输出MathML可带受控语义class或data-role/mathcolor，Manim消费同一记录。原生choice的text字段按纯文本渲染，不能往里塞HTML指望着色；自然语言的概率备选无需伪装数学角色。确需在选项重现带角色公式时使用可承载受控MathML的interactive原生选择，或把对应公式放在紧邻且同身份的正文，实际检查角色没有被纯文本接口丢失。
+
 旧无 theme 课程保留旧自动主题兼容。新稿如另做暗色，须从同一 Scene 数据实际渲染暗图并全套检查；不得 filter/invert 光栅图，不因旧 CSS 有 dark 便称新 Manim 图双主题通过。
 
 ## 正文与手机构图
@@ -52,5 +56,7 @@ HTML 使用 runtime 的 --dt- 变量；Manim 使用同一 JSON 色表的确切�
 至少360×800、390×844、1280×900截图，200%文字缩放和键盘完成主路径；检查无页面横向溢出、按钮可操作、图文相邻、实际数值≥16px/关键符号≥18px。以上字号是本项目目标，不称WCAG一律规定图标签16px。
 
 从 computedStyle 检查正文、依据、链接、选项默认/选中/悬停/焦点、提示、正误、按钮；Manim真实帧核对色表、对象标签和源图字号。透明色先与背景合成；普通文字≥4.5:1，必要图形/控件≥3:1，不四舍五入判过。深色若未提供不计通过。灰度仍以形状、标签、位置识别对象与反馈，不能只靠红绿。
+
+字号与颜色检查有效层叠结果，不能将低优先级的作者声明当作已生效。尤其比较 light 主题 runtime 规则与课程 MathML 规则；静态 specificity 推理、jsdom、真实浏览器和实际PNG像素分别标注证据。取不到原生 MathML 的 computedStyle 或字形时明确未测，不能用声明的24px冒称实际24px。
 
 保存最终 HTML、Scene、媒体 hash、实际状态/行与截图；色表计算不是浏览器实物通过。依据：[W3C文字对比](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)、[非文字对比](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)、[不用颜色作为唯一信息](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)。
