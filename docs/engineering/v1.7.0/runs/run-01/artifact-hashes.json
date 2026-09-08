@@ -1,0 +1,62 @@
+{
+  "lesson.html": {
+    "sha256": "827ec6c6716f95094a37cbf74f5049d7707dc5716101defb0b90e3ef5ad20869",
+    "bytes": 266249
+  },
+  "lesson.json": {
+    "sha256": "d220046025e563fb0d6ed271439e542f10e4e6f279ca294f318b62d8248de394",
+    "bytes": 90799
+  },
+  "blueprint.md": {
+    "sha256": "063c494c2e3c202e9025d7a510e4da9c4933f925c80c8b4f7f4f664ae4205ab9",
+    "bytes": 10747
+  },
+  "activity-map.json": {
+    "sha256": "0964192c8ef7e7e076d7e0b8c50d2ec8c04e9aa5bef9bce3a1d66c4efc930a3b",
+    "bytes": 13194
+  },
+  "author.py": {
+    "sha256": "ab19396334d02856aeee302021b998fc2efdfef40f50c49fd4f2c30d84744da5",
+    "bytes": 50881
+  },
+  "sampling-lab.js": {
+    "sha256": "460d30a12c9b2c31a09f2594c328289b11d85fcbf645c61b8ccdb5c4676d4687",
+    "bytes": 15798
+  },
+  "evidence-close.js": {
+    "sha256": "99155c790e1b5705f374bc977196f44654dacb4cb48785f5bd7c8fd8ba14be7a",
+    "bytes": 5297
+  },
+  "check_math.py": {
+    "sha256": "11e66f9c8d07ab3487cd2ab43c3d0df579bda4b47d23db8ca26a99e79a271ea5",
+    "bytes": 4865
+  },
+  "check_dom.cjs": {
+    "sha256": "78d705dce71e2205c43b484ec1a6e0080caa6410195c9206cd0ebaff5d95a769",
+    "bytes": 16764
+  },
+  "math-checks.json": {
+    "sha256": "07fe9ddac55de523b1b84aaeaaef8c13170122be9c32e3d00d6ec520c8918ee8",
+    "bytes": 5861
+  },
+  "dom-checks.json": {
+    "sha256": "902616f366e5aac920507b9580bccb3cf8974d48498d6ca761f262c0125f6e0b",
+    "bytes": 4883
+  },
+  "skill-hashes.json": {
+    "sha256": "41f2779d8d18911f8272202c70707be7e9fe5cff8500705bb8b2271fde60273f",
+    "bytes": 1637
+  },
+  "validation.md": {
+    "sha256": "f5d29e4bd7ab1513e4f75178f589676b5551e7b5bf58d7ea292e8ea9aedb0f49",
+    "bytes": 5809
+  },
+  "generation-config.json": {
+    "sha256": "6f9e77ed258010139cf58be8b63aa8d0201894a34eb166824b4287fded0f22e7",
+    "bytes": 4553
+  },
+  "finalize.py": {
+    "sha256": "82673c7a2a302ebceba7142841801bb7862b6af2a565a3d06bcfe0108bc06634",
+    "bytes": 5095
+  }
+}

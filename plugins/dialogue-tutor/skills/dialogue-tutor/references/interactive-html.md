@@ -183,12 +183,43 @@ document.dispatchEvent(new CustomEvent('dt:exploration', {
 
 | 事件 | 使用方式 |
 | --- | --- |
-| `dt:activity-mounted` | 内容节点已经建立；此时查找本活动容器，绑定控件，并用 `detail.state` 恢复上次参数。空状态使用课程定义的初始值 |
-| `dt:restore` | 学习记录已经导入；使用 `detail.state` 更新现有控件、图形和数值，不重复绑定事件处理器 |
+| `dt:activity-mounted` | `detail` 为 `{activityId,state}`，其中 `state` 只含该活动的 `exploration`。此时查找容器、绑定控件并恢复参数；空状态使用课程定义的初始值 |
+| `dt:restore` | 每个已挂载的 interactive 分别收到 `{activityId,state}`，`state` 同样只含该活动的 `exploration`。更新现有控件、图形和数值，不重复绑定事件处理器 |
 | `dt:exploration` | 学习者改变参数后，由组件向 `document` 派发 `{activityId,state}`；`state` 是可序列化的普通对象 |
 
 恢复参数与计算图形共用同一条更新逻辑。恢复本身不制造新的参与动作；重置后同时更新控件、
 图形、数值和保存状态。脚本使用独立作用域，避免多个自定义活动重复声明同名变量。
+
+### 自定义预测中的参考接触
+
+首版探索只从 `dt:restore.detail.state` 恢复自己的 `referenceViewed`，导致“导出未看答案记录→查看全解→导入旧记录”抹掉辅助标识，尽管运行时仍保留该次参考接触。自定义字段不能覆盖运行时已经保留的事实。
+
+恢复时区分三类数据：参数与历史由 `exploration` 恢复；运行时辅助接触从 `DialogueTutor.instance.getState().activities[id].exposure` 读取；已提交预测的辅助快照保持提交时的值。`exposure.reference` 表示曾有参考接触，不自行宣称新的预测属于客观独立作答。
+
+对本页的新预测，冻结前同步检查关联全解当前是否展开，并合并运行时参考接触与组件已经观察到的接触。不能只等待异步 `toggle` 事件。可采用以下组件内函数；`id`、`solutionId`、`local` 使用本活动的实际变量：
+
+```javascript
+function hasReferenceContact() {
+  const saved = DialogueTutor.instance.getState().activities[id];
+  const panel = document.getElementById(solutionId);
+  return Boolean(local.referenceViewed ||
+    (saved.exposure && saved.exposure.reference) || (panel && panel.open));
+}
+function mergeReferenceAfterRestore() {
+  // 先恢复参数与历史再调用；恢复不新增操作记录。
+  local.referenceViewed = hasReferenceContact();
+}
+function freezeNewPredictionReference() {
+  // 仅由新预测的提交动作调用，不能在恢复或普通渲染时调用。
+  local.predictionHadReference = hasReferenceContact();
+}
+```
+
+组件有多个含答案入口时逐个关联并检查。界面分别描述“提交预测前是否看过参考”和“目前是否已查看参考”，避免提交后查阅倒改原预测，也避免导入旧参数抹掉本页已经发生的接触。
+
+实验结果本身也是接触来源。首版“直接观察→同条件新一轮”保存了历史，却没有在新判断中说明已见过相同结果。组件为已经揭示的结果保存题目与条件身份、揭示时间和来源；身份包括影响答案的总体、机制、参数及目标事件。恢复前保留本页已发生的结果接触，与导入记录合并，再判断新一轮的条件是否已见。参数、草稿可以回到旧状态，已经发生的接触不会随之撤销；刷新从已保存的接触记录恢复。该合并不新增模拟次数、作答或重新揭示事件。
+
+提交新预测时同时核对相关全解接触和该结果身份；同条件再判断明确标为已见结果后的检查。改变条件后，只有先前参考实际覆盖新条件时才连带标记。上面的函数示例适用于 `solutionId` 全解覆盖当前题目的情况；全解只覆盖部分条件时，作者需给出覆盖判断或拆分活动。结果接触与全解接触可分别显示，不把它们冒称提示按钮使用，也不倒改旧预测时点的快照。
 
 ## 组装新页面
 

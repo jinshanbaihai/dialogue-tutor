@@ -1,0 +1,1350 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "jsdom": "26.1.0",
+    "browser": false
+  },
+  "sha256": "827ec6c6716f95094a37cbf74f5049d7707dc5716101defb0b90e3ef5ad20869",
+  "routes": [
+    {
+      "name": "prediction-matches",
+      "inputs": [
+        {
+          "action": "change prediction",
+          "value": "centre"
+        },
+        {
+          "action": "click",
+          "control": "data-lab-freeze"
+        },
+        {
+          "action": "click",
+          "control": "data-lab-reveal"
+        }
+      ],
+      "snapshots": [
+        {
+          "stage": "initial",
+          "activityId": "sampling-lab",
+          "phase": "先选一个判断，再冻结预测。没有把握时可以直接观察。",
+          "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+          "comparison": null,
+          "trace": null,
+          "question": null,
+          "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+          "resultsHidden": true,
+          "predictionLocked": false,
+          "svgCount": 0,
+          "table": [],
+          "exploration": {},
+          "attempts": []
+        },
+        {
+          "stage": "frozen before result",
+          "activityId": "sampling-lab",
+          "phase": "预测已冻结：均值3更常见。现在用枚举检查。",
+          "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+          "comparison": null,
+          "trace": null,
+          "question": null,
+          "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+          "resultsHidden": true,
+          "predictionLocked": true,
+          "svgCount": 0,
+          "table": [],
+          "exploration": {
+            "version": 1,
+            "phase": "frozen",
+            "parameters": {
+              "n": 2,
+              "replacement": true
+            },
+            "predictionDraft": "centre",
+            "prediction": "centre",
+            "predictionAt": 1788787610939,
+            "predictionHadReference": false,
+            "revealedAt": null,
+            "referenceViewed": false,
+            "referenceAt": null,
+            "supportViewed": false,
+            "history": [],
+            "simulation": {
+              "B": 0,
+              "counts": {},
+              "last": null
+            },
+            "selectedPath": 0
+          },
+          "attempts": []
+        },
+        {
+          "stage": "revealed",
+          "activityId": "sampling-lab",
+          "phase": "本轮原预测：均值3更常见（已保留，不能改写）。",
+          "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+          "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。",
+          "trace": "枚举定位（非随机）：(1 + 1) ÷ 2 = 1 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "question": "比较问题：均值3对应几条路径？把样本量或放回条件改掉后，这些路径还都存在吗？下一轮可以只改变一个条件检查。",
+          "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+          "resultsHidden": false,
+          "predictionLocked": true,
+          "svgCount": 1,
+          "table": [
+            [
+              "1",
+              "1",
+              "1/9",
+              "尚未模拟"
+            ],
+            [
+              "2",
+              "2",
+              "2/9",
+              "尚未模拟"
+            ],
+            [
+              "3",
+              "3",
+              "1/3",
+              "尚未模拟"
+            ],
+            [
+              "4",
+              "2",
+              "2/9",
+              "尚未模拟"
+            ],
+            [
+              "5",
+              "1",
+              "1/9",
+              "尚未模拟"
+            ]
+          ],
+          "exploration": {
+            "version": 1,
+            "phase": "revealed",
+            "parameters": {
+              "n": 2,
+              "replacement": true
+            },
+            "predictionDraft": "centre",
+            "prediction": "centre",
+            "predictionAt": 1788787610939,
+            "predictionHadReference": false,
+            "revealedAt": 1788787610948,
+            "referenceViewed": false,
+            "referenceAt": null,
+            "supportViewed": false,
+            "history": [],
+            "simulation": {
+              "B": 0,
+              "counts": {},
+              "last": null
+            },
+            "selectedPath": 0
+          },
+          "attempts": []
+        }
+      ],
+      "closureAfterRevealOnly": {
+        "activityId": "evidence-close",
+        "story": "你已经在实验中把一份样本映射为一个均值，再把同值的路径合并。最近一轮保留的判断是“均值3更常见”。返回实验可查看对应条件与证据。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布两个均值，谁更常见？：参与或查阅，尚无作答证据。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "建立回访入口：三张核心概念卡",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "尚无复习记录。完成一次核对或闪卡自评后，按真实记录显示日期。"
+      },
+      "pathChecks": [
+        {
+          "input": "0",
+          "trace": "枚举定位（非随机）：(1 + 1) ÷ 2 = 1 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787610939
+        },
+        {
+          "input": "2",
+          "trace": "枚举定位（非随机）：(1 + 5) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787610939
+        },
+        {
+          "input": "4",
+          "trace": "枚举定位（非随机）：(3 + 3) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787610939
+        },
+        {
+          "input": "6",
+          "trace": "枚举定位（非随机）：(5 + 1) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787610939
+        }
+      ],
+      "originalTimePreserved": true,
+      "nextAction": {
+        "label": "确定调查中的总体与样本",
+        "arrived": "population-check"
+      }
+    },
+    {
+      "name": "prediction-differs",
+      "inputs": [
+        {
+          "action": "change prediction",
+          "value": "equal"
+        },
+        {
+          "action": "click",
+          "control": "data-lab-freeze"
+        },
+        {
+          "action": "click",
+          "control": "data-lab-reveal"
+        }
+      ],
+      "snapshots": [
+        {
+          "stage": "initial",
+          "activityId": "sampling-lab",
+          "phase": "先选一个判断，再冻结预测。没有把握时可以直接观察。",
+          "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+          "comparison": null,
+          "trace": null,
+          "question": null,
+          "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+          "resultsHidden": true,
+          "predictionLocked": false,
+          "svgCount": 0,
+          "table": [],
+          "exploration": {},
+          "attempts": []
+        },
+        {
+          "stage": "frozen before result",
+          "activityId": "sampling-lab",
+          "phase": "预测已冻结：两者一样常见。现在用枚举检查。",
+          "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+          "comparison": null,
+          "trace": null,
+          "question": null,
+          "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+          "resultsHidden": true,
+          "predictionLocked": true,
+          "svgCount": 0,
+          "table": [],
+          "exploration": {
+            "version": 1,
+            "phase": "frozen",
+            "parameters": {
+              "n": 2,
+              "replacement": true
+            },
+            "predictionDraft": "equal",
+            "prediction": "equal",
+            "predictionAt": 1788787611188,
+            "predictionHadReference": false,
+            "revealedAt": null,
+            "referenceViewed": false,
+            "referenceAt": null,
+            "supportViewed": false,
+            "history": [],
+            "simulation": {
+              "B": 0,
+              "counts": {},
+              "last": null
+            },
+            "selectedPath": 0
+          },
+          "attempts": []
+        },
+        {
+          "stage": "revealed",
+          "activityId": "sampling-lab",
+          "phase": "本轮原预测：两者一样常见（已保留，不能改写）。",
+          "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+          "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。结果与本轮判断不同。先在“定位一个有序样本”中比较能得到3和1的路径，再数同值路径。",
+          "trace": "枚举定位（非随机）：(1 + 1) ÷ 2 = 1 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "question": "比较问题：均值3对应几条路径？把样本量或放回条件改掉后，这些路径还都存在吗？下一轮可以只改变一个条件检查。",
+          "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+          "resultsHidden": false,
+          "predictionLocked": true,
+          "svgCount": 1,
+          "table": [
+            [
+              "1",
+              "1",
+              "1/9",
+              "尚未模拟"
+            ],
+            [
+              "2",
+              "2",
+              "2/9",
+              "尚未模拟"
+            ],
+            [
+              "3",
+              "3",
+              "1/3",
+              "尚未模拟"
+            ],
+            [
+              "4",
+              "2",
+              "2/9",
+              "尚未模拟"
+            ],
+            [
+              "5",
+              "1",
+              "1/9",
+              "尚未模拟"
+            ]
+          ],
+          "exploration": {
+            "version": 1,
+            "phase": "revealed",
+            "parameters": {
+              "n": 2,
+              "replacement": true
+            },
+            "predictionDraft": "equal",
+            "prediction": "equal",
+            "predictionAt": 1788787611188,
+            "predictionHadReference": false,
+            "revealedAt": 1788787611204,
+            "referenceViewed": false,
+            "referenceAt": null,
+            "supportViewed": false,
+            "history": [],
+            "simulation": {
+              "B": 0,
+              "counts": {},
+              "last": null
+            },
+            "selectedPath": 0
+          },
+          "attempts": []
+        }
+      ],
+      "closureAfterRevealOnly": {
+        "activityId": "evidence-close",
+        "story": "你已经在实验中把一份样本映射为一个均值，再把同值的路径合并。最近一轮保留的判断是“一样常见”。返回实验可查看对应条件与证据。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布两个均值，谁更常见？：参与或查阅，尚无作答证据。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "建立回访入口：三张核心概念卡",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "尚无复习记录。完成一次核对或闪卡自评后，按真实记录显示日期。"
+      },
+      "pathChecks": [
+        {
+          "input": "0",
+          "trace": "枚举定位（非随机）：(1 + 1) ÷ 2 = 1 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787611188
+        },
+        {
+          "input": "2",
+          "trace": "枚举定位（非随机）：(1 + 5) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787611188
+        },
+        {
+          "input": "4",
+          "trace": "枚举定位（非随机）：(3 + 3) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787611188
+        },
+        {
+          "input": "6",
+          "trace": "枚举定位（非随机）：(5 + 1) ÷ 2 = 3 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+          "predictionAt": 1788787611188
+        }
+      ],
+      "originalTimePreserved": true,
+      "nextAction": {
+        "label": "确定调查中的总体与样本",
+        "arrived": "population-check"
+      }
+    },
+    {
+      "name": "no-prediction",
+      "inputs": [
+        {
+          "action": "click",
+          "control": "data-lab-skip"
+        }
+      ],
+      "observation": {
+        "activityId": "sampling-lab",
+        "phase": "本轮未提交预测，直接观察；没有“原来以为”的记录。",
+        "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/9。这是本轮首次观察，尚无预测可比较。",
+        "trace": "枚举定位（非随机）：(1 + 1) ÷ 2 = 1 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+        "question": "比较问题：均值3对应几条路径？把样本量或放回条件改掉后，这些路径还都存在吗？下一轮可以只改变一个条件检查。",
+        "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+        "resultsHidden": false,
+        "predictionLocked": true,
+        "svgCount": 1,
+        "table": [
+          [
+            "1",
+            "1",
+            "1/9",
+            "尚未模拟"
+          ],
+          [
+            "2",
+            "2",
+            "2/9",
+            "尚未模拟"
+          ],
+          [
+            "3",
+            "3",
+            "1/3",
+            "尚未模拟"
+          ],
+          [
+            "4",
+            "2",
+            "2/9",
+            "尚未模拟"
+          ],
+          [
+            "5",
+            "1",
+            "1/9",
+            "尚未模拟"
+          ]
+        ],
+        "exploration": {
+          "version": 1,
+          "phase": "revealed",
+          "parameters": {
+            "n": 2,
+            "replacement": true
+          },
+          "predictionDraft": "",
+          "prediction": null,
+          "predictionAt": null,
+          "predictionHadReference": false,
+          "revealedAt": 1788787611386,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [],
+          "simulation": {
+            "B": 0,
+            "counts": {},
+            "last": null
+          },
+          "selectedPath": 0
+        },
+        "attempts": []
+      },
+      "closure": {
+        "activityId": "evidence-close",
+        "story": "你已经在实验中把一份样本映射为一个均值，再把同值的路径合并。最近一轮选择了直接观察，没有预测记录。返回实验可查看对应条件与证据。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布两个均值，谁更常见？：参与或查阅，尚无作答证据。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "建立回访入口：三张核心概念卡",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "尚无复习记录。完成一次核对或闪卡自评后，按真实记录显示日期。"
+      },
+      "actionsPerformed": [
+        "skip prediction / reveal result",
+        "navigate to closure"
+      ],
+      "noPathSelectionOrSimulation": {
+        "selectedPath": 0,
+        "simulation": {
+          "B": 0,
+          "counts": {},
+          "last": null
+        },
+        "attempts": []
+      },
+      "returnEntry": {
+        "arrived": "return-recall",
+        "flashState": {
+          "index": 0,
+          "cards": {}
+        },
+        "cardText": "回忆正面抽样框 sampling frame 与总体 population 有什么不同？点击或按回车翻面"
+      }
+    },
+    {
+      "name": "assisted-repair",
+      "inputs": [
+        {
+          "activityId": "mean-completion",
+          "action": "submit",
+          "value": "1/9"
+        },
+        {
+          "activityId": "mean-completion",
+          "action": "retry, hint, submit",
+          "value": "2/9"
+        },
+        {
+          "activityId": "mean-independent",
+          "action": "first submit, no hint",
+          "value": "5/9"
+        }
+      ],
+      "wrong": {
+        "activityId": "mean-completion",
+        "feedback": "本次作答需要修正",
+        "reference": "参考与解析29X̄=3.5要求两次之和7，符合(3,4)与(4,3)，两条互斥路径合并得到2/9。若结果不同，核对是否同时保留两个顺序。",
+        "recommendations": [
+          {
+            "from": "mean-completion",
+            "on": "incorrect",
+            "to": "mean-worked",
+            "label": "重看不同顺序怎样合并",
+            "targetTitle": "从四条路径到一张分布表"
+          }
+        ],
+        "state": {
+          "id": "mean-completion",
+          "objectiveId": "distribution",
+          "type": "quiz",
+          "draft": "1/9",
+          "status": "submitted",
+          "answerRevealed": true,
+          "hintUsed": false,
+          "exposure": {
+            "sessionId": "session-1788787611464-hypi52u42dq",
+            "hint": false,
+            "reference": true,
+            "observedAt": 1788787611530,
+            "inferred": false
+          },
+          "attempts": [
+            {
+              "id": "mean-completion:1788787611530:1",
+              "answer": "1/9",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788787611530,
+              "sessionId": "session-1788787611464-hypi52u42dq"
+            }
+          ],
+          "submittedAttemptId": "mean-completion:1788787611530:1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788874011530,
+            "lastReviewedAt": 1788787611530,
+            "lastSessionId": "session-1788787611464-hypi52u42dq",
+            "evidenceSource": "objective"
+          },
+          "participated": true,
+          "lastInteractionAt": 1788787611530,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "hint": "先把均值3.5换成两次观测之和7，再列出两个顺序。",
+      "correctAfterHelp": {
+        "activityId": "mean-completion",
+        "feedback": "参考辅助后核对通过本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。",
+        "reference": "参考与解析29X̄=3.5要求两次之和7，符合(3,4)与(4,3)，两条互斥路径合并得到2/9。若结果不同，核对是否同时保留两个顺序。",
+        "recommendations": [
+          {
+            "from": "mean-completion",
+            "on": "assisted",
+            "to": "mean-independent",
+            "label": "换数据独立算事件概率",
+            "targetTitle": "独立新题：达到门槛的概率"
+          }
+        ],
+        "state": {
+          "id": "mean-completion",
+          "objectiveId": "distribution",
+          "type": "quiz",
+          "draft": "2/9",
+          "status": "submitted",
+          "answerRevealed": true,
+          "hintUsed": true,
+          "exposure": {
+            "sessionId": "session-1788787611464-hypi52u42dq",
+            "hint": true,
+            "reference": true,
+            "observedAt": 1788787611557,
+            "inferred": false
+          },
+          "attempts": [
+            {
+              "id": "mean-completion:1788787611530:1",
+              "answer": "1/9",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788787611530,
+              "sessionId": "session-1788787611464-hypi52u42dq"
+            },
+            {
+              "id": "mean-completion:1788787611557:2",
+              "answer": "2/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1788787611557,
+              "sessionId": "session-1788787611464-hypi52u42dq"
+            }
+          ],
+          "submittedAttemptId": "mean-completion:1788787611557:2",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788874011557,
+            "lastReviewedAt": 1788787611557,
+            "lastSessionId": "session-1788787611464-hypi52u42dq",
+            "evidenceSource": "objective"
+          },
+          "participated": true,
+          "lastInteractionAt": 1788787611557,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "assistedClosure": {
+        "activityId": "evidence-close",
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布补全一次归组概率：有辅助尝试（1次）；补全一次归组概率：曾需修正，可回看具体尝试。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "提前练习：补全一次归组概率",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "实际复习时间：2026/09/08 22:26。尚未到期；提前练习不会推进复习间隔。"
+      },
+      "nextLabel": "换数据独立算事件概率 → 独立新题：达到门槛的概率",
+      "nextActivity": "mean-independent",
+      "independent": {
+        "activityId": "mean-independent",
+        "feedback": "独立作答核对通过",
+        "reference": "参考与解析59共有9个等可能有序样本。符合两数之和≥10的是(0,10)、(10,0)、(4,10)、(10,4)、(10,10)，所以概率5/9。若你的结果不同，先检查均值恰为5的情况。",
+        "recommendations": [
+          {
+            "from": "mean-independent",
+            "on": "correct",
+            "to": "mechanism-transfer",
+            "label": "改为无放回后重新计算",
+            "targetTitle": "改为无放回，重新算"
+          }
+        ],
+        "state": {
+          "id": "mean-independent",
+          "objectiveId": "distribution",
+          "type": "quiz",
+          "draft": "5/9",
+          "status": "submitted",
+          "answerRevealed": true,
+          "hintUsed": false,
+          "exposure": {
+            "sessionId": "session-1788787611464-hypi52u42dq",
+            "hint": false,
+            "reference": true,
+            "observedAt": 1788787611573,
+            "inferred": false
+          },
+          "attempts": [
+            {
+              "id": "mean-independent:1788787611573:1",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788787611573,
+              "sessionId": "session-1788787611464-hypi52u42dq"
+            }
+          ],
+          "submittedAttemptId": "mean-independent:1788787611573:1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788874011573,
+            "lastReviewedAt": 1788787611573,
+            "lastSessionId": "session-1788787611464-hypi52u42dq",
+            "evidenceSource": "objective"
+          },
+          "participated": true,
+          "lastInteractionAt": 1788787611573,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "mixedClosure": {
+        "activityId": "evidence-close",
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布补全一次归组概率：有辅助尝试（1次）；补全一次归组概率：曾需修正，可回看具体尝试；独立新题：达到门槛的概率：有独立客观核对通过记录。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "提前练习：补全一次归组概率",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "实际复习时间：2026/09/08 22:26。尚未到期；提前练习不会推进复习间隔。"
+      }
+    },
+    {
+      "name": "wrong-choice-and-skipped-task",
+      "inputs": [
+        {
+          "activityId": "population-check",
+          "value": "frame"
+        }
+      ],
+      "wrong": {
+        "activityId": "population-check",
+        "feedback": "本次作答需要修正这组把目标总体和实际清单对换了。请指出题目要覆盖的工单数，以及调查员实际能从哪张清单选。",
+        "reference": "参考与解析总体480张；样本30张；抽样单位一张工单；抽样框420张电子清单目标总体是480张工单，实际样本是30张，抽样单位是一张工单，抽样框是420张电子清单。遗漏的60张纸质工单没有进入样本的机会。",
+        "recommendations": [
+          {
+            "from": "population-check",
+            "on": "incorrect",
+            "to": "frame-repair",
+            "label": "找出没有入样机会的单位",
+            "targetTitle": "修好一张有遗漏的清单"
+          }
+        ],
+        "state": {
+          "id": "population-check",
+          "objectiveId": "population",
+          "type": "quiz",
+          "draft": "frame",
+          "status": "submitted",
+          "answerRevealed": true,
+          "hintUsed": false,
+          "exposure": {
+            "sessionId": "session-1788787611629-rru26w5b0l8",
+            "hint": false,
+            "reference": true,
+            "observedAt": 1788787611695,
+            "inferred": false
+          },
+          "attempts": [
+            {
+              "id": "population-check:1788787611695:1",
+              "answer": "frame",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788787611695,
+              "sessionId": "session-1788787611629-rru26w5b0l8"
+            }
+          ],
+          "submittedAttemptId": "population-check:1788787611695:1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788874011695,
+            "lastReviewedAt": 1788787611695,
+            "lastSessionId": "session-1788787611629-rru26w5b0l8",
+            "evidenceSource": "objective"
+          },
+          "participated": true,
+          "lastInteractionAt": 1788787611695,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "nextLabel": "找出没有入样机会的单位 → 修好一张有遗漏的清单",
+      "arrived": "frame-repair",
+      "skipped": {
+        "activityId": "frame-repair",
+        "feedback": "本题已暂时跳过，没有计入答错。",
+        "reference": null,
+        "recommendations": [
+          {
+            "from": "frame-repair",
+            "on": "skipped",
+            "to": "population-check",
+            "label": "先做有选项的对应",
+            "targetTitle": "四个对象，四个名称"
+          }
+        ],
+        "state": {
+          "id": "frame-repair",
+          "objectiveId": "population",
+          "type": "quiz",
+          "draft": "",
+          "status": "skipped",
+          "answerRevealed": false,
+          "hintUsed": false,
+          "exposure": null,
+          "attempts": [],
+          "submittedAttemptId": null,
+          "review": null,
+          "participated": false,
+          "lastInteractionAt": 1788787611702,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      }
+    },
+    {
+      "name": "direct-to-closure",
+      "closure": {
+        "activityId": "evidence-close",
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "建立回访入口：三张核心概念卡",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "尚无复习记录。完成一次核对或闪卡自评后，按真实记录显示日期。"
+      },
+      "challengeArrived": "repeated-values"
+    },
+    {
+      "name": "independent-only-closure",
+      "result": {
+        "activityId": "mean-independent",
+        "feedback": "独立作答核对通过",
+        "reference": "参考与解析59共有9个等可能有序样本。符合两数之和≥10的是(0,10)、(10,0)、(4,10)、(10,4)、(10,10)，所以概率5/9。若你的结果不同，先检查均值恰为5的情况。",
+        "recommendations": [
+          {
+            "from": "mean-independent",
+            "on": "correct",
+            "to": "mechanism-transfer",
+            "label": "改为无放回后重新计算",
+            "targetTitle": "改为无放回，重新算"
+          }
+        ],
+        "state": {
+          "id": "mean-independent",
+          "objectiveId": "distribution",
+          "type": "quiz",
+          "draft": "5/9",
+          "status": "submitted",
+          "answerRevealed": true,
+          "hintUsed": false,
+          "exposure": {
+            "sessionId": "session-1788787611856-w63e5bu9dsn",
+            "hint": false,
+            "reference": true,
+            "observedAt": 1788787611921,
+            "inferred": false
+          },
+          "attempts": [
+            {
+              "id": "mean-independent:1788787611921:1",
+              "answer": "5/9",
+              "correct": true,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788787611921,
+              "sessionId": "session-1788787611856-w63e5bu9dsn"
+            }
+          ],
+          "submittedAttemptId": "mean-independent:1788787611921:1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788874011921,
+            "lastReviewedAt": 1788787611921,
+            "lastSessionId": "session-1788787611856-w63e5bu9dsn",
+            "evidenceSource": "objective"
+          },
+          "participated": true,
+          "lastInteractionAt": 1788787611921,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "closure": {
+        "activityId": "evidence-close",
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布独立新题：达到门槛的概率：有独立客观核对通过记录。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取尚无作答证据；可以从本目标的具名任务开始。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "提前练习：独立新题：达到门槛的概率",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "实际复习时间：2026/09/08 22:26。尚未到期；提前练习不会推进复习间隔。"
+      }
+    },
+    {
+      "name": "self-assessment-only-closure",
+      "closure": {
+        "activityId": "evidence-close",
+        "story": "开场的问题仍可在实验中检验：先固定抽样条件，再比较均值3与1的路径。你可以从尚未完成的实验继续。",
+        "evidence": [
+          "明确调查对象与抽样框尚无作答证据；可以从本目标的具名任务开始。",
+          "根据约束选择调查方案尚无作答证据；可以从本目标的具名任务开始。",
+          "判断统计量及其条件尚无作答证据；可以从本目标的具名任务开始。",
+          "构建统计量的抽样分布尚无作答证据；可以从本目标的具名任务开始。",
+          "条件改变后重新计算尚无作答证据；可以从本目标的具名任务开始。",
+          "解释抽样结果并再次提取两份报告不同，是否一定有人错？：有自评记录（非自动判断）。"
+        ],
+        "actions": [
+          {
+            "text": "改变条件的挑战：相同数值、不同个体",
+            "control": null
+          },
+          {
+            "text": "返回独立概率题",
+            "control": null
+          },
+          {
+            "text": "返回开场实验与原预测",
+            "control": null
+          },
+          {
+            "text": "提前练习：两份报告不同，是否一定有人错？",
+            "control": null
+          },
+          {
+            "text": "暂时跳过",
+            "control": "skip"
+          },
+          {
+            "text": "收藏活动",
+            "control": "bookmark"
+          },
+          {
+            "text": "复制上下文，继续对话",
+            "control": "copy-context"
+          },
+          {
+            "text": "保存笔记",
+            "control": "note-save"
+          }
+        ],
+        "recall": "实际复习时间：2026/09/08 22:26。尚未到期；提前练习不会推进复习间隔。"
+      }
+    },
+    {
+      "name": "equal-result-wording",
+      "snapshot": {
+        "activityId": "sampling-lab",
+        "phase": "本轮原预测：两者一样常见（已保留，不能改写）。",
+        "conditions": "每份 n=1；有放回，各次独立均匀抽取",
+        "comparison": "枚举得到 P(均值=3)=1/3，P(均值=1)=1/3。结果与本轮判断一致。检查下方路径，找出这个差异怎样形成。",
+        "trace": "枚举定位（非随机）：(1) ÷ 1 = 1 分钟。它归入图中带轮廓的铜橙色柱。手选路径不增加模拟次数。",
+        "question": "比较问题：均值3对应几条路径？把样本量或放回条件改掉后，这些路径还都存在吗？下一轮可以只改变一个条件检查。",
+        "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+        "resultsHidden": false,
+        "predictionLocked": true,
+        "svgCount": 1,
+        "table": [
+          [
+            "1",
+            "1",
+            "1/3",
+            "尚未模拟"
+          ],
+          [
+            "3",
+            "1",
+            "1/3",
+            "尚未模拟"
+          ],
+          [
+            "5",
+            "1",
+            "1/3",
+            "尚未模拟"
+          ]
+        ],
+        "exploration": {
+          "version": 1,
+          "phase": "revealed",
+          "parameters": {
+            "n": 1,
+            "replacement": true
+          },
+          "predictionDraft": "equal",
+          "prediction": "equal",
+          "predictionAt": 1788787612144,
+          "predictionHadReference": false,
+          "revealedAt": 1788787612149,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [],
+          "simulation": {
+            "B": 0,
+            "counts": {},
+            "last": null
+          },
+          "selectedPath": 0
+        },
+        "attempts": []
+      }
+    },
+    {
+      "name": "frozen-reload",
+      "before": {
+        "activityId": "sampling-lab",
+        "phase": "预测已冻结：两者一样常见。现在用枚举检查。",
+        "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+        "comparison": null,
+        "trace": null,
+        "question": null,
+        "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+        "resultsHidden": true,
+        "predictionLocked": true,
+        "svgCount": 0,
+        "table": [],
+        "exploration": {
+          "version": 1,
+          "phase": "frozen",
+          "parameters": {
+            "n": 2,
+            "replacement": true
+          },
+          "predictionDraft": "equal",
+          "prediction": "equal",
+          "predictionAt": 1788787612277,
+          "predictionHadReference": false,
+          "revealedAt": null,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [],
+          "simulation": {
+            "B": 0,
+            "counts": {},
+            "last": null
+          },
+          "selectedPath": 0
+        },
+        "attempts": []
+      },
+      "after": {
+        "activityId": "sampling-lab",
+        "phase": "预测已冻结：两者一样常见。现在用枚举检查。",
+        "conditions": "每份 n=2；有放回，各次独立均匀抽取",
+        "comparison": null,
+        "trace": null,
+        "question": null,
+        "reference": "实验结果尚由你的操作揭示；也可随时主动查阅完整讲解。",
+        "resultsHidden": true,
+        "predictionLocked": true,
+        "svgCount": 0,
+        "table": [],
+        "exploration": {
+          "version": 1,
+          "phase": "frozen",
+          "parameters": {
+            "n": 2,
+            "replacement": true
+          },
+          "predictionDraft": "equal",
+          "prediction": "equal",
+          "predictionAt": 1788787612277,
+          "predictionHadReference": false,
+          "revealedAt": null,
+          "referenceViewed": false,
+          "referenceAt": null,
+          "supportViewed": false,
+          "history": [],
+          "simulation": {
+            "B": 0,
+            "counts": {},
+            "last": null
+          },
+          "selectedPath": 0
+        },
+        "attempts": []
+      }
+    }
+  ],
+  "errors": []
+}

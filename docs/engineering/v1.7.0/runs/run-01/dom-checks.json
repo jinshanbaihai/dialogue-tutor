@@ -1,0 +1,188 @@
+{
+  "environment": "Node v24.19.0; jsdom 26.1.0",
+  "scope": "Real generated HTML executed in a DOM environment. No rendered-browser layout, screenshot, actual font size or visual contrast claims.",
+  "tests": [
+    {
+      "name": "initial studio mounts and closed full solutions",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "prediction result absent before submission",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "draft records an ungraded prediction only",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "prediction freezes before reveal",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "mismatching prediction receives concrete enumeration evidence",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "one random sample produces one statistic observation",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "manual path selection never changes simulated frequency denominator",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "repeat count differs from sample size",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "export and import restores graph, locked prediction and simulation",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "browser-storage reload restores custom exploration",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "new parameters preserve original prediction history and match a different result",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "skip-prediction route has no fabricated prior belief",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "viewing full reference is retained in later prediction",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "choice selection alone does not reveal correctness",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "wrong choice leads to a named repair with actual feedback",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "duplicate submission makes no second attempt",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "retry after feedback remains assisted and does not advance interval",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "independent new numerical result is correctly labelled",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "hint before correct submission stays assisted",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "full-solution exposure is captured even before native toggle fires",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "open response is saved before self-assessment",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "positive self-report never becomes independent objective success",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "skip has no incorrect attempt",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "step forward and back restore correct stage",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "step reset is exploration only",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "flashcard front has no self-grade before revealing",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "flashcard self-report is distinct from objective evidence",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "flashcard hint and navigation persist card-specific state",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "closure reports real records and offers actual next actions",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "early review entry closes old answer and preserves history",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "notes bookmarks and context copy use actual question state",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "import retains attempts, original answer, notes and bookmarks",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "different revision is rejected",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "fresh closure invents no achievement or due review",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "all generated MathML and SVG text use rendered-markup structures",
+      "result": "PASS",
+      "details": null
+    },
+    {
+      "name": "no jsdom runtime errors observed",
+      "result": "PASS",
+      "details": null
+    }
+  ],
+  "errorMessages": [],
+  "status": "PASS"
+}

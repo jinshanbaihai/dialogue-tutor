@@ -1,0 +1,29 @@
+{
+  "scope": "Numeric references independently recomputed from final question conditions; no learner outcomes implied.",
+  "observations": [
+    {
+      "activityId": "mean-completion",
+      "expected": "2/9",
+      "actual": "2/9",
+      "matches": true
+    },
+    {
+      "activityId": "mean-independent",
+      "expected": "5/9",
+      "actual": "5/9",
+      "matches": true
+    },
+    {
+      "activityId": "mechanism-transfer",
+      "expected": "2/3",
+      "actual": "2/3",
+      "matches": true
+    },
+    {
+      "activityId": "repeated-values",
+      "expected": "3/8",
+      "actual": "3/8",
+      "matches": true
+    }
+  ]
+}

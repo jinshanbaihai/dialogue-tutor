@@ -1,0 +1,254 @@
+{
+  "exactEnumerationCases": [
+    {
+      "name": "opening n=1 replacement=True",
+      "values": [
+        1,
+        3,
+        5
+      ],
+      "n": 1,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample mean",
+      "basicOutcomes": 3,
+      "distribution": {
+        "1": "1/3",
+        "3": "1/3",
+        "5": "1/3"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "opening n=1 replacement=False",
+      "values": [
+        1,
+        3,
+        5
+      ],
+      "n": 1,
+      "sampling": "uniform ordered labelled units without replacement",
+      "statistic": "sample mean",
+      "basicOutcomes": 3,
+      "distribution": {
+        "1": "1/3",
+        "3": "1/3",
+        "5": "1/3"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "opening n=2 replacement=True",
+      "values": [
+        1,
+        3,
+        5
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample mean",
+      "basicOutcomes": 9,
+      "distribution": {
+        "1": "1/9",
+        "2": "2/9",
+        "3": "1/3",
+        "4": "2/9",
+        "5": "1/9"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "opening n=2 replacement=False",
+      "values": [
+        1,
+        3,
+        5
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units without replacement",
+      "statistic": "sample mean",
+      "basicOutcomes": 6,
+      "distribution": {
+        "2": "1/3",
+        "3": "1/3",
+        "4": "1/3"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "opening n=3 replacement=True",
+      "values": [
+        1,
+        3,
+        5
+      ],
+      "n": 3,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample mean",
+      "basicOutcomes": 27,
+      "distribution": {
+        "1": "1/27",
+        "5/3": "1/9",
+        "7/3": "2/9",
+        "3": "7/27",
+        "11/3": "2/9",
+        "13/3": "1/9",
+        "5": "1/27"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "opening n=3 replacement=False",
+      "values": [
+        1,
+        3,
+        5
+      ],
+      "n": 3,
+      "sampling": "uniform ordered labelled units without replacement",
+      "statistic": "sample mean",
+      "basicOutcomes": 6,
+      "distribution": {
+        "3": "1"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "worked example",
+      "values": [
+        2,
+        8
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample mean",
+      "basicOutcomes": 4,
+      "distribution": {
+        "2": "1/4",
+        "5": "1/2",
+        "8": "1/4"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "completion",
+      "values": [
+        1,
+        3,
+        4
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample mean",
+      "basicOutcomes": 9,
+      "distribution": {
+        "1": "1/9",
+        "2": "2/9",
+        "5/2": "2/9",
+        "3": "1/9",
+        "7/2": "2/9",
+        "4": "1/9"
+      },
+      "answerActivity": "mean-completion",
+      "result": "PASS"
+    },
+    {
+      "name": "independent event",
+      "values": [
+        0,
+        4,
+        10
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample mean",
+      "basicOutcomes": 9,
+      "distribution": {
+        "0": "1/9",
+        "2": "2/9",
+        "4": "1/9",
+        "5": "2/9",
+        "7": "2/9",
+        "10": "1/9"
+      },
+      "answerActivity": "mean-independent",
+      "result": "PASS"
+    },
+    {
+      "name": "maximum distribution",
+      "values": [
+        1,
+        3,
+        7
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample maximum",
+      "basicOutcomes": 9,
+      "distribution": {
+        "1": "1/9",
+        "3": "1/3",
+        "7": "5/9"
+      },
+      "answerActivity": null,
+      "result": "PASS"
+    },
+    {
+      "name": "no replacement transfer",
+      "values": [
+        2,
+        4,
+        10
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units without replacement",
+      "statistic": "sample maximum",
+      "basicOutcomes": 6,
+      "distribution": {
+        "4": "1/3",
+        "10": "2/3"
+      },
+      "answerActivity": "mechanism-transfer",
+      "result": "PASS"
+    },
+    {
+      "name": "repeated values transfer",
+      "values": [
+        1,
+        1,
+        1,
+        5
+      ],
+      "n": 2,
+      "sampling": "uniform ordered labelled units with replacement and independent",
+      "statistic": "sample range",
+      "basicOutcomes": 16,
+      "distribution": {
+        "0": "5/8",
+        "4": "3/8"
+      },
+      "answerActivity": "repeated-values",
+      "result": "PASS"
+    }
+  ],
+  "meanExpectationCheck": "5 minutes, matches the stated two-point population mean",
+  "numericalKeys": [
+    "mean-completion=2/9",
+    "mean-independent=5/9",
+    "mechanism-transfer=2/3",
+    "repeated-values=3/8"
+  ],
+  "conceptualManualChecks": [
+    "Population/sample/unit/frame are separate objects and coverage direction is not invented.",
+    "Unknown population mean is explicitly unknown in statistic questions.",
+    "Census removes sampling variation from sampling a subset, not measurement/recording errors.",
+    "Finite simulation frequency is separate from theoretical probability."
+  ],
+  "status": "PASS"
+}

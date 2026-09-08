@@ -1,0 +1,272 @@
+[
+  {
+    "id": "sampling-lab",
+    "objectiveId": "distribution",
+    "identity": "exploration",
+    "runtimeType": "interactive",
+    "contentLocation": "opening-scene",
+    "fullSolution": "dt-explanation-opening-scene",
+    "source": {
+      "repository": "DialogueTutor",
+      "path": "references/teaching-design.md",
+      "case": "原创校园抽样任务与活动编排"
+    },
+    "prompt": "A、B、C三个服务点的固定等候时间为1、3、5分钟。默认每份样本独立、有放回地均匀抽取2次。先判断样本均值3分钟与1分钟哪个更常见，再用枚举检查。",
+    "record": "预测与参数作为参与记录"
+  },
+  {
+    "id": "population-check",
+    "objectiveId": "population",
+    "identity": "diagnostic",
+    "runtimeType": "quiz/choice",
+    "contentLocation": "population-scene",
+    "fullSolution": "dt-explanation-population-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "维修站要了解本周全部480张已完成工单的平均维修用时。其中420张为电子工单，60张仅有纸质记录。调查员从420张电子清单中随机抽取30张。下面哪组对应全部正确？",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "frame-repair",
+    "objectiveId": "population",
+    "identity": "independent",
+    "runtimeType": "quiz/open",
+    "contentLocation": "frame-scene",
+    "fullSolution": "dt-explanation-frame-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "图书馆要调查本月800次借阅事件的处理用时。650次自助借阅有电子记录，150次柜台借阅仅有纸本记录。调查员准备只从电子记录随机抽80次。请写出总体、抽样单位、抽样框的缺口，以及一种具体修复。是否能断言平均用时一定被低估？说明理由。",
+    "record": "本人原答与自评分开"
+  },
+  {
+    "id": "census-sample",
+    "objectiveId": "survey",
+    "identity": "application",
+    "runtimeType": "quiz/choice",
+    "contentLocation": "census-scene",
+    "fullSolution": "dt-explanation-census-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "一批5000块电池需要交付。测试寿命必须把被测电池放电至损坏，预算只能检测100块。要了解整批性能，哪项方案与理由最合理？",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "survey-justify",
+    "objectiveId": "survey",
+    "identity": "transfer",
+    "runtimeType": "quiz/open",
+    "contentLocation": "survey-scene",
+    "fullSolution": "dt-explanation-survey-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "社团要知道本次40份报名申请的平均提交时间。40份电子记录完整，一分钟可导出全部时间戳，读取不会破坏记录。请建议普查或抽样调查，给出两条联系本题的理由，并说明一种仍需检查的误差。",
+    "record": "本人原答与自评分开"
+  },
+  {
+    "id": "statistic-check",
+    "objectiveId": "statistic",
+    "identity": "diagnostic",
+    "runtimeType": "quiz/choice",
+    "contentLocation": "statistic-scene",
+    "fullSolution": "dt-explanation-statistic-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "X₁、X₂是随机样本中的两个观测值，总体均值μ未知，n=2已知。以下哪个表达式是统计量（statistic）？",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "statistic-explain",
+    "objectiveId": "statistic",
+    "identity": "independent",
+    "runtimeType": "quiz/open",
+    "contentLocation": "statistic-explain-scene",
+    "fullSolution": "dt-explanation-statistic-explain-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "某服务总体均值μ未知，随机样本的三个观测为4、7、11分钟。定义R=max(X₁,X₂,X₃)−min(X₁,X₂,X₃)，Q=(X₁+X₂+X₃)/3−μ。分别判断R、Q是否为统计量，并用“需要哪些输入”说明理由；算出能确定的R值。",
+    "record": "本人原答与自评分开"
+  },
+  {
+    "id": "mean-worked",
+    "objectiveId": "distribution",
+    "identity": "example",
+    "runtimeType": "steps",
+    "contentLocation": "worked-scene",
+    "fullSolution": "dt-explanation-worked-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "deeptutor/agents/visualize/prompts/zh/code_generator_agent.yaml",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "分步展示；原创完整例题"
+    },
+    "prompt": "完整例题：U=2、V=8分钟。独立、有放回地等概率抽取两次。求样本均值X̄的抽样分布。可以前后查看，也可直接打开全解。",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "mean-completion",
+    "objectiveId": "distribution",
+    "identity": "completion",
+    "runtimeType": "quiz/numeric",
+    "contentLocation": "completion-scene",
+    "fullSolution": "dt-explanation-completion-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "三张不同卡片写着1、3、4分钟。每次均匀抽一张，放回后独立再抽，n=2。已知9个有序样本等可能，每条概率1/9。请补上P(X̄=3.5)。输入精确分数或误差不超过0.000001的小数，不写单位。",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "mean-independent",
+    "objectiveId": "distribution",
+    "identity": "independent",
+    "runtimeType": "quiz/numeric",
+    "contentLocation": "independent-scene",
+    "fullSolution": "dt-explanation-independent-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "三张不同卡片A、B、C分别写0、4、10分钟。每次均匀抽一张，放回后独立再抽，样本量n=2。自行组织方法，求P(X̄≥5)。输入精确分数或误差不超过0.000001的小数，不写单位；过程可记入本题笔记。",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "max-distribution",
+    "objectiveId": "distribution",
+    "identity": "transfer",
+    "runtimeType": "quiz/open",
+    "contentLocation": "max-scene",
+    "fullSolution": "dt-explanation-max-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "三个带标签的物品取值为1、3、7。每次等概率抽取一个，放回后独立再抽，n=2。令T为两次取值中的最大值（maximum）。写出T的完整抽样分布，并说明怎样得到各概率及怎样检查。取值无单位；概率用精确分数。",
+    "record": "本人原答与自评分开"
+  },
+  {
+    "id": "mechanism-transfer",
+    "objectiveId": "mechanism",
+    "identity": "transfer",
+    "runtimeType": "quiz/numeric",
+    "contentLocation": "mechanism-scene",
+    "fullSolution": "dt-explanation-mechanism-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "三个不同个体的数值为2、4、10。依次抽2个：第一次均匀抽取，抽后不放回（without replacement），第二次从剩余两个均匀抽取。令M为样本最大值。求P(M=10)。输入精确分数或误差不超过0.000001的小数。",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "repeated-values",
+    "objectiveId": "mechanism",
+    "identity": "transfer",
+    "runtimeType": "quiz/numeric",
+    "contentLocation": "repeated-scene",
+    "fullSolution": "dt-explanation-repeated-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "四个不同个体A、B、C、D的数值分别为1、1、1、5。每次均匀抽一个个体，放回后独立再抽，n=2。令R为样本极差（range，最大值减最小值）。求P(R≠0)。输入精确分数或误差不超过0.000001的小数。",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "distribution-meaning",
+    "objectiveId": "interpretation",
+    "identity": "independent",
+    "runtimeType": "quiz/choice",
+    "contentLocation": "meaning-scene",
+    "fullSolution": "dt-explanation-meaning-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "某实验每份均匀、有放回、独立抽取2个观测，并计算一个均值；共重复500份样本。下列哪项才完整描述“样本均值的理论抽样分布”？",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "sampling-conclusion",
+    "objectiveId": "interpretation",
+    "identity": "transfer",
+    "runtimeType": "quiz/open",
+    "contentLocation": "conclusion-scene",
+    "fullSolution": "dt-explanation-conclusion-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "显式提交与反馈；课程题面原创"
+    },
+    "prompt": "甲乙分别从同一份完整的校园服务记录中重新随机抽取一份样本。他们都正确计算了本份样本的平均用时，但两个均值不同。用三到五句话解释这是否一定说明有人计算错或抽样有偏；再列出要确定样本均值抽样分布时必须明确的条件。",
+    "record": "本人原答与自评分开"
+  },
+  {
+    "id": "return-recall",
+    "objectiveId": "interpretation",
+    "identity": "delayed-same-item",
+    "runtimeType": "flashcards",
+    "contentLocation": "recall-scene",
+    "fullSolution": "dt-explanation-recall-scene",
+    "source": {
+      "repository": "HKUDS/DeepTutor",
+      "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx",
+      "commit": "42fab3cf429a1fbf36b257ab8d116a3814964202",
+      "case": "提取与翻面；自评和间隔连接为DialogueTutor适配"
+    },
+    "prompt": "先在脑中或纸上回答，再翻面核对。按翻面之前实际回忆出的内容自评；可以使用提示，也可以稍后再来。",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  },
+  {
+    "id": "evidence-close",
+    "objectiveId": "interpretation",
+    "identity": "reflection",
+    "runtimeType": "interactive",
+    "contentLocation": "close-scene",
+    "fullSolution": "dt-explanation-close-scene",
+    "source": {
+      "repository": "DialogueTutor",
+      "path": "references/teaching-design.md",
+      "case": "原创校园抽样任务与活动编排"
+    },
+    "prompt": "根据下面的实际记录，选择一项还想验证的能力，或留下下次回忆的入口。",
+    "record": "运行组件按实际题型记录，不由作者赋分"
+  }
+]
