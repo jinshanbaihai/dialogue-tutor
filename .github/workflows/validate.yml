@@ -26,4 +26,4 @@ jobs:
       - run: npm test
       - run: python3 scripts/package_skill.py
       - name: 生成结果与已提交文件一致
-        run: git diff --exit-code -- docs/index.html docs/s2-ch6.html dist/dialogue-tutor-1.7.0.zip
+        run: git diff --exit-code -- docs/index.html docs/s2-ch6.html dist/dialogue-tutor-1.7.1.zip

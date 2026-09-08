@@ -1,0 +1,916 @@
+{
+  "repository": "jinshanbaihai/Claude-skills-private",
+  "commit": "fdcc83425e50f5ba5151f796795229139bc52239",
+  "acquired_at": "2026-09-08",
+  "tree_count": 1558,
+  "tree_truncated": false,
+  "fetched_files": 41,
+  "fully_semantically_read_files": 37,
+  "scoped_semantically_read_files": 4,
+  "scope_warning": "Git blobs were fully fetched and hash verified. Four Manim API digests were only semantically read at listed ranges; their remaining lines are not claimed read. Fetching bytes, listing symbols and hashing are not semantic reading.",
+  "directory_coverage": [
+    {
+      "prefix": "cowork-bundles/manim/",
+      "tree_blob_count": 92,
+      "fetched_blob_count": 20,
+      "unfetched_paths": [
+        "cowork-bundles/manim/repos/DiscordManimator/REFERENCE.md",
+        "cowork-bundles/manim/repos/DiscordManimator/code.digest.md",
+        "cowork-bundles/manim/repos/ManimPango/REFERENCE.md",
+        "cowork-bundles/manim/repos/ManimPango/docs.digest.md",
+        "cowork-bundles/manim/repos/ManimPango/src.digest.md",
+        "cowork-bundles/manim/repos/awesome-manim/REFERENCE.md",
+        "cowork-bundles/manim/repos/jupyter_examples/REFERENCE.md",
+        "cowork-bundles/manim/repos/jupyter_examples/basic_example_scenes.ipynb",
+        "cowork-bundles/manim/repos/jupyter_examples/first-steps-with-manim.ipynb",
+        "cowork-bundles/manim/repos/jupyter_examples/v0.11.0-release-tour.ipynb",
+        "cowork-bundles/manim/repos/manim-voiceover/docs/api.rst",
+        "cowork-bundles/manim/repos/manim-voiceover/docs/examples.rst",
+        "cowork-bundles/manim/repos/manim-voiceover/docs/index.rst",
+        "cowork-bundles/manim/repos/manim-voiceover/docs/services.rst",
+        "cowork-bundles/manim/repos/manim-voiceover/docs/translate.rst",
+        "cowork-bundles/manim/repos/manim-voiceover/examples.digest.md",
+        "cowork-bundles/manim/repos/manim-voiceover/src.digest.md",
+        "cowork-bundles/manim/repos/manim-website-api/REFERENCE.md",
+        "cowork-bundles/manim/repos/manim-website-api/code.digest.md",
+        "cowork-bundles/manim/repos/manim-website/REFERENCE.md",
+        "cowork-bundles/manim/repos/manim-website/code.digest.md",
+        "cowork-bundles/manim/repos/manim/CONTRIBUTING.md",
+        "cowork-bundles/manim/repos/manim/LICENSE",
+        "cowork-bundles/manim/repos/manim/api/camera.md",
+        "cowork-bundles/manim/repos/manim/api/cli.md",
+        "cowork-bundles/manim/repos/manim/api/mobject-geometry.md",
+        "cowork-bundles/manim/repos/manim/api/mobject-svg.md",
+        "cowork-bundles/manim/repos/manim/api/mobject-three_d.md",
+        "cowork-bundles/manim/repos/manim/api/mobject-types.md",
+        "cowork-bundles/manim/repos/manim/api/opengl.md",
+        "cowork-bundles/manim/repos/manim/api/plugins.md",
+        "cowork-bundles/manim/repos/manim/api/renderer.md",
+        "cowork-bundles/manim/repos/manim/api/scene.md",
+        "cowork-bundles/manim/repos/manim/api/templates.md",
+        "cowork-bundles/manim/repos/manim/api/toplevel.md",
+        "cowork-bundles/manim/repos/manim/api/utils.md",
+        "cowork-bundles/manim/repos/manim/docs/changelog.digest.md",
+        "cowork-bundles/manim/repos/manim/docs/changelog.rst",
+        "cowork-bundles/manim/repos/manim/docs/conduct.md",
+        "cowork-bundles/manim/repos/manim/docs/contributing.digest.md",
+        "cowork-bundles/manim/repos/manim/docs/contributing.rst",
+        "cowork-bundles/manim/repos/manim/docs/examples.rst",
+        "cowork-bundles/manim/repos/manim/docs/faq/general.md",
+        "cowork-bundles/manim/repos/manim/docs/faq/help.md",
+        "cowork-bundles/manim/repos/manim/docs/faq/index.rst",
+        "cowork-bundles/manim/repos/manim/docs/faq/installation.md",
+        "cowork-bundles/manim/repos/manim/docs/faq/internals.md",
+        "cowork-bundles/manim/repos/manim/docs/faq/opengl.md",
+        "cowork-bundles/manim/repos/manim/docs/guides/deep_dive.rst",
+        "cowork-bundles/manim/repos/manim/docs/guides/index.rst",
+        "cowork-bundles/manim/repos/manim/docs/index.rst",
+        "cowork-bundles/manim/repos/manim/docs/installation/conda.rst",
+        "cowork-bundles/manim/repos/manim/docs/installation/docker.rst",
+        "cowork-bundles/manim/repos/manim/docs/installation/jupyter.rst",
+        "cowork-bundles/manim/repos/manim/docs/plugins.rst",
+        "cowork-bundles/manim/repos/manim/docs/reference.rst",
+        "cowork-bundles/manim/repos/manim/docs/reference_index/animations.rst",
+        "cowork-bundles/manim/repos/manim/docs/reference_index/cameras.rst",
+        "cowork-bundles/manim/repos/manim/docs/reference_index/configuration.rst",
+        "cowork-bundles/manim/repos/manim/docs/reference_index/mobjects.rst",
+        "cowork-bundles/manim/repos/manim/docs/reference_index/scenes.rst",
+        "cowork-bundles/manim/repos/manim/docs/reference_index/utilities_misc.rst",
+        "cowork-bundles/manim/repos/manim/docs/tutorials/index.rst",
+        "cowork-bundles/manim/repos/manim/docs/tutorials_guides.rst",
+        "cowork-bundles/manim/repos/manim/example_scenes/advanced_tex_fonts.py",
+        "cowork-bundles/manim/repos/manim/example_scenes/custom_template.tex",
+        "cowork-bundles/manim/repos/manim/example_scenes/customtex.py",
+        "cowork-bundles/manim/repos/manim/example_scenes/manim.cfg",
+        "cowork-bundles/manim/repos/manim/example_scenes/manim_jupyter_example.ipynb",
+        "cowork-bundles/manim/repos/manim/example_scenes/opengl.py",
+        "cowork-bundles/manim/repos/plugins-site/REFERENCE.md",
+        "cowork-bundles/manim/repos/plugins-site/code.digest.md"
+      ]
+    },
+    {
+      "prefix": "cowork-bundles/obra-superpowers/",
+      "tree_blob_count": 53,
+      "fetched_blob_count": 10,
+      "unfetched_paths": [
+        "cowork-bundles/obra-superpowers/LICENSE",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/scripts/frame-template.html",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/scripts/helper.js",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/scripts/server.cjs",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/scripts/start-server.sh",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/scripts/stop-server.sh",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/spec-document-reviewer-prompt.md",
+        "cowork-bundles/obra-superpowers/skills/obra-brainstorming/visual-companion.md",
+        "cowork-bundles/obra-superpowers/skills/obra-executing-plans/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-finishing-a-development-branch/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/scripts/review-package",
+        "cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/scripts/sdd-workspace",
+        "cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/scripts/task-brief",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/CREATION-LOG.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/condition-based-waiting-example.ts",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/condition-based-waiting.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/defense-in-depth.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/find-polluter.sh",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/root-cause-tracing.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/test-academic.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/test-pressure-1.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/test-pressure-2.md",
+        "cowork-bundles/obra-superpowers/skills/obra-systematic-debugging/test-pressure-3.md",
+        "cowork-bundles/obra-superpowers/skills/obra-test-driven-development/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-test-driven-development/writing-good-tests.md",
+        "cowork-bundles/obra-superpowers/skills/obra-using-git-worktrees/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-using-superpowers/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-using-superpowers/references/antigravity-tools.md",
+        "cowork-bundles/obra-superpowers/skills/obra-using-superpowers/references/codex-tools.md",
+        "cowork-bundles/obra-superpowers/skills/obra-using-superpowers/references/gemini-tools.md",
+        "cowork-bundles/obra-superpowers/skills/obra-using-superpowers/references/hermes-tools.md",
+        "cowork-bundles/obra-superpowers/skills/obra-using-superpowers/references/pi-tools.md",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-plans/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-plans/plan-document-reviewer-prompt.md",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-skills/REFERENCE.md",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-skills/anthropic-best-practices.md",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-skills/examples/CLAUDE_MD_TESTING.md",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-skills/graphviz-conventions.dot",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-skills/persuasion-principles.md",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-skills/render-graphs.js",
+        "cowork-bundles/obra-superpowers/skills/obra-writing-skills/testing-skills-with-subagents.md"
+      ]
+    },
+    {
+      "prefix": "cowork-bundles/emilkowalski-skills/",
+      "tree_blob_count": 16,
+      "fetched_blob_count": 4,
+      "unfetched_paths": [
+        "cowork-bundles/emilkowalski-skills/LICENSE",
+        "cowork-bundles/emilkowalski-skills/skills/animation-vocabulary/REFERENCE.md",
+        "cowork-bundles/emilkowalski-skills/skills/apple-design/REFERENCE.md",
+        "cowork-bundles/emilkowalski-skills/skills/find-animation-opportunities/REFERENCE.md",
+        "cowork-bundles/emilkowalski-skills/skills/improve-animations/AUDIT.md",
+        "cowork-bundles/emilkowalski-skills/skills/improve-animations/PLAN-TEMPLATE.md",
+        "cowork-bundles/emilkowalski-skills/skills/improve-animations/REFERENCE.md",
+        "cowork-bundles/emilkowalski-skills/skills/pick-ui-library/REFERENCE.md",
+        "cowork-bundles/emilkowalski-skills/skills/prototype/PICKER.md",
+        "cowork-bundles/emilkowalski-skills/skills/prototype/REFERENCE.md",
+        "cowork-bundles/emilkowalski-skills/skills/review-animations/REFERENCE.md",
+        "cowork-bundles/emilkowalski-skills/skills/review-animations/STANDARDS.md"
+      ]
+    },
+    {
+      "prefix": "plugins/ai-workspace/skills/writing-style/",
+      "tree_blob_count": 1,
+      "fetched_blob_count": 1,
+      "unfetched_paths": []
+    },
+    {
+      "prefix": "plugins/ai-workspace/skills/respectful-wording/",
+      "tree_blob_count": 2,
+      "fetched_blob_count": 2,
+      "unfetched_paths": []
+    }
+  ],
+  "files": [
+    {
+      "path": "cowork-bundles/emilkowalski-skills/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/emilkowalski-skills/SKILL.md",
+      "bytes": 3118,
+      "line_count": 36,
+      "git_blob_sha1": "dbcab9cb5ecfa6985bf24dbfd645befc72caf69a",
+      "sha256": "895c9b6e70c5965c40ff2457a36f7a0481853a4119d03f19d2f8bcb323707d49",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          36
+        ]
+      ],
+      "semantic_read_lines": 36
+    },
+    {
+      "path": "cowork-bundles/emilkowalski-skills/skills/animate/RECIPES.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/emilkowalski-skills/skills/animate/RECIPES.md",
+      "bytes": 7957,
+      "line_count": 324,
+      "git_blob_sha1": "6744891261bdf0bb0473d77f2cc706f2d78b574e",
+      "sha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          324
+        ]
+      ],
+      "semantic_read_lines": 324
+    },
+    {
+      "path": "cowork-bundles/emilkowalski-skills/skills/animate/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/emilkowalski-skills/skills/animate/REFERENCE.md",
+      "bytes": 11527,
+      "line_count": 199,
+      "git_blob_sha1": "467047ee7353af1d265f30d8a28a110e4aa33a10",
+      "sha256": "2a99870e61971553c0af3185a194c0e557f33aaa81e0422ca2fcec52195a4341",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          199
+        ]
+      ],
+      "semantic_read_lines": 199
+    },
+    {
+      "path": "cowork-bundles/emilkowalski-skills/skills/emil-design-eng/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/emilkowalski-skills/skills/emil-design-eng/REFERENCE.md",
+      "bytes": 27226,
+      "line_count": 674,
+      "git_blob_sha1": "1e14a5013714ee5b00382c210053134a48ae2168",
+      "sha256": "e71de849347050c2c573c1cf24d742d5a13459557ecffa6e562f08006f46b5b7",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          674
+        ]
+      ],
+      "semantic_read_lines": 674
+    },
+    {
+      "path": "cowork-bundles/manim/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/SKILL.md",
+      "bytes": 5983,
+      "line_count": 87,
+      "git_blob_sha1": "cbdbd19a94f069aa851e771caba8e0d84073823f",
+      "sha256": "d86400bf5bda1760430d88b65b7268c52a50bcaf928be21006818b31a096fd7a",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          87
+        ]
+      ],
+      "semantic_read_lines": 87
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/REFERENCE.md",
+      "bytes": 8378,
+      "line_count": 140,
+      "git_blob_sha1": "2d272267cd18839334c9768eee28c940512169e5",
+      "sha256": "41cac8aeb33a726c1b0a70d10233ee06d9cd73c6df0bace8145637d75c5fc283",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          140
+        ]
+      ],
+      "semantic_read_lines": 140
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/api/animation.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/api/animation.md",
+      "bytes": 190356,
+      "line_count": 5915,
+      "git_blob_sha1": "e3b4860e339a1f42e59913bfa78633d41fac4966",
+      "sha256": "63f2516175d78540184ee412e10afaa105ece418f9c363d45d7497d61d7b78aa",
+      "fetched": "complete",
+      "semantic_read": "scoped",
+      "semantic_line_ranges": [
+        [
+          1523,
+          1755
+        ],
+        [
+          2234,
+          2430
+        ],
+        [
+          2812,
+          2860
+        ],
+        [
+          4379,
+          4550
+        ],
+        [
+          5520,
+          5588
+        ],
+        [
+          5602,
+          5730
+        ]
+      ],
+      "semantic_read_lines": 849
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/api/config.md",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          2557
+        ]
+      ],
+      "semantic_read_lines": 2557,
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/api/config.md",
+      "bytes": 82416,
+      "line_count": 2557,
+      "git_blob_sha1": "a514f4c4c481da85e9494acb304aecd493eef9ac",
+      "sha256": "a0d69fa569ba0be555ac3129a6011e9a5343a1a64e4756a91b5f2dbd9ebbd32f",
+      "fetched": "complete"
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/api/mobject-core.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/api/mobject-core.md",
+      "bytes": 318509,
+      "line_count": 9100,
+      "git_blob_sha1": "78d07e125f0887c8ab11577178bcf02e1f9f8f09",
+      "sha256": "2bc1acfb4cafbcb08bc84672f2a02af6b00eb27281baa9d74696b58de88918f3",
+      "fetched": "complete",
+      "semantic_read": "scoped",
+      "semantic_line_ranges": [
+        [
+          7764,
+          7960
+        ]
+      ],
+      "semantic_read_lines": 197
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/api/mobject-graphing.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/api/mobject-graphing.md",
+      "bytes": 183861,
+      "line_count": 5353,
+      "git_blob_sha1": "b1f4899fb3618f68cb9374c70fc013e1d17cf331",
+      "sha256": "e63a5c91613f674984f401ad1cdcadefe93fa265ce1be31306c911bcf511710c",
+      "fetched": "complete",
+      "semantic_read": "scoped",
+      "semantic_line_ranges": [
+        [
+          650,
+          825
+        ],
+        [
+          1214,
+          1530
+        ],
+        [
+          1901,
+          2230
+        ],
+        [
+          4815,
+          4925
+        ]
+      ],
+      "semantic_read_lines": 934
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/api/mobject-text.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/api/mobject-text.md",
+      "bytes": 147972,
+      "line_count": 4050,
+      "git_blob_sha1": "7a942481ef44b22c34809b22c1eceb806b2b8d89",
+      "sha256": "709a5c7d88891e2cd485bf1ad7a9a7eddc68a4bd726abc7c8b98df0f9bbabe02",
+      "fetched": "complete",
+      "semantic_read": "scoped",
+      "semantic_line_ranges": [
+        [
+          880,
+          1030
+        ],
+        [
+          1108,
+          1280
+        ],
+        [
+          1495,
+          1530
+        ],
+        [
+          1949,
+          2200
+        ]
+      ],
+      "semantic_read_lines": 612
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/guides/add_voiceovers.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/guides/add_voiceovers.rst",
+      "bytes": 2788,
+      "line_count": 66,
+      "git_blob_sha1": "5db74f0ea2556c9aa12d7666366896320bcd0d93",
+      "sha256": "82596d1201051b134a1956b2b465dc7bdd9096642c13b47a9b54fa09003051bd",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          66
+        ]
+      ],
+      "semantic_read_lines": 66
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/guides/configuration.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/guides/configuration.rst",
+      "bytes": 15042,
+      "line_count": 404,
+      "git_blob_sha1": "3ea27b89db2d886c3df365bfdcd8c73b55c044e1",
+      "sha256": "5fa13e90b10075c61e8e9e49498826fac7a8d6b7f091ee2317f2283f8e7d5e9c",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          404
+        ]
+      ],
+      "semantic_read_lines": 404
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/guides/using_text.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/guides/using_text.rst",
+      "bytes": 18226,
+      "line_count": 572,
+      "git_blob_sha1": "cdfb7898320096338ece1d4d984266ed5797a3a9",
+      "sha256": "f39f03bc6fc464f8086e313a67c2941c5ebf75cff147037adebc37505460318a",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          572
+        ]
+      ],
+      "semantic_read_lines": 572
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/installation/uv.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/installation/uv.md",
+      "bytes": 11050,
+      "line_count": 341,
+      "git_blob_sha1": "c4cf17e6cb2fae23d52970721ece5fcff2cdc5f0",
+      "sha256": "a3e7986529a3b3c13f5e88890303e632d2c12d0d603673d312b2af42dadc1d5a",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          341
+        ]
+      ],
+      "semantic_read_lines": 341
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/installation.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/installation.rst",
+      "bytes": 4448,
+      "line_count": 131,
+      "git_blob_sha1": "3c2b4e4c09e079a493eeab7b4ae3907e3dc4536d",
+      "sha256": "f12e31cac28b9d02fe0f8fe415768ac73d8ea54e895ccf664e63c90f49ed43cf",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          131
+        ]
+      ],
+      "semantic_read_lines": 131
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/tutorials/building_blocks.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/tutorials/building_blocks.rst",
+      "bytes": 19675,
+      "line_count": 456,
+      "git_blob_sha1": "5878f3a492978fe32c826445bb5ea1b00c5d1d5f",
+      "sha256": "3615efe105abfdf79e564b94b260f10ebe426e9fa0b421aa46a4bf8b365aac27",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          456
+        ]
+      ],
+      "semantic_read_lines": 456
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/tutorials/output_and_config.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/tutorials/output_and_config.rst",
+      "bytes": 10678,
+      "line_count": 303,
+      "git_blob_sha1": "af7961d873dcd050ddfe9ea9dcd91d96c2babd33",
+      "sha256": "308918be44663974c04dcf9c97fb02ae4bd40ebe4977b3f20694854cd5218aa8",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          303
+        ]
+      ],
+      "semantic_read_lines": 303
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/docs/tutorials/quickstart.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/docs/tutorials/quickstart.rst",
+      "bytes": 15473,
+      "line_count": 411,
+      "git_blob_sha1": "ca24d7516d8652b92c0e4d739be41d8a619d3d46",
+      "sha256": "844baaae5898fc0a6381dd4d8ad9730ee35ffb547fc2f628b60d76579f971931",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          411
+        ]
+      ],
+      "semantic_read_lines": 411
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/example_scenes/basic.py",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/example_scenes/basic.py",
+      "bytes": 5357,
+      "line_count": 181,
+      "git_blob_sha1": "a94d17bd02537e39d97089abc82e030be284c4b6",
+      "sha256": "7d249b0e3441f01a4866d1fc3ca56d278f97c92e2e4eaa89ab40591f22f1189f",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          181
+        ]
+      ],
+      "semantic_read_lines": 181
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim/pyproject.toml",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          221
+        ]
+      ],
+      "semantic_read_lines": 221,
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim/pyproject.toml",
+      "bytes": 4863,
+      "line_count": 221,
+      "git_blob_sha1": "825d92c8095791011f466cbe42103feb613983cf",
+      "sha256": "89be1be1b313363eae00e9ae9b45fb9aa93dc46f091343a27cbbfcd975502361",
+      "fetched": "complete"
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim-voiceover/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim-voiceover/REFERENCE.md",
+      "bytes": 2847,
+      "line_count": 46,
+      "git_blob_sha1": "fe2806bfd0445dc54d003382d53489136676602b",
+      "sha256": "c892c4135087c9adc3a97104c4bc1bdaade6b243cb85305c398f4cc4a8d74704",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          46
+        ]
+      ],
+      "semantic_read_lines": 46
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim-voiceover/docs/installation.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim-voiceover/docs/installation.rst",
+      "bytes": 3182,
+      "line_count": 110,
+      "git_blob_sha1": "3ea1b90fd3e7a339ec63b53f77c7fb34ff6e0b4b",
+      "sha256": "f45be4846bc3bcd200871a1687fc982d72e08bbff843f17044b5ec2e2c97b92b",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          110
+        ]
+      ],
+      "semantic_read_lines": 110
+    },
+    {
+      "path": "cowork-bundles/manim/repos/manim-voiceover/docs/quickstart.rst",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/manim/repos/manim-voiceover/docs/quickstart.rst",
+      "bytes": 5874,
+      "line_count": 161,
+      "git_blob_sha1": "2b94096baf00a62919fb23681d103f09b9ab6ee1",
+      "sha256": "dffcfb46efc33154565a7d3c8dddfda71c272ebb52b45fd5558b60ad002c61a5",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          161
+        ]
+      ],
+      "semantic_read_lines": 161
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/SKILL.md",
+      "bytes": 12799,
+      "line_count": 122,
+      "git_blob_sha1": "64077d0c9ac008040a463d13e16a18dbc0a8b891",
+      "sha256": "b760b2896b16e92269d6221c2b62e2f6d9d076de2257230dc7a5d7012e9e58e2",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          122
+        ]
+      ],
+      "semantic_read_lines": 122
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-dispatching-parallel-agents/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-dispatching-parallel-agents/REFERENCE.md",
+      "bytes": 7027,
+      "line_count": 169,
+      "git_blob_sha1": "2c29692660a64672975f96fd6cf3648daf4309c5",
+      "sha256": "e61e9696d7acecf90cad5e8cd012a3700c61b674c8c3a7f450bbc91f2a9de13f",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          169
+        ]
+      ],
+      "semantic_read_lines": 169
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-receiving-code-review/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-receiving-code-review/REFERENCE.md",
+      "bytes": 7152,
+      "line_count": 207,
+      "git_blob_sha1": "ac1f06ff1efb1857092238034ff01459c5be4640",
+      "sha256": "8e6656d6f3a00622c029ef95a529262760a0612942882ca4c948697e238ccdc7",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          207
+        ]
+      ],
+      "semantic_read_lines": 207
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-requesting-code-review/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-requesting-code-review/REFERENCE.md",
+      "bytes": 3905,
+      "line_count": 97,
+      "git_blob_sha1": "c3f93feda6801425e3d0044a63dbb19f32ea7dee",
+      "sha256": "bacbccf3c5946e9edaaf92d387e068841e6adab6c555606dee2a1b95a2c2fae9",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          97
+        ]
+      ],
+      "semantic_read_lines": 97
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-requesting-code-review/code-reviewer.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-requesting-code-review/code-reviewer.md",
+      "bytes": 5669,
+      "line_count": 181,
+      "git_blob_sha1": "b898cb982e8a368e847d31136ac106001173b1d5",
+      "sha256": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          181
+        ]
+      ],
+      "semantic_read_lines": 181
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/REFERENCE.md",
+      "bytes": 33620,
+      "line_count": 570,
+      "git_blob_sha1": "2eb127b422bf8d3557b3bf25ff3de39c2e1e2a6a",
+      "sha256": "681d6450d1d56150694559d9d8d59718d8182d37b1384de1c92a9b0d80c9523f",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          570
+        ]
+      ],
+      "semantic_read_lines": 570
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/implementer-prompt.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/implementer-prompt.md",
+      "bytes": 6335,
+      "line_count": 154,
+      "git_blob_sha1": "5c8ecd61fba036263bf88d0af24d47125780efa0",
+      "sha256": "81dd9d5a3fb0b09b96b5829f03b9796842f3199ef7591d1ba1c2db2a515f64d0",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          154
+        ]
+      ],
+      "semantic_read_lines": 154
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/re-review-prompt.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/re-review-prompt.md",
+      "bytes": 4756,
+      "line_count": 115,
+      "git_blob_sha1": "ad74b10b30762affc44173f8ec3228d2877f372f",
+      "sha256": "db0d5849478bc79cbde97b9b2cf0e58b50be8b8ed18464b0252c2bf27b6440a6",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          115
+        ]
+      ],
+      "semantic_read_lines": 115
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/task-reviewer-prompt.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-subagent-driven-development/task-reviewer-prompt.md",
+      "bytes": 9021,
+      "line_count": 207,
+      "git_blob_sha1": "ce796948232b6ae5fb65fd2d1f2f864530201a2e",
+      "sha256": "eea23e33ec570c3041f40e9569fa711d61b8029f9eecf908345138aa1c6e61ab",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          207
+        ]
+      ],
+      "semantic_read_lines": 207
+    },
+    {
+      "path": "cowork-bundles/obra-superpowers/skills/obra-verification-before-completion/REFERENCE.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/cowork-bundles/obra-superpowers/skills/obra-verification-before-completion/REFERENCE.md",
+      "bytes": 4595,
+      "line_count": 122,
+      "git_blob_sha1": "cf3294c7caa161b457d9db6500954cef5af2c05b",
+      "sha256": "40d8213c482359b3438eccdb268277ba7e33ce34c1f2bf0324303f2d4b85279a",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          122
+        ]
+      ],
+      "semantic_read_lines": 122
+    },
+    {
+      "path": "openai-skills/respectful-wording/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/openai-skills/respectful-wording/SKILL.md",
+      "bytes": 2539,
+      "line_count": 38,
+      "git_blob_sha1": "4b4891899d19300c14771d0055f3f665c1837ce5",
+      "sha256": "cc651dab3b3e81e5ffe1da6624210f802e5898e34c539a34c29472e0a0b69e57",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          38
+        ]
+      ],
+      "semantic_read_lines": 38
+    },
+    {
+      "path": "openai-skills/writing-style/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/openai-skills/writing-style/SKILL.md",
+      "bytes": 2745,
+      "line_count": 32,
+      "git_blob_sha1": "3c8b5426891434e12bbe44ed967207455fe2ec03",
+      "sha256": "5fce8e2f58a077b1f0e39cd546c907678b761678afef0932cdab575e68cb988b",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          32
+        ]
+      ],
+      "semantic_read_lines": 32
+    },
+    {
+      "path": "plugins/ai-workspace/skills/classin-whiteboard-notes/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/plugins/ai-workspace/skills/classin-whiteboard-notes/SKILL.md",
+      "bytes": 11435,
+      "line_count": 220,
+      "git_blob_sha1": "21edd0d11435e73069d3a5db224ad0e4172aa0c8",
+      "sha256": "93ca41f47e61f5aa45544149579ac9fe0fd5d3aceebe81918da99b87b9567d3b",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          220
+        ]
+      ],
+      "semantic_read_lines": 220
+    },
+    {
+      "path": "plugins/ai-workspace/skills/daily-brief/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/plugins/ai-workspace/skills/daily-brief/SKILL.md",
+      "bytes": 5176,
+      "line_count": 80,
+      "git_blob_sha1": "8bd6cc1ce59cc77cd6ed5e2072ea80ff94446e92",
+      "sha256": "c589fbe4901b92a7cab8df59a59aee6649808153ba34ab0259ac0994fb1a29f7",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "semantic_read_lines": 80
+    },
+    {
+      "path": "plugins/ai-workspace/skills/respectful-wording/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/plugins/ai-workspace/skills/respectful-wording/SKILL.md",
+      "bytes": 18571,
+      "line_count": 305,
+      "git_blob_sha1": "b7706d58d351ff77ffa554594ecf70fa9e757541",
+      "sha256": "254ce5457c1f36e101595caae62525b118e37e65af8535115ac4a8cd31d67f32",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          305
+        ]
+      ],
+      "semantic_read_lines": 305
+    },
+    {
+      "path": "plugins/ai-workspace/skills/respectful-wording/scripts/单字检查.py",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/plugins/ai-workspace/skills/respectful-wording/scripts/单字检查.py",
+      "bytes": 10058,
+      "line_count": 208,
+      "git_blob_sha1": "a5fbaac47cf086dc6012a097066d6a949d45a5f0",
+      "sha256": "315fd0d49c073f35960cb0dcf0e3513063ae82ddb1d6a3400254f96c371faebd",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          208
+        ]
+      ],
+      "semantic_read_lines": 208
+    },
+    {
+      "path": "plugins/ai-workspace/skills/writing-style/SKILL.md",
+      "source_url": "https://github.com/jinshanbaihai/Claude-skills-private/blob/fdcc83425e50f5ba5151f796795229139bc52239/plugins/ai-workspace/skills/writing-style/SKILL.md",
+      "bytes": 53397,
+      "line_count": 915,
+      "git_blob_sha1": "4e28ff341205de7e880d34eef63a9b503c793de8",
+      "sha256": "a37a5219a6552fc5489aded3eb3b37cb3bbf334de610c322ac5ae91bc758bb64",
+      "fetched": "complete",
+      "semantic_read": "full",
+      "semantic_line_ranges": [
+        [
+          1,
+          915
+        ]
+      ],
+      "semantic_read_lines": 915
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 interface:
   display_name: "DialogueTutor 简易对话"
-  short_description: "以交互、可视化与必要解释组织数学、统计和经济学习"
-  default_prompt: "使用 $dialogue-tutor 按 bgct 生成任务驱动的交互 HTML，提供操作图示、独立练习和可查完整解释。"
+  short_description: "在完整逐行推导中加入免打字互动与真实 Manim 数学图"
+  default_prompt: "使用 $dialogue-tutor 按 bgct 生成连续正文 HTML，保留原理七幕、逐题完整推导与每行依据；在关键步骤穿插选择、翻卡和真实 Manim 图形操作。"

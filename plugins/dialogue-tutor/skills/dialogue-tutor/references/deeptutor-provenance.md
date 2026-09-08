@@ -1,6 +1,6 @@
 # DeepTutor 交互来源与案例追溯
 
-维护日期：2026-09-07。本次新增学习交互以 [HKUDS/DeepTutor 固定快照](https://github.com/HKUDS/DeepTutor/tree/42fab3cf429a1fbf36b257ab8d116a3814964202) 为来源：`42fab3cf429a1fbf36b257ab8d116a3814964202`（该快照README发行记录为v1.6.5）。以下所有源码链接固定到这个提交，不代表上游今后的状态。学习科学校准见[学习证据](learning-evidence.md)，实现契约见[交互规格](interactive-html.md)。
+维护日期：2026-09-08。以下2026-09-07截图与DOM记录按历史证据层级保留，本轮未重跑上游组件。本次新增学习交互以 [HKUDS/DeepTutor 固定快照](https://github.com/HKUDS/DeepTutor/tree/42fab3cf429a1fbf36b257ab8d116a3814964202) 为来源：`42fab3cf429a1fbf36b257ab8d116a3814964202`（该快照README发行记录为v1.6.5）。以下所有源码链接固定到这个提交，不代表上游今后的状态。学习科学校准见[学习证据](learning-evidence.md)，实现契约见[交互规格](interactive-html.md)。
 
 ## 证据级别
 
@@ -19,7 +19,7 @@
 |---|---|---|---|
 | H1 活动编排 | [SectionArchitect][planner]、[编排提示][planner-prompt]、[BlockRenderer][blocks] | B1/B3/B6（截图）；源码 | 按目标把讲解、翻卡、自测、探索和步骤穿插；本章15处是编排结果，不是每章定额。 |
 | H2 翻卡 | [FlashCardsBlock][flash]、[生成器][flash-gen] | B6仅类型菜单；原组件DOM①—③ | 保留翻面/前后导航；新增答前辅助记录和自评连接。间隔复习另接H9，上游闪卡没有自带。 |
-| H3 就地作答 | [Books QuizBlock][quiz]、[共享QuizViewer][quiz-viewer] | B1（截图）；Books原组件DOM④—⑪；共享组件仅源码 | 明确提交、反馈、重试；数值/分数核对为本地确定性适配，开放题保存原答及评价要点，不照抄字符串评分。 |
+| H3 就地作答 | [Books QuizBlock][quiz]、[共享QuizViewer][quiz-viewer] | B1（截图）；Books原组件DOM④—⑪；共享组件仅源码 | 明确提交、反馈、重试；数值/分数核对为本地确定性适配，旧版开放输入保存原答及评价要点；1.7.1采用免打字选择/心答自评，不照抄字符串评分。 |
 | H4 参数图形 | [InteractiveGenerator][interactive-gen]→[Visualize][visualize]→[InteractiveBlock][interactive-view]、[iframe桥][iframe] | B3采样频率滑杆（截图）＋源码 | 迁移参数—图形—读数联动到概率模型；没有声称拖过官方在线滑杆。数学关系在本地实现核对。 |
 | H5 步骤控制 | [HTML生成规则][html-rules]；[AnimationBlock][animation]提供过程媒体先例 | stepper仅源码；B2为动画截图 | 采用阶段面板和前后步；不把B2静图说成stepper动态案例，不声称播放了原动画。 |
 | H6 深入解释/追问 | [DeepDiveBlock][deepdive]、[Page Chat][book-chat]、[逐题上下文][quiz-followup]、[运行器][followup-runtime] | B4/R1（截图）＋源码 | 提供预生成局部解释与当前活动上下文；自由提问转到聊天。不把单文件有限分支称实时导师服务。 |
@@ -67,9 +67,9 @@
 
 这些断言不检查视觉颜色、字体、布局或动画；重挂载的历史来自父组件内存，不代表刷新后持久化。共享QuizViewer、Mastery题卡、参数探索和stepper没有计入这11项原组件实测。
 
-## 当前样章的 15 处活动
+## 1.6.0 历史样章的 15 处活动（兼容记录）
 
-以[实际活动配置](../examples/s2-interactive.json)为准：4组翻卡、2处探索、2处步骤、1处概念短测、6个原题作答。Q2(c)遵守原题write down，采用数值核对；Q2(a)/(b)保留开放推导。
+这一节对应1.6.0历史配置，[保留的活动配置](../examples/s2-interactive.json)用于兼容回归，不是1.7.1新课主流程配方：4组翻卡、2处探索、2处步骤、1处概念短测、6个原题作答。Q2(c)遵守原题write down，采用数值核对；Q2(a)/(b)保留开放推导。
 
 | 活动ID | 放置与目标 | 形式 | 固定源码及案例层级 |
 |---|---|---|
@@ -90,6 +90,14 @@
 | `q2c-answer` | Q2(c)题面后；对称性下的期望 | 数值 | [QuizBlock][quiz]＋[QuizViewer][quiz-viewer]；B1截图；Books揭示/自评有DOM实测 |
 
 每个活动的精确CSS插入位置、目标ID、主来源、相关路径与迁移理由保存在配置的`placement`、`objectiveId`和`source`中；H6—H9为这些活动提供共同能力。数值容差、分数识别、本地记录导入导出和单文件组装属于适配实现，不能写成DeepTutor原版已经提供的同等能力。
+
+## 1.7.1 的采用边界
+
+Books QuizBlock 的 written 路径是先心中作答→主动揭示→自评，原组件没有作答文本框（历史 DOM ⑦⑧）。不能把后加 open 输入框声称为 Books 必需形式。新课定义/条件优先 flashcards，辨析优先 choice；各自来源与证据层级照上表，不被开放输入替代。
+
+正文中嵌活动、前后导航、翻卡、局部解释、Manim动画块的组织灵感可逐项追溯 DeepTutor。完整逐行教学来自 DialogueTutor 原技能；四组整份构造选择、统一提交冻结、conditionKey/referenceCoverage、同源有理数与Manim静帧manifest、恢复接触并集是本项目适配。不要声称这些完整接口、静帧同步或统一评分已由上游提供。
+
+数学图按原技能的具名 manim 路由实际渲染；HTML 原生选择控制有限预渲染状态。B2只是上游视频截图，不能证明本地已渲染、已播放或已验证新图；本轮新产物须另存Scene/数据/帧hash与实际操作证据。原15活动中numeric/open仅兼容，不能复制为新课主流程。旧截图、DOM通过不延伸为1.7.1成品或学习效果通过。
 
 ## 已知不足与没有照搬的部分
 

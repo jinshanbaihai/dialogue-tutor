@@ -33,7 +33,7 @@ def package(output: Path) -> tuple[int, str]:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'dist/dialogue-tutor-1.7.0.zip')
+    parser.add_argument('--output', type=Path, default=ROOT / 'dist/dialogue-tutor-1.7.1.zip')
     args = parser.parse_args()
     count, digest = package(args.output)
     print(f'{args.output}: {count} files; SHA-256 {digest}')

@@ -31,6 +31,110 @@ def studio_lesson():
 
 
 class BuilderTests(unittest.TestCase):
+    def no_typing_lesson(self):
+        lesson = small_lesson()
+        lesson["generationPolicy"] = "no-typing"
+        lesson["activities"][0].update(type="interactive", bodyHtml='<button id="answer-select">选择路径</button>')
+        return lesson
+
+    def test_no_typing_rejects_answer_entry_but_preserves_legacy_quizzes(self):
+        for format_ in ("numeric", "open"):
+            lesson = small_lesson()
+            lesson["activities"][0].update(format=format_, modelAnswer="解释", rubric=["说明依据"])
+            builder.assemble(lesson)
+            lesson["generationPolicy"] = "no-typing"
+            with self.assertRaisesRegex(builder.LessonError, "no-typing requires choice"):
+                builder.assemble(lesson)
+        lesson["activities"][0].update(format="choice", choices=[{"id": "a", "text": "路径一"}, {"id": "b", "text": "路径二"}], answer="a")
+        builder.assemble(lesson)
+
+    def test_no_typing_checks_static_body_steps_custom_and_remediation(self):
+        bad_controls = ('<input>', '<input type="number">', '<textarea></textarea>', '<div contenteditable>回答</div>')
+        for markup in bad_controls:
+            for location in ("static", "custom", "steps", "remediation"):
+                with self.subTest(markup=markup, location=location):
+                    lesson = self.no_typing_lesson()
+                    if location == "static":
+                        lesson["sections"][0]["bodyHtml"] += markup
+                    elif location == "custom":
+                        lesson["activities"][0]["bodyHtml"] = markup
+                    elif location == "steps":
+                        lesson["activities"][0].update(type="steps", steps=[{"title": "第一步", "bodyHtml": markup}, {"title": "第二步", "bodyHtml": "<p>依据</p>"}])
+                    else:
+                        lesson["activities"][0]["remediation"] = {"bodyHtml": markup}
+                    with self.assertRaisesRegex(builder.LessonError, "no-typing forbids"):
+                        builder.assemble(lesson)
+        lesson = self.no_typing_lesson()
+        lesson["activities"][0]["bodyHtml"] = '<input type="radio"><input type="checkbox"><input type="range"><select><option>路径</option></select><textarea readonly>可复制的上下文</textarea><p contenteditable="false">说明</p>'
+        builder.assemble(lesson)
+
+    def test_duplicate_attributes_cannot_change_the_browser_input_type_or_anchor(self):
+        ambiguous = (
+            '<input type="text" type="radio">',
+            '<input TYPE="number" type="checkbox"/>',
+            '<p id="solution" ID="apparently-unique">理由</p>',
+            '<div contenteditable="true" CONTENTEDITABLE="false">回答</div>',
+        )
+        for markup in ambiguous:
+            for location in ("static", "custom", "steps", "remediation"):
+                with self.subTest(markup=markup, location=location):
+                    lesson = self.no_typing_lesson()
+                    activity = lesson["activities"][0]
+                    if location == "static":
+                        lesson["sections"][0]["bodyHtml"] += markup
+                    elif location == "custom":
+                        activity["bodyHtml"] = markup
+                    elif location == "steps":
+                        activity.update(type="steps", steps=[{"title": "一", "bodyHtml": markup}, {"title": "二", "bodyHtml": "<p>理由</p>"}])
+                    else:
+                        activity["remediation"] = {"bodyHtml": markup}
+                    with self.assertRaisesRegex(builder.LessonError, "Duplicate HTML attribute"):
+                        builder.assemble(lesson)
+        # The rule also protects --base-html/legacy parsing without a policy.
+        for markup in ambiguous:
+            with self.assertRaisesRegex(builder.LessonError, "Duplicate HTML attribute"):
+                builder.Document(markup)
+        valid = '<input TYPE="radio" id="one"/><p ID="two" class="reason">依据</p>'
+        self.assertEqual(builder.Document(valid).root.render(), valid)
+
+    def test_dynamic_fragments_cannot_hide_mounts_or_duplicate_static_ids(self):
+        for markup, error in (
+            ('<div data-dt-activity="answer"></div>', "dynamic fragments"),
+            ('<p id="solution">解释</p>', "Duplicate or reserved DOM ID"),
+            ('<p id="answer-path">一</p><p id="answer-path">二</p>', "Duplicate or reserved DOM ID"),
+            ('<p id="dt-runtime">覆盖</p>', "Duplicate or reserved DOM ID"),
+        ):
+            lesson = self.no_typing_lesson()
+            lesson["activities"][0]["bodyHtml"] = markup
+            with self.assertRaisesRegex(builder.LessonError, error):
+                builder.assemble(lesson)
+        lesson = self.no_typing_lesson()
+        lesson["activities"][0]["remediation"] = {"bodyHtml": '<p id="answer-select">补讲</p>'}
+        with self.assertRaisesRegex(builder.LessonError, "Duplicate or reserved DOM ID"):
+            builder.assemble(lesson)
+        lesson = self.no_typing_lesson()
+        lesson["sections"][0]["bodyHtml"] = '<div data-dt-activity="answer"><div data-dt-activity="second"></div></div><details id="solution"><summary>完整解答</summary></details>'
+        lesson["sections"][0]["activityIds"].append("second")
+        second = copy.deepcopy(lesson["activities"][0]); second.update(id="second", bodyHtml="<button>选择</button>")
+        lesson["activities"].append(second)
+        with self.assertRaisesRegex(builder.LessonError, "cannot be nested"):
+            builder.assemble(lesson)
+
+    def test_solution_anchor_must_exist_statically_and_light_theme_is_explicit(self):
+        lesson = self.no_typing_lesson()
+        lesson["sections"][0]["bodyHtml"] = '<p id="premise">前提</p><div data-dt-activity="answer"></div>'
+        lesson["activities"][0]["bodyHtml"] = '<details id="solution"><summary>全解</summary></details>'
+        with self.assertRaisesRegex(builder.LessonError, "matched 0"):
+            builder.assemble(lesson)
+        lesson = self.no_typing_lesson()
+        lesson["theme"] = "light"
+        doc = builder.Document(builder.assemble(lesson))
+        self.assertEqual(builder.unique(doc.root, "html").attrs["data-dt-theme"], "light")
+        for key in ("theme", "generationPolicy"):
+            invalid = self.no_typing_lesson(); invalid[key] = "misspelled"
+            with self.assertRaisesRegex(builder.LessonError, key):
+                builder.assemble(invalid)
+
     def test_studio_places_an_action_before_its_closed_full_explanation(self):
         lesson = studio_lesson()
         doc = builder.Document(builder.assemble(lesson))

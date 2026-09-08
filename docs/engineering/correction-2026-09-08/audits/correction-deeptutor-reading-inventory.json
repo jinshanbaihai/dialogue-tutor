@@ -1,0 +1,1271 @@
+[
+  {
+    "path": "AGENTS.md",
+    "ranges": [
+      [
+        1,
+        138
+      ]
+    ],
+    "total_lines": 138,
+    "read_lines": 138,
+    "sha256": "2907232e2388469937a79898205da4fba634d1eb2c0ae6a6ae8592aab898afe3",
+    "complete": true
+  },
+  {
+    "path": "README.md",
+    "ranges": [
+      [
+        1,
+        1074
+      ]
+    ],
+    "total_lines": 1074,
+    "read_lines": 1074,
+    "sha256": "8f0fc0c27b112bde96e708fbf9633dd94de20aa7356bf7c82f6e2c977db575c0",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/agents/code_generator_agent.py",
+    "ranges": [
+      [
+        1,
+        199
+      ]
+    ],
+    "total_lines": 199,
+    "read_lines": 199,
+    "sha256": "2aab8f3a654d65f45610097d97daa6d42ddf72ef01bca22b4749dbacfe7704a9",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/agents/concept_analysis_agent.py",
+    "ranges": [
+      [
+        1,
+        88
+      ]
+    ],
+    "total_lines": 88,
+    "read_lines": 88,
+    "sha256": "e14a55f07348d5e8b4884747e5f23d71edb7037d76012e99dfe0c59fa3a8000b",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/agents/concept_design_agent.py",
+    "ranges": [
+      [
+        1,
+        67
+      ]
+    ],
+    "total_lines": 67,
+    "read_lines": 67,
+    "sha256": "a2d3cd81274445bc6670c34927eec71626a9aea91ec1802e29ad0ede799b8162",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/agents/summary_agent.py",
+    "ranges": [
+      [
+        1,
+        69
+      ]
+    ],
+    "total_lines": 69,
+    "read_lines": 69,
+    "sha256": "39c1d66c5dda08ff4cb1ffc8353365034d154596263ea6d6a49ee4ef30b54635",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/agents/visual_review_agent.py",
+    "ranges": [
+      [
+        1,
+        100
+      ]
+    ],
+    "total_lines": 100,
+    "read_lines": 100,
+    "sha256": "c0a9028a14fa0fe715b646aaa25939b4015ee785e0367d3680135d1ee7c44638",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/capability.py",
+    "ranges": [
+      [
+        1,
+        320
+      ]
+    ],
+    "total_lines": 320,
+    "read_lines": 320,
+    "sha256": "7d2f2f858be3f2ed38ee08fb39a4cb3f85f3205f3144aed8acb93e3b70352cd4",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/duration_utils.py",
+    "ranges": [
+      [
+        1,
+        36
+      ]
+    ],
+    "total_lines": 36,
+    "read_lines": 36,
+    "sha256": "fa74109f280b077ac25dee3bba4b730580625cdd6ab1d9186f252bc4252bbbb0",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/models.py",
+    "ranges": [
+      [
+        1,
+        97
+      ]
+    ],
+    "total_lines": 97,
+    "read_lines": 97,
+    "sha256": "1b4b310524d757d31ecff00767db7813e1645c75f1af259ca5b2f3441aa60d24",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/pipeline.py",
+    "ranges": [
+      [
+        1,
+        326
+      ]
+    ],
+    "total_lines": 326,
+    "read_lines": 326,
+    "sha256": "d60245b8239611c5768ab9b19d53e044af9ce1ee6feeb5204e0bee87719c3f66",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/en/code_generator_agent.yaml",
+    "ranges": [
+      [
+        1,
+        95
+      ]
+    ],
+    "total_lines": 95,
+    "read_lines": 95,
+    "sha256": "4340fd2e3b35492bacb268262d6f37a36856b07a331b91ed5fe08c5cbe8ffe8b",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/en/concept_analysis_agent.yaml",
+    "ranges": [
+      [
+        1,
+        26
+      ]
+    ],
+    "total_lines": 26,
+    "read_lines": 26,
+    "sha256": "27f8bf104b5b68e11b8788fb94bb10477b7f813e22198eb4589165fd9e2a8408",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/en/concept_design_agent.yaml",
+    "ranges": [
+      [
+        1,
+        47
+      ]
+    ],
+    "total_lines": 47,
+    "read_lines": 47,
+    "sha256": "3c3a53c8037a9274f9539a94ac107966fca01b8e494481887354c63679824b34",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/en/math_animator.yaml",
+    "ranges": [
+      [
+        1,
+        7
+      ]
+    ],
+    "total_lines": 7,
+    "read_lines": 7,
+    "sha256": "b66484250526f214acdafa9a15378dd73f5b3a5afc55afe8581c97e4a995458e",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/en/summary_agent.yaml",
+    "ranges": [
+      [
+        1,
+        27
+      ]
+    ],
+    "total_lines": 27,
+    "read_lines": 27,
+    "sha256": "c32e22468a4ddeed8a225fc0dfe4b882d38fbf68609e526b46aa6d90510b7be7",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/en/visual_review_agent.yaml",
+    "ranges": [
+      [
+        1,
+        31
+      ]
+    ],
+    "total_lines": 31,
+    "read_lines": 31,
+    "sha256": "f2450c04aeb8a343cf980f775f21a184aa5a7c79e13e3f2a9f0cc50ce8cb1e2c",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/zh/code_generator_agent.yaml",
+    "ranges": [
+      [
+        1,
+        96
+      ]
+    ],
+    "total_lines": 96,
+    "read_lines": 96,
+    "sha256": "912c6883e826d90ac486b9d210e638d733b5e73e17382ef2a91f5790c80f6d96",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/zh/concept_analysis_agent.yaml",
+    "ranges": [
+      [
+        1,
+        26
+      ]
+    ],
+    "total_lines": 26,
+    "read_lines": 26,
+    "sha256": "6b9eb4b31ada707cf6e7351f5a5230bf74bbc6d9fa00ac22cf3c57eabc56577c",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/zh/concept_design_agent.yaml",
+    "ranges": [
+      [
+        1,
+        48
+      ]
+    ],
+    "total_lines": 48,
+    "read_lines": 48,
+    "sha256": "a7f6770a269ad327cd20084404dfdbdf6b8aeaf09e8b2cbc639974b4084079c8",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/zh/math_animator.yaml",
+    "ranges": [
+      [
+        1,
+        7
+      ]
+    ],
+    "total_lines": 7,
+    "read_lines": 7,
+    "sha256": "dcce6f7b6115a26ff522cff13502a3baaecdbe8f3b37bc70bbef7d8e3c983f66",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/zh/summary_agent.yaml",
+    "ranges": [
+      [
+        1,
+        27
+      ]
+    ],
+    "total_lines": 27,
+    "read_lines": 27,
+    "sha256": "8b3d3d535ec6824c500c741c6692e20de9e28a256ae8a63ade4e855f847a1d9e",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/prompts/zh/visual_review_agent.yaml",
+    "ranges": [
+      [
+        1,
+        31
+      ]
+    ],
+    "total_lines": 31,
+    "read_lines": 31,
+    "sha256": "004bd576639b901049ca090a1a5e5548f39982d782b9961a10cdd8298e025581",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/renderer.py",
+    "ranges": [
+      [
+        1,
+        271
+      ]
+    ],
+    "total_lines": 271,
+    "read_lines": 271,
+    "sha256": "3fd9d7490bc0857f78b380f34ed7b90a10b76b812d1dc8ae34ec7cb853524f59",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/request_config.py",
+    "ranges": [
+      [
+        1,
+        38
+      ]
+    ],
+    "total_lines": 38,
+    "read_lines": 38,
+    "sha256": "50f3afc5f0489892049d019c75d81045861763f548a53fa7591effa3e42201ea",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/retry_manager.py",
+    "ranges": [
+      [
+        1,
+        160
+      ]
+    ],
+    "total_lines": 160,
+    "read_lines": 160,
+    "sha256": "b3eac69fda695242aa19d8163c5152f798e33a077945d3773e651fb0a809750b",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/utils.py",
+    "ranges": [
+      [
+        1,
+        53
+      ]
+    ],
+    "total_lines": 53,
+    "read_lines": 53,
+    "sha256": "ef8d3842c25de876b6c6c9fa27ceb321a87d87e7353e6cedf4693a65a9cebeab",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/math_animator/visual_review.py",
+    "ranges": [
+      [
+        1,
+        154
+      ]
+    ],
+    "total_lines": 154,
+    "read_lines": 154,
+    "sha256": "f28a53aec09abcfe3737b78bfd24a86173a1d4339c0b14f2c10708e999896888",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/question/pipeline.py",
+    "ranges": [
+      [
+        1,
+        2219
+      ]
+    ],
+    "total_lines": 2219,
+    "read_lines": 2219,
+    "sha256": "0fab40635ba525ea297373bf4dd9c94d9511323a549ed25199a3670b5b88b82a",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/question/prompts/en/pipeline.yaml",
+    "ranges": [
+      [
+        1,
+        353
+      ]
+    ],
+    "total_lines": 353,
+    "read_lines": 353,
+    "sha256": "3fe275a4e8272a57f3fba0179b7b42ff7dd4cd72b9f5e218e2c0cd2dcf5750f8",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/question/prompts/zh/pipeline.yaml",
+    "ranges": [
+      [
+        1,
+        333
+      ]
+    ],
+    "total_lines": 333,
+    "read_lines": 333,
+    "sha256": "2e431d54c7edcec083258f312d32da4728a9f0a2412e5802cf515f552e42d464",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/visualize/capability.py",
+    "ranges": [
+      [
+        1,
+        561
+      ]
+    ],
+    "total_lines": 561,
+    "read_lines": 561,
+    "sha256": "b9dc21ba5717c6e3e940761de0eebeecee9e8a761ca9699fe60221266a317836",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/visualize/pipeline.py",
+    "ranges": [
+      [
+        1,
+        91
+      ]
+    ],
+    "total_lines": 91,
+    "read_lines": 91,
+    "sha256": "e9ae617b7f7a49f843d9f428902bac9239049bf6d62587122faad20b9d1f7d13",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/agents/visualize/utils.py",
+    "ranges": [
+      [
+        1,
+        191
+      ]
+    ],
+    "total_lines": 191,
+    "read_lines": 191,
+    "sha256": "61be9d94830c7875a01e0c7afa78863e76dc92449e1f37598de4c37e7e0602f4",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/api/routers/book.py",
+    "ranges": [
+      [
+        1045,
+        1175
+      ],
+      [
+        1260,
+        1310
+      ]
+    ],
+    "total_lines": 1745,
+    "read_lines": 182,
+    "sha256": "63802072747d321148bc7a2f3f896cafea71785485409f8eaf9179e496a85072",
+    "complete": false
+  },
+  {
+    "path": "deeptutor/book/agents/page_planner.py",
+    "ranges": [
+      [
+        1,
+        429
+      ]
+    ],
+    "total_lines": 429,
+    "read_lines": 429,
+    "sha256": "d708f611bbbd96ffb130454f32ea76379eac839887ffabb65386f67b335e25e6",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/agents/source_explorer.py",
+    "ranges": [
+      [
+        1,
+        729
+      ]
+    ],
+    "total_lines": 729,
+    "read_lines": 729,
+    "sha256": "6249fbd114269584792f61f0e831c282c4f5e679d7fa747df2b34747c16632a4",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/agents/spine_agent.py",
+    "ranges": [
+      [
+        1,
+        189
+      ]
+    ],
+    "total_lines": 189,
+    "read_lines": 189,
+    "sha256": "ae4ef2fe5097fd4eb92b3af79f442c5901e1a10c0fad322ad432ac5cd089d70a",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/agents/spine_synthesizer.py",
+    "ranges": [
+      [
+        1,
+        795
+      ]
+    ],
+    "total_lines": 795,
+    "read_lines": 795,
+    "sha256": "7bd0996c71ec921205dd9e407926dbfbec2a269df6d7fb5a3cafce685211c7fd",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/_llm_writer.py",
+    "ranges": [
+      [
+        1,
+        189
+      ]
+    ],
+    "total_lines": 189,
+    "read_lines": 189,
+    "sha256": "791aa611577e417385e6675ac0207670d58a15e181be4b69dafed510206b077c",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/_prompts.py",
+    "ranges": [
+      [
+        1,
+        67
+      ]
+    ],
+    "total_lines": 67,
+    "read_lines": 67,
+    "sha256": "7e4abfb5b5557be02ef920be871f76813b2aebd3b3fab1388b96504d1ad45b9e",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/animation.py",
+    "ranges": [
+      [
+        1,
+        133
+      ]
+    ],
+    "total_lines": 133,
+    "read_lines": 133,
+    "sha256": "6c99cfd0ae77a10f44fb33b593bc989a15d041b68411fd311817a5ca955d85b4",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/base.py",
+    "ranges": [
+      [
+        1,
+        232
+      ]
+    ],
+    "total_lines": 232,
+    "read_lines": 232,
+    "sha256": "7670de6c6157fbb6af1d7e87c2ca298f3a2596b04e6cbccce622702bc2bb3557",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/callout.py",
+    "ranges": [
+      [
+        1,
+        61
+      ]
+    ],
+    "total_lines": 61,
+    "read_lines": 61,
+    "sha256": "bbeccb49b995d40a28a69b8392d8d879647b288b1240b60611bbffd6a7dc13c0",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/flash_cards.py",
+    "ranges": [
+      [
+        1,
+        73
+      ]
+    ],
+    "total_lines": 73,
+    "read_lines": 73,
+    "sha256": "946b8311249f94d07f1f9e6387ab7d6a800f29ca04579edd68b0d948996a24e9",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/interactive.py",
+    "ranges": [
+      [
+        1,
+        113
+      ]
+    ],
+    "total_lines": 113,
+    "read_lines": 113,
+    "sha256": "3c41f17e3de6ba57648587164f3614ea5753891bbc9b4a065ed23977a3669bf3",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/quiz.py",
+    "ranges": [
+      [
+        1,
+        121
+      ]
+    ],
+    "total_lines": 121,
+    "read_lines": 121,
+    "sha256": "ce16447f37039d81e5a169741c9d6b8398ae4cf78436a8ee9f5b443d683b655b",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/section.py",
+    "ranges": [
+      [
+        1,
+        365
+      ]
+    ],
+    "total_lines": 365,
+    "read_lines": 365,
+    "sha256": "aa1c423984f6f07a170c9cd6e709dcacb897a450d73feabd70e1338773c814ff",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/blocks/text.py",
+    "ranges": [
+      [
+        1,
+        113
+      ]
+    ],
+    "total_lines": 113,
+    "read_lines": 113,
+    "sha256": "5e766923421f00ed1a306550e2cbd0a8d14c02abd45838e5aeaa2238e3df9bfb",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/compiler.py",
+    "ranges": [
+      [
+        1,
+        474
+      ]
+    ],
+    "total_lines": 474,
+    "read_lines": 474,
+    "sha256": "5c3dfe108f51b717f4b73d69a6f1f36cf959bfc29a4978493d6c4f1d03717899",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/engine.py",
+    "ranges": [
+      [
+        538,
+        672
+      ],
+      [
+        2010,
+        2133
+      ]
+    ],
+    "total_lines": 2133,
+    "read_lines": 259,
+    "sha256": "5a86c25e6746754abc923fbc80fe41fbc7e8e46542185ed81f45d5ebff580246",
+    "complete": false
+  },
+  {
+    "path": "deeptutor/book/models.py",
+    "ranges": [
+      [
+        1,
+        577
+      ]
+    ],
+    "total_lines": 577,
+    "read_lines": 577,
+    "sha256": "5a78d3dab7596d93142e9049c211c23f696d8390ae51928269f0509cc7977bcf",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/progress.py",
+    "ranges": [
+      [
+        1,
+        136
+      ]
+    ],
+    "total_lines": 136,
+    "read_lines": 136,
+    "sha256": "f261ab7a8fc33afa59eea46783b8b6764cf4bab55f76219ceddff53591bf4e6c",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/animation.yaml",
+    "ranges": [
+      [
+        1,
+        10
+      ]
+    ],
+    "total_lines": 10,
+    "read_lines": 10,
+    "sha256": "962e0af3a9b328fffdb68a4855d72a17455295181bfb61e00d2892f33356c8ad",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/flash_cards.yaml",
+    "ranges": [
+      [
+        1,
+        12
+      ]
+    ],
+    "total_lines": 12,
+    "read_lines": 12,
+    "sha256": "cf4858086ce48224584ef73c229cf23e1b6ee3b3199406c6975854ea6fc7275e",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/interactive.yaml",
+    "ranges": [
+      [
+        1,
+        10
+      ]
+    ],
+    "total_lines": 10,
+    "read_lines": 10,
+    "sha256": "e93c0b6e235aed24323cc084a968cd2b6c8a180518dcf02dd081f9170937e035",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/page_planner.yaml",
+    "ranges": [
+      [
+        1,
+        57
+      ]
+    ],
+    "total_lines": 57,
+    "read_lines": 57,
+    "sha256": "0d3efcb7bfaa544b33d41c93792cc053db78490e0b1faf58c5dd4911cb89362a",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/section.yaml",
+    "ranges": [
+      [
+        1,
+        44
+      ]
+    ],
+    "total_lines": 44,
+    "read_lines": 44,
+    "sha256": "aa189e027662186f77548fd1d098e0d3e537ab56764dd1b820989df6dc3f6f49",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/source_explorer.yaml",
+    "ranges": [
+      [
+        1,
+        74
+      ]
+    ],
+    "total_lines": 74,
+    "read_lines": 74,
+    "sha256": "1997720aed1058fb54f71951deba14466d60d5f7d90ad687112a6eb3a1d3bb60",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/spine_agent.yaml",
+    "ranges": [
+      [
+        1,
+        43
+      ]
+    ],
+    "total_lines": 43,
+    "read_lines": 43,
+    "sha256": "07db259d375a5eaf3c62da9cb1f1c2390f8fbc9a8b7c7db08f831b192d9e8533",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/en/spine_synthesizer.yaml",
+    "ranges": [
+      [
+        1,
+        126
+      ]
+    ],
+    "total_lines": 126,
+    "read_lines": 126,
+    "sha256": "d84cff6066ccfac601341d1bf77f60a5d1bd7e45de68c85309211da072835ae1",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/animation.yaml",
+    "ranges": [
+      [
+        1,
+        10
+      ]
+    ],
+    "total_lines": 10,
+    "read_lines": 10,
+    "sha256": "e4c82cad1c419800c37dd29b31ea836909e5ed2a4699a7b9eac4a6e012d4c3fd",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/flash_cards.yaml",
+    "ranges": [
+      [
+        1,
+        11
+      ]
+    ],
+    "total_lines": 11,
+    "read_lines": 11,
+    "sha256": "1bd67e4d04302580b5d8e3fabbaee083a822dc1d3fa39aab1b3b389429e6736d",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/interactive.yaml",
+    "ranges": [
+      [
+        1,
+        10
+      ]
+    ],
+    "total_lines": 10,
+    "read_lines": 10,
+    "sha256": "0d7b0a0116d5063ffc4dc1c38b904cc68bc695157b183a8c059bb1e02b778e56",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/page_planner.yaml",
+    "ranges": [
+      [
+        1,
+        52
+      ]
+    ],
+    "total_lines": 52,
+    "read_lines": 52,
+    "sha256": "c27ffc58e330734e1c5888fc0df23d8b0b5ccb649a86ac2251b75c8e7d962fff",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/section.yaml",
+    "ranges": [
+      [
+        1,
+        41
+      ]
+    ],
+    "total_lines": 41,
+    "read_lines": 41,
+    "sha256": "40aa131997b3e7012d01cbb2279ef8a6ef194538341a1c30c7cabb645dca157e",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/source_explorer.yaml",
+    "ranges": [
+      [
+        1,
+        67
+      ]
+    ],
+    "total_lines": 67,
+    "read_lines": 67,
+    "sha256": "dce929108e4769a9602b5fa549a646789d35c6cf4b45b10eef4839ca547cb680",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/spine_agent.yaml",
+    "ranges": [
+      [
+        1,
+        41
+      ]
+    ],
+    "total_lines": 41,
+    "read_lines": 41,
+    "sha256": "fd8847c8027c874b12aa3384eb8066d7b4d5b74fdb4970c1c7f6d1ce493eb45a",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/book/prompts/zh/spine_synthesizer.yaml",
+    "ranges": [
+      [
+        1,
+        118
+      ]
+    ],
+    "total_lines": 118,
+    "read_lines": 118,
+    "sha256": "8dad605855af672fde2108c27e990234e436ca88a248f546b4ab8164f4a30baf",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/learning/grading.py",
+    "ranges": [
+      [
+        1,
+        64
+      ]
+    ],
+    "total_lines": 64,
+    "read_lines": 64,
+    "sha256": "7f35f9d4dbf6169aa32139a7808eed20be19d41a939d585237b3566d0f8f3c1c",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/learning/mastery.py",
+    "ranges": [
+      [
+        1,
+        40
+      ]
+    ],
+    "total_lines": 40,
+    "read_lines": 40,
+    "sha256": "318e1001a9cfeea744742bbb5d232d54bc72b3f915c7ef93f82683f038a66fd6",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/learning/scheduler.py",
+    "ranges": [
+      [
+        1,
+        101
+      ]
+    ],
+    "total_lines": 101,
+    "read_lines": 101,
+    "sha256": "fc39fd6735010d343ec3454aed0feef60d00984864de42fd0bdf07ad8c7bb398",
+    "complete": true
+  },
+  {
+    "path": "deeptutor/learning/service.py",
+    "ranges": [
+      [
+        175,
+        320
+      ]
+    ],
+    "total_lines": 1147,
+    "read_lines": 146,
+    "sha256": "3e883a51c65127f4a077f2a5fff0d4a3e3bd22601ef0b82954162a717f1f9a06",
+    "complete": false
+  },
+  {
+    "path": "tests/agents/math_animator/test_code_generator_agent.py",
+    "ranges": [
+      [
+        1,
+        81
+      ]
+    ],
+    "total_lines": 81,
+    "read_lines": 81,
+    "sha256": "ab1447ff5f2dd5f2eb297ab39a95da46f187babf2bd77f02d7b715d84f668423",
+    "complete": true
+  },
+  {
+    "path": "tests/agents/math_animator/test_retry_manager.py",
+    "ranges": [
+      [
+        1,
+        185
+      ]
+    ],
+    "total_lines": 185,
+    "read_lines": 185,
+    "sha256": "15b84a7596bbfe2b5747d7a93c3dba6c2175c56e763a9cfaeef442f3110bc162",
+    "complete": true
+  },
+  {
+    "path": "tests/api/test_book_quiz_attempt_notebook.py",
+    "ranges": [
+      [
+        1,
+        125
+      ]
+    ],
+    "total_lines": 125,
+    "read_lines": 125,
+    "sha256": "007c9b879a0dda1655789ec1210e3a2cc03e865e85a34e3111ea1c442bf56df4",
+    "complete": true
+  },
+  {
+    "path": "tests/book/test_progress.py",
+    "ranges": [
+      [
+        1,
+        133
+      ]
+    ],
+    "total_lines": 133,
+    "read_lines": 133,
+    "sha256": "3e58983120d0e02f87c205906c9749f94e670e2af4306d011c03b3ce41020e59",
+    "complete": true
+  },
+  {
+    "path": "tests/book/test_quiz_extraction.py",
+    "ranges": [
+      [
+        1,
+        153
+      ]
+    ],
+    "total_lines": 153,
+    "read_lines": 153,
+    "sha256": "7afb3d6754d64de90449e66338ff93d97359c5700daf934748bba72ac473ec29",
+    "complete": true
+  },
+  {
+    "path": "tests/book/test_visual_block_prompts.py",
+    "ranges": [
+      [
+        1,
+        63
+      ]
+    ],
+    "total_lines": 63,
+    "read_lines": 63,
+    "sha256": "822d5977b1e635fb12fbcbaeb667c286f41d2476419b453f8f1eb744e9c1e7ed",
+    "complete": true
+  },
+  {
+    "path": "tests/core/test_math_animator_capability.py",
+    "ranges": [
+      [
+        1,
+        121
+      ]
+    ],
+    "total_lines": 121,
+    "read_lines": 121,
+    "sha256": "6be239ca3db5bf56b3e79708fd0e39514cecc35b5240220f88183a97674afb56",
+    "complete": true
+  },
+  {
+    "path": "web/app/(workspace)/books/BooksRoute.tsx",
+    "ranges": [
+      [
+        807,
+        888
+      ]
+    ],
+    "total_lines": 1181,
+    "read_lines": 82,
+    "sha256": "c964fac0ab4584fcb41467661d2b1b2b5b5b00bef9c948485775b85e718e2bf2",
+    "complete": false
+  },
+  {
+    "path": "web/app/(workspace)/books/components/blocks/AnimationBlock.tsx",
+    "ranges": [
+      [
+        1,
+        106
+      ]
+    ],
+    "total_lines": 106,
+    "read_lines": 106,
+    "sha256": "82ac080e62d6c38b28b5105917e57ade9556e751760678c2616c931b3fed5ae1",
+    "complete": true
+  },
+  {
+    "path": "web/app/(workspace)/books/components/blocks/BlockRenderer.tsx",
+    "ranges": [
+      [
+        1,
+        367
+      ]
+    ],
+    "total_lines": 367,
+    "read_lines": 367,
+    "sha256": "2355f3752caa2b96e629016bf5b1808fd21a56118619867897c774aaa328ad8e",
+    "complete": true
+  },
+  {
+    "path": "web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx",
+    "ranges": [
+      [
+        1,
+        82
+      ]
+    ],
+    "total_lines": 82,
+    "read_lines": 82,
+    "sha256": "65c7db4397ecd8c75273526c8d7c0436ea4dd3c4035c31a8a7adf0bedb4bff53",
+    "complete": true
+  },
+  {
+    "path": "web/app/(workspace)/books/components/blocks/InteractiveBlock.tsx",
+    "ranges": [
+      [
+        1,
+        81
+      ]
+    ],
+    "total_lines": 81,
+    "read_lines": 81,
+    "sha256": "50057d611175259cb29f5a866615be2070688d4cd8c793fd4ac15b4fcfbb67e8",
+    "complete": true
+  },
+  {
+    "path": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+    "ranges": [
+      [
+        1,
+        376
+      ]
+    ],
+    "total_lines": 376,
+    "read_lines": 376,
+    "sha256": "ccf14e5a8199d085a6aff53b741842d1b6abc9589e9945f99407ccc15c7def18",
+    "complete": true
+  },
+  {
+    "path": "web/app/(workspace)/books/components/blocks/SectionBlock.tsx",
+    "ranges": [
+      [
+        1,
+        66
+      ]
+    ],
+    "total_lines": 66,
+    "read_lines": 66,
+    "sha256": "97482bf42d66b65c128fb0329fd98775829f862a46ce87b0045ea42c6bac30f5",
+    "complete": true
+  },
+  {
+    "path": "web/components/math-animator/MathAnimatorViewer.tsx",
+    "ranges": [
+      [
+        1,
+        205
+      ]
+    ],
+    "total_lines": 205,
+    "read_lines": 205,
+    "sha256": "2436dacc36ed0da52951b4ce32ee0c6d9f57042e9fbbbdc76688d665898fb535",
+    "complete": true
+  },
+  {
+    "path": "web/components/visualize/VisualizationViewer.tsx",
+    "ranges": [
+      [
+        1,
+        677
+      ]
+    ],
+    "total_lines": 677,
+    "read_lines": 677,
+    "sha256": "b4c7401915afabe3a610f6c4920c4d84d0011dcfcbd7f2c30639b367a9570844",
+    "complete": true
+  },
+  {
+    "path": "web/lib/book-api.ts",
+    "ranges": [
+      [
+        348,
+        386
+      ]
+    ],
+    "total_lines": 496,
+    "read_lines": 39,
+    "sha256": "ac72a8aaf0fca2622ed7c3e6f8b3395a7b83eada6c835accbed69635adc6c1e2",
+    "complete": false
+  },
+  {
+    "path": "web/lib/book-types.ts",
+    "ranges": [
+      [
+        1,
+        289
+      ]
+    ],
+    "total_lines": 289,
+    "read_lines": 289,
+    "sha256": "2eecc2e9debb31432cacc983a280c39610b656e59753f9b9f0e8225ecb96bae3",
+    "complete": true
+  },
+  {
+    "path": "web/lib/iframe-html.ts",
+    "ranges": [
+      [
+        1,
+        189
+      ]
+    ],
+    "total_lines": 189,
+    "read_lines": 189,
+    "sha256": "cbe444d6f9b8d76ddc2651830e03b8728395b67330ac671fb62acd7ca94e17dd",
+    "complete": true
+  },
+  {
+    "path": "web/lib/math-animator-types.ts",
+    "ranges": [
+      [
+        1,
+        101
+      ]
+    ],
+    "total_lines": 101,
+    "read_lines": 101,
+    "sha256": "61df86cee26b6abcad999660f0d7440e985d369d07471093006c2c2e52f85b64",
+    "complete": true
+  },
+  {
+    "path": "web/lib/quiz-question-type.ts",
+    "ranges": [
+      [
+        1,
+        113
+      ]
+    ],
+    "total_lines": 113,
+    "read_lines": 113,
+    "sha256": "27fb40aba840650cc6af5835a586b67a47612c33ca8ae85b07c5a50162231358",
+    "complete": true
+  },
+  {
+    "path": "web/tests/math-animator-types.test.ts",
+    "ranges": [
+      [
+        1,
+        37
+      ]
+    ],
+    "total_lines": 37,
+    "read_lines": 37,
+    "sha256": "e861920a5a1fa466579658bb5f6e8ba02ffe4cb8edbb22454f9f02eb30f80ec1",
+    "complete": true
+  },
+  {
+    "path": "web/tests/quiz-option-latex.test.ts",
+    "ranges": [
+      [
+        1,
+        87
+      ]
+    ],
+    "total_lines": 87,
+    "read_lines": 87,
+    "sha256": "7f9a40cc862f88bf8120217b3369134740e685f843db787fd1bae04c2e3b0b32",
+    "complete": true
+  },
+  {
+    "path": "web/tests/quiz-question-type.test.ts",
+    "ranges": [
+      [
+        1,
+        106
+      ]
+    ],
+    "total_lines": 106,
+    "read_lines": 106,
+    "sha256": "d9fc5f46fed1e4997aa01ae97be32e7162c2e38962caa35a7408488c1f04352e",
+    "complete": true
+  }
+]

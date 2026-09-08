@@ -410,6 +410,8 @@
   function validateLesson(lesson) {
     if (!record(lesson) || lesson.schemaVersion !== 1 || !safeId(lesson.lessonId) || !["string", "number"].includes(typeof lesson.revision)) throw new Error("Invalid lesson identity/version");
     if (lesson.presentation !== undefined && !["document", "studio"].includes(lesson.presentation)) throw new Error("Unknown presentation");
+    if (lesson.generationPolicy != null && lesson.generationPolicy !== "no-typing") throw new Error("Unknown generation policy");
+    if (lesson.theme != null && lesson.theme !== "light") throw new Error("Unknown theme");
     if (!Array.isArray(lesson.objectives) || !Array.isArray(lesson.activities)) throw new Error("Missing lesson objectives or activities");
     var objectiveIds = new Set();
     lesson.objectives.forEach(function (objective) {
@@ -427,6 +429,7 @@
       if (activity.type === "explore" && !["linear-density", "uniform"].includes(activity.model)) throw new Error("Unknown exploration model");
       if (activity.type === "quiz") {
         if (!["choice", "numeric", "open"].includes(activity.format)) throw new Error("Unknown quiz format");
+        if (lesson.generationPolicy === "no-typing" && activity.format !== "choice") throw new Error("No-typing lessons require choice quizzes");
         if (activity.format === "choice" && (!Array.isArray(activity.choices) || !activity.choices.some(function (choice) { return choice.id === activity.answer; }))) throw new Error("Choice quiz needs a valid answer");
         if (activity.format === "numeric" && (parseNumeric(activity.answer) === null || (activity.tolerance !== undefined && (!finite(activity.tolerance) || activity.tolerance < 0)))) throw new Error("Numeric quiz needs a finite answer and tolerance");
       }
@@ -550,6 +553,7 @@
 
   function mount(lesson, doc, options) {
     validateLesson(lesson);
+    if (lesson.theme === "light") doc.documentElement.setAttribute("data-dt-theme", "light");
     options = options || {};
     var win = doc.defaultView;
     var en = /^en\b/i.test(lesson.language || "zh-CN");

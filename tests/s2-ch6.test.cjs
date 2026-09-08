@@ -1,12 +1,12 @@
 'use strict';
-// Course integration regressions adapted from independent run-03 review paths.
+// Archived 1.7.0 run-03 compatibility regressions; not validation of the current course.
 // They execute the assembled course; jsdom provides no visual-rendering evidence.
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const {JSDOM, VirtualConsole} = require('jsdom');
-const html = fs.readFileSync(path.join(__dirname, '../docs/s2-ch6.html'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, '../docs/engineering/v1.7.0/runs/run-03/lesson.html'), 'utf8');
 const oracle = JSON.parse(fs.readFileSync(path.join(__dirname, '../docs/engineering/v1.7.0/reviews/run-03-math-oracle.json'), 'utf8'));
 const NOW = Date.UTC(2026, 8, 8, 12), DAY = 86400000;
 const copy = value => JSON.parse(JSON.stringify(value));

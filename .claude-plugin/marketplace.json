@@ -1,6 +1,6 @@
 {
   "name": "dialogue-tutor",
-  "description": "以交互、可视化和必要解释组织数学、统计与经济学习。bgct 建立原理与例题，bbct 保留板书边界，olct/onct 专注做题；任务舞台根据独立、辅助、错误和跳过表现推荐下一项活动，完整解答按需可查。支持 plustts 双轨伴读与本地学习记录。",
+  "description": "以完整逐行推导为主线，穿插免打字选择、心答翻卡与真实 Manim 数学图。bgct 保留原理七幕与逐题六项讲解，bbct 保留板书边界，olct/onct 专注完整做题。连续正文与局部反馈可随时查阅，支持 plustts 双轨伴读和本地学习记录。",
   "owner": {
     "name": "StevenZhou",
     "url": "https://github.com/jinshanbaihai"
@@ -10,8 +10,8 @@
       "name": "dialogue-tutor",
       "source": "./plugins/dialogue-tutor",
       "displayName": "简易对话",
-      "description": "以交互、可视化和必要解释组织数学、统计与经济学习。bgct 建立原理与例题，bbct 保留板书边界，olct/onct 专注做题；任务舞台根据独立、辅助、错误和跳过表现推荐下一项活动，完整解答按需可查。支持 plustts 双轨伴读与本地学习记录。",
-      "version": "1.7.0",
+      "description": "以完整逐行推导为主线，穿插免打字选择、心答翻卡与真实 Manim 数学图。bgct 保留原理七幕与逐题六项讲解，bbct 保留板书边界，olct/onct 专注完整做题。连续正文与局部反馈可随时查阅，支持 plustts 双轨伴读和本地学习记录。",
+      "version": "1.7.1",
       "author": {
         "name": "StevenZhou",
         "url": "https://github.com/jinshanbaihai"

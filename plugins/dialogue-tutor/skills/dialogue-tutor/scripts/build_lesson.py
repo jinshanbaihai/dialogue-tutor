@@ -72,6 +72,8 @@ def validate_lesson(lesson):
         text_field(lesson, field, "lesson")
     require(lesson.get("mode", "bgct") in MODES, "mode must be bgct, bbct, olct or onct")
     require(lesson.get("presentation", "document") in {"document", "studio"}, "presentation must be document or studio")
+    require(lesson.get("generationPolicy") in (None, "no-typing"), "generationPolicy must be no-typing when supplied")
+    require(lesson.get("theme") in (None, "light"), "theme must be light when supplied")
     objectives = lesson.get("objectives")
     require(isinstance(objectives, list) and objectives, "objectives must be a nonempty array")
     objective_ids = set()
@@ -128,6 +130,7 @@ def validate_lesson(lesson):
         elif kind == "quiz":
             format_ = activity.get("format")
             require(format_ in {"choice", "numeric", "open"}, f"{context}.format is not supported")
+            require(lesson.get("generationPolicy") != "no-typing" or format_ == "choice", f"{context}: no-typing requires choice quizzes; use flashcards for recall or interactive for construction selections")
             text_field(activity, "explanation", context)
             if format_ == "choice":
                 choices = activity.get("choices")
@@ -227,7 +230,12 @@ def validate_lesson(lesson):
 
 class Node:
     def __init__(self, tag=None, attrs=None, raw="", end="", parent=None):
-        self.tag, self.attrs, self.raw, self.end = tag, dict(attrs or []), raw, end
+        items = list(attrs.items()) if isinstance(attrs, dict) else list(attrs or [])
+        names = [name.lower() for name, _ in items]
+        # Browsers retain the first duplicate attribute, whereas dict retains
+        # the last. Reject ambiguity before validation can inspect the wrong DOM.
+        require(len(names) == len(set(names)), f"Duplicate HTML attribute on <{tag}> is not supported")
+        self.tag, self.attrs, self.raw, self.end = tag, dict(items), raw, end
         self.parent, self.children = parent, []
 
     def append(self, child):
@@ -347,6 +355,50 @@ def fragment(markup):
     return Document(markup).root.children
 
 
+def dynamic_fragments(lesson):
+    """HTML inserted by the runtime, absent from the assembled static DOM."""
+    for activity in lesson["activities"]:
+        if activity["type"] == "interactive":
+            yield activity["id"] + ".bodyHtml", activity["bodyHtml"]
+        for index, step in enumerate(activity.get("steps", [])):
+            yield f"{activity['id']}.steps[{index}].bodyHtml", step["bodyHtml"]
+        remediation = activity.get("remediation")
+        if isinstance(remediation, dict) and remediation.get("bodyHtml"):
+            yield activity["id"] + ".remediation.bodyHtml", remediation["bodyHtml"]
+
+
+def check_no_typing(root, context):
+    # Author-provided HTML only. The runtime's optional notes and progress import
+    # controls are deliberately outside this generation-policy check.
+    for node in root.descendants():
+        editable = node.attrs.get("contenteditable") or ""
+        require("contenteditable" not in node.attrs or editable.lower() == "false", f"{context}: no-typing forbids contenteditable")
+        if node.tag == "textarea":
+            require("readonly" in node.attrs, f"{context}: no-typing forbids editable textarea answers; use the optional runtime notes")
+        if node.tag == "input":
+            kind = (node.attrs.get("type") or "text").lower()
+            require(kind in {"radio", "checkbox", "range", "button", "submit", "reset", "hidden", "image"} or "readonly" in node.attrs,
+                    f"{context}: no-typing forbids input type {kind}")
+
+
+def validate_authored_dom(document, lesson, dom_ids):
+    if lesson.get("generationPolicy") == "no-typing":
+        check_no_typing(document.root, "document")
+    for node in document.root.descendants():
+        if "data-dt-activity" in node.attrs:
+            require(not any("data-dt-activity" in child.attrs for child in node.descendants()), "Activity mounts cannot be nested")
+    for context, markup in dynamic_fragments(lesson):
+        root = Document(markup).root
+        if lesson.get("generationPolicy") == "no-typing":
+            check_no_typing(root, context)
+        for node in root.descendants():
+            require("data-dt-activity" not in node.attrs, f"{context}: dynamic fragments cannot contain activity mounts; put them in sections.bodyHtml")
+            node_id = node.attrs.get("id")
+            if node_id:
+                require(node_id not in dom_ids, f"{context}: Duplicate or reserved DOM ID: {node_id}")
+                dom_ids.add(node_id)
+
+
 def activity_mount(activity_id):
     return f'<div data-dt-activity="{html.escape(activity_id, quote=True)}"></div>'
 
@@ -462,6 +514,10 @@ def assemble(lesson, base_html=None, asset_root=None):
     main = unique(document.root, "main")
     head = unique(document.root, "head")
     body = unique(document.root, "body")
+    if lesson.get("theme") == "light":
+        html_node = unique(document.root, "html")
+        html_node.attrs["data-dt-theme"] = "light"
+        html_node.raw = "<html" + "".join(f' {key}' + (f'="{html.escape(value, quote=True)}"' if value is not None else "") for key, value in html_node.attrs.items()) + ">"
     all_mount_ids = [node.attrs["data-dt-activity"] for node in document.root.descendants() if "data-dt-activity" in node.attrs]
     require(set(all_mount_ids) == {activity["id"] for activity in lesson["activities"]}, "Document contains unknown or missing activity mounts")
     for activity in lesson["activities"]:
@@ -477,6 +533,7 @@ def assemble(lesson, base_html=None, asset_root=None):
         if node_id:
             require(node_id not in dom_ids, f"Duplicate or reserved DOM ID: {node_id}")
             dom_ids.add(node_id)
+    validate_authored_dom(document, lesson, dom_ids)
     study = fragment('<aside data-dt-study aria-label="学习记录与复习"></aside>')[0]
     study.parent = main
     # Keep the lesson title as the first visible content where a header is present.
