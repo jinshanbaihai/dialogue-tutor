@@ -1,0 +1,499 @@
+{
+  "scope": "Independent native DOM events against final frozen HTML. Explicit Image callbacks are branch fixtures only, not image decoding. Default jsdom zero rectangles cannot prove actual viewport exposure.",
+  "hashes": {
+    "lesson.html": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+    "lesson.json": "42627f4a3df54ccddfcfef28abf3a873a3a1807b955f7fd9315d3613a4f5dc90",
+    "delivery-manifest.json": "3bd8e42e61e8387ff4632abecf90366f3e3b9ded06f83d0e12a019252e8ecae2"
+  },
+  "scenes": [
+    {
+      "id": "G07 genuine card early due browse and resume",
+      "checks": [
+        {
+          "name": "rating explicitly self report",
+          "pass": true
+        },
+        {
+          "name": "second pending back before browse",
+          "pass": true
+        },
+        {
+          "name": "ordinary browse preserves second pending back",
+          "pass": true
+        },
+        {
+          "name": "genuine existing early index0 item",
+          "pass": true
+        },
+        {
+          "name": "early goes first front",
+          "pass": true
+        },
+        {
+          "name": "early schedule unchanged",
+          "pass": true
+        },
+        {
+          "name": "history unchanged by early entry",
+          "pass": true
+        },
+        {
+          "name": "due uses actual item with simulated clock",
+          "pass": true
+        },
+        {
+          "name": "due targets first front",
+          "pass": true
+        },
+        {
+          "name": "pending second retained",
+          "pass": true
+        }
+      ],
+      "evidence": {
+        "first": {
+          "id": "recall-core",
+          "objectiveId": "statistic",
+          "type": "flashcards",
+          "draft": "",
+          "status": "idle",
+          "answerRevealed": false,
+          "hintUsed": false,
+          "exposure": null,
+          "attempts": [
+            {
+              "id": "recall-core:1788850877154:1",
+              "answer": "自评：翻面前已回忆",
+              "correct": true,
+              "source": "self",
+              "assisted": false,
+              "time": 1788850877154,
+              "sessionId": "session-1788850870936-e0nlgyoevr",
+              "cardIndex": 0
+            }
+          ],
+          "submittedAttemptId": null,
+          "review": null,
+          "participated": true,
+          "lastInteractionAt": 1788850877154,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {
+              "0": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": "recalled",
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1788937277154,
+                  "lastReviewedAt": 1788850877154,
+                  "lastSessionId": "session-1788850870936-e0nlgyoevr",
+                  "evidenceSource": "self"
+                },
+                "attemptId": "recall-core:1788850877154:1",
+                "exposure": {
+                  "sessionId": "session-1788850870936-e0nlgyoevr",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1788850877120,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1788850870936-e0nlgyoevr"
+              }
+            }
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        },
+        "earlyItem": {
+          "activityId": "recall-core",
+          "cardIndex": 0,
+          "title": "两张短回忆卡 · 1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788937277154,
+            "lastReviewedAt": 1788850877154,
+            "lastSessionId": "session-1788850870936-e0nlgyoevr",
+            "evidenceSource": "self"
+          },
+          "due": false
+        },
+        "dueItem": {
+          "activityId": "recall-core",
+          "cardIndex": 0,
+          "title": "两张短回忆卡 · 1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788937277154,
+            "lastReviewedAt": 1788850877154,
+            "lastSessionId": "session-1788850870936-e0nlgyoevr",
+            "evidenceSource": "self"
+          },
+          "due": true
+        },
+        "final": {
+          "id": "recall-core",
+          "objectiveId": "statistic",
+          "type": "flashcards",
+          "draft": "",
+          "status": "idle",
+          "answerRevealed": false,
+          "hintUsed": false,
+          "exposure": null,
+          "attempts": [
+            {
+              "id": "recall-core:1788850877154:1",
+              "answer": "自评：翻面前已回忆",
+              "correct": true,
+              "source": "self",
+              "assisted": false,
+              "time": 1788850877154,
+              "sessionId": "session-1788850870936-e0nlgyoevr",
+              "cardIndex": 0
+            }
+          ],
+          "submittedAttemptId": null,
+          "review": null,
+          "participated": true,
+          "lastInteractionAt": 1788850879964,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {
+              "0": {
+                "revealed": false,
+                "hintUsed": false,
+                "rating": null,
+                "review": {
+                  "intervalIndex": 0,
+                  "dueAt": 1788937277154,
+                  "lastReviewedAt": 1788850877154,
+                  "lastSessionId": "session-1788850870936-e0nlgyoevr",
+                  "evidenceSource": "self"
+                },
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1788850870936-e0nlgyoevr",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1788850877120,
+                  "inferred": false
+                },
+                "recallAssisted": true,
+                "recallSessionId": null
+              },
+              "1": {
+                "revealed": true,
+                "hintUsed": false,
+                "rating": null,
+                "review": null,
+                "attemptId": null,
+                "exposure": {
+                  "sessionId": "session-1788850870936-e0nlgyoevr",
+                  "hint": false,
+                  "reference": true,
+                  "observedAt": 1788850878677,
+                  "inferred": false
+                },
+                "recallAssisted": false,
+                "recallSessionId": "session-1788850870936-e0nlgyoevr"
+              }
+            }
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "errors": []
+    },
+    {
+      "id": "G08 exposure native immediate submit and partial freeze",
+      "checks": [
+        {
+          "name": "main immediate summary records assistance",
+          "pass": true
+        },
+        {
+          "name": "incomplete groups stay draft without exposing full answer",
+          "pass": false
+        }
+      ],
+      "evidence": {
+        "main": {
+          "id": "main-wr-mean-v1-1788850887067-1",
+          "conditionKey": "main-wr-mean-v1",
+          "at": 1788850887067,
+          "choice": "equal",
+          "assistance": [
+            "main-reference-wr"
+          ]
+        },
+        "partial": {
+          "id": "task-wr-mean-v1-1788850887625-2",
+          "conditionKey": "task-wr-mean-v1",
+          "at": 1788850887625,
+          "draft": {
+            "paths": [
+              "DE"
+            ],
+            "mapping": {},
+            "weight": null,
+            "distribution": {}
+          },
+          "check": {
+            "missing": [
+              "DD",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "extra": [],
+            "matched": [
+              "DE"
+            ],
+            "mapping": [
+              "DE"
+            ],
+            "weight": true,
+            "distribution": [
+              "2",
+              "5",
+              "8"
+            ],
+            "correct": false
+          },
+          "assistance": []
+        },
+        "text": "本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DE；缺少路径：DD、DF、ED、EE、EF、FD、FE、FF；多选路径：无。DD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导DF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导ED：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导FD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。 两个观测：8,8；当前路径权重：19。 查看此路径的逐行推导DE：你的mean映射需按两个观测重新代入。 两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导每条身份路径是两次独立均匀抽取，故权重为1/3 × 1/3 = 1/9；输出mean没有因此等可能。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DD、DE、ED、EE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 8的原像为FF；当前每条允许原像路径的权重为1/9，互斥相加后的概率为1/9。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。重新计算第二抽的条件权重"
+      },
+      "errors": []
+    },
+    {
+      "id": "G09 assistance targets and historical restore",
+      "checks": [
+        {
+          "name": "assisted correct offers unseen WO",
+          "pass": true
+        },
+        {
+          "name": "actual next new WO draft",
+          "pass": true
+        },
+        {
+          "name": "retry preserves frozen and contacts",
+          "pass": true
+        },
+        {
+          "name": "same-session exact export import preserves draft and history",
+          "pass": true
+        }
+      ],
+      "evidence": {
+        "sub": {
+          "id": "task-wr-mean-v1-1788850895029-1",
+          "conditionKey": "task-wr-mean-v1",
+          "at": 1788850895029,
+          "draft": {
+            "paths": [
+              "DD",
+              "DE",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "mapping": {
+              "DD": "2",
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EE": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5",
+              "FF": "8"
+            },
+            "weight": "independent",
+            "distribution": {
+              "2": "4/9",
+              "5": "4/9",
+              "8": "1/9"
+            }
+          },
+          "check": {
+            "missing": [],
+            "extra": [],
+            "matched": [
+              "DD",
+              "DE",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "mapping": [],
+            "weight": false,
+            "distribution": [],
+            "correct": true
+          },
+          "assistance": [
+            "q3a-solution-wr"
+          ]
+        },
+        "next": {
+          "label": "构造尚未呈现的无放回新数据",
+          "action": "task",
+          "conditionKey": "task-wo-mean-v1"
+        },
+        "retry": "上次冻结提交保留在历史中；本轮草稿重新开放。上次冻结提交与逐项反馈（保留原答卷）当时所选路径：DD、DE、DF、ED、EE、EF、FD、FE、FF；当时权重选择：independent。本次冻结核对：四组均与题设相符。提交前已打开或呈现本条件参考；这是有辅助核对。匹配路径：DD、DE、DF、ED、EE、EF、FD、FE、FF；缺少路径：无；多选路径：无。原始草稿和上述差异已冻结；重开不会删除历史。",
+        "exportKeys": [
+          "storageKey",
+          "getState",
+          "exportState",
+          "restoreExploration",
+          "beforeImport",
+          "beforeExport",
+          "importState",
+          "navigate",
+          "getRecommendations",
+          "refresh",
+          "destroy"
+        ],
+        "exportType": "object"
+      },
+      "errors": []
+    },
+    {
+      "id": "G10 Q4 wrong then genuine corrected judgment",
+      "checks": [
+        {
+          "name": "mean versus max error explained",
+          "pass": true
+        },
+        {
+          "name": "new answer correct",
+          "pass": true
+        },
+        {
+          "name": "retry not independent after reference",
+          "pass": true
+        }
+      ],
+      "evidence": {
+        "initial": "就地自测Q4 原像比最后分数更有辨别力选择所有且仅有maximum为5的路径，并给出对应条件。选择一个答案，然后提交GH、HG、HH；没有J且至少有一个HGJ、HH、JG；两数和为10GG、GH、HG、HH；两数都不超过5提交作答暂时跳过直接查看参考学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md",
+        "controls": [
+          {
+            "id": "choice-0",
+            "text": ""
+          },
+          {
+            "id": "choice-1",
+            "text": ""
+          },
+          {
+            "id": "choice-2",
+            "text": ""
+          },
+          {
+            "id": "submit",
+            "text": "提交作答"
+          },
+          {
+            "id": "skip",
+            "text": "暂时跳过"
+          },
+          {
+            "id": "reveal",
+            "text": "直接查看参考"
+          },
+          {
+            "id": "bookmark",
+            "text": "收藏活动"
+          },
+          {
+            "id": "copy-context",
+            "text": "复制上下文，继续对话"
+          },
+          {
+            "id": "note-save",
+            "text": "保存笔记"
+          }
+        ],
+        "wrong": "就地自测Q4 原像比最后分数更有辨别力选择所有且仅有maximum为5的路径，并给出对应条件。选择一个答案，然后提交GH、HG、HH；没有J且至少有一个HGJ、HH、JG；两数和为10GG、GH、HG、HH；两数都不超过5提交作答本次作答需要修正参考与解析GH、HG、HH；没有J且至少有一个Hmaximum恰为5要求没有9且至少一次为5。故GH/HG/HH各有1/9，总计1/3。第二项是mean为5的原像，虽然概率也恰为1/3，判断对象已换错。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。",
+        "correct": "就地自测Q4 原像比最后分数更有辨别力选择所有且仅有maximum为5的路径，并给出对应条件。选择一个答案，然后提交GH、HG、HH；没有J且至少有一个HGJ、HH、JG；两数和为10GG、GH、HG、HH；两数都不超过5提交作答参考辅助后核对通过本次提交前已接触提示或参考，包括本会话前次作答的反馈；记录保留辅助标识。参考与解析GH、HG、HH；没有J且至少有一个Hmaximum恰为5要求没有9且至少一次为5。故GH/HG/HH各有1/9，总计1/3。第二项是mean为5的原像，虽然概率也恰为1/3，判断对象已换错。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md数值或选项核对通过。",
+        "state": {
+          "id": "q4-answer",
+          "objectiveId": "distribution",
+          "type": "quiz",
+          "draft": "0",
+          "status": "submitted",
+          "answerRevealed": true,
+          "hintUsed": false,
+          "exposure": {
+            "sessionId": "session-1788850899016-lee5qulmq3m",
+            "hint": false,
+            "reference": true,
+            "observedAt": 1788850901619,
+            "inferred": false
+          },
+          "attempts": [
+            {
+              "id": "q4-answer:1788850901500:1",
+              "answer": "1",
+              "correct": false,
+              "source": "objective",
+              "assisted": false,
+              "time": 1788850901500,
+              "sessionId": "session-1788850899016-lee5qulmq3m"
+            },
+            {
+              "id": "q4-answer:1788850901619:2",
+              "answer": "0",
+              "correct": true,
+              "source": "objective",
+              "assisted": true,
+              "time": 1788850901619,
+              "sessionId": "session-1788850899016-lee5qulmq3m"
+            }
+          ],
+          "submittedAttemptId": "q4-answer:1788850901619:2",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788937301619,
+            "lastReviewedAt": 1788850901619,
+            "lastSessionId": "session-1788850899016-lee5qulmq3m",
+            "evidenceSource": "objective"
+          },
+          "participated": true,
+          "lastInteractionAt": 1788850901619,
+          "notes": "",
+          "bookmarked": false,
+          "flash": {
+            "index": 0,
+            "cards": {}
+          },
+          "stepIndex": 0,
+          "exploration": {},
+          "explorationCount": 0
+        }
+      },
+      "errors": []
+    }
+  ]
+}

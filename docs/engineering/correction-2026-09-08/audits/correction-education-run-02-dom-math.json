@@ -1,0 +1,1977 @@
+[
+  {
+    "id": "intro-mean",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"intro-mean-stat-1\" mathcolor=\"#0F7074\" data-line-id=\"intro-mean\" data-condition-key=\"concept-opening\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"intro-mean-x1-2\" mathcolor=\"#2364AA\" data-line-id=\"intro-mean\" data-condition-key=\"concept-opening\" data-path-id=\"\"><msub><mi>X</mi><mn>1</mn></msub></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"intro-mean-x2-3\" mathcolor=\"#7250A4\" data-line-id=\"intro-mean\" data-condition-key=\"concept-opening\" data-path-id=\"\"><msub><mi>X</mi><mn>2</mn></msub></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=X1+X22两项的平均等于其和除以项数；这里项数是已知的2。"
+  },
+  {
+    "id": "intro-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"intro-sub-stat-4\" mathcolor=\"#0F7074\" data-line-id=\"intro-sub\" data-condition-key=\"concept-opening\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"intro-sub-x1-5\" mathcolor=\"#2364AA\" data-line-id=\"intro-sub\" data-condition-key=\"concept-opening\" data-path-id=\"\"><mn>1</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"intro-sub-x2-6\" mathcolor=\"#7250A4\" data-line-id=\"intro-sub\" data-condition-key=\"concept-opening\" data-path-id=\"\"><mn>5</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=1+52例如沿A→B抽到第一观测1、第二观测5，将两值放入平均式。"
+  },
+  {
+    "id": "intro-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"intro-sum-stat-7\" mathcolor=\"#0F7074\" data-line-id=\"intro-sum\" data-condition-key=\"concept-opening\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=62分子中一加五得到六，分母保持二。"
+  },
+  {
+    "id": "intro-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"intro-result-stat-8\" mathcolor=\"#0F7074\" data-line-id=\"intro-result\" data-condition-key=\"concept-opening\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"intro-result-stat-9\" mathcolor=\"#0F7074\" data-line-id=\"intro-result\" data-condition-key=\"concept-opening\" data-path-id=\"\"><mn>3</mn></mstyle></mrow></math>",
+    "text": "T=3六除以二得到三。这只是这一次样本的mean。"
+  },
+  {
+    "id": "e1b-time-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总检查时间</mtext><mo>=</mo><mn>24</mn><mo>×</mo><mn>1</mn></mrow></math>",
+    "text": "总检查时间=24×1代入24张与每张1分钟，结果的单位为分钟。"
+  },
+  {
+    "id": "e1b-time",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总检查时间</mtext><mo>=</mo><mn>24</mn></mrow></math>",
+    "text": "总检查时间=24计算24乘1；只需24分钟且不损伤底片。"
+  },
+  {
+    "id": "e2-range-rule",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>R</mi><mo>=</mo><mtext>样本最大值</mtext><mo>−</mo><mtext>样本最小值</mtext></mrow></math>",
+    "text": "R=样本最大值−样本最小值这是range的定义，两个值取自同一样本。"
+  },
+  {
+    "id": "e2-max",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>样本最大值</mtext><mo>=</mo><mn>21</mn></mrow></math>",
+    "text": "样本最大值=21逐个比较18、21、19，21不小于另外两个值。"
+  },
+  {
+    "id": "e2-min",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>样本最小值</mtext><mo>=</mo><mn>18</mn></mrow></math>",
+    "text": "样本最小值=18逐个比较18、21、19，18不大于另外两个值。"
+  },
+  {
+    "id": "e2-range-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>R</mi><mo>=</mo><mn>21</mn><mo>−</mo><mn>18</mn></mrow></math>",
+    "text": "R=21−18将样本最大值和最小值代入定义。"
+  },
+  {
+    "id": "e2-range-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>R</mi><mo>=</mo><mn>3</mn></mrow></math>",
+    "text": "R=3计算21减18，极差为3摄氏度。"
+  },
+  {
+    "id": "e2b-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>R</mi><mo>−</mo><mi>μ</mi><mo>=</mo><mn>3</mn><mo>−</mo><mi>μ</mi></mrow></math>",
+    "text": "R−μ=3−μ只替换已计算的R，μ按题面仍未知。"
+  },
+  {
+    "id": "dist-positive",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo><mo>&gt;</mo><mn>0</mn></mrow></math>",
+    "text": "P(E)>0条件事件E有正概率，才能在它发生的范围内重新计算比例。"
+  },
+  {
+    "id": "dist-conditional-definition",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mi>F</mi><mo>|</mo><mi>E</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><mi>E</mi><mo>∩</mo><mi>F</mi><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo></mrow></mfrac></mrow></math>",
+    "text": "P(F|E)=P(E∩F)P(E)给定E后，只把E的全部机会当作新的整体；同时属于E和F的机会占这个整体的比例，定义为条件概率。"
+  },
+  {
+    "id": "dist-conditional-multiply",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mi>F</mi><mo>|</mo><mi>E</mi><mo>)</mo><mo>×</mo><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><mi>E</mi><mo>∩</mo><mi>F</mi><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo></mrow></mfrac><mo>×</mo><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo></mrow></math>",
+    "text": "P(F|E)×P(E)=P(E∩F)P(E)×P(E)等式两边同乘正数P(E)，等式仍成立。"
+  },
+  {
+    "id": "dist-product-cancel",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mi>F</mi><mo>|</mo><mi>E</mi><mo>)</mo><mo>×</mo><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>E</mi><mo>∩</mo><mi>F</mi><mo>)</mo></mrow></math>",
+    "text": "P(F|E)×P(E)=P(E∩F)右边分母P(E)与乘上的P(E)相消；可相消的依据是P(E)>0。"
+  },
+  {
+    "id": "dist-product-symmetric",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mi>E</mi><mo>∩</mo><mi>F</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>F</mi><mo>|</mo><mi>E</mi><mo>)</mo><mo>×</mo><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo></mrow></math>",
+    "text": "P(E∩F)=P(F|E)×P(E)等式左右交换仍成立。"
+  },
+  {
+    "id": "dist-product-rule",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mi>E</mi><mo>∩</mo><mi>F</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>E</mi><mo>)</mo><mo>×</mo><mi>P</mi><mo>(</mo><mi>F</mi><mo>|</mo><mi>E</mi><mo>)</mo></mrow></math>",
+    "text": "P(E∩F)=P(E)×P(F|E)两个实数相乘满足交换律，把第一事件概率放在前面。"
+  },
+  {
+    "id": "dist-independent",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mi>F</mi><mo>|</mo><mi>E</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>F</mi><mo>)</mo></mrow></math>",
+    "text": "P(F|E)=P(F)若两次抽取独立，给定第一抽不会改变第二抽机会；这是独立在此处所提供的内容。"
+  },
+  {
+    "id": "main-wr-AA-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AA-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-AA-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-AA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AA\"><mn>1</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-AA-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-AA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AA\"><mn>1</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=1+12将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-AA-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AA-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AA-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=22先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-AA-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AA-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AA-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AA\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AA-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AA-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AA\"><mn>1</mn></mstyle></mrow></math>",
+    "text": "T=1将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-AA-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(AA)=13×13第一抽在3个身份中均匀选A；放回且独立，第二抽仍在3个身份中均匀选A。"
+  },
+  {
+    "id": "main-wr-AA-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AA)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-AA-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AA)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-AA-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(AA)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-AB-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AB-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-AB-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-AB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AB\"><mn>1</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-AB-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-AB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AB\"><mn>5</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=1+52将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-AB-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AB-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AB-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=62先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-AB-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AB-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AB-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AB\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AB-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AB-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AB\"><mn>3</mn></mstyle></mrow></math>",
+    "text": "T=3将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-AB-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(AB)=13×13第一抽在3个身份中均匀选A；放回且独立，第二抽仍在3个身份中均匀选B。"
+  },
+  {
+    "id": "main-wr-AB-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AB)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-AB-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AB)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-AB-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(AB)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-AC-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AC-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-AC-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-AC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AC\"><mn>1</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-AC-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-AC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AC\"><mn>9</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=1+92将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-AC-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AC-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AC-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-AC-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AC-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AC-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AC\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-AC-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-AC-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"AC\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-AC-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(AC)=13×13第一抽在3个身份中均匀选A；放回且独立，第二抽仍在3个身份中均匀选C。"
+  },
+  {
+    "id": "main-wr-AC-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AC)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-AC-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AC)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-AC-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(AC)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-BA-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BA-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-BA-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-BA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BA\"><mn>5</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-BA-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-BA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BA\"><mn>1</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=5+12将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-BA-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BA-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BA-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=62先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-BA-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BA-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BA-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BA\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BA-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BA-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BA\"><mn>3</mn></mstyle></mrow></math>",
+    "text": "T=3将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-BA-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(BA)=13×13第一抽在3个身份中均匀选B；放回且独立，第二抽仍在3个身份中均匀选A。"
+  },
+  {
+    "id": "main-wr-BA-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BA)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-BA-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BA)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-BA-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(BA)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-BB-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BB-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-BB-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-BB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BB\"><mn>5</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-BB-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-BB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BB\"><mn>5</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=5+52将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-BB-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BB-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BB-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-BB-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BB-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BB-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BB\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BB-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BB-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BB\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-BB-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(BB)=13×13第一抽在3个身份中均匀选B；放回且独立，第二抽仍在3个身份中均匀选B。"
+  },
+  {
+    "id": "main-wr-BB-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BB)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-BB-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BB)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-BB-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(BB)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-BC-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BC-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-BC-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-BC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BC\"><mn>5</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-BC-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-BC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BC\"><mn>9</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=5+92将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-BC-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BC-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BC-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>14</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=142先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-BC-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BC-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BC-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BC\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-BC-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-BC-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"BC\"><mn>7</mn></mstyle></mrow></math>",
+    "text": "T=7将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-BC-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(BC)=13×13第一抽在3个身份中均匀选B；放回且独立，第二抽仍在3个身份中均匀选C。"
+  },
+  {
+    "id": "main-wr-BC-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BC)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-BC-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BC)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-BC-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(BC)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-CA-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CA-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-CA-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-CA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CA\"><mn>9</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-CA-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-CA-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CA\"><mn>1</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=9+12将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-CA-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CA-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CA-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-CA-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CA-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CA-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CA\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CA-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CA-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CA\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-CA-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(CA)=13×13第一抽在3个身份中均匀选C；放回且独立，第二抽仍在3个身份中均匀选A。"
+  },
+  {
+    "id": "main-wr-CA-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CA)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-CA-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CA)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-CA-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(CA)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-CB-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CB-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-CB-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-CB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CB\"><mn>9</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-CB-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-CB-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CB\"><mn>5</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=9+52将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-CB-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CB-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CB-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>14</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=142先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-CB-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CB-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CB-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CB\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CB-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CB-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CB\"><mn>7</mn></mstyle></mrow></math>",
+    "text": "T=7将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-CB-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(CB)=13×13第一抽在3个身份中均匀选C；放回且独立，第二抽仍在3个身份中均匀选B。"
+  },
+  {
+    "id": "main-wr-CB-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CB)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-CB-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CB)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-CB-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(CB)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-CC-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CC-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wr-CC-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wr-CC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CC\"><mn>9</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wr-CC-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wr-CC-sub\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CC\"><mn>9</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=9+92将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wr-CC-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CC-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CC-sum\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>18</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=182先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wr-CC-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CC-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CC-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CC\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-CC-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-CC-result\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"CC\"><mn>9</mn></mstyle></mrow></math>",
+    "text": "T=9将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wr-CC-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(CC)=13×13第一抽在3个身份中均匀选C；放回且独立，第二抽仍在3个身份中均匀选C。"
+  },
+  {
+    "id": "main-wr-CC-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CC)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wr-CC-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CC)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wr-CC-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(CC)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wr-bar-1",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-1-stat-55\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-1\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-1-stat-56\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-1\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>1</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=1)=19原像只有AA这一项，直接取它的路径概率；没有额外相加。"
+  },
+  {
+    "id": "main-wr-bar-3-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-3-add-stat-57\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-3-add\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-3-add-stat-58\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-3-add\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>3</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=3)=19+19各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "main-wr-bar-3-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-3-numerators-stat-59\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-3-numerators\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-3-numerators-stat-60\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-3-numerators\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>3</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=3)=1+19这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "main-wr-bar-3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-3-stat-61\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-3\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-3-stat-62\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-3\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>3</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=3)=29将2个分子1相加得到2。"
+  },
+  {
+    "id": "main-wr-bar-5-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-add-stat-63\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5-add\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-add-stat-64\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5-add\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=19+19+19各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "main-wr-bar-5-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-numerators-stat-65\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5-numerators\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-numerators-stat-66\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5-numerators\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=1+1+19这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "main-wr-bar-5-count",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-count-stat-67\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5-count\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-count-stat-68\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5-count\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=39将3个分子1相加得到3。"
+  },
+  {
+    "id": "main-wr-bar-5",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-stat-69\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-5-stat-70\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-5\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=13分子3与分母9同除公因数3，值不变。"
+  },
+  {
+    "id": "main-wr-bar-7-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-7-add-stat-71\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-7-add\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-7-add-stat-72\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-7-add\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>7</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=7)=19+19各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "main-wr-bar-7-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-7-numerators-stat-73\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-7-numerators\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-7-numerators-stat-74\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-7-numerators\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>7</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=7)=1+19这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "main-wr-bar-7",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-7-stat-75\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-7\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-7-stat-76\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-7\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>7</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=7)=29将2个分子1相加得到2。"
+  },
+  {
+    "id": "main-wr-bar-9",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-9-stat-77\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-9\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wr-bar-9-stat-78\" mathcolor=\"#0F7074\" data-line-id=\"main-wr-bar-9\" data-condition-key=\"main-wr-mean-v1\" data-path-id=\"\"><mn>9</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=9)=19原像只有CC这一项，直接取它的路径概率；没有额外相加。"
+  },
+  {
+    "id": "main-wr-mass-start",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "总概率=19+29+13+29+19把表中全部非零输出的概率相加；零项不改变总和。"
+  },
+  {
+    "id": "main-wr-mass-common",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=19+29+39+29+19把各分数改写成分母9，每项分子、分母同乘相同的正整数。"
+  },
+  {
+    "id": "main-wr-mass-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=1+2+3+2+19分母已经相同，保留分母、相加分子。"
+  },
+  {
+    "id": "main-wr-mass-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>9</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=99计算分子中的整数和。"
+  },
+  {
+    "id": "main-wr-mass-one",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mn>1</mn></mrow></math>",
+    "text": "总概率=1分子与非零分母相同，所以这个商等于一。"
+  },
+  {
+    "id": "main-wo-AA-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AA</mtext><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(AA)=0该路径不在本机制的允许样本空间中，概率为零。"
+  },
+  {
+    "id": "main-wo-AB-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AB-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AB-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wo-AB-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wo-AB-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AB\"><mn>1</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wo-AB-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wo-AB-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AB\"><mn>5</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=1+52将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wo-AB-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AB-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AB-sum\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=62先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wo-AB-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AB-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AB-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AB\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AB-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AB-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AB\"><mn>3</mn></mstyle></mrow></math>",
+    "text": "T=3将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wo-AB-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(AB)=13×12第一抽在3个身份中均匀选A；给定已取走A，第二抽只在剩下2个身份中均匀选B。"
+  },
+  {
+    "id": "main-wo-AB-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AB)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wo-AB-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AB)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wo-AB-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(AB)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wo-AC-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AC-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AC-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wo-AC-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wo-AC-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AC\"><mn>1</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wo-AC-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wo-AC-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AC\"><mn>9</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=1+92将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wo-AC-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AC-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AC-sum\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wo-AC-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AC-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AC-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AC\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-AC-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-AC-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"AC\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wo-AC-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(AC)=13×12第一抽在3个身份中均匀选A；给定已取走A，第二抽只在剩下2个身份中均匀选C。"
+  },
+  {
+    "id": "main-wo-AC-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AC)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wo-AC-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(AC)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wo-AC-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>AC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(AC)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wo-BA-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BA-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BA-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wo-BA-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wo-BA-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BA\"><mn>5</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wo-BA-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wo-BA-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BA\"><mn>1</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=5+12将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wo-BA-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BA-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BA-sum\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=62先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wo-BA-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BA-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BA-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BA\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BA-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BA-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BA\"><mn>3</mn></mstyle></mrow></math>",
+    "text": "T=3将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wo-BA-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(BA)=13×12第一抽在3个身份中均匀选B；给定已取走B，第二抽只在剩下2个身份中均匀选A。"
+  },
+  {
+    "id": "main-wo-BA-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BA)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wo-BA-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BA)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wo-BA-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(BA)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wo-BB-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BB</mtext><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(BB)=0该路径不在本机制的允许样本空间中，概率为零。"
+  },
+  {
+    "id": "main-wo-BC-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BC-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BC-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wo-BC-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wo-BC-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BC\"><mn>5</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wo-BC-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wo-BC-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BC\"><mn>9</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=5+92将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wo-BC-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BC-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BC-sum\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BC\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>14</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=142先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wo-BC-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BC-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BC-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BC\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-BC-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-BC-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"BC\"><mn>7</mn></mstyle></mrow></math>",
+    "text": "T=7将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wo-BC-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(BC)=13×12第一抽在3个身份中均匀选B；给定已取走B，第二抽只在剩下2个身份中均匀选C。"
+  },
+  {
+    "id": "main-wo-BC-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BC)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wo-BC-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(BC)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wo-BC-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>BC</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(BC)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wo-CA-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CA-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CA-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wo-CA-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wo-CA-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CA\"><mn>9</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wo-CA-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wo-CA-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CA\"><mn>1</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=9+12将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wo-CA-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CA-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CA-sum\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CA\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wo-CA-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CA-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CA-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CA\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CA-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CA-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CA\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wo-CA-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(CA)=13×12第一抽在3个身份中均匀选C；给定已取走C，第二抽只在剩下2个身份中均匀选A。"
+  },
+  {
+    "id": "main-wo-CA-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CA)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wo-CA-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CA)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wo-CA-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CA</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(CA)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wo-CB-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CB-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CB-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"main-wo-CB-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"main-wo-CB-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CB\"><mn>9</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"main-wo-CB-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"main-wo-CB-sub\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CB\"><mn>5</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=9+52将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "main-wo-CB-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CB-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CB-sum\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CB\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>14</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=142先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "main-wo-CB-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CB-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CB-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CB\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-CB-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-CB-result\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"CB\"><mn>7</mn></mstyle></mrow></math>",
+    "text": "T=7将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "main-wo-CB-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(CB)=13×12第一抽在3个身份中均匀选C；给定已取走C，第二抽只在剩下2个身份中均匀选B。"
+  },
+  {
+    "id": "main-wo-CB-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CB)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "main-wo-CB-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(CB)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "main-wo-CB-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CB</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(CB)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "main-wo-CC-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>CC</mtext><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(CC)=0该路径不在本机制的允许样本空间中，概率为零。"
+  },
+  {
+    "id": "main-wo-bar-1",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-1-stat-120\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-1\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-1-stat-121\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-1\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>1</mn></mstyle><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(T=1)=0空事件的概率是零。"
+  },
+  {
+    "id": "main-wo-bar-3-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-add-stat-122\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3-add\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-add-stat-123\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3-add\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>3</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(T=3)=16+16各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "main-wo-bar-3-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-numerators-stat-124\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3-numerators\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-numerators-stat-125\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3-numerators\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>3</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=3)=1+16这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "main-wo-bar-3-count",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-count-stat-126\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3-count\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-count-stat-127\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3-count\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>3</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=3)=26将2个分子1相加得到2。"
+  },
+  {
+    "id": "main-wo-bar-3",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-stat-128\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-3-stat-129\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-3\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>3</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(T=3)=13分子2与分母6同除公因数2，值不变。"
+  },
+  {
+    "id": "main-wo-bar-5-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-add-stat-130\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5-add\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-add-stat-131\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5-add\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=16+16各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "main-wo-bar-5-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-numerators-stat-132\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5-numerators\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-numerators-stat-133\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5-numerators\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=1+16这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "main-wo-bar-5-count",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-count-stat-134\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5-count\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-count-stat-135\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5-count\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=26将2个分子1相加得到2。"
+  },
+  {
+    "id": "main-wo-bar-5",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-stat-136\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-5-stat-137\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-5\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=13分子2与分母6同除公因数2，值不变。"
+  },
+  {
+    "id": "main-wo-bar-7-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-add-stat-138\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7-add\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-add-stat-139\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7-add\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>7</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(T=7)=16+16各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "main-wo-bar-7-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-numerators-stat-140\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7-numerators\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-numerators-stat-141\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7-numerators\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>7</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=7)=1+16这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "main-wo-bar-7-count",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-count-stat-142\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7-count\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-count-stat-143\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7-count\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>7</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=7)=26将2个分子1相加得到2。"
+  },
+  {
+    "id": "main-wo-bar-7",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-stat-144\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-7-stat-145\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-7\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>7</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(T=7)=13分子2与分母6同除公因数2，值不变。"
+  },
+  {
+    "id": "main-wo-bar-9",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-9-stat-146\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-9\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"main-wo-bar-9-stat-147\" mathcolor=\"#0F7074\" data-line-id=\"main-wo-bar-9\" data-condition-key=\"main-wo-mean-v1\" data-path-id=\"\"><mn>9</mn></mstyle><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(T=9)=0空事件的概率是零。"
+  },
+  {
+    "id": "main-wo-mass-start",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "总概率=13+13+13把表中全部非零输出的概率相加；零项不改变总和。"
+  },
+  {
+    "id": "main-wo-mass-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=1+1+13分母已经相同，保留分母、相加分子。"
+  },
+  {
+    "id": "main-wo-mass-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=33计算分子中的整数和。"
+  },
+  {
+    "id": "main-wo-mass-one",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mn>1</mn></mrow></math>",
+    "text": "总概率=1分子与非零分母相同，所以这个商等于一。"
+  },
+  {
+    "id": "example-wr-KK-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-KK-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-KK-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KK\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"example-wr-KK-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"example-wr-KK-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KK\"><mn>0</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"example-wr-KK-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"example-wr-KK-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KK\"><mn>0</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(0,0)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "example-wr-KK-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-KK-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-KK-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KK\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-KK-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-KK-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KK\"><mn>0</mn></mstyle></mrow></math>",
+    "text": "T=0比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "example-wr-KK-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KK</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(KK)=12×12第一抽在2个身份中均匀选K；放回且独立，第二抽仍在2个身份中均匀选K。"
+  },
+  {
+    "id": "example-wr-KK-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KK</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(KK)=1×12×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "example-wr-KK-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KK</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(KK)=12×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "example-wr-KK-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KK</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>",
+    "text": "P(KK)=14分母2乘2得到4；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "example-wr-KL-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-KL-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-KL-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KL\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"example-wr-KL-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"example-wr-KL-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KL\"><mn>0</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"example-wr-KL-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"example-wr-KL-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KL\"><mn>2</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(0,2)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "example-wr-KL-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-KL-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-KL-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KL\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-KL-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-KL-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"KL\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "example-wr-KL-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KL</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(KL)=12×12第一抽在2个身份中均匀选K；放回且独立，第二抽仍在2个身份中均匀选L。"
+  },
+  {
+    "id": "example-wr-KL-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KL</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(KL)=1×12×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "example-wr-KL-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KL</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(KL)=12×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "example-wr-KL-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>KL</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>",
+    "text": "P(KL)=14分母2乘2得到4；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "example-wr-LK-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-LK-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-LK-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LK\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"example-wr-LK-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"example-wr-LK-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LK\"><mn>2</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"example-wr-LK-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"example-wr-LK-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LK\"><mn>0</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(2,0)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "example-wr-LK-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-LK-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-LK-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LK\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-LK-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-LK-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LK\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "example-wr-LK-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LK</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(LK)=12×12第一抽在2个身份中均匀选L；放回且独立，第二抽仍在2个身份中均匀选K。"
+  },
+  {
+    "id": "example-wr-LK-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LK</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(LK)=1×12×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "example-wr-LK-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LK</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(LK)=12×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "example-wr-LK-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LK</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>",
+    "text": "P(LK)=14分母2乘2得到4；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "example-wr-LL-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-LL-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-LL-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LL\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"example-wr-LL-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"example-wr-LL-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LL\"><mn>2</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"example-wr-LL-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"example-wr-LL-sub\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LL\"><mn>2</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(2,2)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "example-wr-LL-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-LL-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-LL-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LL\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-LL-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-LL-result\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"LL\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "example-wr-LL-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LL</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(LL)=12×12第一抽在2个身份中均匀选L；放回且独立，第二抽仍在2个身份中均匀选L。"
+  },
+  {
+    "id": "example-wr-LL-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LL</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(LL)=1×12×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "example-wr-LL-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LL</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(LL)=12×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "example-wr-LL-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>LL</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>",
+    "text": "P(LL)=14分母2乘2得到4；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "example-wr-bar-0",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-0-stat-173\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-0\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-0-stat-174\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-0\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mn>0</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>",
+    "text": "P(T=0)=14原像只有KK这一项，直接取它的路径概率；没有额外相加。"
+  },
+  {
+    "id": "example-wr-bar-2-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-2-add-stat-175\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-2-add\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-2-add-stat-176\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-2-add\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>",
+    "text": "P(T=2)=14+14+14各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "example-wr-bar-2-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-2-numerators-stat-177\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-2-numerators\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-2-numerators-stat-178\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-2-numerators\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=2)=1+1+14这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "example-wr-bar-2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-2-stat-179\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-2\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"example-wr-bar-2-stat-180\" mathcolor=\"#0F7074\" data-line-id=\"example-wr-bar-2\" data-condition-key=\"example-wr-maximum-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=2)=34将3个分子1相加得到3。"
+  },
+  {
+    "id": "example-wr-mass-start",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></math>",
+    "text": "总概率=14+34把表中全部非零输出的概率相加；零项不改变总和。"
+  },
+  {
+    "id": "example-wr-mass-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=1+34分母已经相同，保留分母、相加分子。"
+  },
+  {
+    "id": "example-wr-mass-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=44计算分子中的整数和。"
+  },
+  {
+    "id": "example-wr-mass-one",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mn>1</mn></mrow></math>",
+    "text": "总概率=1分子与非零分母相同，所以这个商等于一。"
+  },
+  {
+    "id": "q2a-expression",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>A</mi><mo>=</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"q2a-expression-x1-1\" mathcolor=\"#2364AA\" data-line-id=\"q2a-expression\" data-condition-key=\"concept-practice-statistic\" data-path-id=\"\"><msub><mi>X</mi><mn>1</mn></msub></mstyle><mo>+</mo><mn>3</mn></mrow></math>",
+    "text": "A=X1+3将文字“第一观测加3小时”写成计算规则；3是已知常数。"
+  },
+  {
+    "id": "q2b-expression",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>B</mi><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"q2b-expression-x1-2\" mathcolor=\"#2364AA\" data-line-id=\"q2b-expression\" data-condition-key=\"concept-practice-statistic\" data-path-id=\"\"><msub><mi>X</mi><mn>1</mn></msub></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"q2b-expression-x2-3\" mathcolor=\"#7250A4\" data-line-id=\"q2b-expression\" data-condition-key=\"concept-practice-statistic\" data-path-id=\"\"><msub><mi>X</mi><mn>2</mn></msub></mstyle><mo>+</mo><msub><mi>X</mi><mn>3</mn></msub></mrow><mrow><mn>3</mn></mrow></mfrac><mo>−</mo><mi>μ</mi></mrow></math>",
+    "text": "B=X1+X2+X33−μ用三项平均的定义展开sample mean；μ保留未知。"
+  },
+  {
+    "id": "task-wr-DD-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DD-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DD-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DD\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-DD-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-DD-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DD\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-DD-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-DD-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DD\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-DD-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DD-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DD-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DD\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=42先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-DD-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DD-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DD-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DD\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DD-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DD-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DD\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-DD-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DD</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(DD)=13×13第一抽在3个身份中均匀选D；放回且独立，第二抽仍在3个身份中均匀选D。"
+  },
+  {
+    "id": "task-wr-DD-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DD</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DD)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-DD-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DD</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DD)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-DD-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DD</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(DD)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-DE-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DE-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-DE-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-DE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DE\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-DE-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-DE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DE\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-DE-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DE-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DE-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=42先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-DE-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DE-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DE-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DE\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DE-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DE-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DE\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-DE-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(DE)=13×13第一抽在3个身份中均匀选D；放回且独立，第二抽仍在3个身份中均匀选E。"
+  },
+  {
+    "id": "task-wr-DE-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DE)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-DE-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DE)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-DE-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(DE)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-DF-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DF-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-DF-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-DF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DF\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-DF-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-DF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DF\"><mn>8</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+82将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-DF-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DF-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DF-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-DF-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DF-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DF-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DF\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-DF-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-DF-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"DF\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-DF-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(DF)=13×13第一抽在3个身份中均匀选D；放回且独立，第二抽仍在3个身份中均匀选F。"
+  },
+  {
+    "id": "task-wr-DF-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DF)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-DF-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DF)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-DF-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(DF)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-ED-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-ED-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-ED-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"ED\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-ED-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-ED-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"ED\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-ED-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-ED-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"ED\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-ED-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-ED-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-ED-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"ED\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=42先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-ED-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-ED-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-ED-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"ED\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-ED-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-ED-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"ED\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-ED-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(ED)=13×13第一抽在3个身份中均匀选E；放回且独立，第二抽仍在3个身份中均匀选D。"
+  },
+  {
+    "id": "task-wr-ED-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(ED)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-ED-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(ED)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-ED-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(ED)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-EE-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EE-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-EE-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-EE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EE\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-EE-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-EE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EE\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-EE-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EE-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EE-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=42先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-EE-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EE-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EE-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EE\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EE-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EE-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EE\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-EE-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(EE)=13×13第一抽在3个身份中均匀选E；放回且独立，第二抽仍在3个身份中均匀选E。"
+  },
+  {
+    "id": "task-wr-EE-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(EE)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-EE-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(EE)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-EE-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(EE)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-EF-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EF-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-EF-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-EF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EF\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-EF-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-EF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EF\"><mn>8</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+82将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-EF-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EF-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EF-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-EF-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EF-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EF-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EF\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-EF-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-EF-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"EF\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-EF-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(EF)=13×13第一抽在3个身份中均匀选E；放回且独立，第二抽仍在3个身份中均匀选F。"
+  },
+  {
+    "id": "task-wr-EF-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(EF)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-EF-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(EF)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-EF-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(EF)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-FD-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FD-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FD-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FD\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-FD-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-FD-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FD\"><mn>8</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-FD-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-FD-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FD\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=8+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-FD-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FD-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FD-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FD\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-FD-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FD-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FD-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FD\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FD-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FD-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FD\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-FD-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(FD)=13×13第一抽在3个身份中均匀选F；放回且独立，第二抽仍在3个身份中均匀选D。"
+  },
+  {
+    "id": "task-wr-FD-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FD)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-FD-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FD)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-FD-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(FD)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-FE-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FE-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-FE-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-FE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FE\"><mn>8</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-FE-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-FE-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FE\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=8+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-FE-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FE-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FE-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-FE-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FE-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FE-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FE\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FE-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FE-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FE\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-FE-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(FE)=13×13第一抽在3个身份中均匀选F；放回且独立，第二抽仍在3个身份中均匀选E。"
+  },
+  {
+    "id": "task-wr-FE-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FE)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-FE-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FE)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-FE-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(FE)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-FF-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FF-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wr-FF-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wr-FF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FF\"><mn>8</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wr-FF-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wr-FF-sub\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FF\"><mn>8</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=8+82将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wr-FF-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FF-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FF-sum\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>16</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=162先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wr-FF-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FF-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FF-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FF\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-FF-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-FF-result\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"FF\"><mn>8</mn></mstyle></mrow></math>",
+    "text": "T=8将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wr-FF-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(FF)=13×13第一抽在3个身份中均匀选F；放回且独立，第二抽仍在3个身份中均匀选F。"
+  },
+  {
+    "id": "task-wr-FF-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FF)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wr-FF-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FF)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wr-FF-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(FF)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wr-bar-2-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-2-add-stat-55\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-2-add\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-2-add-stat-56\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-2-add\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=2)=19+19+19+19各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "task-wr-bar-2-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-2-numerators-stat-57\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-2-numerators\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-2-numerators-stat-58\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-2-numerators\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=2)=1+1+1+19这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "task-wr-bar-2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-2-stat-59\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-2\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-2-stat-60\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-2\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=2)=49将4个分子1相加得到4。"
+  },
+  {
+    "id": "task-wr-bar-5-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-5-add-stat-61\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-5-add\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-5-add-stat-62\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-5-add\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=19+19+19+19各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "task-wr-bar-5-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-5-numerators-stat-63\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-5-numerators\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-5-numerators-stat-64\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-5-numerators\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=1+1+1+19这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "task-wr-bar-5",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-5-stat-65\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-5\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-5-stat-66\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-5\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=49将4个分子1相加得到4。"
+  },
+  {
+    "id": "task-wr-bar-8",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-8-stat-67\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-8\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wr-bar-8-stat-68\" mathcolor=\"#0F7074\" data-line-id=\"task-wr-bar-8\" data-condition-key=\"task-wr-mean-v1\" data-path-id=\"\"><mn>8</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=8)=19原像只有FF这一项，直接取它的路径概率；没有额外相加。"
+  },
+  {
+    "id": "task-wr-mass-start",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mn>4</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "总概率=49+49+19把表中全部非零输出的概率相加；零项不改变总和。"
+  },
+  {
+    "id": "task-wr-mass-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=4+4+19分母已经相同，保留分母、相加分子。"
+  },
+  {
+    "id": "task-wr-mass-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>9</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=99计算分子中的整数和。"
+  },
+  {
+    "id": "task-wr-mass-one",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mn>1</mn></mrow></math>",
+    "text": "总概率=1分子与非零分母相同，所以这个商等于一。"
+  },
+  {
+    "id": "task-wo-DD-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DD</mtext><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(DD)=0该路径不在本机制的允许样本空间中，概率为零。"
+  },
+  {
+    "id": "task-wo-DE-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DE-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DE-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wo-DE-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wo-DE-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DE\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wo-DE-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wo-DE-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DE\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wo-DE-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DE-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DE-sum\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=42先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wo-DE-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DE-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DE-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DE\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DE-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DE-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DE\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wo-DE-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(DE)=13×12第一抽在3个身份中均匀选D；给定已取走D，第二抽只在剩下2个身份中均匀选E。"
+  },
+  {
+    "id": "task-wo-DE-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DE)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wo-DE-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DE)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wo-DE-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(DE)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wo-DF-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DF-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DF-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wo-DF-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wo-DF-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DF\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wo-DF-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wo-DF-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DF\"><mn>8</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+82将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wo-DF-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DF-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DF-sum\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wo-DF-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DF-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DF-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DF\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-DF-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-DF-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"DF\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wo-DF-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(DF)=13×12第一抽在3个身份中均匀选D；给定已取走D，第二抽只在剩下2个身份中均匀选F。"
+  },
+  {
+    "id": "task-wo-DF-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DF)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wo-DF-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(DF)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wo-DF-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>DF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(DF)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wo-ED-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-ED-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-ED-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"ED\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wo-ED-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wo-ED-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"ED\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wo-ED-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wo-ED-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"ED\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wo-ED-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-ED-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-ED-sum\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"ED\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=42先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wo-ED-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-ED-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-ED-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"ED\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-ED-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-ED-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"ED\"><mn>2</mn></mstyle></mrow></math>",
+    "text": "T=2将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wo-ED-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(ED)=13×12第一抽在3个身份中均匀选E；给定已取走E，第二抽只在剩下2个身份中均匀选D。"
+  },
+  {
+    "id": "task-wo-ED-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(ED)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wo-ED-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(ED)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wo-ED-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>ED</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(ED)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wo-EE-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EE</mtext><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(EE)=0该路径不在本机制的允许样本空间中，概率为零。"
+  },
+  {
+    "id": "task-wo-EF-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-EF-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-EF-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"EF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wo-EF-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wo-EF-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"EF\"><mn>2</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wo-EF-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wo-EF-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"EF\"><mn>8</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=2+82将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wo-EF-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-EF-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-EF-sum\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"EF\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wo-EF-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-EF-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-EF-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"EF\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-EF-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-EF-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"EF\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wo-EF-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(EF)=13×12第一抽在3个身份中均匀选E；给定已取走E，第二抽只在剩下2个身份中均匀选F。"
+  },
+  {
+    "id": "task-wo-EF-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(EF)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wo-EF-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(EF)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wo-EF-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>EF</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(EF)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wo-FD-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FD-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FD-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FD\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wo-FD-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wo-FD-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FD\"><mn>8</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wo-FD-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wo-FD-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FD\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=8+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wo-FD-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FD-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FD-sum\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FD\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wo-FD-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FD-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FD-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FD\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FD-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FD-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FD\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wo-FD-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(FD)=13×12第一抽在3个身份中均匀选F；给定已取走F，第二抽只在剩下2个身份中均匀选D。"
+  },
+  {
+    "id": "task-wo-FD-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FD)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wo-FD-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FD)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wo-FD-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FD</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(FD)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wo-FE-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FE-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FE-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"task-wo-FE-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"task-wo-FE-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FE\"><mn>8</mn></mstyle><mo>+</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"task-wo-FE-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"task-wo-FE-sub\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FE\"><mn>2</mn></mstyle></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=8+22将这条路径的第一观测和第二观测分别放入平均公式；分母2是这次样本量。"
+  },
+  {
+    "id": "task-wo-FE-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FE-sum-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FE-sum\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FE\"><mi>T</mi></mstyle><mo>=</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "T=102先计算分子中两个观测值的和；分母保持2。"
+  },
+  {
+    "id": "task-wo-FE-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FE-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FE-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FE\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-FE-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-FE-result\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"FE\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5将分子除以2，得到这条路径的mean；观察单位与原数值相同。"
+  },
+  {
+    "id": "task-wo-FE-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "text": "P(FE)=13×12第一抽在3个身份中均匀选F；给定已取走F，第二抽只在剩下2个身份中均匀选E。"
+  },
+  {
+    "id": "task-wo-FE-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FE)=1×13×2分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "task-wo-FE-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow></math>",
+    "text": "P(FE)=13×2分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "task-wo-FE-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FE</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(FE)=16分母3乘2得到6；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "task-wo-FF-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>FF</mtext><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(FF)=0该路径不在本机制的允许样本空间中，概率为零。"
+  },
+  {
+    "id": "task-wo-bar-2-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-add-stat-108\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2-add\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-add-stat-109\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2-add\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(T=2)=16+16各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "task-wo-bar-2-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-numerators-stat-110\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2-numerators\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-numerators-stat-111\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2-numerators\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=2)=1+16这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "task-wo-bar-2-count",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-count-stat-112\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2-count\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-count-stat-113\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2-count\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=2)=26将2个分子1相加得到2。"
+  },
+  {
+    "id": "task-wo-bar-2",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-stat-114\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-2-stat-115\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-2\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>2</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(T=2)=13分子2与分母6同除公因数2，值不变。"
+  },
+  {
+    "id": "task-wo-bar-5-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-add-stat-116\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5-add\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-add-stat-117\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5-add\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=16+16+16+16各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "task-wo-bar-5-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-numerators-stat-118\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5-numerators\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-numerators-stat-119\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5-numerators\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=1+1+1+16这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "task-wo-bar-5-count",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-count-stat-120\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5-count\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-count-stat-121\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5-count\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=46将4个分子1相加得到4。"
+  },
+  {
+    "id": "task-wo-bar-5",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-stat-122\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-5-stat-123\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-5\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=23分子4与分母6同除公因数2，值不变。"
+  },
+  {
+    "id": "task-wo-bar-8",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-8-stat-124\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-8\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"task-wo-bar-8-stat-125\" mathcolor=\"#0F7074\" data-line-id=\"task-wo-bar-8\" data-condition-key=\"task-wo-mean-v1\" data-path-id=\"\"><mn>8</mn></mstyle><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math>",
+    "text": "P(T=8)=0空事件的概率是零。"
+  },
+  {
+    "id": "task-wo-mass-start",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "总概率=13+23把表中全部非零输出的概率相加；零项不改变总和。"
+  },
+  {
+    "id": "task-wo-mass-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=1+23分母已经相同，保留分母、相加分子。"
+  },
+  {
+    "id": "task-wo-mass-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=33计算分子中的整数和。"
+  },
+  {
+    "id": "task-wo-mass-one",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mn>1</mn></mrow></math>",
+    "text": "总概率=1分子与非零分母相同，所以这个商等于一。"
+  },
+  {
+    "id": "challenge-wr-GG-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GG-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GG\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-GG-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-GG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GG\"><mn>1</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-GG-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-GG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GG\"><mn>1</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(1,1)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-GG-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GG-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GG-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GG\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GG-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GG-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GG\"><mn>1</mn></mstyle></mrow></math>",
+    "text": "T=1比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-GG-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GG</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(GG)=13×13第一抽在3个身份中均匀选G；放回且独立，第二抽仍在3个身份中均匀选G。"
+  },
+  {
+    "id": "challenge-wr-GG-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GG</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(GG)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-GG-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GG</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(GG)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-GG-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GG</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(GG)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-GH-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GH-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GH\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-GH-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-GH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GH\"><mn>1</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-GH-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-GH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GH\"><mn>5</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(1,5)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-GH-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GH-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GH-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GH\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GH-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GH-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GH\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-GH-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GH</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(GH)=13×13第一抽在3个身份中均匀选G；放回且独立，第二抽仍在3个身份中均匀选H。"
+  },
+  {
+    "id": "challenge-wr-GH-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GH</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(GH)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-GH-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GH</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(GH)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-GH-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GH</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(GH)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-GJ-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GJ-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GJ\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-GJ-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-GJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GJ\"><mn>1</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-GJ-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-GJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GJ\"><mn>9</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(1,9)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-GJ-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GJ-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GJ-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GJ\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-GJ-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-GJ-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"GJ\"><mn>9</mn></mstyle></mrow></math>",
+    "text": "T=9比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-GJ-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GJ</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(GJ)=13×13第一抽在3个身份中均匀选G；放回且独立，第二抽仍在3个身份中均匀选J。"
+  },
+  {
+    "id": "challenge-wr-GJ-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GJ</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(GJ)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-GJ-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GJ</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(GJ)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-GJ-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>GJ</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(GJ)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-HG-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HG-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HG\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-HG-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-HG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HG\"><mn>5</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-HG-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-HG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HG\"><mn>1</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(5,1)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-HG-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HG-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HG-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HG\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HG-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HG-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HG\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-HG-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HG</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(HG)=13×13第一抽在3个身份中均匀选H；放回且独立，第二抽仍在3个身份中均匀选G。"
+  },
+  {
+    "id": "challenge-wr-HG-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HG</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(HG)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-HG-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HG</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(HG)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-HG-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HG</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(HG)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-HH-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HH-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HH\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-HH-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-HH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HH\"><mn>5</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-HH-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-HH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HH\"><mn>5</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(5,5)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-HH-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HH-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HH-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HH\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HH-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HH-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HH\"><mn>5</mn></mstyle></mrow></math>",
+    "text": "T=5比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-HH-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HH</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(HH)=13×13第一抽在3个身份中均匀选H；放回且独立，第二抽仍在3个身份中均匀选H。"
+  },
+  {
+    "id": "challenge-wr-HH-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HH</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(HH)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-HH-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HH</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(HH)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-HH-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HH</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(HH)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-HJ-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HJ-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HJ\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-HJ-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-HJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HJ\"><mn>5</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-HJ-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-HJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HJ\"><mn>9</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(5,9)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-HJ-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HJ-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HJ-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HJ\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-HJ-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-HJ-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"HJ\"><mn>9</mn></mstyle></mrow></math>",
+    "text": "T=9比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-HJ-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HJ</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(HJ)=13×13第一抽在3个身份中均匀选H；放回且独立，第二抽仍在3个身份中均匀选J。"
+  },
+  {
+    "id": "challenge-wr-HJ-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HJ</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(HJ)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-HJ-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HJ</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(HJ)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-HJ-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>HJ</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(HJ)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-JG-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JG-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JG\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-JG-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-JG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JG\"><mn>9</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-JG-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-JG-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JG\"><mn>1</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(9,1)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-JG-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JG-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JG-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JG\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JG-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JG-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JG\"><mn>9</mn></mstyle></mrow></math>",
+    "text": "T=9比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-JG-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JG</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(JG)=13×13第一抽在3个身份中均匀选J；放回且独立，第二抽仍在3个身份中均匀选G。"
+  },
+  {
+    "id": "challenge-wr-JG-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JG</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(JG)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-JG-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JG</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(JG)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-JG-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JG</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(JG)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-JH-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JH-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JH\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-JH-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-JH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JH\"><mn>9</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-JH-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-JH-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JH\"><mn>5</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(9,5)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-JH-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JH-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JH-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JH\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JH-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JH-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JH\"><mn>9</mn></mstyle></mrow></math>",
+    "text": "T=9比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-JH-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JH</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(JH)=13×13第一抽在3个身份中均匀选J；放回且独立，第二抽仍在3个身份中均匀选H。"
+  },
+  {
+    "id": "challenge-wr-JH-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JH</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(JH)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-JH-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JH</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(JH)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-JH-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JH</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(JH)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-JJ-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JJ-sub-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JJ\"><mi>T</mi></mstyle><mo>=</mo><mi>max</mi><mo>(</mo><mstyle data-role=\"x1\" data-object-id=\"X1\" data-occurrence=\"challenge-wr-JJ-sub-x1-value\" mathcolor=\"#2364AA\" data-line-id=\"challenge-wr-JJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JJ\"><mn>9</mn></mstyle><mo>,</mo><mstyle data-role=\"x2\" data-object-id=\"X2\" data-occurrence=\"challenge-wr-JJ-sub-x2-value\" mathcolor=\"#7250A4\" data-line-id=\"challenge-wr-JJ-sub\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JJ\"><mn>9</mn></mstyle><mo>)</mo></mrow></math>",
+    "text": "T=max(9,9)max读作取最大值：比较两个观测；相等时这个共同值就是最大值。"
+  },
+  {
+    "id": "challenge-wr-JJ-result",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JJ-result-stat-variable\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JJ-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JJ\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-JJ-result-stat-value\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-JJ-result\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"JJ\"><mn>9</mn></mstyle></mrow></math>",
+    "text": "T=9比较这两个观测后取较大者，得到maximum；这里没有加总再平均。"
+  },
+  {
+    "id": "challenge-wr-JJ-weight-sub",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JJ</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(JJ)=13×13第一抽在3个身份中均匀选J；放回且独立，第二抽仍在3个身份中均匀选J。"
+  },
+  {
+    "id": "challenge-wr-JJ-weight-product",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JJ</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(JJ)=1×13×3分数相乘时，分子相乘、分母相乘；两个分母都为正。"
+  },
+  {
+    "id": "challenge-wr-JJ-weight-numerator",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JJ</mtext><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></mfrac></mrow></math>",
+    "text": "P(JJ)=13×3分子的一乘一得到一，分母的乘积暂时保留。"
+  },
+  {
+    "id": "challenge-wr-JJ-weight",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mtext>JJ</mtext><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(JJ)=19分母3乘3得到9；分子为1，因此已是最简分数。"
+  },
+  {
+    "id": "challenge-wr-bar-1",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-1-stat-46\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-1\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-1-stat-47\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-1\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>1</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=1)=19原像只有GG这一项，直接取它的路径概率；没有额外相加。"
+  },
+  {
+    "id": "challenge-wr-bar-5-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-add-stat-48\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5-add\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-add-stat-49\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5-add\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=19+19+19各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "challenge-wr-bar-5-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-numerators-stat-50\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5-numerators\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-numerators-stat-51\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5-numerators\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=1+1+19这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "challenge-wr-bar-5-count",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-count-stat-52\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5-count\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-count-stat-53\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5-count\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=5)=39将3个分子1相加得到3。"
+  },
+  {
+    "id": "challenge-wr-bar-5",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-stat-54\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-5-stat-55\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-5\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>5</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+    "text": "P(T=5)=13分子3与分母9同除公因数3，值不变。"
+  },
+  {
+    "id": "challenge-wr-bar-9-add",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-9-add-stat-56\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-9-add\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-9-add-stat-57\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-9-add\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>9</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "P(T=9)=19+19+19+19+19各原像路径互斥，使用概率加法法则；每一项对应一个列出的身份路径。"
+  },
+  {
+    "id": "challenge-wr-bar-9-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-9-numerators-stat-58\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-9-numerators\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-9-numerators-stat-59\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-9-numerators\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>9</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=9)=1+1+1+1+19这些分数已具有相同分母，保留分母并把分子写成和；没有改变分母。"
+  },
+  {
+    "id": "challenge-wr-bar-9",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>P</mi><mo>(</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-9-stat-60\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-9\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mi>T</mi></mstyle><mo>=</mo><mstyle data-role=\"stat\" data-object-id=\"T\" data-occurrence=\"challenge-wr-bar-9-stat-61\" mathcolor=\"#0F7074\" data-line-id=\"challenge-wr-bar-9\" data-condition-key=\"challenge-wr-maximum-v1\" data-path-id=\"\"><mn>9</mn></mstyle><mo>)</mo><mo>=</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "P(T=9)=59将5个分子1相加得到5。"
+  },
+  {
+    "id": "challenge-wr-mass-start",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>5</mn><mn>9</mn></mfrac></mrow></math>",
+    "text": "总概率=19+13+59把表中全部非零输出的概率相加；零项不改变总和。"
+  },
+  {
+    "id": "challenge-wr-mass-common",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=19+39+59把各分数改写成分母9，每项分子、分母同乘相同的正整数。"
+  },
+  {
+    "id": "challenge-wr-mass-numerators",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>5</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=1+3+59分母已经相同，保留分母、相加分子。"
+  },
+  {
+    "id": "challenge-wr-mass-sum",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mfrac><mrow><mn>9</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>",
+    "text": "总概率=99计算分子中的整数和。"
+  },
+  {
+    "id": "challenge-wr-mass-one",
+    "math": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mtext>总概率</mtext><mo>=</mo><mn>1</mn></mrow></math>",
+    "text": "总概率=1分子与非零分母相同，所以这个商等于一。"
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "dataSHA256": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+  "method": "Root independent product enumeration from fixed blueprint inputs; no author calculation functions used. Zero-weight forbidden identities retained and checked.",
+  "results": [
+    {
+      "condition": "main-wr-mean-v1",
+      "path_records": 9,
+      "allowed_paths": 9,
+      "bars": 5,
+      "pass": true
+    },
+    {
+      "condition": "main-wo-mean-v1",
+      "path_records": 9,
+      "allowed_paths": 6,
+      "bars": 5,
+      "pass": true
+    },
+    {
+      "condition": "task-wr-mean-v1",
+      "path_records": 9,
+      "allowed_paths": 9,
+      "bars": 3,
+      "pass": true
+    },
+    {
+      "condition": "task-wo-mean-v1",
+      "path_records": 9,
+      "allowed_paths": 6,
+      "bars": 3,
+      "pass": true
+    },
+    {
+      "condition": "example-wr-maximum-v1",
+      "path_records": 4,
+      "allowed_paths": 4,
+      "bars": 2,
+      "pass": true
+    },
+    {
+      "condition": "challenge-wr-maximum-v1",
+      "path_records": 9,
+      "allowed_paths": 9,
+      "bars": 3,
+      "pass": true
+    }
+  ],
+  "html_validated": false
+}

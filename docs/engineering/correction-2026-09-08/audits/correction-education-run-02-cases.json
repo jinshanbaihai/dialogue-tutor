@@ -1,0 +1,116 @@
+{
+  "main-wr-mean-v1": {
+    "units": [
+      {
+        "id": "A",
+        "value": 1
+      },
+      {
+        "id": "B",
+        "value": 5
+      },
+      {
+        "id": "C",
+        "value": 9
+      }
+    ],
+    "sample_size": 2,
+    "replacement": true,
+    "statistic": "mean"
+  },
+  "main-wo-mean-v1": {
+    "units": [
+      {
+        "id": "A",
+        "value": 1
+      },
+      {
+        "id": "B",
+        "value": 5
+      },
+      {
+        "id": "C",
+        "value": 9
+      }
+    ],
+    "sample_size": 2,
+    "replacement": false,
+    "statistic": "mean"
+  },
+  "task-wr-mean-v1": {
+    "units": [
+      {
+        "id": "D",
+        "value": 2
+      },
+      {
+        "id": "E",
+        "value": 2
+      },
+      {
+        "id": "F",
+        "value": 8
+      }
+    ],
+    "sample_size": 2,
+    "replacement": true,
+    "statistic": "mean"
+  },
+  "task-wo-mean-v1": {
+    "units": [
+      {
+        "id": "D",
+        "value": 2
+      },
+      {
+        "id": "E",
+        "value": 2
+      },
+      {
+        "id": "F",
+        "value": 8
+      }
+    ],
+    "sample_size": 2,
+    "replacement": false,
+    "statistic": "mean"
+  },
+  "example-wr-maximum-v1": {
+    "units": [
+      {
+        "id": "K",
+        "value": 0
+      },
+      {
+        "id": "L",
+        "value": 2
+      }
+    ],
+    "sample_size": 2,
+    "replacement": true,
+    "statistic": "maximum"
+  },
+  "challenge-wr-maximum-v1": {
+    "units": [
+      {
+        "id": "G",
+        "value": 1
+      },
+      {
+        "id": "H",
+        "value": 5
+      },
+      {
+        "id": "J",
+        "value": 9
+      }
+    ],
+    "sample_size": 2,
+    "replacement": true,
+    "statistic": "maximum",
+    "event": {
+      "op": "eq",
+      "value": 5
+    }
+  }
+}

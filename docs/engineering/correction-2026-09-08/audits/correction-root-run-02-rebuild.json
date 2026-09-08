@@ -1,0 +1,6 @@
+{
+  "outputSHA256": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+  "frozenHTMLSHA256": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+  "byteEqual": true,
+  "scope": "Deterministic approved builder reconstructs frozen HTML; not model generation stability."
+}

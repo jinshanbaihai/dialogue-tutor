@@ -1,0 +1,1482 @@
+{
+  "htmlSha256": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7",
+  "scope": "Independent final HTML native jsdom events. Geometry/scrollIntoView and Image are explicit branch fixtures, no browser/layout/image decode claim. Image callbacks were not needed by these assertions.",
+  "results": [
+    {
+      "id": "A01 frozen inline JSON",
+      "status": "PASS",
+      "evidence": {
+        "html": "7941f152c7f7eeedad7ca002dbd5602047ec9ba11f96ee16b6d7d2e127fe76d7"
+      }
+    },
+    {
+      "id": "A02 root readable extraction verified",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "opening",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "survey",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "statistic",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "distribution",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "practice-survey",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "practice-statistic",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "practice-construct",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "practice-maximum",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "lesson-ending",
+          "body": true,
+          "text": true
+        },
+        {
+          "id": "sources",
+          "body": true,
+          "text": true
+        }
+      ]
+    },
+    {
+      "id": "A03 ten activities no typing answers",
+      "status": "PASS",
+      "evidence": {
+        "mounted": 10,
+        "editable": [
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          },
+          {
+            "tag": "TEXTAREA",
+            "class": "dt-input",
+            "name": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "B01 no mapping rows before own path selection",
+      "status": "PASS",
+      "evidence": "有放回 · 独立均匀无放回 · 剩余均匀1 · 选择你认为允许的完整有序路径集合DDDEDFEDEEEFFDFEFF2 · 给你所选的每条路径选择mean先在第1组选择你自己的路径。这里不会替你补路径。3 · 选择各允许身份路径的权重与理由请选择1/3 × 1/3 = 1/9；两抽独立且各从三枚均匀选1/3 × 1/2 = 1/6；给定第一抽，第二抽从剩余两枚均匀选1/9；删掉不允许路径后仍沿用有放回的旧权重1/3；把三种mean直接当成等可能结果4 · 为候选输出填写归并概率（可选择0）mean 2：请选择01/92/91/34/91/22/38/91mean 5：请选择01/92/91/34/91/22/38/91mean 8：请选择01/92/91/34/91/22/38/91统一提交四组重开本条件草稿先跳过，仍可看完整例题"
+    },
+    {
+      "id": "B02 own draft drives mapping without standard completion",
+      "status": "PASS",
+      "evidence": {
+        "draft": {
+          "paths": [
+            "DE"
+          ],
+          "mapping": {},
+          "weight": null,
+          "distribution": {}
+        },
+        "activeId": null,
+        "skipped": false
+      }
+    },
+    {
+      "id": "B03 incomplete mapping/weight/distribution does not freeze or disclose answer",
+      "status": "FAIL",
+      "evidence": {
+        "submission": {
+          "id": "task-wr-mean-v1-1788851039699-1",
+          "conditionKey": "task-wr-mean-v1",
+          "at": 1788851039699,
+          "draft": {
+            "paths": [
+              "DE"
+            ],
+            "mapping": {},
+            "weight": null,
+            "distribution": {}
+          },
+          "check": {
+            "missing": [
+              "DD",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "extra": [],
+            "matched": [
+              "DE"
+            ],
+            "mapping": [
+              "DE"
+            ],
+            "weight": true,
+            "distribution": [
+              "2",
+              "5",
+              "8"
+            ],
+            "correct": false
+          },
+          "assistance": []
+        },
+        "visible": "本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DE；缺少路径：DD、DF、ED、EE、EF、FD、FE、FF；多选路径：无。DD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导DF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导ED：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导EF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,8；当前路径权重：19。 查看此路径的逐行推导FD：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FE：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,2；当前路径权重：19。 查看此路径的逐行推导FF：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：8,8；当前路径权重：19。 查看此路径的逐行推导DE：你的mean映射需按两个观测重新代入。  两个观测：2,2；当前路径权重：19。 查看此路径的逐行推导每条身份路径是两次独立均匀抽取，故权重为1/3 × 1/3 = 1/9；输出mean没有因此等可能。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DD、DE、ED、EE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 8的原像为FF；当前每条允许原像路径的权重为1/9，互斥相加后的概率为1/9。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。重新计算第二抽的条件权重"
+      }
+    },
+    {
+      "id": "B04 full WR independently verified and double submit blocked",
+      "status": "PASS",
+      "evidence": {
+        "id": "task-wr-mean-v1-1788851044502-2",
+        "conditionKey": "task-wr-mean-v1",
+        "at": 1788851044502,
+        "draft": {
+          "paths": [
+            "DD",
+            "DE",
+            "DF",
+            "ED",
+            "EE",
+            "EF",
+            "FD",
+            "FE",
+            "FF"
+          ],
+          "mapping": {
+            "DD": "2",
+            "DE": "2",
+            "DF": "5",
+            "ED": "2",
+            "EE": "2",
+            "EF": "5",
+            "FD": "5",
+            "FE": "5",
+            "FF": "8"
+          },
+          "weight": "independent",
+          "distribution": {
+            "2": "4/9",
+            "5": "4/9",
+            "8": "1/9"
+          }
+        },
+        "check": {
+          "missing": [],
+          "extra": [],
+          "matched": [
+            "DD",
+            "DE",
+            "DF",
+            "ED",
+            "EE",
+            "EF",
+            "FD",
+            "FE",
+            "FF"
+          ],
+          "mapping": [],
+          "weight": false,
+          "distribution": [],
+          "correct": true
+        },
+        "assistance": [
+          "construction-feedback-task-wr-mean-v1"
+        ]
+      }
+    },
+    {
+      "id": "B05 same-value identities kept in full WO",
+      "status": "PASS",
+      "evidence": {
+        "id": "task-wo-mean-v1-1788851045935-3",
+        "conditionKey": "task-wo-mean-v1",
+        "at": 1788851045935,
+        "draft": {
+          "paths": [
+            "DE",
+            "DF",
+            "ED",
+            "EF",
+            "FD",
+            "FE"
+          ],
+          "mapping": {
+            "DE": "2",
+            "DF": "5",
+            "ED": "2",
+            "EF": "5",
+            "FD": "5",
+            "FE": "5"
+          },
+          "weight": "remaining",
+          "distribution": {
+            "2": "1/3",
+            "5": "2/3",
+            "8": "0"
+          }
+        },
+        "check": {
+          "missing": [],
+          "extra": [],
+          "matched": [
+            "DE",
+            "DF",
+            "ED",
+            "EF",
+            "FD",
+            "FE"
+          ],
+          "mapping": [],
+          "weight": false,
+          "distribution": [],
+          "correct": true
+        },
+        "assistance": []
+      }
+    },
+    {
+      "id": "B06 per-condition frozen history restored",
+      "status": "PASS",
+      "evidence": {
+        "task-wr-mean-v1": {
+          "draft": {
+            "paths": [
+              "DD",
+              "DE",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "mapping": {
+              "DD": "2",
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EE": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5",
+              "FF": "8"
+            },
+            "weight": "independent",
+            "distribution": {
+              "2": "4/9",
+              "5": "4/9",
+              "8": "1/9"
+            }
+          },
+          "activeId": "task-wr-mean-v1-1788851044502-2",
+          "skipped": false
+        },
+        "task-wo-mean-v1": {
+          "draft": {
+            "paths": [
+              "DE",
+              "DF",
+              "ED",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": {
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5"
+            },
+            "weight": "remaining",
+            "distribution": {
+              "2": "1/3",
+              "5": "2/3",
+              "8": "0"
+            }
+          },
+          "activeId": "task-wo-mean-v1-1788851045935-3",
+          "skipped": false
+        }
+      }
+    },
+    {
+      "id": "C01 native summary immediate complete submit records source",
+      "status": "PASS",
+      "evidence": {
+        "id": "task-wr-mean-v1-1788851051974-1",
+        "conditionKey": "task-wr-mean-v1",
+        "at": 1788851051974,
+        "draft": {
+          "paths": [
+            "DD",
+            "DE",
+            "DF",
+            "ED",
+            "EE",
+            "EF",
+            "FD",
+            "FE",
+            "FF"
+          ],
+          "mapping": {
+            "DD": "2",
+            "DE": "2",
+            "DF": "5",
+            "ED": "2",
+            "EE": "2",
+            "EF": "5",
+            "FD": "5",
+            "FE": "5",
+            "FF": "8"
+          },
+          "weight": "independent",
+          "distribution": {
+            "2": "4/9",
+            "5": "4/9",
+            "8": "1/9"
+          }
+        },
+        "check": {
+          "missing": [],
+          "extra": [],
+          "matched": [
+            "DD",
+            "DE",
+            "DF",
+            "ED",
+            "EE",
+            "EF",
+            "FD",
+            "FE",
+            "FF"
+          ],
+          "mapping": [],
+          "weight": false,
+          "distribution": [],
+          "correct": true
+        },
+        "assistance": [
+          "q3a-solution-wr"
+        ]
+      }
+    },
+    {
+      "id": "C02 old import immediate export retains reference and frozen work",
+      "status": "PASS",
+      "evidence": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "build-sample",
+        "conditionKey": "task-wr-mean-v1",
+        "rounds": {
+          "task-wr-mean-v1": {
+            "draft": {
+              "paths": [
+                "DD",
+                "DE",
+                "DF",
+                "ED",
+                "EE",
+                "EF",
+                "FD",
+                "FE",
+                "FF"
+              ],
+              "mapping": {
+                "DD": "2",
+                "DE": "2",
+                "DF": "5",
+                "ED": "2",
+                "EE": "2",
+                "EF": "5",
+                "FD": "5",
+                "FE": "5",
+                "FF": "8"
+              },
+              "weight": "independent",
+              "distribution": {
+                "2": "4/9",
+                "5": "4/9",
+                "8": "1/9"
+              }
+            },
+            "activeId": null,
+            "skipped": false
+          },
+          "task-wo-mean-v1": {
+            "draft": {
+              "paths": [],
+              "mapping": {},
+              "weight": null,
+              "distribution": {}
+            },
+            "activeId": null,
+            "skipped": false
+          }
+        },
+        "contacts": {
+          "task-wr-mean-v1": {
+            "q3a-solution-wr": 1788851051960,
+            "construction-feedback-task-wr-mean-v1": 1788851051979
+          },
+          "task-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [
+          "q3a-solution"
+        ],
+        "submissions": [
+          {
+            "id": "task-wr-mean-v1-1788851051974-1",
+            "conditionKey": "task-wr-mean-v1",
+            "at": 1788851051974,
+            "draft": {
+              "paths": [
+                "DD",
+                "DE",
+                "DF",
+                "ED",
+                "EE",
+                "EF",
+                "FD",
+                "FE",
+                "FF"
+              ],
+              "mapping": {
+                "DD": "2",
+                "DE": "2",
+                "DF": "5",
+                "ED": "2",
+                "EE": "2",
+                "EF": "5",
+                "FD": "5",
+                "FE": "5",
+                "FF": "8"
+              },
+              "weight": "independent",
+              "distribution": {
+                "2": "4/9",
+                "5": "4/9",
+                "8": "1/9"
+              }
+            },
+            "check": {
+              "missing": [],
+              "extra": [],
+              "matched": [
+                "DD",
+                "DE",
+                "DF",
+                "ED",
+                "EE",
+                "EF",
+                "FD",
+                "FE",
+                "FF"
+              ],
+              "mapping": [],
+              "weight": false,
+              "distribution": [],
+              "correct": true
+            },
+            "assistance": [
+              "q3a-solution-wr"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "C03 real localStorage new window retains revealed solution",
+      "status": "PASS",
+      "evidence": {
+        "stateVersion": 1,
+        "dataHash": "9695b34b11bbe735fb06a6ce73e335533beeef067cd6b4311b3026feb2f1ceaa",
+        "componentId": "build-sample",
+        "conditionKey": "task-wr-mean-v1",
+        "rounds": {
+          "task-wr-mean-v1": {
+            "draft": {
+              "paths": [
+                "DD",
+                "DE",
+                "DF",
+                "ED",
+                "EE",
+                "EF",
+                "FD",
+                "FE",
+                "FF"
+              ],
+              "mapping": {
+                "DD": "2",
+                "DE": "2",
+                "DF": "5",
+                "ED": "2",
+                "EE": "2",
+                "EF": "5",
+                "FD": "5",
+                "FE": "5",
+                "FF": "8"
+              },
+              "weight": "independent",
+              "distribution": {
+                "2": "4/9",
+                "5": "4/9",
+                "8": "1/9"
+              }
+            },
+            "activeId": null,
+            "skipped": false
+          },
+          "task-wo-mean-v1": {
+            "draft": {
+              "paths": [],
+              "mapping": {},
+              "weight": null,
+              "distribution": {}
+            },
+            "activeId": null,
+            "skipped": false
+          }
+        },
+        "contacts": {
+          "task-wr-mean-v1": {
+            "q3a-solution-wr": 1788851051960,
+            "construction-feedback-task-wr-mean-v1": 1788851051979
+          },
+          "task-wo-mean-v1": {}
+        },
+        "visibleSolutionIds": [
+          "q3a-solution"
+        ],
+        "submissions": [
+          {
+            "id": "task-wr-mean-v1-1788851051974-1",
+            "conditionKey": "task-wr-mean-v1",
+            "at": 1788851051974,
+            "draft": {
+              "paths": [
+                "DD",
+                "DE",
+                "DF",
+                "ED",
+                "EE",
+                "EF",
+                "FD",
+                "FE",
+                "FF"
+              ],
+              "mapping": {
+                "DD": "2",
+                "DE": "2",
+                "DF": "5",
+                "ED": "2",
+                "EE": "2",
+                "EF": "5",
+                "FD": "5",
+                "FE": "5",
+                "FF": "8"
+              },
+              "weight": "independent",
+              "distribution": {
+                "2": "4/9",
+                "5": "4/9",
+                "8": "1/9"
+              }
+            },
+            "check": {
+              "missing": [],
+              "extra": [],
+              "matched": [
+                "DD",
+                "DE",
+                "DF",
+                "ED",
+                "EE",
+                "EF",
+                "FD",
+                "FE",
+                "FF"
+              ],
+              "mapping": [],
+              "weight": false,
+              "distribution": [],
+              "correct": true
+            },
+            "assistance": [
+              "q3a-solution-wr"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "D01 equal specific mismatch and repair",
+      "status": "PASS",
+      "evidence": {
+        "first": {
+          "id": "task-wr-mean-v1-1788851064835-1",
+          "conditionKey": "task-wr-mean-v1",
+          "at": 1788851064835,
+          "draft": {
+            "paths": [
+              "DD",
+              "DE",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "mapping": {
+              "DD": "2",
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EE": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5",
+              "FF": "8"
+            },
+            "weight": "equiprobable",
+            "distribution": {
+              "2": "1/3",
+              "5": "1/3",
+              "8": "1/3"
+            }
+          },
+          "check": {
+            "missing": [],
+            "extra": [],
+            "matched": [
+              "DD",
+              "DE",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "mapping": [],
+            "weight": true,
+            "distribution": [
+              "2",
+              "5",
+              "8"
+            ],
+            "correct": false
+          },
+          "assistance": []
+        },
+        "feedback": "本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DD、DE、DF、ED、EE、EF、FD、FE、FF；缺少路径：无；多选路径：无。每条身份路径是两次独立均匀抽取，故权重为1/3 × 1/3 = 1/9；输出mean没有因此等可能。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DD、DE、ED、EE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 8的原像为FF；当前每条允许原像路径的权重为1/9，互斥相加后的概率为1/9。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。检查每种输出的原像",
+        "next": "{\"label\":\"检查每种输出的原像\",\"action\":\"repair\",\"kind\":\"equal\",\"conditionKey\":\"task-wr-mean-v1\",\"targetId\":\"repair-equal\"}",
+        "repair": "输出值为什么不等可能？本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DD、DE、DF、ED、EE、EF、FD、FE、FF；缺少路径：无；多选路径：无。每条身份路径是两次独立均匀抽取，故权重为1/3 × 1/3 = 1/9；输出mean没有因此等可能。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DD、DE、ED、EE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/9，互斥相加后的概率为4/9。 查看该输出的每一步归并mean 8的原像为FF；当前每条允许原像路径的权重为1/9，互斥相加后的概率为1/9。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。先固定第一身份，再列第二身份，可检查反向是否遗漏；无放回时先划去已取走的同一实物，再把第二因子改为二分之一。D和E数值相同，身份仍不同。",
+        "links": [
+          {
+            "href": "#task-wr-DD-weight-sub",
+            "text": "逐行核对第一因子、条件第二因子与乘积"
+          },
+          {
+            "href": "#task-wr-bar-2",
+            "text": "查看该输出的每一步归并"
+          },
+          {
+            "href": "#task-wr-bar-5",
+            "text": "查看该输出的每一步归并"
+          },
+          {
+            "href": "#task-wr-bar-8",
+            "text": "查看该输出的每一步归并"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D02 equal exact proof destination opens",
+      "status": "PASS",
+      "evidence": {
+        "href": "#task-wr-DD-weight-sub",
+        "text": "逐行核对第一因子、条件第二因子与乘积"
+      }
+    },
+    {
+      "id": "D03 equal assisted wrong still offers specific correction",
+      "status": "FAIL",
+      "evidence": {
+        "again": {
+          "id": "task-wr-mean-v1-1788851067345-2",
+          "conditionKey": "task-wr-mean-v1",
+          "at": 1788851067345,
+          "draft": {
+            "paths": [
+              "DD",
+              "DE",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "mapping": {
+              "DD": "2",
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EE": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5",
+              "FF": "8"
+            },
+            "weight": "equiprobable",
+            "distribution": {
+              "2": "1/3",
+              "5": "1/3",
+              "8": "1/3"
+            }
+          },
+          "check": {
+            "missing": [],
+            "extra": [],
+            "matched": [
+              "DD",
+              "DE",
+              "DF",
+              "ED",
+              "EE",
+              "EF",
+              "FD",
+              "FE",
+              "FF"
+            ],
+            "mapping": [],
+            "weight": true,
+            "distribution": [
+              "2",
+              "5",
+              "8"
+            ],
+            "correct": false
+          },
+          "assistance": [
+            "construction-feedback-task-wr-mean-v1",
+            "q3a-solution-wr"
+          ]
+        },
+        "next": "{\"label\":\"构造尚未呈现的无放回新数据\",\"action\":\"task\",\"conditionKey\":\"task-wo-mean-v1\"}"
+      }
+    },
+    {
+      "id": "D01 reverse specific mismatch and repair",
+      "status": "PASS",
+      "evidence": {
+        "first": {
+          "id": "task-wo-mean-v1-1788851074492-1",
+          "conditionKey": "task-wo-mean-v1",
+          "at": 1788851074492,
+          "draft": {
+            "paths": [
+              "DD",
+              "DE",
+              "DF",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": {
+              "DE": "2",
+              "DF": "5",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5",
+              "DD": "2"
+            },
+            "weight": "remaining",
+            "distribution": {
+              "2": "1/3",
+              "5": "2/3",
+              "8": "0"
+            }
+          },
+          "check": {
+            "missing": [
+              "ED"
+            ],
+            "extra": [
+              "DD"
+            ],
+            "matched": [
+              "DE",
+              "DF",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": [],
+            "weight": false,
+            "distribution": [],
+            "correct": false
+          },
+          "assistance": []
+        },
+        "feedback": "本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DE、DF、EF、FD、FE；缺少路径：ED；多选路径：DD。ED：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：16。 查看此路径的逐行推导DD：同一实物已取走，无放回时第二次不能再取它。  两个观测：2,2；当前路径权重：0。 查看此路径的逐行推导原始草稿和上述差异已冻结；重开不会删除历史。按第一身份检查反向与重复身份",
+        "next": "{\"label\":\"按第一身份检查反向与重复身份\",\"action\":\"repair\",\"kind\":\"reverse\",\"conditionKey\":\"task-wo-mean-v1\",\"targetId\":\"repair-reverse\"}",
+        "repair": "按顺序核对缺少和多出的身份路径本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DE、DF、EF、FD、FE；缺少路径：ED；多选路径：DD。ED：它是题设允许的有序身份路径，需要保留；反向路径是另一个结果。  两个观测：2,2；当前路径权重：16。 查看此路径的逐行推导DD：同一实物已取走，无放回时第二次不能再取它。  两个观测：2,2；当前路径权重：0。 查看此路径的逐行推导原始草稿和上述差异已冻结；重开不会删除历史。先固定第一身份，再列第二身份，可检查反向是否遗漏；无放回时先划去已取走的同一实物，再把第二因子改为二分之一。D和E数值相同，身份仍不同。",
+        "links": [
+          {
+            "href": "#task-wo-ED-sub",
+            "text": "查看此路径的逐行推导"
+          },
+          {
+            "href": "#task-wo-DD-sub",
+            "text": "查看此路径的逐行推导"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D02 reverse exact proof destination opens",
+      "status": "PASS",
+      "evidence": {
+        "href": "#task-wo-ED-sub",
+        "text": "查看此路径的逐行推导"
+      }
+    },
+    {
+      "id": "D03 reverse assisted wrong still offers specific correction",
+      "status": "FAIL",
+      "evidence": {
+        "again": {
+          "id": "task-wo-mean-v1-1788851076730-2",
+          "conditionKey": "task-wo-mean-v1",
+          "at": 1788851076730,
+          "draft": {
+            "paths": [
+              "DE",
+              "DF",
+              "ED",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": {
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5"
+            },
+            "weight": "old",
+            "distribution": {
+              "2": "2/9",
+              "5": "4/9",
+              "8": "0"
+            }
+          },
+          "check": {
+            "missing": [],
+            "extra": [],
+            "matched": [
+              "DE",
+              "DF",
+              "ED",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": [],
+            "weight": true,
+            "distribution": [
+              "2",
+              "5"
+            ],
+            "correct": false
+          },
+          "assistance": [
+            "construction-feedback-task-wo-mean-v1",
+            "q3b-solution-wo"
+          ]
+        },
+        "next": "{\"label\":\"构造尚未呈现的有放回新数据\",\"action\":\"task\",\"conditionKey\":\"task-wr-mean-v1\"}"
+      }
+    },
+    {
+      "id": "D01 weight specific mismatch and repair",
+      "status": "PASS",
+      "evidence": {
+        "first": {
+          "id": "task-wo-mean-v1-1788851083282-1",
+          "conditionKey": "task-wo-mean-v1",
+          "at": 1788851083282,
+          "draft": {
+            "paths": [
+              "DE",
+              "DF",
+              "ED",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": {
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5"
+            },
+            "weight": "old",
+            "distribution": {
+              "2": "2/9",
+              "5": "4/9",
+              "8": "0"
+            }
+          },
+          "check": {
+            "missing": [],
+            "extra": [],
+            "matched": [
+              "DE",
+              "DF",
+              "ED",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": [],
+            "weight": true,
+            "distribution": [
+              "2",
+              "5"
+            ],
+            "correct": false
+          },
+          "assistance": []
+        },
+        "feedback": "本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DE、DF、ED、EF、FD、FE；缺少路径：无；多选路径：无。权重需重算：第一抽从三枚选，给定第一抽后第二抽只剩两枚，所以每条允许路径为1/3 × 1/2 = 1/6。删路径不会使旧的1/9自动正确。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DE、ED；当前每条允许原像路径的权重为1/6，互斥相加后的概率为1/3。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/6，互斥相加后的概率为2/3。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。重新计算第二抽的条件权重",
+        "next": "{\"label\":\"重新计算第二抽的条件权重\",\"action\":\"repair\",\"kind\":\"weight\",\"conditionKey\":\"task-wo-mean-v1\",\"targetId\":\"repair-weight\"}",
+        "repair": "重新计算当前机制的条件权重本次冻结核对：下面逐项说明本次草稿的差异。本页未记录提交前参考；这里只说明这一次构造。匹配路径：DE、DF、ED、EF、FD、FE；缺少路径：无；多选路径：无。权重需重算：第一抽从三枚选，给定第一抽后第二抽只剩两枚，所以每条允许路径为1/3 × 1/2 = 1/6。删路径不会使旧的1/9自动正确。逐行核对第一因子、条件第二因子与乘积mean 2的原像为DE、ED；当前每条允许原像路径的权重为1/6，互斥相加后的概率为1/3。 查看该输出的每一步归并mean 5的原像为DF、EF、FD、FE；当前每条允许原像路径的权重为1/6，互斥相加后的概率为2/3。 查看该输出的每一步归并原始草稿和上述差异已冻结；重开不会删除历史。先固定第一身份，再列第二身份，可检查反向是否遗漏；无放回时先划去已取走的同一实物，再把第二因子改为二分之一。D和E数值相同，身份仍不同。",
+        "links": [
+          {
+            "href": "#task-wo-DE-weight-sub",
+            "text": "逐行核对第一因子、条件第二因子与乘积"
+          },
+          {
+            "href": "#task-wo-bar-2",
+            "text": "查看该输出的每一步归并"
+          },
+          {
+            "href": "#task-wo-bar-5",
+            "text": "查看该输出的每一步归并"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D02 weight exact proof destination opens",
+      "status": "PASS",
+      "evidence": {
+        "href": "#task-wo-DE-weight-sub",
+        "text": "逐行核对第一因子、条件第二因子与乘积"
+      }
+    },
+    {
+      "id": "D03 weight assisted wrong still offers specific correction",
+      "status": "FAIL",
+      "evidence": {
+        "again": {
+          "id": "task-wo-mean-v1-1788851085487-2",
+          "conditionKey": "task-wo-mean-v1",
+          "at": 1788851085487,
+          "draft": {
+            "paths": [
+              "DE",
+              "DF",
+              "ED",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": {
+              "DE": "2",
+              "DF": "5",
+              "ED": "2",
+              "EF": "5",
+              "FD": "5",
+              "FE": "5"
+            },
+            "weight": "old",
+            "distribution": {
+              "2": "2/9",
+              "5": "4/9",
+              "8": "0"
+            }
+          },
+          "check": {
+            "missing": [],
+            "extra": [],
+            "matched": [
+              "DE",
+              "DF",
+              "ED",
+              "EF",
+              "FD",
+              "FE"
+            ],
+            "mapping": [],
+            "weight": true,
+            "distribution": [
+              "2",
+              "5"
+            ],
+            "correct": false
+          },
+          "assistance": [
+            "construction-feedback-task-wo-mean-v1",
+            "q3b-solution-wo"
+          ]
+        },
+        "next": "{\"label\":\"构造尚未呈现的有放回新数据\",\"action\":\"task\",\"conditionKey\":\"task-wr-mean-v1\"}"
+      }
+    },
+    {
+      "id": "E01 exact main mismatch closes opening problem",
+      "status": "PASS",
+      "evidence": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的本次原判断与结果不一致；请用两种输出的原像修正。检查每种输出的原像新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡"
+    },
+    {
+      "id": "E02 main repair has full local steps and return/next link",
+      "status": "FAIL",
+      "evidence": {
+        "text": "输出值为什么不等可能？mean 1来自AA。 P(T=1)=19mean 5来自AC、BB、CA。 P(T=5)=13随机均匀首先作用于每阶段可选身份；统计量会把多条路径归入一个值。应先找原像，再加权。",
+        "controls": 0,
+        "math": 2
+      }
+    },
+    {
+      "id": "E03 main summary immediate records assistance",
+      "status": "PASS",
+      "evidence": {
+        "id": "main-wr-mean-v1-1788851098011-1",
+        "conditionKey": "main-wr-mean-v1",
+        "at": 1788851098011,
+        "choice": "equal",
+        "assistance": [
+          "main-reference-wr"
+        ]
+      }
+    },
+    {
+      "id": "E04 assisted wrong comparison keeps mismatch visible",
+      "status": "FAIL",
+      "evidence": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你的提交前已有相关参考，这是有辅助核对。构造尚未呈现的有放回新数据新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡"
+    },
+    {
+      "id": "F01 survey-check wrong choice objective false",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "survey-check:1788851103093:1",
+          "answer": "0",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788851103093,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        },
+        "feedback": "就地自测抽样框还是总体？馆藏名册漏了新入库的书。研究目标仍为当日所有实体书。名册是什么？选择一个答案，然后提交总体，因为它是个完整列表抽样框，但它没有完整覆盖总体样本，因为名单上有很多书提交作答本次作答需要修正参考与解析抽样框，但它没有完整覆盖总体名单是实际选择入口，因此是frame。漏项使frame不能覆盖既定population；它不会自动改变研究目标。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "id": "F02 survey-check retry preserves assistance",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "survey-check:1788851103182:2",
+          "answer": "1",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788851103182,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        }
+      }
+    },
+    {
+      "id": "F01 stat-check wrong choice objective false",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "stat-check:1788851103228:1",
+          "answer": "1",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788851103228,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        },
+        "feedback": "就地自测只用第一个数可以吗？样本有三次观测。规则“第一个观测加已知常数3”是否为statistic？选择一个答案，然后提交是，只需样本观测和已知常数不是，因为需要用全部三次观测不是，因为需要先知道总体mean提交作答本次作答需要修正参考与解析是，只需样本观测和已知常数statistic规则只依赖样本数据和已知常数。定义不要求用全部数据，也不要求一定是平均数。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "id": "F02 stat-check retry preserves assistance",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "stat-check:1788851103314:2",
+          "answer": "0",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788851103314,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        }
+      }
+    },
+    {
+      "id": "F01 q1a-answer wrong choice objective false",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q1a-answer:1788851103366:1",
+          "answer": "1",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788851103366,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        },
+        "feedback": "就地自测Q1(a) 先固定研究对象选择population / unit / frame / sample的对应。选择一个答案，然后提交2400本实体书 / 一本有独立编号的书 / 最新馆藏登记簿 / 选出的60本书已取60本 / 一个书名 / 2400本实体书 / 馆藏登记簿馆藏登记簿 / 一行文字 / 已取60本 / 2400本书提交作答本次作答需要修正参考与解析2400本实体书 / 一本有独立编号的书 / 最新馆藏登记簿 / 选出的60本书研究目标覆盖9月1日的2400本实体书；每本复本是一个单位；登记簿提供选择入口；实际选出的60本构成样本。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "id": "F02 q1a-answer retry preserves assistance",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q1a-answer:1788851103464:2",
+          "answer": "0",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788851103464,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        }
+      }
+    },
+    {
+      "id": "F01 q1b-answer wrong choice objective false",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q1b-answer:1788851103526:1",
+          "answer": "2",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788851103526,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        },
+        "feedback": "就地自测Q1(b) 拆装书脊怎样权衡？检查每本书都需拆下再装回书脊。抽样相较普查的优点和缺点怎样搭配？选择一个答案，然后提交普查保证没有任何测量错误抽样减少需拆装的书，但未直接观察全库，结果会有抽样波动抽样必然完全代表总体，无须关注抽法提交作答本次作答需要修正参考与解析抽样减少需拆装的书，但未直接观察全库，结果会有抽样波动只检查60本比检查2400本减少拆装工作与损伤风险；它只观察部分书，样本结果会随所选书改变。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "id": "F02 q1b-answer retry preserves assistance",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q1b-answer:1788851103587:2",
+          "answer": "1",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788851103587,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        }
+      }
+    },
+    {
+      "id": "F01 q2a-answer wrong choice objective false",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q2a-answer:1788851103622:1",
+          "answer": "0",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788851103622,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        },
+        "feedback": "就地自测Q2(a) 判断计算输入A是第一观测加已知3小时。选择一个答案，然后提交不是，使用观测太少是，规则没有未知总体参数不能判断，必须知道总体mean提交作答本次作答需要修正参考与解析是，规则没有未知总体参数first observed lifetime属于样本；3小时已知。两个计算输入都可取得，所以A是统计量。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "id": "F02 q2a-answer retry preserves assistance",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q2a-answer:1788851103684:2",
+          "answer": "1",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788851103684,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        }
+      }
+    },
+    {
+      "id": "F01 q2b-answer wrong choice objective false",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q2b-answer:1788851103730:1",
+          "answer": "0",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788851103730,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        },
+        "feedback": "就地自测Q2(b) 未知μ在哪里？B是样本mean减未知总体mean μ。选择一个答案，然后提交是，因为式子里出现样本mean不是，因为还需未知总体参数μ是，因为μ写成字母就成为已知数提交作答本次作答需要修正参考与解析不是，因为还需未知总体参数μ减去μ仍需要这个未知总体参数。仅知道样本不能算出B，违反only from known sample data的限定。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "id": "F02 q2b-answer retry preserves assistance",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q2b-answer:1788851103797:2",
+          "answer": "1",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788851103797,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        }
+      }
+    },
+    {
+      "id": "F01 q4-answer wrong choice objective false",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q4-answer:1788851103835:1",
+          "answer": "1",
+          "correct": false,
+          "source": "objective",
+          "assisted": false,
+          "time": 1788851103835,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        },
+        "feedback": "就地自测Q4 原像比最后分数更有辨别力选择所有且仅有maximum为5的路径，并给出对应条件。选择一个答案，然后提交GH、HG、HH；没有J且至少有一个HGJ、HH、JG；两数和为10GG、GH、HG、HH；两数都不超过5提交作答本次作答需要修正参考与解析GH、HG、HH；没有J且至少有一个Hmaximum恰为5要求没有9且至少一次为5。故GH/HG/HH各有1/9，总计1/3。第二项是mean为5的原像，虽然概率也恰为1/3，判断对象已换错。重新作答本题复习：2026年9月9日学习工具收藏活动复制上下文，继续对话本地笔记写下疑问、思路或容易混淆的地方保存笔记技术来源 · DialogueTutorreferences/generation-checks.md本次作答与参考不符，请阅读反馈。"
+      }
+    },
+    {
+      "id": "F02 q4-answer retry preserves assistance",
+      "status": "PASS",
+      "evidence": {
+        "attempt": {
+          "id": "q4-answer:1788851103891:2",
+          "answer": "0",
+          "correct": true,
+          "source": "objective",
+          "assisted": true,
+          "time": 1788851103891,
+          "sessionId": "session-1788851101057-huispc5xtt"
+        }
+      }
+    },
+    {
+      "id": "F03 hint/flip/self retains source boundary",
+      "status": "PASS",
+      "evidence": {
+        "id": "recall-core:1788851103954:1",
+        "answer": "自评：翻面前已回忆",
+        "correct": true,
+        "source": "self",
+        "assisted": true,
+        "time": 1788851103954,
+        "sessionId": "session-1788851101057-huispc5xtt",
+        "cardIndex": 0
+      }
+    },
+    {
+      "id": "F04 real review item starts matching card front",
+      "status": "PASS",
+      "evidence": {
+        "item": {
+          "activityId": "recall-core",
+          "cardIndex": 0,
+          "title": "两张短回忆卡 · 1",
+          "review": {
+            "intervalIndex": 0,
+            "dueAt": 1788937503954,
+            "lastReviewedAt": 1788851103954,
+            "lastSessionId": "session-1788851101057-huispc5xtt",
+            "evidenceSource": "self"
+          },
+          "due": false
+        },
+        "flash": {
+          "index": 0,
+          "cards": {
+            "0": {
+              "revealed": false,
+              "hintUsed": false,
+              "rating": null,
+              "review": {
+                "intervalIndex": 0,
+                "dueAt": 1788937503954,
+                "lastReviewedAt": 1788851103954,
+                "lastSessionId": "session-1788851101057-huispc5xtt",
+                "evidenceSource": "self"
+              },
+              "attemptId": null,
+              "exposure": {
+                "sessionId": "session-1788851101057-huispc5xtt",
+                "hint": true,
+                "reference": true,
+                "observedAt": 1788851103936,
+                "inferred": false
+              },
+              "recallAssisted": true,
+              "recallSessionId": null
+            },
+            "1": {
+              "revealed": true,
+              "hintUsed": false,
+              "rating": null,
+              "review": null,
+              "attemptId": null,
+              "exposure": {
+                "sessionId": "session-1788851101057-huispc5xtt",
+                "hint": false,
+                "reference": true,
+                "observedAt": 1788851103988,
+                "inferred": false
+              },
+              "recallAssisted": false,
+              "recallSessionId": "session-1788851101057-huispc5xtt"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "G01 native skip no incorrect attempt",
+      "status": "PASS",
+      "evidence": "skipped"
+    },
+    {
+      "id": "G02 skip reaches full E3",
+      "status": "PASS",
+      "evidence": true
+    },
+    {
+      "id": "G03 one presented target does not imply complete result",
+      "status": "PASS",
+      "evidence": {
+        "main-wr-mean-v1": {
+          "main-wr-bar-1": 1788851108919
+        },
+        "main-wo-mean-v1": {}
+      }
+    },
+    {
+      "id": "G04 two WR targets complete but WO remains unexposed",
+      "status": "PASS",
+      "evidence": "回到开场 · 有放回、独立均匀P(T=1)=19P(T=5)=13mean5比mean1更可能，因为前者归入更多允许路径。你没有提交本条件原判断；这里只收束已经呈现的结果。先读maximum的完整例题新数据当前机制尚无冻结提交；预测结果不能替代完整构造。普通浏览两张回忆卡"
+    },
+    {
+      "id": "runtime errors",
+      "status": "PASS",
+      "evidence": []
+    }
+  ],
+  "harnessCorrections": [
+    "A02 originally compared hash of titled txt file to hash of readable body. Recomputed using actual extractor title+two newlines/body/newline contract. All 10 body+text matches.",
+    "C01 originally expected q3a-solution but actual named coverage source is q3a-solution-wr. Captured native immediate submission already contains this source. Corrected assertion against preserved evidence; no course changes or repeat state action."
+  ]
+}

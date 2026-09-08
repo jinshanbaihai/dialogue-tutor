@@ -57,6 +57,8 @@ HTML 使用 runtime 的 --dt- 变量；Manim 使用同一 JSON 色表的确切�
 
 从 computedStyle 检查正文、依据、链接、选项默认/选中/悬停/焦点、提示、正误、按钮；Manim真实帧核对色表、对象标签和源图字号。透明色先与背景合成；普通文字≥4.5:1，必要图形/控件≥3:1，不四舍五入判过。深色若未提供不计通过。灰度仍以形状、标签、位置识别对象与反馈，不能只靠红绿。
 
+新增原生控件优先复用runtime控件样式和已批准语义token，不另配未核验的边界色。生成后按实际匹配选择器与祖先背景列“控件样式×背景”组合，分别保存边界、填充、外侧底色与状态覆盖后的有效声明；正文插入按钮与activity白底分别验算，同样式同背景可合并。必要识别边界遵守上述≥3:1，透明色先合成。使用token仍须检查其继承/覆盖后的实际值，不以白底样板替代正文背景；装饰线不因此新增控件门槛。
+
 字号与颜色检查有效层叠结果，不能将低优先级的作者声明当作已生效。尤其比较 light 主题 runtime 规则与课程 MathML 规则；静态 specificity 推理、jsdom、真实浏览器和实际PNG像素分别标注证据。取不到原生 MathML 的 computedStyle 或字形时明确未测，不能用声明的24px冒称实际24px。
 
 保存最终 HTML、Scene、媒体 hash、实际状态/行与截图；色表计算不是浏览器实物通过。依据：[W3C文字对比](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)、[非文字对比](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)、[不用颜色作为唯一信息](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)。
