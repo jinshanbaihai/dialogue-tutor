@@ -61,19 +61,21 @@ function fixture() {
   };
 }
 
-const html = execFileSync('python3', ['-c',
+const assemble = lesson => execFileSync('python3', ['-c',
   'import json,sys;sys.path.insert(0,sys.argv[1]);import build_lesson;print(build_lesson.assemble(json.load(sys.stdin)))',
-  path.join(skill, 'scripts')], {input: JSON.stringify(fixture()), encoding: 'utf8', maxBuffer: 2000000});
+  path.join(skill, 'scripts')], {input: JSON.stringify(lesson), encoding: 'utf8', maxBuffer: 2000000});
+const html = assemble(fixture());
 
-async function page(t, {stored, time = NOW} = {}) {
+async function page(t, {stored, time = NOW, lessonHtml = html, storageFailure = false} = {}) {
   const errors = [], copied = [];
   const virtualConsole = new VirtualConsole(); virtualConsole.on('jsdomError', error => errors.push(error.message));
-  const dom = new JSDOM(html, {url: 'https://example.test/studio', runScripts: 'dangerously', virtualConsole,
+  const dom = new JSDOM(lessonHtml, {url: 'https://example.test/studio', runScripts: 'dangerously', virtualConsole,
     beforeParse(win) {
       win.Date.now = () => time;
       win.HTMLElement.prototype.scrollIntoView = function () {};
       Object.defineProperty(win.navigator, 'clipboard', {value: {writeText: async text => copied.push(text)}});
       if (stored) Object.entries(stored).forEach(([key, value]) => win.localStorage.setItem(key, value));
+      if (storageFailure) win.Storage.prototype.setItem = function () { throw new Error('Storage unavailable'); };
     }});
   const {window: win} = dom, doc = win.document;
   await new Promise(resolve => doc.addEventListener('dt:ready', resolve, {once: true}));
@@ -217,4 +219,83 @@ test('runtime rejects invalid pathways and uncovered studio objectives while ret
   runtime.validateLesson(lesson);  // Legacy prose-only sections can omit activityIds.
   const unsupported = fixture(); unsupported.activities[0].source.repository = 'invented';
   assert.throws(() => runtime.validateLesson(unsupported), /source repository/);
+});
+
+test('restoring an exploration persists a copied snapshot without learning evidence or events', async t => {
+  const p = await page(t), before = plain(p.api.getState());
+  const events = [];
+  ['dt:restore', 'dt:exploration'].forEach(name => p.doc.addEventListener(name, () => events.push(name)));
+  const input = {prediction: {value: 'A', at: NOW - 5, hadReference: false}, contacts: [{key: 'condition-a', at: NOW}]};
+  const accepted = p.api.restoreExploration('custom', input);
+  assert.equal(accepted.persisted, true);
+  input.contacts[0].key = 'changed-input'; accepted.exploration.contacts[0].key = 'changed-return';
+  assert.equal(p.state('custom').exploration.contacts[0].key, 'condition-a');
+  const after = plain(p.api.getState());
+  assert.deepEqual({...after.activities.custom, exploration: before.activities.custom.exploration}, before.activities.custom);
+  assert.equal(after.currentActivity, before.currentActivity);
+  assert.deepEqual(after.activities.diagnostic, before.activities.diagnostic);
+  assert.deepEqual(events, []);
+  const exported = plain(p.api.exportState());
+  const stored = JSON.parse(p.win.localStorage.getItem(p.api.storageKey));
+  assert.deepEqual(stored.state.activities.custom.exploration, exported.state.activities.custom.exploration);
+  const next = await page(t, {stored: {[p.api.storageKey]: JSON.stringify(exported)}});
+  assert.deepEqual(next.state('custom').exploration, exported.state.activities.custom.exploration);
+  assert.equal(next.state('custom').explorationCount, 0);
+  assert.equal(next.state('custom').participated, false);
+});
+
+test('two custom restorers merge current contacts before immediate export without recursion or extra participation', async t => {
+  const lesson = fixture();
+  lesson.activities.push({id: 'second', objectiveId: 'explain', type: 'interactive', title: 'Another observation', prompt: 'Observe another relation.', source: lesson.activities.at(-1).source, bodyHtml: '<output>Ready</output>'});
+  lesson.sections.at(-1).activityIds.push('second');
+  const lessonHtml = assemble(lesson), p = await page(t, {lessonHtml});
+  const ids = ['custom', 'second'], frozen = {value: 'A', at: NOW - 10, hadReference: false};
+  ids.forEach(id => p.api.restoreExploration(id, {prediction: frozen, contacts: []}));
+  const old = plain(p.api.exportState()), live = {};
+  ids.forEach(id => {
+    live[id] = {prediction: frozen, contacts: [{key: id + '-condition', at: NOW}]};
+    p.doc.dispatchEvent(new p.win.CustomEvent('dt:exploration', {detail: {activityId: id, state: live[id]}}));
+    assert.equal(p.state(id).explorationCount, 1);
+  });
+  const calls = [], protectedStates = [];
+  let explorationEvents = 0;
+  p.doc.addEventListener('dt:exploration', () => explorationEvents++);
+  p.doc.addEventListener('dt:restore', event => {
+    const {activityId: id, state: imported} = event.detail;
+    if (!ids.includes(id)) return;
+    calls.push(id); protectedStates.push([id, p.state(id)]);
+    const contacts = [...new Map([...(imported.contacts || []), ...live[id].contacts].map(contact => [contact.key, contact])).values()];
+    p.api.restoreExploration(id, {...imported, contacts});
+  });
+  p.api.importState(old);
+  const exported = plain(p.api.exportState());
+  assert.deepEqual(calls, ids); assert.equal(explorationEvents, 0);
+  protectedStates.forEach(([id, before]) => {
+    const after = p.state(id);
+    assert.deepEqual({...after, exploration: before.exploration}, before);
+    assert.deepEqual(after.exploration.prediction, frozen, 'later contact does not rewrite a frozen prediction');
+    assert.equal(exported.state.activities[id].exploration.contacts[0].key, id + '-condition');
+  });
+  const next = await page(t, {lessonHtml, stored: {[p.api.storageKey]: p.win.localStorage.getItem(p.api.storageKey)}});
+  ids.forEach(id => assert.deepEqual(next.state(id).exploration, exported.state.activities[id].exploration));
+  next.doc.dispatchEvent(new next.win.CustomEvent('dt:exploration', {detail: {activityId: 'custom', state: {...next.state('custom').exploration, value: 2}}}));
+  assert.equal(next.state('custom').explorationCount, 1, 'only this real new interaction is counted');
+  assert.equal(next.state('second').explorationCount, 0);
+});
+
+test('invalid exploration restoration is atomic and storage failure preserves an exportable snapshot', async t => {
+  const p = await page(t), before = plain(p.api.getState()), stored = p.win.localStorage.getItem(p.api.storageKey);
+  const cyclic = {}; cyclic.self = cyclic;
+  const bad = [null, [], {n: Infinity}, {n: NaN}, {fn() {}}, {missing: undefined}, {when: new Date()}, cyclic, {large: 'x'.repeat(100001)}];
+  for (const value of bad) assert.throws(() => p.api.restoreExploration('custom', value));
+  for (const id of ['unknown', 'diagnostic', 'plot', '__proto__']) assert.throws(() => p.api.restoreExploration(id, {}));
+  assert.deepEqual(plain(p.api.getState()), before);
+  assert.equal(p.win.localStorage.getItem(p.api.storageKey), stored);
+  const failed = await page(t, {storageFailure: true});
+  const outcome = failed.api.restoreExploration('custom', {contacts: [{key: 'seen', at: NOW}]});
+  assert.equal(outcome.persisted, false);
+  assert.equal(failed.api.exportState().state.activities.custom.exploration.contacts[0].key, 'seen');
+  assert.equal(failed.state('custom').participated, false);
+  assert.equal(failed.state('custom').explorationCount, 0);
+  assert.match(failed.doc.body.textContent, /storage is unavailable/i);
 });

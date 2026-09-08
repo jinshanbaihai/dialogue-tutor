@@ -1,0 +1,97 @@
+{
+  "recordedAt": "2026-09-08T03:21:09.002515+00:00",
+  "candidate": "1.7.0, run-03 candidate",
+  "generation": "one fresh no-context author, bgct S2 chapter 6",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "bytes": 8471,
+      "sha256": "61af8371b3cf41be3ca9cbf179a045b3a56de9ab24328d4f9721d73a3fbc0052"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 297,
+      "sha256": "46d4eba4fae3911337bf74c4d5f62046c0d0462395102c583c5f9fa64d0f9f6a"
+    },
+    {
+      "path": "assets/interactive/lesson-runtime.css",
+      "bytes": 19928,
+      "sha256": "4a933a8981688d8d04d780528988edd6f3b6073c7456f0f816f9d00b11672d3b"
+    },
+    {
+      "path": "assets/interactive/lesson-runtime.js",
+      "bytes": 101896,
+      "sha256": "db7b07aa2feb4b0e2a9c938a504117639e441d2ac5db2212b293e21332708b8d"
+    },
+    {
+      "path": "examples/s2-interactive.json",
+      "bytes": 42126,
+      "sha256": "6bd84cf02e5631e49ee27208c702b6cde44a3d4069a0e5e28d6c6d3487f0f9b5"
+    },
+    {
+      "path": "examples/s2-source.html",
+      "bytes": 77063,
+      "sha256": "7fa0e4118214a57a46c0ebce3248df87ab9bc51c1db0bb361b9917f48ed82e48"
+    },
+    {
+      "path": "references/deeptutor-provenance.md",
+      "bytes": 18066,
+      "sha256": "353abdabb033d2848d8511feaa66366365e7383eb7514f4462b3397967af5dcf"
+    },
+    {
+      "path": "references/engagement-and-narrative.md",
+      "bytes": 10573,
+      "sha256": "38b27dfb2994df6534d970acbc9ab25edcbbac2c86b693576e2a7ac7eadd8ce1"
+    },
+    {
+      "path": "references/expert-review.md",
+      "bytes": 4489,
+      "sha256": "28e504ca0a9d123539215e81624b1620b602aeadd147e8d06a7198bbabeb6cd1"
+    },
+    {
+      "path": "references/interactive-html.md",
+      "bytes": 29584,
+      "sha256": "d85e93a23d1baaa6b1ec69b87bf6d214c7a9bf981c81cb2047ee2440f5754605"
+    },
+    {
+      "path": "references/learning-evidence.md",
+      "bytes": 12699,
+      "sha256": "1dab2930fba770135c0b787e37233d13a3c5f2809e752d6124269a40a4c8bdd2"
+    },
+    {
+      "path": "references/modes-and-explanations.md",
+      "bytes": 4580,
+      "sha256": "d8251c0f0357798bbc338130bc544ebfcd10b8bb2e10a79e04150f184c5e8f64"
+    },
+    {
+      "path": "references/teaching-design.md",
+      "bytes": 7429,
+      "sha256": "1cf2d22da4db2cbd2ed979840d2505b02af015750f35f188fb914143db6b5c40"
+    },
+    {
+      "path": "references/visual-design.md",
+      "bytes": 4623,
+      "sha256": "ff6c2cdc10e6e09d3e45bc3bd1d2b65cfd43024ae0dfd7445e7e9df108d34652"
+    },
+    {
+      "path": "references/数学的冲突读法.md",
+      "bytes": 9330,
+      "sha256": "f5a4922de390ce6a4be7240852aa58da7e6a4bbcb2ab554b886ff77ec0425de7"
+    },
+    {
+      "path": "references/统计术语中英对照.md",
+      "bytes": 1664,
+      "sha256": "b5a57f099e81b722666d4f4fdfa4639a3ef56273579571a3e240a50a19553fff"
+    },
+    {
+      "path": "references/考纲与考试局.md",
+      "bytes": 9548,
+      "sha256": "e7e45cff0349e2a655dc3f59d9081d36fe1320680f97fe4d731786afa5be4eda"
+    },
+    {
+      "path": "scripts/build_lesson.py",
+      "bytes": 29317,
+      "sha256": "b98d444160ac3656a9e3a842410eedc0153b7cd7b9839d96df366261516b04a0"
+    }
+  ]
+}

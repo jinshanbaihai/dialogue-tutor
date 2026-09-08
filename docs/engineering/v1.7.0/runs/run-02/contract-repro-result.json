@@ -1,0 +1,45 @@
+{
+  "result": "public-contract-gap-confirmed",
+  "afterRealObservation": {
+    "explorationCount": 1,
+    "contacts": [
+      {
+        "identity": "already-observed-condition",
+        "at": 1000
+      }
+    ]
+  },
+  "afterOldImport": {
+    "explorationCount": 0,
+    "contacts": [],
+    "inMemoryContacts": [
+      {
+        "identity": "already-observed-condition",
+        "at": 1000
+      }
+    ]
+  },
+  "immediateExportContacts": [],
+  "immediatePersistedContacts": [],
+  "usingAdvertisedWriteAfterRestore": {
+    "explorationCountBefore": 0,
+    "explorationCountAfter": 1,
+    "contacts": [
+      {
+        "identity": "already-observed-condition",
+        "at": 1000
+      }
+    ]
+  },
+  "mountedPublicMethods": [
+    "storageKey",
+    "getState",
+    "exportState",
+    "importState",
+    "navigate",
+    "getRecommendations",
+    "refresh",
+    "destroy"
+  ],
+  "scope": "Real runtime mounted in jsdom; no browser, webserver, preview, visual or learning-effect claim."
+}

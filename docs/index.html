@@ -2492,8 +2492,30 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     function dateLabel(time) { return new Date(time).toLocaleDateString(en ? "en-GB" : "zh-CN", { year: "numeric", month: "short", day: "numeric" }); }
     function save() {
       state.updatedAt = now();
-      try { if (storage) storage.setItem(key, JSON.stringify(exportEnvelope(lesson, state, now()))); else throw new Error("storage"); }
-      catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); }
+      try { if (storage) storage.setItem(key, JSON.stringify(exportEnvelope(lesson, state, now()))); else throw new Error("storage"); return true; }
+      catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); return false; }
+    }
+
+    function restoreExploration(activityId, value) {
+      var activity = definitions.get(activityId);
+      if (!activity || activity.type !== "interactive" || !record(value)) throw new Error("Restore requires an interactive activity and a JSON object");
+      // Validate the entire snapshot before touching any stored learning evidence.
+      function checkJson(item, ancestors) {
+        if (item === null || typeof item === "string" || typeof item === "boolean" || finite(item)) return;
+        if (typeof item !== "object" || (!Array.isArray(item) && Object.prototype.toString.call(item) !== "[object Object]") || ancestors.includes(item) || Object.getOwnPropertySymbols(item).length) throw new Error("Exploration snapshot must contain only JSON values");
+        var next = ancestors.concat([item]);
+        if (Array.isArray(item)) { for (var i = 0; i < item.length; i++) checkJson(item[i], next); }
+        else Object.keys(item).forEach(function (name) { checkJson(item[name], next); });
+      }
+      checkJson(value, []);
+      var serialized = JSON.stringify(value);
+      if (serialized.length > 100000) throw new Error("Exploration snapshot exceeds 100000 characters");
+      var snapshot = JSON.parse(serialized);
+      state.activities[activityId].exploration = snapshot;
+      // This is a restore write, not a learner action. Do not dispatch another restore.
+      var persisted = save();
+      if (!persisted) renderPanel();
+      return { exploration: copy(snapshot), persisted: persisted };
     }
     function transition(activity, event, render, preservePosition) {
       state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
@@ -3183,6 +3205,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       storageKey: key,
       getState: function () { return copy(state); },
       exportState: function () { return exportEnvelope(lesson, state, now()); },
+      restoreExploration: restoreExploration,
       importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); renderStudio(); return copy(state); },
       navigate: navigate,
       getRecommendations: function (activityId) { return getRecommendations(lesson, state, activityId || state.currentActivity); },

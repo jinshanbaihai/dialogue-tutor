@@ -190,6 +190,22 @@ document.dispatchEvent(new CustomEvent('dt:exploration', {
 恢复参数与计算图形共用同一条更新逻辑。恢复本身不制造新的参与动作；重置后同时更新控件、
 图形、数值和保存状态。脚本使用独立作用域，避免多个自定义活动重复声明同名变量。
 
+### 恢复合并的持久化接口
+
+独立生成时发现：仅在 `dt:restore` 中合并闭包变量，紧接着导出或刷新会丢掉新增接触；改发 `dt:exploration` 又会把恢复计为新操作。因此恢复与真实操作使用不同写入方式。
+
+`DialogueTutor.instance.restoreExploration(activityId, mergedState)` 接收已知 `interactive` 活动的完整探索状态，先校验 JSON 普通对象及100000字符上限，再同步深拷贝保存到该活动的 `exploration`。它不改作答、参考接触、复习、探索次数、参与标志、上次操作时间或当前位置，也不派发任何恢复／探索事件。顶层 `updatedAt` 可以作为保存元数据更新。未知活动、其他活动类型、循环引用、函数、undefined、非有限数或非法对象会在写入前抛错。
+
+组件在 `dt:activity-mounted` 和 `dt:restore` 的同步处理过程中，先合并本页与导入的真实接触，再调用该接口，最后自行重绘。不要等下次真实操作才保存，也不要借 `importState()` 递归写回。运行库只负责保存快照，条件身份合并与原预测不可变性由组件明确实现；不得用该接口伪造历史或绕开真实操作计数。
+
+```javascript
+// local 已包含本组件的参数、原预测与合并后的真实接触。
+const result = DialogueTutor.instance.restoreExploration(id, local);
+// 然后用 local 重绘现有控件；不派发 dt:exploration。
+```
+
+返回 `{exploration, persisted}`，前者是已接受快照的副本。存储不可用时 `persisted` 为 false：完整快照仍在当前页面内存和公共导出中，运行库显示保存失败提示；此时不能承诺刷新恢复。真实学习者改变参数、提交预测、揭示或模拟仍通过 `dt:exploration` 记录动作。恢复后的立即导出、多组件依次合并及重新打开，都检查已合并记录仍在且没有新增参与。
+
 ### 自定义预测中的参考接触
 
 首版探索只从 `dt:restore.detail.state` 恢复自己的 `referenceViewed`，导致“导出未看答案记录→查看全解→导入旧记录”抹掉辅助标识，尽管运行时仍保留该次参考接触。自定义字段不能覆盖运行时已经保留的事实。

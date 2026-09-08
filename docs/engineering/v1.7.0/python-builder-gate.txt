@@ -1,0 +1,22 @@
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+test_ambiguous_or_missing_anchor_fails_instead_of_silently_misplacing (test_builder.BuilderTests.test_ambiguous_or_missing_anchor_fails_instead_of_silently_misplacing) ... ok
+test_authored_source_is_not_mislabelled_as_deeptutor (test_builder.BuilderTests.test_authored_source_is_not_mislabelled_as_deeptutor) ... ok
+test_duplicate_identity_and_invalid_open_grading_are_rejected (test_builder.BuilderTests.test_duplicate_identity_and_invalid_open_grading_are_rejected) ... ok
+test_duplicate_mount_and_unknown_activity_type_are_rejected (test_builder.BuilderTests.test_duplicate_mount_and_unknown_activity_type_are_rejected) ... ok
+test_embedded_mount_preserves_problem_activity_solution_order (test_builder.BuilderTests.test_embedded_mount_preserves_problem_activity_solution_order) ... ok
+test_json_content_cannot_close_the_data_script (test_builder.BuilderTests.test_json_content_cannot_close_the_data_script) ... ok
+test_numeric_references_are_finite_and_support_equivalent_fractions (test_builder.BuilderTests.test_numeric_references_are_finite_and_support_equivalent_fractions) ... ok
+test_original_markup_roundtrips_including_svg_case (test_builder.BuilderTests.test_original_markup_roundtrips_including_svg_case) ... ok
+test_pathways_validate_exact_activity_targets_and_explicit_outcomes (test_builder.BuilderTests.test_pathways_validate_exact_activity_targets_and_explicit_outcomes) ... ok
+test_reserved_runtime_names_and_document_id_collisions_fail_before_generation (test_builder.BuilderTests.test_reserved_runtime_names_and_document_id_collisions_fail_before_generation) ... ok
+test_s2_placements_and_solutions_preserve_every_worked_section (test_builder.BuilderTests.test_s2_placements_and_solutions_preserve_every_worked_section) ... ok
+test_studio_places_an_action_before_its_closed_full_explanation (test_builder.BuilderTests.test_studio_places_an_action_before_its_closed_full_explanation) ... ok
+test_studio_rejects_activity_mounts_inside_explanation_and_base_html (test_builder.BuilderTests.test_studio_rejects_activity_mounts_inside_explanation_and_base_html) ... ok
+test_studio_requires_complete_activity_and_objective_coverage (test_builder.BuilderTests.test_studio_requires_complete_activity_and_objective_coverage) ... ok
+test_tts_answer_track_is_separate_and_activity_linked (test_builder.BuilderTests.test_tts_answer_track_is_separate_and_activity_linked) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.151s
+
+OK
+
