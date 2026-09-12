@@ -1,4 +1,338 @@
-/* DialogueTutor portable learning interactions, contract v1.
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>沿边走一圈，求出 width</title><style>
+:root{color-scheme:light dark;--paper:#f5f5f7;--ink:#1d1d1f;--muted:#626269;--line:#d8d8de;--accent:#164f9e}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.8}strong{color:var(--accent);font-weight:700}
+main{max-width:52rem;margin:0 auto;padding:3rem 1.3rem 6rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.35}h2{margin-top:3rem;font-size:1.5rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--accent)}figure{margin:1.7rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:#eaeaee}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--accent);font-size:.8rem;letter-spacing:.12em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
+@media(prefers-color-scheme:dark){:root{--paper:#161618;--ink:#f2f2f5;--muted:#b0b0b8;--line:#414147;--accent:#8ab7ff}pre{background:#242427}}
+</style><style id="dt-runtime-style">/* Portable DialogueTutor interactions. All selectors are namespaced. */
+.dt-activity,
+.dt-study {
+  --dt-paper: #ffffff;
+  --dt-surface: #f5f5f7;
+  --dt-ink: #1d1d1f;
+  --dt-muted: #626269;
+  --dt-line: #d8d8de;
+  --dt-accent: #164f9e;
+  --dt-accent-soft: #eef4ff;
+  --dt-good: #087568;
+  --dt-good-soft: #edf8f5;
+  --dt-again: #b43e45;
+  --dt-again-soft: #fff1f2;
+  --dt-focus: #245fbc;
+  box-sizing: border-box;
+  color: var(--dt-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.dt-activity *,
+.dt-study * { box-sizing: border-box; }
+.dt-activity {
+  margin: 2.6rem 0;
+  padding: 1.5rem 1.65rem 1.15rem;
+  background: var(--dt-paper);
+  border: 1px solid var(--dt-line);
+  border-top: 1px solid var(--dt-line);
+  border-radius: 1rem;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 3%);
+  scroll-margin-top: 1.2rem;
+}
+.dt-activity .dt-activity-title {
+  margin: 0.3rem 0 0;
+  padding: 0;
+  border: 0;
+  color: var(--dt-ink);
+  font-size: 1.14rem;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: left;
+}
+.dt-eyebrow {
+  display: block;
+  color: var(--dt-accent);
+  font-family: system-ui, -apple-system, "Noto Sans SC", sans-serif;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+.dt-activity .dt-prompt { margin: 0.85rem 0 1.2rem; text-indent: 0; }
+.dt-activity .dt-small,
+.dt-study .dt-small {
+  color: var(--dt-muted);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  text-indent: 0;
+}
+.dt-activity .dt-small-heading,
+.dt-study .dt-small-heading {
+  display: block;
+  margin: 0 0 0.45rem;
+  color: var(--dt-ink);
+  font-size: 0.87rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+.dt-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
+.dt-spread { justify-content: space-between; }
+.dt-counter { color: var(--dt-muted); font-size: 0.76rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dt-activity .dt-button,
+.dt-study .dt-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 44px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.48rem 0.82rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  color: var(--dt-ink);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 550;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (hover: hover) and (pointer: fine) {
+  .dt-activity .dt-button:hover:not(:disabled),
+  .dt-study .dt-button:hover:not(:disabled) { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+}
+.dt-activity .dt-button-primary,
+.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: #ffffff; }
+@media (hover: hover) and (pointer: fine) {
+  .dt-activity .dt-button-primary:hover:not(:disabled),
+  .dt-study .dt-button-primary:hover:not(:disabled) { background: #103e80; color: #ffffff; }
+}
+.dt-activity .dt-button-quiet,
+.dt-study .dt-button-quiet { border-color: transparent; background: transparent; color: var(--dt-accent); }
+.dt-activity .dt-button:disabled,
+.dt-study .dt-button:disabled { opacity: 0.48; cursor: default; }
+.dt-activity :focus-visible,
+.dt-study :focus-visible { outline: 3px solid var(--dt-focus); outline-offset: 3px; }
+.dt-activity .dt-button[aria-pressed="true"],
+.dt-study .dt-button[aria-pressed="true"] { background: var(--dt-accent-soft); color: var(--dt-accent); }
+.dt-activity .dt-input,
+.dt-study .dt-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0.45rem 0 0;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  color: var(--dt-ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  resize: vertical;
+}
+.dt-input:disabled { background: var(--dt-surface); opacity: 1; -webkit-text-fill-color: var(--dt-ink); }
+.dt-input-label { display: block; margin: 0.4rem 0 0.85rem; color: var(--dt-muted); font-size: 0.8rem; }
+.dt-activity .dt-flashcard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  min-height: 13rem;
+  margin: 0.75rem 0;
+  padding: 1.65rem 1.3rem;
+  border: 1px solid var(--dt-line);
+  background: linear-gradient(140deg, var(--dt-paper), var(--dt-surface));
+  text-align: center;
+}
+.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: #a8bddf; }
+.dt-flashcard-text { display: block; font-size: 1.05rem; font-weight: 500; line-height: 1.8; white-space: pre-wrap; }
+.dt-self-rating { margin: 1rem 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--dt-line); background: var(--dt-surface); }
+.dt-self-rating .dt-button { margin: 0.25rem 0.4rem 0.25rem 0; }
+.dt-self-rating p { margin: 0.15rem 0 0.5rem; }
+.dt-choices { display: grid; gap: 0.6rem; min-inline-size: 0; margin: 0 0 1rem; padding: 0; border: 0; }
+.dt-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.72rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0.78rem 0.85rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) { .dt-choice:hover { border-color: #a8bddf; } }
+.dt-choice-selected { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+.dt-choice-label { min-width: 0; }
+.dt-radio { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; margin: 0.24rem 0 0; accent-color: var(--dt-accent); }
+.dt-quiz { margin: 0 0 0.6rem; }
+.dt-feedback,
+.dt-reference,
+.dt-hint {
+  margin: 0.9rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: 0.4rem;
+  background: var(--dt-surface);
+  text-indent: 0;
+  white-space: pre-wrap;
+}
+.dt-activity .dt-feedback p,
+.dt-activity .dt-reference p { margin: 0.5rem 0 0; text-indent: 0; }
+.dt-feedback-good { border-left: 3px solid var(--dt-good); background: var(--dt-good-soft); }
+.dt-feedback-again { border-left: 3px solid var(--dt-again); background: var(--dt-again-soft); }
+.dt-reference { border: 1px solid var(--dt-line); background: transparent; }
+.dt-reference-answer { font-weight: 600; }
+.dt-reference .dt-rubric { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+.dt-hint { border-left: 3px solid #164f9e; color: #164f9e; font-size: 0.85rem; }
+.dt-error,
+.dt-storage-warning { color: #b43e45; font-size: 0.82rem; line-height: 1.6; }
+.dt-error:empty { display: none; }
+.dt-step-markers { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.dt-step-markers li { margin: 0; padding: 0; }
+.dt-step-markers .dt-button { min-height: 44px; padding: 0.4rem 0.6rem; font-size: 0.74rem; }
+.dt-step-markers .dt-step-current { border-color: var(--dt-accent); background: var(--dt-accent-soft); color: var(--dt-accent); }
+.dt-step-stage { min-height: 9rem; margin: 0 0 1rem; padding: 1.1rem; border-left: 3px solid var(--dt-accent); background: var(--dt-surface); }
+.dt-authored { overflow-wrap: anywhere; }
+.dt-authored p { text-indent: 0; }
+.dt-authored img,
+.dt-authored svg,
+.dt-authored video { max-width: 100%; height: auto; }
+.dt-authored pre { max-width: 100%; overflow-x: auto; font-size: 0.86rem; }
+.dt-parameters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem 1.4rem; margin: 1rem 0 0.8rem; }
+.dt-parameter { display: block; min-width: 0; font-size: 0.81rem; }
+.dt-parameter-value { padding: 0.05rem 0.42rem; border-radius: 0.25rem; background: var(--dt-surface); font-variant-numeric: tabular-nums; }
+.dt-range { display: block; width: 100%; min-height: 2.75rem; margin: 0; padding: 0; accent-color: var(--dt-accent); cursor: pointer; }
+.dt-plots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 0.8rem 0; }
+.dt-activity .dt-graph { display: block; width: 100%; height: auto; margin: 0; border: 1px solid var(--dt-line); border-radius: 0.4rem; background: var(--dt-paper); overflow: visible; }
+.dt-graph text { fill: var(--dt-muted); font-family: system-ui, sans-serif; font-size: 15px; }
+.dt-graph .dt-graph-title { fill: var(--dt-ink); font-size: 16px; font-weight: 600; }
+.dt-graph-grid { stroke: var(--dt-line); stroke-width: 0.8; stroke-dasharray: 3 4; }
+.dt-graph-axis { stroke: var(--dt-muted); stroke-width: 1; }
+.dt-graph-curve { stroke: var(--dt-accent); stroke-width: 3; stroke-linejoin: round; }
+.dt-graph-area { fill: #80a9e4; fill-opacity: 0.38; }
+.dt-graph-guide { stroke: #087568; stroke-width: 1.4; stroke-dasharray: 4 4; }
+.dt-graph-dot { fill: #245fbc; stroke: var(--dt-paper); stroke-width: 1.5; }
+.dt-graph-dot-second { fill: #087568; }
+.dt-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; margin: 0.8rem 0; }
+.dt-metric { display: flex; flex-direction: column; min-width: 0; padding: 0.65rem 0.7rem; border: 1px solid var(--dt-line); border-radius: 0.35rem; }
+.dt-metric strong { margin-top: 0.15rem; font-size: 1.12rem; font-variant-numeric: tabular-nums; }
+.dt-followups { margin-top: 1rem; }
+.dt-followup,
+.dt-note,
+.dt-panel-section { margin: 0.5rem 0; border-top: 1px solid var(--dt-line); }
+.dt-followup > summary,
+.dt-note > summary,
+.dt-source > summary,
+.dt-panel-section > summary { padding: 0.7rem 0.1rem; color: var(--dt-accent); font-size: 0.83rem; line-height: 1.6; cursor: pointer; }
+.dt-followup p { margin: 0.15rem 0 0.85rem; white-space: pre-wrap; text-indent: 0; }
+.dt-note > .dt-button { margin-bottom: 0.7rem; }
+.dt-source { margin: 0; }
+.dt-source > summary { color: var(--dt-muted); font-size: 0.72rem; padding: 0.35rem 0.1rem; }
+.dt-source p { white-space: pre-wrap; word-break: break-word; }
+.dt-activity-footer { margin-top: 1.15rem; padding-top: 0.6rem; border-top: 1px solid var(--dt-line); }
+.dt-status { min-height: 0; margin: 0.35rem 0 0; color: var(--dt-accent); font-size: 0.78rem; line-height: 1.6; text-indent: 0; }
+.dt-status:empty { display: none; }
+.dt-copy-fallback { margin-top: 0.75rem; }
+.dt-study { margin: 1.4rem 0 2rem; }
+.dt-study-panel { border: 1px solid var(--dt-line); border-radius: 0.5rem; background: var(--dt-paper); }
+.dt-study-summary { padding: 0.8rem 1rem; color: var(--dt-accent); font-size: 0.86rem; font-weight: 600; line-height: 1.65; cursor: pointer; }
+.dt-study-panel[open] > .dt-study-summary { border-bottom: 1px solid var(--dt-line); }
+.dt-study-body { padding: 1rem; }
+.dt-study-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.55rem; }
+.dt-study-stat { display: flex; flex-direction: column; padding: 0.55rem 0.7rem; border-radius: 0.35rem; background: var(--dt-surface); }
+.dt-study-stat strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+.dt-objective { padding: 0.7rem 0; border-top: 1px solid var(--dt-line); }
+.dt-study .dt-activity-link { padding: 0.25rem 0.4rem; min-height: 44px; font-size: 0.75rem; text-align: left; }
+.dt-review-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.3rem 0; padding: 0.25rem 0.4rem; }
+.dt-review-due { background: var(--dt-again-soft); border-radius: 0.35rem; }
+.dt-note-entry { margin: 0.35rem 0; padding: 0.25rem 0; }
+.dt-note-text { margin: 0.2rem 0 0.6rem; padding: 0 0.8rem; color: var(--dt-muted); font-size: 0.85rem; white-space: pre-wrap; text-indent: 0; }
+.dt-transfer { margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--dt-line); }
+.dt-sr {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 620px) {
+  .dt-activity { padding: 1.15rem 1rem 0.9rem; margin: 2rem 0; }
+  .dt-activity .dt-activity-title { font-size: 1.06rem; }
+  .dt-plots { grid-template-columns: minmax(0, 1fr); }
+  .dt-parameters { gap: 0.6rem 1rem; }
+  .dt-metrics { grid-template-columns: minmax(0, 1fr); }
+  .dt-metric { flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; }
+  .dt-study-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dt-study-body { padding: 0.8rem; }
+  .dt-activity .dt-flashcard { min-height: 13rem; padding: 1.2rem 0.85rem; }
+  .dt-activity-footer .dt-row { gap: 0.15rem; }
+  .dt-activity .dt-button,
+  .dt-study .dt-button { min-height: 2.75rem; }
+}
+@media (max-width: 380px) {
+  .dt-parameters { grid-template-columns: minmax(0, 1fr); }
+  .dt-activity { padding-left: 0.8rem; padding-right: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dt-activity *, .dt-study * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+@media (prefers-color-scheme: dark) {
+  .dt-activity, .dt-study {
+    --dt-paper: #202023;
+    --dt-surface: #2b2b30;
+    --dt-ink: #f2f2f5;
+    --dt-muted: #b0b0b8;
+    --dt-line: #48484f;
+    --dt-accent: #8ab7ff;
+    --dt-accent-soft: #233149;
+    --dt-good: #76d8c2;
+    --dt-good-soft: #1e3834;
+    --dt-again: #ff9da3;
+    --dt-again-soft: #442b30;
+    --dt-focus: #8ab7ff;
+  }
+  .dt-activity .dt-button-primary, .dt-study .dt-button-primary { background: #8ab7ff; color: #102341; }
+  @media (hover: hover) and (pointer: fine) { .dt-activity .dt-button-primary:hover:not(:disabled), .dt-study .dt-button-primary:hover:not(:disabled) { background: #b7d1ff; color: #102341; } }
+  .dt-hint { color: #b7d1ff; }
+  .dt-error, .dt-storage-warning { color: #ff9da3; }
+}
+@media print {
+  .dt-activity { box-shadow: none; break-inside: avoid; }
+  .dt-study, .dt-activity-footer, .dt-source, .dt-speech { display: none; }
+  .dt-activity .dt-button { border-color: #888; }
+  .dt-activity .dt-reference { break-inside: avoid; }
+}
+
+/* Immediate touch/keyboard feedback; neutral reading surfaces stay opaque. */
+.dt-activity strong, .dt-study strong { color: var(--dt-accent); font-weight: 700; }
+.dt-feedback-good strong { color: var(--dt-good); }
+.dt-feedback-again strong { color: var(--dt-again); }
+.dt-activity .dt-button:active:not(:disabled), .dt-study .dt-button:active:not(:disabled) { transform: scale(0.98); transition-duration: 0ms; }
+.dt-choice:active { background: var(--dt-accent-soft); }
+.dt-activity summary, .dt-study summary { min-height: 44px; }
+.dt-speech { margin: 0 0 1.4rem; padding: 0.75rem; border: 1px solid var(--dt-line); border-radius: 0.75rem; background: var(--dt-surface); }
+.dt-speech-rate { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; color: var(--dt-muted); font-size: 0.8rem; }
+.dt-select { min-height: 44px; padding: 0.4rem 0.6rem; border: 1px solid var(--dt-line); border-radius: 0.4rem; color: var(--dt-ink); background: var(--dt-paper); font: inherit; font-size: 1rem; }
+.dt-activity .dt-speech-status { margin: 0.45rem 0 0; color: var(--dt-muted); font-size: 0.78rem; line-height: 1.6; text-indent: 0; }
+</style></head><body><main><header><p class="dt-lesson-kicker">DIALOGUETUTOR · 互动学习</p><h1>沿边走一圈，求出 width</h1></header><aside data-dt-study aria-label="学习记录与复习"></aside><section id="rectangle-definitions"><h2>先认识这次要用的量</h2><p><strong>Rectangle</strong> 是长方形；相对的两条边分别等长。<strong>Perimeter</strong> 是沿图形边界走一整圈的总长度。</p><p><strong>length</strong> 表示长度，<strong>width</strong> 表示宽度。用 l、w、P 分别表示 length、width、perimeter 以 cm（厘米）计量的数值；例如 l 为 6，就表示 length 为 6 cm。</p><div data-dt-activity="trace-boundary"></div><p id="perimeter-rule"><strong>本题公式：</strong>对 Rectangle，边界按顺序有 length、width、length、width，故：</p><math aria-label="perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><math aria-label="perimeter 数值 等于 2 乘以 左括号 length 数值 加 width 数值 右括号" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>P</mi><mo>=</mo><mn>2</mn><mo>×</mo><mo>(</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>)</mo></mrow></math><p>第二行只是把两组相同的 l + w 合写为两倍。本题用第一行，便于看见每条边。公式依据是 perimeter 的定义与 Rectangle 的对边相等性质。</p><div data-dt-activity="perimeter-choice"></div></section><section id="rectangle-question"><h2>原题：一条 width 是多少？</h2><p><strong>题干：</strong>一个长方形的周长为20 cm，长度为6 cm，宽度是多少？</p><p>原创中文题目，没有英文原卷或考试分值。</p><p>“长方形”保证对边相等；“周长为20 cm”给出整圈总长度；“长度为6 cm”给出上下每一条 length；所求“宽度”是一条 width，答案用 cm。</p><p>题目给 perimeter，适合把四条边相加。只用 length + width 会漏掉另外两条边；相乘得到的是 <strong>area</strong>（内部平面的大小），与所求的边界长度不同。这里回接上方“本题公式”。</p><div data-dt-activity="original-width"></div><details id="original-solution"><summary>主动查看完整题解（会记录为参考辅助）</summary><p>依次拿走两条已知的 length，再把剩下的两条 width 平分。每一步都继承上一行的相等关系。</p><div data-dt-activity="width-steps"></div><details><summary>一次展开全部逐行推导</summary><ol><li><h4>把四条边接起来</h4><math aria-label="perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><p>继承题目给出的 Rectangle 条件：相对的两条边分别等长。沿边界走一圈会走过两条 length 和两条 width；依照前置块的 perimeter 定义，把四条边的数值相加。</p></li><li><h4>把已知值放入关系</h4><math aria-label="20 等于 6 加 width 数值 加 6 加 width 数值" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>20</mn><mo>=</mo><mn>6</mn><mo>+</mo><mi>w</mi><mo>+</mo><mn>6</mn><mo>+</mo><mi>w</mi></mrow></math><p>上一行的 P 是 perimeter 的数值，l 是每条 length 的数值。题目给出 20 cm 与 6 cm，所以分别用 20 和 6 替换 P 和两个 l；未知的 w 原样保留。所有长度均以 cm 计。</p></li><li><h4>先合并两条已知边</h4><math aria-label="20 等于 12 加 width 数值 加 width 数值" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mi>w</mi><mo>+</mo><mi>w</mi></mrow></math><p>上一行右边是四段长度之和。加法可调整次序而不改变总量；把两个 6 放在一起相加得到 12，两条未知边各保留一个 w。</p></li><li><h4>把两个相同的未知量合写</h4><math aria-label="20 等于 12 加 2 乘以 width 数值" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行有两个 w。2 × w 表示两个同样的 w 相加，因此用 2 × w 替换 w + w；它仍然表示两条 width 的合计。</p></li><li><h4>两边同时拿走已知部分</h4><math aria-label="20 减 12 等于 12 加 2 乘以 width 数值 减 12" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>20</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>−</mo><mn>12</mn></mrow></math><p>上一行两边表示相同的总长度数值。两边都减去同一个 12，剩下的量仍相等；这相当于从整圈拿走两条 length。只减一边会破坏相等关系。</p></li><li><h4>算出剩下的两条边合计</h4><math aria-label="8 等于 2 乘以 width 数值" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>8</mn><mo>=</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行左边 20 减 12 得 8；右边加上的 12 与减去的 12 抵消，只剩 2 × w。因此 8 是两条 width 的合计，还不是一条。</p></li><li><h4>把两条等长边平均分开</h4><math aria-label="8 除以 2 等于 左括号 2 乘以 width 数值 右括号 除以 2" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>8</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mo>(</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>)</mo><mo>÷</mo><mn>2</mn></mrow></math><p>上一行两边相等。两边同除以非零的 2，仍然相等；右边两条相同的 width 分成两份，每份恰好是一条 width。</p></li><li><h4>算出一条边</h4><math aria-label="4 等于 width 数值" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>4</mn><mo>=</mo><mi>w</mi></mrow></math><p>上一行左边 8 除以 2 得 4；右边的两份 w 除以 2 只剩一份 w。因此一条 width 的数值是 4。</p></li><li><h4>按所求量写答案</h4><math aria-label="width 数值 等于 4" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>w</mi><mo>=</mo><mn>4</mn></mrow></math><p>上一行的等号表示两边是同一个数，交换左右两边仍成立。w 一直以 cm 为单位计数，所以答案是 width 为 4 cm。</p></li></ol></details><p><strong>答案：width 为 4 cm。</strong></p><p>核对：把答案放回四条边：</p><math aria-label="6 加 4 加 6 加 4 等于 20" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>6</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>20</mn></mrow></math><p>合计为 20 cm，与题目 perimeter 一致，且 width 为正数。自行核对三处：写出四边相加、把两条 width 的总长度除以 2、答案带 cm。这是解题检查点，没有虚构考试评分。</p></details></section><section id="rectangle-transfer"><h2>换一个数字，自己走一遍</h2><p>沿用刚才的定义与公式，检查你能否独立找到<strong>两条 width 的合计</strong>，再求一条。</p><div data-dt-activity="transfer-width"></div></section></main><script type="application/json" id="dt-lesson">{"schemaVersion":1,"lessonId":"rectangle-perimeter-original","revision":"1","title":"沿边走一圈，求出 width","language":"zh-CN","mode":"olct","objectives":[{"id":"perimeter-meaning","title":"用四条边解释 perimeter","kind":"concept"},{"id":"width-procedure","title":"求出 width 并说明每步依据","kind":"procedure"}],"sections":[{"id":"rectangle-definitions","title":"先认识这次要用的量","bodyHtml":"\u003cp>\u003cstrong>Rectangle\u003c/strong> 是长方形；相对的两条边分别等长。\u003cstrong>Perimeter\u003c/strong> 是沿图形边界走一整圈的总长度。\u003c/p>\u003cp>\u003cstrong>length\u003c/strong> 表示长度，\u003cstrong>width\u003c/strong> 表示宽度。用 l、w、P 分别表示 length、width、perimeter 以 cm（厘米）计量的数值；例如 l 为 6，就表示 length 为 6 cm。\u003c/p>\u003cdiv data-dt-activity=\"trace-boundary\">\u003c/div>\u003cp id=\"perimeter-rule\">\u003cstrong>本题公式：\u003c/strong>对 Rectangle，边界按顺序有 length、width、length、width，故：\u003c/p>\u003cmath aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmi>P\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>l\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>l\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cmath aria-label=\"perimeter 数值 等于 2 乘以 左括号 length 数值 加 width 数值 右括号\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmi>P\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmo>(\u003c/mo>\u003cmi>l\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>)\u003c/mo>\u003c/mrow>\u003c/math>\u003cp>第二行只是把两组相同的 l + w 合写为两倍。本题用第一行，便于看见每条边。公式依据是 perimeter 的定义与 Rectangle 的对边相等性质。\u003c/p>\u003cdiv data-dt-activity=\"perimeter-choice\">\u003c/div>","activityIds":["trace-boundary","perimeter-choice"]},{"id":"rectangle-question","title":"原题：一条 width 是多少？","bodyHtml":"\u003cp>\u003cstrong>题干：\u003c/strong>一个长方形的周长为20 cm，长度为6 cm，宽度是多少？\u003c/p>\u003cp>原创中文题目，没有英文原卷或考试分值。\u003c/p>\u003cp>“长方形”保证对边相等；“周长为20 cm”给出整圈总长度；“长度为6 cm”给出上下每一条 length；所求“宽度”是一条 width，答案用 cm。\u003c/p>\u003cp>题目给 perimeter，适合把四条边相加。只用 length + width 会漏掉另外两条边；相乘得到的是 \u003cstrong>area\u003c/strong>（内部平面的大小），与所求的边界长度不同。这里回接上方“本题公式”。\u003c/p>\u003cdiv data-dt-activity=\"original-width\">\u003c/div>\u003cdetails id=\"original-solution\">\u003csummary>主动查看完整题解（会记录为参考辅助）\u003c/summary>\u003cp>依次拿走两条已知的 length，再把剩下的两条 width 平分。每一步都继承上一行的相等关系。\u003c/p>\u003cdiv data-dt-activity=\"width-steps\">\u003c/div>\u003cdetails>\u003csummary>一次展开全部逐行推导\u003c/summary>\u003col>\u003cli>\u003ch4>把四条边接起来\u003c/h4>\u003cmath aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmi>P\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>l\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>l\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>继承题目给出的 Rectangle 条件：相对的两条边分别等长。沿边界走一圈会走过两条 length 和两条 width；依照前置块的 perimeter 定义，把四条边的数值相加。\u003c/p>\u003c/li>\u003cli>\u003ch4>把已知值放入关系\u003c/h4>\u003cmath aria-label=\"20 等于 6 加 width 数值 加 6 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>6\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>6\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行的 P 是 perimeter 的数值，l 是每条 length 的数值。题目给出 20 cm 与 6 cm，所以分别用 20 和 6 替换 P 和两个 l；未知的 w 原样保留。所有长度均以 cm 计。\u003c/p>\u003c/li>\u003cli>\u003ch4>先合并两条已知边\u003c/h4>\u003cmath aria-label=\"20 等于 12 加 width 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行右边是四段长度之和。加法可调整次序而不改变总量；把两个 6 放在一起相加得到 12，两条未知边各保留一个 w。\u003c/p>\u003c/li>\u003cli>\u003ch4>把两个相同的未知量合写\u003c/h4>\u003cmath aria-label=\"20 等于 12 加 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行有两个 w。2 × w 表示两个同样的 w 相加，因此用 2 × w 替换 w + w；它仍然表示两条 width 的合计。\u003c/p>\u003c/li>\u003cli>\u003ch4>两边同时拿走已知部分\u003c/h4>\u003cmath aria-label=\"20 减 12 等于 12 加 2 乘以 width 数值 减 12\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>−\u003c/mo>\u003cmn>12\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>上一行两边表示相同的总长度数值。两边都减去同一个 12，剩下的量仍相等；这相当于从整圈拿走两条 length。只减一边会破坏相等关系。\u003c/p>\u003c/li>\u003cli>\u003ch4>算出剩下的两条边合计\u003c/h4>\u003cmath aria-label=\"8 等于 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>8\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行左边 20 减 12 得 8；右边加上的 12 与减去的 12 抵消，只剩 2 × w。因此 8 是两条 width 的合计，还不是一条。\u003c/p>\u003c/li>\u003cli>\u003ch4>把两条等长边平均分开\u003c/h4>\u003cmath aria-label=\"8 除以 2 等于 左括号 2 乘以 width 数值 右括号 除以 2\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>8\u003c/mn>\u003cmo>÷\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmo>(\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>)\u003c/mo>\u003cmo>÷\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>上一行两边相等。两边同除以非零的 2，仍然相等；右边两条相同的 width 分成两份，每份恰好是一条 width。\u003c/p>\u003c/li>\u003cli>\u003ch4>算出一条边\u003c/h4>\u003cmath aria-label=\"4 等于 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>4\u003c/mn>\u003cmo>=\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行左边 8 除以 2 得 4；右边的两份 w 除以 2 只剩一份 w。因此一条 width 的数值是 4。\u003c/p>\u003c/li>\u003cli>\u003ch4>按所求量写答案\u003c/h4>\u003cmath aria-label=\"width 数值 等于 4\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmi>w\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>上一行的等号表示两边是同一个数，交换左右两边仍成立。w 一直以 cm 为单位计数，所以答案是 width 为 4 cm。\u003c/p>\u003c/li>\u003c/ol>\u003c/details>\u003cp>\u003cstrong>答案：width 为 4 cm。\u003c/strong>\u003c/p>\u003cp>核对：把答案放回四条边：\u003c/p>\u003cmath aria-label=\"6 加 4 加 6 加 4 等于 20\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>6\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>6\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>20\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>合计为 20 cm，与题目 perimeter 一致，且 width 为正数。自行核对三处：写出四边相加、把两条 width 的总长度除以 2、答案带 cm。这是解题检查点，没有虚构考试评分。\u003c/p>\u003c/details>","activityIds":["original-width","width-steps"]},{"id":"rectangle-transfer","title":"换一个数字，自己走一遍","bodyHtml":"\u003cp>沿用刚才的定义与公式，检查你能否独立找到\u003cstrong>两条 width 的合计\u003c/strong>，再求一条。\u003c/p>\u003cdiv data-dt-activity=\"transfer-width\">\u003c/div>","activityIds":["transfer-width"]}],"activities":[{"id":"trace-boundary","objectiveId":"perimeter-meaning","type":"interactive","title":"沿边追踪 perimeter","prompt":"从左上角出发，逐次沿长方形的一条边行走。上边和下边各为6厘米，左右两边各为 w 厘米。走过几条边才回到起点？用下一段、退回和重置按钮观察。","source":"deeptutor/book/blocks/interactive.py","bodyHtml":"\u003cstyle>\n.perimeter-model{max-width:620px;margin:auto}.perimeter-model svg{width:100%;height:auto;display:block}.perimeter-model .edge{stroke:var(--dt-muted,#62646b);stroke-width:5;fill:none}.perimeter-model .edge.traced{stroke:var(--dt-accent,#005fcc);stroke-width:8}.perimeter-model text{fill:currentColor;font-size:18px}.perimeter-model .model-controls{display:flex;gap:8px;flex-wrap:wrap}.perimeter-model button{min-height:44px;padding:8px 14px;border:1px solid currentColor;border-radius:10px;color:inherit;background:transparent;font:inherit}.perimeter-model button:focus-visible{outline:3px solid #005fcc;outline-offset:3px}.perimeter-model button:disabled{opacity:.45}.perimeter-model .trace-status{min-height:5em}#rectangle-definitions strong,#rectangle-question strong,#rectangle-transfer strong{color:var(--dt-accent,var(--accent,#005fcc));font-weight:750}\n\u003c/style>\u003cdiv class=\"perimeter-model\">\u003cp>从左上角出发，每次走一条边。观察：\u003cstrong>走到哪一步，才回到起点？\u003c/strong>\u003c/p>\u003csvg viewBox=\"0 0 500 295\" role=\"img\" aria-label=\"长方形示意图，上下两条 length 各为6厘米，左右两条 width 均未知，图形不按比例绘制\">\u003cpath class=\"edge\" data-edge=\"1\" d=\"M100 65H400\"/>\u003cpath class=\"edge\" data-edge=\"2\" d=\"M400 65V215\"/>\u003cpath class=\"edge\" data-edge=\"3\" d=\"M400 215H100\"/>\u003cpath class=\"edge\" data-edge=\"4\" d=\"M100 215V65\"/>\u003ctext x=\"250\" y=\"45\" text-anchor=\"middle\">length：6 cm\u003c/text>\u003ctext x=\"250\" y=\"250\" text-anchor=\"middle\">length：6 cm\u003c/text>\u003ctext x=\"60\" y=\"135\" text-anchor=\"middle\">width\u003c/text>\u003ctext x=\"60\" y=\"160\" text-anchor=\"middle\">w cm\u003c/text>\u003ctext x=\"444\" y=\"135\" text-anchor=\"middle\">width\u003c/text>\u003ctext x=\"444\" y=\"160\" text-anchor=\"middle\">w cm\u003c/text>\u003ccircle data-walker cx=\"100\" cy=\"65\" r=\"10\" fill=\"currentColor\"/>\u003ctext x=\"90\" y=\"25\" text-anchor=\"middle\">起点\u003c/text>\u003c/svg>\u003cp>示意图\u003cstrong>不按比例\u003c/strong>绘制；width 要用给定条件求，不能靠图片量出来。\u003c/p>\u003cdiv class=\"model-controls\">\u003cbutton type=\"button\" data-prev>退回一条边\u003c/button>\u003cbutton type=\"button\" data-next>沿边走下一段\u003c/button>\u003cbutton type=\"button\" data-reset>重置路线\u003c/button>\u003c/div>\u003cp class=\"trace-status\" data-status aria-live=\"polite\">\u003c/p>\u003c/div>","script":"(function(){const id='trace-boundary';let root,n=0;const pts=[[100,65],[400,65],[400,215],[100,215],[100,65]];const messages=['尚未出发。先沿上方的 length 行走。','已走1条边：6 cm。还没有围住一整圈。','已走2条边：(6 + w) cm。只到了对角，尚未回到起点。','已走3条边：(6 + w + 6) cm。还缺左边的一条 width。','已走4条边：(6 + w + 6 + w) cm。回到起点，这四段合计就是 perimeter。'];function update(state){n=Number.isInteger(state.edge)?Math.max(0,Math.min(4,state.edge)):0;root.querySelectorAll('[data-edge]').forEach(e=>e.classList.toggle('traced',Number(e.dataset.edge)\u003c=n));const dot=root.querySelector('[data-walker]');dot.setAttribute('cx',pts[n][0]);dot.setAttribute('cy',pts[n][1]);root.querySelector('[data-status]').textContent=messages[n];root.querySelector('[data-prev]').disabled=n===0;root.querySelector('[data-next]').disabled=n===4;}function change(v){update({edge:v});document.dispatchEvent(new CustomEvent('dt:exploration',{detail:{activityId:id,state:{edge:n}}}));}document.addEventListener('dt:activity-mounted',function(e){if(e.detail.activityId!==id)return;root=document.getElementById('dt-activity-'+id);root.querySelector('[data-next]').addEventListener('click',()=>change(n+1));root.querySelector('[data-prev]').addEventListener('click',()=>change(n-1));root.querySelector('[data-reset]').addEventListener('click',()=>change(0));update(e.detail.state||{});});document.addEventListener('dt:restore',function(e){if(root&&e.detail.activityId===id)update(e.detail.state||{});});})();"},{"id":"perimeter-choice","objectiveId":"perimeter-meaning","type":"quiz","format":"choice","title":"哪个关系数全了一圈？","prompt":"长方形每条 length 为 l cm，每条 width 为 w cm。哪一个式子表示 perimeter 的数值 P？","source":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","choices":[{"id":"all","text":"l + w + l + w","feedback":"四项依次对应四条边，恰好走完整圈。"},{"id":"half","text":"l + w","feedback":"只数了一条 length 和一条 width；模型中这只到对角，尚未回到起点。"},{"id":"area","text":"l × w","feedback":"这是 area 的数值，衡量内部大小；perimeter 要把边界各段的长度相加。"},{"id":"three","text":"l + l + w","feedback":"两条 length 数全了，但漏了一条 width，路线还没有闭合。"}],"answer":"all","hint":"回看模型：从起点沿边界回到起点，会经过几条 length、几条 width？","explanation":"Rectangle 的相对两条边分别相等。围一圈依次经过 l、w、l、w，四段长度相加才是 perimeter。"},{"id":"original-width","objectiveId":"width-procedure","type":"quiz","format":"numeric","title":"先留下你的答案","prompt":"一个长方形的周长为20 cm，长度为6 cm，宽度是多少？请输入以 cm 为单位的数值，不用输入单位。","source":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","answer":4,"tolerance":0,"solutionId":"original-solution","hint":"整圈有两条6 cm的 length。先从20 cm中减去这两条，剩下的是两条等长的 width。","explanation":"两条 length 合计12 cm；从20 cm减去12 cm，剩下8 cm，是两条 width 的合计。把8 cm平均分为两份，每条 width 为4 cm。展开完整题解可逐行核对依据。","followups":[{"question":"为什么不能把8 cm直接作为答案？","answer":"8 cm对应左右两条 width。Rectangle 的两条 width 相等，因此必须再平均分为两份；一份才是题目所求。"}]},{"id":"width-steps","objectiveId":"width-procedure","type":"steps","title":"每次只变换一行","prompt":"逐行求 width。每一步说明上一行留下什么、本次改变什么、为什么仍相等。可以返回前一步，或展开全部推导。","source":"deeptutor/agents/visualize/agents/code_generator_agent.py","steps":[{"title":"把四条边接起来","bodyHtml":"\u003cmath aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmi>P\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>l\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>l\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>继承题目给出的 Rectangle 条件：相对的两条边分别等长。沿边界走一圈会走过两条 length 和两条 width；依照前置块的 perimeter 定义，把四条边的数值相加。\u003c/p>"},{"title":"把已知值放入关系","bodyHtml":"\u003cmath aria-label=\"20 等于 6 加 width 数值 加 6 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>6\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>6\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行的 P 是 perimeter 的数值，l 是每条 length 的数值。题目给出 20 cm 与 6 cm，所以分别用 20 和 6 替换 P 和两个 l；未知的 w 原样保留。所有长度均以 cm 计。\u003c/p>"},{"title":"先合并两条已知边","bodyHtml":"\u003cmath aria-label=\"20 等于 12 加 width 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>+\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行右边是四段长度之和。加法可调整次序而不改变总量；把两个 6 放在一起相加得到 12，两条未知边各保留一个 w。\u003c/p>"},{"title":"把两个相同的未知量合写","bodyHtml":"\u003cmath aria-label=\"20 等于 12 加 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行有两个 w。2 × w 表示两个同样的 w 相加，因此用 2 × w 替换 w + w；它仍然表示两条 width 的合计。\u003c/p>"},{"title":"两边同时拿走已知部分","bodyHtml":"\u003cmath aria-label=\"20 减 12 等于 12 加 2 乘以 width 数值 减 12\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>12\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>−\u003c/mo>\u003cmn>12\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>上一行两边表示相同的总长度数值。两边都减去同一个 12，剩下的量仍相等；这相当于从整圈拿走两条 length。只减一边会破坏相等关系。\u003c/p>"},{"title":"算出剩下的两条边合计","bodyHtml":"\u003cmath aria-label=\"8 等于 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>8\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行左边 20 减 12 得 8；右边加上的 12 与减去的 12 抵消，只剩 2 × w。因此 8 是两条 width 的合计，还不是一条。\u003c/p>"},{"title":"把两条等长边平均分开","bodyHtml":"\u003cmath aria-label=\"8 除以 2 等于 左括号 2 乘以 width 数值 右括号 除以 2\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>8\u003c/mn>\u003cmo>÷\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmo>(\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmi>w\u003c/mi>\u003cmo>)\u003c/mo>\u003cmo>÷\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>上一行两边相等。两边同除以非零的 2，仍然相等；右边两条相同的 width 分成两份，每份恰好是一条 width。\u003c/p>"},{"title":"算出一条边","bodyHtml":"\u003cmath aria-label=\"4 等于 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>4\u003c/mn>\u003cmo>=\u003c/mo>\u003cmi>w\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>上一行左边 8 除以 2 得 4；右边的两份 w 除以 2 只剩一份 w。因此一条 width 的数值是 4。\u003c/p>"},{"title":"按所求量写答案","bodyHtml":"\u003cmath aria-label=\"width 数值 等于 4\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmi>w\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>上一行的等号表示两边是同一个数，交换左右两边仍成立。w 一直以 cm 为单位计数，所以答案是 width 为 4 cm。\u003c/p>"}]},{"id":"transfer-width","objectiveId":"width-procedure","type":"quiz","format":"numeric","title":"给相框边缘配材料","prompt":"一个长方形相框的 perimeter 为26 cm，每条 length 为8 cm。每条 width 是多少 cm？只输入数值。","source":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","answer":5,"tolerance":0,"hint":"先拿走两条 length，再把剩下的长度分给两条相等的 width。","explanation":"两条 length 合计16 cm。从整圈26 cm拿走16 cm，剩下10 cm，属于两条 width；平均分成两份，每条是5 cm。四条边8、5、8、5 cm合计26 cm，核对成立。"}]}</script><script id="dt-runtime">/* DialogueTutor portable learning interactions, contract v1.
  * Design sources: HKUDS/DeepTutor Books FlashCardsBlock, QuizBlock,
  * InteractiveBlock, PageReader, BookLearningOverlay; shared QuizViewer;
  * learning/scheduler.py. This implementation is independent vanilla JS.
@@ -1204,3 +1538,4 @@
     storageKey: storageKey, mount: mount
   };
 });
+</script><script data-dt-widget="trace-boundary">(function(){const id='trace-boundary';let root,n=0;const pts=[[100,65],[400,65],[400,215],[100,215],[100,65]];const messages=['尚未出发。先沿上方的 length 行走。','已走1条边：6 cm。还没有围住一整圈。','已走2条边：(6 + w) cm。只到了对角，尚未回到起点。','已走3条边：(6 + w + 6) cm。还缺左边的一条 width。','已走4条边：(6 + w + 6 + w) cm。回到起点，这四段合计就是 perimeter。'];function update(state){n=Number.isInteger(state.edge)?Math.max(0,Math.min(4,state.edge)):0;root.querySelectorAll('[data-edge]').forEach(e=>e.classList.toggle('traced',Number(e.dataset.edge)<=n));const dot=root.querySelector('[data-walker]');dot.setAttribute('cx',pts[n][0]);dot.setAttribute('cy',pts[n][1]);root.querySelector('[data-status]').textContent=messages[n];root.querySelector('[data-prev]').disabled=n===0;root.querySelector('[data-next]').disabled=n===4;}function change(v){update({edge:v});document.dispatchEvent(new CustomEvent('dt:exploration',{detail:{activityId:id,state:{edge:n}}}));}document.addEventListener('dt:activity-mounted',function(e){if(e.detail.activityId!==id)return;root=document.getElementById('dt-activity-'+id);root.querySelector('[data-next]').addEventListener('click',()=>change(n+1));root.querySelector('[data-prev]').addEventListener('click',()=>change(n-1));root.querySelector('[data-reset]').addEventListener('click',()=>change(0));update(e.detail.state||{});});document.addEventListener('dt:restore',function(e){if(root&&e.detail.activityId===id)update(e.detail.state||{});});})();</script><noscript><p>这份讲义的交互活动需要浏览器启用 JavaScript；正文与完整解答仍可阅读。</p></noscript></body></html>

@@ -19,15 +19,15 @@ window.MathJax = {
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
 <style>
 :root{
-  --bg:#fbfaf7; --fg:#1d1b18; --muted:#6b6560; --rule:#e2ddd4;
-  --card:#ffffff; --accent:#8a5a2b; --accent-soft:#f3ece2;
-  --gap:#a8442a; --ok:#2f6f4f; --mark:#fff6d8;
+  --bg:#f5f5f7; --fg:#1d1d1f; --muted:#62646b; --rule:#dedfe3;
+  --card:#ffffff; --accent:#005fcc; --accent-soft:#edf4ff;
+  --gap:#a33742; --ok:#16715c; --mark:#e9f2ff;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#15140f; --fg:#e9e4da; --muted:#a29a8d; --rule:#302c25;
-    --card:#1c1a15; --accent:#d3a068; --accent-soft:#26221b;
-    --gap:#e08163; --ok:#7fbf9a; --mark:#3a3320;
+    --bg:#151619; --fg:#f5f5f7; --muted:#b5b7be; --rule:#393c43;
+    --card:#202226; --accent:#8cbfff; --accent-soft:#243249;
+    --gap:#ffacb4; --ok:#78d7b5; --mark:#243249;
   }
 }
 *{box-sizing:border-box}
@@ -58,7 +58,7 @@ a{color:var(--accent); text-underline-offset:3px}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em; background:var(--accent-soft); padding:.1em .35em; border-radius:3px}
 
 .toc{
-  background:var(--card); border:1px solid var(--rule); border-radius:8px;
+  background:var(--card); border:1px solid var(--rule); border-radius:16px;
   padding:1.1rem 1.3rem; margin:2rem 0 3rem; font-size:.94rem; line-height:1.85;
 }
 .toc h5{margin:.1rem 0 .6rem; font-size:.82rem; letter-spacing:.14em; color:var(--muted); font-weight:600}
@@ -72,7 +72,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em; ba
 }
 
 .act{
-  background:var(--card); border:1px solid var(--rule); border-radius:8px;
+  background:var(--card); border:1px solid var(--rule); border-radius:16px;
   padding:1.2rem 1.4rem; margin:1.4rem 0;
 }
 .act > .label{
@@ -99,7 +99,7 @@ th{background:var(--accent-soft); font-size:.85rem; letter-spacing:.05em; font-w
 td.no{width:2.2rem; text-align:center; color:var(--muted); font-variant-numeric:tabular-nums}
 td.why{color:var(--muted); font-size:.88rem}
 
-.q{border:1px solid var(--rule); border-radius:8px; background:var(--card); padding:1.2rem 1.4rem; margin:2.2rem 0 1.6rem}
+.q{border:1px solid var(--rule); border-radius:16px; background:var(--card); padding:1.2rem 1.4rem; margin:2.2rem 0 1.6rem}
 .q .stem{font-size:.97rem}
 .q .marks{color:var(--muted); font-size:.85rem}
 .part{margin:2.6rem 0 3.2rem; scroll-margin-top:1rem}
@@ -120,25 +120,26 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   font-size:.86rem; color:var(--muted); line-height:1.8;
   font-family:system-ui,-apple-system,"PingFang SC",sans-serif}
 .mjx-container{overflow-x:auto; overflow-y:hidden; max-width:100%}
+strong { color:var(--accent); font-weight:700; }
 </style>
 <style id="dt-runtime-style">/* Portable DialogueTutor interactions. All selectors are namespaced. */
 .dt-activity,
 .dt-study {
-  --dt-paper: #fffdf7;
-  --dt-surface: #f7f3e9;
-  --dt-ink: #302e28;
-  --dt-muted: #706b60;
-  --dt-line: #dcd5c6;
-  --dt-accent: #35685c;
-  --dt-accent-soft: #edf3e9;
-  --dt-good: #24624b;
-  --dt-good-soft: #eef5ec;
-  --dt-again: #8b4a2c;
-  --dt-again-soft: #fcf0e5;
-  --dt-focus: #9a6026;
+  --dt-paper: #ffffff;
+  --dt-surface: #f5f5f7;
+  --dt-ink: #1d1d1f;
+  --dt-muted: #626269;
+  --dt-line: #d8d8de;
+  --dt-accent: #164f9e;
+  --dt-accent-soft: #eef4ff;
+  --dt-good: #087568;
+  --dt-good-soft: #edf8f5;
+  --dt-again: #b43e45;
+  --dt-again-soft: #fff1f2;
+  --dt-focus: #245fbc;
   box-sizing: border-box;
   color: var(--dt-ink);
-  font-family: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-size: 0.96rem;
   line-height: 1.7;
   text-align: left;
@@ -152,9 +153,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   padding: 1.5rem 1.65rem 1.15rem;
   background: var(--dt-paper);
   border: 1px solid var(--dt-line);
-  border-top: 3px solid var(--dt-accent);
-  border-radius: 0.6rem;
-  box-shadow: 0 4px 18px rgb(64 47 23 / 3%);
+  border-top: 1px solid var(--dt-line);
+  border-radius: 1rem;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 3%);
   scroll-margin-top: 1.2rem;
 }
 .dt-activity .dt-activity-title {
@@ -202,7 +203,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   justify-content: center;
   align-items: center;
   gap: 0.3rem;
-  min-height: 2.5rem;
+  min-height: 44px;
   max-width: 100%;
   margin: 0;
   padding: 0.48rem 0.82rem;
@@ -219,15 +220,19 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   white-space: normal;
   cursor: pointer;
   box-shadow: none;
-  transition: background-color 130ms ease, border-color 130ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
   -webkit-tap-highlight-color: transparent;
 }
-.dt-activity .dt-button:hover:not(:disabled),
-.dt-study .dt-button:hover:not(:disabled) { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+@media (hover: hover) and (pointer: fine) {
+  .dt-activity .dt-button:hover:not(:disabled),
+  .dt-study .dt-button:hover:not(:disabled) { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+}
 .dt-activity .dt-button-primary,
-.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: #fffdf7; }
-.dt-activity .dt-button-primary:hover:not(:disabled),
-.dt-study .dt-button-primary:hover:not(:disabled) { background: #285649; color: #fffdf7; }
+.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: #ffffff; }
+@media (hover: hover) and (pointer: fine) {
+  .dt-activity .dt-button-primary:hover:not(:disabled),
+  .dt-study .dt-button-primary:hover:not(:disabled) { background: #103e80; color: #ffffff; }
+}
 .dt-activity .dt-button-quiet,
 .dt-study .dt-button-quiet { border-color: transparent; background: transparent; color: var(--dt-accent); }
 .dt-activity .dt-button:disabled,
@@ -268,7 +273,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   background: linear-gradient(140deg, var(--dt-paper), var(--dt-surface));
   text-align: center;
 }
-.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: #a4bbae; }
+.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: #a8bddf; }
 .dt-flashcard-text { display: block; font-size: 1.05rem; font-weight: 500; line-height: 1.8; white-space: pre-wrap; }
 .dt-self-rating { margin: 1rem 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--dt-line); background: var(--dt-surface); }
 .dt-self-rating .dt-button { margin: 0.25rem 0.4rem 0.25rem 0; }
@@ -288,7 +293,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   line-height: 1.7;
   cursor: pointer;
 }
-.dt-choice:hover { border-color: #9aae9f; }
+@media (hover: hover) and (pointer: fine) { .dt-choice:hover { border-color: #a8bddf; } }
 .dt-choice-selected { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
 .dt-choice-label { min-width: 0; }
 .dt-radio { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; margin: 0.24rem 0 0; accent-color: var(--dt-accent); }
@@ -310,13 +315,13 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-reference { border: 1px solid var(--dt-line); background: transparent; }
 .dt-reference-answer { font-weight: 600; }
 .dt-reference .dt-rubric { margin: 0.5rem 0 0; padding-left: 1.2rem; }
-.dt-hint { border-left: 3px solid #ac9464; color: #675638; font-size: 0.85rem; }
+.dt-hint { border-left: 3px solid #164f9e; color: #164f9e; font-size: 0.85rem; }
 .dt-error,
-.dt-storage-warning { color: #8a351e; font-size: 0.82rem; line-height: 1.6; }
+.dt-storage-warning { color: #b43e45; font-size: 0.82rem; line-height: 1.6; }
 .dt-error:empty { display: none; }
 .dt-step-markers { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
 .dt-step-markers li { margin: 0; padding: 0; }
-.dt-step-markers .dt-button { min-height: 2.4rem; padding: 0.4rem 0.6rem; font-size: 0.74rem; }
+.dt-step-markers .dt-button { min-height: 44px; padding: 0.4rem 0.6rem; font-size: 0.74rem; }
 .dt-step-markers .dt-step-current { border-color: var(--dt-accent); background: var(--dt-accent-soft); color: var(--dt-accent); }
 .dt-step-stage { min-height: 9rem; margin: 0 0 1rem; padding: 1.1rem; border-left: 3px solid var(--dt-accent); background: var(--dt-surface); }
 .dt-authored { overflow-wrap: anywhere; }
@@ -336,10 +341,10 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-graph-grid { stroke: var(--dt-line); stroke-width: 0.8; stroke-dasharray: 3 4; }
 .dt-graph-axis { stroke: var(--dt-muted); stroke-width: 1; }
 .dt-graph-curve { stroke: var(--dt-accent); stroke-width: 3; stroke-linejoin: round; }
-.dt-graph-area { fill: #8db0a1; fill-opacity: 0.38; }
-.dt-graph-guide { stroke: #a47746; stroke-width: 1.4; stroke-dasharray: 4 4; }
-.dt-graph-dot { fill: #9a6026; stroke: var(--dt-paper); stroke-width: 1.5; }
-.dt-graph-dot-second { fill: #306b7b; }
+.dt-graph-area { fill: #80a9e4; fill-opacity: 0.38; }
+.dt-graph-guide { stroke: #087568; stroke-width: 1.4; stroke-dasharray: 4 4; }
+.dt-graph-dot { fill: #245fbc; stroke: var(--dt-paper); stroke-width: 1.5; }
+.dt-graph-dot-second { fill: #087568; }
 .dt-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; margin: 0.8rem 0; }
 .dt-metric { display: flex; flex-direction: column; min-width: 0; padding: 0.65rem 0.7rem; border: 1px solid var(--dt-line); border-radius: 0.35rem; }
 .dt-metric strong { margin-top: 0.15rem; font-size: 1.12rem; font-variant-numeric: tabular-nums; }
@@ -369,7 +374,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-study-stat { display: flex; flex-direction: column; padding: 0.55rem 0.7rem; border-radius: 0.35rem; background: var(--dt-surface); }
 .dt-study-stat strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
 .dt-objective { padding: 0.7rem 0; border-top: 1px solid var(--dt-line); }
-.dt-study .dt-activity-link { padding: 0.25rem 0.4rem; min-height: 2rem; font-size: 0.75rem; text-align: left; }
+.dt-study .dt-activity-link { padding: 0.25rem 0.4rem; min-height: 44px; font-size: 0.75rem; text-align: left; }
 .dt-review-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.3rem 0; padding: 0.25rem 0.4rem; }
 .dt-review-due { background: var(--dt-again-soft); border-radius: 0.35rem; }
 .dt-note-entry { margin: 0.35rem 0; padding: 0.25rem 0; }
@@ -410,30 +415,42 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 }
 @media (prefers-color-scheme: dark) {
   .dt-activity, .dt-study {
-    --dt-paper: #24241f;
-    --dt-surface: #2d2e27;
-    --dt-ink: #e9e5d9;
-    --dt-muted: #b5b09f;
-    --dt-line: #484b3e;
-    --dt-accent: #a0c9b4;
-    --dt-accent-soft: #303f34;
-    --dt-good: #abd5ac;
-    --dt-good-soft: #2b3d2b;
-    --dt-again: #e3b18c;
-    --dt-again-soft: #48372a;
-    --dt-focus: #e9bd82;
+    --dt-paper: #202023;
+    --dt-surface: #2b2b30;
+    --dt-ink: #f2f2f5;
+    --dt-muted: #b0b0b8;
+    --dt-line: #48484f;
+    --dt-accent: #8ab7ff;
+    --dt-accent-soft: #233149;
+    --dt-good: #76d8c2;
+    --dt-good-soft: #1e3834;
+    --dt-again: #ff9da3;
+    --dt-again-soft: #442b30;
+    --dt-focus: #8ab7ff;
   }
-  .dt-activity .dt-button-primary, .dt-study .dt-button-primary { background: #a0c9b4; color: #172b22; }
-  .dt-activity .dt-button-primary:hover:not(:disabled), .dt-study .dt-button-primary:hover:not(:disabled) { background: #c0ddcd; color: #172b22; }
-  .dt-hint { color: #ded0ac; }
-  .dt-error, .dt-storage-warning { color: #ffc2a2; }
+  .dt-activity .dt-button-primary, .dt-study .dt-button-primary { background: #8ab7ff; color: #102341; }
+  @media (hover: hover) and (pointer: fine) { .dt-activity .dt-button-primary:hover:not(:disabled), .dt-study .dt-button-primary:hover:not(:disabled) { background: #b7d1ff; color: #102341; } }
+  .dt-hint { color: #b7d1ff; }
+  .dt-error, .dt-storage-warning { color: #ff9da3; }
 }
 @media print {
   .dt-activity { box-shadow: none; break-inside: avoid; }
-  .dt-study, .dt-activity-footer, .dt-source { display: none; }
+  .dt-study, .dt-activity-footer, .dt-source, .dt-speech { display: none; }
   .dt-activity .dt-button { border-color: #888; }
   .dt-activity .dt-reference { break-inside: avoid; }
 }
+
+/* Immediate touch/keyboard feedback; neutral reading surfaces stay opaque. */
+.dt-activity strong, .dt-study strong { color: var(--dt-accent); font-weight: 700; }
+.dt-feedback-good strong { color: var(--dt-good); }
+.dt-feedback-again strong { color: var(--dt-again); }
+.dt-activity .dt-button:active:not(:disabled), .dt-study .dt-button:active:not(:disabled) { transform: scale(0.98); transition-duration: 0ms; }
+.dt-choice:active { background: var(--dt-accent-soft); }
+.dt-activity summary, .dt-study summary { min-height: 44px; }
+.dt-speech { margin: 0 0 1.4rem; padding: 0.75rem; border: 1px solid var(--dt-line); border-radius: 0.75rem; background: var(--dt-surface); }
+.dt-speech-rate { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; color: var(--dt-muted); font-size: 0.8rem; }
+.dt-select { min-height: 44px; padding: 0.4rem 0.6rem; border: 1px solid var(--dt-line); border-radius: 0.4rem; color: var(--dt-ink); background: var(--dt-paper); font: inherit; font-size: 1rem; }
+.dt-activity .dt-speech-status { margin: 0.45rem 0 0; color: var(--dt-muted); font-size: 0.78rem; line-height: 1.6; text-indent: 0; }
 </style></head>
 <body>
 
@@ -617,8 +634,8 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
     <clipPath id="clipAB"><rect x="120" y="30" width="65" height="170"/></clipPath>
   </defs>
   <path d="M50 195 C 90 180, 100 70, 155 70 C 210 70, 220 180, 260 195 L260 200 L50 200 Z"
-        fill="#8a5a2b" opacity="0.22" clip-path="url(#clipAB)"/>
-  <path d="M50 195 C 90 180, 100 70, 155 70 C 210 70, 220 180, 260 195" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+        fill="var(--accent)" opacity="0.22" clip-path="url(#clipAB)"/>
+  <path d="M50 195 C 90 180, 100 70, 155 70 C 210 70, 220 180, 260 195" fill="none" stroke="var(--accent)" stroke-width="2"/>
   <line x1="120" y1="200" x2="120" y2="206" stroke="currentColor"/>
   <line x1="185" y1="200" x2="185" y2="206" stroke="currentColor"/>
   <text x="116" y="222" font-style="italic">a</text>
@@ -629,14 +646,14 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <!-- right panel -->
   <line x1="350" y1="200" x2="590" y2="200" stroke="currentColor" stroke-width="1.2"/>
   <line x1="350" y1="200" x2="350" y2="40" stroke="currentColor" stroke-width="1.2"/>
-  <path d="M360 197 C 400 195, 415 120, 465 95 C 515 70, 540 55, 580 52" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+  <path d="M360 197 C 400 195, 415 120, 465 95 C 515 70, 540 55, 580 52" fill="none" stroke="var(--accent)" stroke-width="2"/>
   <line x1="430" y1="200" x2="430" y2="128" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
   <line x1="495" y1="200" x2="495" y2="83" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
   <line x1="350" y1="128" x2="430" y2="128" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
   <line x1="350" y1="83" x2="495" y2="83" stroke="currentColor" stroke-dasharray="3 3" opacity=".6"/>
-  <path d="M338 128 L338 83" stroke="#a8442a" stroke-width="2"/>
-  <path d="M334 128 L342 128 M334 83 L342 83" stroke="#a8442a" stroke-width="2"/>
-  <text x="290" y="110" font-size="12" fill="#a8442a">高度差</text>
+  <path d="M338 128 L338 83" stroke="var(--gap)" stroke-width="2"/>
+  <path d="M334 128 L342 128 M334 83 L342 83" stroke="var(--gap)" stroke-width="2"/>
+  <text x="290" y="110" font-size="12" fill="var(--gap)">高度差</text>
   <text x="426" y="222" font-style="italic">a</text>
   <text x="491" y="222" font-style="italic">b</text>
   <text x="336" y="46" font-style="italic">F</text>
@@ -829,8 +846,8 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <line x1="60" y1="200" x2="60" y2="35" stroke="currentColor" stroke-width="1.2"/>
   <line x1="60" y1="125" x2="500" y2="125" stroke="currentColor" stroke-dasharray="3 3" opacity=".45"/>
   <text x="514" y="129" font-size="12" opacity=".7">高度 1</text>
-  <polygon points="60,200 60,50 100,65 100,200" fill="#8a5a2b" opacity="0.28"/>
-  <path d="M60 50 L460 200" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+  <polygon points="60,200 60,50 100,65 100,200" fill="var(--accent)" opacity="0.28"/>
+  <path d="M60 50 L460 200" fill="none" stroke="var(--accent)" stroke-width="2"/>
   <line x1="100" y1="200" x2="100" y2="206" stroke="currentColor"/>
   <line x1="460" y1="200" x2="460" y2="206" stroke="currentColor"/>
   <line x1="54" y1="50" x2="60" y2="50" stroke="currentColor"/>
@@ -842,8 +859,8 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <text x="42" y="130">1</text>
   <text x="42" y="35" font-style="italic">f</text>
   <text x="506" y="222" font-style="italic">x</text>
-  <line x1="150" y1="120" x2="96" y2="152" stroke="#a8442a" stroke-width="1"/>
-  <text x="154" y="116" font-size="12" fill="#a8442a">这一块的面积 = 0.19</text>
+  <line x1="150" y1="120" x2="96" y2="152" stroke="var(--gap)" stroke-width="1"/>
+  <text x="154" y="116" font-size="12" fill="var(--gap)">这一块的面积 = 0.19</text>
   </g>
 </svg>
 <figcaption>
@@ -1023,11 +1040,11 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <g font-family="Georgia, serif" font-size="13">
   <line x1="70" y1="170" x2="560" y2="170" stroke="currentColor" stroke-width="1.2"/>
   <line x1="70" y1="170" x2="70" y2="40" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="140" y="80" width="340" height="90" fill="#8a5a2b" opacity="0.14"/>
-  <rect x="380" y="80" width="100" height="90" fill="#a8442a" opacity="0.28"/>
-  <line x1="140" y1="80" x2="480" y2="80" stroke="#8a5a2b" stroke-width="2.4"/>
-  <line x1="140" y1="80" x2="140" y2="170" stroke="#8a5a2b" stroke-width="1.4" stroke-dasharray="4 3"/>
-  <line x1="480" y1="80" x2="480" y2="170" stroke="#8a5a2b" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <rect x="140" y="80" width="340" height="90" fill="var(--accent)" opacity="0.14"/>
+  <rect x="380" y="80" width="100" height="90" fill="var(--gap)" opacity="0.28"/>
+  <line x1="140" y1="80" x2="480" y2="80" stroke="var(--accent)" stroke-width="2.4"/>
+  <line x1="140" y1="80" x2="140" y2="170" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <line x1="480" y1="80" x2="480" y2="170" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 3"/>
   <line x1="70" y1="80" x2="140" y2="80" stroke="currentColor" stroke-dasharray="3 3" opacity=".55"/>
   <!-- 纵轴标注：写成真正的分式，不写成 1/(b−a) -->
   <g text-anchor="middle" font-size="12.5">
@@ -1038,13 +1055,13 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <text x="136" y="190" font-style="italic">a</text>
   <text x="476" y="190" font-style="italic">b</text>
   <text x="374" y="190" font-style="italic">t</text>
-  <line x1="310" y1="80" x2="310" y2="176" stroke="#2f6f4f" stroke-width="1.6"/>
-  <polygon points="310,180 304,170 316,170" fill="#2f6f4f"/>
-  <g fill="#2f6f4f" font-size="12.5">
+  <line x1="310" y1="80" x2="310" y2="176" stroke="var(--ok)" stroke-width="1.6"/>
+  <polygon points="310,180 304,170 316,170" fill="var(--ok)"/>
+  <g fill="var(--ok)" font-size="12.5">
     <text x="238" y="212">E(<tspan font-style="italic">X</tspan>) =</text>
     <g text-anchor="middle">
       <text x="303" y="206" font-style="italic">a <tspan font-style="normal">+</tspan> b</text>
-      <line x1="283" y1="211" x2="323" y2="211" stroke="#2f6f4f" stroke-width="1"/>
+      <line x1="283" y1="211" x2="323" y2="211" stroke="var(--ok)" stroke-width="1"/>
       <text x="303" y="226">2</text>
     </g>
   </g>
@@ -1244,10 +1261,10 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <g font-family="Georgia, serif" font-size="13">
   <line x1="60" y1="200" x2="530" y2="200" stroke="currentColor" stroke-width="1.2"/>
   <line x1="60" y1="200" x2="60" y2="60" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="60" y="100" width="132" height="100" fill="#8a5a2b" opacity="0.28"/>
-  <rect x="280" y="100" width="132" height="100" fill="#8a5a2b" opacity="0.28"/>
-  <line x1="60" y1="100" x2="500" y2="100" stroke="#8a5a2b" stroke-width="2"/>
-  <line x1="500" y1="100" x2="500" y2="200" stroke="#8a5a2b" stroke-width="2" stroke-dasharray="3 3"/>
+  <rect x="60" y="100" width="132" height="100" fill="var(--accent)" opacity="0.28"/>
+  <rect x="280" y="100" width="132" height="100" fill="var(--accent)" opacity="0.28"/>
+  <line x1="60" y1="100" x2="500" y2="100" stroke="var(--accent)" stroke-width="2"/>
+  <line x1="500" y1="100" x2="500" y2="200" stroke="var(--accent)" stroke-width="2" stroke-dasharray="3 3"/>
   <line x1="192" y1="200" x2="192" y2="206" stroke="currentColor"/>
   <line x1="280" y1="200" x2="280" y2="206" stroke="currentColor"/>
   <line x1="412" y1="200" x2="412" y2="206" stroke="currentColor"/>
@@ -1261,9 +1278,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   <text x="20" y="104" font-size="12">1/40</text>
   <text x="42" y="58" font-style="italic">f</text>
   <text x="534" y="222" font-style="italic">x</text>
-  <text x="84" y="88" font-size="12" fill="#a8442a">长 12</text>
-  <text x="304" y="88" font-size="12" fill="#a8442a">长 12</text>
-  <text x="196" y="150" font-size="12" fill="#a8442a">两块一样宽，也就一样大</text>
+  <text x="84" y="88" font-size="12" fill="var(--gap)">长 12</text>
+  <text x="304" y="88" font-size="12" fill="var(--gap)">长 12</text>
+  <text x="196" y="150" font-size="12" fill="var(--gap)">两块一样宽，也就一样大</text>
   </g>
 </svg>
 <figcaption>
@@ -2182,7 +2199,10 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     lesson.activities.forEach(function (activity) {
       if (!safeId(activity.id) || activityIds.has(activity.id) || !objectiveIds.has(activity.objectiveId) || !TYPES.includes(activity.type)) throw new Error("Invalid activity identity/type");
       activityIds.add(activity.id);
-      if (!(typeof activity.source === "string" && activity.source.trim()) && !(record(activity.source) && typeof activity.source.path === "string" && activity.source.path.trim())) throw new Error("Activity needs its DeepTutor source");
+      var source = activity.source;
+      if (record(source) && has(source, "provider")) {
+        if (![source.provider, source.mechanism, source.url].every(function (value) { return typeof value === "string" && value.trim(); }) || !/^https:\/\/[^\s/]+(?:\/[^\s]*)?$/.test(source.url)) throw new Error("Activity source needs provider, HTTPS URL and mechanism");
+      } else if (!(typeof source === "string" && source.trim()) && !(record(source) && typeof source.path === "string" && source.path.trim())) throw new Error("Activity needs its interaction source");
       if (activity.type === "flashcards" && (!Array.isArray(activity.cards) || !activity.cards.length)) throw new Error("Flashcards need cards");
       if (activity.type === "steps" && (!Array.isArray(activity.steps) || !activity.steps.length)) throw new Error("Steps need stages");
       if (activity.type === "explore" && !["linear-density", "uniform"].includes(activity.model)) throw new Error("Unknown exploration model");
@@ -2326,6 +2346,132 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       node.addEventListener("click", action);
       return node;
     }
+    // Speech is ephemeral UI state: listening never creates learning evidence.
+    var synthesis = win.speechSynthesis;
+    var speechSupported = !!(synthesis && win.SpeechSynthesisUtterance);
+    var speech = { owner: null, utterance: null, status: "idle", rate: 1.5, voice: null, loaded: false, message: "" };
+    var voiceTimer = null;
+    function voiceLabel(voice) {
+      if (!speechSupported) return t("此浏览器不支持朗读。", "Read aloud is unavailable in this browser.");
+      if (!voice) return speech.loaded ? t("没有可用的课程语言语音；请安装系统语音后重试。", "No voice for this lesson language is available. Install a system voice and retry.") : t("正在等待浏览器加载语音…", "Waiting for browser voices…");
+      var name = voice.name + " (" + voice.lang + ")";
+      if (/^zh\b/i.test(lesson.language || "zh-CN") && !isXiaoxiao(voice)) return t("本次未使用 zh-CN Xiaoxiao；实际语音：", "This reading does not use zh-CN Xiaoxiao; actual voice: ") + name;
+      return t("语音：", "Voice: ") + name;
+    }
+    function isXiaoxiao(voice) { return /^zh[-_]cn$/i.test(voice.lang) && /xiaoxiao|晓晓/i.test(voice.name); }
+    function updateSpeechControls() {
+      views.forEach(function (view, id) {
+        if (!view.speech) return;
+        var active = speech.owner === id;
+        view.speech.play.textContent = active && speech.status === "paused" ? t("继续朗读", "Resume") : t("读题", "Read aloud");
+        view.speech.play.disabled = !speechSupported || (active && ["playing", "loading"].includes(speech.status));
+        view.speech.pause.disabled = !active || speech.status !== "playing";
+        view.speech.stop.disabled = !active;
+        view.speech.rate.value = String(speech.rate);
+        view.speech.status.textContent = (active && speech.message ? speech.message + " " : "") + voiceLabel(active && speech.utterance ? speech.utterance.voice : speech.voice);
+      });
+    }
+    function stopSpeech() {
+      var hadSpeech = speech.owner !== null;
+      speech.owner = null; speech.utterance = null; speech.status = "idle"; speech.message = "";
+      // Clear ownership first: cancel may synchronously dispatch an old onend/onerror.
+      if (speechSupported && hadSpeech) synthesis.cancel();
+      updateSpeechControls();
+    }
+    function loadVoices() {
+      if (!speechSupported) return;
+      var voices;
+      try { voices = synthesis.getVoices(); } catch (error) { voices = []; }
+      var language = (lesson.language || "zh-CN").replace(/_/g, "-").toLowerCase();
+      var family = language.split("-")[0];
+      speech.voice = (family === "zh" && voices.find(isXiaoxiao)) || voices.find(function (voice) { return voice.lang.replace(/_/g, "-").toLowerCase() === language; }) || voices.find(function (voice) { return voice.lang.toLowerCase().split(/[-_]/)[0] === family; }) || null;
+      if (voices.length) speech.loaded = true;
+      updateSpeechControls();
+      if (speech.voice && speech.status === "loading" && speech.owner) startSpeech(definitions.get(speech.owner));
+    }
+    function spokenText(activity) {
+      var saved = state.activities[activity.id], lines = [activity.prompt];
+      // Explicit allowlist. Never read whole activity DOM, hidden references or future steps.
+      if (activity.type === "quiz" && activity.format === "choice") activity.choices.forEach(function (choice, index) { lines.push((index + 1) + ". " + choice.text); });
+      if (activity.type === "flashcards") {
+        var card = activity.cards[saved.flash.index], cardState = saved.flash.cards[String(saved.flash.index)];
+        lines.push(cardState && cardState.revealed ? card.back : card.front);
+      }
+      if (activity.type === "steps") {
+        var stage = views.get(activity.id).body.querySelector(".dt-step-stage");
+        if (stage) {
+          function visibleText(node) {
+            if (node.nodeType === 3) return node.textContent;
+            if (node.nodeType !== 1 || node.matches("[hidden],[aria-hidden='true'],script,style,annotation,annotation-xml")) return "";
+            var style = win.getComputedStyle(node);
+            if (style.display === "none" || style.visibility === "hidden") return "";
+            // Read an authored formula pronunciation only after visibility checks.
+            // Its label replaces the whole formula, avoiding flattened fractions/powers.
+            if (node.localName === "math" && node.namespaceURI === "http://www.w3.org/1998/Math/MathML") {
+              var pronunciation = (node.getAttribute("aria-label") || "").trim();
+              if (pronunciation) return pronunciation;
+            }
+            if (node.tagName === "DETAILS" && !node.open) return node.querySelector("summary") ? visibleText(node.querySelector("summary")) : "";
+            return Array.from(node.childNodes).map(visibleText).join(" ");
+          }
+          lines.push(visibleText(stage));
+        }
+      }
+      return lines.filter(Boolean).join("\n\n");
+    }
+    function startSpeech(activity) {
+      if (!speechSupported) return;
+      if (speech.owner === activity.id && speech.status === "paused") {
+        synthesis.resume(); speech.status = "playing"; speech.message = t("继续朗读。", "Resumed."); updateSpeechControls(); return;
+      }
+      stopSpeech(); loadVoices(); speech.owner = activity.id;
+      if (!speech.voice) {
+        speech.status = speech.loaded ? "idle" : "loading";
+        speech.message = speech.loaded ? "" : t("语音载入后会开始读题。", "Reading will start when voices load.");
+        updateSpeechControls(); return;
+      }
+      var utterance = new win.SpeechSynthesisUtterance(spokenText(activity));
+      utterance.voice = speech.voice; utterance.lang = speech.voice.lang; utterance.rate = speech.rate;
+      speech.utterance = utterance; speech.status = "playing"; speech.message = t("正在朗读。", "Reading.");
+      utterance.onend = function () { if (speech.utterance === utterance) { speech.status = "idle"; speech.utterance = null; speech.message = t("朗读结束。", "Finished reading."); updateSpeechControls(); } };
+      utterance.onerror = function (event) { if (speech.utterance === utterance) { speech.status = "idle"; speech.utterance = null; speech.message = t("朗读失败，请重试：", "Read aloud failed; retry: ") + (event.error || "unknown"); updateSpeechControls(); } };
+      updateSpeechControls();
+      try {
+        // cancel() and speak() preserve the global paused state. Clear the queue
+        // before resuming so a fresh reading cannot revive canceled content.
+        if (synthesis.paused) { synthesis.cancel(); synthesis.resume(); }
+        synthesis.speak(utterance);
+      } catch (error) { utterance.onerror({ error: error.message }); }
+    }
+    function speechToolbar(activity) {
+      var toolbar = el("div", "dt-speech"), row = el("div", "dt-row");
+      toolbar.setAttribute("role", "group"); toolbar.setAttribute("aria-label", t("读题控制", "Read aloud controls"));
+      var play = button(t("读题", "Read aloud"), function () { startSpeech(activity); }, "", "speech-play");
+      var pause = button(t("暂停", "Pause"), function () { synthesis.pause(); speech.status = "paused"; speech.message = t("已暂停。", "Paused."); updateSpeechControls(); }, "dt-button-quiet", "speech-pause");
+      var stop = button(t("停止", "Stop"), stopSpeech, "dt-button-quiet", "speech-stop");
+      var label = el("label", "dt-speech-rate", t("语速", "Speed")), rate = el("select", "dt-select");
+      rate.dataset.dtControl = "speech-rate";
+      [0.75, 1, 1.25, 1.5, 1.75, 2].forEach(function (value) { var option = el("option", "", value + "×"); option.value = String(value); rate.appendChild(option); });
+      rate.value = String(speech.rate); rate.disabled = !speechSupported;
+      rate.addEventListener("change", function () {
+        var next = Number(rate.value); if (![0.75, 1, 1.25, 1.5, 1.75, 2].includes(next)) return;
+        var active = speech.owner && definitions.get(speech.owner), restart = speech.status === "playing";
+        stopSpeech(); speech.rate = next;
+        if (active && restart) { startSpeech(active); speech.message = t("已按新语速从当前内容开头朗读。", "Restarted the current content at the new speed."); }
+        else if (active) { speech.owner = active.id; speech.message = t("语速已更新；点击读题从当前内容开头播放。", "Speed updated. Read aloud to restart the current content."); }
+        updateSpeechControls();
+      });
+      label.appendChild(rate); row.append(play, pause, stop, label);
+      var status = el("p", "dt-speech-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
+      toolbar.append(row, status);
+      return { root: toolbar, play: play, pause: pause, stop: stop, rate: rate, status: status };
+    }
+    if (speechSupported) {
+      synthesis.addEventListener("voiceschanged", loadVoices);
+      loadVoices();
+      voiceTimer = win.setTimeout(function () { loadVoices(); speech.loaded = true; if (speech.status === "loading") { speech.status = "idle"; speech.message = ""; } updateSpeechControls(); }, 2500);
+    }
+    win.addEventListener("pagehide", stopSpeech);
     function message(view, text) { view.status.textContent = text; }
     function dateLabel(time) { return new Date(time).toLocaleDateString(en ? "en-GB" : "zh-CN", { year: "numeric", month: "short", day: "numeric" }); }
     function save() {
@@ -2334,6 +2480,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); }
     }
     function transition(activity, event, render) {
+      if (speech.owner && (speech.owner !== activity.id || !["draft", "note", "bookmark"].includes(event.type))) stopSpeech();
       state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
       state.currentActivity = activity.id;
       save();
@@ -2706,14 +2853,18 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         }
       }, "dt-button-quiet", "copy-context");
       var row = el("div", "dt-row"); row.append(bookmark, copyButton); footer.append(row, note);
-      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · DeepTutor", "Interaction source · DeepTutor")));
-      var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
+      var provider = typeof activity.source === "object" && activity.source.provider || "DeepTutor";
+      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · ", "Interaction source · ") + provider));
+      var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.url, activity.source.mechanism, activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
       source.appendChild(el("p", "dt-small", sourceText)); footer.appendChild(source);
       var status = el("p", "dt-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
-      target.append(header, prompt, body, footer, status);
-      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false };
+      var speechControls = speechToolbar(activity);
+      target.append(header, prompt, speechControls.root, body, footer, status);
+      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false, speech: speechControls };
       views.set(activity.id, view);
-      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
+      updateSpeechControls();
+      target.addEventListener("focusin", function () { if (speech.owner && speech.owner !== activity.id) stopSpeech(); if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
+      target.addEventListener("pointerdown", function () { if (speech.owner && speech.owner !== activity.id) stopSpeech(); });
       renderActivity(activity);
       if (activity.solutionId) {
         var solution = doc.getElementById(activity.solutionId);
@@ -2739,6 +2890,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     function navigate(activityId, reviewItem) {
       var activity = definitions.get(activityId), view = views.get(activityId);
       if (!activity || !view) return;
+      stopSpeech();
       if (reviewItem) {
         if (activity.type === "quiz") {
           if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
@@ -2810,7 +2962,8 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         if (!upload.files || !upload.files[0]) return;
         try {
           if (upload.files[0].size > 5000000) throw new Error(t("记录文件超过 5 MB。", "Progress file exceeds 5 MB."));
-          state = prepareSession(lesson, validateImport(lesson, await upload.files[0].text()), now(), sessionId, state);
+          var imported = validateImport(lesson, await upload.files[0].text());
+          stopSpeech(); state = prepareSession(lesson, imported, now(), sessionId, state);
           closeDueSolutions(); save();
           lesson.activities.forEach(renderActivity);
           notifyCustomRestore();
@@ -2854,9 +3007,9 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       storageKey: key,
       getState: function () { return copy(state); },
       exportState: function () { return exportEnvelope(lesson, state, now()); },
-      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
+      importState: function (value) { var imported = validateImport(lesson, value); stopSpeech(); state = prepareSession(lesson, imported, now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
       refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); },
-      destroy: function () { doc.removeEventListener("dt:exploration", explorationListener); }
+      destroy: function () { stopSpeech(); win.clearTimeout(voiceTimer); if (speechSupported) synthesis.removeEventListener("voiceschanged", loadVoices); win.removeEventListener("pagehide", stopSpeech); doc.removeEventListener("dt:exploration", explorationListener); }
     };
   }
 

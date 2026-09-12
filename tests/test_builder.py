@@ -22,6 +22,25 @@ def small_lesson():
 
 
 class BuilderTests(unittest.TestCase):
+    def test_provider_sources_and_legacy_sources_are_compatible(self):
+        lesson = small_lesson()
+        for source in (
+            "web/components/quiz/QuizViewer.tsx",
+            {"repository": "HKUDS/DeepTutor", "path": "web/components/quiz/QuizViewer.tsx"},
+            {"provider": "Brilliant", "url": "https://brilliant.org/courses/", "mechanism": "Guided reasoning"},
+        ):
+            with self.subTest(source=source):
+                lesson["activities"][0]["source"] = source
+                builder.validate_lesson(lesson)
+        for source in (
+            {"provider": "", "url": "https://brilliant.org", "mechanism": "Guided reasoning"},
+            {"provider": "Brilliant", "url": "http://brilliant.org", "mechanism": "Guided reasoning"},
+            {"provider": "Brilliant", "url": "https://brilliant.org", "mechanism": ""},
+        ):
+            with self.subTest(source=source), self.assertRaises(builder.LessonError):
+                lesson["activities"][0]["source"] = source
+                builder.validate_lesson(lesson)
+
     def test_original_markup_roundtrips_including_svg_case(self):
         source = (SKILL / "examples/s2-source.html").read_text()
         self.assertEqual(builder.Document(source).root.render(), source)

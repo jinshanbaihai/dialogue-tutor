@@ -94,7 +94,11 @@ def validate_lesson(lesson):
         for field in ("title", "prompt"):
             text_field(activity, field, context)
         source = activity.get("source")
-        if isinstance(source, dict):
+        if isinstance(source, dict) and "provider" in source:
+            for field in ("provider", "url", "mechanism"):
+                text_field(source, field, context + ".source")
+            require(re.fullmatch(r"https://[^\s/]+(?:/[^\s]*)?", source["url"]), f"{context}.source.url must be an HTTPS URL")
+        elif isinstance(source, dict):
             text_field(source, "path", context + ".source")
             require(source.get("repository", "HKUDS/DeepTutor") == "HKUDS/DeepTutor", f"{context}.source must identify HKUDS/DeepTutor")
         else:
@@ -376,10 +380,10 @@ def place_activities(document, lesson):
 
 
 BASE_CSS = """
-:root{color-scheme:light dark;--paper:#faf8f2;--ink:#262b32;--muted:#656c73;--line:#deddd5;--accent:#215d59}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,'Noto Sans SC',sans-serif;line-height:1.85}
-main{max-width:52rem;margin:0 auto;padding:3rem 1.3rem 6rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.35}h2{margin-top:3rem;font-size:1.5rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--accent)}figure{margin:1.7rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:#eceee9}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--accent);font-size:.8rem;letter-spacing:.12em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
-@media(prefers-color-scheme:dark){:root{--paper:#161b20;--ink:#e6e6df;--muted:#abb2b8;--line:#384048;--accent:#9edbd0}pre{background:#222b30}}
+:root{color-scheme:light dark;--paper:#f5f5f7;--ink:#1d1d1f;--muted:#626269;--line:#d8d8de;--accent:#164f9e}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.8}strong{color:var(--accent);font-weight:700}
+main{max-width:52rem;margin:0 auto;padding:3rem 1.3rem 6rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.35}h2{margin-top:3rem;font-size:1.5rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--accent)}figure{margin:1.7rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:#eaeaee}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--accent);font-size:.8rem;letter-spacing:.12em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
+@media(prefers-color-scheme:dark){:root{--paper:#161618;--ink:#f2f2f5;--muted:#b0b0b8;--line:#414147;--accent:#8ab7ff}pre{background:#242427}}
 """
 
 

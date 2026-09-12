@@ -1,17 +1,16 @@
 # 交互 HTML：活动编排、数据与生成
 
-生成或更新 HTML 时读取本文件。只进行短回合追问时，继续使用 SKILL.md §1–§2。
+生成或更新 HTML 时读取本文件。只进行短回合追问时，读取 `dialogue.md` 的短回合规则。
 本文件维护活动 schema 与操作流程；DeepTutor 的逐项出处见 `deeptutor-provenance.md`，
 提取、反馈、间隔与伴读的研究范围见 `learning-evidence.md`。
 
 ## 先按内容安排学习动作
 
 旧样章有完整题目与推导，却没有接收作答的组件；给长文末尾补几个按钮也不能覆盖正文中的学习机会。
-先列活动蓝图，再制作课程数据。蓝图每行填写：**内容位置、目标、类型、DeepTutor 来源、
-放置理由、反馈、保存记录**。这些是作者的编排说明，不需要原样显示在学习者页面。
+先列活动蓝图，再制作课程数据。蓝图每行填写：**内容位置、目标、当前前提、类型、模型映射、来源、
+放置理由、反馈、逐行理由、TTS 范围与保存记录**。这些是作者的编排说明，不需要原样显示在学习者页面。
 
-所有新增交互的灵感来自 HKUDS/DeepTutor。源代码快照为
-`42fab3cf429a1fbf36b257ab8d116a3814964202`；科学文献用于限定采用方式，不充当另一套功能来源。
+DeepTutor 是已有组件的实现来源，原核查快照为 `42fab3cf429a1fbf36b257ab8d116a3814964202`。新增机制可以采用 `interaction-research.md` 中核实的产品来源，组合行为写明本项目设计。先按 `experience-design.md` 设计教学动作与模型，文字进入对应步骤与反馈。
 
 | 内容与学习动作 | 选择的活动 | DeepTutor 实现来源 | 本课程记录 |
 | --- | --- | --- | --- |
@@ -61,7 +60,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 每个活动包含 `{id,objectiveId,type,title,prompt,source}`，再加相应 payload。
 `objectiveId` 引用已有目标；每个活动只挂载一次。
-`source` 可以是 DeepTutor 仓库内的 `deeptutor/...` 或 `web/...` 路径，也可以使用：
+保留旧来源格式。`source` 可以是 DeepTutor 仓库内的 `deeptutor/...` 或 `web/...` 路径，也可以使用：
 
 ```json
 {
@@ -72,8 +71,10 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 }
 ```
 
+新增产品来源使用 `{ "provider": "Brilliant", "url": "https://brilliant.org/help/schools-and-educators/differentiation-guide/", "mechanism": "实时错误反馈与分步解释" }`；`provider`、HTTPS `url` 与 `mechanism` 非空。不要把其他产品机制伪写成 DeepTutor 路径。
+
 `prompt`、卡片正反面、选项和普通标签是纯文本，使用清楚的文字与简短 Unicode 记号。
-复杂公式与推导放入 `bodyHtml` 或步骤的 `bodyHtml`，新页面优先用原生 MathML，图形用内联 SVG。
+复杂公式与推导放入 `bodyHtml` 或步骤的 `bodyHtml`，新页面优先用原生 MathML，图形用内联 SVG。步骤中的复杂 math 元素填写完整可朗读 `aria-label`，例如 `<math aria-label="二分之一">`，当前步骤读题会采用该公式口播。
 默认组装器没有从网络加载数学排版库；仅写入 LaTeX 不会自动变成公式。
 已有 HTML 保留原本的 MathJax 或 KaTeX 时，按原有依赖实际检查显示结果。
 
@@ -92,7 +93,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 | `format` | 必填内容 | 反馈与证据 |
 | --- | --- | --- |
-| `choice` | 至少两个 `choices:[{id,text,feedback?}]`，唯一正确的 `answer` 为选项 ID | 选择不立即揭示；明确提交后给对错与解析。干扰项对应实际误解，不用措辞陷阱 |
+| `choice` | 新写概念辨析优先四个合理选项；原题选项原样保留，真实二元判断允许两个。至少两个 `choices:[{id,text,feedback?}]`，唯一正确的 `answer` 为选项 ID | 选择不立即揭示；明确提交后给对错与解析。干扰项对应实际误解，不用措辞陷阱 |
 | `numeric` | `answer` 为有限数字或简单分数；可选非负 `tolerance`，默认绝对误差 `1e-8` | 支持小数与 `3/8` 形式的输入。题面交代单位与精度，输入不要求附单位，不接受任意代码 |
 | `open` | `modelAnswer` 与非空 `rubric:[string]` | 保存本人原答，提交或主动揭示后显示参考及自评要点；自评明确标注，不冒称语义自动评分 |
 
@@ -103,7 +104,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 **`steps`**
 
-`steps` 至少两项，每项 `{title,bodyHtml}`。每步保留依据，学习者可以前进、回退、重置。
+`steps` 至少两项，每项 `{title,bodyHtml}`。每步保留前一步、本次变化、成立理由和结果；理由说明本题适用条件，不能只写定理名称。学习者可以前进、回退、重置；作者在同节附完整推导的关闭 `details`，支持主动一次查看。
 步进只控制显示的节奏，不压缩原有完整推导；“下一步”不产生答对证据。
 
 **`explore`**
@@ -156,7 +157,7 @@ document.dispatchEvent(new CustomEvent('dt:exploration', {
 python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
 ```
 
-`sections` 按阅读顺序放完整正文，每节的全部活动由 `activityIds` 指定。
+`sections` 按学习节点安排完整内容，每节的全部活动由 `activityIds` 指定。完整性包含活动、模型、步骤和可展开解释，禁止先铺长文再把全部活动追加在结尾。
 可以在 `bodyHtml` 的准确位置预置 `<div data-dt-activity="活动ID"></div>`，
 组装器只将尚未预置的活动追加到节尾，并检查每个 ID 恰好出现一次。
 题目练习优先采用“完整题面 → 活动挂载点 → 关闭的完整解答”的顺序。
@@ -279,7 +280,7 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html --base
 - `lesson-answers.txt`：按活动 ID 对应的完整参考讲解，供作答或主动揭示后播放。
 - `lesson-tts.json`：保留全部片段与对应关系。
 
-这套交付是文字伴读，不附带自动播放、自动暂停或网页语音同步。
+以上导出的纯文本是完整伴读文件，本身不附带自动播放、自动暂停或网页语音同步。每个活动的页面 TTS 是独立基础功能，即使未设置 `tts` 也提供，详见 `experience-design.md`。
 学习者在活动处手动暂停，核对时打开参考轨对应片段。用户明确要求完整答案连续朗读时，
 可以另交标明“参考答案伴读”的整轨；首次作答轨仍独立保留。
 
@@ -293,7 +294,8 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html --base
 3. 笔记和书签、刷新恢复、导出再导入；题目版本变化不继续显示旧版表现。
 4. 已看答案后再提交保留辅助标记；重复提交不新增尝试；同次重试不提前推进复习。
 5. 数学与 SVG 显示正确，手机窄屏与键盘可以操作，主要控件没有空操作。
-6. `plustts` 逐项对照活动数据，题面、暂停提醒、完整解法分别进入正确轨道。
+6. 每个活动操作 TTS，检查实际音色、1.5倍、暂停/继续/停止、调速、内容切换与未揭示答案隔离。
+7. `plustts` 逐项对照活动数据，题面、暂停提醒、完整解法分别进入正确轨道。
 
 只把实际执行的检查写入交付记录。页面动作通过只能证明实现行为，学习收益另看独立作答、
 新题与延迟表现；预先整理的解释和模拟审读不当作真实学习者数据。

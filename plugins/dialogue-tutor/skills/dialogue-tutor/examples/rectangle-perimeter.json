@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "rectangle-perimeter-original",
+  "revision": "1",
+  "title": "沿边走一圈，求出 width",
+  "language": "zh-CN",
+  "mode": "olct",
+  "objectives": [
+    {
+      "id": "perimeter-meaning",
+      "title": "用四条边解释 perimeter",
+      "kind": "concept"
+    },
+    {
+      "id": "width-procedure",
+      "title": "求出 width 并说明每步依据",
+      "kind": "procedure"
+    }
+  ],
+  "sections": [
+    {
+      "id": "rectangle-definitions",
+      "title": "先认识这次要用的量",
+      "bodyHtml": "<p><strong>Rectangle</strong> 是长方形；相对的两条边分别等长。<strong>Perimeter</strong> 是沿图形边界走一整圈的总长度。</p><p><strong>length</strong> 表示长度，<strong>width</strong> 表示宽度。用 l、w、P 分别表示 length、width、perimeter 以 cm（厘米）计量的数值；例如 l 为 6，就表示 length 为 6 cm。</p><div data-dt-activity=\"trace-boundary\"></div><p id=\"perimeter-rule\"><strong>本题公式：</strong>对 Rectangle，边界按顺序有 length、width、length、width，故：</p><math aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><math aria-label=\"perimeter 数值 等于 2 乘以 左括号 length 数值 加 width 数值 右括号\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>P</mi><mo>=</mo><mn>2</mn><mo>×</mo><mo>(</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>)</mo></mrow></math><p>第二行只是把两组相同的 l + w 合写为两倍。本题用第一行，便于看见每条边。公式依据是 perimeter 的定义与 Rectangle 的对边相等性质。</p><div data-dt-activity=\"perimeter-choice\"></div>",
+      "activityIds": [
+        "trace-boundary",
+        "perimeter-choice"
+      ]
+    },
+    {
+      "id": "rectangle-question",
+      "title": "原题：一条 width 是多少？",
+      "bodyHtml": "<p><strong>题干：</strong>一个长方形的周长为20 cm，长度为6 cm，宽度是多少？</p><p>原创中文题目，没有英文原卷或考试分值。</p><p>“长方形”保证对边相等；“周长为20 cm”给出整圈总长度；“长度为6 cm”给出上下每一条 length；所求“宽度”是一条 width，答案用 cm。</p><p>题目给 perimeter，适合把四条边相加。只用 length + width 会漏掉另外两条边；相乘得到的是 <strong>area</strong>（内部平面的大小），与所求的边界长度不同。这里回接上方“本题公式”。</p><div data-dt-activity=\"original-width\"></div><details id=\"original-solution\"><summary>主动查看完整题解（会记录为参考辅助）</summary><p>依次拿走两条已知的 length，再把剩下的两条 width 平分。每一步都继承上一行的相等关系。</p><div data-dt-activity=\"width-steps\"></div><details><summary>一次展开全部逐行推导</summary><ol><li><h4>把四条边接起来</h4><math aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><p>继承题目给出的 Rectangle 条件：相对的两条边分别等长。沿边界走一圈会走过两条 length 和两条 width；依照前置块的 perimeter 定义，把四条边的数值相加。</p></li><li><h4>把已知值放入关系</h4><math aria-label=\"20 等于 6 加 width 数值 加 6 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>6</mn><mo>+</mo><mi>w</mi><mo>+</mo><mn>6</mn><mo>+</mo><mi>w</mi></mrow></math><p>上一行的 P 是 perimeter 的数值，l 是每条 length 的数值。题目给出 20 cm 与 6 cm，所以分别用 20 和 6 替换 P 和两个 l；未知的 w 原样保留。所有长度均以 cm 计。</p></li><li><h4>先合并两条已知边</h4><math aria-label=\"20 等于 12 加 width 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mi>w</mi><mo>+</mo><mi>w</mi></mrow></math><p>上一行右边是四段长度之和。加法可调整次序而不改变总量；把两个 6 放在一起相加得到 12，两条未知边各保留一个 w。</p></li><li><h4>把两个相同的未知量合写</h4><math aria-label=\"20 等于 12 加 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行有两个 w。2 × w 表示两个同样的 w 相加，因此用 2 × w 替换 w + w；它仍然表示两条 width 的合计。</p></li><li><h4>两边同时拿走已知部分</h4><math aria-label=\"20 减 12 等于 12 加 2 乘以 width 数值 减 12\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>−</mo><mn>12</mn></mrow></math><p>上一行两边表示相同的总长度数值。两边都减去同一个 12，剩下的量仍相等；这相当于从整圈拿走两条 length。只减一边会破坏相等关系。</p></li><li><h4>算出剩下的两条边合计</h4><math aria-label=\"8 等于 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>=</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行左边 20 减 12 得 8；右边加上的 12 与减去的 12 抵消，只剩 2 × w。因此 8 是两条 width 的合计，还不是一条。</p></li><li><h4>把两条等长边平均分开</h4><math aria-label=\"8 除以 2 等于 左括号 2 乘以 width 数值 右括号 除以 2\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mo>(</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>)</mo><mo>÷</mo><mn>2</mn></mrow></math><p>上一行两边相等。两边同除以非零的 2，仍然相等；右边两条相同的 width 分成两份，每份恰好是一条 width。</p></li><li><h4>算出一条边</h4><math aria-label=\"4 等于 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>4</mn><mo>=</mo><mi>w</mi></mrow></math><p>上一行左边 8 除以 2 得 4；右边的两份 w 除以 2 只剩一份 w。因此一条 width 的数值是 4。</p></li><li><h4>按所求量写答案</h4><math aria-label=\"width 数值 等于 4\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>w</mi><mo>=</mo><mn>4</mn></mrow></math><p>上一行的等号表示两边是同一个数，交换左右两边仍成立。w 一直以 cm 为单位计数，所以答案是 width 为 4 cm。</p></li></ol></details><p><strong>答案：width 为 4 cm。</strong></p><p>核对：把答案放回四条边：</p><math aria-label=\"6 加 4 加 6 加 4 等于 20\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>6</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>20</mn></mrow></math><p>合计为 20 cm，与题目 perimeter 一致，且 width 为正数。自行核对三处：写出四边相加、把两条 width 的总长度除以 2、答案带 cm。这是解题检查点，没有虚构考试评分。</p></details>",
+      "activityIds": [
+        "original-width",
+        "width-steps"
+      ]
+    },
+    {
+      "id": "rectangle-transfer",
+      "title": "换一个数字，自己走一遍",
+      "bodyHtml": "<p>沿用刚才的定义与公式，检查你能否独立找到<strong>两条 width 的合计</strong>，再求一条。</p><div data-dt-activity=\"transfer-width\"></div>",
+      "activityIds": [
+        "transfer-width"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "trace-boundary",
+      "objectiveId": "perimeter-meaning",
+      "type": "interactive",
+      "title": "沿边追踪 perimeter",
+      "prompt": "从左上角出发，逐次沿长方形的一条边行走。上边和下边各为6厘米，左右两边各为 w 厘米。走过几条边才回到起点？用下一段、退回和重置按钮观察。",
+      "source": "deeptutor/book/blocks/interactive.py",
+      "bodyHtml": "<style>\n.perimeter-model{max-width:620px;margin:auto}.perimeter-model svg{width:100%;height:auto;display:block}.perimeter-model .edge{stroke:var(--dt-muted,#62646b);stroke-width:5;fill:none}.perimeter-model .edge.traced{stroke:var(--dt-accent,#005fcc);stroke-width:8}.perimeter-model text{fill:currentColor;font-size:18px}.perimeter-model .model-controls{display:flex;gap:8px;flex-wrap:wrap}.perimeter-model button{min-height:44px;padding:8px 14px;border:1px solid currentColor;border-radius:10px;color:inherit;background:transparent;font:inherit}.perimeter-model button:focus-visible{outline:3px solid #005fcc;outline-offset:3px}.perimeter-model button:disabled{opacity:.45}.perimeter-model .trace-status{min-height:5em}#rectangle-definitions strong,#rectangle-question strong,#rectangle-transfer strong{color:var(--dt-accent,var(--accent,#005fcc));font-weight:750}\n</style><div class=\"perimeter-model\"><p>从左上角出发，每次走一条边。观察：<strong>走到哪一步，才回到起点？</strong></p><svg viewBox=\"0 0 500 295\" role=\"img\" aria-label=\"长方形示意图，上下两条 length 各为6厘米，左右两条 width 均未知，图形不按比例绘制\"><path class=\"edge\" data-edge=\"1\" d=\"M100 65H400\"/><path class=\"edge\" data-edge=\"2\" d=\"M400 65V215\"/><path class=\"edge\" data-edge=\"3\" d=\"M400 215H100\"/><path class=\"edge\" data-edge=\"4\" d=\"M100 215V65\"/><text x=\"250\" y=\"45\" text-anchor=\"middle\">length：6 cm</text><text x=\"250\" y=\"250\" text-anchor=\"middle\">length：6 cm</text><text x=\"60\" y=\"135\" text-anchor=\"middle\">width</text><text x=\"60\" y=\"160\" text-anchor=\"middle\">w cm</text><text x=\"444\" y=\"135\" text-anchor=\"middle\">width</text><text x=\"444\" y=\"160\" text-anchor=\"middle\">w cm</text><circle data-walker cx=\"100\" cy=\"65\" r=\"10\" fill=\"currentColor\"/><text x=\"90\" y=\"25\" text-anchor=\"middle\">起点</text></svg><p>示意图<strong>不按比例</strong>绘制；width 要用给定条件求，不能靠图片量出来。</p><div class=\"model-controls\"><button type=\"button\" data-prev>退回一条边</button><button type=\"button\" data-next>沿边走下一段</button><button type=\"button\" data-reset>重置路线</button></div><p class=\"trace-status\" data-status aria-live=\"polite\"></p></div>",
+      "script": "(function(){const id='trace-boundary';let root,n=0;const pts=[[100,65],[400,65],[400,215],[100,215],[100,65]];const messages=['尚未出发。先沿上方的 length 行走。','已走1条边：6 cm。还没有围住一整圈。','已走2条边：(6 + w) cm。只到了对角，尚未回到起点。','已走3条边：(6 + w + 6) cm。还缺左边的一条 width。','已走4条边：(6 + w + 6 + w) cm。回到起点，这四段合计就是 perimeter。'];function update(state){n=Number.isInteger(state.edge)?Math.max(0,Math.min(4,state.edge)):0;root.querySelectorAll('[data-edge]').forEach(e=>e.classList.toggle('traced',Number(e.dataset.edge)<=n));const dot=root.querySelector('[data-walker]');dot.setAttribute('cx',pts[n][0]);dot.setAttribute('cy',pts[n][1]);root.querySelector('[data-status]').textContent=messages[n];root.querySelector('[data-prev]').disabled=n===0;root.querySelector('[data-next]').disabled=n===4;}function change(v){update({edge:v});document.dispatchEvent(new CustomEvent('dt:exploration',{detail:{activityId:id,state:{edge:n}}}));}document.addEventListener('dt:activity-mounted',function(e){if(e.detail.activityId!==id)return;root=document.getElementById('dt-activity-'+id);root.querySelector('[data-next]').addEventListener('click',()=>change(n+1));root.querySelector('[data-prev]').addEventListener('click',()=>change(n-1));root.querySelector('[data-reset]').addEventListener('click',()=>change(0));update(e.detail.state||{});});document.addEventListener('dt:restore',function(e){if(root&&e.detail.activityId===id)update(e.detail.state||{});});})();"
+    },
+    {
+      "id": "perimeter-choice",
+      "objectiveId": "perimeter-meaning",
+      "type": "quiz",
+      "format": "choice",
+      "title": "哪个关系数全了一圈？",
+      "prompt": "长方形每条 length 为 l cm，每条 width 为 w cm。哪一个式子表示 perimeter 的数值 P？",
+      "source": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "choices": [
+        {
+          "id": "all",
+          "text": "l + w + l + w",
+          "feedback": "四项依次对应四条边，恰好走完整圈。"
+        },
+        {
+          "id": "half",
+          "text": "l + w",
+          "feedback": "只数了一条 length 和一条 width；模型中这只到对角，尚未回到起点。"
+        },
+        {
+          "id": "area",
+          "text": "l × w",
+          "feedback": "这是 area 的数值，衡量内部大小；perimeter 要把边界各段的长度相加。"
+        },
+        {
+          "id": "three",
+          "text": "l + l + w",
+          "feedback": "两条 length 数全了，但漏了一条 width，路线还没有闭合。"
+        }
+      ],
+      "answer": "all",
+      "hint": "回看模型：从起点沿边界回到起点，会经过几条 length、几条 width？",
+      "explanation": "Rectangle 的相对两条边分别相等。围一圈依次经过 l、w、l、w，四段长度相加才是 perimeter。"
+    },
+    {
+      "id": "original-width",
+      "objectiveId": "width-procedure",
+      "type": "quiz",
+      "format": "numeric",
+      "title": "先留下你的答案",
+      "prompt": "一个长方形的周长为20 cm，长度为6 cm，宽度是多少？请输入以 cm 为单位的数值，不用输入单位。",
+      "source": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "answer": 4,
+      "tolerance": 0,
+      "solutionId": "original-solution",
+      "hint": "整圈有两条6 cm的 length。先从20 cm中减去这两条，剩下的是两条等长的 width。",
+      "explanation": "两条 length 合计12 cm；从20 cm减去12 cm，剩下8 cm，是两条 width 的合计。把8 cm平均分为两份，每条 width 为4 cm。展开完整题解可逐行核对依据。",
+      "followups": [
+        {
+          "question": "为什么不能把8 cm直接作为答案？",
+          "answer": "8 cm对应左右两条 width。Rectangle 的两条 width 相等，因此必须再平均分为两份；一份才是题目所求。"
+        }
+      ]
+    },
+    {
+      "id": "width-steps",
+      "objectiveId": "width-procedure",
+      "type": "steps",
+      "title": "每次只变换一行",
+      "prompt": "逐行求 width。每一步说明上一行留下什么、本次改变什么、为什么仍相等。可以返回前一步，或展开全部推导。",
+      "source": "deeptutor/agents/visualize/agents/code_generator_agent.py",
+      "steps": [
+        {
+          "title": "把四条边接起来",
+          "bodyHtml": "<math aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><p>继承题目给出的 Rectangle 条件：相对的两条边分别等长。沿边界走一圈会走过两条 length 和两条 width；依照前置块的 perimeter 定义，把四条边的数值相加。</p>"
+        },
+        {
+          "title": "把已知值放入关系",
+          "bodyHtml": "<math aria-label=\"20 等于 6 加 width 数值 加 6 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>6</mn><mo>+</mo><mi>w</mi><mo>+</mo><mn>6</mn><mo>+</mo><mi>w</mi></mrow></math><p>上一行的 P 是 perimeter 的数值，l 是每条 length 的数值。题目给出 20 cm 与 6 cm，所以分别用 20 和 6 替换 P 和两个 l；未知的 w 原样保留。所有长度均以 cm 计。</p>"
+        },
+        {
+          "title": "先合并两条已知边",
+          "bodyHtml": "<math aria-label=\"20 等于 12 加 width 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mi>w</mi><mo>+</mo><mi>w</mi></mrow></math><p>上一行右边是四段长度之和。加法可调整次序而不改变总量；把两个 6 放在一起相加得到 12，两条未知边各保留一个 w。</p>"
+        },
+        {
+          "title": "把两个相同的未知量合写",
+          "bodyHtml": "<math aria-label=\"20 等于 12 加 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行有两个 w。2 × w 表示两个同样的 w 相加，因此用 2 × w 替换 w + w；它仍然表示两条 width 的合计。</p>"
+        },
+        {
+          "title": "两边同时拿走已知部分",
+          "bodyHtml": "<math aria-label=\"20 减 12 等于 12 加 2 乘以 width 数值 减 12\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>−</mo><mn>12</mn></mrow></math><p>上一行两边表示相同的总长度数值。两边都减去同一个 12，剩下的量仍相等；这相当于从整圈拿走两条 length。只减一边会破坏相等关系。</p>"
+        },
+        {
+          "title": "算出剩下的两条边合计",
+          "bodyHtml": "<math aria-label=\"8 等于 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>=</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行左边 20 减 12 得 8；右边加上的 12 与减去的 12 抵消，只剩 2 × w。因此 8 是两条 width 的合计，还不是一条。</p>"
+        },
+        {
+          "title": "把两条等长边平均分开",
+          "bodyHtml": "<math aria-label=\"8 除以 2 等于 左括号 2 乘以 width 数值 右括号 除以 2\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mo>(</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>)</mo><mo>÷</mo><mn>2</mn></mrow></math><p>上一行两边相等。两边同除以非零的 2，仍然相等；右边两条相同的 width 分成两份，每份恰好是一条 width。</p>"
+        },
+        {
+          "title": "算出一条边",
+          "bodyHtml": "<math aria-label=\"4 等于 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>4</mn><mo>=</mo><mi>w</mi></mrow></math><p>上一行左边 8 除以 2 得 4；右边的两份 w 除以 2 只剩一份 w。因此一条 width 的数值是 4。</p>"
+        },
+        {
+          "title": "按所求量写答案",
+          "bodyHtml": "<math aria-label=\"width 数值 等于 4\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>w</mi><mo>=</mo><mn>4</mn></mrow></math><p>上一行的等号表示两边是同一个数，交换左右两边仍成立。w 一直以 cm 为单位计数，所以答案是 width 为 4 cm。</p>"
+        }
+      ]
+    },
+    {
+      "id": "transfer-width",
+      "objectiveId": "width-procedure",
+      "type": "quiz",
+      "format": "numeric",
+      "title": "给相框边缘配材料",
+      "prompt": "一个长方形相框的 perimeter 为26 cm，每条 length 为8 cm。每条 width 是多少 cm？只输入数值。",
+      "source": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
+      "answer": 5,
+      "tolerance": 0,
+      "hint": "先拿走两条 length，再把剩下的长度分给两条相等的 width。",
+      "explanation": "两条 length 合计16 cm。从整圈26 cm拿走16 cm，剩下10 cm，属于两条 width；平均分成两份，每条是5 cm。四条边8、5、8、5 cm合计26 cm，核对成立。"
+    }
+  ]
+}
