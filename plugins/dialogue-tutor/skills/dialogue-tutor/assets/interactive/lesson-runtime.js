@@ -377,12 +377,17 @@
     });
     var activityIds = new Set();
     lesson.activities.forEach(function (activity) {
+      [activity].concat(activity.choices || [], activity.cards || [], activity.steps || []).forEach(function (item) {
+        if (has(item, "speechText") && (typeof item.speechText !== "string" || !item.speechText.trim())) throw new Error("speechText must be nonempty text");
+      });
       if (!safeId(activity.id) || activityIds.has(activity.id) || !objectiveIds.has(activity.objectiveId) || !TYPES.includes(activity.type)) throw new Error("Invalid activity identity/type");
       activityIds.add(activity.id);
       var source = activity.source;
-      if (record(source) && has(source, "provider")) {
-        if (![source.provider, source.mechanism, source.url].every(function (value) { return typeof value === "string" && value.trim(); }) || !/^https:\/\/[^\s/]+(?:\/[^\s]*)?$/.test(source.url)) throw new Error("Activity source needs provider, HTTPS URL and mechanism");
-      } else if (!(typeof source === "string" && source.trim()) && !(record(source) && typeof source.path === "string" && source.path.trim())) throw new Error("Activity needs its interaction source");
+      if (record(source) && (has(source, "name") || has(source, "url"))) {
+        var validUrl = false;
+        try { var parsed = new URL(source.url); validUrl = parsed.protocol === "https:" && !!parsed.hostname && /^https:\/\/[^/]/i.test(source.url) && !/\s/.test(source.url); } catch (error) { /* Invalid external source URL. */ }
+        if (typeof source.name !== "string" || !source.name.trim() || typeof source.url !== "string" || !validUrl || has(source, "path") || has(source, "repository")) throw new Error("External source needs name and an absolute HTTPS URL, not a claimed source-code path");
+      } else if (!(typeof source === "string" && (/^(deeptutor|web)\//.test(source) || source.includes("HKUDS/DeepTutor"))) && !(record(source) && typeof source.path === "string" && source.path.trim() && (!has(source, "repository") || source.repository === "HKUDS/DeepTutor"))) throw new Error("Activity needs its DeepTutor source or an external name/HTTPS URL");
       if (activity.type === "flashcards" && (!Array.isArray(activity.cards) || !activity.cards.length)) throw new Error("Flashcards need cards");
       if (activity.type === "steps" && (!Array.isArray(activity.steps) || !activity.steps.length)) throw new Error("Steps need stages");
       if (activity.type === "explore" && !["linear-density", "uniform"].includes(activity.model)) throw new Error("Unknown exploration model");
@@ -493,6 +498,10 @@
     var state = createState(lesson, now());
     var key = storageKey(lesson), storage = null, storageMessage = "", panelMessage = "";
     var views = new Map(), definitions = new Map();
+    var synthesis = win.speechSynthesis;
+    var speechAvailable = !!(synthesis && win.SpeechSynthesisUtterance);
+    var speech = { activityId: null, status: "idle", rate: 1.5, voice: null, selectedKey: null, token: 0 };
+    var voices = [], fullSteps = new Set();
     lesson.activities.forEach(function (activity) { definitions.set(activity.id, activity); });
     try {
       storage = options.storage === undefined ? win.localStorage : options.storage;
@@ -526,132 +535,6 @@
       node.addEventListener("click", action);
       return node;
     }
-    // Speech is ephemeral UI state: listening never creates learning evidence.
-    var synthesis = win.speechSynthesis;
-    var speechSupported = !!(synthesis && win.SpeechSynthesisUtterance);
-    var speech = { owner: null, utterance: null, status: "idle", rate: 1.5, voice: null, loaded: false, message: "" };
-    var voiceTimer = null;
-    function voiceLabel(voice) {
-      if (!speechSupported) return t("此浏览器不支持朗读。", "Read aloud is unavailable in this browser.");
-      if (!voice) return speech.loaded ? t("没有可用的课程语言语音；请安装系统语音后重试。", "No voice for this lesson language is available. Install a system voice and retry.") : t("正在等待浏览器加载语音…", "Waiting for browser voices…");
-      var name = voice.name + " (" + voice.lang + ")";
-      if (/^zh\b/i.test(lesson.language || "zh-CN") && !isXiaoxiao(voice)) return t("本次未使用 zh-CN Xiaoxiao；实际语音：", "This reading does not use zh-CN Xiaoxiao; actual voice: ") + name;
-      return t("语音：", "Voice: ") + name;
-    }
-    function isXiaoxiao(voice) { return /^zh[-_]cn$/i.test(voice.lang) && /xiaoxiao|晓晓/i.test(voice.name); }
-    function updateSpeechControls() {
-      views.forEach(function (view, id) {
-        if (!view.speech) return;
-        var active = speech.owner === id;
-        view.speech.play.textContent = active && speech.status === "paused" ? t("继续朗读", "Resume") : t("读题", "Read aloud");
-        view.speech.play.disabled = !speechSupported || (active && ["playing", "loading"].includes(speech.status));
-        view.speech.pause.disabled = !active || speech.status !== "playing";
-        view.speech.stop.disabled = !active;
-        view.speech.rate.value = String(speech.rate);
-        view.speech.status.textContent = (active && speech.message ? speech.message + " " : "") + voiceLabel(active && speech.utterance ? speech.utterance.voice : speech.voice);
-      });
-    }
-    function stopSpeech() {
-      var hadSpeech = speech.owner !== null;
-      speech.owner = null; speech.utterance = null; speech.status = "idle"; speech.message = "";
-      // Clear ownership first: cancel may synchronously dispatch an old onend/onerror.
-      if (speechSupported && hadSpeech) synthesis.cancel();
-      updateSpeechControls();
-    }
-    function loadVoices() {
-      if (!speechSupported) return;
-      var voices;
-      try { voices = synthesis.getVoices(); } catch (error) { voices = []; }
-      var language = (lesson.language || "zh-CN").replace(/_/g, "-").toLowerCase();
-      var family = language.split("-")[0];
-      speech.voice = (family === "zh" && voices.find(isXiaoxiao)) || voices.find(function (voice) { return voice.lang.replace(/_/g, "-").toLowerCase() === language; }) || voices.find(function (voice) { return voice.lang.toLowerCase().split(/[-_]/)[0] === family; }) || null;
-      if (voices.length) speech.loaded = true;
-      updateSpeechControls();
-      if (speech.voice && speech.status === "loading" && speech.owner) startSpeech(definitions.get(speech.owner));
-    }
-    function spokenText(activity) {
-      var saved = state.activities[activity.id], lines = [activity.prompt];
-      // Explicit allowlist. Never read whole activity DOM, hidden references or future steps.
-      if (activity.type === "quiz" && activity.format === "choice") activity.choices.forEach(function (choice, index) { lines.push((index + 1) + ". " + choice.text); });
-      if (activity.type === "flashcards") {
-        var card = activity.cards[saved.flash.index], cardState = saved.flash.cards[String(saved.flash.index)];
-        lines.push(cardState && cardState.revealed ? card.back : card.front);
-      }
-      if (activity.type === "steps") {
-        var stage = views.get(activity.id).body.querySelector(".dt-step-stage");
-        if (stage) {
-          function visibleText(node) {
-            if (node.nodeType === 3) return node.textContent;
-            if (node.nodeType !== 1 || node.matches("[hidden],[aria-hidden='true'],script,style,annotation,annotation-xml")) return "";
-            var style = win.getComputedStyle(node);
-            if (style.display === "none" || style.visibility === "hidden") return "";
-            // Read an authored formula pronunciation only after visibility checks.
-            // Its label replaces the whole formula, avoiding flattened fractions/powers.
-            if (node.localName === "math" && node.namespaceURI === "http://www.w3.org/1998/Math/MathML") {
-              var pronunciation = (node.getAttribute("aria-label") || "").trim();
-              if (pronunciation) return pronunciation;
-            }
-            if (node.tagName === "DETAILS" && !node.open) return node.querySelector("summary") ? visibleText(node.querySelector("summary")) : "";
-            return Array.from(node.childNodes).map(visibleText).join(" ");
-          }
-          lines.push(visibleText(stage));
-        }
-      }
-      return lines.filter(Boolean).join("\n\n");
-    }
-    function startSpeech(activity) {
-      if (!speechSupported) return;
-      if (speech.owner === activity.id && speech.status === "paused") {
-        synthesis.resume(); speech.status = "playing"; speech.message = t("继续朗读。", "Resumed."); updateSpeechControls(); return;
-      }
-      stopSpeech(); loadVoices(); speech.owner = activity.id;
-      if (!speech.voice) {
-        speech.status = speech.loaded ? "idle" : "loading";
-        speech.message = speech.loaded ? "" : t("语音载入后会开始读题。", "Reading will start when voices load.");
-        updateSpeechControls(); return;
-      }
-      var utterance = new win.SpeechSynthesisUtterance(spokenText(activity));
-      utterance.voice = speech.voice; utterance.lang = speech.voice.lang; utterance.rate = speech.rate;
-      speech.utterance = utterance; speech.status = "playing"; speech.message = t("正在朗读。", "Reading.");
-      utterance.onend = function () { if (speech.utterance === utterance) { speech.status = "idle"; speech.utterance = null; speech.message = t("朗读结束。", "Finished reading."); updateSpeechControls(); } };
-      utterance.onerror = function (event) { if (speech.utterance === utterance) { speech.status = "idle"; speech.utterance = null; speech.message = t("朗读失败，请重试：", "Read aloud failed; retry: ") + (event.error || "unknown"); updateSpeechControls(); } };
-      updateSpeechControls();
-      try {
-        // cancel() and speak() preserve the global paused state. Clear the queue
-        // before resuming so a fresh reading cannot revive canceled content.
-        if (synthesis.paused) { synthesis.cancel(); synthesis.resume(); }
-        synthesis.speak(utterance);
-      } catch (error) { utterance.onerror({ error: error.message }); }
-    }
-    function speechToolbar(activity) {
-      var toolbar = el("div", "dt-speech"), row = el("div", "dt-row");
-      toolbar.setAttribute("role", "group"); toolbar.setAttribute("aria-label", t("读题控制", "Read aloud controls"));
-      var play = button(t("读题", "Read aloud"), function () { startSpeech(activity); }, "", "speech-play");
-      var pause = button(t("暂停", "Pause"), function () { synthesis.pause(); speech.status = "paused"; speech.message = t("已暂停。", "Paused."); updateSpeechControls(); }, "dt-button-quiet", "speech-pause");
-      var stop = button(t("停止", "Stop"), stopSpeech, "dt-button-quiet", "speech-stop");
-      var label = el("label", "dt-speech-rate", t("语速", "Speed")), rate = el("select", "dt-select");
-      rate.dataset.dtControl = "speech-rate";
-      [0.75, 1, 1.25, 1.5, 1.75, 2].forEach(function (value) { var option = el("option", "", value + "×"); option.value = String(value); rate.appendChild(option); });
-      rate.value = String(speech.rate); rate.disabled = !speechSupported;
-      rate.addEventListener("change", function () {
-        var next = Number(rate.value); if (![0.75, 1, 1.25, 1.5, 1.75, 2].includes(next)) return;
-        var active = speech.owner && definitions.get(speech.owner), restart = speech.status === "playing";
-        stopSpeech(); speech.rate = next;
-        if (active && restart) { startSpeech(active); speech.message = t("已按新语速从当前内容开头朗读。", "Restarted the current content at the new speed."); }
-        else if (active) { speech.owner = active.id; speech.message = t("语速已更新；点击读题从当前内容开头播放。", "Speed updated. Read aloud to restart the current content."); }
-        updateSpeechControls();
-      });
-      label.appendChild(rate); row.append(play, pause, stop, label);
-      var status = el("p", "dt-speech-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
-      toolbar.append(row, status);
-      return { root: toolbar, play: play, pause: pause, stop: stop, rate: rate, status: status };
-    }
-    if (speechSupported) {
-      synthesis.addEventListener("voiceschanged", loadVoices);
-      loadVoices();
-      voiceTimer = win.setTimeout(function () { loadVoices(); speech.loaded = true; if (speech.status === "loading") { speech.status = "idle"; speech.message = ""; } updateSpeechControls(); }, 2500);
-    }
-    win.addEventListener("pagehide", stopSpeech);
     function message(view, text) { view.status.textContent = text; }
     function dateLabel(time) { return new Date(time).toLocaleDateString(en ? "en-GB" : "zh-CN", { year: "numeric", month: "short", day: "numeric" }); }
     function save() {
@@ -660,7 +543,7 @@
       catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); }
     }
     function transition(activity, event, render) {
-      if (speech.owner && (speech.owner !== activity.id || !["draft", "note", "bookmark"].includes(event.type))) stopSpeech();
+      if (speech.activityId && (speech.activityId !== activity.id || !["note", "bookmark", "draft"].includes(event.type))) stopSpeech();
       state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
       state.currentActivity = activity.id;
       save();
@@ -670,6 +553,136 @@
     }
     function announce(activity, text) { var view = views.get(activity.id); if (view) message(view, text); }
     function pretty(value) { return Number(value.toFixed(5)).toLocaleString(en ? "en-GB" : "zh-CN", { maximumFractionDigits: 5 }); }
+
+    function voiceKey(voice) { return voice.voiceURI || voice.name + "|" + voice.lang; }
+    function refreshVoices() {
+      voices = speechAvailable ? synthesis.getVoices() : [];
+      var chosen = voices.find(function (voice) { return voiceKey(voice) === speech.selectedKey; });
+      speech.voice = chosen || voices.find(function (voice) { return /zh-CN-XiaoxiaoNeural/i.test(voice.name + " " + voice.voiceURI); }) ||
+        voices.find(function (voice) { return /xiaoxiao/i.test(voice.name + " " + voice.voiceURI); }) ||
+        voices.find(function (voice) { return /^zh[-_]CN$/i.test(voice.lang); }) ||
+        voices.find(function (voice) { return /^zh\b/i.test(voice.lang); }) ||
+        voices.find(function (voice) { return voice.default; }) || voices[0] || null;
+      // Do not mislabel an utterance already playing when voices load asynchronously.
+      if (speech.activityId) stopSpeech();
+      updateSpeechControls();
+    }
+    function stopSpeech() {
+      var active = speech.activityId, paused = speech.status === "paused";
+      speech.token += 1;
+      speech.activityId = null; speech.status = "idle";
+      if (speechAvailable && active) {
+        synthesis.cancel();
+        // Some engines retain their paused flag after cancel; clear our pause so
+        // replay or the next card cannot silently remain queued.
+        if (paused) synthesis.resume();
+      }
+      updateSpeechControls();
+    }
+    function visibleStepText(node) {
+      if (!node) return "";
+      if (node.nodeType === 3) return node.textContent;
+      if (node.nodeType !== 1 || /^(SCRIPT|STYLE|TEMPLATE)$/.test(node.tagName) || node.hidden || node.getAttribute("aria-hidden") === "true") return "";
+      // Inspect the live step, so stylesheet classes and inherited visibility
+      // participate. Detached HTML cannot tell which answers are still hidden.
+      var style = win.getComputedStyle(node);
+      if (style.display === "none" || style.visibility === "hidden" || style.visibility === "collapse") return "";
+      // Reading MathML tokens separately loses fraction/grouping semantics.
+      // Prefer the author's spoken description once visibility is established.
+      if (node.localName === "math" && (node.getAttribute("aria-label") || "").trim()) return node.getAttribute("aria-label");
+      if (node.tagName === "DETAILS" && !node.open) {
+        var summary = Array.from(node.children).find(function (child) { return child.tagName === "SUMMARY"; });
+        return visibleStepText(summary);
+      }
+      return Array.from(node.childNodes).map(visibleStepText).filter(Boolean).join(" ");
+    }
+    function speechText(activity) {
+      var saved = state.activities[activity.id];
+      var parts = [activity.speechText || activity.prompt];
+      // Explicit allowlist: never scrape the activity DOM, where hidden solutions,
+      // feedback, model answers and quiz keys may exist.
+      if (activity.type === "quiz" && activity.format === "choice") activity.choices.forEach(function (choice, index) {
+        parts.push(t("选项 ", "Option ") + (index + 1) + ": " + (choice.speechText || choice.text));
+      });
+      if (activity.type === "flashcards") {
+        var card = activity.cards[saved.flash.index];
+        parts.push(card.speechText || card.front);
+      }
+      if (activity.type === "steps") {
+        var steps = fullSteps.has(activity.id) ? activity.steps : [activity.steps[saved.stepIndex]];
+        var stages = Array.from(views.get(activity.id).body.children).filter(function (node) { return node.classList.contains("dt-step-stage"); });
+        steps.forEach(function (step, index) {
+          // Only the known rendered step body is eligible; quiz/card fields keep
+          // their explicit allowlist and never fall back to module-wide DOM text.
+          var content = stages[index] && stages[index].children[1];
+          parts.push(step.title + ". " + (step.speechText || visibleStepText(content)));
+        });
+      }
+      return parts.filter(Boolean).join("\n\n");
+    }
+    function playSpeech(activity) {
+      stopSpeech();
+      if (!speechAvailable) return;
+      var utterance = new win.SpeechSynthesisUtterance(speechText(activity));
+      utterance.rate = speech.rate; utterance.lang = speech.voice ? speech.voice.lang : (lesson.language || "zh-CN");
+      if (speech.voice) utterance.voice = speech.voice;
+      var token = speech.token;
+      speech.activityId = activity.id; speech.status = "playing";
+      utterance.onend = function () { if (token === speech.token) stopSpeech(); };
+      utterance.onerror = function (event) {
+        if (token !== speech.token) return;
+        stopSpeech();
+        if (event.error !== "canceled" && event.error !== "interrupted") announce(activity, t("朗读未能完成，请检查系统声音或选择其他声音后重试。", "Reading could not finish. Check system voices or select another voice and retry."));
+      };
+      updateSpeechControls();
+      try { synthesis.speak(utterance); } catch (error) { stopSpeech(); announce(activity, t("当前浏览器无法开始朗读。", "This browser could not start reading.")); }
+    }
+    function updateSpeechControls() {
+      views.forEach(function (view, id) {
+        if (!view.speech) return;
+        var controls = view.speech, active = speech.activityId === id;
+        controls.play.textContent = active ? (speech.status === "paused" ? t("继续朗读", "Resume") : t("暂停", "Pause")) : t("朗读题目", "Read question");
+        controls.play.disabled = controls.replay.disabled = !speechAvailable;
+        controls.stop.disabled = !active;
+        controls.voice.replaceChildren();
+        if (!voices.length) controls.voice.appendChild(el("option", "", t("系统默认声音（名称未提供）", "System default (name unavailable)")));
+        voices.forEach(function (voice) {
+          var option = el("option", "", voice.name + " · " + voice.lang);
+          option.value = voiceKey(voice); option.selected = voice === speech.voice; controls.voice.appendChild(option);
+        });
+        controls.voice.disabled = !speechAvailable || !voices.length;
+        controls.rate.value = String(speech.rate); controls.rate.disabled = !speechAvailable;
+        controls.status.textContent = !speechAvailable ? t("当前浏览器不支持朗读；可继续阅读题目。", "Reading aloud is unavailable in this browser.") :
+          t("当前声音：", "Current voice: ") + (speech.voice ? speech.voice.name + " · " + speech.voice.lang : t("系统默认（浏览器未提供名称）", "System default (browser has not provided a name)")) +
+          (!speech.voice ? t("；声音列表尚未提供，实际音色由系统决定", "; voice list unavailable, actual voice is determined by the system") : /xiaoxiao/i.test(speech.voice.name + " " + speech.voice.voiceURI) ? "" :
+            voices.some(function (voice) { return /xiaoxiao/i.test(voice.name + " " + voice.voiceURI); }) ? t("；已选择其他声音", "; another voice selected") : t("；未提供 Xiaoxiao，使用当前可用声音", "; Xiaoxiao unavailable, using the available voice")) +
+          " · " + speech.rate + "×" + (active ? (speech.status === "paused" ? t(" · 已暂停", " · Paused") : t(" · 正在朗读", " · Reading")) : "");
+      });
+    }
+    function createSpeechControls(activity) {
+      var root = el("div", "dt-speech"), row = el("div", "dt-row");
+      root.setAttribute("role", "group"); root.setAttribute("aria-label", t("题目朗读", "Question reading"));
+      var play = button(t("朗读题目", "Read question"), function () {
+        if (speech.activityId !== activity.id) return playSpeech(activity);
+        if (speech.status === "paused") { synthesis.resume(); speech.status = "playing"; }
+        else { synthesis.pause(); speech.status = "paused"; }
+        updateSpeechControls();
+      }, "dt-button-quiet", "speech-play");
+      var stop = button(t("停止", "Stop"), stopSpeech, "dt-button-quiet", "speech-stop");
+      var replay = button(t("重播", "Replay"), function () { playSpeech(activity); }, "dt-button-quiet", "speech-replay");
+      row.append(play, stop, replay);
+      var settings = el("details", "dt-speech-settings"); settings.appendChild(el("summary", "", t("声音与速度", "Voice and speed")));
+      var fields = el("div", "dt-row");
+      var voiceLabel = el("label", "dt-input-label", t("声音", "Voice")), voice = el("select", "dt-input"); voice.dataset.dtControl = "speech-voice";
+      voice.addEventListener("change", function () { var value = voice.value; stopSpeech(); speech.selectedKey = value; refreshVoices(); });
+      var rateLabel = el("label", "dt-input-label", t("速度", "Speed")), rate = el("select", "dt-input"); rate.dataset.dtControl = "speech-rate";
+      [0.75, 1, 1.25, 1.5, 1.75, 2].forEach(function (value) { var option = el("option", "", value + "×"); option.value = String(value); rate.appendChild(option); });
+      rate.addEventListener("change", function () { var value = Number(rate.value); stopSpeech(); speech.rate = value; updateSpeechControls(); });
+      voiceLabel.appendChild(voice); rateLabel.appendChild(rate); fields.append(voiceLabel, rateLabel); settings.appendChild(fields);
+      var status = el("p", "dt-small dt-speech-status"); status.setAttribute("role", "status");
+      root.append(row, settings, status);
+      return { root: root, play: play, stop: stop, replay: replay, voice: voice, rate: rate, status: status };
+    }
 
     function renderFlash(activity, view, saved) {
       var index = saved.flash.index;
@@ -843,6 +856,21 @@
 
     function renderSteps(activity, view, saved) {
       var index = saved.stepIndex, step = activity.steps[index];
+      var full = fullSteps.has(activity.id);
+      view.body.appendChild(button(full ? t("返回逐步探索", "Return to steps") : t("查看完整推导", "View full derivation"), function () {
+        stopSpeech();
+        if (full) fullSteps.delete(activity.id); else fullSteps.add(activity.id);
+        renderActivity(activity);
+        view.body.querySelector('[data-dt-control="step-view"]').focus({ preventScroll: true });
+      }, "dt-button-quiet", "step-view"));
+      if (full) {
+        activity.steps.forEach(function (item, i) {
+          var section = el("section", "dt-step-stage dt-authored");
+          section.appendChild(el("h4", "dt-small-heading", (i + 1) + ". " + item.title));
+          var text = el("div", ""); text.innerHTML = item.bodyHtml; section.appendChild(text); view.body.appendChild(section);
+        });
+        return;
+      }
       var markers = el("ol", "dt-step-markers");
       activity.steps.forEach(function (item, i) {
         var marker = el("li", "");
@@ -1033,18 +1061,15 @@
         }
       }, "dt-button-quiet", "copy-context");
       var row = el("div", "dt-row"); row.append(bookmark, copyButton); footer.append(row, note);
-      var provider = typeof activity.source === "object" && activity.source.provider || "DeepTutor";
-      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · ", "Interaction source · ") + provider));
-      var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.url, activity.source.mechanism, activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
+      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · ", "Interaction source · ") + (activity.source.name || "DeepTutor")));
+      var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.name, activity.source.url, activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
       source.appendChild(el("p", "dt-small", sourceText)); footer.appendChild(source);
       var status = el("p", "dt-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
-      var speechControls = speechToolbar(activity);
-      target.append(header, prompt, speechControls.root, body, footer, status);
-      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false, speech: speechControls };
+      var reader = createSpeechControls(activity);
+      target.append(header, prompt, reader.root, body, footer, status);
+      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false, speech: reader };
       views.set(activity.id, view);
-      updateSpeechControls();
-      target.addEventListener("focusin", function () { if (speech.owner && speech.owner !== activity.id) stopSpeech(); if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
-      target.addEventListener("pointerdown", function () { if (speech.owner && speech.owner !== activity.id) stopSpeech(); });
+      target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
       renderActivity(activity);
       if (activity.solutionId) {
         var solution = doc.getElementById(activity.solutionId);
@@ -1068,16 +1093,16 @@
       panelBody = el("div", "dt-study-body"); panel.append(panelSummary, panelBody); panelTarget.appendChild(panel);
     }
     function navigate(activityId, reviewItem) {
+      stopSpeech();
       var activity = definitions.get(activityId), view = views.get(activityId);
       if (!activity || !view) return;
-      stopSpeech();
       if (reviewItem) {
         if (activity.type === "quiz") {
           if (activity.solutionId) { var solution = doc.getElementById(activity.solutionId); if (solution) solution.open = false; }
           transition(activity, { type: "retry" });
         } else if (activity.type === "flashcards") transition(activity, { type: "flash-restart", index: reviewItem.cardIndex });
       }
-      view.root.scrollIntoView({ behavior: win.matchMedia && win.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
+      view.root.scrollIntoView({ behavior: "instant", block: "start" });
       var focus = view.body.querySelector("button:not([disabled]),input:not([disabled]),textarea:not([disabled])");
       if (focus) focus.focus({ preventScroll: true });
       state.currentActivity = activityId; save();
@@ -1143,7 +1168,8 @@
         try {
           if (upload.files[0].size > 5000000) throw new Error(t("记录文件超过 5 MB。", "Progress file exceeds 5 MB."));
           var imported = validateImport(lesson, await upload.files[0].text());
-          stopSpeech(); state = prepareSession(lesson, imported, now(), sessionId, state);
+          stopSpeech();
+          state = prepareSession(lesson, imported, now(), sessionId, state);
           closeDueSolutions(); save();
           lesson.activities.forEach(renderActivity);
           notifyCustomRestore();
@@ -1163,6 +1189,17 @@
       var target = Array.from(doc.querySelectorAll("[data-dt-activity]")).find(function (node) { return node.dataset.dtActivity === activity.id; });
       if (target && target.dataset.dtMounted !== "true") createActivityView(activity, target);
     });
+    function moduleChanged(event) {
+      var target = event.target.closest && event.target.closest("[data-dt-activity]");
+      if (speech.activityId && target && target.dataset.dtActivity !== speech.activityId) stopSpeech();
+    }
+    function pageHidden() { if (doc.hidden) stopSpeech(); }
+    doc.addEventListener("focusin", moduleChanged);
+    doc.addEventListener("pointerdown", moduleChanged);
+    doc.addEventListener("visibilitychange", pageHidden);
+    win.addEventListener("pagehide", stopSpeech);
+    if (speechAvailable && synthesis.addEventListener) synthesis.addEventListener("voiceschanged", refreshVoices);
+    refreshVoices();
     save(); renderPanel();
     var explorationListener = function (event) {
       var detail = event.detail;
@@ -1188,8 +1225,13 @@
       getState: function () { return copy(state); },
       exportState: function () { return exportEnvelope(lesson, state, now()); },
       importState: function (value) { var imported = validateImport(lesson, value); stopSpeech(); state = prepareSession(lesson, imported, now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
-      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); },
-      destroy: function () { stopSpeech(); win.clearTimeout(voiceTimer); if (speechSupported) synthesis.removeEventListener("voiceschanged", loadVoices); win.removeEventListener("pagehide", stopSpeech); doc.removeEventListener("dt:exploration", explorationListener); }
+      refresh: function () { stopSpeech(); lesson.activities.forEach(renderActivity); renderPanel(); },
+      destroy: function () {
+        stopSpeech(); doc.removeEventListener("dt:exploration", explorationListener);
+        doc.removeEventListener("focusin", moduleChanged); doc.removeEventListener("pointerdown", moduleChanged);
+        doc.removeEventListener("visibilitychange", pageHidden); win.removeEventListener("pagehide", stopSpeech);
+        if (speechAvailable && synthesis.removeEventListener) synthesis.removeEventListener("voiceschanged", refreshVoices);
+      }
     };
   }
 

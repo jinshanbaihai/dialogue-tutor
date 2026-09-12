@@ -1,40 +1,39 @@
-# 简易对话 · DialogueTutor 2.0
+# Dialogue Tutor · 简易对话
 
-生成面向外行的交互式教学 HTML：**可视化交互 > 可视化模型 > 文字**。学习者通过预测、作答和操纵模型建立理解，每个推导步骤解释如何继承上一步；必要文字采用英文术语、中文说明和换色加粗的重点。
+生成面向外行的交互式教学 HTML。**可视化交互 > 可视化模型 > 文字**，每一步解释当前操作为什么承接上一项结果，保留完整解题与 Socratic 引导。
 
-[技能入口](plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md) · [教学与设计规则](plugins/dialogue-tutor/skills/dialogue-tutor/references/experience-design.md) · [教学产品调研](plugins/dialogue-tutor/skills/dialogue-tutor/references/interaction-research.md)
+[交互示例：操作天平理解方程](https://jinshanbaihai.github.io/dialogue-tutor/interactive-first.html) · [技能入口](plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md) · [完整技能包](dist/dialogue-tutor-2.0.0.zip)
 
-## 2.0 的重点
+第二个示例：[沿边探索 perimeter 并逐步求 width](docs/rectangle-perimeter.html)，课程源数据是 [rectangle-perimeter.json](plugins/dialogue-tutor/skills/dialogue-tutor/examples/rectangle-perimeter.json)。
 
-主入口从 162,264 字节缩减为约 7 KB。模式、概念讲解、原题保真、完整伴读和对话细则按任务读取，避免每次加载全部历史规则。
+## 2.0.0 的生成方式
 
-| 能力 | 生成要求与实际支持 |
+旧入口把大量历史条款与长篇正文规格集中在同一文件。新版将共享要求放在短入口，模式、推导、视觉设计、交互调研、TTS 和评审按需读取。核心任务是让读者实际操作、观察关系、解释依据，再尝试变式。
+
+| 组成 | 读者获得什么 |
 | --- | --- |
-| 教学交互 | 新写概念辨析优先四选一，按目标采用概念卡、预测后探索、找错或情境迁移；保留原题题型。五类内置活动加自定义交互入口 |
-| 二维 / 三维模型 | 图形、数字和公式共享状态；内置二维概率探索，其他模型通过 `interactive` 实现。三维按内容生成，不宣称内置通用三维引擎 |
-| 行行推导 | 每步交代前一步、本次动作、成立理由与结果；完整内容按步骤和就地展开呈现。保留完整题解与苏格拉底引导 |
-| TTS 读题 | 每个活动自带读题、暂停、继续、停止与调速；默认 1.5×，优先设备实际提供的 Xiaoxiao。没有晓晓时显示实际音色，语音 API 缺席时显示状态 |
-| 视觉设计 | 中性灰白 / 石墨主题、蓝色强调、清晰字体层级、留白、即时反馈与 reduced motion；重点同时换色和加粗 |
-| 学习记录 | 草稿、原答、提示、揭示、重试、跳过、自评、探索、笔记、书签和复习；支持刷新恢复、导出和导入 |
+| 交互学习 | 四选一、概念卡、参数预测、分类配对与情境任务按目标选用；明确提交后反馈，保留提示与主动查看过程 |
+| 可视化模型 | 图形、公式和数值共享状态；二维适合一般关系，空间关系采用三维，连续预渲染演示可用 Manim |
+| 逐行解释 | 每次变换分别说明已有结果、当前操作、合法依据和结果；前置解释就地展开，完整过程随时可查 |
+| 模块读题 | 播放、暂停/继续、停止、重播，默认 1.5×；优先系统实际提供的 Xiaoxiao，声音列表显示真实名称 |
+| 设计与语言 | 中性黑白灰与蓝色强调，系统字体与匹配暗色；English terms 首次附中文含义，其余中文为主，重点换色加粗 |
 
-浏览器 TTS 只能使用系统实际提供的音色；控制逻辑测试不代表真实设备已经发声。需要跨设备固定晓晓时，生成端可使用已配置的语音服务预合成，公开 HTML 不包含服务密钥。
+[交互调研目录](plugins/dialogue-tutor/skills/dialogue-tutor/references/interaction-patterns.md)引用 DeepTutor、Brilliant、Amplify Classroom、Duolingo、PhET 和 Manim 的官方材料，并区分原产品行为与本项目改编。分类配对、情境任务、三维等通过 `interactive` 扩展；本包内置的专用概率 `explore` 只有两种，不能套用于其他主题。
 
-## 内容范围保持完整
+浏览器语音取决于设备声音清单；优先选择 Xiaoxiao 不代表所有设备都已安装该声音。需要跨设备固定音色时，按 [TTS 参考](plugins/dialogue-tutor/skills/dialogue-tutor/references/narration-tts.md)使用已配置服务预合成音频。普通读题与 `plustts` 的两条伴读文字轨分别提供。
 
-| 指令 | 课程范围 |
+## 原有教学范围与记录继续保留
+
+| 模式 | 范围 |
 | --- | --- |
-| `bgct` | 按概念覆盖七幕，重点放在建立概念与独立例题；原题按小问完整讲解 |
-| `bbct` | 按板书顺序与考纲讲解；板书缺口或没有板书时依据考纲与真题补齐 |
-| `olct` / `onct` | 只保留所需公式定义前置块与完整做题，不扩展背景章节 |
-| `plustts` 后缀 | 另交完整讲师伴读：首次作答轨、参考答案轨与分段 JSON；所有页面仍自带活动读题 |
+| `bgct` | 按概念对象覆盖七个教学环节、独立示例与完整原题求解；环节可通过交互和模型表达 |
+| `bbct` | 按板书顺序与考纲解释，补齐作业需要但板书缺少的内容 |
+| `olct` / `onct` | 只提供必要定义、公式与完整解题，不加入背景章节 |
+| `plustts` | 在相应 HTML 之外追加首次作答伴读、参考答案伴读与分段 JSON |
 
-七幕与六项题解是内容覆盖要求，通过交互、模型、步骤和展开说明实现，不要求默认展示长文。每个原题小问保留题干拆解、方法判断、知识回接、公式选择、逐行依据与答案得分位置。术语首次配中文释义，原卷英文与对应中文题面完整保留。
+独立作答、自评、提示后作答与探索分别保存；一次即时答对不显示为长期掌握。页面保留笔记、书签、复习、导出导入与内容版本隔离。预备解释是事先编写的问答，当前聊天与网页记录分别保存。
 
-## 来源与示例
-
-DeepTutor 提供已有分块教学、闪卡、自测、探索与学习记录的参考；Brilliant、Desmos 与 Duolingo 的官方资料扩展反馈、参数操纵与情境迁移的选择。具体事实、设计推断与学习效果证据分开记录。
-
-[长方形交互范例](docs/interactive-first.html)用于检验新版生成规则。[S2 完整历史课程](docs/index.html)保留两章、六个原题小问与15处活动，运行组件和主题同步更新；该长课程与旧截图展示历史内容，不作为2.0默认布局模板。
+[既有 S2 兼容样章](https://jinshanbaihai.github.io/dialogue-tutor/)保留旧课程正文，用于验证六个原题小问、十五处活动及学习记录。新版生成形状以天平交互示例为准。
 
 ## 装法
 
@@ -83,7 +82,7 @@ python3 scripts/package_skill.py
 
 ### 构建与验证
 
-在仓库根目录重新生成同一份 S2 演示页：
+在仓库根目录重新生成天平、矩形周长与 S2 三份演示页：
 
 ```bash
 python3 scripts/build_demo.py
@@ -111,12 +110,10 @@ npm test
 
 ---
 
-## 维护
+## 开发与来源
 
-技能目录包含短入口、按需 `references/`、HTML 组装器、CSS/JavaScript 运行组件与可重建示例。生成资源与源码一起发布，避免只更新规则而继续使用旧运行组件。
+新示例数据位于 `plugins/dialogue-tutor/skills/dialogue-tutor/examples/interactive-first.json`，既有 S2 数据与源 HTML 继续用作兼容验证。`scripts/build_demo.py` 同时生成两份示例。技能运行组件使用 Python 标准库与原生 JavaScript；Node 依赖仅用于测试。
 
-独立审读与验证记录见 [2.0 修改记录](docs/engineering/interactive-first-review.md)。阅读、翻卡、播放或即时答对不转换成掌握率；理解需要解释、新题与延迟表现支持。
+[本次改动与评审记录](docs/engineering/interactive-first-redesign.md)记载需求、实际发现、修改和验证证据。[原 DeepTutor 来源记录](plugins/dialogue-tutor/skills/dialogue-tutor/references/deeptutor-provenance.md)保留固定源码快照及历史验证边界。
 
-## 许可证
-
-[MIT](LICENSE)。
+许可证：[MIT](LICENSE)。

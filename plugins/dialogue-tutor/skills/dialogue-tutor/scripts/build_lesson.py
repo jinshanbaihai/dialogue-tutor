@@ -11,6 +11,7 @@ import math
 from pathlib import Path
 import re
 import sys
+from urllib.parse import urlsplit
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
@@ -94,13 +95,21 @@ def validate_lesson(lesson):
         for field in ("title", "prompt"):
             text_field(activity, field, context)
         source = activity.get("source")
-        if isinstance(source, dict) and "provider" in source:
-            for field in ("provider", "url", "mechanism"):
-                text_field(source, field, context + ".source")
-            require(re.fullmatch(r"https://[^\s/]+(?:/[^\s]*)?", source["url"]), f"{context}.source.url must be an HTTPS URL")
-        elif isinstance(source, dict):
-            text_field(source, "path", context + ".source")
-            require(source.get("repository", "HKUDS/DeepTutor") == "HKUDS/DeepTutor", f"{context}.source must identify HKUDS/DeepTutor")
+        if isinstance(source, dict):
+            if "name" in source or "url" in source:
+                text_field(source, "name", context + ".source")
+                text_field(source, "url", context + ".source")
+                require("path" not in source and "repository" not in source, f"{context}.source external products use name/url, not a claimed source-code path")
+                try:
+                    parsed = urlsplit(source["url"])
+                    valid_url = parsed.scheme == "https" and bool(parsed.hostname) and not re.search(r"\s", source["url"])
+                    parsed.port  # Reject malformed port syntax consistently with the browser.
+                except ValueError:
+                    valid_url = False
+                require(valid_url, f"{context}.source.url must be an absolute HTTPS URL")
+            else:
+                text_field(source, "path", context + ".source")
+                require(source.get("repository", "HKUDS/DeepTutor") == "HKUDS/DeepTutor", f"{context}.source must identify HKUDS/DeepTutor; external products require name/url")
         else:
             require(isinstance(source, str) and (source.startswith(("deeptutor/", "web/")) or "HKUDS/DeepTutor" in source), f"{context}.source must identify a DeepTutor implementation")
         placement = activity.get("placement")
@@ -110,7 +119,7 @@ def validate_lesson(lesson):
             require(placement.get("position") in {"before", "after", "append"}, f"{context}.placement.position is not supported")
         if activity.get("solutionId") is not None:
             identifier(activity["solutionId"], context + ".solutionId")
-        for field in ("hint", "explanation", "modelAnswer", "instructions"):
+        for field in ("hint", "explanation", "modelAnswer", "instructions", "speechText"):
             if field in activity:
                 text_field(activity, field, context)
         for item in activity.get("followups", []):
@@ -126,6 +135,8 @@ def validate_lesson(lesson):
                 text_field(card, "front", context + ".cards")
                 text_field(card, "back", context + ".cards")
                 text_field(card, "hint", context + ".cards", required=False)
+                if "speechText" in card:
+                    text_field(card, "speechText", context + ".cards")
         elif kind == "quiz":
             format_ = activity.get("format")
             require(format_ in {"choice", "numeric", "open"}, f"{context}.format is not supported")
@@ -138,6 +149,8 @@ def validate_lesson(lesson):
                     require(isinstance(choice, dict), f"{context}.choices entries must be objects")
                     text_field(choice, "id", context + ".choices")
                     text_field(choice, "text", context + ".choices")
+                    if "speechText" in choice:
+                        text_field(choice, "speechText", context + ".choices")
                     require(choice["id"] not in choice_ids, f"{context} has duplicate choice IDs")
                     choice_ids.add(choice["id"])
                 require(activity.get("answer") in choice_ids, f"{context}.answer must match a choice ID")
@@ -156,6 +169,8 @@ def validate_lesson(lesson):
                 require(isinstance(step, dict), f"{context}.steps entries must be objects")
                 text_field(step, "title", context + ".steps")
                 text_field(step, "bodyHtml", context + ".steps")
+                if "speechText" in step:
+                    text_field(step, "speechText", context + ".steps")
         elif kind == "explore":
             require(activity.get("model") in {"linear-density", "uniform"}, f"{context}.model is not supported; use an interactive block for a custom model")
         else:
@@ -380,10 +395,10 @@ def place_activities(document, lesson):
 
 
 BASE_CSS = """
-:root{color-scheme:light dark;--paper:#f5f5f7;--ink:#1d1d1f;--muted:#626269;--line:#d8d8de;--accent:#164f9e}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.8}strong{color:var(--accent);font-weight:700}
-main{max-width:52rem;margin:0 auto;padding:3rem 1.3rem 6rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.35}h2{margin-top:3rem;font-size:1.5rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--accent)}figure{margin:1.7rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:#eaeaee}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--accent);font-size:.8rem;letter-spacing:.12em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
-@media(prefers-color-scheme:dark){:root{--paper:#161618;--ink:#f2f2f5;--muted:#b0b0b8;--line:#414147;--accent:#8ab7ff}pre{background:#242427}}
+:root{color-scheme:light dark;--paper:#f5f5f7;--surface:#ffffff;--ink:#1d1d1f;--muted:#64646b;--line:#d8d8dd;--accent:#0066cc}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Noto Sans SC',sans-serif;line-height:1.8;font-optical-sizing:auto}
+main{max-width:52rem;margin:0 auto;padding:3rem 1.3rem 6rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;letter-spacing:-.025em}h2{margin-top:3rem;font-size:1.5rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--accent)}figure{margin:1.7rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:var(--surface);border-radius:.6rem}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--accent);font-size:.8rem;letter-spacing:.12em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
+@media(prefers-color-scheme:dark){:root{--paper:#111113;--surface:#1c1c1e;--ink:#f5f5f7;--muted:#b5b5bd;--line:#48484f;--accent:#8abfff}}
 """
 
 

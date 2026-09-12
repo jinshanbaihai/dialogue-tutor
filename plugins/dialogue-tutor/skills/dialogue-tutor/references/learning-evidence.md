@@ -1,6 +1,6 @@
 # 交互 HTML 的学习证据与使用边界
 
-维护日期：2026-09-07。新增交互的来源限定为 DeepTutor，见[来源追溯](deeptutor-provenance.md)；本文只校准使用时机、反馈和判断，操作契约见[交互规格](interactive-html.md)。这些研究没有直接测试本次 HTML。
+研究记录日期：2026-09-07。原组件来源见[DeepTutor 追溯](deeptutor-provenance.md)，新增产品机制见[交互目录](interaction-patterns.md)；本文只校准使用时机、反馈和判断，操作契约见[交互规格](interactive-html.md)。这些研究没有直接测试本次 HTML。
 
 “全文”表示核查原论文的方法与结果；“摘要”表示仅核查作者或出版社提供的摘要；元分析与单项实验分别标明。具体界面与调度参数属于工程选择，不能升级为研究结论。
 

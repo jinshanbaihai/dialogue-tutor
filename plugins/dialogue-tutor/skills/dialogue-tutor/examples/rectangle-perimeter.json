@@ -30,7 +30,7 @@
     {
       "id": "rectangle-question",
       "title": "原题：一条 width 是多少？",
-      "bodyHtml": "<p><strong>题干：</strong>一个长方形的周长为20 cm，长度为6 cm，宽度是多少？</p><p>原创中文题目，没有英文原卷或考试分值。</p><p>“长方形”保证对边相等；“周长为20 cm”给出整圈总长度；“长度为6 cm”给出上下每一条 length；所求“宽度”是一条 width，答案用 cm。</p><p>题目给 perimeter，适合把四条边相加。只用 length + width 会漏掉另外两条边；相乘得到的是 <strong>area</strong>（内部平面的大小），与所求的边界长度不同。这里回接上方“本题公式”。</p><div data-dt-activity=\"original-width\"></div><details id=\"original-solution\"><summary>主动查看完整题解（会记录为参考辅助）</summary><p>依次拿走两条已知的 length，再把剩下的两条 width 平分。每一步都继承上一行的相等关系。</p><div data-dt-activity=\"width-steps\"></div><details><summary>一次展开全部逐行推导</summary><ol><li><h4>把四条边接起来</h4><math aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><p>继承题目给出的 Rectangle 条件：相对的两条边分别等长。沿边界走一圈会走过两条 length 和两条 width；依照前置块的 perimeter 定义，把四条边的数值相加。</p></li><li><h4>把已知值放入关系</h4><math aria-label=\"20 等于 6 加 width 数值 加 6 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>6</mn><mo>+</mo><mi>w</mi><mo>+</mo><mn>6</mn><mo>+</mo><mi>w</mi></mrow></math><p>上一行的 P 是 perimeter 的数值，l 是每条 length 的数值。题目给出 20 cm 与 6 cm，所以分别用 20 和 6 替换 P 和两个 l；未知的 w 原样保留。所有长度均以 cm 计。</p></li><li><h4>先合并两条已知边</h4><math aria-label=\"20 等于 12 加 width 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mi>w</mi><mo>+</mo><mi>w</mi></mrow></math><p>上一行右边是四段长度之和。加法可调整次序而不改变总量；把两个 6 放在一起相加得到 12，两条未知边各保留一个 w。</p></li><li><h4>把两个相同的未知量合写</h4><math aria-label=\"20 等于 12 加 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行有两个 w。2 × w 表示两个同样的 w 相加，因此用 2 × w 替换 w + w；它仍然表示两条 width 的合计。</p></li><li><h4>两边同时拿走已知部分</h4><math aria-label=\"20 减 12 等于 12 加 2 乘以 width 数值 减 12\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>−</mo><mn>12</mn></mrow></math><p>上一行两边表示相同的总长度数值。两边都减去同一个 12，剩下的量仍相等；这相当于从整圈拿走两条 length。只减一边会破坏相等关系。</p></li><li><h4>算出剩下的两条边合计</h4><math aria-label=\"8 等于 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>=</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行左边 20 减 12 得 8；右边加上的 12 与减去的 12 抵消，只剩 2 × w。因此 8 是两条 width 的合计，还不是一条。</p></li><li><h4>把两条等长边平均分开</h4><math aria-label=\"8 除以 2 等于 左括号 2 乘以 width 数值 右括号 除以 2\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mo>(</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>)</mo><mo>÷</mo><mn>2</mn></mrow></math><p>上一行两边相等。两边同除以非零的 2，仍然相等；右边两条相同的 width 分成两份，每份恰好是一条 width。</p></li><li><h4>算出一条边</h4><math aria-label=\"4 等于 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>4</mn><mo>=</mo><mi>w</mi></mrow></math><p>上一行左边 8 除以 2 得 4；右边的两份 w 除以 2 只剩一份 w。因此一条 width 的数值是 4。</p></li><li><h4>按所求量写答案</h4><math aria-label=\"width 数值 等于 4\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>w</mi><mo>=</mo><mn>4</mn></mrow></math><p>上一行的等号表示两边是同一个数，交换左右两边仍成立。w 一直以 cm 为单位计数，所以答案是 width 为 4 cm。</p></li></ol></details><p><strong>答案：width 为 4 cm。</strong></p><p>核对：把答案放回四条边：</p><math aria-label=\"6 加 4 加 6 加 4 等于 20\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>6</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>20</mn></mrow></math><p>合计为 20 cm，与题目 perimeter 一致，且 width 为正数。自行核对三处：写出四边相加、把两条 width 的总长度除以 2、答案带 cm。这是解题检查点，没有虚构考试评分。</p></details>",
+      "bodyHtml": "<p><strong>题干：</strong>一个长方形的周长为20 cm，长度为6 cm，宽度是多少？</p><p>原创中文题目，没有英文原卷或考试分值。</p><p>“长方形”保证对边相等；“周长为20 cm”给出整圈总长度；“长度为6 cm”给出上下每一条 length；所求“宽度”是一条 width，答案用 cm。</p><p>题目给 perimeter，适合把四条边相加。只用 length + width 会漏掉另外两条边；相乘得到的是 <strong>area</strong>（内部平面的大小），与所求的边界长度不同。这里回接上方“本题公式”。</p><div data-dt-activity=\"original-width\"></div><details id=\"original-solution\"><summary>主动查看完整题解（会记录为参考辅助）</summary><p>依次拿走两条已知的 length，再把剩下的两条 width 平分。每一步都继承上一行的相等关系。</p><div data-dt-activity=\"width-steps\"></div><p><strong>答案：width 为 4 cm。</strong></p><p>核对：把答案放回四条边：</p><math aria-label=\"6 加 4 加 6 加 4 等于 20\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>6</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>20</mn></mrow></math><p>合计为 20 cm，与题目 perimeter 一致，且 width 为正数。自行核对三处：写出四边相加、把两条 width 的总长度除以 2、答案带 cm。这是解题检查点，没有虚构考试评分。</p></details>",
       "activityIds": [
         "original-width",
         "width-steps"
@@ -68,22 +68,26 @@
         {
           "id": "all",
           "text": "l + w + l + w",
-          "feedback": "四项依次对应四条边，恰好走完整圈。"
+          "feedback": "四项依次对应四条边，恰好走完整圈。",
+          "speechText": "length 数值加 width 数值加 length 数值加 width 数值"
         },
         {
           "id": "half",
           "text": "l + w",
-          "feedback": "只数了一条 length 和一条 width；模型中这只到对角，尚未回到起点。"
+          "feedback": "只数了一条 length 和一条 width；模型中这只到对角，尚未回到起点。",
+          "speechText": "length 数值加 width 数值"
         },
         {
           "id": "area",
           "text": "l × w",
-          "feedback": "这是 area 的数值，衡量内部大小；perimeter 要把边界各段的长度相加。"
+          "feedback": "这是 area 的数值，衡量内部大小；perimeter 要把边界各段的长度相加。",
+          "speechText": "length 数值乘以 width 数值"
         },
         {
           "id": "three",
           "text": "l + l + w",
-          "feedback": "两条 length 数全了，但漏了一条 width，路线还没有闭合。"
+          "feedback": "两条 length 数全了，但漏了一条 width，路线还没有闭合。",
+          "speechText": "length 数值加 length 数值加 width 数值"
         }
       ],
       "answer": "all",
@@ -115,44 +119,56 @@
       "objectiveId": "width-procedure",
       "type": "steps",
       "title": "每次只变换一行",
-      "prompt": "逐行求 width。每一步说明上一行留下什么、本次改变什么、为什么仍相等。可以返回前一步，或展开全部推导。",
+      "prompt": "逐行求 width。每一步说明上一行留下什么、本次改变什么、为什么仍相等。可以返回前一步，或选择查看完整过程。",
       "source": "deeptutor/agents/visualize/agents/code_generator_agent.py",
       "steps": [
         {
           "title": "把四条边接起来",
-          "bodyHtml": "<math aria-label=\"perimeter 数值 等于 length 数值 加 width 数值 加 length 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><p>继承题目给出的 Rectangle 条件：相对的两条边分别等长。沿边界走一圈会走过两条 length 和两条 width；依照前置块的 perimeter 定义，把四条边的数值相加。</p>"
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"perimeter 数值等于 length 数值加 width 数值加 length 数值加 width 数值\"><mrow><mi>P</mi><mo>=</mo><mi>l</mi><mo>+</mo><mi>w</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>w</mi></mrow></math><p>继承 Rectangle 的对边分别等长与 perimeter 的定义：沿边界一圈会经过两条 length 和两条 width。把四段数值依次相加，得到整圈的数值。</p>"
         },
         {
-          "title": "把已知值放入关系",
-          "bodyHtml": "<math aria-label=\"20 等于 6 加 width 数值 加 6 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>6</mn><mo>+</mo><mi>w</mi><mo>+</mo><mn>6</mn><mo>+</mo><mi>w</mi></mrow></math><p>上一行的 P 是 perimeter 的数值，l 是每条 length 的数值。题目给出 20 cm 与 6 cm，所以分别用 20 和 6 替换 P 和两个 l；未知的 w 原样保留。所有长度均以 cm 计。</p>"
+          "title": "代入题目给定量",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"20 等于 6 加 width 数值加 6 加 width 数值\"><mrow><mn>20</mn><mo>=</mo><mn>6</mn><mo>+</mo><mi>w</mi><mo>+</mo><mn>6</mn><mo>+</mo><mi>w</mi></mrow></math><p>上一行的 P 表示 perimeter 数值，两个 l 分别表示两条 length 数值。用题目给定的 20 替换 P，用 6 替换每个 l；w 仍未知，保持原样。所有长度统一以 cm 计数。</p>"
         },
         {
-          "title": "先合并两条已知边",
-          "bodyHtml": "<math aria-label=\"20 等于 12 加 width 数值 加 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mi>w</mi><mo>+</mo><mi>w</mi></mrow></math><p>上一行右边是四段长度之和。加法可调整次序而不改变总量；把两个 6 放在一起相加得到 12，两条未知边各保留一个 w。</p>"
+          "title": "让已知数相邻",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"20 等于 6 加 6 加 width 数值加 width 数值\"><mrow><mn>20</mn><mo>=</mo><mn>6</mn><mo>+</mo><mn>6</mn><mo>+</mo><mi>w</mi><mo>+</mo><mi>w</mi></mrow></math><p>上一行右边是四段长度之和。交换加数次序不改变总量，把第二个 6 放到第一个 6 旁边；这一步尚未计算任何和。</p>"
         },
         {
-          "title": "把两个相同的未知量合写",
-          "bodyHtml": "<math aria-label=\"20 等于 12 加 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行有两个 w。2 × w 表示两个同样的 w 相加，因此用 2 × w 替换 w + w；它仍然表示两条 width 的合计。</p>"
+          "title": "合计两条已知边",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"20 等于 12 加 width 数值加 width 数值\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mi>w</mi><mo>+</mo><mi>w</mi></mrow></math><p>上一行相邻的两个 6 相加得到 12。这 12 仍表示两条 length 的合计；其余两个 w 保持原样。</p>"
         },
         {
-          "title": "两边同时拿走已知部分",
-          "bodyHtml": "<math aria-label=\"20 减 12 等于 12 加 2 乘以 width 数值 减 12\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>20</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>−</mo><mn>12</mn></mrow></math><p>上一行两边表示相同的总长度数值。两边都减去同一个 12，剩下的量仍相等；这相当于从整圈拿走两条 length。只减一边会破坏相等关系。</p>"
+          "title": "合写两个相同量",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"20 等于 12 加 2 乘以 width 数值\"><mrow><mn>20</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行的 w 加 w 表示两个相同数相加，这正是 2 乘以 w 的含义。用 2 × w 替换它们，所表示的长度总量不变。</p>"
         },
         {
-          "title": "算出剩下的两条边合计",
-          "bodyHtml": "<math aria-label=\"8 等于 2 乘以 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>=</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行左边 20 减 12 得 8；右边加上的 12 与减去的 12 抵消，只剩 2 × w。因此 8 是两条 width 的合计，还不是一条。</p>"
+          "title": "两边减去同一个量",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"20 减 12 等于 12 加 2 乘以 width 数值减 12\"><mrow><mn>20</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>−</mo><mn>12</mn></mrow></math><p>上一行两边相等。两边同时拿走同样的 12，剩余数值仍相等；在图形中，拿走的是两条已知的 length。</p>"
         },
         {
-          "title": "把两条等长边平均分开",
-          "bodyHtml": "<math aria-label=\"8 除以 2 等于 左括号 2 乘以 width 数值 右括号 除以 2\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mo>(</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>)</mo><mo>÷</mo><mn>2</mn></mrow></math><p>上一行两边相等。两边同除以非零的 2，仍然相等；右边两条相同的 width 分成两份，每份恰好是一条 width。</p>"
+          "title": "右边消去已知部分",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"20 减 12 等于 2 乘以 width 数值\"><mrow><mn>20</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行右边先有 12，最后又减去 12；加上与减去同一个数相互抵消，只剩 2 × w。左边先保留不算。</p>"
         },
         {
-          "title": "算出一条边",
-          "bodyHtml": "<math aria-label=\"4 等于 width 数值\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>4</mn><mo>=</mo><mi>w</mi></mrow></math><p>上一行左边 8 除以 2 得 4；右边的两份 w 除以 2 只剩一份 w。因此一条 width 的数值是 4。</p>"
+          "title": "算出两条 width 合计",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"8 等于 2 乘以 width 数值\"><mrow><mn>8</mn><mo>=</mo><mn>2</mn><mo>×</mo><mi>w</mi></mrow></math><p>上一行左边 20 减 12 得到 8。右边保持 2 × w，因此 8 是两条 width 的数值合计，还不是一条。</p>"
+        },
+        {
+          "title": "两边平均分成两份",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"8 除以 2 等于 左括号 2 乘以 width 数值右括号除以 2\"><mrow><mn>8</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mo>(</mo><mn>2</mn><mo>×</mo><mi>w</mi><mo>)</mo><mo>÷</mo><mn>2</mn></mrow></math><p>上一行两边相等。把两边同时平均分成两份，每一份的数值仍相等；这里除数 2 非零，因此允许相除。</p>"
+        },
+        {
+          "title": "右边留下一个 width",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"8 除以 2 等于 width 数值\"><mrow><mn>8</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mi>w</mi></mrow></math><p>上一行右边是两份相同的 w 再平均分成两份，每份恰好是一个 w。只简化右边，左边继续保留 8 ÷ 2。</p>"
+        },
+        {
+          "title": "计算左边的一份",
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"4 等于 width 数值\"><mrow><mn>4</mn><mo>=</mo><mi>w</mi></mrow></math><p>上一行左边 8 平均分成两份，每份是 4。右边的 w 不变，因此 w 与 4 是同一个数。</p>"
         },
         {
           "title": "按所求量写答案",
-          "bodyHtml": "<math aria-label=\"width 数值 等于 4\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>w</mi><mo>=</mo><mn>4</mn></mrow></math><p>上一行的等号表示两边是同一个数，交换左右两边仍成立。w 一直以 cm 为单位计数，所以答案是 width 为 4 cm。</p>"
+          "bodyHtml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"width 数值等于 4\"><mrow><mi>w</mi><mo>=</mo><mn>4</mn></mrow></math><p>上一行等号表示两边是同一个数，交换左右位置仍成立。w 一直表示以 cm 计量的数值，所以 width 为 4 cm。</p>"
         }
       ]
     },

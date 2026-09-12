@@ -1,6 +1,6 @@
 {
   "name": "dialogue-tutor",
-  "description": "交互优先的教学 HTML：四选一、概念卡、二维或三维模型、行行理由与 TTS 读题；术语英文，解释以中文为主。保留 bgct、bbct、olct/onct 与 plustts 范围，采用中性 Apple/Emil 视觉设计。",
+  "description": "面向外行的交互式教学 HTML：可视化交互优先，其次模型与必要文字；保留逐行因果推导、完整解题与苏格拉底引导。支持 bgct、bbct、olct/onct、plustts，默认模块读题 1.5×，优先实际可用的 Xiaoxiao。采用 Apple/Emil 中性视觉设计，结合 DeepTutor、Brilliant、Amplify 等产品机制。",
   "owner": {
     "name": "StevenZhou",
     "url": "https://github.com/jinshanbaihai"
@@ -10,7 +10,7 @@
       "name": "dialogue-tutor",
       "source": "./plugins/dialogue-tutor",
       "displayName": "简易对话",
-      "description": "交互优先的教学 HTML：四选一、概念卡、二维或三维模型、行行理由与 TTS 读题；术语英文，解释以中文为主。保留 bgct、bbct、olct/onct 与 plustts 范围，采用中性 Apple/Emil 视觉设计。",
+      "description": "面向外行的交互式教学 HTML：可视化交互优先，其次模型与必要文字；保留逐行因果推导、完整解题与苏格拉底引导。支持 bgct、bbct、olct/onct、plustts，默认模块读题 1.5×，优先实际可用的 Xiaoxiao。采用 Apple/Emil 中性视觉设计，结合 DeepTutor、Brilliant、Amplify 等产品机制。",
       "version": "2.0.0",
       "author": {
         "name": "StevenZhou",
@@ -40,7 +40,10 @@
         "education",
         "teaching",
         "claude-code",
-        "claude-skill"
+        "claude-skill",
+        "tts",
+        "xiaoxiao",
+        "visual-learning"
       ]
     }
   ]

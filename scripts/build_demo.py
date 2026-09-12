@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the S2 course and interactive-first example from editable sources."""
+"""Rebuild the interactive-first example and the existing S2 compatibility demo."""
 from pathlib import Path
 import subprocess
 import sys
@@ -16,5 +16,11 @@ subprocess.run([
 subprocess.run([
     sys.executable, str(skill / "scripts/build_lesson.py"),
     "--lesson", str(skill / "examples/rectangle-perimeter.json"),
+    "--output", str(root / "docs/rectangle-perimeter.html"),
+], check=True)
+
+subprocess.run([
+    sys.executable, str(skill / "scripts/build_lesson.py"),
+    "--lesson", str(skill / "examples/interactive-first.json"),
     "--output", str(root / "docs/interactive-first.html"),
 ], check=True)

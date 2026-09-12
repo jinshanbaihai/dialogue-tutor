@@ -1,16 +1,16 @@
 # 交互 HTML：活动编排、数据与生成
 
-生成或更新 HTML 时读取本文件。只进行短回合追问时，读取 `dialogue.md` 的短回合规则。
+生成或更新 HTML 时读取本文件。短回合追问使用 SKILL.md 的 Socratic 引导流程。
 本文件维护活动 schema 与操作流程；DeepTutor 的逐项出处见 `deeptutor-provenance.md`，
 提取、反馈、间隔与伴读的研究范围见 `learning-evidence.md`。
 
 ## 先按内容安排学习动作
 
 旧样章有完整题目与推导，却没有接收作答的组件；给长文末尾补几个按钮也不能覆盖正文中的学习机会。
-先列活动蓝图，再制作课程数据。蓝图每行填写：**内容位置、目标、当前前提、类型、模型映射、来源、
-放置理由、反馈、逐行理由、TTS 范围与保存记录**。这些是作者的编排说明，不需要原样显示在学习者页面。
+先列活动蓝图，再制作课程数据。蓝图每行填写：**目标、已建立前提、读者操作、模型关系、反馈依据、逐行推导位置、读题内容、来源与改编、保存证据**。这些是作者的编排说明，不需要原样显示在学习者页面。
 
-DeepTutor 是已有组件的实现来源，原核查快照为 `42fab3cf429a1fbf36b257ab8d116a3814964202`。新增机制可以采用 `interaction-research.md` 中核实的产品来源，组合行为写明本项目设计。先按 `experience-design.md` 设计教学动作与模型，文字进入对应步骤与反馈。
+本包原有运行组件的设计来源为 HKUDS/DeepTutor，快照为
+`42fab3cf429a1fbf36b257ab8d116a3814964202`。新活动还可采用 `interaction-patterns.md` 中有官方出处的产品机制。原组件来源与新的教学改编分别记录；科学文献用于限定采用方式。
 
 | 内容与学习动作 | 选择的活动 | DeepTutor 实现来源 | 本课程记录 |
 | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 - 一个短问题选择足以检查该目标的活动；完整章节覆盖实际存在的不同学习环节。
   不固定每章闪卡数量，不给每段重复配置同一种题卡。复习、笔记与书签由共同组件提供。
 - 所有原题小问与六项讲解仍然保留。作答入口位于该小问附近；完整解法进入对应参考区域，
-  提交后或学习者主动揭示时查看。公式首次讲解仍按七幕逐步建立，不用题卡代替推导。
+  提交后或学习者主动揭示时查看。公式首次讲解按当前模式逐步建立；bgct 的七个环节是内容覆盖关系，具体说明见 `lesson-modes.md`。
 
 ## 制作课程 JSON
 
@@ -51,7 +51,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 | `activities` | 非空活动数组，见下节 |
 | `sections` | 新页面的正文结构：`{id,title,bodyHtml,activityIds}`；已有 HTML 使用 `--base-html` |
 | `solutionWraps` | 可选；已有 HTML 中需要折叠的完整解答区域，见“沿用已有正文” |
-| `tts` | `plustts` 的分段数据，见“伴读” |
+| `tts` | 可选的 `plustts` 分段数据；常规模块读题不依赖此字段 |
 
 课程、目标、活动和段落 ID 使用英文字母开头的稳定名称，例如 `q2-normalization`。
 避开 `constructor`、`prototype` 等运行时保留名；正文 ID 不得与 `dt-lesson`、`dt-runtime`、
@@ -60,7 +60,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 每个活动包含 `{id,objectiveId,type,title,prompt,source}`，再加相应 payload。
 `objectiveId` 引用已有目标；每个活动只挂载一次。
-保留旧来源格式。`source` 可以是 DeepTutor 仓库内的 `deeptutor/...` 或 `web/...` 路径，也可以使用：
+`source` 保留对 DeepTutor 仓库路径字符串的兼容。已有组件采用如下对象：
 
 ```json
 {
@@ -71,10 +71,12 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 }
 ```
 
-新增产品来源使用 `{ "provider": "Brilliant", "url": "https://brilliant.org/help/schools-and-educators/differentiation-guide/", "mechanism": "实时错误反馈与分步解释" }`；`provider`、HTTPS `url` 与 `mechanism` 非空。不要把其他产品机制伪写成 DeepTutor 路径。
+独立改编其他产品机制时，使用 `{"name":"Brilliant","url":"https://blog.brilliant.org/solving-equations/","case":"独立改编的天平建构"}`。`name` 为非空来源名称，`url` 为 HTTPS 官方依据；`case` 说明本次采用部分。采用产品来源对象时不填写虚构的仓库路径或 commit。来源只描述机制，不声称本课程是原产品制作。
+
+所有活动自动提供模块读题。可选非空纯文本 `activity.speechText` 覆盖题干读法，`choices[].speechText`、`cards[].speechText`、`steps[].speechText` 分别覆盖选项、正面与当前步骤；这些字段只含对应阶段内容，不能夹带隐藏答案。完整说明见 `narration-tts.md`。
 
 `prompt`、卡片正反面、选项和普通标签是纯文本，使用清楚的文字与简短 Unicode 记号。
-复杂公式与推导放入 `bodyHtml` 或步骤的 `bodyHtml`，新页面优先用原生 MathML，图形用内联 SVG。步骤中的复杂 math 元素填写完整可朗读 `aria-label`，例如 `<math aria-label="二分之一">`，当前步骤读题会采用该公式口播。
+复杂公式与推导放入 `bodyHtml` 或步骤的 `bodyHtml`，新页面优先用原生 MathML，图形用内联 SVG。
 默认组装器没有从网络加载数学排版库；仅写入 LaTeX 不会自动变成公式。
 已有 HTML 保留原本的 MathJax 或 KaTeX 时，按原有依赖实际检查显示结果。
 
@@ -93,9 +95,11 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 | `format` | 必填内容 | 反馈与证据 |
 | --- | --- | --- |
-| `choice` | 新写概念辨析优先四个合理选项；原题选项原样保留，真实二元判断允许两个。至少两个 `choices:[{id,text,feedback?}]`，唯一正确的 `answer` 为选项 ID | 选择不立即揭示；明确提交后给对错与解析。干扰项对应实际误解，不用措辞陷阱 |
+| `choice` | 至少两个 `choices:[{id,text,feedback?}]`，唯一正确的 `answer` 为选项 ID | 选择不立即揭示；明确提交后给对错与解析。干扰项对应实际误解，不用措辞陷阱 |
 | `numeric` | `answer` 为有限数字或简单分数；可选非负 `tolerance`，默认绝对误差 `1e-8` | 支持小数与 `3/8` 形式的输入。题面交代单位与精度，输入不要求附单位，不接受任意代码 |
 | `open` | `modelAnswer` 与非空 `rubric:[string]` | 保存本人原答，提交或主动揭示后显示参考及自评要点；自评明确标注，不冒称语义自动评分 |
+
+新编概念检查默认四个有意义的选项；原题数量照原文保留，二元判断或其他活动按实际目标选择。每个选项的反馈说明具体依据，不编造多余选项。
 
 每次提交只形成一次尝试，修改答案先进入重试；跳过单独记录。
 在首次提交前查看提示或完整答案会留下辅助标记。
@@ -104,7 +108,7 @@ Books 的原始闪卡没有自带间隔复习；原版的 Books、共享 QuizVie
 
 **`steps`**
 
-`steps` 至少两项，每项 `{title,bodyHtml}`。每步保留前一步、本次变化、成立理由和结果；理由说明本题适用条件，不能只写定理名称。学习者可以前进、回退、重置；作者在同节附完整推导的关闭 `details`，支持主动一次查看。
+`steps` 至少两项，每项 `{title,bodyHtml,speechText?}`。每步保留当前变换、直接理由及上一项结果的对应，详见 `explanation-contract.md`。学习者可以前进、回退、重置、查看完整推导并返回先前步骤。
 步进只控制显示的节奏，不压缩原有完整推导；“下一步”不产生答对证据。
 
 **`explore`**
@@ -157,51 +161,12 @@ document.dispatchEvent(new CustomEvent('dt:exploration', {
 python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html
 ```
 
-`sections` 按学习节点安排完整内容，每节的全部活动由 `activityIds` 指定。完整性包含活动、模型、步骤和可展开解释，禁止先铺长文再把全部活动追加在结尾。
+`sections` 按阅读顺序放完整正文，每节的全部活动由 `activityIds` 指定。
 可以在 `bodyHtml` 的准确位置预置 `<div data-dt-activity="活动ID"></div>`，
 组装器只将尚未预置的活动追加到节尾，并检查每个 ID 恰好出现一次。
 题目练习优先采用“完整题面 → 活动挂载点 → 关闭的完整解答”的顺序。
 把正文划分为实际学习节点，避免整章只有一个 `bodyHtml` 且没有预置位置，导致所有活动挤在章末。
-下面只演示可运行数据形状，实际课程的讲解详细度仍按对应模式写足：
-
-```json
-{
-  "schemaVersion": 1,
-  "lessonId": "probability-density-check",
-  "revision": "1",
-  "title": "密度与概率的区别",
-  "language": "zh-CN",
-  "mode": "olct",
-  "objectives": [
-    {"id": "density-meaning", "title": "区分密度高度与区间概率", "kind": "concept"}
-  ],
-  "sections": [
-    {
-      "id": "density-definition",
-      "title": "做题需要的定义",
-      "bodyHtml": "<p>概率密度的高度描述概率在附近的集中程度。某段区间的概率对应这段曲线下方的面积；单个位置的高度与整段面积是不同的量。</p>",
-      "activityIds": ["density-quick-check"]
-    }
-  ],
-  "activities": [
-    {
-      "id": "density-quick-check",
-      "objectiveId": "density-meaning",
-      "type": "quiz",
-      "format": "choice",
-      "title": "核对一个区别",
-      "prompt": "概率密度在某个位置大于一，是否足以判定这个分布不合法？",
-      "source": "web/app/(workspace)/books/components/blocks/QuizBlock.tsx",
-      "choices": [
-        {"id": "height", "text": "足够，因为密度高度就是概率。", "feedback": "这个选项把某个位置的高度与区间面积混淆。"},
-        {"id": "area", "text": "不足够，还需检查密度非负与总面积等于一。", "feedback": "密度的高度可以超过一，概率条件约束的是区间面积。"}
-      ],
-      "answer": "area",
-      "explanation": "概率密度非负且全体支持区间的面积为一。仅凭某处高度超过一，不能判定分布不合法。"
-    }
-  ]
-}
-```
+直接采用 [examples/interactive-first.json](../examples/interactive-first.json) 查看完整可运行形状：模型与操作先行，逐行依据就地显示，独立变式保留作答入口。字段说明使用本文件的局部片段，避免复制只含文字与题卡的旧课程。
 
 组装器将运行 CSS、JavaScript 和课程 JSON 内联，自动挂载学习记录面板。
 交付实际生成的 HTML。课程 JSON 可以作为可维护源文件一并保留；只提供 JSON 不算 HTML 交付。
@@ -262,9 +227,9 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html --base
 {
   "tts": {
     "segments": [
-      {"id": "tts-definition", "kind": "narration", "text": "这一节先区分概率密度的高度和区间概率。"},
-      {"id": "tts-check", "kind": "activity", "activityId": "density-quick-check", "text": "请先判断：某个位置的密度大于一，是否足以判定分布不合法？"},
-      {"id": "tts-check-feedback", "kind": "feedback", "activityId": "density-quick-check", "text": "核对参考：单独一个位置的密度高度不足以判定分布不合法，还需要检查密度非负与总面积等于一。"}
+      {"id": "tts-definition", "kind": "narration", "text": "这一节区分 Probability density（概率密度），也就是概率在某个位置附近的集中程度，与整段区间的 Probability（概率）。"},
+      {"id": "tts-check", "kind": "activity", "activityId": "density-quick-check", "text": "请先判断：某个位置的 Probability density 大于一，是否足以判定分布不合法？"},
+      {"id": "tts-check-feedback", "kind": "feedback", "activityId": "density-quick-check", "text": "核对参考：Probability density 的单点高度不足以判定分布不合法，需要检查非负条件与总面积等于一。"}
     ]
   }
 }
@@ -280,7 +245,7 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html --base
 - `lesson-answers.txt`：按活动 ID 对应的完整参考讲解，供作答或主动揭示后播放。
 - `lesson-tts.json`：保留全部片段与对应关系。
 
-以上导出的纯文本是完整伴读文件，本身不附带自动播放、自动暂停或网页语音同步。每个活动的页面 TTS 是独立基础功能，即使未设置 `tts` 也提供，详见 `experience-design.md`。
+本节的三个导出文件是文字伴读，不附带自动播放、自动暂停或网页语音同步。页面中的常规模块读题另由运行时提供播放控制，见 `narration-tts.md`。
 学习者在活动处手动暂停，核对时打开参考轨对应片段。用户明确要求完整答案连续朗读时，
 可以另交标明“参考答案伴读”的整轨；首次作答轨仍独立保留。
 
@@ -293,8 +258,8 @@ python3 scripts/build_lesson.py --lesson lesson.json --output lesson.html --base
 2. 图形参数改变后，图、公式和数字对应；步进前进、回退与重置；预备解释与上下文复制有实际结果。
 3. 笔记和书签、刷新恢复、导出再导入；题目版本变化不继续显示旧版表现。
 4. 已看答案后再提交保留辅助标记；重复提交不新增尝试；同次重试不提前推进复习。
-5. 数学与 SVG 显示正确，手机窄屏与键盘可以操作，主要控件没有空操作。
-6. 每个活动操作 TTS，检查实际音色、1.5倍、暂停/继续/停止、调速、内容切换与未揭示答案隔离。
+5. 数学与 SVG 显示正确，手机窄屏与键盘可以操作；关键因果短语换色加粗，首屏以任务和模型为主。
+6. 每种活动的读题内容、1.5×、真实声音标签、暂停/继续/停止/重播、换卡与换步骤停止旧语音；题面不夹带答案。
 7. `plustts` 逐项对照活动数据，题面、暂停提醒、完整解法分别进入正确轨道。
 
 只把实际执行的检查写入交付记录。页面动作通过只能证明实现行为，学习收益另看独立作答、

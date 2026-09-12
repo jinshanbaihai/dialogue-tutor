@@ -22,25 +22,6 @@ def small_lesson():
 
 
 class BuilderTests(unittest.TestCase):
-    def test_provider_sources_and_legacy_sources_are_compatible(self):
-        lesson = small_lesson()
-        for source in (
-            "web/components/quiz/QuizViewer.tsx",
-            {"repository": "HKUDS/DeepTutor", "path": "web/components/quiz/QuizViewer.tsx"},
-            {"provider": "Brilliant", "url": "https://brilliant.org/courses/", "mechanism": "Guided reasoning"},
-        ):
-            with self.subTest(source=source):
-                lesson["activities"][0]["source"] = source
-                builder.validate_lesson(lesson)
-        for source in (
-            {"provider": "", "url": "https://brilliant.org", "mechanism": "Guided reasoning"},
-            {"provider": "Brilliant", "url": "http://brilliant.org", "mechanism": "Guided reasoning"},
-            {"provider": "Brilliant", "url": "https://brilliant.org", "mechanism": ""},
-        ):
-            with self.subTest(source=source), self.assertRaises(builder.LessonError):
-                lesson["activities"][0]["source"] = source
-                builder.validate_lesson(lesson)
-
     def test_original_markup_roundtrips_including_svg_case(self):
         source = (SKILL / "examples/s2-source.html").read_text()
         self.assertEqual(builder.Document(source).root.render(), source)
@@ -147,6 +128,59 @@ class BuilderTests(unittest.TestCase):
             self.assertTrue(builder.finite_numeric(value), value)
         for value in ("1/0", float("nan"), True, "__import__('os')", "1+1"):
             self.assertFalse(builder.finite_numeric(value), value)
+
+    def test_speech_text_overrides_validate_without_requiring_tts_tracks(self):
+        lesson = small_lesson()
+        lesson["activities"][0]["speechText"] = "把四分之一写成小数。"
+        result = builder.assemble(lesson)
+        self.assertIn("speechText", result)
+        self.assertNotIn("tts", lesson)
+        for invalid in ("", "  ", None, 1, {"answer": "hidden"}):
+            lesson["activities"][0]["speechText"] = invalid
+            with self.assertRaisesRegex(builder.LessonError, "speechText must be nonempty text"):
+                builder.validate_lesson(lesson)
+        lesson = json.loads((SKILL / "examples/s2-interactive.json").read_text())
+        for activity in lesson["activities"]:
+            for field in ("choices", "cards", "steps"):
+                for item in activity.get(field, []):
+                    item["speechText"] = "公式的口语读法"
+        builder.validate_lesson(lesson)
+        for field in ("choices", "cards", "steps"):
+            example = copy.deepcopy(lesson)
+            activity = next(a for a in example["activities"] if a.get(field))
+            activity[field][0]["speechText"] = None
+            with self.assertRaisesRegex(builder.LessonError, "speechText must be nonempty text"):
+                builder.validate_lesson(example)
+
+    def test_new_document_theme_has_matching_light_dark_variables(self):
+        self.assertIn("--paper:#f5f5f7", builder.BASE_CSS)
+        light, dark = builder.BASE_CSS.split("@media(prefers-color-scheme:dark)")
+        for variable in ("paper", "surface", "ink", "muted", "line", "accent"):
+            self.assertIn("--" + variable + ":", light)
+            self.assertIn("--" + variable + ":", dark)
+        self.assertNotIn("#faf8f2", builder.BASE_CSS)
+
+    def test_external_sources_require_public_https_attribution_not_a_fictional_code_path(self):
+        lesson = small_lesson()
+        for source in (
+            {"name": "Brilliant", "url": "https://blog.brilliant.org/solving-equations/", "case": "独立改编的天平建构"},
+            {"repository": "HKUDS/DeepTutor", "path": "web/components/quiz/QuizViewer.tsx", "commit": "abc", "case": "quiz"},
+            {"path": "web/components/quiz/QuizViewer.tsx"},
+            "web/components/quiz/QuizViewer.tsx",
+        ):
+            lesson["activities"][0]["source"] = source
+            builder.validate_lesson(lesson)
+        for source in (
+            {"name": "Brilliant"},
+            {"name": "", "url": "https://brilliant.org/"},
+            {"name": "Brilliant", "url": "http://brilliant.org/"},
+            {"name": "Brilliant", "url": "https:///"},
+            {"name": "Brilliant", "url": "https://brilliant.org/", "path": "web/fake.tsx"},
+            {"repository": "Brilliant", "path": "web/fake.tsx"},
+        ):
+            lesson["activities"][0]["source"] = source
+            with self.assertRaises(builder.LessonError):
+                builder.validate_lesson(lesson)
 
 
 if __name__ == "__main__":

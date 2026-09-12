@@ -1,4 +1,4 @@
 interface:
-  display_name: "DialogueTutor 简易对话"
-  short_description: "交互优先的教学 HTML，二维/三维模型、行行理由与 TTS 读题"
-  default_prompt: "使用 $dialogue-tutor 按 bgct 讲透这份材料，生成交互优先、模型联动、行行解释理由并可 TTS 读题的 HTML；术语英文，解释以中文为主。"
+  display_name: "Dialogue Tutor 简易对话"
+  short_description: "交互与模型优先的教学 HTML，逐行讲清因果并提供 1.5× 读题"
+  default_prompt: "使用 $dialogue-tutor 按 bgct 生成交互式教学 HTML：可视化交互优先、模型联动、逐行解释，并提供读题 TTS。"
