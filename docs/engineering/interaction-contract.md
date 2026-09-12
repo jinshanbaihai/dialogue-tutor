@@ -1,6 +1,10 @@
+# Original runtime contract, updated for 2.0
+
+Current skill design and validation: [interactive-first-redesign.md](interactive-first-redesign.md). The original S2 content remains a compatibility fixture.
+
 # HTML interaction contract v1
 
-The approved goal is a portable DialogueTutor lesson with DeepTutor-derived learning interactions embedded where the content needs them. Every activity carries a `source` identifying the DeepTutor module; learning science qualifies behavior and evidence labels. The prototype uses the existing S2 lesson and fifteen activity placements. The original prose and six worked questions remain available.
+The approved goal is a portable DialogueTutor lesson with DeepTutor-derived learning interactions embedded where the content needs them. Every activity carries a `source` identifying the original DeepTutor module or an explicit named product with an official HTTPS URL; learning science qualifies behavior and evidence labels. The prototype uses the existing S2 lesson and fifteen activity placements. The original prose and six worked questions remain available.
 
 ## Files and ownership
 
@@ -18,7 +22,7 @@ Top-level fields: `schemaVersion: 1`, stable `lessonId`, `revision`, `title`, `l
 
 `objectives`: `{id, title, kind}` where kind is `memory`, `concept`, `procedure`, or `design`. IDs are unique and stable. Activity IDs are unique and reference an existing objective.
 
-Each activity: `{id, objectiveId, type, title, prompt, source, ...payload}`. `source` is a nonempty DeepTutor source path or object with path/commit/case. Prompt and ordinary labels are text; fields ending `Html` are author-produced lesson markup. The runtime uses text rendering for learner answers and notes.
+Each activity: `{id, objectiveId, type, title, prompt, source, ...payload}`. `source` is a DeepTutor source path or object with path/commit/case, or a product object with nonempty name and HTTPS url (optional case). Prompt and ordinary labels are text; fields ending `Html` are author-produced lesson markup. The runtime uses text rendering for learner answers and notes.
 
 Placement for an existing HTML: `{selector, position: "before"|"after"|"append"}`. Selectors are builder-side structural anchors; a missing or ambiguous selector fails assembly. Activities can additionally refer to `solutionId`, the ID of a `<details>` containing the original worked solution. Revealing that details before answering marks the attempt as assisted. The sample author supplies `solutionWraps: [{id,startSelector,endSelector}]` to wrap a run of sibling nodes starting after the selected heading and ending before the next boundary; the builder preserves the heading and places the activity immediately after it. For new lessons, sections are `{id,title,bodyHtml,activityIds}` and may include authored accessible math/SVG markup.
 

@@ -1,6 +1,8 @@
 # DeepTutor 交互来源与案例追溯
 
-维护日期：2026-09-07。本次新增学习交互以 [HKUDS/DeepTutor 固定快照](https://github.com/HKUDS/DeepTutor/tree/42fab3cf429a1fbf36b257ab8d116a3814964202) 为来源：`42fab3cf429a1fbf36b257ab8d116a3814964202`（该快照README发行记录为v1.6.5）。以下所有源码链接固定到这个提交，不代表上游今后的状态。学习科学校准见[学习证据](learning-evidence.md)，实现契约见[交互规格](interactive-html.md)。
+历史实现记录日期：2026-09-07。1.6.0 的学习交互以 [HKUDS/DeepTutor 固定快照](https://github.com/HKUDS/DeepTutor/tree/42fab3cf429a1fbf36b257ab8d116a3814964202) 为来源：`42fab3cf429a1fbf36b257ab8d116a3814964202`（该快照README发行记录为v1.6.5）。以下所有源码链接固定到这个提交，不代表上游今后的状态。学习科学校准见[学习证据](learning-evidence.md)，实现契约见[交互规格](interactive-html.md)。
+
+此文件保留 1.6.0 原组件调研与验证记录；本次新增产品机制见 `interaction-patterns.md`，本次实现检查见仓库工程记录。以下旧实测条目没有在本次重新执行。
 
 ## 证据级别
 

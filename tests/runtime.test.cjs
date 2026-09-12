@@ -555,3 +555,18 @@ test("the reducer is immutable and runtime lesson validation rejects invalid ide
   const invalidId = fixture(); invalidId.objectives[0].id = "__proto__";
   assert.throws(() => runtime.validateLesson(invalidId), /objective/);
 });
+
+test("external product attribution accepts public HTTPS sources and rejects missing URLs or invented code paths", () => {
+  const lesson = fixture();
+  for (const source of [
+    {name: "Brilliant", url: "https://blog.brilliant.org/solving-equations/", case: "独立改编的天平建构"},
+    {repository: "HKUDS/DeepTutor", path: "web/components/quiz/QuizViewer.tsx", commit: "abc", case: "quiz"},
+    {path: "web/components/quiz/QuizViewer.tsx"}, "web/components/quiz/QuizViewer.tsx"
+  ]) { lesson.activities[0].source = source; assert.equal(runtime.validateLesson(lesson), lesson); }
+  for (const source of [
+    {name: "Brilliant"}, {name: "", url: "https://brilliant.org/"},
+    {name: "Brilliant", url: "http://brilliant.org/"}, {name: "Brilliant", url: "https:///"},
+    {name: "Brilliant", url: "https://brilliant.org/", path: "web/fake.tsx"},
+    {repository: "Brilliant", path: "web/fake.tsx"}
+  ]) { lesson.activities[0].source = source; assert.throws(() => runtime.validateLesson(lesson), /source/i); }
+});
