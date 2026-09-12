@@ -147,6 +147,21 @@ test('unsupported browser disables audio while retaining fully usable activities
   assert.match(p.doc.querySelector('.dt-speech-status').textContent, /不支持朗读/);
   p.click('cards', 'flash-flip'); assert.match(p.doc.querySelector('[data-dt-activity="cards"]').textContent, /SECRET_BACK/);
 });
+test('visible MathML uses its spoken label once, while hidden labels remain excluded', t => {
+  const fixture = JSON.parse(JSON.stringify(lesson));
+  fixture.activities.find(a => a.id === 'steps').steps = [{title: 'Fraction', bodyHtml:
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="八除以二"><mfrac><mn>8</mn><mn>2</mn></mfrac></math>' +
+    '<math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn></math>' +
+    '<div hidden><math aria-label="SECRET_PARENT"><mn>99</mn></math></div>' +
+    '<math style="display:none" aria-label="SECRET_CSS"><mn>99</mn></math>' +
+    '<details><summary>解释</summary><math aria-label="SECRET_CLOSED"><mn>99</mn></math></details>'}];
+  const p = page(t, [zh], true, fixture);
+  require('./helpers/math-style.cjs')(p.win);
+  p.click('steps', 'speech-play');
+  assert.equal(p.last().text.split('八除以二').length - 1, 1);
+  assert.match(p.last().text, /7/);
+  assert.doesNotMatch(p.last().text, /SECRET|8|2|99/);
+});
 test('theme defines complete light and dark semantic color sets and reduced motion', () => {
   const css = fs.readFileSync(path.join(__dirname, '../plugins/dialogue-tutor/skills/dialogue-tutor/assets/interactive/lesson-runtime.css'), 'utf8');
   const blocks = [css.slice(0, css.indexOf('.dt-activity *,')), css.slice(css.indexOf('@media (prefers-color-scheme: dark)'))];

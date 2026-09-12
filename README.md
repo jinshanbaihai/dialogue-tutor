@@ -4,6 +4,8 @@
 
 [交互示例：操作天平理解方程](https://jinshanbaihai.github.io/dialogue-tutor/interactive-first.html) · [技能入口](plugins/dialogue-tutor/skills/dialogue-tutor/SKILL.md) · [完整技能包](dist/dialogue-tutor-2.0.0.zip)
 
+第二个示例：[沿边探索 perimeter 并逐步求 width](docs/rectangle-perimeter.html)，课程源数据是 [rectangle-perimeter.json](plugins/dialogue-tutor/skills/dialogue-tutor/examples/rectangle-perimeter.json)。
+
 ## 2.0.0 的生成方式
 
 旧入口把大量历史条款与长篇正文规格集中在同一文件。新版将共享要求放在短入口，模式、推导、视觉设计、交互调研、TTS 和评审按需读取。核心任务是让读者实际操作、观察关系、解释依据，再尝试变式。
@@ -80,7 +82,7 @@ python3 scripts/package_skill.py
 
 ### 构建与验证
 
-在仓库根目录重新生成同一份 S2 演示页：
+在仓库根目录重新生成天平、矩形周长与 S2 三份演示页：
 
 ```bash
 python3 scripts/build_demo.py

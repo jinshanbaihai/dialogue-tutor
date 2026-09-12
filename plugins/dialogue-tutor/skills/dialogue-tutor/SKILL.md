@@ -48,7 +48,7 @@ description: 生成面向外行的交互式教学 HTML，逐行解释概念、�
 6. 每个模块提供读题入口，默认 **1.5×**，优先实际可用的 **Xiaoxiao**。题目和选项进入读题，卡片背面、答案、评分依据保持分离。语音细节与 `plustts` 见专门参考。
 7. 运行页面，验证真实交互、推导、模型关系、数学排版、读题、手机布局与恢复行为；检查本次题目和公式全部覆盖，再执行独立审读。
 
-最小可运行示例是 `examples/interactive-first.json`；复杂既有课程参考 `examples/s2-interactive.json`。示例提供数据与操作形状，实际内容深度由任务决定。
+最小可运行示例是 `examples/interactive-first.json`；沿边模型与原题求解另见 `examples/rectangle-perimeter.json`；复杂既有课程参考 `examples/s2-interactive.json`。按当前主题选择一个示例读取，实际内容深度由任务决定。
 
 ## 行行推导面向真正的读者
 

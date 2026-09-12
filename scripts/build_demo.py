@@ -15,6 +15,12 @@ subprocess.run([
 
 subprocess.run([
     sys.executable, str(skill / "scripts/build_lesson.py"),
+    "--lesson", str(skill / "examples/rectangle-perimeter.json"),
+    "--output", str(root / "docs/rectangle-perimeter.html"),
+], check=True)
+
+subprocess.run([
+    sys.executable, str(skill / "scripts/build_lesson.py"),
     "--lesson", str(skill / "examples/interactive-first.json"),
     "--output", str(root / "docs/interactive-first.html"),
 ], check=True)

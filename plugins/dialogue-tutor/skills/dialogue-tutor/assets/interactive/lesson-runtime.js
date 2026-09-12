@@ -587,6 +587,9 @@
       // participate. Detached HTML cannot tell which answers are still hidden.
       var style = win.getComputedStyle(node);
       if (style.display === "none" || style.visibility === "hidden" || style.visibility === "collapse") return "";
+      // Reading MathML tokens separately loses fraction/grouping semantics.
+      // Prefer the author's spoken description once visibility is established.
+      if (node.localName === "math" && (node.getAttribute("aria-label") || "").trim()) return node.getAttribute("aria-label");
       if (node.tagName === "DETAILS" && !node.open) {
         var summary = Array.from(node.children).find(function (child) { return child.tagName === "SUMMARY"; });
         return visibleStepText(summary);
