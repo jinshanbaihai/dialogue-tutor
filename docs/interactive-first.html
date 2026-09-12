@@ -1,4 +1,360 @@
-/* DialogueTutor portable learning interactions, contract v1.
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>通过天平理解 Equation</title><style>
+:root{color-scheme:light dark;--paper:#f5f5f7;--surface:#ffffff;--ink:#1d1d1f;--muted:#64646b;--line:#d8d8dd;--accent:#0066cc}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Noto Sans SC',sans-serif;line-height:1.8;font-optical-sizing:auto}
+main{max-width:52rem;margin:0 auto;padding:3rem 1.3rem 6rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;letter-spacing:-.025em}h2{margin-top:3rem;font-size:1.5rem}h3{font-size:1.2rem}p{margin:1rem 0}a{color:var(--accent)}figure{margin:1.7rem 0}svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{padding:.6rem;border-bottom:1px solid var(--line);text-align:left}math{font-size:1.08em}pre{overflow:auto;padding:1rem;background:var(--surface);border-radius:.6rem}code{overflow-wrap:anywhere}.dt-lesson-kicker{color:var(--accent);font-size:.8rem;letter-spacing:.12em}.dt-worked-solution{margin:1.2rem 0}.dt-worked-solution>summary{cursor:pointer;font-weight:600;padding:.7rem 0}
+@media(prefers-color-scheme:dark){:root{--paper:#111113;--surface:#1c1c1e;--ink:#f5f5f7;--muted:#b5b5bd;--line:#48484f;--accent:#8abfff}}
+</style><style id="dt-runtime-style">/* Portable DialogueTutor interactions. All selectors are namespaced. */
+.dt-activity,
+.dt-study {
+  --dt-paper: #ffffff;
+  --dt-surface: #f5f5f7;
+  --dt-ink: #1d1d1f;
+  --dt-muted: #64646b;
+  --dt-line: #d8d8dd;
+  --dt-accent: #0066cc;
+  --dt-accent-soft: #eef5ff;
+  --dt-good: #237044;
+  --dt-good-soft: #edf7f0;
+  --dt-again: #9a481d;
+  --dt-again-soft: #fff3eb;
+  --dt-focus: #0071e3;
+  --dt-on-accent: #ffffff;
+  --dt-accent-hover: #0055ad;
+  --dt-hint: #795d16;
+  --dt-error: #ad3026;
+  --dt-guide: #8b5eb5;
+  --dt-dot-second: #286e87;
+  --dt-shadow: 0 2px 8px rgb(0 0 0 / 3%), 0 12px 28px rgb(0 0 0 / 3%);
+  --dt-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  color-scheme: light;
+  box-sizing: border-box;
+  color: var(--dt-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Noto Sans SC", sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  font-optical-sizing: auto;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.dt-activity *,
+.dt-study * { box-sizing: border-box; }
+.dt-activity {
+  margin: 2.6rem 0;
+  padding: 1.5rem 1.65rem 1.15rem;
+  background: var(--dt-paper);
+  border: 1px solid var(--dt-line);
+  border-radius: 1rem;
+  box-shadow: var(--dt-shadow);
+  scroll-margin-top: 1.2rem;
+}
+.dt-activity .dt-activity-title {
+  margin: 0.3rem 0 0;
+  padding: 0;
+  border: 0;
+  color: var(--dt-ink);
+  font-size: 1.14rem;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: left;
+}
+.dt-eyebrow {
+  display: block;
+  color: var(--dt-accent);
+  font-family: system-ui, -apple-system, "Noto Sans SC", sans-serif;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+.dt-activity .dt-prompt { margin: 0.85rem 0 1.2rem; text-indent: 0; }
+.dt-activity .dt-small,
+.dt-study .dt-small {
+  color: var(--dt-muted);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  text-indent: 0;
+}
+.dt-activity .dt-small-heading,
+.dt-study .dt-small-heading {
+  display: block;
+  margin: 0 0 0.45rem;
+  color: var(--dt-ink);
+  font-size: 0.87rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+.dt-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
+.dt-spread { justify-content: space-between; }
+.dt-counter { color: var(--dt-muted); font-size: 0.76rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dt-activity .dt-button,
+.dt-study .dt-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 2.75rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.48rem 0.82rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  color: var(--dt-ink);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 550;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  cursor: pointer;
+  box-shadow: none;
+  transition: transform 130ms var(--dt-ease-out);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (hover: hover) and (pointer: fine) {
+.dt-activity .dt-button:hover:not(:disabled),
+.dt-study .dt-button:hover:not(:disabled) { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+}
+.dt-activity .dt-button-primary,
+.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: var(--dt-on-accent); }
+@media (hover: hover) and (pointer: fine) {
+.dt-activity .dt-button-primary:hover:not(:disabled),
+.dt-study .dt-button-primary:hover:not(:disabled) { background: var(--dt-accent-hover); color: var(--dt-on-accent); }
+}
+.dt-activity .dt-button-quiet,
+.dt-study .dt-button-quiet { border-color: transparent; background: transparent; color: var(--dt-accent); }
+.dt-activity .dt-button:disabled,
+.dt-study .dt-button:disabled { opacity: 0.48; cursor: default; }
+.dt-activity :focus-visible,
+.dt-study :focus-visible { outline: 3px solid var(--dt-focus); outline-offset: 3px; }
+.dt-activity .dt-button[aria-pressed="true"],
+.dt-study .dt-button[aria-pressed="true"] { background: var(--dt-accent-soft); color: var(--dt-accent); }
+.dt-activity .dt-input,
+.dt-study .dt-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0.45rem 0 0;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  color: var(--dt-ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  resize: vertical;
+}
+.dt-input:disabled { background: var(--dt-surface); opacity: 1; -webkit-text-fill-color: var(--dt-ink); }
+.dt-input-label { display: block; margin: 0.4rem 0 0.85rem; color: var(--dt-muted); font-size: 0.8rem; }
+.dt-activity .dt-flashcard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  min-height: 13rem;
+  margin: 0.75rem 0;
+  padding: 1.65rem 1.3rem;
+  border: 1px solid var(--dt-line);
+  background: linear-gradient(140deg, var(--dt-paper), var(--dt-surface));
+  text-align: center;
+}
+.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: var(--dt-accent); }
+.dt-flashcard-text { display: block; font-size: 1.05rem; font-weight: 500; line-height: 1.8; white-space: pre-wrap; }
+.dt-self-rating { margin: 1rem 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--dt-line); background: var(--dt-surface); }
+.dt-self-rating .dt-button { margin: 0.25rem 0.4rem 0.25rem 0; }
+.dt-self-rating p { margin: 0.15rem 0 0.5rem; }
+.dt-choices { display: grid; gap: 0.6rem; min-inline-size: 0; margin: 0 0 1rem; padding: 0; border: 0; }
+.dt-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.72rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0.78rem 0.85rem;
+  border: 1px solid var(--dt-line);
+  border-radius: 0.38rem;
+  background: var(--dt-paper);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+.dt-choice:hover { border-color: var(--dt-accent); }
+}
+.dt-choice-selected { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+.dt-choice-label { min-width: 0; }
+.dt-radio { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; margin: 0.24rem 0 0; accent-color: var(--dt-accent); }
+.dt-quiz { margin: 0 0 0.6rem; }
+.dt-feedback,
+.dt-reference,
+.dt-hint {
+  margin: 0.9rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: 0.4rem;
+  background: var(--dt-surface);
+  text-indent: 0;
+  white-space: pre-wrap;
+}
+.dt-activity .dt-feedback p,
+.dt-activity .dt-reference p { margin: 0.5rem 0 0; text-indent: 0; }
+.dt-feedback-good { border-left: 3px solid var(--dt-good); background: var(--dt-good-soft); }
+.dt-feedback-again { border-left: 3px solid var(--dt-again); background: var(--dt-again-soft); }
+.dt-reference { border: 1px solid var(--dt-line); background: transparent; }
+.dt-reference-answer { font-weight: 600; }
+.dt-reference .dt-rubric { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+.dt-hint { border-left: 3px solid var(--dt-hint); color: var(--dt-hint); font-size: 0.85rem; }
+.dt-error,
+.dt-storage-warning { color: var(--dt-error); font-size: 0.82rem; line-height: 1.6; }
+.dt-error:empty { display: none; }
+.dt-step-markers { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.dt-step-markers li { margin: 0; padding: 0; }
+.dt-step-markers .dt-button { min-height: 2.4rem; padding: 0.4rem 0.6rem; font-size: 0.74rem; }
+.dt-step-markers .dt-step-current { border-color: var(--dt-accent); background: var(--dt-accent-soft); color: var(--dt-accent); }
+.dt-step-stage { min-height: 9rem; margin: 0 0 1rem; padding: 1.1rem; border-left: 3px solid var(--dt-accent); background: var(--dt-surface); }
+.dt-authored { overflow-wrap: anywhere; }
+.dt-authored p { text-indent: 0; }
+.dt-authored img,
+.dt-authored svg,
+.dt-authored video { max-width: 100%; height: auto; }
+.dt-authored pre { max-width: 100%; overflow-x: auto; font-size: 0.86rem; }
+.dt-parameters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem 1.4rem; margin: 1rem 0 0.8rem; }
+.dt-parameter { display: block; min-width: 0; font-size: 0.81rem; }
+.dt-parameter-value { padding: 0.05rem 0.42rem; border-radius: 0.25rem; background: var(--dt-surface); font-variant-numeric: tabular-nums; }
+.dt-range { display: block; width: 100%; min-height: 2.75rem; margin: 0; padding: 0; accent-color: var(--dt-accent); cursor: pointer; }
+.dt-plots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 0.8rem 0; }
+.dt-activity .dt-graph { display: block; width: 100%; height: auto; margin: 0; border: 1px solid var(--dt-line); border-radius: 0.4rem; background: var(--dt-paper); overflow: visible; }
+.dt-graph text { fill: var(--dt-muted); font-family: system-ui, sans-serif; font-size: 15px; }
+.dt-graph .dt-graph-title { fill: var(--dt-ink); font-size: 16px; font-weight: 600; }
+.dt-graph-grid { stroke: var(--dt-line); stroke-width: 0.8; stroke-dasharray: 3 4; }
+.dt-graph-axis { stroke: var(--dt-muted); stroke-width: 1; }
+.dt-graph-curve { stroke: var(--dt-accent); stroke-width: 3; stroke-linejoin: round; }
+.dt-graph-area { fill: var(--dt-accent); fill-opacity: 0.38; }
+.dt-graph-guide { stroke: var(--dt-guide); stroke-width: 1.4; stroke-dasharray: 4 4; }
+.dt-graph-dot { fill: var(--dt-focus); stroke: var(--dt-paper); stroke-width: 1.5; }
+.dt-graph-dot-second { fill: var(--dt-dot-second); }
+.dt-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; margin: 0.8rem 0; }
+.dt-metric { display: flex; flex-direction: column; min-width: 0; padding: 0.65rem 0.7rem; border: 1px solid var(--dt-line); border-radius: 0.35rem; }
+.dt-metric strong { margin-top: 0.15rem; font-size: 1.12rem; font-variant-numeric: tabular-nums; }
+.dt-followups { margin-top: 1rem; }
+.dt-followup,
+.dt-note,
+.dt-panel-section { margin: 0.5rem 0; border-top: 1px solid var(--dt-line); }
+.dt-followup > summary,
+.dt-note > summary,
+.dt-source > summary,
+.dt-panel-section > summary { padding: 0.7rem 0.1rem; color: var(--dt-accent); font-size: 0.83rem; line-height: 1.6; cursor: pointer; }
+.dt-followup p { margin: 0.15rem 0 0.85rem; white-space: pre-wrap; text-indent: 0; }
+.dt-note > .dt-button { margin-bottom: 0.7rem; }
+.dt-source { margin: 0; }
+.dt-source > summary { color: var(--dt-muted); font-size: 0.72rem; padding: 0.35rem 0.1rem; }
+.dt-source p { white-space: pre-wrap; word-break: break-word; }
+.dt-activity-footer { margin-top: 1.15rem; padding-top: 0.6rem; border-top: 1px solid var(--dt-line); }
+.dt-status { min-height: 0; margin: 0.35rem 0 0; color: var(--dt-accent); font-size: 0.78rem; line-height: 1.6; text-indent: 0; }
+.dt-status:empty { display: none; }
+.dt-copy-fallback { margin-top: 0.75rem; }
+.dt-study { margin: 1.4rem 0 2rem; }
+.dt-study-panel { border: 1px solid var(--dt-line); border-radius: 0.5rem; background: var(--dt-paper); }
+.dt-study-summary { padding: 0.8rem 1rem; color: var(--dt-accent); font-size: 0.86rem; font-weight: 600; line-height: 1.65; cursor: pointer; }
+.dt-study-panel[open] > .dt-study-summary { border-bottom: 1px solid var(--dt-line); }
+.dt-study-body { padding: 1rem; }
+.dt-study-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.55rem; }
+.dt-study-stat { display: flex; flex-direction: column; padding: 0.55rem 0.7rem; border-radius: 0.35rem; background: var(--dt-surface); }
+.dt-study-stat strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+.dt-objective { padding: 0.7rem 0; border-top: 1px solid var(--dt-line); }
+.dt-study .dt-activity-link { padding: 0.25rem 0.4rem; min-height: 2rem; font-size: 0.75rem; text-align: left; }
+.dt-review-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.3rem 0; padding: 0.25rem 0.4rem; }
+.dt-review-due { background: var(--dt-again-soft); border-radius: 0.35rem; }
+.dt-note-entry { margin: 0.35rem 0; padding: 0.25rem 0; }
+.dt-note-text { margin: 0.2rem 0 0.6rem; padding: 0 0.8rem; color: var(--dt-muted); font-size: 0.85rem; white-space: pre-wrap; text-indent: 0; }
+.dt-transfer { margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--dt-line); }
+.dt-sr {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Frequent card/module navigation is immediate. Only pointer press moves. */
+.dt-activity .dt-button:active:not(:disabled):not(:focus-visible),
+.dt-study .dt-button:active:not(:disabled):not(:focus-visible) { transform: scale(0.97); }
+.dt-activity .dt-button:focus-visible, .dt-study .dt-button:focus-visible { transition: none; }
+.dt-speech { margin: 0 0 1.25rem; padding: 0.55rem 0.75rem; border: 1px solid var(--dt-line); border-radius: 0.75rem; background: var(--dt-surface); }
+.dt-speech-settings > summary { min-height: 2.75rem; padding: 0.55rem 0; color: var(--dt-muted); font-size: 0.8rem; cursor: pointer; }
+.dt-speech-settings .dt-input-label { flex: 1 1 12rem; min-width: 0; }
+.dt-speech-settings .dt-input-label:last-child { flex: 0 1 6rem; }
+.dt-speech .dt-input { margin-top: 0.25rem; padding: 0.4rem; min-height: 2.75rem; }
+.dt-activity .dt-speech-status { margin: 0.25rem 0 0; }
+.dt-step-stage + .dt-step-stage { margin-top: 1rem; }
+@media (max-width: 620px) {
+  .dt-activity { padding: 1.15rem 1rem 0.9rem; margin: 2rem 0; }
+  .dt-activity .dt-activity-title { font-size: 1.06rem; }
+  .dt-plots { grid-template-columns: minmax(0, 1fr); }
+  .dt-parameters { gap: 0.6rem 1rem; }
+  .dt-metrics { grid-template-columns: minmax(0, 1fr); }
+  .dt-metric { flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; }
+  .dt-study-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dt-study-body { padding: 0.8rem; }
+  .dt-activity .dt-flashcard { min-height: 13rem; padding: 1.2rem 0.85rem; }
+  .dt-activity-footer .dt-row { gap: 0.15rem; }
+  .dt-activity .dt-button,
+  .dt-study .dt-button { min-height: 2.75rem; }
+}
+@media (max-width: 380px) {
+  .dt-parameters { grid-template-columns: minmax(0, 1fr); }
+  .dt-activity { padding-left: 0.8rem; padding-right: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dt-activity *, .dt-study * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .dt-activity .dt-button:active, .dt-study .dt-button:active { transform: none; }
+}
+@media (prefers-color-scheme: dark) {
+  .dt-activity, .dt-study {
+    --dt-paper: #1c1c1e;
+    --dt-surface: #27272a;
+    --dt-ink: #f5f5f7;
+    --dt-muted: #b5b5bd;
+    --dt-line: #48484f;
+    --dt-accent: #8abfff;
+    --dt-accent-soft: #20334a;
+    --dt-good: #8cd8a5;
+    --dt-good-soft: #22382c;
+    --dt-again: #ffbc94;
+    --dt-again-soft: #422e24;
+    --dt-focus: #a5cdff;
+    --dt-on-accent: #102338;
+    --dt-accent-hover: #b6d7ff;
+    --dt-hint: #e5ca87;
+    --dt-error: #ffada6;
+    --dt-guide: #c6a0ea;
+    --dt-dot-second: #8bd3e8;
+    --dt-shadow: 0 2px 8px rgb(0 0 0 / 12%), 0 12px 28px rgb(0 0 0 / 15%);
+    color-scheme: dark;
+  }
+}
+/* Contrast is independent of color scheme and must win in either scheme. */
+@media (prefers-contrast: more) {
+  .dt-activity, .dt-study { --dt-line: currentColor; }
+}
+@media print {
+  .dt-activity { box-shadow: none; break-inside: avoid; }
+  .dt-study, .dt-activity-footer, .dt-source, .dt-speech { display: none; }
+  .dt-activity .dt-button { border-color: #888; }
+  .dt-activity .dt-reference { break-inside: avoid; }
+}
+</style></head><body><main><header><p class="dt-lesson-kicker">DIALOGUETUTOR · 互动学习</p><h1>通过天平理解 Equation</h1></header><aside data-dt-study aria-label="学习记录与复习"></aside><section id="first-task"><h2>两袋加三块，和十一块一样多。每袋有多少？</h2><style>
+main{max-width:56rem;padding-top:1.2rem}h1{font-size:2rem}h2{margin-top:1.4rem}.dt-lesson-kicker{margin-bottom:.3rem}body{font-size:17px}.balance-controls{display:flex;gap:.5rem;flex-wrap:wrap}.balance-controls button{font-size:16px;padding:.65rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);cursor:pointer}.balance-controls .primary{background:var(--accent);color:var(--surface);font-weight:700}.balance-controls button:disabled{opacity:.4;cursor:default}.balance-controls button:focus-visible{outline:3px solid #b56c00;outline-offset:3px}.balance-svg{width:100%;display:block;margin:.6rem 0;background:var(--paper);border-radius:14px}.balance-svg text{font-family:system-ui,sans-serif;fill:var(--ink);font-size:18px}.balance-stage math{font-size:1.65rem;margin:.6rem 0;color:var(--accent);font-weight:700}.balance-stage h4{margin:.5rem 0}.balance-stage p{margin:.5rem 0}.balance-em{color:var(--accent);font-weight:700}.balance-meta{font-size:.88rem;color:var(--muted)}.balance-full>div{border-top:1px solid var(--line);padding:.7rem 0}.balance-full math{font-size:1.25rem}.dt-speech{margin-top:.5rem}#first-task>h2{font-size:1.15rem}.dt-activity{margin-top:.6rem}@media(max-width:480px){main{padding:.75rem .65rem 3rem}h1{font-size:1.65rem}.balance-controls button{font-size:14px;padding:.5rem}.balance-stage math{font-size:1.25rem}.balance-svg text{font-size:20px}}
+</style><p>每袋一样多，每块是 1 个单位。先试着拿走方块，观察天平。Equation（等式）表示两边总量相同；unknown（未知数）x 表示每袋尚待确定的数量。</p><div data-dt-activity="balance-main"></div><details><summary>预备解释：为什么两边必须做同样的事？</summary><p>例如两边原来各有 5 块。两边各拿走 1 块，就各剩 4 块；只拿走左边 1 块，则左边 4 块、右边 5 块。保持相等，靠的是同样的操作。</p><p>平均分组时也要两边分成同样多组，并且不能分成零组，所以不能除以零。本题没有单位换算，也不需要先学字母运算规则。</p></details></section><section id="explain-equality"><h2>用一个判断解释操作依据</h2><p>刚才天平显示了 <strong class="balance-em">Equality（相等关系）</strong>。下面选择具体操作，再回忆保持相等的理由。</p><div data-dt-activity="equality-check"></div><div data-dt-activity="meaning-card"></div></section><section id="try-yourself"><h2>换个摆法，独立试一次</h2><p>这次把单位块放在左盘：17 个单位与右盘的三袋加两块一样多。每袋数量用新的 unknown y 表示。每袋都是非负数量。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>17</mn><mo>=</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>2</mn></mrow></math><div data-dt-activity="practice"></div><details id="practice-solution" class="dt-worked-solution" data-dt-solution><summary>主动查看本题完整解答</summary><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>17</mn><mo>−</mo><mn>2</mn><mo>=</mo><mo>(</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>2</mn><mo>)</mo><mo>−</mo><mn>2</mn></mrow></math><p>两边原本一样多，同时减去 2 后仍一样多。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>17</mn><mo>−</mo><mn>2</mn><mo>=</mo><mn>3</mn><mi>y</mi></mrow></math><p>右边原有的两个额外单位与拿走的两个单位抵消，只剩三份 y。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>15</mn><mo>=</mo><mn>3</mn><mi>y</mi></mrow></math><p>计算左边 17 减去 2，得到 15。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>15</mn><mo>÷</mo><mn>3</mn><mo>=</mo><mo>(</mo><mn>3</mn><mi>y</mi><mo>)</mo><mo>÷</mo><mn>3</mn></mrow></math><p>两边都平均分成三份；3 不是零，每份仍一样多。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>15</mn><mo>÷</mo><mn>3</mn><mo>=</mo><mi>y</mi></mrow></math><p>右边三份相同的 y 平均分成三份，每份是一份 y。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>5</mn><mo>=</mo><mi>y</mi></mrow></math><p>左边十五个单位平均分成三份，每份五个单位。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>y</mi><mo>=</mo><mn>5</mn></mrow></math><p>两边相等时可以交换左右位置，数量关系没有改变。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>17</mn><mo>=</mo><mn>3</mn><mo>×</mo><mn>5</mn><mo>+</mo><mn>2</mn></mrow></math><p>把 5 放回原式的 y，检查原来的条件。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>17</mn><mo>=</mo><mn>15</mn><mo>+</mo><mn>2</mn></mrow></math><p>先计算右边 3 乘以 5，得到 15。</p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>17</mn><mo>=</mo><mn>17</mn></mrow></math><p>再加上 2 得到 17，左右相同，检查通过。</p><p><strong class="balance-em">每袋 5 个单位</strong>。参考要点：两边同减 2；两边同除以非零的 3；回原式检查。数值答对只记录本题结果，不能代表已经解释完整过程。</p></details></section></main><script type="application/json" id="dt-lesson">{"schemaVersion":1,"lessonId":"balance-first-equation","revision":"2.0.0","title":"通过天平理解 Equation","language":"zh-CN","mode":"olct","objectives":[{"id":"meaning","title":"把 equation 与天平两盘对应起来","kind":"concept"},{"id":"solve","title":"两边做相同操作，逐步找出每袋数量","kind":"procedure"}],"sections":[{"id":"first-task","title":"两袋加三块，和十一块一样多。每袋有多少？","bodyHtml":"\u003cstyle>\nmain{max-width:56rem;padding-top:1.2rem}h1{font-size:2rem}h2{margin-top:1.4rem}.dt-lesson-kicker{margin-bottom:.3rem}body{font-size:17px}.balance-controls{display:flex;gap:.5rem;flex-wrap:wrap}.balance-controls button{font-size:16px;padding:.65rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);cursor:pointer}.balance-controls .primary{background:var(--accent);color:var(--surface);font-weight:700}.balance-controls button:disabled{opacity:.4;cursor:default}.balance-controls button:focus-visible{outline:3px solid #b56c00;outline-offset:3px}.balance-svg{width:100%;display:block;margin:.6rem 0;background:var(--paper);border-radius:14px}.balance-svg text{font-family:system-ui,sans-serif;fill:var(--ink);font-size:18px}.balance-stage math{font-size:1.65rem;margin:.6rem 0;color:var(--accent);font-weight:700}.balance-stage h4{margin:.5rem 0}.balance-stage p{margin:.5rem 0}.balance-em{color:var(--accent);font-weight:700}.balance-meta{font-size:.88rem;color:var(--muted)}.balance-full>div{border-top:1px solid var(--line);padding:.7rem 0}.balance-full math{font-size:1.25rem}.dt-speech{margin-top:.5rem}#first-task>h2{font-size:1.15rem}.dt-activity{margin-top:.6rem}@media(max-width:480px){main{padding:.75rem .65rem 3rem}h1{font-size:1.65rem}.balance-controls button{font-size:14px;padding:.5rem}.balance-stage math{font-size:1.25rem}.balance-svg text{font-size:20px}}\n\u003c/style>\u003cp>每袋一样多，每块是 1 个单位。先试着拿走方块，观察天平。Equation（等式）表示两边总量相同；unknown（未知数）x 表示每袋尚待确定的数量。\u003c/p>\u003cdiv data-dt-activity=\"balance-main\">\u003c/div>\u003cdetails>\u003csummary>预备解释：为什么两边必须做同样的事？\u003c/summary>\u003cp>例如两边原来各有 5 块。两边各拿走 1 块，就各剩 4 块；只拿走左边 1 块，则左边 4 块、右边 5 块。保持相等，靠的是同样的操作。\u003c/p>\u003cp>平均分组时也要两边分成同样多组，并且不能分成零组，所以不能除以零。本题没有单位换算，也不需要先学字母运算规则。\u003c/p>\u003c/details>","activityIds":["balance-main"]},{"id":"explain-equality","title":"用一个判断解释操作依据","bodyHtml":"\u003cp>刚才天平显示了 \u003cstrong class=\"balance-em\">Equality（相等关系）\u003c/strong>。下面选择具体操作，再回忆保持相等的理由。\u003c/p>","activityIds":["equality-check","meaning-card"]},{"id":"try-yourself","title":"换个摆法，独立试一次","bodyHtml":"\u003cp>这次把单位块放在左盘：17 个单位与右盘的三袋加两块一样多。每袋数量用新的 unknown y 表示。每袋都是非负数量。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>17\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>y\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\u003cdiv data-dt-activity=\"practice\">\u003c/div>\u003cdetails id=\"practice-solution\" class=\"dt-worked-solution\" data-dt-solution>\u003csummary>主动查看本题完整解答\u003c/summary>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>17\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmo>(\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>y\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>)\u003c/mo>\u003cmo>−\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>两边原本一样多，同时减去 2 后仍一样多。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>17\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>y\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>右边原有的两个额外单位与拿走的两个单位抵消，只剩三份 y。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>15\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>y\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>计算左边 17 减去 2，得到 15。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>15\u003c/mn>\u003cmo>÷\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>=\u003c/mo>\u003cmo>(\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>y\u003c/mi>\u003cmo>)\u003c/mo>\u003cmo>÷\u003c/mo>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>两边都平均分成三份；3 不是零，每份仍一样多。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>15\u003c/mn>\u003cmo>÷\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>=\u003c/mo>\u003cmi>y\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>右边三份相同的 y 平均分成三份，每份是一份 y。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>5\u003c/mn>\u003cmo>=\u003c/mo>\u003cmi>y\u003c/mi>\u003c/mrow>\u003c/math>\u003cp>左边十五个单位平均分成三份，每份五个单位。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmi>y\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>两边相等时可以交换左右位置，数量关系没有改变。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>17\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>×\u003c/mo>\u003cmn>5\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>把 5 放回原式的 y，检查原来的条件。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>17\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>15\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>先计算右边 3 乘以 5，得到 15。\u003c/p>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>17\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>17\u003c/mn>\u003c/mrow>\u003c/math>\u003cp>再加上 2 得到 17，左右相同，检查通过。\u003c/p>\u003cp>\u003cstrong class=\"balance-em\">每袋 5 个单位\u003c/strong>。参考要点：两边同减 2；两边同除以非零的 3；回原式检查。数值答对只记录本题结果，不能代表已经解释完整过程。\u003c/p>\u003c/details>","activityIds":["practice"]}],"activities":[{"id":"balance-main","objectiveId":"meaning","type":"interactive","title":"动手保持两边一样多","prompt":"每袋数量用 x 表示。左边两袋加三个单位，右边十一个单位，两边一样多。先试只拿左边三块，再恢复并两边同时拿走三块。随后平均分组，找出一袋有多少。","speechText":"每袋数量用字母 x 表示。左边两袋加三个单位，右边十一个单位，两边一样多。先试着只拿左边三块，观察两盘。再恢复原状，两边同时拿走三块，然后跟着按钮平均分组，找出一袋有多少。","source":{"name":"Brilliant","url":"https://blog.brilliant.org/solving-equations/","case":"独立改编的天平建构；本项目使用 SVG 与逐行状态"},"bodyHtml":"\u003cdiv class=\"balance-controls\">\u003cbutton class=\"primary\" data-next>两边同时拿走 3 块\u003c/button>\u003cbutton data-one>试试只拿左边 3 块\u003c/button>\u003cbutton data-prev>上一步\u003c/button>\u003cbutton data-reset>重新开始\u003c/button>\u003c/div>\n\u003csvg class=\"balance-svg\" viewBox=\"0 0 660 280\" role=\"img\" aria-label=\"两盘数量关系\">\u003ctitle>天平数量模型\u003c/title>\u003cg data-drawing>\u003c/g>\u003c/svg>\n\u003cdiv class=\"balance-stage\" aria-live=\"polite\">\u003ch4 data-stage-title>\u003c/h4>\u003cdiv data-formula>\u003c/div>\u003cp data-reason>\u003c/p>\u003c/div>\n\u003cp class=\"balance-meta\">蓝色袋子：相同的 x；灰色方块：每块 1 个单位。天平表示总量关系，袋子的画面大小不表示数量。此实物模型只表示非负数量。\u003c/p>\n\u003cdetails class=\"balance-full\">\u003csummary>主动查看完整过程\u003c/summary>\u003cdiv data-full>\u003c/div>\u003c/details>","script":"(function(){\nconst id='balance-main';const stages=[{\"title\": \"读懂天平\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>11\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"2x+3=11\", \"reason\": \"左盘是两个相同袋子和三个单位块，右盘是十一个单位块。天平平放，表示两盘总量相同。每袋数量用 x 表示；2x 表示 2 × x，即两份相同的 x。\", \"next\": \"两边同时拿走 3 块\"}, {\"title\": \"两边拿走相同数量\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>)\u003c/mo>\u003cmo>−\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>11\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"(2x+3)−3=11−3\", \"reason\": \"承接两盘相等；现在两边同时减去 3。原来一样多，同时拿走一样多，剩下的仍一样多。淡色方块标记已经拿走的三个单位。\", \"next\": \"整理左边\"}, {\"title\": \"左边只剩两袋\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>11\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"2x=11−3\", \"reason\": \"承接两边减去 3 的结果；左边原有的三个单位已全部拿走，所以只剩两份 x。右边的计算先保留。\", \"next\": \"数清右边\"}, {\"title\": \"右边剩八块\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>8\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"2x=8\", \"reason\": \"承接左边只剩 2x；右边原有 11 块，拿走 3 块后剩 8 块。两袋合起来对应八个单位。\", \"next\": \"两边平均分成 2 份\"}, {\"title\": \"两边同样分组\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>)\u003c/mo>\u003cmo>÷\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>8\u003c/mn>\u003cmo>÷\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"(2x)÷2=8÷2\", \"reason\": \"承接两袋与八块一样多；两边都平均分成 2 份，每份仍一样多。2 不是零，因此可以作为 divisor（除数）。虚线框表示两边各有两组。\", \"next\": \"看左边每一份\"}, {\"title\": \"左边每份是一袋\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>8\u003c/mn>\u003cmo>÷\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"x=8÷2\", \"reason\": \"承接两边都平均分成两份；左边两袋分成两组，每组恰好一袋，所以左边每份是 x。右边每份仍写为 8 ÷ 2。\", \"next\": \"数出右边每一份\"}, {\"title\": \"一袋对应四块\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"x=4\", \"reason\": \"承接每袋对应八块的一半；八块平均分成两组，每组四块。所以 solution（解）是 4：让原来的 equation 成立的 x 数值。\", \"next\": \"检查原来的条件\"}, {\"title\": \"把 4 放回原式\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>×\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>11\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"2×4+3=11\", \"reason\": \"承接每袋四个单位；用 4 替换原式的 x。必须回到原式检查，不能只看最后一行。\", \"next\": \"先算两袋\"}, {\"title\": \"先计算乘法\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmn>8\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>11\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"8+3=11\", \"reason\": \"承接原式中的 2 × 4 + 3；先算两袋共八个单位，三个额外单位仍保留。\", \"next\": \"再加三个单位\"}, {\"title\": \"检查通过\", \"formula\": \"\u003cmath xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" display=\\\"block\\\">\u003cmrow>\u003cmn>11\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>11\u003c/mn>\u003c/mrow>\u003c/math>\", \"plain\": \"11=11\", \"reason\": \"承接 8 + 3；再加三个单位得到 11，与右盘的 11 相同。模型两边都显示十一块，原来的条件成立。\", \"next\": \"\"}];\nlet root,state={step:0,one:false};\nconst q=s=>root.querySelector(s);\nfunction box(x,y,label,kind='unit',opacity=1){return `\u003cg opacity=\"${opacity}\">\u003crect x=\"${x}\" y=\"${y}\" width=\"${kind==='bag'?56:25}\" height=\"${kind==='bag'?49:25}\" rx=\"5\" fill=\"${kind==='bag'?'#d3e7ff':'#c8cbd2'}\" stroke=\"${kind==='bag'?'#0066cc':'#6f7580'}\"/>\u003ctext x=\"${x+(kind==='bag'?28:12.5)}\" y=\"${y+(kind==='bag'?32:19)}\" text-anchor=\"middle\">${label}\u003c/text>\u003c/g>`;}\nfunction units(n,x,y,ghost=0){let out='';for(let i=0;i\u003cn;i++)out+=box(x+(i%4)*31,y-Math.floor(i/4)*31,'1');for(let i=0;i\u003cghost;i++)out+=box(x+155+i*29,y,'1','unit',.22);return out;}\nfunction draw(){\n const i=state.step,unbalanced=state.one,removed=i>0||unbalanced,grouped=i>=4&&i\u003c=5,isolated=i===6,check=i>=7;\n let left,right;\n if(check){left=units(8,50,173)+units(3,205,173);right=units(11,432,173);}\n else if(isolated){left=box(142,149,'x','bag');right=units(4,423,173);}\n else {left=box(70,149,'x','bag')+box(168,149,'x','bag')+(removed?units(0,45,112,3):units(3,66,112));right=units(removed&&!unbalanced?8:11,422,173,removed&&!unbalanced&&i\u003c4?3:0);}\n if(grouped){left+='\u003crect x=\"60\" y=\"135\" width=\"78\" height=\"70\" rx=\"8\" fill=\"none\" stroke=\"#0066cc\" stroke-dasharray=\"5 4\"/>\u003crect x=\"158\" y=\"135\" width=\"78\" height=\"70\" rx=\"8\" fill=\"none\" stroke=\"#0066cc\" stroke-dasharray=\"5 4\"/>';right+='\u003crect x=\"410\" y=\"137\" width=\"140\" height=\"30\" rx=\"7\" fill=\"none\" stroke=\"#0066cc\" stroke-dasharray=\"5 4\"/>\u003crect x=\"410\" y=\"171\" width=\"140\" height=\"30\" rx=\"7\" fill=\"none\" stroke=\"#0066cc\" stroke-dasharray=\"5 4\"/>';}\n const ly=unbalanced?-20:0,ry=unbalanced?20:0;\n q('[data-drawing]').innerHTML=`\u003cpath d=\"M300 260 L330 206 L360 260 Z\" fill=\"#7b8493\"/>\u003cline x1=\"95\" y1=\"${209+ly}\" x2=\"565\" y2=\"${209+ry}\" stroke=\"#596577\" stroke-width=\"6\"/>\u003cg transform=\"translate(0 ${ly})\">${left}\u003cline x1=\"35\" y1=\"206\" x2=\"280\" y2=\"206\" stroke=\"#596577\" stroke-width=\"5\"/>\u003c/g>\u003cg transform=\"translate(0 ${ry})\">${right}\u003cline x1=\"382\" y1=\"206\" x2=\"625\" y2=\"206\" stroke=\"#596577\" stroke-width=\"5\"/>\u003c/g>\u003ctext x=\"155\" y=\"32\" text-anchor=\"middle\">${check?'两袋与额外单位':isolated?'一袋':'左盘'}\u003c/text>\u003ctext x=\"490\" y=\"32\" text-anchor=\"middle\">${isolated?'四个单位':'右盘'}\u003c/text>\u003ctext x=\"330\" y=\"88\" text-anchor=\"middle\" font-weight=\"700\">${unbalanced?'≠ 不再一样多':'＝ 一样多'}\u003c/text>`;\n q('svg').setAttribute('aria-label',unbalanced?'左盘单独拿走三块后变轻，右盘下沉，左右不再相等':`第${i+1}步，左右仍相等。${stages[i].plain}`);\n q('[data-stage-title]').textContent=unbalanced?'只改一边会发生什么？':`${i+1} / ${stages.length} · ${stages[i].title}`;\n q('[data-formula]').innerHTML=unbalanced?'\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>≠\u003c/mo>\u003cmn>11\u003c/mn>\u003c/mrow>\u003c/math>':stages[i].formula;\n q('[data-reason]').textContent=unbalanced?'左盘拿走三个单位，右盘仍有十一个。左边变轻，右盘下沉，所以不能把这一步写成仍然相等。点击「恢复原来两盘」，再试两边同时拿走。':stages[i].reason;\n q('[data-next]').textContent=unbalanced?'恢复原来两盘':stages[i].next||'已经检查完成';q('[data-next]').disabled=!unbalanced&&i===stages.length-1;\n q('[data-one]').hidden=i!==0||unbalanced;q('[data-prev]').disabled=i===0&&!unbalanced;\n}\nfunction save(){document.dispatchEvent(new CustomEvent('dt:exploration',{detail:{activityId:id,state}}));}\nfunction recover(s){state={step:Number.isInteger(s.step)?Math.max(0,Math.min(stages.length-1,s.step)):0,one:s.one===true};if(state.step!==0)state.one=false;draw();}\ndocument.addEventListener('dt:activity-mounted',e=>{if(e.detail.activityId!==id)return;root=document.querySelector('[data-dt-activity=\"'+id+'\"]');q('[data-full]').innerHTML=stages.map(s=>`\u003cdiv>\u003ch4>${s.title}\u003c/h4>${s.formula}\u003cp>${s.reason}\u003c/p>\u003c/div>`).join('');q('[data-next]').onclick=()=>{if(state.one)state={step:0,one:false};else state.step=Math.min(stages.length-1,state.step+1);draw();save();};q('[data-prev]').onclick=()=>{state.one=false;state.step=Math.max(0,state.step-1);draw();save();};q('[data-one]').onclick=()=>{state.one=true;draw();save();};q('[data-reset]').onclick=()=>{state={step:0,one:false};draw();save();};recover(e.detail.state||{});});\ndocument.addEventListener('dt:restore',e=>{if(e.detail.activityId===id&&root)recover(e.detail.state||{});});\n})();"},{"id":"practice","objectiveId":"solve","type":"quiz","format":"numeric","title":"每袋有多少个单位？","prompt":"17 = 3y + 2。每袋一样多，y 表示每袋的单位数量。输入 y 的准确数值，不用写单位。左右位置换了，仍表示两边一样多。","speechText":"十七等于三乘以 y，再加二。字母 y 表示每袋有多少个单位，每袋一样多。请输入 y 的准确数值，不用写单位。","source":"web/app/(workspace)/books/components/blocks/QuizBlock.tsx","answer":5,"tolerance":0,"hint":"先让两边同时拿走那两个额外单位，再把剩余数量平均分成三份。","explanation":"每袋有 5 个单位。两边同减 2 后，十五个单位对应三袋；平均分成三份，每份五个单位。可展开本题完整解答，逐行检查依据。","solutionId":"practice-solution","followups":[{"question":"两袋变三袋，为什么不能照搬除以 2？","answer":"分几份要看剩下几袋。这里有三份相同的 y，所以两边平均分成三份；2 只是额外的单位数。"}]},{"id":"equality-check","objectiveId":"meaning","type":"quiz","format":"choice","title":"哪个操作保持两边相等？","prompt":"天平两边原本一样多。以下哪个操作能够保持 Equality（相等关系）？请选择一个操作，再提交核对。","speechText":"天平两边原本一样多。以下哪个操作能够保持 Equality，也就是相等关系？请选择一个操作，再提交核对。","source":{"name":"Amplify Classroom","url":"https://go.info.amplify.com/fy26_amplifyclassroom_aclessonbuildingtoolkit_national_educationalsite_ac-activities-lessons_no-form_optin","case":"四选一与按答案反馈的独立教学改编"},"choices":[{"id":"both","text":"两边同时拿走相同的三个单位。","feedback":"两边减少同样数量，差值仍然是零。"},{"id":"left","text":"只从左边拿走三个单位。","feedback":"左边减少，右边保持原量，两边出现三个单位的差距。"},{"id":"different","text":"左边拿走三个单位，右边拿走两个单位。","feedback":"左右减少的数量相差一个单位，相等关系随之改变。"},{"id":"divide-one","text":"只将右边平均分成两份，保留其中一份。","feedback":"右边改变为原来的一半，左边没有同步变化。"}],"answer":"both","explanation":"Equality 要求左右总量相同。两边减少相同数量时，两边的差值保持零；另外三个操作都会改变两边的差值。","hint":"比较两边各自减少了多少，观察减少的数量是否相同。"},{"id":"meaning-card","objectiveId":"meaning","type":"flashcards","title":"把操作说成一句理由","prompt":"回忆刚才模型中的依据，然后翻面核对。","source":"web/app/(workspace)/books/components/blocks/FlashCardsBlock.tsx","cards":[{"front":"Equality（相等关系）在两边同时减去相同数量后为什么保持？","back":"两边原本一样多，减少的数量也一样多，所以剩余数量仍然相等。","speechText":"Equality，也就是相等关系。在两边同时减去相同数量后，为什么仍然保持？"},{"front":"将两份相同的 unknown（未知数）平均分成两份，每份表示什么？","back":"每份就是一份 unknown；平均分组同时应用到等式两边，而且分组数量不能是零。"}]}]}</script><script id="dt-runtime">/* DialogueTutor portable learning interactions, contract v1.
  * Design sources: HKUDS/DeepTutor Books FlashCardsBlock, QuizBlock,
  * InteractiveBlock, PageReader, BookLearningOverlay; shared QuizViewer;
  * learning/scheduler.py. This implementation is independent vanilla JS.
@@ -1243,3 +1599,30 @@
     storageKey: storageKey, mount: mount
   };
 });
+</script><script data-dt-widget="balance-main">(function(){
+const id='balance-main';const stages=[{"title": "读懂天平", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>=</mo><mn>11</mn></mrow></math>", "plain": "2x+3=11", "reason": "左盘是两个相同袋子和三个单位块，右盘是十一个单位块。天平平放，表示两盘总量相同。每袋数量用 x 表示；2x 表示 2 × x，即两份相同的 x。", "next": "两边同时拿走 3 块"}, {"title": "两边拿走相同数量", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mo>(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>)</mo><mo>−</mo><mn>3</mn><mo>=</mo><mn>11</mn><mo>−</mo><mn>3</mn></mrow></math>", "plain": "(2x+3)−3=11−3", "reason": "承接两盘相等；现在两边同时减去 3。原来一样多，同时拿走一样多，剩下的仍一样多。淡色方块标记已经拿走的三个单位。", "next": "整理左边"}, {"title": "左边只剩两袋", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>2</mn><mi>x</mi><mo>=</mo><mn>11</mn><mo>−</mo><mn>3</mn></mrow></math>", "plain": "2x=11−3", "reason": "承接两边减去 3 的结果；左边原有的三个单位已全部拿走，所以只剩两份 x。右边的计算先保留。", "next": "数清右边"}, {"title": "右边剩八块", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>2</mn><mi>x</mi><mo>=</mo><mn>8</mn></mrow></math>", "plain": "2x=8", "reason": "承接左边只剩 2x；右边原有 11 块，拿走 3 块后剩 8 块。两袋合起来对应八个单位。", "next": "两边平均分成 2 份"}, {"title": "两边同样分组", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo><mo>÷</mo><mn>2</mn><mo>=</mo><mn>8</mn><mo>÷</mo><mn>2</mn></mrow></math>", "plain": "(2x)÷2=8÷2", "reason": "承接两袋与八块一样多；两边都平均分成 2 份，每份仍一样多。2 不是零，因此可以作为 divisor（除数）。虚线框表示两边各有两组。", "next": "看左边每一份"}, {"title": "左边每份是一袋", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>x</mi><mo>=</mo><mn>8</mn><mo>÷</mo><mn>2</mn></mrow></math>", "plain": "x=8÷2", "reason": "承接两边都平均分成两份；左边两袋分成两组，每组恰好一袋，所以左边每份是 x。右边每份仍写为 8 ÷ 2。", "next": "数出右边每一份"}, {"title": "一袋对应四块", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math>", "plain": "x=4", "reason": "承接每袋对应八块的一半；八块平均分成两组，每组四块。所以 solution（解）是 4：让原来的 equation 成立的 x 数值。", "next": "检查原来的条件"}, {"title": "把 4 放回原式", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>2</mn><mo>×</mo><mn>4</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>11</mn></mrow></math>", "plain": "2×4+3=11", "reason": "承接每袋四个单位；用 4 替换原式的 x。必须回到原式检查，不能只看最后一行。", "next": "先算两袋"}, {"title": "先计算乘法", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>8</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>11</mn></mrow></math>", "plain": "8+3=11", "reason": "承接原式中的 2 × 4 + 3；先算两袋共八个单位，三个额外单位仍保留。", "next": "再加三个单位"}, {"title": "检查通过", "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mn>11</mn><mo>=</mo><mn>11</mn></mrow></math>", "plain": "11=11", "reason": "承接 8 + 3；再加三个单位得到 11，与右盘的 11 相同。模型两边都显示十一块，原来的条件成立。", "next": ""}];
+let root,state={step:0,one:false};
+const q=s=>root.querySelector(s);
+function box(x,y,label,kind='unit',opacity=1){return `<g opacity="${opacity}"><rect x="${x}" y="${y}" width="${kind==='bag'?56:25}" height="${kind==='bag'?49:25}" rx="5" fill="${kind==='bag'?'#d3e7ff':'#c8cbd2'}" stroke="${kind==='bag'?'#0066cc':'#6f7580'}"/><text x="${x+(kind==='bag'?28:12.5)}" y="${y+(kind==='bag'?32:19)}" text-anchor="middle">${label}</text></g>`;}
+function units(n,x,y,ghost=0){let out='';for(let i=0;i<n;i++)out+=box(x+(i%4)*31,y-Math.floor(i/4)*31,'1');for(let i=0;i<ghost;i++)out+=box(x+155+i*29,y,'1','unit',.22);return out;}
+function draw(){
+ const i=state.step,unbalanced=state.one,removed=i>0||unbalanced,grouped=i>=4&&i<=5,isolated=i===6,check=i>=7;
+ let left,right;
+ if(check){left=units(8,50,173)+units(3,205,173);right=units(11,432,173);}
+ else if(isolated){left=box(142,149,'x','bag');right=units(4,423,173);}
+ else {left=box(70,149,'x','bag')+box(168,149,'x','bag')+(removed?units(0,45,112,3):units(3,66,112));right=units(removed&&!unbalanced?8:11,422,173,removed&&!unbalanced&&i<4?3:0);}
+ if(grouped){left+='<rect x="60" y="135" width="78" height="70" rx="8" fill="none" stroke="#0066cc" stroke-dasharray="5 4"/><rect x="158" y="135" width="78" height="70" rx="8" fill="none" stroke="#0066cc" stroke-dasharray="5 4"/>';right+='<rect x="410" y="137" width="140" height="30" rx="7" fill="none" stroke="#0066cc" stroke-dasharray="5 4"/><rect x="410" y="171" width="140" height="30" rx="7" fill="none" stroke="#0066cc" stroke-dasharray="5 4"/>';}
+ const ly=unbalanced?-20:0,ry=unbalanced?20:0;
+ q('[data-drawing]').innerHTML=`<path d="M300 260 L330 206 L360 260 Z" fill="#7b8493"/><line x1="95" y1="${209+ly}" x2="565" y2="${209+ry}" stroke="#596577" stroke-width="6"/><g transform="translate(0 ${ly})">${left}<line x1="35" y1="206" x2="280" y2="206" stroke="#596577" stroke-width="5"/></g><g transform="translate(0 ${ry})">${right}<line x1="382" y1="206" x2="625" y2="206" stroke="#596577" stroke-width="5"/></g><text x="155" y="32" text-anchor="middle">${check?'两袋与额外单位':isolated?'一袋':'左盘'}</text><text x="490" y="32" text-anchor="middle">${isolated?'四个单位':'右盘'}</text><text x="330" y="88" text-anchor="middle" font-weight="700">${unbalanced?'≠ 不再一样多':'＝ 一样多'}</text>`;
+ q('svg').setAttribute('aria-label',unbalanced?'左盘单独拿走三块后变轻，右盘下沉，左右不再相等':`第${i+1}步，左右仍相等。${stages[i].plain}`);
+ q('[data-stage-title]').textContent=unbalanced?'只改一边会发生什么？':`${i+1} / ${stages.length} · ${stages[i].title}`;
+ q('[data-formula]').innerHTML=unbalanced?'<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>2</mn><mi>x</mi><mo>≠</mo><mn>11</mn></mrow></math>':stages[i].formula;
+ q('[data-reason]').textContent=unbalanced?'左盘拿走三个单位，右盘仍有十一个。左边变轻，右盘下沉，所以不能把这一步写成仍然相等。点击「恢复原来两盘」，再试两边同时拿走。':stages[i].reason;
+ q('[data-next]').textContent=unbalanced?'恢复原来两盘':stages[i].next||'已经检查完成';q('[data-next]').disabled=!unbalanced&&i===stages.length-1;
+ q('[data-one]').hidden=i!==0||unbalanced;q('[data-prev]').disabled=i===0&&!unbalanced;
+}
+function save(){document.dispatchEvent(new CustomEvent('dt:exploration',{detail:{activityId:id,state}}));}
+function recover(s){state={step:Number.isInteger(s.step)?Math.max(0,Math.min(stages.length-1,s.step)):0,one:s.one===true};if(state.step!==0)state.one=false;draw();}
+document.addEventListener('dt:activity-mounted',e=>{if(e.detail.activityId!==id)return;root=document.querySelector('[data-dt-activity="'+id+'"]');q('[data-full]').innerHTML=stages.map(s=>`<div><h4>${s.title}</h4>${s.formula}<p>${s.reason}</p></div>`).join('');q('[data-next]').onclick=()=>{if(state.one)state={step:0,one:false};else state.step=Math.min(stages.length-1,state.step+1);draw();save();};q('[data-prev]').onclick=()=>{state.one=false;state.step=Math.max(0,state.step-1);draw();save();};q('[data-one]').onclick=()=>{state.one=true;draw();save();};q('[data-reset]').onclick=()=>{state={step:0,one:false};draw();save();};recover(e.detail.state||{});});
+document.addEventListener('dt:restore',e=>{if(e.detail.activityId===id&&root)recover(e.detail.state||{});});
+})();</script><noscript><p>这份讲义的交互活动需要浏览器启用 JavaScript；正文与完整解答仍可阅读。</p></noscript></body></html>

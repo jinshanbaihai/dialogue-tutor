@@ -124,23 +124,33 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 <style id="dt-runtime-style">/* Portable DialogueTutor interactions. All selectors are namespaced. */
 .dt-activity,
 .dt-study {
-  --dt-paper: #fffdf7;
-  --dt-surface: #f7f3e9;
-  --dt-ink: #302e28;
-  --dt-muted: #706b60;
-  --dt-line: #dcd5c6;
-  --dt-accent: #35685c;
-  --dt-accent-soft: #edf3e9;
-  --dt-good: #24624b;
-  --dt-good-soft: #eef5ec;
-  --dt-again: #8b4a2c;
-  --dt-again-soft: #fcf0e5;
-  --dt-focus: #9a6026;
+  --dt-paper: #ffffff;
+  --dt-surface: #f5f5f7;
+  --dt-ink: #1d1d1f;
+  --dt-muted: #64646b;
+  --dt-line: #d8d8dd;
+  --dt-accent: #0066cc;
+  --dt-accent-soft: #eef5ff;
+  --dt-good: #237044;
+  --dt-good-soft: #edf7f0;
+  --dt-again: #9a481d;
+  --dt-again-soft: #fff3eb;
+  --dt-focus: #0071e3;
+  --dt-on-accent: #ffffff;
+  --dt-accent-hover: #0055ad;
+  --dt-hint: #795d16;
+  --dt-error: #ad3026;
+  --dt-guide: #8b5eb5;
+  --dt-dot-second: #286e87;
+  --dt-shadow: 0 2px 8px rgb(0 0 0 / 3%), 0 12px 28px rgb(0 0 0 / 3%);
+  --dt-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  color-scheme: light;
   box-sizing: border-box;
   color: var(--dt-ink);
-  font-family: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Noto Sans SC", sans-serif;
   font-size: 0.96rem;
   line-height: 1.7;
+  font-optical-sizing: auto;
   text-align: left;
   overflow-wrap: anywhere;
 }
@@ -152,9 +162,8 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   padding: 1.5rem 1.65rem 1.15rem;
   background: var(--dt-paper);
   border: 1px solid var(--dt-line);
-  border-top: 3px solid var(--dt-accent);
-  border-radius: 0.6rem;
-  box-shadow: 0 4px 18px rgb(64 47 23 / 3%);
+  border-radius: 1rem;
+  box-shadow: var(--dt-shadow);
   scroll-margin-top: 1.2rem;
 }
 .dt-activity .dt-activity-title {
@@ -202,7 +211,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   justify-content: center;
   align-items: center;
   gap: 0.3rem;
-  min-height: 2.5rem;
+  min-height: 2.75rem;
   max-width: 100%;
   margin: 0;
   padding: 0.48rem 0.82rem;
@@ -219,15 +228,20 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   white-space: normal;
   cursor: pointer;
   box-shadow: none;
-  transition: background-color 130ms ease, border-color 130ms ease;
+  transition: transform 130ms var(--dt-ease-out);
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+@media (hover: hover) and (pointer: fine) {
 .dt-activity .dt-button:hover:not(:disabled),
 .dt-study .dt-button:hover:not(:disabled) { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
+}
 .dt-activity .dt-button-primary,
-.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: #fffdf7; }
+.dt-study .dt-button-primary { border-color: var(--dt-accent); background: var(--dt-accent); color: var(--dt-on-accent); }
+@media (hover: hover) and (pointer: fine) {
 .dt-activity .dt-button-primary:hover:not(:disabled),
-.dt-study .dt-button-primary:hover:not(:disabled) { background: #285649; color: #fffdf7; }
+.dt-study .dt-button-primary:hover:not(:disabled) { background: var(--dt-accent-hover); color: var(--dt-on-accent); }
+}
 .dt-activity .dt-button-quiet,
 .dt-study .dt-button-quiet { border-color: transparent; background: transparent; color: var(--dt-accent); }
 .dt-activity .dt-button:disabled,
@@ -268,7 +282,7 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   background: linear-gradient(140deg, var(--dt-paper), var(--dt-surface));
   text-align: center;
 }
-.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: #a4bbae; }
+.dt-activity .dt-flashcard-back { background: var(--dt-accent-soft); border-color: var(--dt-accent); }
 .dt-flashcard-text { display: block; font-size: 1.05rem; font-weight: 500; line-height: 1.8; white-space: pre-wrap; }
 .dt-self-rating { margin: 1rem 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--dt-line); background: var(--dt-surface); }
 .dt-self-rating .dt-button { margin: 0.25rem 0.4rem 0.25rem 0; }
@@ -288,7 +302,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   line-height: 1.7;
   cursor: pointer;
 }
-.dt-choice:hover { border-color: #9aae9f; }
+@media (hover: hover) and (pointer: fine) {
+.dt-choice:hover { border-color: var(--dt-accent); }
+}
 .dt-choice-selected { border-color: var(--dt-accent); background: var(--dt-accent-soft); }
 .dt-choice-label { min-width: 0; }
 .dt-radio { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; margin: 0.24rem 0 0; accent-color: var(--dt-accent); }
@@ -310,9 +326,9 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-reference { border: 1px solid var(--dt-line); background: transparent; }
 .dt-reference-answer { font-weight: 600; }
 .dt-reference .dt-rubric { margin: 0.5rem 0 0; padding-left: 1.2rem; }
-.dt-hint { border-left: 3px solid #ac9464; color: #675638; font-size: 0.85rem; }
+.dt-hint { border-left: 3px solid var(--dt-hint); color: var(--dt-hint); font-size: 0.85rem; }
 .dt-error,
-.dt-storage-warning { color: #8a351e; font-size: 0.82rem; line-height: 1.6; }
+.dt-storage-warning { color: var(--dt-error); font-size: 0.82rem; line-height: 1.6; }
 .dt-error:empty { display: none; }
 .dt-step-markers { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
 .dt-step-markers li { margin: 0; padding: 0; }
@@ -336,10 +352,10 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 .dt-graph-grid { stroke: var(--dt-line); stroke-width: 0.8; stroke-dasharray: 3 4; }
 .dt-graph-axis { stroke: var(--dt-muted); stroke-width: 1; }
 .dt-graph-curve { stroke: var(--dt-accent); stroke-width: 3; stroke-linejoin: round; }
-.dt-graph-area { fill: #8db0a1; fill-opacity: 0.38; }
-.dt-graph-guide { stroke: #a47746; stroke-width: 1.4; stroke-dasharray: 4 4; }
-.dt-graph-dot { fill: #9a6026; stroke: var(--dt-paper); stroke-width: 1.5; }
-.dt-graph-dot-second { fill: #306b7b; }
+.dt-graph-area { fill: var(--dt-accent); fill-opacity: 0.38; }
+.dt-graph-guide { stroke: var(--dt-guide); stroke-width: 1.4; stroke-dasharray: 4 4; }
+.dt-graph-dot { fill: var(--dt-focus); stroke: var(--dt-paper); stroke-width: 1.5; }
+.dt-graph-dot-second { fill: var(--dt-dot-second); }
 .dt-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; margin: 0.8rem 0; }
 .dt-metric { display: flex; flex-direction: column; min-width: 0; padding: 0.65rem 0.7rem; border: 1px solid var(--dt-line); border-radius: 0.35rem; }
 .dt-metric strong { margin-top: 0.15rem; font-size: 1.12rem; font-variant-numeric: tabular-nums; }
@@ -387,6 +403,17 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
   border: 0 !important;
 }
 
+/* Frequent card/module navigation is immediate. Only pointer press moves. */
+.dt-activity .dt-button:active:not(:disabled):not(:focus-visible),
+.dt-study .dt-button:active:not(:disabled):not(:focus-visible) { transform: scale(0.97); }
+.dt-activity .dt-button:focus-visible, .dt-study .dt-button:focus-visible { transition: none; }
+.dt-speech { margin: 0 0 1.25rem; padding: 0.55rem 0.75rem; border: 1px solid var(--dt-line); border-radius: 0.75rem; background: var(--dt-surface); }
+.dt-speech-settings > summary { min-height: 2.75rem; padding: 0.55rem 0; color: var(--dt-muted); font-size: 0.8rem; cursor: pointer; }
+.dt-speech-settings .dt-input-label { flex: 1 1 12rem; min-width: 0; }
+.dt-speech-settings .dt-input-label:last-child { flex: 0 1 6rem; }
+.dt-speech .dt-input { margin-top: 0.25rem; padding: 0.4rem; min-height: 2.75rem; }
+.dt-activity .dt-speech-status { margin: 0.25rem 0 0; }
+.dt-step-stage + .dt-step-stage { margin-top: 1rem; }
 @media (max-width: 620px) {
   .dt-activity { padding: 1.15rem 1rem 0.9rem; margin: 2rem 0; }
   .dt-activity .dt-activity-title { font-size: 1.06rem; }
@@ -407,30 +434,39 @@ footer{border-top:1px solid var(--rule); margin-top:5rem; padding-top:1.6rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .dt-activity *, .dt-study * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .dt-activity .dt-button:active, .dt-study .dt-button:active { transform: none; }
 }
 @media (prefers-color-scheme: dark) {
   .dt-activity, .dt-study {
-    --dt-paper: #24241f;
-    --dt-surface: #2d2e27;
-    --dt-ink: #e9e5d9;
-    --dt-muted: #b5b09f;
-    --dt-line: #484b3e;
-    --dt-accent: #a0c9b4;
-    --dt-accent-soft: #303f34;
-    --dt-good: #abd5ac;
-    --dt-good-soft: #2b3d2b;
-    --dt-again: #e3b18c;
-    --dt-again-soft: #48372a;
-    --dt-focus: #e9bd82;
+    --dt-paper: #1c1c1e;
+    --dt-surface: #27272a;
+    --dt-ink: #f5f5f7;
+    --dt-muted: #b5b5bd;
+    --dt-line: #48484f;
+    --dt-accent: #8abfff;
+    --dt-accent-soft: #20334a;
+    --dt-good: #8cd8a5;
+    --dt-good-soft: #22382c;
+    --dt-again: #ffbc94;
+    --dt-again-soft: #422e24;
+    --dt-focus: #a5cdff;
+    --dt-on-accent: #102338;
+    --dt-accent-hover: #b6d7ff;
+    --dt-hint: #e5ca87;
+    --dt-error: #ffada6;
+    --dt-guide: #c6a0ea;
+    --dt-dot-second: #8bd3e8;
+    --dt-shadow: 0 2px 8px rgb(0 0 0 / 12%), 0 12px 28px rgb(0 0 0 / 15%);
+    color-scheme: dark;
   }
-  .dt-activity .dt-button-primary, .dt-study .dt-button-primary { background: #a0c9b4; color: #172b22; }
-  .dt-activity .dt-button-primary:hover:not(:disabled), .dt-study .dt-button-primary:hover:not(:disabled) { background: #c0ddcd; color: #172b22; }
-  .dt-hint { color: #ded0ac; }
-  .dt-error, .dt-storage-warning { color: #ffc2a2; }
+}
+/* Contrast is independent of color scheme and must win in either scheme. */
+@media (prefers-contrast: more) {
+  .dt-activity, .dt-study { --dt-line: currentColor; }
 }
 @media print {
   .dt-activity { box-shadow: none; break-inside: avoid; }
-  .dt-study, .dt-activity-footer, .dt-source { display: none; }
+  .dt-study, .dt-activity-footer, .dt-source, .dt-speech { display: none; }
   .dt-activity .dt-button { border-color: #888; }
   .dt-activity .dt-reference { break-inside: avoid; }
 }
@@ -2180,9 +2216,17 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     });
     var activityIds = new Set();
     lesson.activities.forEach(function (activity) {
+      [activity].concat(activity.choices || [], activity.cards || [], activity.steps || []).forEach(function (item) {
+        if (has(item, "speechText") && (typeof item.speechText !== "string" || !item.speechText.trim())) throw new Error("speechText must be nonempty text");
+      });
       if (!safeId(activity.id) || activityIds.has(activity.id) || !objectiveIds.has(activity.objectiveId) || !TYPES.includes(activity.type)) throw new Error("Invalid activity identity/type");
       activityIds.add(activity.id);
-      if (!(typeof activity.source === "string" && activity.source.trim()) && !(record(activity.source) && typeof activity.source.path === "string" && activity.source.path.trim())) throw new Error("Activity needs its DeepTutor source");
+      var source = activity.source;
+      if (record(source) && (has(source, "name") || has(source, "url"))) {
+        var validUrl = false;
+        try { var parsed = new URL(source.url); validUrl = parsed.protocol === "https:" && !!parsed.hostname && /^https:\/\/[^/]/i.test(source.url) && !/\s/.test(source.url); } catch (error) { /* Invalid external source URL. */ }
+        if (typeof source.name !== "string" || !source.name.trim() || typeof source.url !== "string" || !validUrl || has(source, "path") || has(source, "repository")) throw new Error("External source needs name and an absolute HTTPS URL, not a claimed source-code path");
+      } else if (!(typeof source === "string" && (/^(deeptutor|web)\//.test(source) || source.includes("HKUDS/DeepTutor"))) && !(record(source) && typeof source.path === "string" && source.path.trim() && (!has(source, "repository") || source.repository === "HKUDS/DeepTutor"))) throw new Error("Activity needs its DeepTutor source or an external name/HTTPS URL");
       if (activity.type === "flashcards" && (!Array.isArray(activity.cards) || !activity.cards.length)) throw new Error("Flashcards need cards");
       if (activity.type === "steps" && (!Array.isArray(activity.steps) || !activity.steps.length)) throw new Error("Steps need stages");
       if (activity.type === "explore" && !["linear-density", "uniform"].includes(activity.model)) throw new Error("Unknown exploration model");
@@ -2293,6 +2337,10 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     var state = createState(lesson, now());
     var key = storageKey(lesson), storage = null, storageMessage = "", panelMessage = "";
     var views = new Map(), definitions = new Map();
+    var synthesis = win.speechSynthesis;
+    var speechAvailable = !!(synthesis && win.SpeechSynthesisUtterance);
+    var speech = { activityId: null, status: "idle", rate: 1.5, voice: null, selectedKey: null, token: 0 };
+    var voices = [], fullSteps = new Set();
     lesson.activities.forEach(function (activity) { definitions.set(activity.id, activity); });
     try {
       storage = options.storage === undefined ? win.localStorage : options.storage;
@@ -2334,6 +2382,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       catch (error) { storageMessage = t("浏览器记录暂未保存；当前页面仍可使用，请导出记录。", "Browser storage is unavailable. Keep working, then export progress."); }
     }
     function transition(activity, event, render) {
+      if (speech.activityId && (speech.activityId !== activity.id || !["note", "bookmark", "draft"].includes(event.type))) stopSpeech();
       state.activities[activity.id] = reduceActivity(activity, state.activities[activity.id], event, now(), sessionId);
       state.currentActivity = activity.id;
       save();
@@ -2343,6 +2392,133 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
     }
     function announce(activity, text) { var view = views.get(activity.id); if (view) message(view, text); }
     function pretty(value) { return Number(value.toFixed(5)).toLocaleString(en ? "en-GB" : "zh-CN", { maximumFractionDigits: 5 }); }
+
+    function voiceKey(voice) { return voice.voiceURI || voice.name + "|" + voice.lang; }
+    function refreshVoices() {
+      voices = speechAvailable ? synthesis.getVoices() : [];
+      var chosen = voices.find(function (voice) { return voiceKey(voice) === speech.selectedKey; });
+      speech.voice = chosen || voices.find(function (voice) { return /zh-CN-XiaoxiaoNeural/i.test(voice.name + " " + voice.voiceURI); }) ||
+        voices.find(function (voice) { return /xiaoxiao/i.test(voice.name + " " + voice.voiceURI); }) ||
+        voices.find(function (voice) { return /^zh[-_]CN$/i.test(voice.lang); }) ||
+        voices.find(function (voice) { return /^zh\b/i.test(voice.lang); }) ||
+        voices.find(function (voice) { return voice.default; }) || voices[0] || null;
+      // Do not mislabel an utterance already playing when voices load asynchronously.
+      if (speech.activityId) stopSpeech();
+      updateSpeechControls();
+    }
+    function stopSpeech() {
+      var active = speech.activityId, paused = speech.status === "paused";
+      speech.token += 1;
+      speech.activityId = null; speech.status = "idle";
+      if (speechAvailable && active) {
+        synthesis.cancel();
+        // Some engines retain their paused flag after cancel; clear our pause so
+        // replay or the next card cannot silently remain queued.
+        if (paused) synthesis.resume();
+      }
+      updateSpeechControls();
+    }
+    function visibleStepText(node) {
+      if (!node) return "";
+      if (node.nodeType === 3) return node.textContent;
+      if (node.nodeType !== 1 || /^(SCRIPT|STYLE|TEMPLATE)$/.test(node.tagName) || node.hidden || node.getAttribute("aria-hidden") === "true") return "";
+      // Inspect the live step, so stylesheet classes and inherited visibility
+      // participate. Detached HTML cannot tell which answers are still hidden.
+      var style = win.getComputedStyle(node);
+      if (style.display === "none" || style.visibility === "hidden" || style.visibility === "collapse") return "";
+      if (node.tagName === "DETAILS" && !node.open) {
+        var summary = Array.from(node.children).find(function (child) { return child.tagName === "SUMMARY"; });
+        return visibleStepText(summary);
+      }
+      return Array.from(node.childNodes).map(visibleStepText).filter(Boolean).join(" ");
+    }
+    function speechText(activity) {
+      var saved = state.activities[activity.id];
+      var parts = [activity.speechText || activity.prompt];
+      // Explicit allowlist: never scrape the activity DOM, where hidden solutions,
+      // feedback, model answers and quiz keys may exist.
+      if (activity.type === "quiz" && activity.format === "choice") activity.choices.forEach(function (choice, index) {
+        parts.push(t("选项 ", "Option ") + (index + 1) + ": " + (choice.speechText || choice.text));
+      });
+      if (activity.type === "flashcards") {
+        var card = activity.cards[saved.flash.index];
+        parts.push(card.speechText || card.front);
+      }
+      if (activity.type === "steps") {
+        var steps = fullSteps.has(activity.id) ? activity.steps : [activity.steps[saved.stepIndex]];
+        var stages = Array.from(views.get(activity.id).body.children).filter(function (node) { return node.classList.contains("dt-step-stage"); });
+        steps.forEach(function (step, index) {
+          // Only the known rendered step body is eligible; quiz/card fields keep
+          // their explicit allowlist and never fall back to module-wide DOM text.
+          var content = stages[index] && stages[index].children[1];
+          parts.push(step.title + ". " + (step.speechText || visibleStepText(content)));
+        });
+      }
+      return parts.filter(Boolean).join("\n\n");
+    }
+    function playSpeech(activity) {
+      stopSpeech();
+      if (!speechAvailable) return;
+      var utterance = new win.SpeechSynthesisUtterance(speechText(activity));
+      utterance.rate = speech.rate; utterance.lang = speech.voice ? speech.voice.lang : (lesson.language || "zh-CN");
+      if (speech.voice) utterance.voice = speech.voice;
+      var token = speech.token;
+      speech.activityId = activity.id; speech.status = "playing";
+      utterance.onend = function () { if (token === speech.token) stopSpeech(); };
+      utterance.onerror = function (event) {
+        if (token !== speech.token) return;
+        stopSpeech();
+        if (event.error !== "canceled" && event.error !== "interrupted") announce(activity, t("朗读未能完成，请检查系统声音或选择其他声音后重试。", "Reading could not finish. Check system voices or select another voice and retry."));
+      };
+      updateSpeechControls();
+      try { synthesis.speak(utterance); } catch (error) { stopSpeech(); announce(activity, t("当前浏览器无法开始朗读。", "This browser could not start reading.")); }
+    }
+    function updateSpeechControls() {
+      views.forEach(function (view, id) {
+        if (!view.speech) return;
+        var controls = view.speech, active = speech.activityId === id;
+        controls.play.textContent = active ? (speech.status === "paused" ? t("继续朗读", "Resume") : t("暂停", "Pause")) : t("朗读题目", "Read question");
+        controls.play.disabled = controls.replay.disabled = !speechAvailable;
+        controls.stop.disabled = !active;
+        controls.voice.replaceChildren();
+        if (!voices.length) controls.voice.appendChild(el("option", "", t("系统默认声音（名称未提供）", "System default (name unavailable)")));
+        voices.forEach(function (voice) {
+          var option = el("option", "", voice.name + " · " + voice.lang);
+          option.value = voiceKey(voice); option.selected = voice === speech.voice; controls.voice.appendChild(option);
+        });
+        controls.voice.disabled = !speechAvailable || !voices.length;
+        controls.rate.value = String(speech.rate); controls.rate.disabled = !speechAvailable;
+        controls.status.textContent = !speechAvailable ? t("当前浏览器不支持朗读；可继续阅读题目。", "Reading aloud is unavailable in this browser.") :
+          t("当前声音：", "Current voice: ") + (speech.voice ? speech.voice.name + " · " + speech.voice.lang : t("系统默认（浏览器未提供名称）", "System default (browser has not provided a name)")) +
+          (!speech.voice ? t("；声音列表尚未提供，实际音色由系统决定", "; voice list unavailable, actual voice is determined by the system") : /xiaoxiao/i.test(speech.voice.name + " " + speech.voice.voiceURI) ? "" :
+            voices.some(function (voice) { return /xiaoxiao/i.test(voice.name + " " + voice.voiceURI); }) ? t("；已选择其他声音", "; another voice selected") : t("；未提供 Xiaoxiao，使用当前可用声音", "; Xiaoxiao unavailable, using the available voice")) +
+          " · " + speech.rate + "×" + (active ? (speech.status === "paused" ? t(" · 已暂停", " · Paused") : t(" · 正在朗读", " · Reading")) : "");
+      });
+    }
+    function createSpeechControls(activity) {
+      var root = el("div", "dt-speech"), row = el("div", "dt-row");
+      root.setAttribute("role", "group"); root.setAttribute("aria-label", t("题目朗读", "Question reading"));
+      var play = button(t("朗读题目", "Read question"), function () {
+        if (speech.activityId !== activity.id) return playSpeech(activity);
+        if (speech.status === "paused") { synthesis.resume(); speech.status = "playing"; }
+        else { synthesis.pause(); speech.status = "paused"; }
+        updateSpeechControls();
+      }, "dt-button-quiet", "speech-play");
+      var stop = button(t("停止", "Stop"), stopSpeech, "dt-button-quiet", "speech-stop");
+      var replay = button(t("重播", "Replay"), function () { playSpeech(activity); }, "dt-button-quiet", "speech-replay");
+      row.append(play, stop, replay);
+      var settings = el("details", "dt-speech-settings"); settings.appendChild(el("summary", "", t("声音与速度", "Voice and speed")));
+      var fields = el("div", "dt-row");
+      var voiceLabel = el("label", "dt-input-label", t("声音", "Voice")), voice = el("select", "dt-input"); voice.dataset.dtControl = "speech-voice";
+      voice.addEventListener("change", function () { var value = voice.value; stopSpeech(); speech.selectedKey = value; refreshVoices(); });
+      var rateLabel = el("label", "dt-input-label", t("速度", "Speed")), rate = el("select", "dt-input"); rate.dataset.dtControl = "speech-rate";
+      [0.75, 1, 1.25, 1.5, 1.75, 2].forEach(function (value) { var option = el("option", "", value + "×"); option.value = String(value); rate.appendChild(option); });
+      rate.addEventListener("change", function () { var value = Number(rate.value); stopSpeech(); speech.rate = value; updateSpeechControls(); });
+      voiceLabel.appendChild(voice); rateLabel.appendChild(rate); fields.append(voiceLabel, rateLabel); settings.appendChild(fields);
+      var status = el("p", "dt-small dt-speech-status"); status.setAttribute("role", "status");
+      root.append(row, settings, status);
+      return { root: root, play: play, stop: stop, replay: replay, voice: voice, rate: rate, status: status };
+    }
 
     function renderFlash(activity, view, saved) {
       var index = saved.flash.index;
@@ -2516,6 +2692,21 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
 
     function renderSteps(activity, view, saved) {
       var index = saved.stepIndex, step = activity.steps[index];
+      var full = fullSteps.has(activity.id);
+      view.body.appendChild(button(full ? t("返回逐步探索", "Return to steps") : t("查看完整推导", "View full derivation"), function () {
+        stopSpeech();
+        if (full) fullSteps.delete(activity.id); else fullSteps.add(activity.id);
+        renderActivity(activity);
+        view.body.querySelector('[data-dt-control="step-view"]').focus({ preventScroll: true });
+      }, "dt-button-quiet", "step-view"));
+      if (full) {
+        activity.steps.forEach(function (item, i) {
+          var section = el("section", "dt-step-stage dt-authored");
+          section.appendChild(el("h4", "dt-small-heading", (i + 1) + ". " + item.title));
+          var text = el("div", ""); text.innerHTML = item.bodyHtml; section.appendChild(text); view.body.appendChild(section);
+        });
+        return;
+      }
       var markers = el("ol", "dt-step-markers");
       activity.steps.forEach(function (item, i) {
         var marker = el("li", "");
@@ -2706,12 +2897,13 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         }
       }, "dt-button-quiet", "copy-context");
       var row = el("div", "dt-row"); row.append(bookmark, copyButton); footer.append(row, note);
-      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · DeepTutor", "Interaction source · DeepTutor")));
-      var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
+      var source = el("details", "dt-source"); source.appendChild(el("summary", "", t("交互来源 · ", "Interaction source · ") + (activity.source.name || "DeepTutor")));
+      var sourceText = typeof activity.source === "string" ? activity.source : [activity.source.name, activity.source.url, activity.source.path, activity.source.commit, activity.source.case].filter(Boolean).join("\n");
       source.appendChild(el("p", "dt-small", sourceText)); footer.appendChild(source);
       var status = el("p", "dt-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
-      target.append(header, prompt, body, footer, status);
-      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false };
+      var reader = createSpeechControls(activity);
+      target.append(header, prompt, reader.root, body, footer, status);
+      var view = { root: target, body: body, footer: footer, bookmark: bookmark, noteInput: noteInput, status: status, customMounted: false, speech: reader };
       views.set(activity.id, view);
       target.addEventListener("focusin", function () { if (state.currentActivity !== activity.id) { state.currentActivity = activity.id; save(); } });
       renderActivity(activity);
@@ -2737,6 +2929,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       panelBody = el("div", "dt-study-body"); panel.append(panelSummary, panelBody); panelTarget.appendChild(panel);
     }
     function navigate(activityId, reviewItem) {
+      stopSpeech();
       var activity = definitions.get(activityId), view = views.get(activityId);
       if (!activity || !view) return;
       if (reviewItem) {
@@ -2745,7 +2938,7 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
           transition(activity, { type: "retry" });
         } else if (activity.type === "flashcards") transition(activity, { type: "flash-restart", index: reviewItem.cardIndex });
       }
-      view.root.scrollIntoView({ behavior: win.matchMedia && win.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
+      view.root.scrollIntoView({ behavior: "instant", block: "start" });
       var focus = view.body.querySelector("button:not([disabled]),input:not([disabled]),textarea:not([disabled])");
       if (focus) focus.focus({ preventScroll: true });
       state.currentActivity = activityId; save();
@@ -2810,7 +3003,9 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
         if (!upload.files || !upload.files[0]) return;
         try {
           if (upload.files[0].size > 5000000) throw new Error(t("记录文件超过 5 MB。", "Progress file exceeds 5 MB."));
-          state = prepareSession(lesson, validateImport(lesson, await upload.files[0].text()), now(), sessionId, state);
+          var imported = validateImport(lesson, await upload.files[0].text());
+          stopSpeech();
+          state = prepareSession(lesson, imported, now(), sessionId, state);
           closeDueSolutions(); save();
           lesson.activities.forEach(renderActivity);
           notifyCustomRestore();
@@ -2830,6 +3025,17 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       var target = Array.from(doc.querySelectorAll("[data-dt-activity]")).find(function (node) { return node.dataset.dtActivity === activity.id; });
       if (target && target.dataset.dtMounted !== "true") createActivityView(activity, target);
     });
+    function moduleChanged(event) {
+      var target = event.target.closest && event.target.closest("[data-dt-activity]");
+      if (speech.activityId && target && target.dataset.dtActivity !== speech.activityId) stopSpeech();
+    }
+    function pageHidden() { if (doc.hidden) stopSpeech(); }
+    doc.addEventListener("focusin", moduleChanged);
+    doc.addEventListener("pointerdown", moduleChanged);
+    doc.addEventListener("visibilitychange", pageHidden);
+    win.addEventListener("pagehide", stopSpeech);
+    if (speechAvailable && synthesis.addEventListener) synthesis.addEventListener("voiceschanged", refreshVoices);
+    refreshVoices();
     save(); renderPanel();
     var explorationListener = function (event) {
       var detail = event.detail;
@@ -2854,9 +3060,14 @@ in estimation problems》里指出这个做法不稳，\(\theta\) 上的均匀�
       storageKey: key,
       getState: function () { return copy(state); },
       exportState: function () { return exportEnvelope(lesson, state, now()); },
-      importState: function (value) { state = prepareSession(lesson, validateImport(lesson, value), now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
-      refresh: function () { lesson.activities.forEach(renderActivity); renderPanel(); },
-      destroy: function () { doc.removeEventListener("dt:exploration", explorationListener); }
+      importState: function (value) { var imported = validateImport(lesson, value); stopSpeech(); state = prepareSession(lesson, imported, now(), sessionId, state); closeDueSolutions(); save(); lesson.activities.forEach(renderActivity); notifyCustomRestore(); renderPanel(); return copy(state); },
+      refresh: function () { stopSpeech(); lesson.activities.forEach(renderActivity); renderPanel(); },
+      destroy: function () {
+        stopSpeech(); doc.removeEventListener("dt:exploration", explorationListener);
+        doc.removeEventListener("focusin", moduleChanged); doc.removeEventListener("pointerdown", moduleChanged);
+        doc.removeEventListener("visibilitychange", pageHidden); win.removeEventListener("pagehide", stopSpeech);
+        if (speechAvailable && synthesis.removeEventListener) synthesis.removeEventListener("voiceschanged", refreshVoices);
+      }
     };
   }
 
