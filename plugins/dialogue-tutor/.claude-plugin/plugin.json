@@ -1,7 +1,7 @@
 {
   "name": "dialogue-tutor",
-  "description": "面向外行的交互式教学 HTML：可视化交互优先，其次模型与必要文字；保留逐行因果推导、完整解题与苏格拉底引导。支持 bgct、bbct、olct/onct、plustts，默认模块读题 1.5×，优先实际可用的 Xiaoxiao。采用 Apple/Emil 中性视觉设计，结合 DeepTutor、Brilliant、Amplify 等产品机制。",
-  "version": "2.0.0",
+  "description": "交互式学习教练，第十二版：可视化图像、可视化交互与逐行推导。支持 TMUA、Edexcel IAL S2、CIE 9708 和 bgct、bbct、olct/onct、plustts；交互朗读采用 Xiaoxiao，1.75 倍速。",
+  "version": "2.0.1",
   "author": {
     "name": "StevenZhou",
     "url": "https://github.com/jinshanbaihai"
